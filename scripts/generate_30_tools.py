@@ -699,7 +699,7 @@ template = """<!DOCTYPE html>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 AIDigiTools. All rights reserved. Registered software license aggregator based in Islamabad, Pakistan.</p>
+        <p>&copy; 2026 AIDigiTools. All rights reserved. Online AI software marketplace serving Pakistan and worldwide.</p>
       </div>
     </div>
   </footer>
