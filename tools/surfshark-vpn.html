@@ -35,7 +35,20 @@
         "priceCurrency": "USD"
       },
       "availability": "https://schema.org/InStock",
-      "url": "https://aidigitools.tech/tools/surfshark-vpn.html"
+      "url": "https://aidigitools.tech/tools/surfshark-vpn.html",
+      "priceValidUntil": "2027-12-31",
+      "seller": {
+        "@type": "Organization",
+        "name": "AIDigiTools"
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "PK",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      }
     },
     "image": "https://aidigitools.tech/assets/images/surfshark-vpn.png",
     "itemCondition": "https://schema.org/NewCondition"
@@ -112,34 +125,149 @@
     ]
   }
   </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
   <header>
     <div class="container nav-wrapper">
-      <a href="../" class="logo">AIDigi<span class="gold">Tools</span><span class="tagline">AI Software Marketplace</span></a>
+      <a href="../index.html" class="logo" aria-label="AIDigiTools Home">
+        <svg class="logo-brand-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="navTeal" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#05D5A6"/>
+              <stop offset="100%" stop-color="#00B4D8"/>
+            </linearGradient>
+            <linearGradient id="navPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0077B6"/>
+              <stop offset="35%" stop-color="#4361EE"/>
+              <stop offset="70%" stop-color="#7209B7"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+            <linearGradient id="navOrbit" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#00B4D8"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <path class="orbit-back" d="M 12 62 C 12 36, 126 18, 134 38" stroke="url(#navOrbit)" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <path class="sparkle-star" d="M 8 36 Q 8 41 3 41 Q 8 41 8 46 Q 8 41 13 41 Q 8 41 8 36 Z" fill="#00E5A3"/>
+          <path class="sparkle-star" d="M 128 78 Q 128 82 124 82 Q 128 82 128 86 Q 128 82 132 82 Q 128 82 128 78 Z" fill="#8B5CF6"/>
+          <path d="M 22 94 L 46 32 C 48 27, 54 22, 62 25 L 75 30 C 80 32, 81 37, 78 42 L 56 94 C 54 99, 46 102, 38 100 L 26 97 C 22 96, 21 95, 22 94 Z" fill="url(#navTeal)"/>
+          <path d="M 68 34 C 88 22, 118 30, 118 56 C 118 82, 88 98, 62 98 L 74 82 C 90 82, 102 72, 102 56 C 102 42, 86 36, 72 44 Z" fill="url(#navPurple)"/>
+          <path d="M 46 64 C 52 58, 66 56, 80 62 L 72 74 C 62 70, 52 72, 46 76 Z" fill="url(#navTeal)" opacity="0.95"/>
+          <path class="orbit-front" d="M 134 38 C 142 58, 38 88, 16 66" stroke="url(#navOrbit)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle class="orbit-node" cx="124" cy="34" r="5.5" fill="#4361EE"/>
+          <circle cx="122.5" cy="32.5" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        </svg>
+        <span class="logo-text-wrap">
+          <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
+          <span class="tagline">SMART TOOLS • BIGGER POSSIBILITIES</span>
+        </span>
+      </a>
       <nav>
-        <a href="../#products">Products</a>
-        <a href="../about.html">About</a>
-        <a href="../shipping-policy.html">Delivery</a>
+        <a href="../index.html#products">Products</a>
         <a href="../deals.html">Deals</a>
+        <a href="../categories/video.html">Video</a>
+        <a href="../categories/coding.html">Coding</a>
+        <a href="../categories/vpn.html">VPN</a>
+        <a href="../categories/image.html">Image</a>
+        <a href="../shipping-policy.html">Delivery</a>
         <a href="../policies.html#payments">Payments</a>
         <a href="../contact.html">Contact</a>
+        <button type="button" onclick="openQuickOrderModal('chatgpt-plus')" class="nav-cta" style="border:none; cursor:pointer;" aria-label="Open Quick Order">
+          <span>🛒 Quick Order</span>
+        </button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-            <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
+                  <!-- Semantic Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../categories/vpn.html">VPN & Privacy</a></li>
+          <li><span aria-current="page">Surfshark One VPN</span></li>
+        </ol>
+      </nav>
+
+      <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
         <strong>Official Reseller Notice:</strong> AIDigiTools is an independent software subscription aggregator. All brand names, registered trademarks, and logos belong to their respective copyright holders.
       </div>
+      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/surfshark-vpn.svg" alt="Surfshark One VPN Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);"></div>
       <h1>Surfshark VPN Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">
         Surfshark VPN is available for Rs. 800 PKR ($3.00 USD) per month on AIDigiTools, serving remote workers, freelancers, and privacy advocates in Pakistan and worldwide. Subscribe seamlessly using EasyPaisa, JazzCash, SadaPay, Wise, or Crypto without foreign currency barriers. Orders include dedicated credentials delivered within 15 minutes via WhatsApp, backed by our 30-day replacement warranty.
       </p>
       <div class="price-tag">Rs. 800 PKR <span class="period">(~$3.00 USD) / month</span></div>
       <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Surfshark VPN%20for%20Rs%20800%20PKR%20/%20$3.00%20USD" class="btn-whatsapp">Order Surfshark VPN on WhatsApp</a>
+      <a href="#compare-plans" class="btn-secondary" style="margin-left:0.6rem; display:inline-flex; align-items:center; gap:0.4rem; padding:0.85rem 1.4rem; border-radius:12px; font-weight:700; text-decoration:none; background:var(--bg-card); color:var(--text-primary); border:1.5px solid var(--border-color); vertical-align:middle;">Compare 2 Plans ↓</a>
     </section>
+<!-- Canonical Plan Comparison Section -->
+    <!-- Canonical Plan Comparison Section -->
+    <section class="plans-comparison-section" id="compare-plans">
+      <h2 class="section-title">Compare Verified Surfshark One VPN Plans</h2>
+      <p class="section-subtitle">Genuinely distinct official plan variants with transparent Pakistani pricing and verified SLA terms.</p>
+      <div class="plans-grid">
+      <div class="plan-card" id="plan-PLAN-SURF-1M">
+        <div class="plan-badge-top">Unlimited Devices</div>
+        <div class="plan-tier-label">Monthly</div>
+        <h3 class="plan-title">Starter (1 Month)</h3>
+        <div class="plan-price-wrap">
+          <span class="plan-price-pkr">Rs. 800</span>
+          <span class="plan-price-sub">PKR (~$3.00 USD) / 1 Month (30 Days)</span>
+        </div>
+        <div class="plan-meta-row">
+          <span class="plan-pill">⏱ 1 Month (30 Days)</span>
+          <span class="plan-pill">👤 Unlimited Simultaneous Devices</span>
+          <span class="plan-pill">⚡ 15m Delivery</span>
+        </div>
+        <ul class="plan-features-list">
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>Connect unlimited devices on 1 subscription</span></li>
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>CleanWeb 2.0 pop-up and malware blocker</span></li>
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>3,200+ servers across 100 countries</span></li>
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>Bypasser split tunneling for banking apps</span></li>
+        </ul>
+        <div class="plan-terms-note">
+          <strong>Terms &amp; SLA:</strong> Unlimited devices subject to fair usage
+        </div>
+        <button type="button" class="btn-choose-plan" onclick="openQuickOrderModal('surfshark-vpn', 'PLAN-SURF-1M')" aria-label="Choose Starter (1 Month)">
+          <span>Choose Starter (1 Month)</span>
+          <span>→</span>
+        </button>
+      </div>
+      <div class="plan-card featured" id="plan-PLAN-SURF-12M">
+        <div class="plan-badge-top">Best Value VPN</div>
+        <div class="plan-tier-label">Annual</div>
+        <h3 class="plan-title">One Plus (12 Months)</h3>
+        <div class="plan-price-wrap">
+          <span class="plan-price-pkr">Rs. 4,800</span>
+          <span class="plan-price-sub">PKR (~$17.50 USD) / 12 Months (365 Days)</span>
+        </div>
+        <div class="plan-meta-row">
+          <span class="plan-pill">⏱ 12 Months (365 Days)</span>
+          <span class="plan-pill">👤 Unlimited Simultaneous Devices</span>
+          <span class="plan-pill">⚡ 15m Delivery</span>
+        </div>
+        <ul class="plan-features-list">
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>Full 12 months unlimited VPN protection</span></li>
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>Includes Surfshark Antivirus & Alert monitoring</span></li>
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>Private search engine with zero logs</span></li>
+          <li class="plan-feature-item"><span class="plan-feature-check">✓</span><span>365-day replacement warranty</span></li>
+        </ul>
+        <div class="plan-terms-note">
+          <strong>Terms &amp; SLA:</strong> Annual family cyber protection
+        </div>
+        <button type="button" class="btn-choose-plan" onclick="openQuickOrderModal('surfshark-vpn', 'PLAN-SURF-12M')" aria-label="Choose One Plus (12 Months)">
+          <span>Choose One Plus (12 Months)</span>
+          <span>→</span>
+        </button>
+      </div>
+      </div>
+    </section>
+<!-- /Canonical Plan Comparison Section -->
 
     <section style="margin-top: 3.5rem;">
       <h2 class="section-title">Verified Surfshark Specifications</h2>
@@ -224,32 +352,205 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>AIDigiTools.tech</h3>
-          <p>Pakistan's localized AI software intelligence hub and domestic subscription rails.</p>
+          <a href="../index.html" class="logo" style="margin-bottom:0.75rem;" aria-label="AIDigiTools Home">
+            <svg class="logo-brand-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="navTeal" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#05D5A6"/>
+              <stop offset="100%" stop-color="#00B4D8"/>
+            </linearGradient>
+            <linearGradient id="navPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0077B6"/>
+              <stop offset="35%" stop-color="#4361EE"/>
+              <stop offset="70%" stop-color="#7209B7"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+            <linearGradient id="navOrbit" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#00B4D8"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <path class="orbit-back" d="M 12 62 C 12 36, 126 18, 134 38" stroke="url(#navOrbit)" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <path class="sparkle-star" d="M 8 36 Q 8 41 3 41 Q 8 41 8 46 Q 8 41 13 41 Q 8 41 8 36 Z" fill="#00E5A3"/>
+          <path class="sparkle-star" d="M 128 78 Q 128 82 124 82 Q 128 82 128 86 Q 128 82 132 82 Q 128 82 128 78 Z" fill="#8B5CF6"/>
+          <path d="M 22 94 L 46 32 C 48 27, 54 22, 62 25 L 75 30 C 80 32, 81 37, 78 42 L 56 94 C 54 99, 46 102, 38 100 L 26 97 C 22 96, 21 95, 22 94 Z" fill="url(#navTeal)"/>
+          <path d="M 68 34 C 88 22, 118 30, 118 56 C 118 82, 88 98, 62 98 L 74 82 C 90 82, 102 72, 102 56 C 102 42, 86 36, 72 44 Z" fill="url(#navPurple)"/>
+          <path d="M 46 64 C 52 58, 66 56, 80 62 L 72 74 C 62 70, 52 72, 46 76 Z" fill="url(#navTeal)" opacity="0.95"/>
+          <path class="orbit-front" d="M 134 38 C 142 58, 38 88, 16 66" stroke="url(#navOrbit)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle class="orbit-node" cx="124" cy="34" r="5.5" fill="#4361EE"/>
+          <circle cx="122.5" cy="32.5" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        </svg>
+            <span class="logo-text-wrap">
+              <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
+              <span class="tagline">SMART TOOLS • BIGGER POSSIBILITIES</span>
+            </span>
+          </a>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-top:0.75rem; line-height:1.55;">
+            Premier localized AI software intelligence hub and subscription concierge serving Pakistan and worldwide customers with transparent PKR &amp; USD pricing and domestic rails.
+          </p>
+          <div style="margin-top:1rem;">
+            <a href="https://wa.me/923326861112" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding:0.5rem 1rem; font-size:0.85rem;">
+              <span>💬 03326861112 (WhatsApp Desk)</span>
+            </a>
+          </div>
         </div>
         <div class="footer-col">
-          <h3>Products</h3>
+          <h4>Categories</h4>
           <ul>
-            <li><a href="chatgpt-plus.html">ChatGPT Plus</a></li>
-            <li><a href="claude-pro.html">Claude Pro</a></li>
-            <li><a href="canva-pro.html">Canva Pro</a></li>
+            <li><a href="../categories/video.html">AI Video &amp; Animation</a></li>
+            <li><a href="../categories/coding.html">Coding &amp; LLM Assistants</a></li>
+            <li><a href="../categories/vpn.html">VPN &amp; Security Services</a></li>
+            <li><a href="../categories/image.html">Image &amp; Graphic Suites</a></li>
+            <li><a href="../deals.html">Bundle Deals &amp; Discounts</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Policies</h3>
+          <h4>Comparisons &amp; Guides</h4>
           <ul>
-            <li><a href="../policies.html#payments">Payment Rails</a></li>
-            <li><a href="../policies.html#refunds">Replacement Warranty</a></li>
-            <li><a href="../shipping-policy.html">Digital Delivery SLA</a></li>
-            <li><a href="../policies.html#terms">Terms of Service</a></li>
-            <li><a href="../policies.html#privacy">Privacy Policy</a></li>
+            <li><a href="../compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a></li>
+            <li><a href="../compare/runway-vs-pika.html">Runway vs Pika</a></li>
+            <li><a href="../best/best-ai-video-generators.html">Best Video AI (2026)</a></li>
+            <li><a href="../best/best-ai-coding-tools.html">Best Coding AI (2026)</a></li>
+            <li><a href="../guides/chatgpt-vs-claude.html">AI Models Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Policies &amp; Verification</h4>
+          <ul>
+            <li><a href="../policies.html#payments">Payment Rails (PKR &amp; USD)</a></li>
+            <li><a href="../policies.html#refunds">30-Day Replacement Warranty</a></li>
+            <li><a href="../shipping-policy.html">15-Minute Delivery SLA</a></li>
+            <li><a href="../affiliate-disclosure.html">Reseller &amp; Trademark Policy</a></li>
+            <li><a href="../contact.html">Support Operations Desk</a></li>
+            <li><a href="../about.html">About AIDigiTools</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 AIDigiTools. All rights reserved. Online AI software marketplace serving Pakistan and worldwide.</p>
+        <p>&copy; 2026 AIDigiTools (aidigitools.tech). All rights reserved. Independent software subscription concierge desk.</p>
+        <p style="margin-top:0.35rem; font-size:0.8rem; color:var(--text-muted);">
+          Verified Rails: EasyPaisa • JazzCash • SadaPay • NayaPay • Raast • Bank IBFT • Wise • Binance Pay (USDT)
+        </p>
       </div>
     </div>
   </footer>
+  <!-- ========================================================
+       UNIVERSAL SLIDE-OVER QUICK ORDER / CART DRAWER
+       ======================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="closeQuickOrderModal()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Quick Order Checkout">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <span>🛒</span>
+        <span>Quick Order Checkout</span>
+      </div>
+      <button type="button" class="cart-drawer-close" onclick="closeQuickOrderModal()" aria-label="Close Drawer">&times;</button>
+    </div>
+    
+    <div class="cart-drawer-body">
+      <!-- Item Info Box -->
+      <div class="cart-item-preview">
+        <img id="drawerItemIcon" src="../assets/images/icons/chatgpt-plus.svg" alt="Tool Icon" width="48" height="48" class="cart-item-icon">
+        <div>
+          <div class="cart-item-name" id="drawerItemName">ChatGPT Plus</div>
+          <div class="cart-item-vendor" id="drawerItemVendor">OpenAI Enterprise Systems</div>
+        </div>
+      </div>
+
+      <!-- Canonical Plan Selector Container -->
+      <div id="drawerPlanSelectorContainer" style="margin-bottom: 1.25rem;"></div>
+
+      <!-- Plan Duration Selection -->
+      <div>
+        <div class="cart-section-title">Select Subscription Duration:</div>
+        <div class="duration-pills-grid">
+          <div class="duration-pill active" data-months="1" onclick="selectCartDuration(1, 0)">
+            <div>1 Month</div>
+            <span class="duration-discount-tag">Standard</span>
+          </div>
+          <div class="duration-pill" data-months="3" onclick="selectCartDuration(3, 5)">
+            <div>3 Months</div>
+            <span class="duration-discount-tag">Save 5%</span>
+          </div>
+          <div class="duration-pill" data-months="12" onclick="selectCartDuration(12, 15)">
+            <div>12 Months</div>
+            <span class="duration-discount-tag">Save 15%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Rails Selection -->
+      <div>
+        <div class="cart-section-title">Select Payment Method:</div>
+        <div class="payment-rails-selector">
+          <div class="rail-option active" data-rail="EasyPaisa" onclick="selectCartRail('EasyPaisa')">
+            <span>🟢</span><span>EasyPaisa</span>
+          </div>
+          <div class="rail-option" data-rail="JazzCash" onclick="selectCartRail('JazzCash')">
+            <span>🔴</span><span>JazzCash</span>
+          </div>
+          <div class="rail-option" data-rail="SadaPay" onclick="selectCartRail('SadaPay')">
+            <span>🟠</span><span>SadaPay</span>
+          </div>
+          <div class="rail-option" data-rail="Wise / Crypto" onclick="selectCartRail('Wise / Crypto')">
+            <span>🌐</span><span>Wise / Crypto</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Price Calculation -->
+      <div class="cart-summary-box">
+        <div class="cart-summary-row">
+          <span>Base Subtotal:</span>
+          <span id="drawerSubtotal" style="font-weight:600;">Rs. 2,300 PKR</span>
+        </div>
+        <div class="cart-summary-row" id="drawerDiscountRow" style="display:none; color:#059669;">
+          <span>Plan Discount:</span>
+          <span id="drawerDiscount" style="font-weight:600;">- Rs. 0 PKR</span>
+        </div>
+        <div class="cart-total-row">
+          <div>
+            <div>Total Amount:</div>
+            <div id="drawerTotalUsd" style="font-size:0.8rem; color:var(--text-muted); font-weight:normal;">(~$8.00 USD)</div>
+          </div>
+          <div class="cart-total-pkr" id="drawerTotalPkr">Rs. 2,300 PKR</div>
+        </div>
+      </div>
+
+      <!-- SLA Guarantee Box -->
+      <div class="cart-sla-box">
+        <div><strong>⚡ Guaranteed 15-Minute Delivery:</strong> Credentials delivered directly to your WhatsApp with dedicated account configuration.</div>
+        <div style="margin-top:0.35rem;"><strong>🛡️ 30-Day Full Replacement Warranty:</strong> Complete peace of mind with instant customer support.</div>
+      </div>
+
+      <!-- Checkout CTA -->
+      <a id="drawerCheckoutBtn" href="https://wa.me/923326861112" target="_blank" rel="noopener noreferrer" class="cart-checkout-btn">
+        <span>Proceed to WhatsApp Checkout &rarr;</span>
+      </a>
+      <div style="text-align:center; font-size:0.75rem; color:var(--text-muted);">
+        Encrypted direct communication with official AIDigiTools Concierge (03326861112)
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       DYNAMIC FLOATING WHATSAPP CONCIERGE WIDGET
+       ======================================================== -->
+  <aside class="floating-wa-container" aria-label="Customer Support Concierge">
+    <div class="floating-wa-badge">
+      <span class="floating-wa-pulse"></span>
+      <span class="floating-wa-status">🟢 Online • 15m Delivery</span>
+    </div>
+    <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20have%20a%20question%20about%20your%20verified%20software%20subscriptions." target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat with AIDigiTools on WhatsApp">
+      <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 2.5C8.54 2.5 2.5 8.54 2.5 16c0 2.61.74 5.05 2.02 7.12L2.6 29.4l6.45-1.89A13.43 13.43 0 0016 29.5c7.46 0 13.5-6.04 13.5-13.5S23.46 2.5 16 2.5zm6.83 19.22c-.28.81-1.65 1.56-2.32 1.62-.61.06-1.39.09-4.48-1.19-3.71-1.53-6.08-5.3-6.27-5.54-.18-.25-1.51-2-1.51-3.82s.95-2.7 1.29-3.07c.34-.36.74-.45 1-.45.24 0 .5 0 .71.01.24.01.56-.09.87.67.33.77 1.11 2.7 1.21 2.9.1.2.16.44.03.71-.13.26-.2.41-.39.64-.2.23-.41.5-.58.67-.2.19-.4.39-.17.79.23.39 1 1.65 2.15 2.67 1.48 1.32 2.73 1.73 3.12 1.93.39.19.61.16.84-.1.23-.26.98-1.14 1.24-1.54.27-.39.53-.33.9-.19.36.13 2.29 1.08 2.69 1.28.39.2.65.3.75.46.1.17.1.98-.18 1.79z" fill="#FFFFFF"/>
+      </svg>
+      <span class="floating-wa-label">WhatsApp Concierge</span>
+    </a>
+  </aside>
+
+  <script src="../assets/cart.js"></script>
 </body>
 </html>

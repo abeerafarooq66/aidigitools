@@ -1,0 +1,327 @@
+{
+  "total_brands": 40,
+  "asset_directory": "assets/product-logos",
+  "verification_date": "2026-10-25",
+  "brands": [
+    {
+      "brand_id": "openai",
+      "canonical_name": "OpenAI (ChatGPT)",
+      "slug": "chatgpt-plus",
+      "official_domain": "openai.com",
+      "logo_file": "assets/product-logos/chatgpt-plus.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "openai-codex",
+      "canonical_name": "OpenAI Codex",
+      "slug": "chatgpt-codex",
+      "official_domain": "openai.com",
+      "logo_file": "assets/product-logos/chatgpt-codex.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "anthropic",
+      "canonical_name": "Anthropic (Claude)",
+      "slug": "claude-pro",
+      "official_domain": "anthropic.com",
+      "logo_file": "assets/product-logos/claude-pro.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "anthropic-artifacts",
+      "canonical_name": "Claude Artifacts",
+      "slug": "claude-artifacts",
+      "official_domain": "anthropic.com",
+      "logo_file": "assets/product-logos/claude-artifacts.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "canva",
+      "canonical_name": "Canva",
+      "slug": "canva-pro",
+      "official_domain": "canva.com",
+      "logo_file": "assets/product-logos/canva-pro.svg",
+      "category": "Design & Creative"
+    },
+    {
+      "brand_id": "capcut",
+      "canonical_name": "CapCut",
+      "slug": "capcut-pro",
+      "official_domain": "capcut.com",
+      "logo_file": "assets/product-logos/capcut-pro.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "google-youtube",
+      "canonical_name": "YouTube",
+      "slug": "youtube-premium",
+      "official_domain": "youtube.com",
+      "logo_file": "assets/product-logos/youtube-premium.svg",
+      "category": "Streaming & Entertainment"
+    },
+    {
+      "brand_id": "google-gemini",
+      "canonical_name": "Google Gemini",
+      "slug": "gemini-advanced",
+      "official_domain": "gemini.google.com",
+      "logo_file": "assets/product-logos/gemini-advanced.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "google-veo",
+      "canonical_name": "Google Veo",
+      "slug": "google-veo",
+      "official_domain": "deepmind.google",
+      "logo_file": "assets/product-logos/google-veo.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "midjourney",
+      "canonical_name": "Midjourney",
+      "slug": "midjourney",
+      "official_domain": "midjourney.com",
+      "logo_file": "assets/product-logos/midjourney.svg",
+      "category": "AI Image"
+    },
+    {
+      "brand_id": "cursor",
+      "canonical_name": "Cursor",
+      "slug": "cursor-pro",
+      "official_domain": "cursor.com",
+      "logo_file": "assets/product-logos/cursor-pro.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "deepseek",
+      "canonical_name": "DeepSeek",
+      "slug": "deepseek-pro",
+      "official_domain": "deepseek.com",
+      "logo_file": "assets/product-logos/deepseek-pro.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "elevenlabs",
+      "canonical_name": "ElevenLabs",
+      "slug": "elevenlabs-creator",
+      "official_domain": "elevenlabs.io",
+      "logo_file": "assets/product-logos/elevenlabs-creator.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "figma",
+      "canonical_name": "Figma",
+      "slug": "figma-pro",
+      "official_domain": "figma.com",
+      "logo_file": "assets/product-logos/figma-pro.svg",
+      "category": "Design & Creative"
+    },
+    {
+      "brand_id": "github",
+      "canonical_name": "GitHub Copilot",
+      "slug": "github-copilot",
+      "official_domain": "github.com",
+      "logo_file": "assets/product-logos/github-copilot.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "grammarly",
+      "canonical_name": "Grammarly",
+      "slug": "grammarly-pro",
+      "official_domain": "grammarly.com",
+      "logo_file": "assets/product-logos/grammarly-pro.svg",
+      "category": "Productivity"
+    },
+    {
+      "brand_id": "xai-grok",
+      "canonical_name": "xAI Grok",
+      "slug": "grok-ai",
+      "official_domain": "x.ai",
+      "logo_file": "assets/product-logos/grok-ai.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "jetbrains",
+      "canonical_name": "JetBrains",
+      "slug": "jetbrains-all",
+      "official_domain": "jetbrains.com",
+      "logo_file": "assets/product-logos/jetbrains-all.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "kling",
+      "canonical_name": "Kling AI",
+      "slug": "kling-ai",
+      "official_domain": "klingai.com",
+      "logo_file": "assets/product-logos/kling-ai.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "leonardo",
+      "canonical_name": "Leonardo AI",
+      "slug": "leonardo-ai",
+      "official_domain": "leonardo.ai",
+      "logo_file": "assets/product-logos/leonardo-ai.svg",
+      "category": "AI Image"
+    },
+    {
+      "brand_id": "linkedin",
+      "canonical_name": "LinkedIn Learning & Premium",
+      "slug": "linkedin-premium",
+      "official_domain": "linkedin.com",
+      "logo_file": "assets/product-logos/linkedin-premium.svg",
+      "category": "Productivity"
+    },
+    {
+      "brand_id": "minimax",
+      "canonical_name": "MiniMax AI (Hailuo)",
+      "slug": "minimax-ai",
+      "official_domain": "minimax.io",
+      "logo_file": "assets/product-logos/minimax-ai.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "netflix",
+      "canonical_name": "Netflix",
+      "slug": "netflix-premium",
+      "official_domain": "netflix.com",
+      "logo_file": "assets/product-logos/netflix-premium.svg",
+      "category": "Streaming & Entertainment"
+    },
+    {
+      "brand_id": "nordvpn",
+      "canonical_name": "NordVPN",
+      "slug": "nordvpn",
+      "official_domain": "nordvpn.com",
+      "logo_file": "assets/product-logos/nordvpn.svg",
+      "category": "VPN & Privacy"
+    },
+    {
+      "brand_id": "notion",
+      "canonical_name": "Notion",
+      "slug": "notion-business",
+      "official_domain": "notion.so",
+      "logo_file": "assets/product-logos/notion-business.svg",
+      "category": "Productivity"
+    },
+    {
+      "brand_id": "perplexity",
+      "canonical_name": "Perplexity AI",
+      "slug": "perplexity-pro",
+      "official_domain": "perplexity.ai",
+      "logo_file": "assets/product-logos/perplexity-pro.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "quillbot",
+      "canonical_name": "QuillBot",
+      "slug": "quillbot-premium",
+      "official_domain": "quillbot.com",
+      "logo_file": "assets/product-logos/quillbot-premium.svg",
+      "category": "AI Chat & Writing"
+    },
+    {
+      "brand_id": "replit",
+      "canonical_name": "Replit",
+      "slug": "replit-core",
+      "official_domain": "replit.com",
+      "logo_file": "assets/product-logos/replit-core.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "runway",
+      "canonical_name": "Runway Gen-3",
+      "slug": "runway-gen3",
+      "official_domain": "runwayml.com",
+      "logo_file": "assets/product-logos/runway-gen3.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "semrush",
+      "canonical_name": "SEMrush",
+      "slug": "semrush-guru",
+      "official_domain": "semrush.com",
+      "logo_file": "assets/product-logos/semrush-guru.svg",
+      "category": "Productivity"
+    },
+    {
+      "brand_id": "suno",
+      "canonical_name": "Suno AI",
+      "slug": "suno-ai",
+      "official_domain": "suno.com",
+      "logo_file": "assets/product-logos/suno-ai.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "surfshark",
+      "canonical_name": "Surfshark VPN",
+      "slug": "surfshark-vpn",
+      "official_domain": "surfshark.com",
+      "logo_file": "assets/product-logos/surfshark-vpn.svg",
+      "category": "VPN & Privacy"
+    },
+    {
+      "brand_id": "udio",
+      "canonical_name": "Udio AI",
+      "slug": "udio-ai",
+      "official_domain": "udio.com",
+      "logo_file": "assets/product-logos/udio-ai.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "adobe",
+      "canonical_name": "Adobe Creative Cloud",
+      "slug": "adobe-creative-cloud",
+      "official_domain": "adobe.com",
+      "logo_file": "assets/product-logos/adobe-creative-cloud.svg",
+      "category": "Design & Creative"
+    },
+    {
+      "brand_id": "envato",
+      "canonical_name": "Envato Elements",
+      "slug": "envato-elements",
+      "official_domain": "elements.envato.com",
+      "logo_file": "assets/product-logos/envato-elements.svg",
+      "category": "Design & Creative"
+    },
+    {
+      "brand_id": "freepik",
+      "canonical_name": "Freepik",
+      "slug": "freepik-premium",
+      "official_domain": "freepik.com",
+      "logo_file": "assets/product-logos/freepik-premium.svg",
+      "category": "Design & Creative"
+    },
+    {
+      "brand_id": "spotify",
+      "canonical_name": "Spotify",
+      "slug": "spotify-premium",
+      "official_domain": "spotify.com",
+      "logo_file": "assets/product-logos/spotify.svg",
+      "category": "Streaming & Entertainment"
+    },
+    {
+      "brand_id": "duolingo",
+      "canonical_name": "Duolingo",
+      "slug": "duolingo-super",
+      "official_domain": "duolingo.com",
+      "logo_file": "assets/product-logos/duolingo.svg",
+      "category": "Productivity"
+    },
+    {
+      "brand_id": "discord",
+      "canonical_name": "Discord",
+      "slug": "discord-nitro",
+      "official_domain": "discord.com",
+      "logo_file": "assets/product-logos/discord.svg",
+      "category": "Productivity"
+    },
+    {
+      "brand_id": "zoom",
+      "canonical_name": "Zoom",
+      "slug": "zoom-workplace",
+      "official_domain": "zoom.us",
+      "logo_file": "assets/product-logos/zoom.svg",
+      "category": "Productivity"
+    }
+  ]
+}

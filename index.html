@@ -60,13 +60,73 @@
     ]
   }
   </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AIDigiTools",
+    "url": "https://aidigitools.tech/",
+    "logo": "https://aidigitools.tech/assets/images/aidigitools-logo.svg",
+    "description": "Premier verified AI software subscription marketplace and digital tools concierge serving Pakistan and worldwide.",
+    "email": "support@aidigitools.tech",
+    "telephone": "+92-332-6861112",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+92-332-6861112",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "areaServed": ["PK", "Worldwide"],
+        "availableLanguage": ["en", "ur"]
+      }
+    ],
+    "sameAs": [
+      "https://github.com/abeerafarooq66/aidigitools"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="container nav-wrapper">
-      <a href="index.html" class="logo">AIDigi<span class="gold">Tools</span><span class="tagline">AI Software Marketplace</span></a>
+      <a href="index.html" class="logo" aria-label="AIDigiTools Home">
+        <svg class="logo-brand-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="navTeal" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#05D5A6"/>
+              <stop offset="100%" stop-color="#00B4D8"/>
+            </linearGradient>
+            <linearGradient id="navPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0077B6"/>
+              <stop offset="35%" stop-color="#4361EE"/>
+              <stop offset="70%" stop-color="#7209B7"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+            <linearGradient id="navOrbit" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#00B4D8"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <path class="orbit-back" d="M 12 62 C 12 36, 126 18, 134 38" stroke="url(#navOrbit)" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <path class="sparkle-star" d="M 8 36 Q 8 41 3 41 Q 8 41 8 46 Q 8 41 13 41 Q 8 41 8 36 Z" fill="#00E5A3"/>
+          <path class="sparkle-star" d="M 128 78 Q 128 82 124 82 Q 128 82 128 86 Q 128 82 132 82 Q 128 82 128 78 Z" fill="#8B5CF6"/>
+          <path d="M 22 94 L 46 32 C 48 27, 54 22, 62 25 L 75 30 C 80 32, 81 37, 78 42 L 56 94 C 54 99, 46 102, 38 100 L 26 97 C 22 96, 21 95, 22 94 Z" fill="url(#navTeal)"/>
+          <path d="M 68 34 C 88 22, 118 30, 118 56 C 118 82, 88 98, 62 98 L 74 82 C 90 82, 102 72, 102 56 C 102 42, 86 36, 72 44 Z" fill="url(#navPurple)"/>
+          <path d="M 46 64 C 52 58, 66 56, 80 62 L 72 74 C 62 70, 52 72, 46 76 Z" fill="url(#navTeal)" opacity="0.95"/>
+          <path class="orbit-front" d="M 134 38 C 142 58, 38 88, 16 66" stroke="url(#navOrbit)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle class="orbit-node" cx="124" cy="34" r="5.5" fill="#4361EE"/>
+          <circle cx="122.5" cy="32.5" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        </svg>
+        <span class="logo-text-wrap">
+          <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
+          <span class="tagline">SMART TOOLS • BIGGER POSSIBILITIES</span>
+        </span>
+      </a>
       <nav>
-        <a href="#products">Products</a>
+        <a href="index.html#products">Products</a>
         <a href="deals.html">Deals</a>
         <a href="categories/video.html">Video</a>
         <a href="categories/coding.html">Coding</a>
@@ -75,6 +135,9 @@
         <a href="shipping-policy.html">Delivery</a>
         <a href="policies.html#payments">Payments</a>
         <a href="contact.html">Contact</a>
+        <button type="button" onclick="openQuickOrderModal('chatgpt-plus')" class="nav-cta" style="border:none; cursor:pointer;" aria-label="Open Quick Order">
+          <span>🛒 Quick Order</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -94,43 +157,107 @@
       </div>
     </section>
 
-    <!-- ========================================================
+            <!-- ========================================================
          AUTHKIT LIVING COMPONENT WIDGET (CENTERPIECE)
-         Featuring Traveling Laser Border-Beam & Interactive Tabs
+         Featuring Traveling Laser Border-Beam & All 36 Tools
          ======================================================== -->
-    <div class="authkit-widget-wrapper border-beam-card">
+    <div class="authkit-widget-wrapper border-beam-card" id="showcase">
       <div class="authkit-widget-card">
-        <!-- Interactive Tabs Bar -->
-        <div class="authkit-tabs-bar">
-          <div class="authkit-tab-group">
-            <button onclick="setMasterTool('chatgpt')" id="mtab-chatgpt" class="authkit-tab-btn active">ChatGPT Plus</button>
-            <button onclick="setMasterTool('claude')" id="mtab-claude" class="authkit-tab-btn">Claude Pro</button>
-            <button onclick="setMasterTool('capcut')" id="mtab-capcut" class="authkit-tab-btn">CapCut Pro</button>
-            <button onclick="setMasterTool('canva')" id="mtab-canva" class="authkit-tab-btn">Canva Pro</button>
-          </div>
-          <div class="authkit-stock-status">
-            <span class="pulse-dot"></span>
-            <span>Instant Stock Activated</span>
-          </div>
+        <!-- Interactive Category Switcher Pills -->
+        <div class="authkit-cat-filter-pills" role="tablist" aria-label="Tool Categories">
+          <button type="button" class="authkit-cat-pill active" onclick="filterShowcaseCategory('all', this)">⭐ All 36 Tools</button>
+          <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('ai', this)">🤖 AI Assistants</button>
+          <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('coding', this)">💻 AI Coding</button>
+          <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('video', this)">🎬 AI Video &amp; Audio</button>
+          <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('image', this)">🎨 Design &amp; Image</button>
+          <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('vpn', this)">🔒 VPN &amp; Privacy</button>
+          <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('productivity', this)">⚡ Productivity &amp; SEO</button>
+        </div>
+
+        <!-- Quick Select Dropdown for all 36 tools -->
+        <div style="margin-bottom: 1.25rem;">
+          <label for="showcaseToolSelect" style="display:block; font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:var(--text-secondary); margin-bottom:0.4rem;">Select Any Software Tool to Test Live Pricing &amp; Rails:</label>
+          <select id="showcaseToolSelect" class="authkit-tool-select" onchange="setMasterTool(this.value)">
+              <optgroup label="⭐ Featured AI Assistants" data-cat="ai">
+                <option value="chatgpt-plus" selected>ChatGPT Plus — Rs. 2,300 PKR / $8.00 USD</option>
+                <option value="claude-pro">Claude Pro — Rs. 2,500 PKR / $9.00 USD</option>
+                <option value="gemini-advanced">Google Gemini Advanced — Rs. 1,200 PKR / $4.50 USD</option>
+                <option value="perplexity-pro">Perplexity Pro AI — Rs. 2,200 PKR / $8 USD</option>
+                <option value="grok-ai">Grok 2 / xAI SuperGrok — Rs. 1,100 PKR / $4 USD</option>
+              </optgroup>
+              <optgroup label="💻 AI Coding & Developer Tools" data-cat="coding">
+                <option value="cursor-pro">Cursor Pro — Rs. 3,800 PKR / $14 USD</option>
+                <option value="github-copilot">GitHub Copilot Pro — Rs. 1,500 PKR / $5.50 USD</option>
+                <option value="deepseek-pro">DeepSeek R1 / V3 Pro — Rs. 1,100 PKR / $4 USD</option>
+                <option value="jetbrains-all">JetBrains All Products Pack — Rs. 2,500 PKR / $9 USD</option>
+                <option value="replit-core">Replit Core Cloud IDE — Rs. 2,800 PKR / $10 USD</option>
+                <option value="chatgpt-codex">OpenAI API & Codex — Rs. 600 PKR / $2.50 USD</option>
+                <option value="claude-artifacts">Claude Artifacts Pro — Rs. 1,200 PKR / $4.50 USD</option>
+              </optgroup>
+              <optgroup label="🎬 AI Video & Audio Engines" data-cat="video">
+                <option value="capcut-pro">CapCut Pro — Rs. 950 PKR / $3.50 USD</option>
+                <option value="runway-gen3">Runway Gen-3 Alpha — Rs. 1,800 PKR / $6.50 USD</option>
+                <option value="kling-ai">Kling AI Pro — Rs. 700 PKR / $2.50 USD</option>
+                <option value="google-veo">Google Veo 2 / Video FX — Rs. 1,900 PKR / $7 USD</option>
+                <option value="minimax-ai">MiniMax Hailuo AI Video — Rs. 1,600 PKR / $6 USD</option>
+                <option value="elevenlabs-creator">ElevenLabs Creator — Rs. 2,800 PKR / $10 USD</option>
+                <option value="suno-ai">Suno AI Music v3.5 — Rs. 2,600 PKR / $9.50 USD</option>
+                <option value="udio-ai">Udio AI Music Lab — Rs. 2,800 PKR / $10 USD</option>
+              </optgroup>
+              <optgroup label="🎨 Design, Image & Creative Studios" data-cat="image">
+                <option value="midjourney">Midjourney v6.1 — Rs. 2,800 PKR / $10.00 USD</option>
+                <option value="canva-pro">Canva Pro — Rs. 600 PKR / $2.50 USD</option>
+                <option value="adobe-creative-cloud">Adobe Creative Cloud — Rs. 1,400 PKR / $5.50 USD</option>
+                <option value="figma-pro">Figma Pro — Rs. 1,800 PKR / $6.50 USD</option>
+                <option value="freepik-premium">Freepik Premium — Rs. 1,800 PKR / $6.50 USD</option>
+                <option value="envato-elements">Envato Elements — Rs. 2,600 PKR / $9.50 USD</option>
+                <option value="leonardo-ai">Leonardo AI Visual Studio — Rs. 1,300 PKR / $5 USD</option>
+              </optgroup>
+              <optgroup label="🔒 VPN & Workstation Privacy" data-cat="vpn">
+                <option value="nordvpn">NordVPN Complete — Rs. 850 PKR / $3.00 USD</option>
+                <option value="surfshark-vpn">Surfshark One VPN — Rs. 800 PKR / $3 USD</option>
+              </optgroup>
+              <optgroup label="⚡ Productivity, SEO & Enterprise" data-cat="productivity">
+                <option value="semrush-guru">Semrush Guru Platform — Rs. 2,500 PKR / $9 USD</option>
+                <option value="notion-business">Notion Business & AI — Rs. 1,400 PKR / $5 USD</option>
+                <option value="linkedin-premium">LinkedIn Premium Career — Rs. 1,500 PKR / $5.50 USD</option>
+                <option value="grammarly-pro">Grammarly Premium — Rs. 750 PKR / $2.80 USD</option>
+                <option value="quillbot-premium">QuillBot Premium Suite — Rs. 1,600 PKR / $6 USD</option>
+              </optgroup>
+              <optgroup label="📺 Streaming & Entertainment" data-cat="streaming">
+                <option value="netflix-premium">Netflix 4K UHD Premium — Rs. 1,100 PKR / $4 USD</option>
+                <option value="youtube-premium">YouTube Premium Ad-Free — Rs. 750 PKR / $2.80 USD</option>
+              </optgroup>
+          </select>
         </div>
 
         <!-- Dynamic Tool Interactive Grid -->
         <div class="authkit-widget-grid">
           <div>
-            <div class="authkit-vendor-pill" id="mToolVendor">OpenAI Enterprise Engine</div>
-            <div class="authkit-tool-title" id="mToolTitle">ChatGPT Plus Subscription</div>
-            <p class="authkit-tool-desc" id="mToolDesc">Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation without foreign cards.</p>
+            <div class="authkit-showcase-header">
+              <img id="mToolIcon" src="assets/product-logos/chatgpt-plus.svg" alt="ChatGPT Plus Official Logo" width="56" height="56" class="authkit-brand-icon">
+              <div>
+                <div class="authkit-vendor-pill" id="mToolVendor">OpenAI Enterprise Systems</div>
+                <h3 class="authkit-tool-title" id="mToolTitle" style="margin:0; font-size:1.4rem;">ChatGPT Plus Subscription</h3>
+              </div>
+            </div>
             
-            <div class="authkit-price-row">
-              <span class="authkit-price-val" id="mToolPrice">Rs. 2,300</span>
-              <span class="authkit-price-sub">/ month (Flat PKR)</span>
+            <p class="authkit-tool-desc" id="mToolDesc" style="margin-top:0.75rem;">Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation without foreign cards.</p>
+            
+            <div class="authkit-price-row" style="margin:1rem 0;">
+              <span class="authkit-price-val" id="mToolPrice" style="color:#0284C7; font-weight:700;">Rs. 2,300</span>
+              <span class="authkit-price-sub" id="mToolPriceSub">PKR (~$8.00 USD) / month</span>
             </div>
 
             <ul class="authkit-features-list">
               <li><span class="check">✓</span><span>15-Minute Instant WhatsApp Delivery SLA</span></li>
               <li><span class="check">✓</span><span>30-Day Guaranteed Replacement Warranty</span></li>
-              <li><span class="check">✓</span><span>Settled in Domestic PKR (Zero Forex Fees)</span></li>
+              <li><span class="check">✓</span><span>Settled in Domestic PKR or USD (Zero Forex Surcharges)</span></li>
             </ul>
+
+            <div style="margin-top:1rem;">
+              <a id="mSpecsLink" href="tools/chatgpt-plus.html" style="font-size:0.88rem; font-weight:600; color:#0284C7; text-decoration:none;">View Full Specs &amp; Benchmarks for ChatGPT Plus →</a>
+            </div>
           </div>
 
           <!-- Instant Order Simulator Box -->
@@ -145,9 +272,15 @@
               </div>
               <div class="authkit-badge-nofx">⚡ Serving Pakistan &amp; Worldwide (PKR / USD)</div>
             </div>
-            <a id="mWaLink" href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20$8%20USD" target="_blank" class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
-              <span>Instant Order on WhatsApp &rarr;</span>
-            </a>
+            
+            <div class="authkit-showcase-actions">
+              <a id="mWaLink" href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20$8.00%20USD." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+                <span>Instant Order on WhatsApp &rarr;</span>
+              </a>
+              <button type="button" onclick="openQuickOrderModal(document.getElementById('showcaseToolSelect').value)" class="btn-quick-order" style="width: 100%;">
+                <span>🛒 Open Quick Order Drawer (1 / 3 / 12 Mo)</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -186,15 +319,22 @@
 
     <!-- Live Search & Filter Bar -->
     <section style="margin-top: 3.5rem;">
-      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Instant Tool Finder</h2>
-        <input type="text" id="toolSearchInput" placeholder="Search by name, category, or workflow (e.g. video, coding, vpn, chatgpt)..." style="width: 100%; padding: 0.85rem 1.2rem; background: var(--bg-card-hover); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); font-size: 1rem; outline: none; transition: border 0.2s ease;">
-        <div style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
-          Popular: <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('video')">Video</span>
-          <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('coding')">Coding</span>
-          <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('vpn')">VPN</span>
-          <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('image')">Image</span>
-          <span style="cursor:pointer; color:var(--accent-gold);" onclick="filterTools('')">Show All</span>
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 2rem; max-width: 860px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
+        <h2 style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary);">Find Your AI Software Tool</h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across 36 verified subscriptions or filter by specialized creative and development workflows.</p>
+        
+        <div style="position: relative; max-width: 680px; margin: 0 auto;">
+          <input type="text" id="toolSearchInput" placeholder="Search by tool name, model, or capability (e.g. ChatGPT, Claude, Video, Python, VPN)..." style="width: 100%; padding: 0.95rem 1.2rem 0.95rem 2.85rem; background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; color: var(--text-primary); font-size: 0.98rem; outline: none; transition: all 0.2s ease;">
+          <svg style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-muted);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem;">
+          <span id="searchCountBadge" style="font-size: 0.8rem; font-weight: 700; color: #0284C7; background: rgba(0, 180, 216, 0.08); padding: 0.35rem 0.75rem; border-radius: 9999px; margin-right: 0.5rem;">Showing 36 Tools</span>
+          <button class="badge" onclick="filterTools('')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">All Tools</button>
+          <button class="badge" onclick="filterTools('video')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">🎬 Video Studio</button>
+          <button class="badge" onclick="filterTools('coding')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">💻 Coding &amp; Dev</button>
+          <button class="badge" onclick="filterTools('image')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">🎨 Graphic &amp; Image</button>
+          <button class="badge" onclick="filterTools('vpn')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">🔒 VPN &amp; Security</button>
         </div>
       </div>
     </section>
@@ -204,651 +344,976 @@
       <p class="section-subtitle">Genuine access to world-leading AI intelligence with PKR &amp; USD payment options.</p>
       
       <div class="grid" id="toolsGrid">
-        <div class="card tool-card" data-category="chat coding writing">
+
+        <div class="card tool-card" data-category="ai ai assistant & llm">
           <div>
-            <h2>ChatGPT Plus</h2>
-            <p>Full access to GPT-4o, Custom GPTs, Canvas, and advanced voice mode with zero downtime.</p>
-            <div class="price-tag">Rs. 2300 PKR <span class="period">(~$8.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ OpenAI GPT-4o & DALL-E 3 Imaging</li>
-              <li>✓ EasyPaisa, JazzCash, SadaPay & Wise/Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🔥 #1 Pro Choice</span>
+              
+              <img src="assets/product-logos/chatgpt-plus.svg" alt="ChatGPT Plus Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Assistant & LLM</span>
+            </div>
+            <h3 class="tool-card-title">ChatGPT Plus</h3>
+            <span class="tool-card-vendor">OpenAI Enterprise Systems</span>
+            <p class="tool-card-desc">Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation without foreign credit cards.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,300 PKR</span> <span class="price-period">(~$8.00 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/chatgpt-plus.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT Plus%20for%20Rs%202300%20PKR%20/%20$8.00%20USD" class="btn-whatsapp">Order ChatGPT Plus on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-plus')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20$8.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/chatgpt-plus.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding writing chat">
+        <div class="card tool-card" data-category="ai ai assistant & llm">
           <div>
-            <h2>Claude Pro</h2>
-            <p>Access Claude 3.5 Sonnet with extended context, Artifacts canvas, and technical programming capabilities.</p>
-            <div class="price-tag">Rs. 2500 PKR <span class="period">(~$9.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Anthropic Claude 3.5 Sonnet & Haiku</li>
-              <li>✓ Interactive Code & UI Artifacts Canvas</li>
-              <li>✓ EasyPaisa, JazzCash, SadaPay, Wise & Crypto</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(67, 97, 238, 0.12); color: #3730A3; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(67, 97, 238, 0.12); letter-spacing: 0.02em;">⭐ #2 Reasoning</span>
+              
+              <img src="assets/product-logos/claude-pro.svg" alt="Claude Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Assistant & LLM</span>
+            </div>
+            <h3 class="tool-card-title">Claude Pro</h3>
+            <span class="tool-card-vendor">Anthropic AI Systems</span>
+            <p class="tool-card-desc">Claude 3.5 Sonnet with 200,000 token context window, interactive Artifacts canvas, and SWE-bench coding intelligence.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,500 PKR</span> <span class="price-period">(~$9.00 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/claude-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude Pro%20for%20Rs%202500%20PKR%20/%20$9.00%20USD" class="btn-whatsapp">Order Claude Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Pro%20for%20Rs%202500%20PKR%20/%20$9.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/claude-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design graphics">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>Canva Pro</h2>
-            <p>Premium graphics workspace, 100M+ stock assets, Magic Studio generative AI, and team Brand Kits.</p>
-            <div class="price-tag">Rs. 600 PKR <span class="period">(~$2.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ 100M+ Stock Photos, Vectors & Videos</li>
-              <li>✓ Magic Studio AI Background Remover</li>
-              <li>✓ 1TB Secure Cloud & Brand Kits</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(245, 158, 11, 0.12); color: #B45309; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(245, 158, 11, 0.12); letter-spacing: 0.02em;">🎨 #3 Design & Stock</span>
+              
+              <img src="assets/product-logos/canva-pro.svg" alt="Canva Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Canva Pro</h3>
+            <span class="tool-card-vendor">Canva Design Platform</span>
+            <p class="tool-card-desc">100M+ premium stock assets, Magic Studio AI background remover, 1TB cloud storage, and team Brand Kits.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 600 PKR</span> <span class="price-period">(~$2.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/canva-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Canva Pro%20for%20Rs%20600%20PKR%20/%20$2.50%20USD" class="btn-whatsapp">Order Canva Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('canva-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Canva%20Pro%20for%20Rs%20600%20PKR%20/%20$2.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/canva-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video movie reels">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>CapCut Pro</h2>
-            <p>Export in 4K 60fps, generate auto-captions, and access full viral music libraries on PC and Mobile.</p>
-            <div class="price-tag">Rs. 950 PKR <span class="period">(~$3.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ AI Smart Auto-Captions & Subtitles</li>
-              <li>✓ 4K 60fps Optical Flow Smooth Motion</li>
-              <li>✓ EasyPaisa, JazzCash, SadaPay & Wise</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(239, 68, 68, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(239, 68, 68, 0.12); letter-spacing: 0.02em;">🎬 #4 Video Editing</span>
+              
+              <img src="assets/product-logos/capcut-pro.svg" alt="CapCut Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">CapCut Pro</h3>
+            <span class="tool-card-vendor">ByteDance Creative Studio</span>
+            <p class="tool-card-desc">Automated bilingual AI captions, 4K 60fps optical flow smoothing, background removal, and commercial music licensing.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 950 PKR</span> <span class="price-period">(~$3.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/capcut-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20CapCut Pro%20for%20Rs%20950%20PKR%20/%20$3.50%20USD" class="btn-whatsapp">Order CapCut Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('capcut-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20CapCut%20Pro%20for%20Rs%20950%20PKR%20/%20$3.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/capcut-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="vpn privacy security">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>NordVPN Complete</h2>
-            <p>Ultra-fast cybersecurity with 6,400+ servers, Threat Protection Pro, and private browsing in Pakistan.</p>
-            <div class="price-tag">Rs. 850 PKR <span class="period">(~$3.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ 6,400+ High-Speed Global Servers</li>
-              <li>✓ Threat Protection Pro Ad & Malware Blocker</li>
-              <li>✓ 10 Concurrent Device Connections</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(139, 92, 246, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(139, 92, 246, 0.12); letter-spacing: 0.02em;">🖼️ #5 AI Image</span>
+              
+              <img src="assets/product-logos/midjourney.svg" alt="Midjourney v6.1 Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Midjourney v6.1</h3>
+            <span class="tool-card-vendor">Midjourney Research Lab</span>
+            <p class="tool-card-desc">Industry-benchmark photorealistic generative art, stylistic controls, character consistency, and high-res upscaling.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10.00 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/nordvpn.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20NordVPN Complete%20for%20Rs%20850%20PKR%20/%20$3.00%20USD" class="btn-whatsapp">Order NordVPN Complete on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('midjourney')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Midjourney%20v6.1%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/midjourney.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design art">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>Midjourney v6</h2>
-            <p>State-of-the-art photorealistic generative imaging with Fast GPU rendering hours and commercial license.</p>
-            <div class="price-tag">Rs. 2800 PKR <span class="period">(~$10.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Midjourney v6 & Niji v6 Japanese Anime</li>
-              <li>✓ Fast GPU Hours & Relax Unlimited</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(14, 165, 233, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.12); letter-spacing: 0.02em;">⚡ #6 AI Code Editor</span>
+              
+              <img src="assets/product-logos/cursor-pro.svg" alt="Cursor Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">Cursor Pro</h3>
+            <span class="tool-card-vendor">Anysphere AI Lab</span>
+            <p class="tool-card-desc">AI-first code editor with Claude 3.5 Sonnet agentic codebase chat, multi-file edits, and instant code prediction.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 3,800 PKR</span> <span class="price-period">(~$14 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/midjourney.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Midjourney v6%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" class="btn-whatsapp">Order Midjourney v6 on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('cursor-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Cursor%20Pro%20for%20Rs%203800%20PKR%20/%20$14%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/cursor-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="chat writing research">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>Perplexity Pro</h2>
-            <p>Switch freely between GPT-4o, Claude 3.5 Sonnet, and Sonar models with real-time web citations for research.</p>
-            <div class="price-tag">Rs. 2200 PKR <span class="period">(~$8.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Perplexity AI Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(220, 38, 38, 0.12); color: #991B1B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(220, 38, 38, 0.12); letter-spacing: 0.02em;">🖌️ #7 Creative Suite</span>
+              
+              <img src="assets/product-logos/adobe-creative-cloud.svg" alt="Adobe Creative Cloud Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Adobe Creative Cloud</h3>
+            <span class="tool-card-vendor">Adobe Creative Cloud Platform</span>
+            <p class="tool-card-desc">Photoshop, Premiere Pro, Illustrator, After Effects, and Firefly generative credits with 100GB cloud storage.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,400 PKR</span> <span class="price-period">(~$5.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/perplexity-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Perplexity Pro%20for%20Rs%202200%20PKR%20/%20$8.00%20USD" class="btn-whatsapp">Order Perplexity Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('adobe-creative-cloud')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Adobe%20Creative%20Cloud%20for%20Rs%201400%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/adobe-creative-cloud.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="chat multimodal workspace">
+        <div class="card tool-card" data-category="streaming premium streaming">
           <div>
-            <h2>Google Gemini Advanced</h2>
-            <p>Process entire codebases, 1-hour video files, and dense research documents effortlessly in a single prompt.</p>
-            <div class="price-tag">Rs. 1200 PKR <span class="period">(~$4.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Google Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(220, 38, 38, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(220, 38, 38, 0.12); letter-spacing: 0.02em;">🍿 #8 Ad-Free Video</span>
+              
+              <img src="assets/product-logos/youtube-premium.svg" alt="YouTube Premium Ad-Free Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Premium Streaming</span>
+            </div>
+            <h3 class="tool-card-title">YouTube Premium Ad-Free</h3>
+            <span class="tool-card-vendor">YouTube & Google Inc.</span>
+            <p class="tool-card-desc">Completely ad-free YouTube videos, background playback on mobile, offline video downloads, and YouTube Music.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 750 PKR</span> <span class="price-period">(~$2.80 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/gemini-advanced.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google Gemini Advanced%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" class="btn-whatsapp">Order Google Gemini Advanced on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('youtube-premium')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20YouTube%20Premium%20Ad-Free%20for%20Rs%20750%20PKR%20/%20$2.80%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/youtube-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="chat realtime news">
+        <div class="card tool-card" data-category="streaming premium streaming">
           <div>
-            <h2>Grok AI Super</h2>
-            <p>Analyze breaking news, live sentiment, and trending world topics with unfiltered real-time data access.</p>
-            <div class="price-tag">Rs. 1100 PKR <span class="period">(~$4.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ xAI Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(229, 9, 20, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(229, 9, 20, 0.12); letter-spacing: 0.02em;">📺 #9 4K UHD Movies</span>
+              
+              <img src="assets/product-logos/netflix-premium.svg" alt="Netflix 4K UHD Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Premium Streaming</span>
+            </div>
+            <h3 class="tool-card-title">Netflix 4K UHD Premium</h3>
+            <span class="tool-card-vendor">Netflix Streaming Media</span>
+            <p class="tool-card-desc">4K Ultra HD video resolution, Dolby Vision, spatial audio, and simultaneous 4-screen household streaming.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,100 PKR</span> <span class="price-period">(~$4 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/grok-ai.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Grok AI Super%20for%20Rs%201100%20PKR%20/%20$4.00%20USD" class="btn-whatsapp">Order Grok AI Super on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('netflix-premium')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Netflix%204K%20UHD%20Premium%20for%20Rs%201100%20PKR%20/%20$4%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/netflix-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding reasoning api">
+        <div class="card tool-card" data-category="ai ai assistant & llm">
           <div>
-            <h2>DeepSeek Pro API</h2>
-            <p>Execute advanced mathematical reasoning and technical programming at industry-leading cost efficiency.</p>
-            <div class="price-tag">Rs. 1100 PKR <span class="period">(~$4.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ DeepSeek Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🧠 #10 Pro Search</span>
+              
+              <img src="assets/product-logos/perplexity-pro.svg" alt="Perplexity Pro AI Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Assistant & LLM</span>
+            </div>
+            <h3 class="tool-card-title">Perplexity Pro AI</h3>
+            <span class="tool-card-vendor">Perplexity AI Systems</span>
+            <p class="tool-card-desc">Pro search with real-time web citations, Claude 3.5 Sonnet and GPT-4o models, document analysis, and academic research.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,200 PKR</span> <span class="price-period">(~$8 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/deepseek-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20DeepSeek Pro API%20for%20Rs%201100%20PKR%20/%20$4.00%20USD" class="btn-whatsapp">Order DeepSeek Pro API on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('perplexity-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Perplexity%20Pro%20AI%20for%20Rs%202200%20PKR%20/%20$8%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/perplexity-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding editor ai">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>Cursor AI Pro</h2>
-            <p>Unlimited monthly usage with 2600 priority fast requests for Claude 3.5 Sonnet and GPT-4o code completion.</p>
-            <div class="price-tag">Rs. 3800 PKR <span class="period">(~$14.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Anysphere Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(79, 70, 229, 0.12); color: #4338CA; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.12); letter-spacing: 0.02em;">🎙️ #11 Voice AI</span>
+              
+              <img src="assets/product-logos/elevenlabs-creator.svg" alt="ElevenLabs Creator Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">ElevenLabs Creator</h3>
+            <span class="tool-card-vendor">ElevenLabs Voice AI</span>
+            <p class="tool-card-desc">100,000 monthly voice characters, ultra-realistic voice cloning, multilingual speech synthesis, and dubbing.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/cursor-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Cursor AI Pro%20for%20Rs%203800%20PKR%20/%20$14.00%20USD" class="btn-whatsapp">Order Cursor AI Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('elevenlabs-creator')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ElevenLabs%20Creator%20for%20Rs%202800%20PKR%20/%20$10%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/elevenlabs-creator.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ide developer">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>JetBrains All Products</h2>
-            <p>Full commercial activation for IntelliJ IDEA Ultimate, PyCharm Professional, WebStorm, PhpStorm, and GoLand.</p>
-            <div class="price-tag">Rs. 2500 PKR <span class="period">(~$9.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ JetBrains Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(30, 41, 59, 0.12); color: #1E293B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(30, 41, 59, 0.12); letter-spacing: 0.02em;">💻 #12 Dev Assistant</span>
+              
+              <img src="assets/product-logos/github-copilot.svg" alt="GitHub Copilot Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">GitHub Copilot Pro</h3>
+            <span class="tool-card-vendor">GitHub & Microsoft Copilot</span>
+            <p class="tool-card-desc">Inline AI code completions, GitHub Copilot Chat in VS Code and JetBrains, and pull request explanations.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,500 PKR</span> <span class="price-period">(~$5.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/jetbrains-all.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20JetBrains All Products%20for%20Rs%202500%20PKR%20/%20$9.00%20USD" class="btn-whatsapp">Order JetBrains All Products on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('github-copilot')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20GitHub%20Copilot%20Pro%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/github-copilot.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding autocomplete vs-code">
+        <div class="card tool-card" data-category="vpn vpn & privacy">
           <div>
-            <h2>GitHub Copilot</h2>
-            <p>Turn natural language comments into syntactically valid code blocks across Python, JavaScript, Go, and PHP.</p>
-            <div class="price-tag">Rs. 1500 PKR <span class="period">(~$5.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ GitHub Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">🛡️ #13 Privacy VPN</span>
+              
+              <img src="assets/product-logos/nordvpn.svg" alt="NordVPN Complete Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">VPN & Privacy</span>
+            </div>
+            <h3 class="tool-card-title">NordVPN Complete</h3>
+            <span class="tool-card-vendor">Nord Security Technologies</span>
+            <p class="tool-card-desc">Encrypted tunnel across 6,000+ servers worldwide, Threat Protection Pro ad-blocking, and high-speed streaming support.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 850 PKR</span> <span class="price-period">(~$3.00 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/github-copilot.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20GitHub Copilot%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" class="btn-whatsapp">Order GitHub Copilot on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('nordvpn')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20NordVPN%20Complete%20for%20Rs%20850%20PKR%20/%20$3.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/nordvpn.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding cloud hosting">
+        <div class="card tool-card" data-category="vpn vpn & privacy">
           <div>
-            <h2>Replit Core</h2>
-            <p>Turn conversational prompts into full-stack web applications with automatic database setup and package installs.</p>
-            <div class="price-tag">Rs. 2800 PKR <span class="period">(~$10.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Replit Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(6, 182, 212, 0.12); color: #0E7490; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(6, 182, 212, 0.12); letter-spacing: 0.02em;">🔒 #14 High-Speed VPN</span>
+              
+              <img src="assets/product-logos/surfshark-vpn.svg" alt="Surfshark One VPN Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">VPN & Privacy</span>
+            </div>
+            <h3 class="tool-card-title">Surfshark One VPN</h3>
+            <span class="tool-card-vendor">Surfshark Cyber Security</span>
+            <p class="tool-card-desc">Unlimited simultaneous devices, CleanWeb ad-blocker, camouflage mode, and 3,200+ global RAM-only servers.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 800 PKR</span> <span class="price-period">(~$3 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/replit-core.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Replit Core%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" class="btn-whatsapp">Order Replit Core on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('surfshark-vpn')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Surfshark%20One%20VPN%20for%20Rs%20800%20PKR%20/%20$3%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/surfshark-vpn.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ui react">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>Claude Code Developer</h2>
-            <p>Generate and preview live React components, SVG diagrams, and HTML5 prototypes side-by-side in real time.</p>
-            <div class="price-tag">Rs. 1200 PKR <span class="period">(~$4.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Anthropic Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(99, 102, 241, 0.12); color: #4338CA; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(99, 102, 241, 0.12); letter-spacing: 0.02em;">🚀 #15 Open Reasoning</span>
+              
+              <img src="assets/product-logos/deepseek-pro.svg" alt="DeepSeek R1 / V3 Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">DeepSeek R1 / V3 Pro</h3>
+            <span class="tool-card-vendor">DeepSeek AI Research</span>
+            <p class="tool-card-desc">DeepSeek R1 and V3 reasoning models, open-weight reasoning breakthroughs, and high-throughput math/code solving.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,100 PKR</span> <span class="price-period">(~$4 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/claude-artifacts.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude Code Developer%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" class="btn-whatsapp">Order Claude Code Developer on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('deepseek-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20DeepSeek%20R1%20/%20V3%20Pro%20for%20Rs%201100%20PKR%20/%20$4%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/deepseek-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding api tokens">
+        <div class="card tool-card" data-category="ai ai assistant & llm">
           <div>
-            <h2>OpenAI API & Codex</h2>
-            <p>Connect directly to GPT-4o, GPT-4o-mini, and text-embedding models for autonomous agents and custom apps.</p>
-            <div class="price-tag">Rs. 600 PKR <span class="period">(~$2.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ OpenAI Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">✨ #16 Multimodal AI</span>
+              
+              <img src="assets/product-logos/gemini-advanced.svg" alt="Google Gemini Advanced Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Assistant & LLM</span>
+            </div>
+            <h3 class="tool-card-title">Google Gemini Advanced</h3>
+            <span class="tool-card-vendor">Google DeepMind Engine</span>
+            <p class="tool-card-desc">Gemini 1.5 Pro with 1,000,000 token context window, integrated Google Workspace apps, and DeepMind reasoning.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,200 PKR</span> <span class="price-period">(~$4.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/chatgpt-codex.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20OpenAI API & Codex%20for%20Rs%20600%20PKR%20/%20$2.50%20USD" class="btn-whatsapp">Order OpenAI API & Codex on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('gemini-advanced')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google%20Gemini%20Advanced%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/gemini-advanced.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design video">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>Adobe Creative Cloud</h2>
-            <p>Full desktop access to Adobe Photoshop, Illustrator, Premiere Pro, After Effects, and Lightroom Classic.</p>
-            <div class="price-tag">Rs. 1400 PKR <span class="period">(~$5.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Adobe Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(168, 85, 247, 0.12); color: #7E22CE; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(168, 85, 247, 0.12); letter-spacing: 0.02em;">🎥 #17 Video Motion</span>
+              
+              <img src="assets/product-logos/runway-gen3.svg" alt="Runway Gen-3 Alpha Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">Runway Gen-3 Alpha</h3>
+            <span class="tool-card-vendor">Runway AI Motion Engine</span>
+            <p class="tool-card-desc">Gen-3 Alpha photorealistic video generation with keyframe camera control, motion brush, and text-to-video.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,800 PKR</span> <span class="price-period">(~$6.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/adobe-creative-cloud.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Adobe Creative Cloud%20for%20Rs%201400%20PKR%20/%20$5.50%20USD" class="btn-whatsapp">Order Adobe Creative Cloud on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('runway-gen3')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Runway%20Gen-3%20Alpha%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/runway-gen3.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image ui-ux design">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>Figma Pro</h2>
-            <p>Create and maintain complex design systems, product design files, and wireframes without storage limits.</p>
-            <div class="price-tag">Rs. 1800 PKR <span class="period">(~$6.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Figma Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">🎵 #18 Music Creation</span>
+              
+              <img src="assets/product-logos/suno-ai.svg" alt="Suno AI Music v3.5 Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">Suno AI Music v3.5</h3>
+            <span class="tool-card-vendor">Suno AI Audio Systems</span>
+            <p class="tool-card-desc">Full 2-minute vocal and instrumental music generation across pop, rock, electronic, orchestral, and classical genres.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,600 PKR</span> <span class="price-period">(~$9.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/figma-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Figma Pro%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" class="btn-whatsapp">Order Figma Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('suno-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Suno%20AI%20Music%20v3.5%20for%20Rs%202600%20PKR%20/%20$9.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/suno-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image vectors psd">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>Freepik Premium</h2>
-            <p>Download editable Photoshop mockups, vector illustrations, and brand identity kits without daily quota limits.</p>
-            <div class="price-tag">Rs. 1800 PKR <span class="period">(~$6.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Freepik Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(249, 115, 22, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(249, 115, 22, 0.12); letter-spacing: 0.02em;">⚙️ #19 Dev Suite</span>
+              
+              <img src="assets/product-logos/jetbrains-all.svg" alt="JetBrains All Products Pack Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">JetBrains All Products Pack</h3>
+            <span class="tool-card-vendor">JetBrains IDE Platform</span>
+            <p class="tool-card-desc">Full commercial access to IntelliJ IDEA Ultimate, PyCharm Pro, WebStorm, CLion, Rider, and DataGrip.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,500 PKR</span> <span class="price-period">(~$9 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/freepik-premium.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Freepik Premium%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" class="btn-whatsapp">Order Freepik Premium on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('jetbrains-all')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20JetBrains%20All%20Products%20Pack%20for%20Rs%202500%20PKR%20/%20$9%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/jetbrains-all.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image video templates">
+        <div class="card tool-card" data-category="productivity productivity & seo">
           <div>
-            <h2>Envato Elements</h2>
-            <p>Access 16+ million creative assets including Premiere video templates, royalty-free audio, and WordPress themes.</p>
-            <div class="price-tag">Rs. 2600 PKR <span class="period">(~$9.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Envato Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(100, 116, 139, 0.12); color: #334155; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(100, 116, 139, 0.12); letter-spacing: 0.02em;">📝 #20 Workspace AI</span>
+              
+              <img src="assets/product-logos/notion-business.svg" alt="Notion Business & AI Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Productivity & SEO</span>
+            </div>
+            <h3 class="tool-card-title">Notion Business & AI</h3>
+            <span class="tool-card-vendor">Notion Labs Inc.</span>
+            <p class="tool-card-desc">AI automated summaries, project management boards, company wikis, meeting transcript analysis, and team spaces.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,400 PKR</span> <span class="price-period">(~$5 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/envato-elements.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Envato Elements%20for%20Rs%202600%20PKR%20/%20$9.50%20USD" class="btn-whatsapp">Order Envato Elements on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('notion-business')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Notion%20Business%20&%20AI%20for%20Rs%201400%20PKR%20/%20$5%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/notion-business.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video generative cinematic">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>Google Veo Omni</h2>
-            <p>Generate realistic video clips with consistent lighting, photographic depth of field, and physics fidelity.</p>
-            <div class="price-tag">Rs. 1900 PKR <span class="period">(~$7.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Google DeepMind Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(244, 63, 94, 0.12); color: #BE123C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(244, 63, 94, 0.12); letter-spacing: 0.02em;">📐 #21 UI/UX Design</span>
+              
+              <img src="assets/product-logos/figma-pro.svg" alt="Figma Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Figma Pro</h3>
+            <span class="tool-card-vendor">Figma Design Platform</span>
+            <p class="tool-card-desc">Unlimited Figma design files, version history, dev mode inspect, interactive components, and team libraries.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,800 PKR</span> <span class="price-period">(~$6.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/google-veo.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google Veo Omni%20for%20Rs%201900%20PKR%20/%20$7.00%20USD" class="btn-whatsapp">Order Google Veo Omni on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('figma-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Figma%20Pro%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/figma-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video camera motion">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>Runway Gen-3 Alpha</h2>
-            <p>Generate hyper-realistic human expressions, fluid dynamics, and environmental physics from text or image prompts.</p>
-            <div class="price-tag">Rs. 1800 PKR <span class="period">(~$6.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Runway Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(14, 165, 233, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.12); letter-spacing: 0.02em;">📂 #22 Stock Vectors</span>
+              
+              <img src="assets/product-logos/freepik-premium.svg" alt="Freepik Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Freepik Premium</h3>
+            <span class="tool-card-vendor">Freepik Company</span>
+            <p class="tool-card-desc">Over 150 million premium vectors, PSD mockups, AI image generation credits, and commercial licensing.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,800 PKR</span> <span class="price-period">(~$6.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/runway-gen3.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Runway Gen-3 Alpha%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" class="btn-whatsapp">Order Runway Gen-3 Alpha on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('freepik-premium')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Freepik%20Premium%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/freepik-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video realistic motion">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>Kling AI Pro</h2>
-            <p>Generate continuous cinematic sequences up to 2 minutes long with consistent narrative progression.</p>
-            <div class="price-tag">Rs. 700 PKR <span class="period">(~$2.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Kuaishou Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(34, 197, 94, 0.12); color: #15803D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(34, 197, 94, 0.12); letter-spacing: 0.02em;">📦 #23 Unlimited Assets</span>
+              
+              <img src="assets/product-logos/envato-elements.svg" alt="Envato Elements Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Envato Elements</h3>
+            <span class="tool-card-vendor">Envato Pty Ltd</span>
+            <p class="tool-card-desc">Unlimited downloads of website templates, Premiere project files, stock footage, sound effects, and 3D assets.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,600 PKR</span> <span class="price-period">(~$9.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/kling-ai.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Kling AI Pro%20for%20Rs%20700%20PKR%20/%20$2.50%20USD" class="btn-whatsapp">Order Kling AI Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('envato-elements')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Envato%20Elements%20for%20Rs%202600%20PKR%20/%20$9.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/envato-elements.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video hailuo animation">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>MiniMax Hailuo AI</h2>
-            <p>Generate realistic running, dance movements, and hand gestures without anatomical distortion or artifacts.</p>
-            <div class="price-tag">Rs. 1600 PKR <span class="period">(~$6.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ MiniMax Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(249, 115, 22, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(249, 115, 22, 0.12); letter-spacing: 0.02em;">☁️ #24 Cloud IDE</span>
+              
+              <img src="assets/product-logos/replit-core.svg" alt="Replit Core Cloud IDE Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">Replit Core Cloud IDE</h3>
+            <span class="tool-card-vendor">Replit Cloud Development</span>
+            <p class="tool-card-desc">Cloud development environments, Replit AI code assistant, persistent hosting deployments, and collaborative pair coding.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/minimax-ai.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20MiniMax Hailuo AI%20for%20Rs%201600%20PKR%20/%20$6.00%20USD" class="btn-whatsapp">Order MiniMax Hailuo AI on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('replit-core')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Replit%20Core%20Cloud%20IDE%20for%20Rs%202800%20PKR%20/%20$10%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/replit-core.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image gaming concept-art">
+        <div class="card tool-card" data-category="productivity productivity & seo">
           <div>
-            <h2>Leonardo AI Pro</h2>
-            <p>Generate hundreds of game assets, concept art illustrations, and marketing graphics with priority queuing.</p>
-            <div class="price-tag">Rs. 1300 PKR <span class="period">(~$5.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Leonardo Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(34, 197, 94, 0.12); color: #15803D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(34, 197, 94, 0.12); letter-spacing: 0.02em;">✍️ #25 Writing Assistant</span>
+              
+              <img src="assets/product-logos/grammarly-pro.svg" alt="Grammarly Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Productivity & SEO</span>
+            </div>
+            <h3 class="tool-card-title">Grammarly Premium</h3>
+            <span class="tool-card-vendor">Grammarly Business</span>
+            <p class="tool-card-desc">Real-time tone adjustment, advanced sentence rewriting, plagiarism detection, and team style guides.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 750 PKR</span> <span class="price-period">(~$2.80 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/leonardo-ai.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Leonardo AI Pro%20for%20Rs%201300%20PKR%20/%20$5.00%20USD" class="btn-whatsapp">Order Leonardo AI Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('grammarly-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Grammarly%20Premium%20for%20Rs%20750%20PKR%20/%20$2.80%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/grammarly-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="voice audio cloning">
+        <div class="card tool-card" data-category="productivity productivity & seo">
           <div>
-            <h2>ElevenLabs Creator</h2>
-            <p>Generate natural sounding audiobooks, YouTube voiceovers, and character dialogue with commercial licensing rights.</p>
-            <div class="price-tag">Rs. 2800 PKR <span class="period">(~$10.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ ElevenLabs Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🔄 #26 Paraphraser</span>
+              
+              <img src="assets/product-logos/quillbot-premium.svg" alt="QuillBot Premium Suite Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Productivity & SEO</span>
+            </div>
+            <h3 class="tool-card-title">QuillBot Premium Suite</h3>
+            <span class="tool-card-vendor">Learneo QuillBot Suite</span>
+            <p class="tool-card-desc">Unlimited paraphrasing modes, grammar checking, plagiarism checker, summarizer, and citation generator.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,600 PKR</span> <span class="price-period">(~$6 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/elevenlabs-creator.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ElevenLabs Creator%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" class="btn-whatsapp">Order ElevenLabs Creator on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('quillbot-premium')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20QuillBot%20Premium%20Suite%20for%20Rs%201600%20PKR%20/%20$6%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/quillbot-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="voice audio music">
+        <div class="card tool-card" data-category="productivity productivity & seo">
           <div>
-            <h2>Suno AI Pro</h2>
-            <p>Produce up to 500 complete musical songs across EDM, pop, hip-hop, classical, and lo-fi genres every month.</p>
-            <div class="price-tag">Rs. 2600 PKR <span class="period">(~$9.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Suno Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(10, 102, 194, 0.12); color: #0A66C2; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(10, 102, 194, 0.12); letter-spacing: 0.02em;">💼 #27 Career Pro</span>
+              
+              <img src="assets/product-logos/linkedin-premium.svg" alt="LinkedIn Premium Career Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Productivity & SEO</span>
+            </div>
+            <h3 class="tool-card-title">LinkedIn Premium Career</h3>
+            <span class="tool-card-vendor">LinkedIn Corporation</span>
+            <p class="tool-card-desc">Direct InMail messaging to recruiters, applicant insights, salary benchmarks, and 20,000+ LinkedIn Learning courses.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,500 PKR</span> <span class="price-period">(~$5.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/suno-ai.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Suno AI Pro%20for%20Rs%202600%20PKR%20/%20$9.50%20USD" class="btn-whatsapp">Order Suno AI Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('linkedin-premium')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20LinkedIn%20Premium%20Career%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/linkedin-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="voice audio music">
+        <div class="card tool-card" data-category="productivity productivity & seo">
           <div>
-            <h2>Udio AI Pro</h2>
-            <p>Render complex vocal harmonies, acoustic instrument resonances, and studio production mastering from prompts.</p>
-            <div class="price-tag">Rs. 2800 PKR <span class="period">(~$10.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Udio Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(255, 100, 45, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(255, 100, 45, 0.12); letter-spacing: 0.02em;">📊 #28 SEO Analytics</span>
+              
+              <img src="assets/product-logos/semrush-guru.svg" alt="Semrush Guru Platform Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Productivity & SEO</span>
+            </div>
+            <h3 class="tool-card-title">Semrush Guru Platform</h3>
+            <span class="tool-card-vendor">Semrush Marketing Platform</span>
+            <p class="tool-card-desc">Competitor SEO keyword analysis, domain backlink audits, position tracking, and content marketing toolkit.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,500 PKR</span> <span class="price-period">(~$9 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/udio-ai.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Udio AI Pro%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" class="btn-whatsapp">Order Udio AI Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('semrush-guru')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Semrush%20Guru%20Platform%20for%20Rs%202500%20PKR%20/%20$9%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/semrush-guru.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="writing proofreading grammar">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>Grammarly Pro</h2>
-            <p>Rewrite convoluted sentences for executive conciseness, formal confidence, and academic precision.</p>
-            <div class="price-tag">Rs. 750 PKR <span class="period">(~$2.80 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Grammarly Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(168, 85, 247, 0.12); color: #7E22CE; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(168, 85, 247, 0.12); letter-spacing: 0.02em;">🎞️ #29 Cinematic AI</span>
+              
+              <img src="assets/product-logos/kling-ai.svg" alt="Kling AI Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">Kling AI Pro</h3>
+            <span class="tool-card-vendor">Kuaishou Kling AI Lab</span>
+            <p class="tool-card-desc">Cinematic text-to-video and image-to-video with 1080p resolution, realistic physics, and camera motion controls.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 700 PKR</span> <span class="price-period">(~$2.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/grammarly-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Grammarly Pro%20for%20Rs%20750%20PKR%20/%20$2.80%20USD" class="btn-whatsapp">Order Grammarly Pro on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('kling-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Kling%20AI%20Pro%20for%20Rs%20700%20PKR%20/%20$2.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/kling-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="writing paraphrasing essay">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>QuillBot Premium</h2>
-            <p>Rephrase full articles, essays, and reports without character cutoffs using 8 distinct writing modes.</p>
-            <div class="price-tag">Rs. 1600 PKR <span class="period">(~$6.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ QuillBot Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">📽️ #30 Video Studio</span>
+              
+              <img src="assets/product-logos/minimax-ai.svg" alt="MiniMax Hailuo AI Video Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">MiniMax Hailuo AI Video</h3>
+            <span class="tool-card-vendor">MiniMax Hailuo Video Engine</span>
+            <p class="tool-card-desc">Hailuo AI video generator delivering fluid human motion, expressive facial animation, and text-to-video fidelity.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,600 PKR</span> <span class="price-period">(~$6 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/quillbot-premium.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20QuillBot Premium%20for%20Rs%201600%20PKR%20/%20$6.00%20USD" class="btn-whatsapp">Order QuillBot Premium on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('minimax-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20MiniMax%20Hailuo%20AI%20Video%20for%20Rs%201600%20PKR%20/%20$6%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/minimax-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="seo marketing analytics">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>Semrush Guru</h2>
-            <p>Analyze search volume, intent, keyword difficulty, and competitive SERP features across 140+ countries.</p>
-            <div class="price-tag">Rs. 2500 PKR <span class="period">(~$9.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Semrush Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(139, 92, 246, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(139, 92, 246, 0.12); letter-spacing: 0.02em;">🎧 #31 Studio Audio</span>
+              
+              <img src="assets/product-logos/udio-ai.svg" alt="Udio AI Music Lab Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">Udio AI Music Lab</h3>
+            <span class="tool-card-vendor">Udio AI Music Lab</span>
+            <p class="tool-card-desc">High-fidelity stereo AI music composition with nuanced vocal styling, lyric editing, and musical genre blending.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/semrush-guru.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Semrush Guru%20for%20Rs%202500%20PKR%20/%20$9.00%20USD" class="btn-whatsapp">Order Semrush Guru on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('udio-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Udio%20AI%20Music%20Lab%20for%20Rs%202800%20PKR%20/%20$10%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/udio-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="vpn privacy unlimited">
+        <div class="card tool-card" data-category="video ai video & audio">
           <div>
-            <h2>Surfshark VPN</h2>
-            <p>Protect your entire household workstation ecosystem across Windows, macOS, Android, and iOS under one account.</p>
-            <div class="price-tag">Rs. 800 PKR <span class="period">(~$3.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Surfshark Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">🎬 #32 DeepMind Video</span>
+              
+              <img src="assets/product-logos/google-veo.svg" alt="Google Veo 2 / Video FX Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Video & Audio</span>
+            </div>
+            <h3 class="tool-card-title">Google Veo 2 / Video FX</h3>
+            <span class="tool-card-vendor">Google DeepMind Generative Video</span>
+            <p class="tool-card-desc">High-definition 1080p AI cinematic video generation with temporal coherence and natural language physics control.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,900 PKR</span> <span class="price-period">(~$7 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/surfshark-vpn.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Surfshark VPN%20for%20Rs%20800%20PKR%20/%20$3.00%20USD" class="btn-whatsapp">Order Surfshark VPN on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('google-veo')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google%20Veo%202%20/%20Video%20FX%20for%20Rs%201900%20PKR%20/%20$7%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/google-veo.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="productivity workspace ai">
+        <div class="card tool-card" data-category="image design & image">
           <div>
-            <h2>Notion Business AI</h2>
-            <p>Query company documentation, synthesize action items from meeting notes, and draft project specifications instantly.</p>
-            <div class="price-tag">Rs. 1400 PKR <span class="period">(~$5.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Notion Labs Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(234, 88, 12, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(234, 88, 12, 0.12); letter-spacing: 0.02em;">🖌️ #33 Visual Canvas</span>
+              
+              <img src="assets/product-logos/leonardo-ai.svg" alt="Leonardo AI Visual Studio Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">Design & Image</span>
+            </div>
+            <h3 class="tool-card-title">Leonardo AI Visual Studio</h3>
+            <span class="tool-card-vendor">Leonardo AI Visual Studio</span>
+            <p class="tool-card-desc">Game asset generation, custom fine-tuned LoRA models, Canvas editor, and high-resolution creative styling.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,300 PKR</span> <span class="price-period">(~$5 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/notion-business.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Notion Business AI%20for%20Rs%201400%20PKR%20/%20$5.00%20USD" class="btn-whatsapp">Order Notion Business AI on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('leonardo-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Leonardo%20AI%20Visual%20Studio%20for%20Rs%201300%20PKR%20/%20$5%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/leonardo-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="career business inmail">
+        <div class="card tool-card" data-category="ai ai assistant & llm">
           <div>
-            <h2>LinkedIn Premium Career</h2>
-            <p>Contact hiring managers and corporate executives directly without waiting for introductory connections.</p>
-            <div class="price-tag">Rs. 1500 PKR <span class="period">(~$5.50 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ LinkedIn Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(15, 23, 42, 0.12); color: #0F172A; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(15, 23, 42, 0.12); letter-spacing: 0.02em;">⚡ #34 Real-Time Search</span>
+              
+              <img src="assets/product-logos/grok-ai.svg" alt="Grok 2 / xAI SuperGrok Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Assistant & LLM</span>
+            </div>
+            <h3 class="tool-card-title">Grok 2 / xAI SuperGrok</h3>
+            <span class="tool-card-vendor">xAI Foundation Engine</span>
+            <p class="tool-card-desc">Real-time X (Twitter) multimodal search, uncensored conversational reasoning, and Aurora generative image studio.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,100 PKR</span> <span class="price-period">(~$4 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/linkedin-premium.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20LinkedIn Premium Career%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" class="btn-whatsapp">Order LinkedIn Premium Career on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('grok-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Grok%202%20/%20xAI%20SuperGrok%20for%20Rs%201100%20PKR%20/%20$4%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/grok-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="streaming video ad-free">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>YouTube Premium</h2>
-            <p>Watch tutorial courses, entertainment, and documentaries completely free of preroll, midroll, and banner ads.</p>
-            <div class="price-tag">Rs. 750 PKR <span class="period">(~$2.80 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Google Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">💻 #35 Dev API Tokens</span>
+              
+              <img src="assets/product-logos/chatgpt-codex.svg" alt="OpenAI API & Codex Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">OpenAI API & Codex</h3>
+            <span class="tool-card-vendor">OpenAI Developer Platform</span>
+            <p class="tool-card-desc">High-quota OpenAI API keys for GPT-4o, Codex code completion, Whisper audio transcription, and vector embeddings.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 600 PKR</span> <span class="price-period">(~$2.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/youtube-premium.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20YouTube Premium%20for%20Rs%20750%20PKR%20/%20$2.80%20USD" class="btn-whatsapp">Order YouTube Premium on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-codex')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20OpenAI%20API%20&%20Codex%20for%20Rs%20600%20PKR%20/%20$2.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/chatgpt-codex.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
 
-        <div class="card tool-card" data-category="streaming 4k entertainment">
+        <div class="card tool-card" data-category="coding ai coding & dev">
           <div>
-            <h2>Netflix 4K UHD</h2>
-            <p>Enjoy pristine 4K video resolution with Dolby Vision and spatial audio for an immersive home theater experience.</p>
-            <div class="price-tag">Rs. 1100 PKR <span class="period">(~$4.00 USD) / month</span></div>
-            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Netflix Verified Enterprise Setup</li>
-              <li>✓ EasyPaisa, JazzCash, Wise & Crypto</li>
-              <li>✓ Instant 15-Minute Delivery SLA Worldwide</li>
-              <li>✓ 30-Day Full Replacement Warranty</li>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(67, 97, 238, 0.12); color: #3730A3; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(67, 97, 238, 0.12); letter-spacing: 0.02em;">🧩 #36 Code Canvas</span>
+              
+              <img src="assets/product-logos/claude-artifacts.svg" alt="Claude Artifacts Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy">
+              <span class="tool-cat-badge">AI Coding & Dev</span>
+            </div>
+            <h3 class="tool-card-title">Claude Artifacts Pro</h3>
+            <span class="tool-card-vendor">Anthropic AI Systems</span>
+            <p class="tool-card-desc">Live preview HTML, React, SVG, and Mermaid diagrams generated in Claude 3.5 Sonnet's split-screen canvas.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,200 PKR</span> <span class="price-period">(~$4.50 USD) / month</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Instant WhatsApp Delivery SLA</li>
+              <li><span class="check-icon">✓</span> 30-Day Guaranteed Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
             </ul>
           </div>
-          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/netflix-premium.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Netflix 4K UHD%20for%20Rs%201100%20PKR%20/%20$4.00%20USD" class="btn-whatsapp">Order Netflix 4K UHD on WhatsApp</a>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-artifacts')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Artifacts%20Pro%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/claude-artifacts.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
       </div>
@@ -1200,138 +1665,206 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>AIDigiTools.tech</h3>
-          <p>Pakistan's localized AI software intelligence hub and domestic subscription rails.</p>
+          <a href="index.html" class="logo" style="margin-bottom:0.75rem;" aria-label="AIDigiTools Home">
+            <svg class="logo-brand-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="navTeal" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#05D5A6"/>
+              <stop offset="100%" stop-color="#00B4D8"/>
+            </linearGradient>
+            <linearGradient id="navPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0077B6"/>
+              <stop offset="35%" stop-color="#4361EE"/>
+              <stop offset="70%" stop-color="#7209B7"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+            <linearGradient id="navOrbit" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#00E5A3"/>
+              <stop offset="50%" stop-color="#00B4D8"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <path class="orbit-back" d="M 12 62 C 12 36, 126 18, 134 38" stroke="url(#navOrbit)" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <path class="sparkle-star" d="M 8 36 Q 8 41 3 41 Q 8 41 8 46 Q 8 41 13 41 Q 8 41 8 36 Z" fill="#00E5A3"/>
+          <path class="sparkle-star" d="M 128 78 Q 128 82 124 82 Q 128 82 128 86 Q 128 82 132 82 Q 128 82 128 78 Z" fill="#8B5CF6"/>
+          <path d="M 22 94 L 46 32 C 48 27, 54 22, 62 25 L 75 30 C 80 32, 81 37, 78 42 L 56 94 C 54 99, 46 102, 38 100 L 26 97 C 22 96, 21 95, 22 94 Z" fill="url(#navTeal)"/>
+          <path d="M 68 34 C 88 22, 118 30, 118 56 C 118 82, 88 98, 62 98 L 74 82 C 90 82, 102 72, 102 56 C 102 42, 86 36, 72 44 Z" fill="url(#navPurple)"/>
+          <path d="M 46 64 C 52 58, 66 56, 80 62 L 72 74 C 62 70, 52 72, 46 76 Z" fill="url(#navTeal)" opacity="0.95"/>
+          <path class="orbit-front" d="M 134 38 C 142 58, 38 88, 16 66" stroke="url(#navOrbit)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle class="orbit-node" cx="124" cy="34" r="5.5" fill="#4361EE"/>
+          <circle cx="122.5" cy="32.5" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        </svg>
+            <span class="logo-text-wrap">
+              <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
+              <span class="tagline">SMART TOOLS • BIGGER POSSIBILITIES</span>
+            </span>
+          </a>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-top:0.75rem; line-height:1.55;">
+            Premier localized AI software intelligence hub and subscription concierge serving Pakistan and worldwide customers with transparent PKR &amp; USD pricing and domestic rails.
+          </p>
+          <div style="margin-top:1rem;">
+            <a href="https://wa.me/923326861112" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="padding:0.5rem 1rem; font-size:0.85rem;">
+              <span>💬 03326861112 (WhatsApp Desk)</span>
+            </a>
+          </div>
         </div>
         <div class="footer-col">
-          <h3>Categories</h3>
+          <h4>Categories</h4>
           <ul>
-            <li><a href="categories/video.html">AI Video &amp; Movie Tools</a></li>
-            <li><a href="categories/coding.html">AI Coding &amp; Developer Tools</a></li>
-            <li><a href="categories/vpn.html">VPN &amp; Privacy Services</a></li>
-            <li><a href="categories/image.html">AI Image &amp; Graphic Tools</a></li>
+            <li><a href="categories/video.html">AI Video &amp; Animation</a></li>
+            <li><a href="categories/coding.html">Coding &amp; LLM Assistants</a></li>
+            <li><a href="categories/vpn.html">VPN &amp; Security Services</a></li>
+            <li><a href="categories/image.html">Image &amp; Graphic Suites</a></li>
             <li><a href="deals.html">Bundle Deals &amp; Discounts</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Guides &amp; Compare</h3>
+          <h4>Comparisons &amp; Guides</h4>
           <ul>
             <li><a href="compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a></li>
             <li><a href="compare/runway-vs-pika.html">Runway vs Pika</a></li>
             <li><a href="best/best-ai-video-generators.html">Best Video AI (2026)</a></li>
             <li><a href="best/best-ai-coding-tools.html">Best Coding AI (2026)</a></li>
+            <li><a href="guides/chatgpt-vs-claude.html">AI Models Guide</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Policies</h3>
+          <h4>Policies &amp; Verification</h4>
           <ul>
-            <li><a href="policies.html#payments">Payment Rails</a></li>
-            <li><a href="policies.html#refunds">Replacement Warranty</a></li>
-            <li><a href="shipping-policy.html">Digital Delivery SLA</a></li>
-            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-            <li><a href="policies.html#terms">Terms of Service</a></li>
-            <li><a href="policies.html#privacy">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="contact.html">Help Desk</a></li>
-            <li><a href="about.html">About Company</a></li>
-            <li><a href="https://wa.me/923326861112">Direct WhatsApp</a></li>
+            <li><a href="policies.html#payments">Payment Rails (PKR &amp; USD)</a></li>
+            <li><a href="policies.html#refunds">30-Day Replacement Warranty</a></li>
+            <li><a href="shipping-policy.html">15-Minute Delivery SLA</a></li>
+            <li><a href="affiliate-disclosure.html">Reseller &amp; Trademark Policy</a></li>
+            <li><a href="contact.html">Support Operations Desk</a></li>
+            <li><a href="about.html">About AIDigiTools</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 AIDigiTools (aidigitools.tech). All rights reserved.</p>
-        <p>Verified Domestic &amp; Global Rails: EasyPaisa | JazzCash | SadaPay | Raast | Wise | Binance Pay (Crypto USDT)</p>
+        <p>&copy; 2026 AIDigiTools (aidigitools.tech). All rights reserved. Independent software subscription concierge desk.</p>
+        <p style="margin-top:0.35rem; font-size:0.8rem; color:var(--text-muted);">
+          Verified Rails: EasyPaisa • JazzCash • SadaPay • NayaPay • Raast • Bank IBFT • Wise • Binance Pay (USDT)
+        </p>
       </div>
     </div>
   </footer>
 
-  <script>
-    var mData = {
-      chatgpt: {
-        vendor: 'OpenAI Enterprise Engine',
-        title: 'ChatGPT Plus Subscription',
-        desc: 'Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation in Pakistan & worldwide.',
-        price: 'Rs. 2,300 PKR (~$8 USD)',
-        wa: 'Hi AIDigiTools, I want to order ChatGPT Plus for Rs 2300 PKR / $8 USD.'
-      },
-      claude: {
-        vendor: 'Anthropic AI Systems',
-        title: 'Claude Pro Subscription',
-        desc: 'Claude 3.5 Sonnet with 200,000 token context, interactive Artifacts canvas, and SWE-bench 92% coding intelligence.',
-        price: 'Rs. 2,500 PKR (~$9 USD)',
-        wa: 'Hi AIDigiTools, I want to order Claude Pro for Rs 2500 PKR / $9 USD.'
-      },
-      capcut: {
-        vendor: 'ByteDance Creative Engine',
-        title: 'CapCut Pro AI Video Editor',
-        desc: 'Automated bilingual AI captions, 4K 60fps optical flow smoothing, and full commercial music access.',
-        price: 'Rs. 950 PKR (~$3.50 USD)',
-        wa: 'Hi AIDigiTools, I want to order CapCut Pro for Rs 950 PKR / $3.50 USD.'
-      },
-      canva: {
-        vendor: 'Canva Design Platform',
-        title: 'Canva Pro Designer Access',
-        desc: '100M+ premium stock assets, Magic Studio background remover, 1TB cloud storage, and team Brand Kits.',
-        price: 'Rs. 600 PKR (~$2.50 USD)',
-        wa: 'Hi AIDigiTools, I want to order Canva Pro for Rs 600 PKR / $2.50 USD.'
-      }
-    };
+        <!-- ========================================================
+       UNIVERSAL SLIDE-OVER QUICK ORDER / CART DRAWER
+       ======================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="closeQuickOrderModal()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Quick Order Checkout">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <span>🛒</span>
+        <span>Quick Order Checkout</span>
+      </div>
+      <button type="button" class="cart-drawer-close" onclick="closeQuickOrderModal()" aria-label="Close Drawer">&times;</button>
+    </div>
+    
+    <div class="cart-drawer-body">
+      <!-- Item Info Box -->
+      <div class="cart-item-preview">
+        <img id="drawerItemIcon" src="assets/product-logos/chatgpt-plus.svg" alt="Tool Icon" width="48" height="48" class="cart-item-icon">
+        <div>
+          <div class="cart-item-name" id="drawerItemName">ChatGPT Plus</div>
+          <div class="cart-item-vendor" id="drawerItemVendor">OpenAI Enterprise Systems</div>
+        </div>
+      </div>
 
-    function setMasterTool(key) {
-      var d = mData[key];
-      if (!d) return;
+      <!-- Canonical Plan Selector Container -->
+      <div id="drawerPlanSelectorContainer" style="margin-bottom: 1.25rem;"></div>
 
-      var vEl = document.getElementById('mToolVendor');
-      var tEl = document.getElementById('mToolTitle');
-      var descEl = document.getElementById('mToolDesc');
-      var pEl = document.getElementById('mToolPrice');
-      var waEl = document.getElementById('mWaLink');
+      <!-- Plan Duration Selection -->
+      <div>
+        <div class="cart-section-title">Select Subscription Duration:</div>
+        <div class="duration-pills-grid">
+          <div class="duration-pill active" data-months="1" onclick="selectCartDuration(1, 0)">
+            <div>1 Month</div>
+            <span class="duration-discount-tag">Standard</span>
+          </div>
+          <div class="duration-pill" data-months="3" onclick="selectCartDuration(3, 5)">
+            <div>3 Months</div>
+            <span class="duration-discount-tag">Save 5%</span>
+          </div>
+          <div class="duration-pill" data-months="12" onclick="selectCartDuration(12, 15)">
+            <div>12 Months</div>
+            <span class="duration-discount-tag">Save 15%</span>
+          </div>
+        </div>
+      </div>
 
-      if (vEl) vEl.textContent = d.vendor;
-      if (tEl) tEl.textContent = d.title;
-      if (descEl) descEl.textContent = d.desc;
-      if (pEl) pEl.textContent = d.price;
-      if (waEl) waEl.href = 'https://wa.me/923326861112?text=' + encodeURIComponent(d.wa);
+      <!-- Payment Rails Selection -->
+      <div>
+        <div class="cart-section-title">Select Payment Method:</div>
+        <div class="payment-rails-selector">
+          <div class="rail-option active" data-rail="EasyPaisa" onclick="selectCartRail('EasyPaisa')">
+            <span>🟢</span><span>EasyPaisa</span>
+          </div>
+          <div class="rail-option" data-rail="JazzCash" onclick="selectCartRail('JazzCash')">
+            <span>🔴</span><span>JazzCash</span>
+          </div>
+          <div class="rail-option" data-rail="SadaPay" onclick="selectCartRail('SadaPay')">
+            <span>🟠</span><span>SadaPay</span>
+          </div>
+          <div class="rail-option" data-rail="Wise / Crypto" onclick="selectCartRail('Wise / Crypto')">
+            <span>🌐</span><span>Wise / Crypto</span>
+          </div>
+        </div>
+      </div>
 
-      ['chatgpt', 'claude', 'capcut', 'canva'].forEach(function(k) {
-        var btn = document.getElementById('mtab-' + k);
-        if (btn) {
-          if (k === key) {
-            btn.className = 'authkit-tab-btn active';
-          } else {
-            btn.className = 'authkit-tab-btn';
-          }
-        }
-      });
-    }
+      <!-- Live Price Calculation -->
+      <div class="cart-summary-box">
+        <div class="cart-summary-row">
+          <span>Base Subtotal:</span>
+          <span id="drawerSubtotal" style="font-weight:600;">Rs. 2,300 PKR</span>
+        </div>
+        <div class="cart-summary-row" id="drawerDiscountRow" style="display:none; color:#059669;">
+          <span>Plan Discount:</span>
+          <span id="drawerDiscount" style="font-weight:600;">- Rs. 0 PKR</span>
+        </div>
+        <div class="cart-total-row">
+          <div>
+            <div>Total Amount:</div>
+            <div id="drawerTotalUsd" style="font-size:0.8rem; color:var(--text-muted); font-weight:normal;">(~$8.00 USD)</div>
+          </div>
+          <div class="cart-total-pkr" id="drawerTotalPkr">Rs. 2,300 PKR</div>
+        </div>
+      </div>
 
-    function filterTools(category) {
-      var input = document.getElementById('toolSearchInput');
-      if (input) input.value = category;
-      searchTools(category);
-    }
+      <!-- SLA Guarantee Box -->
+      <div class="cart-sla-box">
+        <div><strong>⚡ Guaranteed 15-Minute Delivery:</strong> Credentials delivered directly to your WhatsApp with dedicated account configuration.</div>
+        <div style="margin-top:0.35rem;"><strong>🛡️ 30-Day Full Replacement Warranty:</strong> Complete peace of mind with instant customer support.</div>
+      </div>
 
-    function searchTools(query) {
-      var q = query.toLowerCase().trim();
-      var cards = document.querySelectorAll('.tool-card');
-      cards.forEach(function(card) {
-        var text = card.textContent.toLowerCase();
-        var cat = (card.getAttribute('data-category') || '').toLowerCase();
-        if (!q || text.indexOf(q) !== -1 || cat.indexOf(q) !== -1) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
+      <!-- Checkout CTA -->
+      <a id="drawerCheckoutBtn" href="https://wa.me/923326861112" target="_blank" rel="noopener noreferrer" class="cart-checkout-btn">
+        <span>Proceed to WhatsApp Checkout &rarr;</span>
+      </a>
+      <div style="text-align:center; font-size:0.75rem; color:var(--text-muted);">
+        Encrypted direct communication with official AIDigiTools Concierge (03326861112)
+      </div>
+    </div>
+  </aside>
 
-    document.getElementById('toolSearchInput').addEventListener('input', function(e) {
-      searchTools(e.target.value);
-    });
-  </script>
+  <!-- ========================================================
+       DYNAMIC FLOATING WHATSAPP CONCIERGE WIDGET
+       ======================================================== -->
+  <aside class="floating-wa-container" aria-label="Customer Support Concierge">
+    <div class="floating-wa-badge">
+      <span class="floating-wa-pulse"></span>
+      <span class="floating-wa-status">🟢 Online • 15m Delivery</span>
+    </div>
+    <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20have%20a%20question%20about%20your%20verified%20software%20subscriptions." target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat with AIDigiTools on WhatsApp">
+      <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 2.5C8.54 2.5 2.5 8.54 2.5 16c0 2.61.74 5.05 2.02 7.12L2.6 29.4l6.45-1.89A13.43 13.43 0 0016 29.5c7.46 0 13.5-6.04 13.5-13.5S23.46 2.5 16 2.5zm6.83 19.22c-.28.81-1.65 1.56-2.32 1.62-.61.06-1.39.09-4.48-1.19-3.71-1.53-6.08-5.3-6.27-5.54-.18-.25-1.51-2-1.51-3.82s.95-2.7 1.29-3.07c.34-.36.74-.45 1-.45.24 0 .5 0 .71.01.24.01.56-.09.87.67.33.77 1.11 2.7 1.21 2.9.1.2.16.44.03.71-.13.26-.2.41-.39.64-.2.23-.41.5-.58.67-.2.19-.4.39-.17.79.23.39 1 1.65 2.15 2.67 1.48 1.32 2.73 1.73 3.12 1.93.39.19.61.16.84-.1.23-.26.98-1.14 1.24-1.54.27-.39.53-.33.9-.19.36.13 2.29 1.08 2.69 1.28.39.2.65.3.75.46.1.17.1.98-.18 1.79z" fill="#FFFFFF"/>
+      </svg>
+      <span class="floating-wa-label">WhatsApp Concierge</span>
+    </a>
+  </aside>
+  
+  <script src="assets/cart.js"></script>
 </body>
 </html>
