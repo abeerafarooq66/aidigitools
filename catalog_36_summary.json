@@ -1,0 +1,290 @@
+[
+  {
+    "slug": "chatgpt-plus",
+    "title": "ChatGPT Plus",
+    "variants": 55,
+    "min_usdt": 2.89,
+    "fw_usdt": 2.89,
+    "pkr_cost": 809
+  },
+  {
+    "slug": "claude-pro",
+    "title": "Claude Pro",
+    "variants": 4,
+    "min_usdt": 6.06,
+    "fw_usdt": 6.06,
+    "pkr_cost": 1697
+  },
+  {
+    "slug": "perplexity-pro",
+    "title": "Perplexity Pro",
+    "variants": 18,
+    "min_usdt": 3.39,
+    "fw_usdt": 3.39,
+    "pkr_cost": 949
+  },
+  {
+    "slug": "gemini-advanced",
+    "title": "Google Gemini Advanced",
+    "variants": 47,
+    "min_usdt": 0.75,
+    "fw_usdt": 0.8,
+    "pkr_cost": 224
+  },
+  {
+    "slug": "grok-ai",
+    "title": "Grok AI Super",
+    "variants": 82,
+    "min_usdt": 1.12,
+    "fw_usdt": 1.12,
+    "pkr_cost": 314
+  },
+  {
+    "slug": "deepseek-pro",
+    "title": "DeepSeek Pro API",
+    "variants": 17,
+    "min_usdt": 1.12,
+    "fw_usdt": 1.12,
+    "pkr_cost": 314
+  },
+  {
+    "slug": "cursor-pro",
+    "title": "Cursor AI Pro",
+    "variants": 23,
+    "min_usdt": 7.77,
+    "fw_usdt": 7.77,
+    "pkr_cost": 2176
+  },
+  {
+    "slug": "jetbrains-all",
+    "title": "JetBrains All Products",
+    "variants": 2,
+    "min_usdt": 3.6,
+    "fw_usdt": 3.6,
+    "pkr_cost": 1008
+  },
+  {
+    "slug": "github-copilot",
+    "title": "GitHub Copilot",
+    "variants": 5,
+    "min_usdt": 2.48,
+    "fw_usdt": 2.48,
+    "pkr_cost": 694
+  },
+  {
+    "slug": "replit-core",
+    "title": "Replit Core",
+    "variants": 11,
+    "min_usdt": 6.0,
+    "fw_usdt": 48.0,
+    "pkr_cost": 13440
+  },
+  {
+    "slug": "claude-artifacts",
+    "title": "Claude Code Developer",
+    "variants": 126,
+    "min_usdt": 0.77,
+    "fw_usdt": 0.77,
+    "pkr_cost": 216
+  },
+  {
+    "slug": "chatgpt-codex",
+    "title": "OpenAI API & Codex",
+    "variants": 137,
+    "min_usdt": 0.08,
+    "fw_usdt": 0.08,
+    "pkr_cost": 22
+  },
+  {
+    "slug": "canva-pro",
+    "title": "Canva Pro",
+    "variants": 59,
+    "min_usdt": 0.04,
+    "fw_usdt": 0.2,
+    "pkr_cost": 56
+  },
+  {
+    "slug": "adobe-creative-cloud",
+    "title": "Adobe Creative Cloud",
+    "variants": 61,
+    "min_usdt": 0.63,
+    "fw_usdt": 0.78,
+    "pkr_cost": 218
+  },
+  {
+    "slug": "figma-pro",
+    "title": "Figma Pro",
+    "variants": 20,
+    "min_usdt": 2.5,
+    "fw_usdt": 2.5,
+    "pkr_cost": 700
+  },
+  {
+    "slug": "midjourney",
+    "title": "Midjourney Standard",
+    "variants": 2,
+    "min_usdt": 11.99,
+    "fw_usdt": 11.99,
+    "pkr_cost": 3357
+  },
+  {
+    "slug": "freepik-premium",
+    "title": "Freepik Premium",
+    "variants": 25,
+    "min_usdt": 2.67,
+    "fw_usdt": 2.67,
+    "pkr_cost": 748
+  },
+  {
+    "slug": "envato-elements",
+    "title": "Envato Elements",
+    "variants": 1,
+    "min_usdt": 4.0,
+    "fw_usdt": 4.0,
+    "pkr_cost": 1120
+  },
+  {
+    "slug": "capcut-pro",
+    "title": "CapCut Pro",
+    "variants": 82,
+    "min_usdt": 0.04,
+    "fw_usdt": 0.04,
+    "pkr_cost": 11
+  },
+  {
+    "slug": "google-veo",
+    "title": "Google Veo Omni",
+    "variants": 88,
+    "min_usdt": 2.5,
+    "fw_usdt": 2.5,
+    "pkr_cost": 700
+  },
+  {
+    "slug": "runway-gen3",
+    "title": "Runway Gen-3 Alpha",
+    "variants": 8,
+    "min_usdt": 1.9,
+    "fw_usdt": 24.76,
+    "pkr_cost": 6933
+  },
+  {
+    "slug": "kling-ai",
+    "title": "Kling AI Pro",
+    "variants": 50,
+    "min_usdt": 0.08,
+    "fw_usdt": 0.08,
+    "pkr_cost": 22
+  },
+  {
+    "slug": "minimax-ai",
+    "title": "MiniMax Hailuo AI",
+    "variants": 31,
+    "min_usdt": 1.53,
+    "fw_usdt": 6.29,
+    "pkr_cost": 1761
+  },
+  {
+    "slug": "leonardo-ai",
+    "title": "Leonardo AI Pro",
+    "variants": 11,
+    "min_usdt": 0.77,
+    "fw_usdt": 0.77,
+    "pkr_cost": 216
+  },
+  {
+    "slug": "elevenlabs-creator",
+    "title": "ElevenLabs Creator",
+    "variants": 57,
+    "min_usdt": 1.2,
+    "fw_usdt": 3.5,
+    "pkr_cost": 980
+  },
+  {
+    "slug": "suno-ai",
+    "title": "Suno AI Pro",
+    "variants": 21,
+    "min_usdt": 3.81,
+    "fw_usdt": 3.81,
+    "pkr_cost": 1067
+  },
+  {
+    "slug": "udio-ai",
+    "title": "Udio AI Pro",
+    "variants": 15,
+    "min_usdt": 5.34,
+    "fw_usdt": 5.34,
+    "pkr_cost": 1495
+  },
+  {
+    "slug": "grammarly-pro",
+    "title": "Grammarly Pro",
+    "variants": 11,
+    "min_usdt": 0.39,
+    "fw_usdt": 0.39,
+    "pkr_cost": 109
+  },
+  {
+    "slug": "quillbot-premium",
+    "title": "QuillBot Premium",
+    "variants": 2,
+    "min_usdt": 3.05,
+    "fw_usdt": 3.05,
+    "pkr_cost": 854
+  },
+  {
+    "slug": "semrush-guru",
+    "title": "Semrush Guru",
+    "variants": 1,
+    "min_usdt": 3.5,
+    "fw_usdt": 3.5,
+    "pkr_cost": 980
+  },
+  {
+    "slug": "nordvpn",
+    "title": "NordVPN Complete",
+    "variants": 29,
+    "min_usdt": 0.58,
+    "fw_usdt": 0.58,
+    "pkr_cost": 162
+  },
+  {
+    "slug": "surfshark-vpn",
+    "title": "Surfshark VPN",
+    "variants": 28,
+    "min_usdt": 0.47,
+    "fw_usdt": 0.47,
+    "pkr_cost": 132
+  },
+  {
+    "slug": "notion-business",
+    "title": "Notion Business AI",
+    "variants": 51,
+    "min_usdt": 0.99,
+    "fw_usdt": 1.15,
+    "pkr_cost": 322
+  },
+  {
+    "slug": "linkedin-premium",
+    "title": "LinkedIn Premium Career",
+    "variants": 29,
+    "min_usdt": 0.5,
+    "fw_usdt": 1.34,
+    "pkr_cost": 375
+  },
+  {
+    "slug": "youtube-premium",
+    "title": "YouTube Premium",
+    "variants": 54,
+    "min_usdt": 0.58,
+    "fw_usdt": 0.58,
+    "pkr_cost": 162
+  },
+  {
+    "slug": "netflix-premium",
+    "title": "Netflix 4K UHD",
+    "variants": 22,
+    "min_usdt": 2.0,
+    "fw_usdt": 2.1,
+    "pkr_cost": 588
+  }
+]
