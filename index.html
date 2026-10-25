@@ -56,10 +56,12 @@
       <a href="index.html" class="logo">AIDigi<span class="gold">Tools</span><span class="tagline">AI Software Marketplace</span></a>
       <nav>
         <a href="#products">Products</a>
-        <a href="#pricing">Pricing</a>
-        <a href="about.html">About</a>
+        <a href="deals.html">Deals</a>
+        <a href="categories/video.html">Video</a>
+        <a href="categories/coding.html">Coding</a>
+        <a href="categories/vpn.html">VPN</a>
+        <a href="categories/image.html">Image</a>
         <a href="shipping-policy.html">Delivery</a>
-        <a href="guides/chatgpt-vs-claude.html">Guides</a>
         <a href="policies.html#payments">Payments</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -77,6 +79,18 @@
         <span class="badge">SadaPay & Raast</span>
         <span class="badge emerald">15-Min Delivery SLA</span>
         <span class="badge">30-Day Warranty</span>
+      </div>
+    </section>
+
+    <!-- Category Hub Navigation -->
+    <section style="margin-top: 2rem;">
+      <div class="badges-row" style="justify-content: center; gap: 0.75rem;">
+        <a href="categories/video.html" class="badge" style="text-decoration:none;">🎬 AI Video &amp; Movie Tools</a>
+        <a href="categories/coding.html" class="badge" style="text-decoration:none;">💻 AI Coding &amp; Dev Tools</a>
+        <a href="categories/vpn.html" class="badge" style="text-decoration:none;">🔒 VPN &amp; Privacy</a>
+        <a href="categories/image.html" class="badge" style="text-decoration:none;">🎨 AI Image &amp; Design</a>
+        <a href="deals.html" class="badge emerald" style="text-decoration:none;">🔥 Bundle Deals &amp; Discounts</a>
+        <a href="compare/chatgpt-vs-claude.html" class="badge" style="text-decoration:none;">⚖️ Compare Tools</a>
       </div>
     </section>
 
@@ -99,61 +113,137 @@
       </div>
     </div>
 
-    <section id="products">
-      <h2 class="section-title">Featured AI Software Subscriptions</h2>
+    <!-- Live Search & Filter Bar -->
+    <section style="margin-top: 3.5rem;">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Instant Tool Finder</h2>
+        <input type="text" id="toolSearchInput" placeholder="Search by name, category, or workflow (e.g. video, coding, vpn, chatgpt)..." style="width: 100%; padding: 0.85rem 1.2rem; background: var(--bg-card-hover); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); font-size: 1rem; outline: none; transition: border 0.2s ease;">
+        <div style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+          Popular: <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('video')">Video</span>
+          <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('coding')">Coding</span>
+          <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('vpn')">VPN</span>
+          <span style="cursor:pointer; color:var(--accent-gold); margin-right: 8px;" onclick="filterTools('image')">Image</span>
+          <span style="cursor:pointer; color:var(--accent-gold);" onclick="filterTools('')">Show All</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" style="margin-top: 3.5rem;">
+      <h2 class="section-title">Verified AI Software Subscriptions</h2>
       <p class="section-subtitle">Verified access to world-leading AI intelligence with flat PKR domestic settlement.</p>
-      <div class="grid">
-        <div class="card">
+      
+      <div class="grid" id="toolsGrid">
+        <!-- 1. ChatGPT Plus -->
+        <div class="card tool-card" data-category="chat coding writing">
           <div>
             <h2>ChatGPT Plus</h2>
             <p>Full access to GPT-4o, Custom GPTs, Canvas, and advanced voice mode with zero downtime.</p>
             <div class="price-tag">Rs. 2,300 <span class="period">/ month</span></div>
             <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ OpenAI GPT-4o & DALL-E 3 Imaging</li>
-              <li>✓ EasyPaisa, JazzCash, SadaPay & Raast</li>
+              <li>✓ OpenAI GPT-4o &amp; DALL-E 3 Imaging</li>
+              <li>✓ EasyPaisa, JazzCash, SadaPay &amp; Raast</li>
               <li>✓ Instant 15-Minute WhatsApp Fulfillment</li>
               <li>✓ 30-Day Full Replacement Warranty</li>
             </ul>
           </div>
           <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/chatgpt-plus.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs & Benchmark Data →</a>
+            <a href="tools/chatgpt-plus.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
             <a href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300" class="btn-whatsapp">Order ChatGPT Plus on WhatsApp</a>
           </div>
         </div>
 
-        <div class="card">
+        <!-- 2. Claude Pro -->
+        <div class="card tool-card" data-category="coding writing chat">
           <div>
             <h2>Claude Pro</h2>
             <p>Access Claude 3.5 Sonnet with extended context, Artifacts canvas, and technical programming capabilities.</p>
             <div class="price-tag">Rs. 2,500 <span class="period">/ month</span></div>
             <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ Anthropic Claude 3.5 Sonnet & Haiku</li>
-              <li>✓ Interactive Code & UI Artifacts Canvas</li>
+              <li>✓ Anthropic Claude 3.5 Sonnet &amp; Haiku</li>
+              <li>✓ Interactive Code &amp; UI Artifacts Canvas</li>
               <li>✓ Domestic Pakistani Wallet Settlement</li>
               <li>✓ 30-Day Full Replacement Warranty</li>
             </ul>
           </div>
           <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/claude-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs & Benchmark Data →</a>
+            <a href="tools/claude-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
             <a href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Pro%20for%20Rs%202500" class="btn-whatsapp">Order Claude Pro on WhatsApp</a>
           </div>
         </div>
 
-        <div class="card">
+        <!-- 3. Canva Pro -->
+        <div class="card tool-card" data-category="image design graphics">
           <div>
             <h2>Canva Pro</h2>
             <p>Premium graphics workspace, 100M+ stock assets, Magic Studio generative AI, and team Brand Kits.</p>
             <div class="price-tag">Rs. 600 <span class="period">/ month</span></div>
             <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
-              <li>✓ 100M+ Stock Photos, Vectors & Videos</li>
+              <li>✓ 100M+ Stock Photos, Vectors &amp; Videos</li>
               <li>✓ Magic Studio AI Background Remover</li>
-              <li>✓ 1TB Secure Cloud & Brand Kits</li>
+              <li>✓ 1TB Secure Cloud &amp; Brand Kits</li>
               <li>✓ 30-Day Full Replacement Warranty</li>
             </ul>
           </div>
           <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
-            <a href="tools/canva-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs & Benchmark Data →</a>
+            <a href="tools/canva-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
             <a href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Canva%20Pro%20for%20Rs%20600" class="btn-whatsapp">Order Canva Pro on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 4. CapCut Pro -->
+        <div class="card tool-card" data-category="video movie reels">
+          <div>
+            <h2>CapCut Pro AI</h2>
+            <p>Export in 4K 60fps, generate auto-captions, and access full viral music libraries on PC and Mobile.</p>
+            <div class="price-tag">Rs. 950 <span class="period">/ month</span></div>
+            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
+              <li>✓ AI Smart Auto-Captions &amp; Subtitles</li>
+              <li>✓ 4K 60fps Optical Flow Smooth Motion</li>
+              <li>✓ Vocal Isolation &amp; Pro Audio Suite</li>
+              <li>✓ 30-Day Full Replacement Warranty</li>
+            </ul>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
+            <a href="tools/capcut-pro.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
+            <a href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20CapCut%20Pro%20for%20Rs%20950" class="btn-whatsapp">Order CapCut Pro on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 5. NordVPN Complete -->
+        <div class="card tool-card" data-category="vpn privacy security">
+          <div>
+            <h2>NordVPN Complete</h2>
+            <p>Ultra-fast cybersecurity with 6,400+ servers, Threat Protection Pro, and private browsing in Pakistan.</p>
+            <div class="price-tag">Rs. 1,200 <span class="period">/ month</span></div>
+            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
+              <li>✓ 6,400+ High-Speed Global Servers</li>
+              <li>✓ Threat Protection Pro Ad &amp; Malware Blocker</li>
+              <li>✓ 10 Concurrent Device Connections</li>
+              <li>✓ 30-Day Full Replacement Warranty</li>
+            </ul>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
+            <a href="tools/nordvpn.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
+            <a href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20NordVPN%20for%20Rs%201200" class="btn-whatsapp">Order NordVPN on WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 6. Midjourney v6 -->
+        <div class="card tool-card" data-category="image design art">
+          <div>
+            <h2>Midjourney v6</h2>
+            <p>State-of-the-art photorealistic generative imaging with Fast GPU rendering hours and commercial license.</p>
+            <div class="price-tag">Rs. 2,500 <span class="period">/ month</span></div>
+            <ul style="list-style:none; margin:1rem 0; color:var(--text-secondary); font-size:0.92rem; line-height:2;">
+              <li>✓ Midjourney v6 &amp; Niji v6 Japanese Anime</li>
+              <li>✓ 15 Fast GPU Hours &amp; Relax Unlimited</li>
+              <li>✓ Commercial Asset Monetization Rights</li>
+              <li>✓ 30-Day Full Replacement Warranty</li>
+            </ul>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:1rem;">
+            <a href="tools/midjourney.html" style="color:var(--accent-gold); text-decoration:none; font-weight:600;">View Full Specs &amp; Benchmark Data →</a>
+            <a href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Midjourney%20for%20Rs%202500" class="btn-whatsapp">Order Midjourney on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -194,8 +284,57 @@
             <td>15 Minutes</td>
             <td>30-Day Replacement Guarantee</td>
           </tr>
+          <tr>
+            <td><strong>CapCut Pro</strong></td>
+            <td>Rs. 950</td>
+            <td>EasyPaisa, JazzCash, SadaPay, Raast</td>
+            <td>15 Minutes</td>
+            <td>30-Day Replacement Guarantee</td>
+          </tr>
+          <tr>
+            <td><strong>NordVPN Complete</strong></td>
+            <td>Rs. 1,200</td>
+            <td>EasyPaisa, JazzCash, SadaPay, Raast</td>
+            <td>15 Minutes</td>
+            <td>30-Day Replacement Guarantee</td>
+          </tr>
+          <tr>
+            <td><strong>Midjourney v6</strong></td>
+            <td>Rs. 2,500</td>
+            <td>EasyPaisa, JazzCash, SadaPay, Raast</td>
+            <td>15 Minutes</td>
+            <td>30-Day Replacement Guarantee</td>
+          </tr>
         </tbody>
       </table>
+    </section>
+
+    <!-- Compare & Best Guides Section -->
+    <section style="margin-top: 4.5rem;">
+      <h2 class="section-title">Expert Comparison &amp; Benchmark Guides</h2>
+      <p class="section-subtitle">Read in-depth technical shootouts and verified performance testing.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>ChatGPT Plus vs Claude Pro</h3>
+          <p>Head-to-head comparison of coding capabilities, 200K context windows, and real-time voice mode.</p>
+          <a href="compare/chatgpt-vs-claude.html" style="color:var(--accent-gold); display:inline-block; margin-top:0.75rem;">Read Comparison Shootout &rarr;</a>
+        </div>
+        <div class="card">
+          <h3>Runway Gen-3 vs Pika 2.0</h3>
+          <p>Cinematic motion vs viral creative physics effects. Detailed video generator shootout.</p>
+          <a href="compare/runway-vs-pika.html" style="color:var(--accent-gold); display:inline-block; margin-top:0.75rem;">Read Video AI Shootout &rarr;</a>
+        </div>
+        <div class="card">
+          <h3>Best AI Video Generators (2026)</h3>
+          <p>Ranked shortlist of the top generative video engines for Pakistani creators.</p>
+          <a href="best/best-ai-video-generators.html" style="color:var(--accent-gold); display:inline-block; margin-top:0.75rem;">View Video Rankings &rarr;</a>
+        </div>
+        <div class="card">
+          <h3>Best AI Coding Tools (2026)</h3>
+          <p>Benchmark scores, SWE-bench ratings, and developer recommendations.</p>
+          <a href="best/best-ai-coding-tools.html" style="color:var(--accent-gold); display:inline-block; margin-top:0.75rem;">View Developer Rankings &rarr;</a>
+        </div>
+      </div>
     </section>
 
     <section id="features" style="margin-top: 4.5rem;">
@@ -246,11 +385,22 @@
           <p>Pakistan's localized AI software intelligence hub and domestic subscription rails.</p>
         </div>
         <div class="footer-col">
-          <h3>Products</h3>
+          <h3>Categories</h3>
           <ul>
-            <li><a href="tools/chatgpt-plus.html">ChatGPT Plus</a></li>
-            <li><a href="tools/claude-pro.html">Claude Pro</a></li>
-            <li><a href="tools/canva-pro.html">Canva Pro</a></li>
+            <li><a href="categories/video.html">AI Video &amp; Movie Tools</a></li>
+            <li><a href="categories/coding.html">AI Coding &amp; Developer Tools</a></li>
+            <li><a href="categories/vpn.html">VPN &amp; Privacy Services</a></li>
+            <li><a href="categories/image.html">AI Image &amp; Graphic Tools</a></li>
+            <li><a href="deals.html">Bundle Deals &amp; Discounts</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Guides &amp; Compare</h3>
+          <ul>
+            <li><a href="compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a></li>
+            <li><a href="compare/runway-vs-pika.html">Runway vs Pika</a></li>
+            <li><a href="best/best-ai-video-generators.html">Best Video AI (2026)</a></li>
+            <li><a href="best/best-ai-coding-tools.html">Best Coding AI (2026)</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -259,6 +409,7 @@
             <li><a href="policies.html#payments">Payment Rails</a></li>
             <li><a href="policies.html#refunds">Replacement Warranty</a></li>
             <li><a href="shipping-policy.html">Digital Delivery SLA</a></li>
+            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
             <li><a href="policies.html#terms">Terms of Service</a></li>
             <li><a href="policies.html#privacy">Privacy Policy</a></li>
           </ul>
@@ -278,5 +429,31 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function filterTools(category) {
+      var input = document.getElementById('toolSearchInput');
+      if (input) input.value = category;
+      searchTools(category);
+    }
+
+    function searchTools(query) {
+      var q = query.toLowerCase().trim();
+      var cards = document.querySelectorAll('.tool-card');
+      cards.forEach(function(card) {
+        var text = card.textContent.toLowerCase();
+        var cat = (card.getAttribute('data-category') || '').toLowerCase();
+        if (!q || text.indexOf(q) !== -1 || cat.indexOf(q) !== -1) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    document.getElementById('toolSearchInput').addEventListener('input', function(e) {
+      searchTools(e.target.value);
+    });
+  </script>
 </body>
 </html>

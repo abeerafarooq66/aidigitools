@@ -133,7 +133,7 @@ class TechnicalAuditEngine:
         }
 
     def audit_site(self) -> dict:
-        pages = list(self.root.glob("*.html")) + list(self.root.glob("tools/*.html")) + list(self.root.glob("guides/*.html"))
+        pages = [p for p in self.root.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)]
         results = [self.audit_page(p) for p in sorted(pages)]
 
         # Check robots.txt and sitemap.xml

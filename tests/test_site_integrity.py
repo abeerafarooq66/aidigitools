@@ -11,9 +11,9 @@ class TestSiteIntegrity(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.html_files = sorted(list(ROOT.glob("*.html")) + list(ROOT.glob("tools/*.html")) + list(ROOT.glob("guides/*.html")))
+        cls.html_files = sorted([p for p in ROOT.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)])
         cls.tool_files = sorted(list(ROOT.glob("tools/*.html")))
-        cls.guide_files = sorted(list(ROOT.glob("guides/*.html")))
+        cls.guide_files = sorted(list(ROOT.glob("guides/*.html")) + list(ROOT.glob("compare/*.html")) + list(ROOT.glob("best/*.html")))
 
     # --- Sitemap & Robots Integrity (1-5) ---
     def test_01_robots_txt_exists(self):

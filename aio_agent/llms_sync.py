@@ -45,9 +45,38 @@ class LLMsSync:
 
         lines.extend([
             "",
-            "## Buying Guides & Comparisons",
+            "## Software Bundles & Discounts",
+            "- [Bundle Deals & Packs](https://aidigitools.tech/deals.html): Creator Studio, Developer Power Suite, and Privacy Pack."
+        ])
+
+        categories_dir = self.root / "categories"
+        if categories_dir.exists():
+            lines.extend([
+                "",
+                "## Tool Category Hubs",
+                ""
+            ])
+            for p in sorted(categories_dir.glob("*.html")):
+                meta = self.extract_meta(p)
+                lines.append(f"- [{meta['title']}]({meta['url']}): {meta['description']}")
+
+        lines.extend([
+            "",
+            "## Comparisons & Curated Rankings",
             ""
         ])
+
+        compare_dir = self.root / "compare"
+        if compare_dir.exists():
+            for p in sorted(compare_dir.glob("*.html")):
+                meta = self.extract_meta(p)
+                lines.append(f"- [{meta['title']}]({meta['url']}): {meta['description']}")
+
+        best_dir = self.root / "best"
+        if best_dir.exists():
+            for p in sorted(best_dir.glob("*.html")):
+                meta = self.extract_meta(p)
+                lines.append(f"- [{meta['title']}]({meta['url']}): {meta['description']}")
 
         guides_dir = self.root / "guides"
         if guides_dir.exists():
@@ -62,7 +91,8 @@ class LLMsSync:
             "- [Customer Help Desk](https://aidigitools.tech/contact.html): Real human assistance in Islamabad via WhatsApp (+92 300 1234567) and email (support@aidigitools.tech).",
             "- [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute average fulfillment SLA.",
             "- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.",
-            "- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day full replacement guarantee or pro-rata domestic refund."
+            "- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day full replacement guarantee or pro-rata domestic refund.",
+            "- [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent review standards and FTC/Google Ads affiliate compliance."
         ])
 
         return "\n".join(lines) + "\n"

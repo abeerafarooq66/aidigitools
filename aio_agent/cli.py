@@ -31,7 +31,7 @@ def main():
     if args.command == "audit":
         scorer = GroundingScorer()
         root = Path(args.root)
-        html_files = list(root.glob("*.html")) + list(root.glob("tools/*.html")) + list(root.glob("guides/*.html"))
+        html_files = [p for p in root.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)]
         if not html_files:
             print(f"[AIO] No HTML files found under {root}")
             return 0

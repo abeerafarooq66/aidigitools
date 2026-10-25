@@ -7,16 +7,19 @@ def generate_sitemap(root_dir: Path | str = "."):
     today = datetime.date.today().isoformat()
 
     urls = []
-    # Primary Pages
-    primary_pages = [
+    
+    # 1. Primary Root Pages
+    root_pages = [
         ("index.html", "", "daily", "1.0"),
+        ("deals.html", "deals.html", "daily", "0.9"),
         ("about.html", "about.html", "monthly", "0.8"),
         ("contact.html", "contact.html", "monthly", "0.8"),
         ("shipping-policy.html", "shipping-policy.html", "monthly", "0.7"),
         ("policies.html", "policies.html", "monthly", "0.6"),
+        ("affiliate-disclosure.html", "affiliate-disclosure.html", "monthly", "0.6"),
     ]
 
-    for filename, slug, freq, priority in primary_pages:
+    for filename, slug, freq, priority in root_pages:
         if (root / filename).exists():
             loc = f"{domain}/{slug}" if slug else f"{domain}/"
             urls.append(f"""  <url>
@@ -26,26 +29,24 @@ def generate_sitemap(root_dir: Path | str = "."):
     <priority>{priority}</priority>
   </url>""")
 
-    # Tools
-    tools_dir = root / "tools"
-    if tools_dir.exists():
-        for tf in sorted(tools_dir.glob("*.html")):
-            urls.append(f"""  <url>
-    <loc>{domain}/tools/{tf.name}</loc>
-    <lastmod>{today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>""")
+    # 2. Directory Mappings
+    dir_configs = [
+        ("tools", "weekly", "0.9"),
+        ("categories", "weekly", "0.9"),
+        ("compare", "weekly", "0.8"),
+        ("best", "weekly", "0.8"),
+        ("guides", "weekly", "0.8"),
+    ]
 
-    # Guides
-    guides_dir = root / "guides"
-    if guides_dir.exists():
-        for gf in sorted(guides_dir.glob("*.html")):
-            urls.append(f"""  <url>
-    <loc>{domain}/guides/{gf.name}</loc>
+    for dir_name, freq, priority in dir_configs:
+        d = root / dir_name
+        if d.exists():
+            for f in sorted(d.glob("*.html")):
+                urls.append(f"""  <url>
+    <loc>{domain}/{dir_name}/{f.name}</loc>
     <lastmod>{today}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>{freq}</changefreq>
+    <priority>{priority}</priority>
   </url>""")
 
     sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>

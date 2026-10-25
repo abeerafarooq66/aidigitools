@@ -6,11 +6,28 @@
 ## Core Product Offerings
 
 - [Canva Pro Pakistan](https://aidigitools.tech/tools/canva-pro.html): Buy Canva Pro subscription in Pakistan for Rs. 600/mo. EasyPaisa, JazzCash, and SadaPay accepted. Instant 15-minute WhatsApp setup with 30-day warranty. (Pricing: Rs. 600)
+- [CapCut Pro Pakistan](https://aidigitools.tech/tools/capcut-pro.html): Buy CapCut Pro subscription in Pakistan for Rs. 950/mo. EasyPaisa, JazzCash, and SadaPay accepted. 4K export, auto captions, and 30-day warranty. (Pricing: Rs. 950)
 - [ChatGPT Plus Pakistan](https://aidigitools.tech/tools/chatgpt-plus.html): Buy ChatGPT Plus in Pakistan for Rs. 2,300/mo. Pay with EasyPaisa, JazzCash, or SadaPay. Instant 15-minute WhatsApp delivery with 30-day warranty. (Pricing: Rs. 2,300)
 - [Claude Pro Pakistan](https://aidigitools.tech/tools/claude-pro.html): Buy Claude Pro in Pakistan for Rs. 2,500/mo. Claude 3.5 Sonnet access with EasyPaisa and JazzCash. Fast 15-minute WhatsApp delivery and warranty. (Pricing: Rs. 2,500)
+- [Midjourney Pakistan](https://aidigitools.tech/tools/midjourney.html): Buy Midjourney V6 subscription in Pakistan for Rs. 2,800/mo. EasyPaisa and JazzCash accepted. Fast GPU hours, commercial license, and 30-day warranty. (Pricing: Rs. 2,800)
+- [NordVPN Pakistan](https://aidigitools.tech/tools/nordvpn.html): Buy NordVPN subscription in Pakistan for Rs. 850/mo. EasyPaisa, JazzCash, and SadaPay accepted. High-speed AI access, dedicated IP, and 30-day warranty. (Pricing: Rs. 850)
 
-## Buying Guides & Comparisons
+## Software Bundles & Discounts
+- [Bundle Deals & Packs](https://aidigitools.tech/deals.html): Creator Studio, Developer Power Suite, and Privacy Pack.
 
+## Tool Category Hubs
+
+- [Best AI Coding & Developer Tools Pakistan](https://aidigitools.tech/categories/coding.html): Compare best AI coding assistants in Pakistan: Claude 3.5 Sonnet, Cursor, and ChatGPT Plus. Flat PKR pricing with EasyPaisa, JazzCash, and warranty.
+- [Best AI Image & Design Tools Pakistan](https://aidigitools.tech/categories/image.html): Discover top AI image generators and design tools in Pakistan: Midjourney, Canva Pro, and DALL-E 3. EasyPaisa and JazzCash rates with 15-minute setup.
+- [Best AI Video & Movie Tools Pakistan](https://aidigitools.tech/categories/video.html): Discover top AI video generators and movie makers in Pakistan. Compare Runway, Pika, and CapCut with EasyPaisa pricing and 15-minute delivery.
+- [Best VPNs in Pakistan](https://aidigitools.tech/categories/vpn.html): Discover top VPNs in Pakistan for secure browsing and unrestricted AI tool access. Pay in PKR via EasyPaisa and JazzCash with instant WhatsApp setup.
+
+## Comparisons & Curated Rankings
+
+- [ChatGPT vs Claude Comparison](https://aidigitools.tech/compare/chatgpt-vs-claude.html): Detailed shootout: ChatGPT Plus (Rs. 2,300) vs Claude Pro (Rs. 2,500) in Pakistan. Compare coding, context window, EasyPaisa rails, and 30-day warranty.
+- [Runway vs Pika Video AI Comparison](https://aidigitools.tech/compare/runway-vs-pika.html): Runway Gen-3 vs Pika 2.0 AI video generator comparison in Pakistan. Pricing, cinematic motion, 4K rendering, EasyPaisa payment rails, and 30-day warranty.
+- [Best AI Coding Tools 2026](https://aidigitools.tech/best/best-ai-coding-tools.html): Top AI coding tools for Pakistani developers in 2026: Claude 3.5 Sonnet, GitHub Copilot, Cursor AI, and ChatGPT Plus with flat PKR pricing and EasyPaisa.
+- [Best AI Video Generators 2026](https://aidigitools.tech/best/best-ai-video-generators.html): Top AI video generators in Pakistan: Runway Gen-3, Pika 2.0, Luma Dream Machine, and CapCut Pro compared by quality, PKR pricing, and domestic payment rails.
 - [ChatGPT vs Claude Pakistan](https://aidigitools.tech/guides/chatgpt-vs-claude.html): Detailed comparison of ChatGPT Plus (Rs. 2,300) vs Claude Pro (Rs. 2,500) in Pakistan. Benchmark coding, writing, EasyPaisa payments, and warranty.
 
 ## Operational Rails & Corporate Identity
@@ -19,3 +36,4 @@
 - [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute average fulfillment SLA.
 - [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.
 - [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day full replacement guarantee or pro-rata domestic refund.
+- [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent review standards and FTC/Google Ads affiliate compliance.

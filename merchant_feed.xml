@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>AIDigiTools — Verified AI Software &amp; Digital Subscriptions</title>
+    <link>https://aidigitools.tech</link>
+    <description>Pakistan localized AI tools marketplace and domestic software subscription rails with 30-day warranty and 15-minute delivery.</description>
+
+    <item>
+      <g:id>aidigitools-chatgpt-plus</g:id>
+      <g:title>OpenAI ChatGPT Plus Subscription — 1 Month Access</g:title>
+      <g:description>Official OpenAI ChatGPT Plus access with GPT-4o, OpenAI o1 reasoning, DALL-E 3, and advanced voice mode. 15-minute digital delivery with 30-day warranty in Pakistan.</g:description>
+      <g:link>https://aidigitools.tech/tools/chatgpt-plus.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/chatgpt-plus.png</g:image_link>
+      <g:price>2300 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>OpenAI</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence &gt; Language Models</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-claude-pro</g:id>
+      <g:title>Anthropic Claude Pro Subscription — 1 Month Access</g:title>
+      <g:description>Anthropic Claude Pro with Claude 3.5 Sonnet, 200K token context window, Artifacts interactive coding UI, and 5x usage limits. 15-minute delivery in Pakistan.</g:description>
+      <g:link>https://aidigitools.tech/tools/claude-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/claude-pro.png</g:image_link>
+      <g:price>2500 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Anthropic</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence &gt; Developer Tools</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-canva-pro</g:id>
+      <g:title>Canva Pro Designer Access — 1 Month Team License</g:title>
+      <g:description>Canva Pro team subscription with unlimited premium templates, 100M+ stock photos, Brand Kit, Magic Studio AI tools, and 1-click background remover.</g:description>
+      <g:link>https://aidigitools.tech/tools/canva-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/canva-pro.png</g:image_link>
+      <g:price>600 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Canva</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software &gt; Graphic &amp; Design Software</g:google_product_category>
+      <g:product_type>Software &gt; Graphic Design &gt; Templates</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-capcut-pro</g:id>
+      <g:title>CapCut Pro AI Video Editor — 1 Month Full Access</g:title>
+      <g:description>CapCut Pro subscription with AI auto-captions, 4K 60fps optical flow motion blur, commercial music licensing, and video upscale for TikTok and YouTube.</g:description>
+      <g:link>https://aidigitools.tech/tools/capcut-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/capcut-pro.png</g:image_link>
+      <g:price>950 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>ByteDance</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software &gt; Multimedia &amp; Design Software</g:google_product_category>
+      <g:product_type>Software &gt; Video Editing &gt; Social Video</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-nordvpn</g:id>
+      <g:title>NordVPN Complete Cybersecurity — 1 Month Premium Access</g:title>
+      <g:description>NordVPN Complete subscription featuring 6,400+ ultra-fast global servers, Threat Protection Pro ad blocker, Dark Web Monitor, and AES-256 encryption.</g:description>
+      <g:link>https://aidigitools.tech/tools/nordvpn.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/nordvpn.png</g:image_link>
+      <g:price>1200 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Nord Security</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software &gt; Security &amp; Encryption Software</g:google_product_category>
+      <g:product_type>Software &gt; Privacy &amp; Security &gt; VPN</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-midjourney</g:id>
+      <g:title>Midjourney v6 Photorealistic AI Art — 1 Month Standard Plan</g:title>
+      <g:description>Midjourney v6 with 15 Fast GPU hours, unlimited Relax mode generations, commercial usage rights, and web generation access for high-end graphic design.</g:description>
+      <g:link>https://aidigitools.tech/tools/midjourney.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/midjourney.png</g:image_link>
+      <g:price>2500 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Midjourney Inc.</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software &gt; Graphic &amp; Design Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence &gt; Generative Art</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-creator-bundle</g:id>
+      <g:title>Creator Studio Power Pack — CapCut Pro, Midjourney &amp; Canva Pro</g:title>
+      <g:description>The ultimate content creator bundle in Pakistan combining CapCut Pro, Midjourney v6, and Canva Pro. Save 15% with EasyPaisa/JazzCash and 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/deals.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/creator-bundle.png</g:image_link>
+      <g:price>4200 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>AIDigiTools</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software &gt; Multimedia &amp; Design Software</g:google_product_category>
+      <g:product_type>Software &gt; Bundle &gt; Creator Suite</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-developer-bundle</g:id>
+      <g:title>Developer Power Suite — Claude Pro, ChatGPT Plus &amp; NordVPN</g:title>
+      <g:description>All-in-one programming powerhouse bundle combining Claude Pro 3.5 Sonnet, ChatGPT Plus GPT-4o, and NordVPN Complete. Save Rs. 600 monthly with 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/deals.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/developer-bundle.png</g:image_link>
+      <g:price>5400 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>AIDigiTools</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Bundle &gt; Developer Suite</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+  </channel>
+</rss>

@@ -29,7 +29,7 @@ class LinkExtractor(HTMLParser):
 
 def check_link_graph(root_dir: Path | str = ".", strict: bool = False) -> dict:
     root = Path(root_dir).resolve()
-    html_files = list(root.glob("*.html")) + list(root.glob("tools/*.html")) + list(root.glob("guides/*.html"))
+    html_files = [p for p in root.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)]
 
     if not html_files:
         print("[LinkGraph] No HTML files found.")
