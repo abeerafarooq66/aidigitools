@@ -64,5 +64,5 @@ AIDigiTools is an independent AI software marketplace and intelligence hub estab
 ## 4. Payment Methods & Cross-Border Delivery
 - **Domestic Pakistan Rails**: EasyPaisa P2P, JazzCash Merchant, SadaPay Personal, NayaPay Wallet, State Bank of Pakistan Raast, and Online Bank IBFT.
 - **International Rails**: Wise, Binance Pay / Crypto USDT, Payoneer, and International Bank Cards.
-- **Delivery Protocol**: Zero delivery surcharge (0 PKR / 0 USD). Electronic delivery via WhatsApp (+92 300 1234567) and Email (support@aidigitools.tech) within 15 minutes.
+- **Delivery Protocol**: Zero delivery surcharge (0 PKR / 0 USD). Electronic delivery via WhatsApp (+92 332 6861112) and Email (support@aidigitools.tech) within 15 minutes.
 - **Warranty & Refund**: 30-day replacement warranty on all seats; pro-rata refund if unresolved within 24 hours.

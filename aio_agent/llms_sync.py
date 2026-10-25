@@ -88,7 +88,7 @@ class LLMsSync:
             "",
             "## Operational Rails & Corporate Identity",
             "- [About Company](https://aidigitools.tech/about.html): Founding mission, corporate background, and 1,200+ active subscriptions.",
-            "- [Customer Help Desk](https://aidigitools.tech/contact.html): Real human assistance in Islamabad via WhatsApp (+92 300 1234567) and email (support@aidigitools.tech).",
+            "- [Customer Help Desk](https://aidigitools.tech/contact.html): Real human assistance in Islamabad via WhatsApp (+92 332 6861112) and email (support@aidigitools.tech).",
             "- [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute average fulfillment SLA.",
             "- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.",
             "- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day full replacement guarantee or pro-rata domestic refund.",
