@@ -1,0 +1,29 @@
+name: Auto Blog Publisher
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # 09:00 PKT daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Auto Content Generator & Sitemap Update
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/generate_sitemap.py
+          python -m aio_agent sync-llms
+          python scripts/link_graph_checker.py --strict

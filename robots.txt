@@ -1,0 +1,20 @@
+# robots.txt for aidigitools.tech
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# AI Crawlers & LLM Agents
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://aidigitools.tech/sitemap.xml

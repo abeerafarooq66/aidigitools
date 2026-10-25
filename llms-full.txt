@@ -1,0 +1,18 @@
+# AIDigiTools (aidigitools.tech)
+
+> Pakistan's Premier AI Software Marketplace & Intelligence Hub.
+> Flat PKR Pricing, Domestic Payment Rails (EasyPaisa, JazzCash, SadaPay, Raast), and WhatsApp instant delivery.
+
+## Core Product Offerings
+
+- [Canva Pro Pakistan](https://aidigitools.tech/tools/canva-pro.html): Buy Canva Pro subscription in Pakistan for Rs. 600/mo. EasyPaisa, JazzCash, and SadaPay accepted. Instant 15-minute WhatsApp setup with 30-day warranty. (Pricing: Rs. 600)
+- [ChatGPT Plus Pakistan](https://aidigitools.tech/tools/chatgpt-plus.html): Buy ChatGPT Plus in Pakistan for Rs. 2,300/mo. Pay with EasyPaisa, JazzCash, or SadaPay. Instant 15-minute WhatsApp delivery with 30-day warranty. (Pricing: Rs. 2,300)
+- [Claude Pro Pakistan](https://aidigitools.tech/tools/claude-pro.html): Buy Claude Pro in Pakistan for Rs. 2,500/mo. Claude 3.5 Sonnet access with EasyPaisa and JazzCash. Fast 15-minute WhatsApp delivery and warranty. (Pricing: Rs. 2,500)
+
+## Buying Guides & Comparisons
+
+- [ChatGPT vs Claude Pakistan](https://aidigitools.tech/guides/chatgpt-vs-claude.html): Detailed comparison of ChatGPT Plus (Rs. 2,300) vs Claude Pro (Rs. 2,500) in Pakistan. Benchmark coding, writing, EasyPaisa payments, and warranty.
+
+## Operating Policies & Rails
+- [Payment Rails & Support](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.
+- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): Full-term replacement guarantee and human WhatsApp help desk.

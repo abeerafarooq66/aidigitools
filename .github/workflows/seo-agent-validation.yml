@@ -1,0 +1,44 @@
+name: Multi-Agent SEO & Quality Gate Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run AIO Agent Tests
+        run: |
+          python -m unittest discover -s aio_agent/tests -v
+
+      - name: Run Keyword Agent Tests
+        run: |
+          python -m unittest discover -s keyword_agent/tests -v
+
+      - name: Run HERMES SEO Agent Tests
+        run: |
+          python -m unittest discover -s seo-agent/tests -v
+
+      - name: Run Marketing Agent Tests
+        run: |
+          python -m unittest discover -s marketing_agent/tests -v
+
+      - name: Run Core Site Integrity Tests (50 Tests)
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Verify Strict Link Graph & Fragment Anchors
+        run: |
+          python scripts/link_graph_checker.py --strict

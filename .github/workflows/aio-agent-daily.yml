@@ -1,0 +1,36 @@
+name: AIO Agent Daily Grounding & LLMs Sync
+
+on:
+  schedule:
+    - cron: '30 23 * * *'  # 04:30 PKT daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aio-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run AIO Grounding Audit
+        run: |
+          python -m aio_agent audit
+
+      - name: Sync llms.txt & llms-full.txt
+        run: |
+          python -m aio_agent sync-llms
+
+      - name: Commit & Push Changes
+        run: |
+          git config --local user.email "bot@aidigitools.tech"
+          git config --local user.name "AIDigiTools AIO Bot"
+          git add llms.txt llms-full.txt
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(aio): auto-sync llms.txt and llms-full.txt [skip ci]" && git push)

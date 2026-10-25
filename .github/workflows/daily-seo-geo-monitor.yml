@@ -1,0 +1,30 @@
+name: Daily SEO & GEO Integrity Monitor
+
+on:
+  schedule:
+    - cron: '15 2 * * *'  # 07:15 PKT daily
+  workflow_dispatch:
+
+jobs:
+  seo-geo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check Link Graph & Anchors
+        run: |
+          python scripts/link_graph_checker.py --strict
+
+      - name: Check AIO Grounding Standards
+        run: |
+          python -m aio_agent audit
+
+      - name: Check HERMES SEO Health
+        run: |
+          python -m seo-agent.agent.main --mode audit --report

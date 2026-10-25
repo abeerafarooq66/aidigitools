@@ -1,0 +1,26 @@
+name: Keyword Agent Daily GSC RE2 & Competitor Gap
+
+on:
+  schedule:
+    - cron: '45 23 * * *'  # 04:45 PKT daily
+  workflow_dispatch:
+
+jobs:
+  keyword-intelligence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run GSC RE2 Striking Distance Audit
+        run: |
+          python -m keyword_agent audit
+
+      - name: Run Competitor Gap Analysis
+        run: |
+          python -m keyword_agent competitor-gap

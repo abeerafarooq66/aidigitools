@@ -1,0 +1,30 @@
+name: HERMES Autonomous SEO Daily Growth Loop
+
+on:
+  schedule:
+    - cron: '17 22 * * *'  # 03:17 PKT daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  hermes-loop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Technical Audit
+        run: |
+          python -m seo-agent.agent.main --mode audit --report
+
+      - name: Generate Growth Proposals
+        run: |
+          python -m seo-agent.agent.main --mode propose

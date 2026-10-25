@@ -1,0 +1,26 @@
+name: Daily Social Deal Content Pack & Buffer
+
+on:
+  schedule:
+    - cron: '45 23 * * *'  # 04:45 PKT daily
+  workflow_dispatch:
+
+jobs:
+  social-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate Daily Deal Cards
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python -m marketing_agent buffer-status
+          python -m marketing_agent social-pack --tool "ChatGPT Plus" --price 2300
+          python -m marketing_agent buffer-prepare --tool "ChatGPT Plus" --price 2300

@@ -1,0 +1,30 @@
+name: Chatbot Widget & Syntax Validation
+
+on:
+  push:
+    paths:
+      - '**.html'
+      - '**.js'
+      - 'assets/**'
+  pull_request:
+    paths:
+      - '**.html'
+      - '**.js'
+      - 'assets/**'
+  workflow_dispatch:
+
+jobs:
+  validate-widget:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate WhatsApp Ordering & Widget Syntax
+        run: |
+          python -m unittest discover -s tests -p "test_site_integrity.py" -v
