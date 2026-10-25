@@ -1727,7 +1727,7 @@
     }
   });
 
-  // Filter tool cards in search box
+  // Filter tool cards in search box with empty-state handling
   window.searchTools = function (query) {
     var q = (query || '').toLowerCase().trim();
     var cards = document.querySelectorAll('.tool-card');
@@ -1742,9 +1742,32 @@
         card.style.display = 'none';
       }
     });
+
     var countEl = document.getElementById('searchCountBadge');
     if (countEl) {
       countEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' tools';
+    }
+
+    var grid = document.querySelector('.tools-grid') || document.querySelector('.grid');
+    var emptyEl = document.getElementById('searchEmptyState');
+    if (visibleCount === 0 && cards.length > 0) {
+      if (!emptyEl && grid) {
+        emptyEl = document.createElement('div');
+        emptyEl.id = 'searchEmptyState';
+        emptyEl.className = 'empty-state';
+        emptyEl.innerHTML = '<span class="empty-state-icon" aria-hidden="true">🔍</span>' +
+          '<h3 class="empty-state-title">No Matching AI Tools Found</h3>' +
+          '<p class="empty-state-desc">We could not find any software matching "<strong id="emptyQueryText"></strong>". Try searching for "video", "coding", "vpn", or browse all tools below.</p>' +
+          '<button type="button" class="empty-state-action" onclick="window.filterTools(\'\')">Clear Search & View All Tools</button>';
+        grid.appendChild(emptyEl);
+      }
+      if (emptyEl) {
+        var querySpan = emptyEl.querySelector('#emptyQueryText');
+        if (querySpan) querySpan.textContent = query;
+        emptyEl.style.display = 'block';
+      }
+    } else if (emptyEl) {
+      emptyEl.style.display = 'none';
     }
   };
 
