@@ -1,0 +1,70 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-minimax-ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#500724" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-minimax-ai)" />
+
+  <!-- Outer Card Frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="#0f172a" fill-opacity="0.8" stroke="#ec4899" stroke-width="2.5" />
+
+  <!-- Header Branding -->
+  <text x="90" y="110" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="28" fill="#f8fafc" letter-spacing="1">
+    AIDigi<tspan fill="#eab308">Tools</tspan><tspan font-size="18" fill="#94a3b8" font-weight="500"> • Official Verified Marketplace</tspan>
+  </text>
+  <rect x="980" y="80" width="130" height="36" rx="18" fill="#ec4899" fill-opacity="0.2" stroke="#ec4899" stroke-width="1.5" />
+  <text x="1045" y="104" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#ec4899" text-anchor="middle">ACTIVE STOCK</text>
+
+  <!-- Brand Pill -->
+  <rect x="90" y="180" width="220" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="105" y="205" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="16" fill="#38bdf8">
+    VENDOR: MINIMAX
+  </text>
+
+  <!-- Main Product Title -->
+  <text x="90" y="285" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="58" fill="#ffffff" letter-spacing="-0.5">
+    MiniMax Hailuo AI
+  </text>
+  <text x="90" y="335" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="22" fill="#94a3b8">
+    Genuine Subscription Access with Instant 15-Minute Delivery
+  </text>
+
+  <!-- Pricing Box -->
+  <rect x="90" y="380" width="460" height="74" rx="14" fill="#1e293b" stroke="#ec4899" stroke-width="2" />
+  <text x="120" y="428" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#f8fafc">
+    Rs. 1,600 PKR <tspan font-size="22" fill="#eab308" font-weight="600">(~$6.00 USD) / mo</tspan>
+  </text>
+
+  <!-- Trust Badges Row -->
+  <g transform="translate(90, 495)">
+    <!-- Badge 1 -->
+    <rect x="0" y="0" width="310" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="15" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="15" fill="#10b981">
+      &#10003; 30-Day Full Replacement Warranty
+    </text>
+    <!-- Badge 2 -->
+    <rect x="330" y="0" width="310" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="345" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="15" fill="#38bdf8">
+      &#10003; EasyPaisa, Wise &amp; Crypto USDT
+    </text>
+    <!-- Badge 3 -->
+    <rect x="660" y="0" width="360" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="675" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="15" fill="#eab308">
+      &#10003; Worldwide &amp; Pakistan Delivery (0 PKR)
+    </text>
+  </g>
+
+  <!-- Footer Watermark -->
+  <text x="1110" y="565" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="13" fill="#64748b" text-anchor="end">
+    aidigitools.tech • Islamabad, Pakistan • +92 332 6861112
+  </text>
+</svg>
