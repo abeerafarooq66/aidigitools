@@ -82,6 +82,65 @@
       </div>
     </section>
 
+    <!-- ========================================================
+         AUTHKIT LIVING COMPONENT WIDGET (CENTERPIECE)
+         Featuring Traveling Laser Border-Beam & Interactive Tabs
+         ======================================================== -->
+    <div class="authkit-widget-wrapper border-beam-card">
+      <div class="authkit-widget-card">
+        <!-- Interactive Tabs Bar -->
+        <div class="authkit-tabs-bar">
+          <div class="authkit-tab-group">
+            <button onclick="setMasterTool('chatgpt')" id="mtab-chatgpt" class="authkit-tab-btn active">ChatGPT Plus</button>
+            <button onclick="setMasterTool('claude')" id="mtab-claude" class="authkit-tab-btn">Claude Pro</button>
+            <button onclick="setMasterTool('capcut')" id="mtab-capcut" class="authkit-tab-btn">CapCut Pro</button>
+            <button onclick="setMasterTool('canva')" id="mtab-canva" class="authkit-tab-btn">Canva Pro</button>
+          </div>
+          <div class="authkit-stock-status">
+            <span class="pulse-dot"></span>
+            <span>Instant Stock Activated</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Tool Interactive Grid -->
+        <div class="authkit-widget-grid">
+          <div>
+            <div class="authkit-vendor-pill" id="mToolVendor">OpenAI Enterprise Engine</div>
+            <div class="authkit-tool-title" id="mToolTitle">ChatGPT Plus Subscription</div>
+            <p class="authkit-tool-desc" id="mToolDesc">Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation without foreign cards.</p>
+            
+            <div class="authkit-price-row">
+              <span class="authkit-price-val" id="mToolPrice">Rs. 2,300</span>
+              <span class="authkit-price-sub">/ month (Flat PKR)</span>
+            </div>
+
+            <ul class="authkit-features-list">
+              <li><span class="check">✓</span><span>15-Minute Instant WhatsApp Delivery SLA</span></li>
+              <li><span class="check">✓</span><span>30-Day Guaranteed Replacement Warranty</span></li>
+              <li><span class="check">✓</span><span>Settled in Domestic PKR (Zero Forex Fees)</span></li>
+            </ul>
+          </div>
+
+          <!-- Instant Order Simulator Box -->
+          <div class="authkit-simulator-box">
+            <div>
+              <div class="authkit-rails-title">Supported Payment Rails:</div>
+              <div class="authkit-rails-grid">
+                <div class="authkit-rail-item">EasyPaisa</div>
+                <div class="authkit-rail-item">JazzCash</div>
+                <div class="authkit-rail-item">SadaPay</div>
+                <div class="authkit-rail-item">Bank IBFT</div>
+              </div>
+              <div class="authkit-badge-nofx">⚡ No Foreign Credit Card Needed</div>
+            </div>
+            <a id="mWaLink" href="https://wa.me/923001234567?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300" target="_blank" class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+              <span>Instant Order on WhatsApp &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Category Hub Navigation -->
     <section style="margin-top: 2rem;">
       <div class="badges-row" style="justify-content: center; gap: 0.75rem;">
@@ -431,6 +490,65 @@
   </footer>
 
   <script>
+    var mData = {
+      chatgpt: {
+        vendor: 'OpenAI Enterprise Engine',
+        title: 'ChatGPT Plus Subscription',
+        desc: 'Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation without foreign cards.',
+        price: 'Rs. 2,300',
+        wa: 'Hi AIDigiTools, I want to order ChatGPT Plus for Rs 2300 via EasyPaisa/JazzCash.'
+      },
+      claude: {
+        vendor: 'Anthropic AI Systems',
+        title: 'Claude Pro Subscription',
+        desc: 'Claude 3.5 Sonnet with 200,000 token context, interactive Artifacts canvas, and SWE-bench 92% coding intelligence.',
+        price: 'Rs. 2,500',
+        wa: 'Hi AIDigiTools, I want to order Claude Pro for Rs 2500 via EasyPaisa/JazzCash.'
+      },
+      capcut: {
+        vendor: 'ByteDance Creative Engine',
+        title: 'CapCut Pro AI Video Editor',
+        desc: 'Automated bilingual AI captions, 4K 60fps optical flow smoothing, and full commercial music access.',
+        price: 'Rs. 950',
+        wa: 'Hi AIDigiTools, I want to order CapCut Pro for Rs 950 via EasyPaisa/JazzCash.'
+      },
+      canva: {
+        vendor: 'Canva Design Platform',
+        title: 'Canva Pro Designer Access',
+        desc: '100M+ premium stock assets, Magic Studio background remover, 1TB cloud storage, and team Brand Kits.',
+        price: 'Rs. 600',
+        wa: 'Hi AIDigiTools, I want to order Canva Pro for Rs 600 via EasyPaisa/JazzCash.'
+      }
+    };
+
+    function setMasterTool(key) {
+      var d = mData[key];
+      if (!d) return;
+
+      var vEl = document.getElementById('mToolVendor');
+      var tEl = document.getElementById('mToolTitle');
+      var descEl = document.getElementById('mToolDesc');
+      var pEl = document.getElementById('mToolPrice');
+      var waEl = document.getElementById('mWaLink');
+
+      if (vEl) vEl.textContent = d.vendor;
+      if (tEl) tEl.textContent = d.title;
+      if (descEl) descEl.textContent = d.desc;
+      if (pEl) pEl.textContent = d.price;
+      if (waEl) waEl.href = 'https://wa.me/923001234567?text=' + encodeURIComponent(d.wa);
+
+      ['chatgpt', 'claude', 'capcut', 'canva'].forEach(function(k) {
+        var btn = document.getElementById('mtab-' + k);
+        if (btn) {
+          if (k === key) {
+            btn.className = 'authkit-tab-btn active';
+          } else {
+            btn.className = 'authkit-tab-btn';
+          }
+        }
+      });
+    }
+
     function filterTools(category) {
       var input = document.getElementById('toolSearchInput');
       if (input) input.value = category;
