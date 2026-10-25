@@ -1,28 +1,28 @@
 :root {
   /* ========================================================
-     AIDigiTools Executive Master Palette (AuthKit Vibe)
-     Silky Midnight Velvet with Champagne Gold & Mint Accents
+     AIDigiTools Sweet & Attractive Luxury Palette
+     Cozy Dusky Velvet with Warm Honey Gold & Soft Lavender
      ======================================================== */
-  --bg-dark: #090a0f;
-  --bg-surface: #0e1118;
-  --bg-card: rgba(16, 20, 29, 0.72);
-  --bg-card-hover: rgba(22, 28, 42, 0.85);
-  --bg-card-secondary: #0c0f16;
+  --bg-dark: #0c0b14;
+  --bg-surface: rgba(22, 19, 36, 0.82);
+  --bg-card: rgba(22, 19, 36, 0.78);
+  --bg-card-hover: rgba(32, 27, 50, 0.9);
+  --bg-card-secondary: #12101e;
   
-  /* Text Contrast Hierarchy (Crisp & Soft on Eyes) */
+  /* Text Contrast Hierarchy (Crisp & Ultra-Soft on Eyes) */
   --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
   
-  /* Brand Accents */
-  --accent-gold: #f59e0b;
-  --accent-gold-light: #fde68a;
-  --accent-gold-glow: rgba(245, 158, 11, 0.2);
+  /* Sweet Brand Accents */
+  --accent-gold: #fbbf24;
+  --accent-gold-light: #fef08a;
+  --accent-gold-glow: rgba(251, 191, 36, 0.22);
   --accent-emerald: #10b981;
   --accent-emerald-light: #34d399;
-  --accent-violet: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-rose: #f43f5e;
+  --accent-violet: #c084fc;
+  --accent-cyan: #38bdf8;
+  --accent-rose: #f472b6;
   
   /* Precision Hairline Borders */
   --border-subtle: rgba(255, 255, 255, 0.08);
@@ -58,8 +58,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(245, 158, 11, 0.12) 0%, transparent 68%),
-    radial-gradient(ellipse 50% 35% at 90% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(251, 191, 36, 0.14) 0%, rgba(192, 132, 252, 0.08) 50%, transparent 68%),
+    radial-gradient(ellipse 50% 35% at 90% 20%, rgba(244, 114, 182, 0.06) 0%, transparent 60%),
     radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 32px 32px;
   background-attachment: fixed;
