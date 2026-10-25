@@ -28,6 +28,6 @@ for f in files:
         print(f"[{status}] {f.relative_to(ROOT)}: title={len(title)}, desc={len(desc)}, qa_words={words}")
 
 if all_ok:
-    print("\n[SUCCESS] All 22 pages meet strict SEO & AEO character and word count invariants!")
+    print(f"\n[SUCCESS] All {len(files)} pages meet strict SEO & AEO character and word count invariants!")
 else:
     print("\n[ERROR] Issues found above!")

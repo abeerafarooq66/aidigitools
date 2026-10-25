@@ -4,6 +4,13 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 # AI Crawlers & Large Language Model Search Engines
 User-agent: Google-Extended
 Allow: /
