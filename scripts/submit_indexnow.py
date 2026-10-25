@@ -35,12 +35,22 @@ def submit_urls(urls: list[str], key: str | None = None) -> dict:
         return {"status": 0, "message": f"Simulation / Network notice: {e}", "urls_count": len(urls)}
 
 if __name__ == "__main__":
-    sample_urls = [
-        "https://aidigitools.tech/",
-        "https://aidigitools.tech/tools/chatgpt-plus.html",
-        "https://aidigitools.tech/tools/claude-pro.html",
-        "https://aidigitools.tech/tools/canva-pro.html",
-        "https://aidigitools.tech/guides/chatgpt-vs-claude.html"
-    ]
-    res = submit_urls(sample_urls)
+    import re
+    sitemap_path = os.path.join(os.path.dirname(__file__), "..", "sitemap.xml")
+    urls_to_submit = []
+    if os.path.exists(sitemap_path):
+        with open(sitemap_path, "r", encoding="utf-8") as f:
+            content = f.read()
+            urls_to_submit = re.findall(r"<loc>(https://aidigitools\.tech/[^<]*)</loc>", content)
+    
+    if not urls_to_submit:
+        urls_to_submit = [
+            "https://aidigitools.tech/",
+            "https://aidigitools.tech/deals.html",
+            "https://aidigitools.tech/tools/chatgpt-plus.html",
+            "https://aidigitools.tech/tools/claude-pro.html",
+            "https://aidigitools.tech/tools/canva-pro.html",
+            "https://aidigitools.tech/guides/chatgpt-vs-claude.html"
+        ]
+    res = submit_urls(urls_to_submit)
     print(f"[IndexNow] {res['message']} ({res['urls_count']} URLs, status: {res['status']})")
