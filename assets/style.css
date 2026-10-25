@@ -1,28 +1,28 @@
 :root {
   /* ========================================================
-     AIDigiTools Sweet & Attractive Luxury Palette
-     Cozy Dusky Velvet with Warm Honey Gold & Soft Lavender
+     AIDigiTools Twilight Aurora Luxury Palette
+     Cozy Midnight Indigo with Electric Coral, Lavender & Cyan
      ======================================================== */
-  --bg-dark: #0c0b14;
-  --bg-surface: rgba(22, 19, 36, 0.82);
-  --bg-card: rgba(22, 19, 36, 0.78);
-  --bg-card-hover: rgba(32, 27, 50, 0.9);
-  --bg-card-secondary: #12101e;
+  --bg-dark: #090c15;
+  --bg-surface: rgba(18, 24, 42, 0.82);
+  --bg-card: rgba(18, 24, 42, 0.78);
+  --bg-card-hover: rgba(28, 36, 62, 0.92);
+  --bg-card-secondary: #0d1220;
   
   /* Text Contrast Hierarchy (Crisp & Ultra-Soft on Eyes) */
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
   
-  /* Sweet Brand Accents */
-  --accent-gold: #fbbf24;
-  --accent-gold-light: #fef08a;
-  --accent-gold-glow: rgba(251, 191, 36, 0.22);
+  /* Vibrant Sweet Brand Accents */
+  --accent-gold: #ff6b6b;             /* Electric Coral */
+  --accent-gold-light: #fed7aa;
+  --accent-gold-glow: rgba(255, 107, 107, 0.25);
   --accent-emerald: #10b981;
   --accent-emerald-light: #34d399;
-  --accent-violet: #c084fc;
-  --accent-cyan: #38bdf8;
-  --accent-rose: #f472b6;
+  --accent-violet: #c084fc;           /* Luminous Lavender */
+  --accent-cyan: #38bdf8;             /* Sky Cyan */
+  --accent-rose: #f43f5e;
   
   /* Precision Hairline Borders */
   --border-subtle: rgba(255, 255, 255, 0.08);
@@ -73,30 +73,56 @@ body {
 }
 
 /* ========================================================
-   AUTHKIT SIGNATURE ANIMATION ENGINE
+   BRAND NEW CONIC LIQUID AURA & FLOATING ENGINE
    ======================================================== */
 
-/* 1. Laser Border Beam Animation */
-@keyframes border-beam {
-  0% { offset-distance: 0%; }
-  100% { offset-distance: 100%; }
+/* 1. Conic Rotating Liquid Aura Animation */
+@keyframes spin-aura {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .border-beam-card {
   position: relative;
+  border-radius: 26px;
   overflow: hidden;
+  padding: 2px;
 }
 
-.border-beam-card::after {
+.border-beam-card::before {
   content: "";
   position: absolute;
-  aspect-ratio: 1;
-  width: 160px;
-  animation: border-beam 8s linear infinite;
-  offset-path: rect(0 auto auto 0 round 22px);
-  background: linear-gradient(to right, transparent, #f59e0b, #fbbf24, #8b5cf6, transparent);
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, #ff6b6b, #c084fc, #38bdf8, #ff6b6b);
+  animation: spin-aura 8s linear infinite;
   opacity: 0.85;
-  pointer-events: none;
+  z-index: 1;
+}
+
+.border-beam-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 2. Floating Bento Cards Animation */
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.tool-card {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+.tool-card:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.tool-card:nth-child(3) {
+  animation-delay: 3s;
 }
 
 /* 2. Ambient Breathing Glow */
