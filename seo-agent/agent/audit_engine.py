@@ -24,8 +24,8 @@ class TechnicalAuditEngine:
         }
 
         # 2. Meta description (70 - 160 chars)
-        desc_m = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', content, re.IGNORECASE)
-        desc = desc_m.group(1).strip() if desc_m else ""
+        desc_m = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=(["\'])(.*?)\1', content, re.IGNORECASE)
+        desc = desc_m.group(2).strip() if desc_m else ""
         checks["meta_description"] = {
             "passed": 70 <= len(desc) <= 165,
             "value": desc,

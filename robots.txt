@@ -4,7 +4,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-# AI Crawlers & LLM Agents
+# AI Crawlers & Large Language Model Search Engines
 User-agent: Google-Extended
 Allow: /
 
@@ -17,4 +17,8 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+# Feeds & Sitemaps
 Sitemap: https://aidigitools.tech/sitemap.xml

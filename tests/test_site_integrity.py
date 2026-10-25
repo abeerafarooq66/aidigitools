@@ -93,13 +93,15 @@ class TestSiteIntegrity(unittest.TestCase):
     def test_13_all_pages_have_meta_description(self):
         for hf in self.html_files:
             content = hf.read_text(encoding="utf-8")
-            desc_m = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', content, re.IGNORECASE)
+            desc_m = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=(["\'])(.*?)\1', content, re.IGNORECASE)
             self.assertIsNotNone(desc_m, f"Missing meta description in {hf}")
 
     def test_14_meta_description_lengths_within_bounds(self):
         for hf in self.html_files:
             content = hf.read_text(encoding="utf-8")
-            desc = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', content, re.IGNORECASE).group(1).strip()
+            desc_m = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=(["\'])(.*?)\1', content, re.IGNORECASE)
+            self.assertIsNotNone(desc_m, f"Missing meta description in {hf}")
+            desc = desc_m.group(2).strip()
             self.assertGreaterEqual(len(desc), 70, f"Meta desc too short in {hf}: '{desc}' ({len(desc)} chars)")
             self.assertLessEqual(len(desc), 165, f"Meta desc too long in {hf}: '{desc}' ({len(desc)} chars)")
 
@@ -279,7 +281,7 @@ class TestSiteIntegrity(unittest.TestCase):
     def test_42_css_has_css_variables(self):
         css_text = (ROOT / "assets/style.css").read_text(encoding="utf-8")
         self.assertIn(":root", css_text)
-        self.assertIn("--accent-cyan", css_text)
+        self.assertIn("--accent-gold", css_text)
 
     def test_43_all_pages_reference_stylesheet(self):
         for hf in self.html_files:

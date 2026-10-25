@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AIDigiTools — AI Software Marketplace Pakistan</title>
+    <link>https://aidigitools.tech/</link>
+    <description>Latest AI software subscriptions, buying guides, and localized PKR pricing in Pakistan.</description>
+    <language>en-pk</language>
+    <atom:link href="https://aidigitools.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatGPT Plus Pakistan Subscription &amp; Pricing</title>
+      <link>https://aidigitools.tech/tools/chatgpt-plus.html</link>
+      <guid>https://aidigitools.tech/tools/chatgpt-plus.html</guid>
+      <description>Buy ChatGPT Plus in Pakistan for Rs. 2,300/mo. Pay with EasyPaisa, JazzCash, or SadaPay. Instant 15-minute WhatsApp delivery with 30-day warranty.</description>
+      <pubDate>Fri, 24 Oct 2026 12:00:00 +0500</pubDate>
+    </item>
+    <item>
+      <title>Claude Pro Pakistan Subscription &amp; Pricing</title>
+      <link>https://aidigitools.tech/tools/claude-pro.html</link>
+      <guid>https://aidigitools.tech/tools/claude-pro.html</guid>
+      <description>Buy Claude Pro in Pakistan for Rs. 2,500/mo. Claude 3.5 Sonnet access with EasyPaisa and JazzCash. Fast 15-minute WhatsApp delivery and warranty.</description>
+      <pubDate>Fri, 24 Oct 2026 12:00:00 +0500</pubDate>
+    </item>
+    <item>
+      <title>Canva Pro Pakistan Subscription &amp; Pricing</title>
+      <link>https://aidigitools.tech/tools/canva-pro.html</link>
+      <guid>https://aidigitools.tech/tools/canva-pro.html</guid>
+      <description>Buy Canva Pro subscription in Pakistan for Rs. 600/mo. EasyPaisa, JazzCash, and SadaPay accepted. Instant 15-minute WhatsApp setup with 30-day warranty.</description>
+      <pubDate>Fri, 24 Oct 2026 12:00:00 +0500</pubDate>
+    </item>
+    <item>
+      <title>ChatGPT vs Claude Pakistan Comparison Guide</title>
+      <link>https://aidigitools.tech/guides/chatgpt-vs-claude.html</link>
+      <guid>https://aidigitools.tech/guides/chatgpt-vs-claude.html</guid>
+      <description>Detailed comparison of ChatGPT Plus (Rs. 2,300) vs Claude Pro (Rs. 2,500) in Pakistan. Benchmark coding, writing, EasyPaisa payments, and warranty.</description>
+      <pubDate>Fri, 24 Oct 2026 12:00:00 +0500</pubDate>
+    </item>
+  </channel>
+</rss>

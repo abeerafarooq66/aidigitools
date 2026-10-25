@@ -7,22 +7,23 @@ def generate_sitemap(root_dir: Path | str = "."):
     today = datetime.date.today().isoformat()
 
     urls = []
-    # Root index
-    if (root / "index.html").exists():
-        urls.append(f"""  <url>
-    <loc>{domain}/</loc>
-    <lastmod>{today}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>""")
+    # Primary Pages
+    primary_pages = [
+        ("index.html", "", "daily", "1.0"),
+        ("about.html", "about.html", "monthly", "0.8"),
+        ("contact.html", "contact.html", "monthly", "0.8"),
+        ("shipping-policy.html", "shipping-policy.html", "monthly", "0.7"),
+        ("policies.html", "policies.html", "monthly", "0.6"),
+    ]
 
-    # Policies
-    if (root / "policies.html").exists():
-        urls.append(f"""  <url>
-    <loc>{domain}/policies.html</loc>
+    for filename, slug, freq, priority in primary_pages:
+        if (root / filename).exists():
+            loc = f"{domain}/{slug}" if slug else f"{domain}/"
+            urls.append(f"""  <url>
+    <loc>{loc}</loc>
     <lastmod>{today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>{freq}</changefreq>
+    <priority>{priority}</priority>
   </url>""")
 
     # Tools
@@ -33,7 +34,7 @@ def generate_sitemap(root_dir: Path | str = "."):
     <loc>{domain}/tools/{tf.name}</loc>
     <lastmod>{today}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>""")
 
     # Guides
@@ -44,7 +45,7 @@ def generate_sitemap(root_dir: Path | str = "."):
     <loc>{domain}/guides/{gf.name}</loc>
     <lastmod>{today}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>""")
 
     sitemap_content = f"""<?xml version="1.0" encoding="UTF-8"?>
