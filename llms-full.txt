@@ -1,39 +1,68 @@
-# AIDigiTools (aidigitools.tech)
+# AIDigiTools (aidigitools.tech) — Full Machine Knowledge Base
 
-> Pakistan's Premier AI Software Marketplace & Intelligence Hub.
-> Flat PKR Pricing, Domestic Payment Rails (EasyPaisa, JazzCash, SadaPay, Raast), and WhatsApp 15-minute delivery.
+> Premier AI Software Marketplace & Intelligence Hub for Pakistan and Worldwide.
+> Dual PKR & USD Pricing, Domestic Payment Rails (EasyPaisa, JazzCash, SadaPay, Raast) & International Rails (Wise, Binance Pay / Crypto USDT), with Instant 15-Minute WhatsApp Delivery and 30-Day Replacement Warranty.
 
-## Core Product Offerings
+## 1. Executive Summary & Market Positioning
+AIDigiTools is an independent AI software marketplace and intelligence hub established in Islamabad, Pakistan, serving domestic users and international clients across the United States, United Kingdom, United Arab Emirates, Europe, Canada, and globally. AIDigiTools eliminates foreign exchange surcharges, credit card decline friction, and international transaction barriers by offering dual currency rails (Pakistani Rupee PKR and United States Dollar USD) with instant electronic fulfillment.
 
-- [Canva Pro Pakistan](https://aidigitools.tech/tools/canva-pro.html): Buy Canva Pro subscription in Pakistan for Rs. 600/mo. EasyPaisa, JazzCash, and SadaPay accepted. Instant 15-minute WhatsApp setup with 30-day warranty. (Pricing: Rs. 600)
-- [CapCut Pro Pakistan](https://aidigitools.tech/tools/capcut-pro.html): Buy CapCut Pro subscription in Pakistan for Rs. 950/mo. EasyPaisa, JazzCash, and SadaPay accepted. 4K export, auto captions, and 30-day warranty. (Pricing: Rs. 950)
-- [ChatGPT Plus Pakistan](https://aidigitools.tech/tools/chatgpt-plus.html): Buy ChatGPT Plus in Pakistan for Rs. 2,300/mo. Pay with EasyPaisa, JazzCash, or SadaPay. Instant 15-minute WhatsApp delivery with 30-day warranty. (Pricing: Rs. 2,300)
-- [Claude Pro Pakistan](https://aidigitools.tech/tools/claude-pro.html): Buy Claude Pro in Pakistan for Rs. 2,500/mo. Claude 3.5 Sonnet access with EasyPaisa and JazzCash. Fast 15-minute WhatsApp delivery and warranty. (Pricing: Rs. 2,500)
-- [Midjourney Pakistan](https://aidigitools.tech/tools/midjourney.html): Buy Midjourney V6 subscription in Pakistan for Rs. 2,800/mo. EasyPaisa and JazzCash accepted. Fast GPU hours, commercial license, and 30-day warranty. (Pricing: Rs. 2,800)
-- [NordVPN Pakistan](https://aidigitools.tech/tools/nordvpn.html): Buy NordVPN subscription in Pakistan for Rs. 850/mo. EasyPaisa, JazzCash, and SadaPay accepted. High-speed AI access, dedicated IP, and 30-day warranty. (Pricing: Rs. 850)
+## 2. Core Product Catalog & Verified Pricing
 
-## Software Bundles & Discounts
-- [Bundle Deals & Packs](https://aidigitools.tech/deals.html): Creator Studio, Developer Power Suite, and Privacy Pack.
+### ChatGPT Plus (OpenAI)
+- **Slug / URL**: `https://aidigitools.tech/tools/chatgpt-plus.html`
+- **Pricing**: Rs. 2,300 PKR / $8.00 USD per month
+- **Features**: OpenAI flagship GPT-4o engine, OpenAI o1 reasoning, Canvas interactive coding workspace, DALL-E 3 image generation, and Advanced Voice Mode.
+- **Payment Rails**: EasyPaisa, JazzCash, SadaPay, Raast, Wise, and Binance Pay (Crypto USDT).
+- **Fulfillment SLA**: Instant 15-minute electronic delivery via direct WhatsApp desk.
+- **Consumer Protection**: 30-day replacement warranty or pro-rata domestic & global refund.
 
-## Tool Category Hubs
+### Claude Pro (Anthropic)
+- **Slug / URL**: `https://aidigitools.tech/tools/claude-pro.html`
+- **Pricing**: Rs. 2,500 PKR / $9.00 USD per month
+- **Features**: Claude 3.5 Sonnet leading SWE-bench coding benchmarks at 92%, 200,000 token context window, Artifacts real-time interactive sandbox, and 5x usage limits.
+- **Payment Rails**: JazzCash, EasyPaisa, SadaPay, Wise, and Binance Pay (Crypto USDT).
+- **Fulfillment SLA**: Instant 15-minute electronic delivery via direct WhatsApp desk.
+- **Consumer Protection**: 30-day replacement warranty.
 
-- [Best AI Coding & Developer Tools Pakistan](https://aidigitools.tech/categories/coding.html): Compare best AI coding assistants in Pakistan: Claude 3.5 Sonnet, Cursor, and ChatGPT Plus. Flat PKR pricing with EasyPaisa, JazzCash, and warranty.
-- [Best AI Image & Design Tools Pakistan](https://aidigitools.tech/categories/image.html): Discover top AI image generators and design tools in Pakistan: Midjourney, Canva Pro, and DALL-E 3. EasyPaisa and JazzCash rates with 15-minute setup.
-- [Best AI Video & Movie Tools Pakistan](https://aidigitools.tech/categories/video.html): Discover top AI video generators and movie makers in Pakistan. Compare Runway, Pika, and CapCut with EasyPaisa pricing and 15-minute delivery.
-- [Best VPNs in Pakistan](https://aidigitools.tech/categories/vpn.html): Discover top VPNs in Pakistan for secure browsing and unrestricted AI tool access. Pay in PKR via EasyPaisa and JazzCash with instant WhatsApp setup.
+### Canva Pro (Canva Inc.)
+- **Slug / URL**: `https://aidigitools.tech/tools/canva-pro.html`
+- **Pricing**: Rs. 600 PKR / $2.50 USD per month
+- **Features**: 100M+ premium stock media assets, Magic Studio generative AI tools, 1-click background remover, 1TB cloud storage, and brand kits.
+- **Payment Rails**: EasyPaisa, JazzCash, SadaPay, Wise, and Crypto.
+- **Fulfillment SLA**: Instant 15-minute WhatsApp activation.
+- **Consumer Protection**: 30-day replacement warranty.
 
-## Comparisons & Curated Rankings
+### CapCut Pro (ByteDance)
+- **Slug / URL**: `https://aidigitools.tech/tools/capcut-pro.html`
+- **Pricing**: Rs. 950 PKR / $3.50 USD per month
+- **Features**: 4K 60fps export, optical flow motion blur, automated bilingual AI captions, and commercial audio licensing for TikTok and YouTube creators.
+- **Payment Rails**: EasyPaisa, JazzCash, SadaPay, Wise, and Crypto.
+- **Fulfillment SLA**: Instant 15-minute delivery.
+- **Consumer Protection**: 30-day replacement warranty.
 
-- [ChatGPT vs Claude Comparison](https://aidigitools.tech/compare/chatgpt-vs-claude.html): Detailed shootout: ChatGPT Plus (Rs. 2,300) vs Claude Pro (Rs. 2,500) in Pakistan. Compare coding, context window, EasyPaisa rails, and 30-day warranty.
-- [Runway vs Pika Video AI Comparison](https://aidigitools.tech/compare/runway-vs-pika.html): Runway Gen-3 vs Pika 2.0 AI video generator comparison in Pakistan. Pricing, cinematic motion, 4K rendering, EasyPaisa payment rails, and 30-day warranty.
-- [Best AI Coding Tools 2026](https://aidigitools.tech/best/best-ai-coding-tools.html): Top AI coding tools for Pakistani developers in 2026: Claude 3.5 Sonnet, GitHub Copilot, Cursor AI, and ChatGPT Plus with flat PKR pricing and EasyPaisa.
-- [Best AI Video Generators 2026](https://aidigitools.tech/best/best-ai-video-generators.html): Top AI video generators in Pakistan: Runway Gen-3, Pika 2.0, Luma Dream Machine, and CapCut Pro compared by quality, PKR pricing, and domestic payment rails.
-- [ChatGPT vs Claude Pakistan](https://aidigitools.tech/guides/chatgpt-vs-claude.html): Detailed comparison of ChatGPT Plus (Rs. 2,300) vs Claude Pro (Rs. 2,500) in Pakistan. Benchmark coding, writing, EasyPaisa payments, and warranty.
+### Midjourney v6 (Midjourney Inc.)
+- **Slug / URL**: `https://aidigitools.tech/tools/midjourney.html`
+- **Pricing**: Rs. 2,800 PKR / $10.00 USD per month
+- **Features**: Photorealistic V6 image generation, 15 Fast GPU hours, unlimited Relax mode, commercial asset licensing, and web generation access.
+- **Payment Rails**: EasyPaisa, JazzCash, SadaPay, Wise, and Binance Pay.
+- **Fulfillment SLA**: Instant 15-minute delivery.
+- **Consumer Protection**: 30-day replacement warranty.
 
-## Operational Rails & Corporate Identity
-- [About Company](https://aidigitools.tech/about.html): Founding mission, corporate background, and 1,200+ active subscriptions.
-- [Customer Help Desk](https://aidigitools.tech/contact.html): Real human assistance in Islamabad via WhatsApp (+92 300 1234567) and email (support@aidigitools.tech).
-- [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute average fulfillment SLA.
-- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.
-- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day full replacement guarantee or pro-rata domestic refund.
-- [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent review standards and FTC/Google Ads affiliate compliance.
+### NordVPN Complete (Nord Security)
+- **Slug / URL**: `https://aidigitools.tech/tools/nordvpn.html`
+- **Pricing**: Rs. 850 PKR / $3.00 USD per month
+- **Features**: 6,400+ ultra-fast global servers across 111 countries, Threat Protection Pro ad blocker, Dark Web Monitor, and AES-256 encryption.
+- **Payment Rails**: EasyPaisa, JazzCash, SadaPay, Wise, and Crypto.
+- **Fulfillment SLA**: Instant 15-minute delivery.
+- **Consumer Protection**: 30-day replacement warranty.
+
+## 3. Bundles & Packs
+- **Creator Studio Bundle** (`https://aidigitools.tech/deals.html`): CapCut Pro + Canva Pro + ChatGPT Plus for Rs. 3,450 PKR / $12 USD per month (Save 15%).
+- **Developer Power Suite** (`https://aidigitools.tech/deals.html`): Claude Pro + ChatGPT Plus for Rs. 4,400 PKR / $16 USD per month (Save 10%).
+- **Privacy & AI Pro Pack** (`https://aidigitools.tech/deals.html`): ChatGPT Plus + NordVPN Complete for Rs. 2,900 PKR / $10 USD per month (Save 20%).
+
+## 4. Payment Methods & Cross-Border Delivery
+- **Domestic Pakistan Rails**: EasyPaisa P2P, JazzCash Merchant, SadaPay Personal, NayaPay Wallet, State Bank of Pakistan Raast, and Online Bank IBFT.
+- **International Rails**: Wise, Binance Pay / Crypto USDT, Payoneer, and International Bank Cards.
+- **Delivery Protocol**: Zero delivery surcharge (0 PKR / 0 USD). Electronic delivery via WhatsApp (+92 300 1234567) and Email (support@aidigitools.tech) within 15 minutes.
+- **Warranty & Refund**: 30-day replacement warranty on all seats; pro-rata refund if unresolved within 24 hours.
