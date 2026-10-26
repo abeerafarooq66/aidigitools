@@ -200,11 +200,11 @@ def run_master_verification():
 
     # Pillar 8: IndexNow Key & Protocols
     print(f"\n[PILLAR 8] IndexNow Protocol:")
-    key_path = ROOT / "e3b0c44298fc1c149afbf4c8996fb924.txt"
+    key_path = ROOT / "89d63ab53a63527b12a199a3096e51ad.txt"
     if not key_path.exists():
         failures.append("IndexNow hex key file missing at root")
     else:
-        print("  • Hex key e3b0c44298fc1c149afbf4c8996fb924.txt verified at root.")
+        print("  • Hex key 89d63ab53a63527b12a199a3096e51ad.txt verified at root.")
         print("  [PASS] IndexNow real-time ping ready.")
 
     print("\n" + "=" * 65)

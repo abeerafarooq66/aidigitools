@@ -123,7 +123,7 @@ class TestFinalAcceptanceCriteria(unittest.TestCase):
         self.assertIn("google-site-verification", index_html)
         self.assertIn("msvalidate.01", index_html)
         self.assertTrue(os.path.isfile(os.path.join(REPO_ROOT, "BingSiteAuth.xml")))
-        self.assertTrue(os.path.isfile(os.path.join(REPO_ROOT, "e3b0c44298fc1c149afbf4c8996fb924.txt")))
+        self.assertTrue(os.path.isfile(os.path.join(REPO_ROOT, "89d63ab53a63527b12a199a3096e51ad.txt")))
 
     def test_12_criterion_11_remaining_manual_tasks_documented(self):
         self.assertIn("Remaining manual tasks and limitations are clearly documented", self.doc_content)

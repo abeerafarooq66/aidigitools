@@ -7,7 +7,7 @@ import urllib.request
 import urllib.error
 
 HOST = "aidigitools.tech"
-HEX_KEY = "e3b0c44298fc1c149afbf4c8996fb924"
+HEX_KEY = "89d63ab53a63527b12a199a3096e51ad"
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 INDEXNOW_ENDPOINTS = [
@@ -30,7 +30,7 @@ def validate_key_file(key: str) -> bool:
     return True
 
 def get_canonical_urls() -> list[str]:
-    """Retrieves all 52 legitimate canonical URLs from sitemap.xml."""
+    """Retrieves all legitimate canonical URLs from sitemap.xml."""
     sitemap_path = os.path.join(ROOT_DIR, "sitemap.xml")
     if not os.path.exists(sitemap_path):
         return []

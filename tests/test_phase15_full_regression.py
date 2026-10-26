@@ -115,7 +115,7 @@ class TestPhase15FullRegression(unittest.TestCase):
     def test_stage_i_google_and_bing_readiness(self):
         """Stage I: Verify Bing verification file, IndexNow key, and submission script."""
         bing_auth = os.path.join(REPO_ROOT, "BingSiteAuth.xml")
-        indexnow_key = os.path.join(REPO_ROOT, "e3b0c44298fc1c149afbf4c8996fb924.txt")
+        indexnow_key = os.path.join(REPO_ROOT, "89d63ab53a63527b12a199a3096e51ad.txt")
         submit_script = os.path.join(REPO_ROOT, "scripts", "submit_indexnow.py")
 
         self.assertTrue(os.path.exists(bing_auth), "BingSiteAuth.xml must exist.")

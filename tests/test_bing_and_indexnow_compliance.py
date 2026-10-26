@@ -32,7 +32,7 @@ class TestBingAndIndexNowCompliance(unittest.TestCase):
 
     def test_01_indexnow_key_file_exists_and_valid(self):
         """IndexNow key verification file must exist at root, be named {key}.txt, and contain {key}."""
-        key = "e3b0c44298fc1c149afbf4c8996fb924"
+        key = "89d63ab53a63527b12a199a3096e51ad"
         key_file_path = os.path.join(WORKSPACE_DIR, f"{key}.txt")
         self.assertTrue(os.path.exists(key_file_path), f"Missing key file: {key_file_path}")
         with open(key_file_path, "r", encoding="utf-8") as f:
