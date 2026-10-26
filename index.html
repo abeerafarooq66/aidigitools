@@ -337,11 +337,11 @@
         <h2 style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary);">Find Your AI Software Tool</h2>
         <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across 36 verified subscriptions or filter by specialized creative and development workflows.</p>
         
-        <div class="search-input-wrapper">
+        <form role="search" class="search-input-wrapper" onsubmit="event.preventDefault(); applyFilters();">
           <input type="text" id="toolSearchInput" class="search-input-field" role="searchbox" aria-label="Search tools by name, technology, or capability" placeholder="Search by tool name, model, or capability (e.g. ChatGPT, Claude, Video, Python, VPN)...">
           <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search input" onclick="clearSearchInput()" style="display:none;">✕</button>
-        </div>
+        </form>
 
         <!-- Accessible Category Filter Pills -->
         <div class="category-filter-pills" role="group" aria-label="Filter Tools by Category">

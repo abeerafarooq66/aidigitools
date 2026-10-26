@@ -163,7 +163,140 @@
         <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.5rem;">Customer Support Hours: Monday – Sunday, 09:00 AM – 11:00 PM PKT (Digital Delivery within 15 minutes)</p>
       </div>
     </div>
+  
+    <!-- Accessible Support & Sales Inquiry Form -->
+    <section class="card" style="margin-top: 2.5rem; max-width: 860px; margin-left: auto; margin-right: auto;">
+      <h2 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Submit an Official Support or Sales Inquiry</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.92rem; line-height: 1.5;">
+        Have questions regarding corporate subscriptions, team workspaces, or specific bank transfer instructions? Submit your request below for prompt resolution from our Islamabad desk within 15–30 minutes.
+      </p>
+      
+      <form id="contactInquiryForm" class="inquiry-form" onsubmit="handleInquirySubmit(event)" novalidate>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+          <div>
+            <label for="inquiryName" class="form-label">Full Name <span style="color:#EF4444;" aria-hidden="true">*</span></label>
+            <input type="text" id="inquiryName" name="name" class="form-input" required minlength="2" placeholder="e.g. Abeera Farooq" autocomplete="name">
+            <span class="field-error" id="nameError" aria-live="polite"></span>
+          </div>
+          <div>
+            <label for="inquiryEmail" class="form-label">Email Address <span style="color:#EF4444;" aria-hidden="true">*</span></label>
+            <input type="email" id="inquiryEmail" name="email" class="form-input" required placeholder="name@domain.com" autocomplete="email">
+            <span class="field-error" id="emailError" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+          <div>
+            <label for="inquiryPhone" class="form-label">WhatsApp or Phone Number (Optional)</label>
+            <input type="tel" id="inquiryPhone" name="phone" class="form-input" placeholder="+92 332 6861112" autocomplete="tel">
+          </div>
+          <div>
+            <label for="inquiryTopic" class="form-label">Inquiry Topic <span style="color:#EF4444;" aria-hidden="true">*</span></label>
+            <select id="inquiryTopic" name="topic" class="form-select" required>
+              <option value="">Select a topic...</option>
+              <option value="order">Subscription Order &amp; Delivery</option>
+              <option value="warranty">30-Day Replacement Warranty Claim</option>
+              <option value="payment">EasyPaisa / JazzCash / Bank Transfer</option>
+              <option value="corporate">Corporate &amp; Agency Bulk Seats</option>
+              <option value="general">General Question</option>
+            </select>
+            <span class="field-error" id="topicError" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <label for="inquiryMessage" class="form-label">Message Details <span style="color:#EF4444;" aria-hidden="true">*</span></label>
+          <textarea id="inquiryMessage" name="message" class="form-textarea" rows="4" required minlength="10" placeholder="Please specify the AI tool, plan duration, or issue you need assistance with..."></textarea>
+          <span class="field-error" id="messageError" aria-live="polite"></span>
+        </div>
+
+        <!-- Honeypot anti-spam field -->
+        <div style="display: none;" aria-hidden="true">
+          <input type="text" id="inquiryHoneypot" name="company_website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div id="formStatusNotice" class="form-status-notice" style="display: none;" aria-live="polite"></div>
+
+        <button type="submit" id="submitInquiryBtn" class="btn-primary" style="padding: 0.75rem 1.85rem; font-size: 0.98rem; font-weight: 700; cursor: pointer; border: none; border-radius: 8px;">
+          Send Support Inquiry &rarr;
+        </button>
+      </form>
+    </section>
   </main>
+
+  <script>
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      var form = document.getElementById('contactInquiryForm');
+      var name = document.getElementById('inquiryName');
+      var email = document.getElementById('inquiryEmail');
+      var topic = document.getElementById('inquiryTopic');
+      var message = document.getElementById('inquiryMessage');
+      var honeypot = document.getElementById('inquiryHoneypot');
+      var status = document.getElementById('formStatusNotice');
+      var phone = document.getElementById('inquiryPhone').value.trim();
+
+      // Reset errors
+      document.querySelectorAll('.field-error').forEach(function(el) { el.textContent = ''; });
+      document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(function(el) { 
+        el.classList.remove('has-error'); 
+        el.removeAttribute('aria-invalid'); 
+      });
+
+      if (honeypot && honeypot.value) {
+        return false;
+      }
+
+      var isValid = true;
+
+      if (!name.value.trim() || name.value.trim().length < 2) {
+        document.getElementById('nameError').textContent = 'Please enter your full name (minimum 2 characters).';
+        name.classList.add('has-error');
+        name.setAttribute('aria-invalid', 'true');
+        isValid = false;
+      }
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        email.classList.add('has-error');
+        email.setAttribute('aria-invalid', 'true');
+        isValid = false;
+      }
+
+      if (!topic.value) {
+        document.getElementById('topicError').textContent = 'Please select an inquiry topic.';
+        topic.classList.add('has-error');
+        topic.setAttribute('aria-invalid', 'true');
+        isValid = false;
+      }
+
+      if (!message.value.trim() || message.value.trim().length < 10) {
+        document.getElementById('messageError').textContent = 'Please provide details (minimum 10 characters).';
+        message.classList.add('has-error');
+        message.setAttribute('aria-invalid', 'true');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        status.style.display = 'block';
+        status.className = 'form-status-notice error';
+        status.textContent = 'Please correct the highlighted errors before submitting.';
+        return false;
+      }
+
+      status.style.display = 'block';
+      status.className = 'form-status-notice success';
+      status.innerHTML = '<strong>Inquiry Prepared!</strong> Routing message to AIDigiTools WhatsApp Concierge (+92 332 6861112)...';
+
+      var waText = "Hi AIDigiTools Support! My name is " + name.value.trim() + " (" + email.value.trim() + (phone ? ", Phone: " + phone : "") + "). Topic: " + topic.options[topic.selectedIndex].text + ". Message: " + message.value.trim();
+      
+      setTimeout(function() {
+        window.location.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waText);
+      }, 1000);
+    }
+  </script>
+
 
   <footer>
     <div class="container">
