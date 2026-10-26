@@ -337,18 +337,59 @@
         <h2 style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary);">Find Your AI Software Tool</h2>
         <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across 36 verified subscriptions or filter by specialized creative and development workflows.</p>
         
-        <div style="position: relative; max-width: 680px; margin: 0 auto;">
-          <input type="text" id="toolSearchInput" placeholder="Search by tool name, model, or capability (e.g. ChatGPT, Claude, Video, Python, VPN)..." style="width: 100%; padding: 0.95rem 1.2rem 0.95rem 2.85rem; background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: 12px; color: var(--text-primary); font-size: 0.98rem; outline: none; transition: all 0.2s ease;">
-          <svg style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-muted);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <div class="search-input-wrapper">
+          <input type="text" id="toolSearchInput" class="search-input-field" role="searchbox" aria-label="Search tools by name, technology, or capability" placeholder="Search by tool name, model, or capability (e.g. ChatGPT, Claude, Video, Python, VPN)...">
+          <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search input" onclick="clearSearchInput()" style="display:none;">✕</button>
         </div>
-        
-        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem;">
-          <span id="searchCountBadge" style="font-size: 0.8rem; font-weight: 700; color: #0284C7; background: rgba(0, 180, 216, 0.08); padding: 0.35rem 0.75rem; border-radius: 9999px; margin-right: 0.5rem;">Showing 36 Tools</span>
-          <button class="badge" onclick="filterTools('')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">All Tools</button>
-          <button class="badge" onclick="filterTools('video')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">🎬 Video Studio</button>
-          <button class="badge" onclick="filterTools('coding')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">💻 Coding &amp; Dev</button>
-          <button class="badge" onclick="filterTools('image')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">🎨 Graphic &amp; Image</button>
-          <button class="badge" onclick="filterTools('vpn')" style="cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-surface); padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">🔒 VPN &amp; Security</button>
+
+        <!-- Accessible Category Filter Pills -->
+        <div class="category-filter-pills" role="group" aria-label="Filter Tools by Category">
+          <button type="button" class="cat-pill-btn active" data-cat="" aria-pressed="true" onclick="filterCategory('')">All 36 Tools</button>
+          <button type="button" class="cat-pill-btn" data-cat="coding" aria-pressed="false" onclick="filterCategory('coding')">💻 Coding &amp; AI Dev</button>
+          <button type="button" class="cat-pill-btn" data-cat="video" aria-pressed="false" onclick="filterCategory('video')">🎬 Video &amp; Motion</button>
+          <button type="button" class="cat-pill-btn" data-cat="image" aria-pressed="false" onclick="filterCategory('image')">🎨 Graphic &amp; Image</button>
+          <button type="button" class="cat-pill-btn" data-cat="ai" aria-pressed="false" onclick="filterCategory('ai')">🤖 AI Assistants &amp; LLMs</button>
+          <button type="button" class="cat-pill-btn" data-cat="vpn" aria-pressed="false" onclick="filterCategory('vpn')">🛡️ VPN &amp; Privacy</button>
+          <button type="button" class="cat-pill-btn" data-cat="productivity" aria-pressed="false" onclick="filterCategory('productivity')">⚡ Productivity &amp; SEO</button>
+          <button type="button" class="cat-pill-btn" data-cat="streaming" aria-pressed="false" onclick="filterCategory('streaming')">🍿 Streaming</button>
+        </div>
+
+        <!-- Secondary Controls: Sorting, Price Range & Live Count -->
+        <div class="filter-controls-row">
+          <div class="filter-group">
+            <label for="priceFilter" class="filter-label">Price Range:</label>
+            <select id="priceFilter" class="filter-select" aria-label="Filter by Price Range" onchange="applyFilters()">
+              <option value="all">All Prices</option>
+              <option value="under-1000">Under Rs. 1,000 PKR</option>
+              <option value="1000-2500">Rs. 1,000 – Rs. 2,500 PKR</option>
+              <option value="above-2500">Above Rs. 2,500 PKR</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortSelect" class="filter-label">Sort By:</label>
+            <select id="sortSelect" class="filter-select" aria-label="Sort AI tools" onchange="applyFilters()">
+              <option value="featured">Featured / Recommended</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Alphabetical: A to Z</option>
+              <option value="name-desc">Alphabetical: Z to A</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <span id="searchCountBadge" class="search-count-badge" aria-live="polite">Showing 36 of 36 Tools</span>
+            <button type="button" id="resetFiltersBtn" class="btn-reset-filters" onclick="resetAllFilters()" style="display:none;">Reset All</button>
+          </div>
+        </div>
+
+        <!-- Pre-Order Transparency Terms Bar -->
+        <div class="pre-order-terms-bar" role="note" aria-label="Pre-Order Transparency Notice">
+          <div class="term-item"><span>⚡</span> <div><strong>15–30 Min Delivery SLA:</strong> Verified login credentials delivered to WhatsApp immediately upon payment confirmation.</div></div>
+          <div class="term-item"><span>🛡️</span> <div><strong>30-Day Replacement Warranty:</strong> Zero-downtime policy with prompt replacement credentials if any account is disrupted.</div></div>
+          <div class="term-item"><span>🏢</span> <div><strong>Transparent Account Models:</strong> Distinctly labeled shared team workspaces and private email seats. Zero stolen or trial accounts.</div></div>
+          <div class="term-item"><span>💳</span> <div><strong>Zero FX Friction:</strong> Pay in Pakistani Rupees (PKR) via EasyPaisa, JazzCash, Raast, or SadaPay with no bank international surcharges.</div></div>
         </div>
       </div>
     </section>
@@ -359,7 +400,7 @@
       
       <div class="grid" id="toolsGrid">
 
-        <div class="card tool-card" data-category="ai ai assistant & llm">
+        <div class="card tool-card" data-tool="chatgpt-plus" data-name="ChatGPT Plus" data-price-pkr="2300" data-category="ai" data-vendor="OpenAI" data-terms="chatgpt plus openai gpt-4o dall-e 3 voice custom gpts llm assistant coding writing">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🔥 #1 Pro Choice</span>
@@ -379,6 +420,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('chatgpt-plus')" aria-label="Compare ChatGPT Plus" data-slug="chatgpt-plus">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-plus')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20$8.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -386,7 +428,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="ai ai assistant & llm">
+        <div class="card tool-card" data-tool="claude-pro" data-name="Claude Pro" data-price-pkr="2500" data-category="ai" data-vendor="Anthropic" data-terms="claude pro anthropic sonnet 3.5 opus artifacts coding writing long context reasoning">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(67, 97, 238, 0.12); color: #3730A3; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(67, 97, 238, 0.12); letter-spacing: 0.02em;">⭐ #2 Reasoning</span>
@@ -406,6 +448,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('claude-pro')" aria-label="Compare Claude Pro" data-slug="claude-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Pro%20for%20Rs%202500%20PKR%20/%20$9.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -413,7 +456,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="canva-pro" data-name="Canva Pro" data-price-pkr="600" data-category="image" data-vendor="Canva" data-terms="canva pro design graphics templates social media branding presentations magic studio">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(245, 158, 11, 0.12); color: #B45309; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(245, 158, 11, 0.12); letter-spacing: 0.02em;">🎨 #3 Design & Stock</span>
@@ -433,6 +476,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('canva-pro')" aria-label="Compare Canva Pro" data-slug="canva-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('canva-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Canva%20Pro%20for%20Rs%20600%20PKR%20/%20$2.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -440,7 +484,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="capcut-pro" data-name="CapCut Pro" data-price-pkr="950" data-category="video" data-vendor="ByteDance" data-terms="capcut pro video editor bytedance tiktok reels 4k effects transitions captions">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(239, 68, 68, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(239, 68, 68, 0.12); letter-spacing: 0.02em;">🎬 #4 Video Editing</span>
@@ -460,6 +504,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('capcut-pro')" aria-label="Compare CapCut Pro" data-slug="capcut-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('capcut-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20CapCut%20Pro%20for%20Rs%20950%20PKR%20/%20$3.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -467,7 +512,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="midjourney" data-name="Midjourney v6.1" data-price-pkr="2800" data-category="image" data-vendor="Midjourney" data-terms="midjourney v6.1 photorealistic art image generation discord graphics styling">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(139, 92, 246, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(139, 92, 246, 0.12); letter-spacing: 0.02em;">🖼️ #5 AI Image</span>
@@ -487,6 +532,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('midjourney')" aria-label="Compare Midjourney v6.1" data-slug="midjourney">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('midjourney')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Midjourney%20v6.1%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -494,7 +540,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="cursor-pro" data-name="Cursor Pro" data-price-pkr="3800" data-category="coding" data-vendor="Anysphere" data-terms="cursor pro ai code editor ide anysphere claude 3.5 sonnet composer autocomplete copilot">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(14, 165, 233, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.12); letter-spacing: 0.02em;">⚡ #6 AI Code Editor</span>
@@ -514,6 +560,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('cursor-pro')" aria-label="Compare Cursor Pro" data-slug="cursor-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('cursor-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Cursor%20Pro%20for%20Rs%203800%20PKR%20/%20$14%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -521,7 +568,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="adobe-creative-cloud" data-name="Adobe Creative Cloud" data-price-pkr="1400" data-category="image" data-vendor="Adobe" data-terms="adobe creative cloud photoshop illustrator premiere firefly graphic vector editing">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(220, 38, 38, 0.12); color: #991B1B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(220, 38, 38, 0.12); letter-spacing: 0.02em;">🖌️ #7 Creative Suite</span>
@@ -541,6 +588,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('adobe-creative-cloud')" aria-label="Compare Adobe Creative Cloud" data-slug="adobe-creative-cloud">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('adobe-creative-cloud')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Adobe%20Creative%20Cloud%20for%20Rs%201400%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -548,7 +596,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="streaming premium streaming">
+        <div class="card tool-card" data-tool="youtube-premium" data-name="YouTube Premium Ad-Free" data-price-pkr="750" data-category="streaming" data-vendor="Google / YouTube" data-terms="youtube premium google ad-free music background offline streaming entertainment">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(220, 38, 38, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(220, 38, 38, 0.12); letter-spacing: 0.02em;">🍿 #8 Ad-Free Video</span>
@@ -568,6 +616,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('youtube-premium')" aria-label="Compare YouTube Premium Ad-Free" data-slug="youtube-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('youtube-premium')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20YouTube%20Premium%20Ad-Free%20for%20Rs%20750%20PKR%20/%20$2.80%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -575,7 +624,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="streaming premium streaming">
+        <div class="card tool-card" data-tool="netflix-premium" data-name="Netflix 4K UHD Premium" data-price-pkr="1100" data-category="streaming" data-vendor="Netflix Inc." data-terms="netflix premium 4k uhd movies tv shows streaming entertainment family profile">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(229, 9, 20, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(229, 9, 20, 0.12); letter-spacing: 0.02em;">📺 #9 4K UHD Movies</span>
@@ -595,6 +644,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('netflix-premium')" aria-label="Compare Netflix 4K UHD Premium" data-slug="netflix-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('netflix-premium')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Netflix%204K%20UHD%20Premium%20for%20Rs%201100%20PKR%20/%20$4%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -602,7 +652,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="ai ai assistant & llm">
+        <div class="card tool-card" data-tool="perplexity-pro" data-name="Perplexity Pro AI" data-price-pkr="2200" data-category="ai" data-vendor="Perplexity AI" data-terms="perplexity pro ai search citations research academic deep search claude sonnet">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🧠 #10 Pro Search</span>
@@ -622,6 +672,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('perplexity-pro')" aria-label="Compare Perplexity Pro AI" data-slug="perplexity-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('perplexity-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Perplexity%20Pro%20AI%20for%20Rs%202200%20PKR%20/%20$8%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -629,7 +680,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="elevenlabs-creator" data-name="ElevenLabs Creator" data-price-pkr="2800" data-category="video" data-vendor="ElevenLabs" data-terms="elevenlabs creator voice cloning tts speech audio voiceover dubbing generator">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(79, 70, 229, 0.12); color: #4338CA; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.12); letter-spacing: 0.02em;">🎙️ #11 Voice AI</span>
@@ -649,6 +700,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('elevenlabs-creator')" aria-label="Compare ElevenLabs Creator" data-slug="elevenlabs-creator">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('elevenlabs-creator')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ElevenLabs%20Creator%20for%20Rs%202800%20PKR%20/%20$10%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -656,7 +708,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="github-copilot" data-name="GitHub Copilot Pro" data-price-pkr="1500" data-category="coding" data-vendor="GitHub / Microsoft" data-terms="github copilot microsoft visual studio code ide autocomplete code completion git">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(30, 41, 59, 0.12); color: #1E293B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(30, 41, 59, 0.12); letter-spacing: 0.02em;">💻 #12 Dev Assistant</span>
@@ -676,6 +728,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('github-copilot')" aria-label="Compare GitHub Copilot Pro" data-slug="github-copilot">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('github-copilot')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20GitHub%20Copilot%20Pro%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -683,7 +736,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="vpn vpn & privacy">
+        <div class="card tool-card" data-tool="nordvpn" data-name="NordVPN Complete" data-price-pkr="850" data-category="vpn" data-vendor="Nord Security" data-terms="nordvpn complete vpn privacy security encrypted tunnel streaming kill switch dedicated ip">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">🛡️ #13 Privacy VPN</span>
@@ -703,6 +756,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('nordvpn')" aria-label="Compare NordVPN Complete" data-slug="nordvpn">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('nordvpn')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20NordVPN%20Complete%20for%20Rs%20850%20PKR%20/%20$3.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -710,7 +764,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="vpn vpn & privacy">
+        <div class="card tool-card" data-tool="surfshark-vpn" data-name="Surfshark One VPN" data-price-pkr="800" data-category="vpn" data-vendor="Surfshark BV" data-terms="surfshark vpn privacy security unlimited devices bypass geo cleanweb ip">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(6, 182, 212, 0.12); color: #0E7490; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(6, 182, 212, 0.12); letter-spacing: 0.02em;">🔒 #14 High-Speed VPN</span>
@@ -730,6 +784,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('surfshark-vpn')" aria-label="Compare Surfshark One VPN" data-slug="surfshark-vpn">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('surfshark-vpn')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Surfshark%20One%20VPN%20for%20Rs%20800%20PKR%20/%20$3%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -737,7 +792,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="deepseek-pro" data-name="DeepSeek R1 / V3 Pro" data-price-pkr="1100" data-category="coding" data-vendor="DeepSeek AI" data-terms="deepseek pro r1 v3 reasoning math coding benchmark open weights low cost">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(99, 102, 241, 0.12); color: #4338CA; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(99, 102, 241, 0.12); letter-spacing: 0.02em;">🚀 #15 Open Reasoning</span>
@@ -757,6 +812,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('deepseek-pro')" aria-label="Compare DeepSeek R1 / V3 Pro" data-slug="deepseek-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('deepseek-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20DeepSeek%20R1%20/%20V3%20Pro%20for%20Rs%201100%20PKR%20/%20$4%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -764,7 +820,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="ai ai assistant & llm">
+        <div class="card tool-card" data-tool="gemini-advanced" data-name="Google Gemini Advanced" data-price-pkr="1200" data-category="ai" data-vendor="Google DeepMind" data-terms="google gemini advanced 1m token context multimodal workspace deepmind ultra">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">✨ #16 Multimodal AI</span>
@@ -784,6 +840,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('gemini-advanced')" aria-label="Compare Google Gemini Advanced" data-slug="gemini-advanced">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('gemini-advanced')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google%20Gemini%20Advanced%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -791,7 +848,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="runway-gen3" data-name="Runway Gen-3 Alpha" data-price-pkr="1800" data-category="video" data-vendor="RunwayML" data-terms="runway gen-3 alpha video generator text to video motion brush camera control vfx">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(168, 85, 247, 0.12); color: #7E22CE; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(168, 85, 247, 0.12); letter-spacing: 0.02em;">🎥 #17 Video Motion</span>
@@ -811,6 +868,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('runway-gen3')" aria-label="Compare Runway Gen-3 Alpha" data-slug="runway-gen3">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('runway-gen3')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Runway%20Gen-3%20Alpha%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -818,7 +876,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="suno-ai" data-name="Suno AI Music v3.5" data-price-pkr="2600" data-category="video" data-vendor="Suno Inc." data-terms="suno ai music v3.5 songs vocals instrumental audio audio generation mp3">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">🎵 #18 Music Creation</span>
@@ -838,6 +896,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('suno-ai')" aria-label="Compare Suno AI Music v3.5" data-slug="suno-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('suno-ai')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Suno%20AI%20Music%20v3.5%20for%20Rs%202600%20PKR%20/%20$9.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -845,7 +904,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="jetbrains-all" data-name="JetBrains All Products Pack" data-price-pkr="2500" data-category="coding" data-vendor="JetBrains" data-terms="jetbrains all products pack intellij pycharm webstorm rider clion ide developer">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(249, 115, 22, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(249, 115, 22, 0.12); letter-spacing: 0.02em;">⚙️ #19 Dev Suite</span>
@@ -865,6 +924,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('jetbrains-all')" aria-label="Compare JetBrains All Products Pack" data-slug="jetbrains-all">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('jetbrains-all')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20JetBrains%20All%20Products%20Pack%20for%20Rs%202500%20PKR%20/%20$9%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -872,7 +932,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="productivity productivity & seo">
+        <div class="card tool-card" data-tool="notion-business" data-name="Notion Business & AI" data-price-pkr="1400" data-category="productivity" data-vendor="Notion Labs" data-terms="notion business ai workspace docs wiki project management collaboration notes">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(100, 116, 139, 0.12); color: #334155; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(100, 116, 139, 0.12); letter-spacing: 0.02em;">📝 #20 Workspace AI</span>
@@ -892,6 +952,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('notion-business')" aria-label="Compare Notion Business & AI" data-slug="notion-business">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('notion-business')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Notion%20Business%20&%20AI%20for%20Rs%201400%20PKR%20/%20$5%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -899,7 +960,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="figma-pro" data-name="Figma Pro" data-price-pkr="1800" data-category="image" data-vendor="Figma" data-terms="figma pro ui ux product design prototyping team libraries collaborative vector">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(244, 63, 94, 0.12); color: #BE123C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(244, 63, 94, 0.12); letter-spacing: 0.02em;">📐 #21 UI/UX Design</span>
@@ -919,6 +980,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('figma-pro')" aria-label="Compare Figma Pro" data-slug="figma-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('figma-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Figma%20Pro%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -926,7 +988,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="freepik-premium" data-name="Freepik Premium" data-price-pkr="1800" data-category="image" data-vendor="Freepik Company" data-terms="freepik premium vectors stock photos psd templates graphic assets downloads">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(14, 165, 233, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.12); letter-spacing: 0.02em;">📂 #22 Stock Vectors</span>
@@ -946,6 +1008,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('freepik-premium')" aria-label="Compare Freepik Premium" data-slug="freepik-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('freepik-premium')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Freepik%20Premium%20for%20Rs%201800%20PKR%20/%20$6.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -953,7 +1016,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="envato-elements" data-name="Envato Elements" data-price-pkr="2600" data-category="image" data-vendor="Envato Pty Ltd" data-terms="envato elements unlimited downloads graphic video audio web templates assets">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(34, 197, 94, 0.12); color: #15803D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(34, 197, 94, 0.12); letter-spacing: 0.02em;">📦 #23 Unlimited Assets</span>
@@ -973,6 +1036,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('envato-elements')" aria-label="Compare Envato Elements" data-slug="envato-elements">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('envato-elements')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Envato%20Elements%20for%20Rs%202600%20PKR%20/%20$9.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -980,7 +1044,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="replit-core" data-name="Replit Core Cloud IDE" data-price-pkr="2800" data-category="coding" data-vendor="Replit Inc." data-terms="replit core cloud ide deployments hosting python javascript agent collaborative">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(249, 115, 22, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(249, 115, 22, 0.12); letter-spacing: 0.02em;">☁️ #24 Cloud IDE</span>
@@ -1000,6 +1064,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('replit-core')" aria-label="Compare Replit Core Cloud IDE" data-slug="replit-core">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('replit-core')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Replit%20Core%20Cloud%20IDE%20for%20Rs%202800%20PKR%20/%20$10%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1007,7 +1072,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="productivity productivity & seo">
+        <div class="card tool-card" data-tool="grammarly-pro" data-name="Grammarly Premium" data-price-pkr="750" data-category="productivity" data-vendor="Grammarly Inc." data-terms="grammarly premium writing assistant proofreading grammar tone checker academic">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(34, 197, 94, 0.12); color: #15803D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(34, 197, 94, 0.12); letter-spacing: 0.02em;">✍️ #25 Writing Assistant</span>
@@ -1027,6 +1092,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('grammarly-pro')" aria-label="Compare Grammarly Premium" data-slug="grammarly-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('grammarly-pro')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Grammarly%20Premium%20for%20Rs%20750%20PKR%20/%20$2.80%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1034,7 +1100,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="productivity productivity & seo">
+        <div class="card tool-card" data-tool="quillbot-premium" data-name="QuillBot Premium Suite" data-price-pkr="1600" data-category="productivity" data-vendor="Learneo Inc." data-terms="quillbot premium paraphrasing summarizer plagiarism grammar writing thesis">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🔄 #26 Paraphraser</span>
@@ -1054,6 +1120,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('quillbot-premium')" aria-label="Compare QuillBot Premium Suite" data-slug="quillbot-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('quillbot-premium')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20QuillBot%20Premium%20Suite%20for%20Rs%201600%20PKR%20/%20$6%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1061,7 +1128,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="productivity productivity & seo">
+        <div class="card tool-card" data-tool="linkedin-premium" data-name="LinkedIn Premium Career" data-price-pkr="1500" data-category="productivity" data-vendor="Microsoft / LinkedIn" data-terms="linkedin premium career inmail job insights profile views networking recruitment">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(10, 102, 194, 0.12); color: #0A66C2; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(10, 102, 194, 0.12); letter-spacing: 0.02em;">💼 #27 Career Pro</span>
@@ -1081,6 +1148,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('linkedin-premium')" aria-label="Compare LinkedIn Premium Career" data-slug="linkedin-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('linkedin-premium')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20LinkedIn%20Premium%20Career%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1088,7 +1156,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="productivity productivity & seo">
+        <div class="card tool-card" data-tool="semrush-guru" data-name="Semrush Guru Platform" data-price-pkr="2500" data-category="productivity" data-vendor="Semrush Inc." data-terms="semrush guru seo keyword research backlinks domain audit competitor analysis rank">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(255, 100, 45, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(255, 100, 45, 0.12); letter-spacing: 0.02em;">📊 #28 SEO Analytics</span>
@@ -1108,6 +1176,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('semrush-guru')" aria-label="Compare Semrush Guru Platform" data-slug="semrush-guru">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('semrush-guru')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Semrush%20Guru%20Platform%20for%20Rs%202500%20PKR%20/%20$9%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1115,7 +1184,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="kling-ai" data-name="Kling AI Pro" data-price-pkr="700" data-category="video" data-vendor="Kuaishou Technology" data-terms="kling ai pro video generator motion camera movement realistic video kuaishou">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(168, 85, 247, 0.12); color: #7E22CE; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(168, 85, 247, 0.12); letter-spacing: 0.02em;">🎞️ #29 Cinematic AI</span>
@@ -1135,6 +1204,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('kling-ai')" aria-label="Compare Kling AI Pro" data-slug="kling-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('kling-ai')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Kling%20AI%20Pro%20for%20Rs%20700%20PKR%20/%20$2.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1142,7 +1212,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="minimax-ai" data-name="MiniMax Hailuo AI Video" data-price-pkr="1600" data-category="video" data-vendor="MiniMax AI" data-terms="minimax hailuo ai video generator camera physics realism hd cinematic">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">📽️ #30 Video Studio</span>
@@ -1162,6 +1232,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('minimax-ai')" aria-label="Compare MiniMax Hailuo AI Video" data-slug="minimax-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('minimax-ai')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20MiniMax%20Hailuo%20AI%20Video%20for%20Rs%201600%20PKR%20/%20$6%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1169,7 +1240,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="udio-ai" data-name="Udio AI Music Lab" data-price-pkr="2800" data-category="video" data-vendor="Udio Music" data-terms="udio ai music studio song generator vocals composition genre mixing tracks">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(139, 92, 246, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(139, 92, 246, 0.12); letter-spacing: 0.02em;">🎧 #31 Studio Audio</span>
@@ -1189,6 +1260,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('udio-ai')" aria-label="Compare Udio AI Music Lab" data-slug="udio-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('udio-ai')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Udio%20AI%20Music%20Lab%20for%20Rs%202800%20PKR%20/%20$10%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1196,7 +1268,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="video ai video & audio">
+        <div class="card tool-card" data-tool="google-veo" data-name="Google Veo 2 / Video FX" data-price-pkr="1900" data-category="video" data-vendor="Google DeepMind" data-terms="google veo 2 video fx high definition text to video prompt adherence cinematic">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">🎬 #32 DeepMind Video</span>
@@ -1216,6 +1288,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('google-veo')" aria-label="Compare Google Veo 2 / Video FX" data-slug="google-veo">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('google-veo')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google%20Veo%202%20/%20Video%20FX%20for%20Rs%201900%20PKR%20/%20$7%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1223,7 +1296,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="image design & image">
+        <div class="card tool-card" data-tool="leonardo-ai" data-name="Leonardo AI Visual Studio" data-price-pkr="1300" data-category="image" data-vendor="Canva / Leonardo AI" data-terms="leonardo ai visual studio game assets 3d photorealism alchemy canvas">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(234, 88, 12, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(234, 88, 12, 0.12); letter-spacing: 0.02em;">🖌️ #33 Visual Canvas</span>
@@ -1243,6 +1316,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('leonardo-ai')" aria-label="Compare Leonardo AI Visual Studio" data-slug="leonardo-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('leonardo-ai')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Leonardo%20AI%20Visual%20Studio%20for%20Rs%201300%20PKR%20/%20$5%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1250,7 +1324,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="ai ai assistant & llm">
+        <div class="card tool-card" data-tool="grok-ai" data-name="Grok 2 / xAI SuperGrok" data-price-pkr="1100" data-category="ai" data-vendor="xAI Inc." data-terms="grok 2 xai supergrok elon musk twitter uncensored real-time image gen flux">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(15, 23, 42, 0.12); color: #0F172A; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(15, 23, 42, 0.12); letter-spacing: 0.02em;">⚡ #34 Real-Time Search</span>
@@ -1270,6 +1344,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('grok-ai')" aria-label="Compare Grok 2 / xAI SuperGrok" data-slug="grok-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('grok-ai')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Grok%202%20/%20xAI%20SuperGrok%20for%20Rs%201100%20PKR%20/%20$4%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1277,7 +1352,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="chatgpt-codex" data-name="OpenAI API & Codex" data-price-pkr="600" data-category="coding" data-vendor="OpenAI" data-terms="openai api codex tokens playground fine-tuning embeddings developer backend">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">💻 #35 Dev API Tokens</span>
@@ -1297,6 +1372,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('chatgpt-codex')" aria-label="Compare OpenAI API & Codex" data-slug="chatgpt-codex">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-codex')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20OpenAI%20API%20&%20Codex%20for%20Rs%20600%20PKR%20/%20$2.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1304,7 +1380,7 @@
           </div>
         </div>
 
-        <div class="card tool-card" data-category="coding ai coding & dev">
+        <div class="card tool-card" data-tool="claude-artifacts" data-name="Claude Artifacts Pro" data-price-pkr="1200" data-category="coding" data-vendor="Anthropic" data-terms="claude artifacts pro anthropic interactive react svg apps html preview prototyping">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(67, 97, 238, 0.12); color: #3730A3; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(67, 97, 238, 0.12); letter-spacing: 0.02em;">🧩 #36 Code Canvas</span>
@@ -1324,6 +1400,7 @@
           </div>
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('claude-artifacts')" aria-label="Compare Claude Artifacts Pro" data-slug="claude-artifacts">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-artifacts')">⚡ Quick Order</button>
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Artifacts%20Pro%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
@@ -1880,5 +1957,34 @@
   </aside>
   
   <script src="assets/cart.js"></script>
+
+  <!-- ========================================================
+       PHASE 13: FLOATING COMPARISON DOCK & COMPARISON MODAL
+       ======================================================== -->
+  <div id="compareDock" class="compare-dock" style="display:none;" role="region" aria-label="Product Comparison Dock">
+    <div class="compare-dock-inner">
+      <span class="compare-dock-icon" aria-hidden="true">⚖️</span>
+      <span id="compareDockCount" style="font-weight:600; font-size:0.84rem;">Selected (0/3):</span>
+      <div id="compareDockItems" class="compare-dock-items"></div>
+      <button type="button" id="openCompareModalBtn" class="btn-compare-action" onclick="openCompareModal()">Compare Now</button>
+      <button type="button" class="btn-compare-clear" onclick="clearComparison()">Clear</button>
+    </div>
+  </div>
+
+  <div id="compareModalBackdrop" class="compare-modal-backdrop" style="display:none;" onclick="if(event.target===this)closeCompareModal();" role="dialog" aria-modal="true" aria-labelledby="compareModalTitle">
+    <div class="compare-modal">
+      <div class="compare-modal-header">
+        <h3 id="compareModalTitle" class="compare-modal-title">
+          <span>⚖️</span>
+          <span>Side-by-Side Product Comparison</span>
+        </h3>
+        <button type="button" class="compare-modal-close" onclick="closeCompareModal()" aria-label="Close Comparison Modal">&times;</button>
+      </div>
+      <div class="compare-modal-body" id="compareModalBody">
+        <!-- Rendered dynamically by assets/cart.js -->
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

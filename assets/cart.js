@@ -1728,27 +1728,143 @@
   });
 
   // Filter tool cards in search box with empty-state handling
-  window.searchTools = function (query) {
-    var q = (query || '').toLowerCase().trim();
+  // --- PHASE 13: ADVANCED SEARCH, FILTER, SORT & PRODUCT COMPARISON ENGINE ---
+
+  window.currentSearchQuery = '';
+  window.currentCategory = '';
+  window.currentPriceRange = 'all';
+  window.currentSort = 'featured';
+  window.compareList = [];
+  var initialCardOrder = [];
+
+  // Initialize card order cache once DOM is loaded
+  function cacheInitialCardOrder() {
     var cards = document.querySelectorAll('.tool-card');
+    if (cards.length > 0 && initialCardOrder.length === 0) {
+      initialCardOrder = Array.from(cards);
+    }
+  }
+
+  // Master Filter & Sort Application Function
+  window.applyFilters = function () {
+    cacheInitialCardOrder();
+    var queryInput = document.getElementById('toolSearchInput');
+    var priceSelect = document.getElementById('priceFilter');
+    var sortSelect = document.getElementById('sortSelect');
+    var clearBtn = document.getElementById('clearSearchBtn');
+    var resetBtn = document.getElementById('resetFiltersBtn');
+
+    var q = (queryInput ? queryInput.value : window.currentSearchQuery || '').toLowerCase().trim();
+    window.currentSearchQuery = q;
+
+    if (clearBtn) {
+      clearBtn.style.display = q ? 'flex' : 'none';
+    }
+
+    var priceRange = priceSelect ? priceSelect.value : window.currentPriceRange || 'all';
+    window.currentPriceRange = priceRange;
+
+    var sortOrder = sortSelect ? sortSelect.value : window.currentSort || 'featured';
+    window.currentSort = sortOrder;
+
+    var cat = (window.currentCategory || '').toLowerCase().trim();
+
+    // Check if any filter is active
+    var isFiltered = (q !== '') || (cat !== '') || (priceRange !== 'all') || (sortOrder !== 'featured');
+    if (resetBtn) {
+      resetBtn.style.display = isFiltered ? 'inline-block' : 'none';
+    }
+
+    var cards = document.querySelectorAll('.tool-card');
+    var grid = document.querySelector('.tools-grid') || document.querySelector('.grid');
+    var visibleCards = [];
     var visibleCount = 0;
+
     cards.forEach(function (card) {
-      var text = card.textContent.toLowerCase();
-      var cat = (card.getAttribute('data-category') || '').toLowerCase();
-      if (!q || text.indexOf(q) !== -1 || cat.indexOf(q) !== -1) {
+      var name = (card.getAttribute('data-name') || '').toLowerCase();
+      var cardCat = (card.getAttribute('data-category') || '').toLowerCase();
+      var terms = (card.getAttribute('data-terms') || '').toLowerCase();
+      var vendor = (card.getAttribute('data-vendor') || '').toLowerCase();
+      var fullText = card.textContent.toLowerCase();
+      var pricePkr = parseInt(card.getAttribute('data-price-pkr') || '0', 10);
+
+      // 1. Text Query Match
+      var matchesQuery = true;
+      if (q) {
+        matchesQuery = (name.indexOf(q) !== -1) ||
+                       (terms.indexOf(q) !== -1) ||
+                       (cardCat.indexOf(q) !== -1) ||
+                       (vendor.indexOf(q) !== -1) ||
+                       (fullText.indexOf(q) !== -1);
+      }
+
+      // 2. Category Match
+      var matchesCat = true;
+      if (cat) {
+        matchesCat = (cardCat.indexOf(cat) !== -1) || (terms.indexOf(cat) !== -1);
+      }
+
+      // 3. Price Filter Match
+      var matchesPrice = true;
+      if (priceRange === 'under-1000') {
+        matchesPrice = (pricePkr > 0 && pricePkr < 1000);
+      } else if (priceRange === '1000-2500') {
+        matchesPrice = (pricePkr >= 1000 && pricePkr <= 2500);
+      } else if (priceRange === 'above-2500') {
+        matchesPrice = (pricePkr > 2500);
+      }
+
+      if (matchesQuery && matchesCat && matchesPrice) {
         card.style.display = '';
         visibleCount++;
+        visibleCards.push(card);
       } else {
         card.style.display = 'none';
       }
     });
 
-    var countEl = document.getElementById('searchCountBadge');
-    if (countEl) {
-      countEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' tools';
+    // 4. Sorting Logic
+    if (grid && visibleCards.length > 1) {
+      var sortedCards = visibleCards.slice();
+      if (sortOrder === 'price-asc') {
+        sortedCards.sort(function (a, b) {
+          return parseInt(a.getAttribute('data-price-pkr') || '0', 10) - parseInt(b.getAttribute('data-price-pkr') || '0', 10);
+        });
+      } else if (sortOrder === 'price-desc') {
+        sortedCards.sort(function (a, b) {
+          return parseInt(b.getAttribute('data-price-pkr') || '0', 10) - parseInt(a.getAttribute('data-price-pkr') || '0', 10);
+        });
+      } else if (sortOrder === 'name-asc') {
+        sortedCards.sort(function (a, b) {
+          var nameA = (a.getAttribute('data-name') || '').toLowerCase();
+          var nameB = (b.getAttribute('data-name') || '').toLowerCase();
+          return nameA.localeCompare(nameB);
+        });
+      } else if (sortOrder === 'name-desc') {
+        sortedCards.sort(function (a, b) {
+          var nameA = (a.getAttribute('data-name') || '').toLowerCase();
+          var nameB = (b.getAttribute('data-name') || '').toLowerCase();
+          return nameB.localeCompare(nameA);
+        });
+      } else if (sortOrder === 'featured' && initialCardOrder.length > 0) {
+        sortedCards.sort(function (a, b) {
+          return initialCardOrder.indexOf(a) - initialCardOrder.indexOf(b);
+        });
+      }
+
+      // Reorder in DOM
+      sortedCards.forEach(function (c) {
+        grid.appendChild(c);
+      });
     }
 
-    var grid = document.querySelector('.tools-grid') || document.querySelector('.grid');
+    // 5. Update Counter Badge
+    var countEl = document.getElementById('searchCountBadge');
+    if (countEl) {
+      countEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' Tools';
+    }
+
+    // 6. Empty State Handling
     var emptyEl = document.getElementById('searchEmptyState');
     if (visibleCount === 0 && cards.length > 0) {
       if (!emptyEl && grid) {
@@ -1757,33 +1873,285 @@
         emptyEl.className = 'empty-state';
         emptyEl.innerHTML = '<span class="empty-state-icon" aria-hidden="true">🔍</span>' +
           '<h3 class="empty-state-title">No Matching AI Tools Found</h3>' +
-          '<p class="empty-state-desc">We could not find any software matching "<strong id="emptyQueryText"></strong>". Try searching for "video", "coding", "vpn", or browse all tools below.</p>' +
-          '<button type="button" class="empty-state-action" onclick="window.filterTools(\'\')">Clear Search & View All Tools</button>';
+          '<p class="empty-state-desc">We could not find any software matching your selected filters (<strong id="emptyQueryText"></strong>). Try a broader keyword or browse all 36 tools below.</p>' +
+          '<div class="empty-state-suggestions">' +
+            '<span>Try Popular:</span> ' +
+            '<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'coding\')">💻 Coding</button>' +
+            '<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'video\')">🎬 Video</button>' +
+            '<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'claude\')">🤖 Claude</button>' +
+            '<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'midjourney\')">🎨 Midjourney</button>' +
+            '<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'vpn\')">🛡️ VPN</button>' +
+          '</div>' +
+          '<button type="button" class="empty-state-action" onclick="window.resetAllFilters()">Clear All Filters & View All Tools</button>';
         grid.appendChild(emptyEl);
       }
       if (emptyEl) {
         var querySpan = emptyEl.querySelector('#emptyQueryText');
-        if (querySpan) querySpan.textContent = query;
+        var queryDesc = [];
+        if (q) queryDesc.push('"' + q + '"');
+        if (cat) queryDesc.push('Category: ' + cat);
+        if (priceRange !== 'all') queryDesc.push('Price: ' + priceRange);
+        if (querySpan) querySpan.textContent = queryDesc.join(' + ') || 'Custom Filter';
         emptyEl.style.display = 'block';
       }
     } else if (emptyEl) {
       emptyEl.style.display = 'none';
     }
+
+    // 7. Prevent Crawler Indexing: Sync client-side URL safely via history.replaceState
+    if (window.history && window.history.replaceState) {
+      var params = new URLSearchParams();
+      if (q) params.set('q', q);
+      if (cat) params.set('category', cat);
+      if (priceRange !== 'all') params.set('price', priceRange);
+      if (sortOrder !== 'featured') params.set('sort', sortOrder);
+      var newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+      window.history.replaceState({ q: q, cat: cat, price: priceRange, sort: sortOrder }, '', newUrl);
+    }
+  };
+
+  // Backwards compatibility wrappers
+  window.searchTools = function (query) {
+    window.currentSearchQuery = query;
+    window.applyFilters();
+  };
+
+  window.filterCategory = function (category) {
+    window.currentCategory = category || '';
+    var buttons = document.querySelectorAll('.cat-pill-btn');
+    buttons.forEach(function (btn) {
+      var btnCat = btn.getAttribute('data-cat') || '';
+      var isActive = (btnCat === category);
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+    window.applyFilters();
   };
 
   window.filterTools = function (category) {
-    var input = document.getElementById('toolSearchInput');
-    if (input) input.value = category;
-    window.searchTools(category);
+    window.filterCategory(category);
   };
+
+  window.clearSearchInput = function () {
+    var input = document.getElementById('toolSearchInput');
+    if (input) input.value = '';
+    window.currentSearchQuery = '';
+    window.applyFilters();
+  };
+
+  window.resetAllFilters = function () {
+    var queryInput = document.getElementById('toolSearchInput');
+    if (queryInput) queryInput.value = '';
+    window.currentSearchQuery = '';
+
+    var priceSelect = document.getElementById('priceFilter');
+    if (priceSelect) priceSelect.value = 'all';
+    window.currentPriceRange = 'all';
+
+    var sortSelect = document.getElementById('sortSelect');
+    if (sortSelect) sortSelect.value = 'featured';
+    window.currentSort = 'featured';
+
+    window.filterCategory('');
+  };
+
+  window.applyQuickSearch = function (term) {
+    var input = document.getElementById('toolSearchInput');
+    if (input) input.value = term;
+    window.currentSearchQuery = term;
+    window.applyFilters();
+  };
+
+  // --- PRODUCT COMPARISON ENGINE ---
+
+  window.toggleCompare = function (slug) {
+    var idx = window.compareList.indexOf(slug);
+    if (idx !== -1) {
+      window.compareList.splice(idx, 1);
+    } else {
+      if (window.compareList.length >= 3) {
+        alert('You can compare a maximum of 3 tools side-by-side.');
+        return;
+      }
+      window.compareList.push(slug);
+    }
+    updateCompareUI();
+  };
+
+  function updateCompareUI() {
+    var buttons = document.querySelectorAll('.btn-tool-compare');
+    buttons.forEach(function (btn) {
+      var slug = btn.getAttribute('data-slug');
+      var isSelected = (window.compareList.indexOf(slug) !== -1);
+      btn.classList.toggle('active', isSelected);
+      btn.textContent = isSelected ? '✓ Added' : '⚖️ Compare';
+      btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    });
+
+    var dock = document.getElementById('compareDock');
+    var countEl = document.getElementById('compareDockCount');
+    var itemsEl = document.getElementById('compareDockItems');
+    var modalBtn = document.getElementById('openCompareModalBtn');
+
+    if (dock) {
+      if (window.compareList.length > 0) {
+        dock.style.display = 'flex';
+        if (countEl) countEl.textContent = 'Selected (' + window.compareList.length + '/3):';
+        if (itemsEl) {
+          itemsEl.innerHTML = window.compareList.map(function (s) {
+            var tool = TOOLS_DATA[s];
+            var name = tool ? tool.name : s;
+            return '<span class="compare-chip">' + name + '</span>';
+          }).join('');
+        }
+        if (modalBtn) {
+          modalBtn.textContent = 'Compare (' + window.compareList.length + ')';
+        }
+      } else {
+        dock.style.display = 'none';
+      }
+    }
+  }
+
+  window.clearComparison = function () {
+    window.compareList = [];
+    updateCompareUI();
+  };
+
+  window.openCompareModal = function () {
+    if (window.compareList.length === 0) return;
+    var modalBackdrop = document.getElementById('compareModalBackdrop');
+    var modalBody = document.getElementById('compareModalBody');
+    if (!modalBackdrop || !modalBody) return;
+
+    var tools = window.compareList.map(function (s) {
+      return TOOLS_DATA[s] || { slug: s, name: s, starting_price_pkr: 0, starting_price_usd: 0, cat: 'AI Software', vendor: 'Verified Vendor', icon: 'assets/product-logos/chatgpt-plus.svg' };
+    });
+
+    var prefix = getPathPrefix();
+
+    var html = '<table class="compare-table" role="table">' +
+      '<thead>' +
+        '<tr>' +
+          '<th>Feature / Specification</th>' +
+          tools.map(function (t) {
+            return '<th style="text-align:center;">' +
+              '<img src="' + prefix + t.icon + '" alt="' + t.name + ' Icon" width="40" height="40" style="margin:0 auto 0.5rem; display:block;" loading="lazy" decoding="async">' +
+              '<strong>' + t.name + '</strong>' +
+              '<div style="font-size:0.75rem; color:#64748B; font-weight:normal;">' + t.vendor + '</div>' +
+            '</th>';
+          }).join('') +
+        '</tr>' +
+      '</thead>' +
+      '<tbody>' +
+        '<tr>' +
+          '<th>Starting Price (PKR)</th>' +
+          tools.map(function (t) {
+            return '<td style="text-align:center; font-weight:700; color:#059669; font-size:1.05rem;">Rs. ' + t.starting_price_pkr.toLocaleString() + ' PKR</td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>USD Equivalent</th>' +
+          tools.map(function (t) {
+            return '<td style="text-align:center; color:#64748B;">~$' + t.starting_price_usd.toFixed(2) + ' USD / mo</td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>Category</th>' +
+          tools.map(function (t) {
+            return '<td style="text-align:center;">' + t.cat + '</td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>Access Model</th>' +
+          tools.map(function (t) {
+            return '<td style="text-align:center;"><span style="background:#F1F5F9; padding:0.2rem 0.6rem; border-radius:9999px; font-size:0.78rem; font-weight:600;">Shared Team Workspace</span></td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>Delivery SLA</th>' +
+          tools.map(function () {
+            return '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15–30 Minutes</td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>Replacement Warranty</th>' +
+          tools.map(function () {
+            return '<td style="text-align:center; color:#059669; font-weight:600;">🛡️ 30-Day Guaranteed</td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>Supported Platforms</th>' +
+          tools.map(function () {
+            return '<td style="text-align:center; font-size:0.8rem;">Web, Windows, macOS, iOS, Android</td>';
+          }).join('') +
+        '</tr>' +
+        '<tr>' +
+          '<th>Action</th>' +
+          tools.map(function (t) {
+            return '<td style="text-align:center;">' +
+              '<button type="button" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem;" onclick="closeCompareModal(); openQuickOrderModal(\'' + t.slug + '\')">⚡ Quick Order</button>' +
+              '<a href="' + prefix + t.url + '" style="font-size:0.75rem; color:#4361EE; text-decoration:none; display:block;">Full Specs &rarr;</a>' +
+            '</td>';
+          }).join('') +
+        '</tr>' +
+      '</tbody>' +
+    '</table>';
+
+    modalBody.innerHTML = html;
+    modalBackdrop.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeCompareModal = function () {
+    var modalBackdrop = document.getElementById('compareModalBackdrop');
+    if (modalBackdrop) {
+      modalBackdrop.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Close modals when pressing ESC or clicking backdrop
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      window.closeQuickOrderModal();
+      window.closeCompareModal();
+    }
+  });
 
   // Initialize tool search listener if present
   document.addEventListener('DOMContentLoaded', function () {
+    cacheInitialCardOrder();
     var searchInput = document.getElementById('toolSearchInput');
     if (searchInput) {
       searchInput.addEventListener('input', function (e) {
-        window.searchTools(e.target.value);
+        window.currentSearchQuery = e.target.value;
+        window.applyFilters();
       });
+    }
+
+    // Check URL params on load to restore filter state without extra page load
+    if (window.location.search) {
+      var params = new URLSearchParams(window.location.search);
+      var q = params.get('q');
+      var cat = params.get('category');
+      var price = params.get('price');
+      var sort = params.get('sort');
+
+      if (q && searchInput) searchInput.value = q;
+      if (price) {
+        var priceSelect = document.getElementById('priceFilter');
+        if (priceSelect) priceSelect.value = price;
+      }
+      if (sort) {
+        var sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) sortSelect.value = sort;
+      }
+      if (cat) {
+        window.filterCategory(cat);
+      } else if (q || price || sort) {
+        window.applyFilters();
+      }
     }
   });
 
