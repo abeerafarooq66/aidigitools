@@ -2072,7 +2072,7 @@
           }).join('') +
         '</tr>' +
         '<tr>' +
-          '<th>Delivery SLA</th>' +
+          '<th>Delivery Target</th>' +
           tools.map(function () {
             return '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15–30 Minutes</td>';
           }).join('') +
@@ -2080,7 +2080,7 @@
         '<tr>' +
           '<th>Replacement Warranty</th>' +
           tools.map(function () {
-            return '<td style="text-align:center; color:#059669; font-weight:600;">🛡️ 30-Day Guaranteed</td>';
+            return '<td style="text-align:center; color:#059669; font-weight:600;">🛡️ 30-Day Replacement</td>';
           }).join('') +
         '</tr>' +
         '<tr>' +
