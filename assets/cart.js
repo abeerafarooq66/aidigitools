@@ -68,7 +68,7 @@
           "Full 365 days uninterrupted ad-free playback",
           "Includes YouTube Music Premium for 1 year",
           "Zero monthly renewal friction",
-          "Full 365-day replacement warranty guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Fixed term subscription; non-transferable",
         "badge": "Save 16%",
@@ -218,7 +218,7 @@
           "Full 12 months uninterrupted Pro access",
           "Unlimited Magic Studio AI tools & downloads",
           "Complete Brand Kit & 1TB cloud storage",
-          "Full 365-day replacement warranty protection"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual term with zero renewal hassles",
         "badge": "Save 70%",
@@ -268,7 +268,7 @@
           "Full 12 months uninterrupted Pro access",
           "Unlimited 4K exports & premium transitions",
           "100GB cloud project backup",
-          "365-day replacement guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Non-transferable annual license",
         "badge": "Save 48%",
@@ -386,7 +386,7 @@
           "Full 12 months access to entire Creative Cloud suite",
           "Monthly Firefly AI credit renewals",
           "100GB cloud asset synchronization",
-          "365-day replacement warranty support"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual license with uninterrupted activation",
         "badge": "Agency Value",
@@ -436,7 +436,7 @@
           "Full 365 days secure high-speed browsing",
           "Includes 1TB encrypted cloud storage",
           "Cross-platform apps (Windows, Mac, iOS, Android)",
-          "365-day replacement warranty coverage"
+          "30-day replacement warranty support"
         ],
         "limits": "Long-term privacy protection",
         "badge": "Save 47%",
@@ -486,7 +486,7 @@
           "Full 12 months unlimited VPN protection",
           "Includes Surfshark Antivirus & Alert monitoring",
           "Private search engine with zero logs",
-          "365-day replacement warranty"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual family cyber protection",
         "badge": "Best Value VPN",
@@ -568,7 +568,7 @@
           "Full 12 months uninterrupted Pro research",
           "All premium AI models unlocked",
           "Priority processing & zero search queue",
-          "365-day replacement warranty support"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual subscription",
         "badge": "Save 37%",
@@ -896,7 +896,7 @@
           "Full 365 days of uninterrupted Grammarly Premium",
           "Unlimited AI text suggestions & rewrites",
           "Complete browser, mobile & office app sync",
-          "365-day replacement warranty guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual license",
         "badge": "Save 50%",
@@ -946,7 +946,7 @@
           "Full 12 months uninterrupted paraphrasing & grammar",
           "Annual Plagiarism Checker scanning credits",
           "Chrome, Word, and Edge extensions included",
-          "365-day replacement warranty support"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual subscription",
         "badge": "Save 78%",
@@ -1124,7 +1124,7 @@
           "Full 365 days access to entire JetBrains product family",
           "Includes all major version upgrades during term",
           "Perpetual fallback license rights eligible",
-          "365-day replacement warranty guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual developer license",
         "badge": "Save 40%",
@@ -1903,6 +1903,7 @@
 };
 
   // State variables for Quick Order Drawer
+  var HELD_PRODUCTS = ['turnitin-student', 'linkedin-premium', 'netflix-premium', 'spotify-premium', 'coursera-plus'];
   var currentTool = TOOLS_DATA["chatgpt-plus"];
   var currentPlan = currentTool && currentTool.plans && currentTool.plans.length > 0 ? currentTool.plans[0] : null;
   var currentPaymentRail = "EasyPaisa";
@@ -1952,7 +1953,19 @@
       specsLinkEl.textContent = "View All " + (tool.plans ? tool.plans.length : 1) + " Verified Plans for " + tool.name + " →";
     }
 
-    var waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD.";
+    var isHeld = HELD_PRODUCTS.indexOf(slug) !== -1;
+    var waMsg;
+    if (isHeld) {
+      waMsg = "Hi AIDigiTools, I am inquiring about current availability and compliance terms for " + tool.name + ". (Inquiry only; not an order confirmation).";
+      if (waLinkEl) {
+        waLinkEl.textContent = "💬 Inquire on WhatsApp for Current Availability";
+      }
+    } else {
+      waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD.";
+      if (waLinkEl) {
+        waLinkEl.textContent = "⚡ Order Now via WhatsApp";
+      }
+    }
     if (waLinkEl) {
       waLinkEl.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waMsg);
     }
@@ -2076,6 +2089,25 @@
       iconEl.alt = tool.name + " Icon";
     }
 
+    var isHeld = HELD_PRODUCTS.indexOf(tool.slug || slug) !== -1;
+    var holdNotice = document.getElementById('drawerHoldNotice');
+    if (isHeld) {
+      if (!holdNotice) {
+        holdNotice = document.createElement('div');
+        holdNotice.id = 'drawerHoldNotice';
+        holdNotice.style.cssText = 'background:rgba(245,158,11,0.12); border:1px solid #f59e0b; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.75rem; font-size:0.82rem; color:var(--text-secondary);';
+        holdNotice.innerHTML = '<strong>⏸️ Direct Orders Paused:</strong> Direct checkout for this service is on hold pending secondary licensing verification. Inquiries are for stock &amp; compliance verification only and an inquiry is not an order confirmation.';
+        var planWrap = document.getElementById('drawerPlansContainer');
+        if (planWrap && planWrap.parentNode) {
+          planWrap.parentNode.insertBefore(holdNotice, planWrap);
+        }
+      } else {
+        holdNotice.style.display = 'block';
+      }
+    } else if (holdNotice) {
+      holdNotice.style.display = 'none';
+    }
+
     renderDrawerPlans();
     window.selectCartRail('EasyPaisa');
 
@@ -2129,7 +2161,19 @@
     if (totalPkrEl) totalPkrEl.textContent = "Rs. " + pricePkr.toLocaleString() + " PKR";
     if (totalUsdEl) totalUsdEl.textContent = "(~$" + priceUsd.toFixed(2) + " USD)";
 
-    var waMsg = "Hi AIDigiTools! I want to order " + currentTool.name + " (" + planTitle + " - " + duration + ") for Rs. " + pricePkr.toLocaleString() + " PKR (~$" + priceUsd.toFixed(2) + " USD) via " + currentPaymentRail + ". Please share payment details and 15m delivery activation.";
+    var isHeld = HELD_PRODUCTS.indexOf(currentTool.slug || '') !== -1;
+    var waMsg;
+    if (isHeld) {
+      waMsg = "Hi AIDigiTools! I am inquiring about current availability and compliance terms for " + currentTool.name + " (" + planTitle + " - " + duration + "). (Inquiry only; not an order confirmation).";
+      if (checkoutBtn) {
+        checkoutBtn.textContent = "💬 Inquire on WhatsApp for Current Availability";
+      }
+    } else {
+      waMsg = "Hi AIDigiTools! I want to order " + currentTool.name + " (" + planTitle + " - " + duration + ") for Rs. " + pricePkr.toLocaleString() + " PKR (~$" + priceUsd.toFixed(2) + " USD) via " + currentPaymentRail + ". Please share payment details and 15m delivery activation.";
+      if (checkoutBtn) {
+        checkoutBtn.textContent = "⚡ Complete Order on WhatsApp";
+      }
+    }
 
     if (checkoutBtn) {
       checkoutBtn.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waMsg);
@@ -2484,13 +2528,20 @@
         '<tr>' +
           '<th>Access Model</th>' +
           tools.map(function (t) {
-            return '<td style="text-align:center;"><span style="background:#F1F5F9; padding:0.2rem 0.6rem; border-radius:9999px; font-size:0.78rem; font-weight:600;">Shared Team Workspace</span></td>';
+            var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
+            var text = isHeld ? 'Direct Orders Paused' : 'Shared Team Workspace';
+            var bg = isHeld ? 'rgba(245,158,11,0.15)' : '#F1F5F9';
+            var color = isHeld ? '#d97706' : 'inherit';
+            return '<td style="text-align:center;"><span style="background:' + bg + '; color:' + color + '; padding:0.2rem 0.6rem; border-radius:9999px; font-size:0.78rem; font-weight:600;">' + text + '</span></td>';
           }).join('') +
         '</tr>' +
         '<tr>' +
           '<th>Delivery Target</th>' +
-          tools.map(function () {
-            return '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15–30 Minutes</td>';
+          tools.map(function (t) {
+            var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
+            return isHeld
+              ? '<td style="text-align:center; color:#d97706; font-weight:600;">⏸️ Paused (Inquire)</td>'
+              : '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15–30 Minutes</td>';
           }).join('') +
         '</tr>' +
         '<tr>' +
@@ -2508,8 +2559,12 @@
         '<tr>' +
           '<th>Action</th>' +
           tools.map(function (t) {
+            var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
+            var actionBtn = isHeld
+              ? '<a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20' + encodeURIComponent(t.name) + '.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem; background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center; font-size:0.8rem;">💬 Inquire</a>'
+              : '<button type="button" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem;" onclick="closeCompareModal(); openQuickOrderModal(\'' + t.slug + '\')">⚡ Quick Order</button>';
             return '<td style="text-align:center;">' +
-              '<button type="button" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem;" onclick="closeCompareModal(); openQuickOrderModal(\'' + t.slug + '\')">⚡ Quick Order</button>' +
+              actionBtn +
               '<a href="' + prefix + t.url + '" style="font-size:0.75rem; color:#4361EE; text-decoration:none; display:block;">Full Specs &rarr;</a>' +
             '</td>';
           }).join('') +

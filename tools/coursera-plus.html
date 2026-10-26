@@ -44,21 +44,43 @@
       "price": "8.00",
       "priceCurrency": "USD"
     },
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/OutOfStock",
     "url": "https://aidigitools.tech/tools/coursera-plus.html",
-    "priceValidUntil": "2027-12-31",
     "seller": {
+
       "@type": "Organization",
+
       "name": "AIDigiTools"
+
     },
+
     "hasMerchantReturnPolicy": {
+
+
       "@type": "MerchantReturnPolicy",
+
+
       "applicableCountry": "PK",
+
+
       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+
+
       "merchantReturnDays": 30,
+
+
       "returnMethod": "https://schema.org/ReturnOnline",
+
+
       "returnFees": "https://schema.org/FreeReturn",
-      "merchantReturnLink": "https://aidigitools.tech/policies.html"
+
+
+      "refundType": "https://schema.org/ExchangeRefund",
+
+
+      "merchantReturnLink": "https://aidigitools.tech/policies.html#refunds"
+
+
     }
   },
   "image": "https://aidigitools.tech/assets/images/coursera-plus.png",
@@ -199,7 +221,7 @@
     <section class="hero" style="text-align:left; padding:2rem 0;">
       <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
         <span class="badge">Coding & Professional Skills</span>
-        <span class="badge emerald">15-Min Delivery Target</span>
+        <span class="badge" style="background:#fef3c7; color:#92400e;">Orders On Hold</span>
         <span class="badge">30-Day Replacement Warranty</span>
       </div>
       <h1 style="font-size:2.2rem; font-weight:800; letter-spacing:-0.03em; margin-bottom:1rem; color:var(--text-primary);">Coursera Plus Annual Learning Subscription</h1>
@@ -210,6 +232,20 @@
 
     <!-- Pricing & Plans Section -->
     <section style="margin-top:2rem;">
+    <!-- Direct Orders Currently On Hold Banner -->
+    <div class="card" style="border:1px solid #f59e0b; background:rgba(245, 158, 11, 0.08); padding:1.25rem 1.5rem; border-radius:12px; margin-bottom:1.75rem;">
+      <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+        <span style="font-size:1.2rem;">⏸️</span>
+        <strong style="color:var(--text-primary); font-size:1.05rem;">Direct Orders Currently On Hold</strong>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin:0 0 0.5rem 0;">
+        Direct automated checkout and subscription fulfillment are currently paused for this service pending verification of secondary licensing and vendor distribution terms.
+      </p>
+      <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">
+        <strong>Notice:</strong> Inquiries submitted via WhatsApp are for stock and licensing inquiry only and do not constitute an order confirmation or binding sale.
+      </p>
+    </div>
+
       <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:1.25rem; color:var(--text-primary);">Available Subscription Tiers</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
         <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; border:1px solid var(--border-subtle); border-radius:12px; padding:1.5rem; background:var(--bg-surface);">
@@ -232,12 +268,13 @@
             </ul>
           </div>
           <div style="display:flex; flex-direction:column; gap:0.5rem;">
-            <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('coursera-plus')" style="width:100%;">
-              ⚡ Quick Order (Coursera Plus (12 Months))
-            </button>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Coursera Plus Learning%20(Coursera Plus (12 Months))%20for%20Rs%202200%20PKR%20/%20$8.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center;">
-              WhatsApp Checkout
+
+            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Coursera Plus" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center; display:block; padding:0.75rem 1rem; border-radius:8px; font-weight:600; text-decoration:none;">
+              💬 Inquire on WhatsApp for Current Availability
             </a>
+            <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.4rem; line-height:1.35; margin-bottom:0;">
+              Inquiries are for compliance &amp; stock verification only. An inquiry is not an order confirmation.
+            </p>
           </div>
         </div>
       </div>
@@ -287,7 +324,7 @@
         </div>
 
         <p style="margin-top: 1rem; margin-bottom: 0; font-size: 0.825rem; color: var(--text-muted); line-height: 1.5;">
-          <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, USDT). Direct official resale authorization from Coursera Inc is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty target.
+          <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, USDT). Direct official resale authorization from Coursera Inc is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
         </p>
       </div>
     </section>

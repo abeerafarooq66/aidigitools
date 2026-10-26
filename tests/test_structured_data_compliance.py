@@ -85,38 +85,55 @@ class TestStructuredDataCompliance(unittest.TestCase):
             product_blocks = [b for b in blocks if b.get("@type") == "Product" or (isinstance(b.get("@type"), list) and "Product" in b.get("@type"))]
             self.assertEqual(len(product_blocks), 1, f"Expected exactly 1 Product block in {rel}")
             prod = product_blocks[0]
-            
+
             # Name & Description
             self.assertIn("name", prod, f"Missing name in {rel}")
             self.assertIn("description", prod, f"Missing description in {rel}")
-            
+
             # Brand
             self.assertIn("brand", prod, f"Missing brand in {rel}")
             self.assertIsInstance(prod["brand"], dict)
             self.assertEqual(prod["brand"].get("@type"), "Brand")
             self.assertIn("name", prod["brand"])
-            
+
             # Image
             self.assertIn("image", prod, f"Missing image in {rel}")
             self.assertTrue(prod["image"].startswith("https://aidigitools.tech/assets/images/"))
-            
+
             # Offers
             self.assertIn("offers", prod, f"Missing offers in {rel}")
             offer = prod["offers"]
             self.assertEqual(offer.get("@type"), "Offer")
             self.assertIn("price", offer)
             self.assertEqual(offer.get("priceCurrency"), "PKR")
-            self.assertEqual(offer.get("availability"), "https://schema.org/InStock")
-            self.assertEqual(offer.get("priceValidUntil"), "2027-12-31")
-            
+            held_slugs = [
+                "tools/turnitin-student.html",
+                "tools/linkedin-premium.html",
+                "tools/netflix-premium.html",
+                "tools/spotify-premium.html",
+                "tools/coursera-plus.html"
+            ]
+            if rel in held_slugs:
+                self.assertEqual(offer.get("availability"), "https://schema.org/OutOfStock", f"Held product {rel} must have OutOfStock availability")
+            else:
+                self.assertEqual(offer.get("availability"), "https://schema.org/InStock", f"Active product {rel} must have InStock availability")
+
+            # priceValidUntil must be absent (no genuine maintained expiration date)
+            self.assertNotIn("priceValidUntil", offer, f"priceValidUntil must not be present in {rel}")
+
             # Seller & Return Policy
             self.assertIn("seller", offer)
             self.assertEqual(offer["seller"].get("@type"), "Organization")
             self.assertEqual(offer["seller"].get("name"), "AIDigiTools")
             self.assertIn("hasMerchantReturnPolicy", offer)
             policy = offer["hasMerchantReturnPolicy"]
-            self.assertEqual(policy.get("returnMethod"), "https://schema.org/ReturnOnline")
-            
+            self.assertEqual(policy.get("returnPolicyCategory"), "https://schema.org/MerchantReturnFiniteReturnWindow", f"Return window category missing in {rel}")
+            self.assertEqual(policy.get("merchantReturnDays"), 30, f"Return days must be 30 in {rel}")
+            self.assertEqual(policy.get("returnMethod"), "https://schema.org/ReturnOnline", f"Return method must be ReturnOnline in {rel}")
+            self.assertEqual(policy.get("returnFees"), "https://schema.org/FreeReturn", f"Return fees must be FreeReturn for replacement in {rel}")
+            self.assertEqual(policy.get("refundType"), "https://schema.org/ExchangeRefund", f"refundType must be ExchangeRefund (replacement only) in {rel}")
+            self.assertEqual(policy.get("merchantReturnLink"), "https://aidigitools.tech/policies.html#refunds", f"Missing or incorrect return link in {rel}")
+
             # SoftwareApplication properties
             self.assertEqual(prod.get("additionalType"), "https://schema.org/SoftwareApplication")
             self.assertEqual(prod.get("applicationCategory"), "SoftwareApplication")
@@ -154,7 +171,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
         self.assertEqual(ws.get("name"), "AIDigiTools")
         self.assertEqual(ws.get("url"), "https://aidigitools.tech/")
         self.assertIn("potentialAction", ws)
-        
+
         org_blocks = [b for b in blocks if b.get("@type") == "Organization"]
         self.assertEqual(len(org_blocks), 1)
         org = org_blocks[0]
@@ -228,6 +245,15 @@ class TestStructuredDataCompliance(unittest.TestCase):
             # Ensure no page has duplicate primary schemas
             for t in ["Product", "WebSite", "AboutPage", "ContactPage", "CollectionPage"]:
                 self.assertLessEqual(types.count(t), 1, f"Duplicate schema {t} on page {rel}")
+
+    def test_11_zero_misleading_monetary_return_markup(self):
+        """CRITICAL: Zero misleading monetary refund terms (FullRefund) and zero ReturnByMail or priceValidUntil."""
+        for rel, blocks in self.jsonld_by_file.items():
+            for b in blocks:
+                dumped = json.dumps(b)
+                self.assertNotIn("FullRefund", dumped, f"Misleading FullRefund monetary schema in {rel}")
+                self.assertNotIn("ReturnByMail", dumped, f"Misleading ReturnByMail physical shipping schema in {rel}")
+                self.assertNotIn("priceValidUntil", dumped, f"Unsupported priceValidUntil schema in {rel}")
 
 if __name__ == "__main__":
     unittest.main()

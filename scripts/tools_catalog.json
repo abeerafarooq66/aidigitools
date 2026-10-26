@@ -61,7 +61,7 @@
           "Full 365 days uninterrupted ad-free playback",
           "Includes YouTube Music Premium for 1 year",
           "Zero monthly renewal friction",
-          "Full 365-day replacement warranty guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Fixed term subscription; non-transferable",
         "badge": "Save 16%",
@@ -247,7 +247,7 @@
           "Full 12 months uninterrupted Pro access",
           "Unlimited Magic Studio AI tools & downloads",
           "Complete Brand Kit & 1TB cloud storage",
-          "Full 365-day replacement warranty protection"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual term with zero renewal hassles",
         "badge": "Save 70%",
@@ -309,7 +309,7 @@
           "Full 12 months uninterrupted Pro access",
           "Unlimited 4K exports & premium transitions",
           "100GB cloud project backup",
-          "365-day replacement guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Non-transferable annual license",
         "badge": "Save 48%",
@@ -451,7 +451,7 @@
           "Full 12 months access to entire Creative Cloud suite",
           "Monthly Firefly AI credit renewals",
           "100GB cloud asset synchronization",
-          "365-day replacement warranty support"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual license with uninterrupted activation",
         "badge": "Agency Value",
@@ -513,7 +513,7 @@
           "Full 365 days secure high-speed browsing",
           "Includes 1TB encrypted cloud storage",
           "Cross-platform apps (Windows, Mac, iOS, Android)",
-          "365-day replacement warranty coverage"
+          "30-day replacement warranty support"
         ],
         "limits": "Long-term privacy protection",
         "badge": "Save 47%",
@@ -575,7 +575,7 @@
           "Full 12 months unlimited VPN protection",
           "Includes Surfshark Antivirus & Alert monitoring",
           "Private search engine with zero logs",
-          "365-day replacement warranty"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual family cyber protection",
         "badge": "Best Value VPN",
@@ -681,7 +681,7 @@
           "Full 12 months uninterrupted Pro research",
           "All premium AI models unlocked",
           "Priority processing & zero search queue",
-          "365-day replacement warranty support"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual subscription",
         "badge": "Save 37%",
@@ -1105,7 +1105,7 @@
           "Full 365 days of uninterrupted Grammarly Premium",
           "Unlimited AI text suggestions & rewrites",
           "Complete browser, mobile & office app sync",
-          "365-day replacement warranty guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual license",
         "badge": "Save 50%",
@@ -1167,7 +1167,7 @@
           "Full 12 months uninterrupted paraphrasing & grammar",
           "Annual Plagiarism Checker scanning credits",
           "Chrome, Word, and Edge extensions included",
-          "365-day replacement warranty support"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual subscription",
         "badge": "Save 78%",
@@ -1405,7 +1405,7 @@
           "Full 365 days access to entire JetBrains product family",
           "Includes all major version upgrades during term",
           "Perpetual fallback license rights eligible",
-          "365-day replacement warranty guarantee"
+          "30-day replacement warranty support"
         ],
         "limits": "Annual developer license",
         "badge": "Save 40%",
@@ -1915,7 +1915,7 @@
     "category_key": "video",
     "category_label": "Video & Motion AI",
     "vendor": "HeyGen Inc.",
-    "description": "Fast video generation with 15 monthly credits \u2014 Standard video generation queue; fair use credit limits",
+    "description": "Fast video generation with 15 monthly credits — Standard video generation queue; fair use credit limits",
     "official_domain": "heygen.com",
     "official_url": "https://www.heygen.com/",
     "url": "tools/heygen-ai.html",
@@ -1965,7 +1965,7 @@
     "category_key": "coding",
     "category_label": "Coding & Productivity",
     "vendor": "Gamma Tech, Inc.",
-    "description": "Unlimited AI deck, document, and webpage generation \u2014 Subject to Gamma fair use generation limits",
+    "description": "Unlimited AI deck, document, and webpage generation — Subject to Gamma fair use generation limits",
     "official_domain": "gamma.app",
     "official_url": "https://gamma.app/",
     "url": "tools/gamma-app.html",
@@ -2015,7 +2015,7 @@
     "category_key": "coding",
     "category_label": "Coding & Automation",
     "vendor": "n8n GmbH",
-    "description": "Up to 2,500 workflow executions per month \u2014 Cloud starter instance quota; single environment",
+    "description": "Up to 2,500 workflow executions per month — Cloud starter instance quota; single environment",
     "official_domain": "n8n.io",
     "official_url": "https://n8n.io/",
     "url": "tools/n8n-automation.html",
@@ -2065,7 +2065,7 @@
     "category_key": "video",
     "category_label": "Video & Motion AI",
     "vendor": "vidIQ Inc.",
-    "description": "50 AI Video Title, Description & Tag recommendations daily \u2014 Linked to 1 active YouTube channel",
+    "description": "50 AI Video Title, Description & Tag recommendations daily — Linked to 1 active YouTube channel",
     "official_domain": "vidiq.com",
     "official_url": "https://vidiq.com/",
     "url": "tools/vidiq-boost.html",
@@ -2115,7 +2115,7 @@
     "category_key": "coding",
     "category_label": "Coding & Skills",
     "vendor": "Coursera Inc.",
-    "description": "Unlimited access to 7,000+ courses and Specializations \u2014 Excludes select degree programs and premium masterclasses",
+    "description": "Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses",
     "official_domain": "coursera.org",
     "official_url": "https://www.coursera.org/",
     "url": "tools/coursera-plus.html",
@@ -2165,7 +2165,7 @@
     "category_key": "coding",
     "category_label": "Coding & AI Assistants",
     "vendor": "Google LLC",
-    "description": "Gemini 1.5 Pro with 2-Million token context window \u2014 Fair usage policy applies to extreme burst inference",
+    "description": "Gemini 1.5 Pro with 2-Million token context window — Fair usage policy applies to extreme burst inference",
     "official_domain": "gemini.google.com",
     "official_url": "https://gemini.google.com/advanced",
     "url": "tools/google-ai-ultra.html",
@@ -2215,7 +2215,7 @@
     "category_key": "coding",
     "category_label": "Coding & Developer Tools",
     "vendor": "Lovable Inc.",
-    "description": "Natural language to production web applications \u2014 Subject to Lovable monthly token allocation",
+    "description": "Natural language to production web applications — Subject to Lovable monthly token allocation",
     "official_domain": "lovable.dev",
     "official_url": "https://lovable.dev/",
     "url": "tools/lovable-ai.html",
@@ -2265,7 +2265,7 @@
     "category_key": "video",
     "category_label": "Streaming & Entertainment",
     "vendor": "Spotify AB",
-    "description": "100% Ad-free uninterrupted music playback \u2014 Personal account activation; non-commercial playback",
+    "description": "100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback",
     "official_domain": "spotify.com",
     "official_url": "https://www.spotify.com/",
     "url": "tools/spotify-premium.html",
@@ -2315,7 +2315,7 @@
     "category_key": "coding",
     "category_label": "Coding & Productivity",
     "vendor": "Microsoft Corporation",
-    "description": "Full desktop Word, Excel, PowerPoint, Outlook & Access \u2014 Standard personal OneDrive quota per member seat",
+    "description": "Full desktop Word, Excel, PowerPoint, Outlook & Access — Standard personal OneDrive quota per member seat",
     "official_domain": "microsoft.com",
     "official_url": "https://www.microsoft.com/microsoft-365",
     "url": "tools/microsoft-office-365.html",
@@ -2365,7 +2365,7 @@
     "category_key": "coding",
     "category_label": "Coding & Productivity",
     "vendor": "Microsoft Corporation",
-    "description": "Genuine 25-digit alphanumeric digital retail activation key \u2014 Single machine activation; binds to hardware motherboard ID",
+    "description": "Genuine 25-digit alphanumeric digital retail activation key — Single machine activation; binds to hardware motherboard ID",
     "official_domain": "microsoft.com",
     "official_url": "https://www.microsoft.com/windows",
     "url": "tools/windows-11-pro.html",
@@ -2415,7 +2415,7 @@
     "category_key": "video",
     "category_label": "Streaming & Entertainment",
     "vendor": "Amazon.com Inc.",
-    "description": "Full 4K Ultra HD and HDR video streaming \u2014 Single concurrent stream per allocated screen profile",
+    "description": "Full 4K Ultra HD and HDR video streaming — Single concurrent stream per allocated screen profile",
     "official_domain": "primevideo.com",
     "official_url": "https://www.primevideo.com/",
     "url": "tools/prime-video.html",
@@ -2465,7 +2465,7 @@
     "category_key": "coding",
     "category_label": "Coding & Productivity",
     "vendor": "TradingView Inc.",
-    "description": "Up to 8 synchronized charts per single layout \u2014 Personal financial charting; single active session",
+    "description": "Up to 8 synchronized charts per single layout — Personal financial charting; single active session",
     "official_domain": "tradingview.com",
     "official_url": "https://www.tradingview.com/",
     "url": "tools/tradingview-pro.html",
@@ -2515,7 +2515,7 @@
     "category_key": "coding",
     "category_label": "Coding & Productivity",
     "vendor": "Turnitin, LLC",
-    "description": "Direct similarity index generation with non-repository option \u2014 Non-repository class enrollment; up to 30 submissions/month",
+    "description": "Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month",
     "official_domain": "turnitin.com",
     "official_url": "https://www.turnitin.com/",
     "url": "tools/turnitin-student.html",
