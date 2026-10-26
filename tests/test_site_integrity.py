@@ -11,7 +11,7 @@ class TestSiteIntegrity(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.html_files = sorted([p for p in ROOT.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)])
+        cls.html_files = sorted([p for p in ROOT.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts) and p.name != "404.html"])
         cls.tool_files = sorted(list(ROOT.glob("tools/*.html")))
         cls.guide_files = sorted(list(ROOT.glob("guides/*.html")) + list(ROOT.glob("compare/*.html")) + list(ROOT.glob("best/*.html")))
 
@@ -320,6 +320,16 @@ class TestSiteIntegrity(unittest.TestCase):
     def test_50_master_link_graph_integrity_flag(self):
         res = check_link_graph(ROOT, strict=True)
         self.assertTrue(res["passed"])
+
+    def test_51_custom_404_page_integrity(self):
+        page_404 = ROOT / "404.html"
+        self.assertTrue(page_404.is_file(), "Custom 404.html must exist")
+        content = page_404.read_text(encoding="utf-8")
+        self.assertIn("noindex", content, "404 page must be marked noindex")
+        self.assertIn("assets/style.css", content)
+        self.assertIn("03326861112", content)
+        h1s = re.findall(r'<h1[^>]*>(.*?)</h1>', content, re.I)
+        self.assertEqual(len(h1s), 1, "404 page must have exactly one H1")
 
 if __name__ == "__main__":
     unittest.main()

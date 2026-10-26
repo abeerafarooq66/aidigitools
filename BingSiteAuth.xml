@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!-- Bing Webmaster Tools XML Site Authentication Template for aidigitools.tech -->
+<!-- Replace YOUR_BING_AUTH_CODE with your 32-character authentication code from Bing Webmaster Tools -->
+<users>
+  <user>YOUR_BING_AUTH_CODE</user>
+</users>

@@ -1,8 +1,17 @@
 # robots.txt for aidigitools.tech
+# Google Search Central & Bing Webmaster Compliant
 User-agent: *
 Allow: /
+Allow: /assets/
 Disallow: /admin/
 Disallow: /private/
+# Prevent query-parameter combinations from creating duplicate indexable URLs
+Disallow: /*?*q=
+Disallow: /*?*search=
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*category=
+Disallow: /*?*price=
 
 # Major Search Engine Crawlers
 User-agent: Googlebot
