@@ -107,7 +107,7 @@
   }
   </script>
   <script type="application/ld+json">
-  {
+    {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -116,7 +116,15 @@
         "name": "What makes n8n better than Zapier?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "n8n supports complex branching, loops, native AI agent nodes, and custom JavaScript transformations with higher execution limits."
+          "text": "n8n provides full access to 400+ integration nodes, allows complex branching and inline JavaScript/Python code execution, and avoids restrictive tier pricing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do monthly workflow executions work on n8n Cloud Starter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Cloud Starter plan includes 2,500 workflow executions per month. Each time an automated trigger or webhook fires and completes its pipeline, one execution is counted."
         }
       },
       {
@@ -124,7 +132,15 @@
         "name": "How is the account delivered?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Your dedicated n8n cloud credentials are sent to your WhatsApp after payment verification."
+          "text": "Direct access credentials or workspace invite links are delivered electronically within 15 minutes via WhatsApp concierge upon payment confirmation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I connect n8n with local databases and custom internal APIs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, n8n features native nodes for PostgreSQL, MySQL, Redis, MongoDB, and generic HTTP Request nodes with custom authentication headers for internal APIs."
         }
       },
       {
@@ -132,7 +148,7 @@
         "name": "Is technical support included?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We provide setup assistance and warranty replacement if your instance encounters access issues."
+          "text": "Yes, all plans include our 30-day replacement warranty. If account credentials fail, our concierge handles replacement via WhatsApp. Refunds are not provided once credentials have been issued."
         }
       }
     ]
@@ -243,7 +259,35 @@
       </div>
     </section>
 
-    <!-- Phase 6 Verified Product Specifications & Vendor Reference Standard -->
+
+    <!-- n8n Workflow Automation Architecture & Capabilities -->
+    <section style="margin-top: 3.5rem;">
+      <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1.25rem; color: var(--text-primary);">
+        n8n Cloud Automation Architecture &amp; Integration Engine
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div class="card" style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; background: var(--bg-surface);">
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">400+ Pre-Built Integration Nodes</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Orchestrate data between enterprise tools including GitHub, Slack, Google Sheets, PostgreSQL, Stripe, and Telegram. n8n supports webhook triggers, polling listeners, and authenticated API payloads without third-party connector fees.
+          </p>
+        </div>
+        <div class="card" style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; background: var(--bg-surface);">
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Custom Code Nodes &amp; Data Transformations</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Execute custom JavaScript or Python directly within your automated workflows. Parse complex nested JSON structures, run regular expressions, and implement custom business logic with full access to standard programming libraries.
+          </p>
+        </div>
+        <div class="card" style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; background: var(--bg-surface);">
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">AI Agent &amp; LangChain Orchestration</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Build autonomous multi-agent pipelines with native LangChain nodes. Connect OpenAI GPT-4o, Anthropic Claude, or local Ollama LLMs directly to your automation canvas with memory buffers and vector database retrieval tools.
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- Phase 6 Verified Product Specifications & Vendor Reference Standard -->
     <section id="phase6-spec-block" style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
       <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 2rem; box-shadow: var(--shadow-sm);">
         <h2 style="font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
@@ -294,21 +338,29 @@
       </div>
     </section>
 
-    <!-- Frequently Asked Questions -->
+        <!-- Frequently Asked Questions -->
     <section style="margin-top:3.5rem; margin-bottom:4rem;">
       <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:1.25rem; color:var(--text-primary);">Frequently Asked Questions</h2>
       <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:12px; padding:1.5rem 2rem; box-shadow:var(--shadow-sm);">
       <div style="border-bottom:1px solid var(--border-subtle); padding:1.25rem 0;">
         <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">What makes n8n better than Zapier?</h3>
-        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">n8n supports complex branching, loops, native AI agent nodes, and custom JavaScript transformations with higher execution limits.</p>
+        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">n8n provides full access to 400+ integration nodes, allows complex branching and inline JavaScript/Python code execution, and avoids restrictive tier pricing.</p>
+      </div>
+      <div style="border-bottom:1px solid var(--border-subtle); padding:1.25rem 0;">
+        <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">How do monthly workflow executions work on n8n Cloud Starter?</h3>
+        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">The Cloud Starter plan includes 2,500 workflow executions per month. Each time an automated trigger or webhook fires and completes its pipeline, one execution is counted.</p>
       </div>
       <div style="border-bottom:1px solid var(--border-subtle); padding:1.25rem 0;">
         <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">How is the account delivered?</h3>
-        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">Your dedicated n8n cloud credentials are sent to your WhatsApp after payment verification.</p>
+        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">Direct access credentials or workspace invite links are delivered electronically within 15 minutes via WhatsApp concierge upon payment confirmation.</p>
+      </div>
+      <div style="border-bottom:1px solid var(--border-subtle); padding:1.25rem 0;">
+        <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Can I connect n8n with local databases and custom internal APIs?</h3>
+        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">Yes, n8n features native nodes for PostgreSQL, MySQL, Redis, MongoDB, and generic HTTP Request nodes with custom authentication headers for internal APIs.</p>
       </div>
       <div style="border-bottom:1px solid var(--border-subtle); padding:1.25rem 0;">
         <h3 style="font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Is technical support included?</h3>
-        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">We provide setup assistance and warranty replacement if your instance encounters access issues.</p>
+        <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin:0;">Yes, all plans include our 30-day replacement warranty. If account credentials fail, our concierge handles replacement via WhatsApp. Refunds are not provided once credentials have been issued.</p>
       </div>
       </div>
     </section>
@@ -373,7 +425,7 @@
       </div>
       <button type="button" class="cart-drawer-close" onclick="closeQuickOrderModal()" aria-label="Close Drawer">&times;</button>
     </div>
-    
+
     <div class="cart-drawer-body">
       <div class="cart-item-preview">
         <img id="drawerItemIcon" src="../assets/product-logos/n8n-automation.svg" alt="n8n Workflow Automation Icon" width="48" height="48" class="cart-item-icon" loading="lazy" decoding="async">
