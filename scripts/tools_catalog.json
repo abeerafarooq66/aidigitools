@@ -1947,9 +1947,15 @@
     "popularity_score": 92,
     "featured": true,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "High search volume and strong video creator conversion demand across Pakistani freelancers and agencies.",
-    "popularity_rank": 8
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 8,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "gamma-app": {
     "slug": "gamma-app",
@@ -1991,9 +1997,15 @@
     "popularity_score": 88,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Top trending AI productivity suite for university presentations, startups, and agency pitch decks.",
-    "popularity_rank": 20
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 20,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "n8n-automation": {
     "slug": "n8n-automation",
@@ -2035,9 +2047,15 @@
     "popularity_score": 84,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Surging developer and business automation interest replacing expensive Zapier plans.",
-    "popularity_rank": 36
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 36,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "vidiq-boost": {
     "slug": "vidiq-boost",
@@ -2079,9 +2097,15 @@
     "popularity_score": 87,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Essential utility for Pakistani YouTube content creators and digital marketing agencies.",
-    "popularity_rank": 24
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 24,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "coursera-plus": {
     "slug": "coursera-plus",
@@ -2123,9 +2147,15 @@
     "popularity_score": 90,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "High domestic demand among software engineering students and career upskillers facing card declines.",
-    "popularity_rank": 13
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 13,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "google-ai-ultra": {
     "slug": "google-ai-ultra",
@@ -2167,9 +2197,15 @@
     "popularity_score": 89,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Heavy demand from data scientists and researchers needing the 2M context window.",
-    "popularity_rank": 17
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 17,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "lovable-ai": {
     "slug": "lovable-ai",
@@ -2211,9 +2247,15 @@
     "popularity_score": 93,
     "featured": true,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Rapidly growing viral AI web development platform for Pakistani developers and agencies.",
-    "popularity_rank": 7
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 7,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "spotify-premium": {
     "slug": "spotify-premium",
@@ -2255,9 +2297,15 @@
     "popularity_score": 85,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Massive everyday streaming demand across desktop and mobile users.",
-    "popularity_rank": 32
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 32,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "microsoft-office-365": {
     "slug": "microsoft-office-365",
@@ -2299,9 +2347,15 @@
     "popularity_score": 91,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Ubiquitous essential software for freelancers, remote corporate staff, and students.",
-    "popularity_rank": 10
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 10,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "windows-11-pro": {
     "slug": "windows-11-pro",
@@ -2343,9 +2397,15 @@
     "popularity_score": 86,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Consistent ongoing demand for clean OS installations on freelance developer workstations.",
-    "popularity_rank": 27
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 27,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "prime-video": {
     "slug": "prime-video",
@@ -2387,9 +2447,15 @@
     "popularity_score": 83,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "High-demand streaming alternative alongside Netflix with localized mobile viewing.",
-    "popularity_rank": 39
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 39,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "tradingview-pro": {
     "slug": "tradingview-pro",
@@ -2431,9 +2497,15 @@
     "popularity_score": 88,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "Very active Pakistani crypto and forex day-trading community unable to pay international cards.",
-    "popularity_rank": 21
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 21,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   },
   "turnitin-student": {
     "slug": "turnitin-student",
@@ -2475,8 +2547,14 @@
     "popularity_score": 91,
     "featured": false,
     "is_new_arrival": true,
-    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
-    "ranking_reason": "High domestic university student and freelance thesis researcher requirement.",
-    "popularity_rank": 11
+    "ranking_source": "Curated competitor benchmark & estimated category demand (unverified internal sales history)",
+    "ranking_reason": "Curated Popular Pick based on competitor catalog availability and software demand. Official resale authorization is unverified; delivered via independent broker access.",
+    "popularity_rank": 11,
+    "resale_authorization_status": "unverified",
+    "supplier_legitimacy": "third_party_independent_broker",
+    "official_vendor_partnership": false,
+    "account_sharing_restriction_disclosed": true,
+    "pricing_verification_status": "verified_against_competitor_market_benchmarks",
+    "sales_evidence_status": "pre_order_unverified_sales"
   }
 }
