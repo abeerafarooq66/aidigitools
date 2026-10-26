@@ -1,6 +1,8 @@
 # robots.txt for aidigitools.tech
+# Google Search Central & Bing Webmaster Compliant
 User-agent: *
 Allow: /
+Allow: /assets/
 Disallow: /admin/
 Disallow: /private/
 
