@@ -1986,6 +1986,9 @@
       btn.classList.toggle('active', isSelected);
       btn.textContent = isSelected ? '✓ Added' : '⚖️ Compare';
       btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      var tool = (typeof TOOLS_DATA !== 'undefined') ? TOOLS_DATA[slug] : null;
+      var toolName = tool ? tool.name : slug;
+      btn.setAttribute('aria-label', (isSelected ? 'Remove ' : 'Compare ') + toolName + (isSelected ? ' from comparison' : ' with other tools'));
     });
 
     var dock = document.getElementById('compareDock');
@@ -2129,6 +2132,16 @@
         window.applyFilters();
       });
     }
+
+    // Auto-scroll focused category pill into view when container has horizontal overflow
+    document.querySelectorAll('.cat-pill-btn').forEach(function (pill) {
+      pill.addEventListener('focus', function () {
+        var container = pill.closest('.category-filter-pills');
+        if (container && container.scrollWidth > container.clientWidth) {
+          pill.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        }
+      });
+    });
 
     // Check URL params on load to restore filter state without extra page load
     if (window.location.search) {
