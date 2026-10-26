@@ -22,7 +22,7 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
                     rel = os.path.relpath(os.path.join(root, f), WORKSPACE_DIR).replace("\\", "/")
                     cls.html_files.append(rel)
         cls.html_files.sort()
-        assert len(cls.html_files) == 53
+        assert len(cls.html_files) == 66
 
     def _read_file(self, rel):
         fpath = os.path.join(WORKSPACE_DIR, rel.replace("/", "\\"))
@@ -45,7 +45,7 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
     def test_02_tool_pages_official_documentation_citations(self):
         """All 36 tool pages must link to official vendor documentation with rel='noopener noreferrer nofollow'."""
         tool_pages = [f for f in self.html_files if f.startswith("tools/")]
-        self.assertEqual(len(tool_pages), 36)
+        self.assertEqual(len(tool_pages), 49)
         
         vendor_domains = [
             "openai.com", "anthropic.com", "midjourney.com", "cursor.com", "adobe.com", "canva.com",
@@ -53,7 +53,8 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
             "replit.com", "figma.com", "notion.so", "nordvpn.com", "surfshark.com", "elevenlabs.io",
             "klingai.com", "runwayml.com", "suno.com", "udio.com", "semrush.com", "grammarly.com",
             "netflix.com", "youtube.com", "quillbot.com", "freepik.com", "envato.com", "linkedin.com", "x.ai",
-            "deepmind.google", "leonardo.ai", "hailuoai.video"
+            "deepmind.google", "leonardo.ai", "hailuoai.video", "heygen.com", "gamma.app", "n8n.io", "vidiq.com",
+            "coursera.org", "lovable.dev", "spotify.com", "microsoft.com", "primevideo.com", "tradingview.com", "turnitin.com"
         ]
         for rel in tool_pages:
             c = self._read_file(rel)

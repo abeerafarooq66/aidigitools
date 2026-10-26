@@ -24,7 +24,7 @@ class TestGoogleSearchVisibility(unittest.TestCase):
                     rel = os.path.relpath(os.path.join(root, f), WORKSPACE_DIR).replace("\\", "/")
                     cls.html_files.append(rel)
         cls.html_files.sort()
-        assert len(cls.html_files) == 53
+        assert len(cls.html_files) == 66
 
     def _read_file(self, rel):
         fpath = os.path.join(WORKSPACE_DIR, rel.replace("/", "\\"))
@@ -39,13 +39,13 @@ class TestGoogleSearchVisibility(unittest.TestCase):
         root = tree.getroot()
         ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
         urls = [elem.text for elem in root.findall('.//sm:loc', ns)]
-        self.assertEqual(len(urls), 52)
+        self.assertEqual(len(urls), 65)
         self.assertIn("https://aidigitools.tech/", urls)
         self.assertFalse(any("404" in u for u in urls))
         
         # Check lastmod on all entries
         lastmods = [elem.text for elem in root.findall('.//sm:lastmod', ns)]
-        self.assertEqual(len(lastmods), 52)
+        self.assertEqual(len(lastmods), 65)
         for lm in lastmods:
             self.assertTrue(re.match(r'^\d{4}-\d{2}-\d{2}$', lm), f"Invalid lastmod date format: {lm}")
 

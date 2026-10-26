@@ -32,10 +32,10 @@ class TestPhase15FullRegression(unittest.TestCase):
     def test_stage_b_architecture_and_content_model(self):
         """Stage B: Verify 53 published HTML routes and logical 4-tier directory hierarchy."""
         self.assertEqual(
-            len(self.all_html_files), 53,
+            len(self.all_html_files), 66,
             f"Expected exactly 53 published HTML pages, found {len(self.all_html_files)}."
         )
-        self.assertEqual(len(self.tool_files), 36, f"Expected 36 tool pages, found {len(self.tool_files)}.")
+        self.assertEqual(len(self.tool_files), 49, f"Expected 36 tool pages, found {len(self.tool_files)}.")
         self.assertEqual(len(self.category_files), 4, f"Expected 4 category hubs, found {len(self.category_files)}.")
 
     def test_stage_c_brand_and_ui_ux_redesign(self):

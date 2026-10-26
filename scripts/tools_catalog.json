@@ -71,7 +71,13 @@
     "starting_price_pkr": 750,
     "starting_price_usd": 2.8,
     "starting_price_display": "From Rs. 750 PKR (~$2.80 USD)",
-    "total_plans": 3
+    "total_plans": 3,
+    "popularity_score": 85,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 28
   },
   "chatgpt-plus": {
     "slug": "chatgpt-plus",
@@ -127,7 +133,13 @@
     "starting_price_pkr": 2300,
     "starting_price_usd": 8.0,
     "starting_price_display": "From Rs. 2,300 PKR (~$8.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 99,
+    "featured": true,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 1
   },
   "claude-pro": {
     "slug": "claude-pro",
@@ -183,7 +195,13 @@
     "starting_price_pkr": 2500,
     "starting_price_usd": 9.0,
     "starting_price_display": "From Rs. 2,500 PKR (~$9.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 98,
+    "featured": true,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 2
   },
   "canva-pro": {
     "slug": "canva-pro",
@@ -239,7 +257,13 @@
     "starting_price_pkr": 600,
     "starting_price_usd": 2.5,
     "starting_price_display": "From Rs. 600 PKR (~$2.50 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 96,
+    "featured": true,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 3
   },
   "capcut-pro": {
     "slug": "capcut-pro",
@@ -295,7 +319,13 @@
     "starting_price_pkr": 950,
     "starting_price_usd": 3.5,
     "starting_price_display": "From Rs. 950 PKR (~$3.50 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 95,
+    "featured": true,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 4
   },
   "midjourney": {
     "slug": "midjourney",
@@ -369,7 +399,13 @@
     "starting_price_pkr": 1800,
     "starting_price_usd": 6.5,
     "starting_price_display": "From Rs. 1,800 PKR (~$6.50 USD)",
-    "total_plans": 3
+    "total_plans": 3,
+    "popularity_score": 94,
+    "featured": true,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 5
   },
   "adobe-creative-cloud": {
     "slug": "adobe-creative-cloud",
@@ -425,7 +461,13 @@
     "starting_price_pkr": 1400,
     "starting_price_usd": 5.5,
     "starting_price_display": "From Rs. 1,400 PKR (~$5.50 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 87,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 22
   },
   "nordvpn": {
     "slug": "nordvpn",
@@ -481,7 +523,13 @@
     "starting_price_pkr": 850,
     "starting_price_usd": 3.0,
     "starting_price_display": "From Rs. 850 PKR (~$3.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 83,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 37
   },
   "surfshark-vpn": {
     "slug": "surfshark-vpn",
@@ -537,7 +585,13 @@
     "starting_price_pkr": 800,
     "starting_price_usd": 3.0,
     "starting_price_display": "From Rs. 800 PKR (~$3.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 83,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 38
   },
   "cursor-pro": {
     "slug": "cursor-pro",
@@ -575,7 +629,13 @@
     "starting_price_pkr": 3800,
     "starting_price_usd": 13.5,
     "starting_price_display": "From Rs. 3,800 PKR (~$13.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 94,
+    "featured": true,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 6
   },
   "perplexity-pro": {
     "slug": "perplexity-pro",
@@ -631,7 +691,13 @@
     "starting_price_pkr": 2200,
     "starting_price_usd": 8.0,
     "starting_price_display": "From Rs. 2,200 PKR (~$8.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 90,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 12
   },
   "elevenlabs-creator": {
     "slug": "elevenlabs-creator",
@@ -687,7 +753,13 @@
     "starting_price_pkr": 2800,
     "starting_price_usd": 10.0,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 89,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 14
   },
   "deepseek-pro": {
     "slug": "deepseek-pro",
@@ -725,7 +797,13 @@
     "starting_price_pkr": 1100,
     "starting_price_usd": 4.0,
     "starting_price_display": "From Rs. 1,100 PKR (~$4.00 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 89,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 15
   },
   "netflix-premium": {
     "slug": "netflix-premium",
@@ -781,7 +859,13 @@
     "starting_price_pkr": 1100,
     "starting_price_usd": 4.0,
     "starting_price_display": "From Rs. 1,100 PKR (~$4.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 85,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 29
   },
   "suno-ai": {
     "slug": "suno-ai",
@@ -819,7 +903,13 @@
     "starting_price_pkr": 2600,
     "starting_price_usd": 9.5,
     "starting_price_display": "From Rs. 2,600 PKR (~$9.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 81,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 43
   },
   "runway-gen3": {
     "slug": "runway-gen3",
@@ -875,7 +965,13 @@
     "starting_price_pkr": 1800,
     "starting_price_usd": 6.5,
     "starting_price_display": "From Rs. 1,800 PKR (~$6.50 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 89,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 16
   },
   "semrush-guru": {
     "slug": "semrush-guru",
@@ -913,7 +1009,13 @@
     "starting_price_pkr": 2500,
     "starting_price_usd": 9.0,
     "starting_price_display": "From Rs. 2,500 PKR (~$9.00 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 85,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 30
   },
   "notion-business": {
     "slug": "notion-business",
@@ -951,7 +1053,13 @@
     "starting_price_pkr": 1400,
     "starting_price_usd": 5.0,
     "starting_price_display": "From Rs. 1,400 PKR (~$5.00 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 86,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 25
   },
   "grammarly-pro": {
     "slug": "grammarly-pro",
@@ -1007,7 +1115,13 @@
     "starting_price_pkr": 750,
     "starting_price_usd": 2.8,
     "starting_price_display": "From Rs. 750 PKR (~$2.80 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 80,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 45
   },
   "quillbot-premium": {
     "slug": "quillbot-premium",
@@ -1063,7 +1177,13 @@
     "starting_price_pkr": 1600,
     "starting_price_usd": 5.8,
     "starting_price_display": "From Rs. 1,600 PKR (~$5.80 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 80,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 46
   },
   "github-copilot": {
     "slug": "github-copilot",
@@ -1101,7 +1221,13 @@
     "starting_price_pkr": 1500,
     "starting_price_usd": 5.5,
     "starting_price_display": "From Rs. 1,500 PKR (~$5.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 88,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 18
   },
   "figma-pro": {
     "slug": "figma-pro",
@@ -1139,7 +1265,13 @@
     "starting_price_pkr": 1800,
     "starting_price_usd": 6.5,
     "starting_price_display": "From Rs. 1,800 PKR (~$6.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 86,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 26
   },
   "envato-elements": {
     "slug": "envato-elements",
@@ -1177,7 +1309,13 @@
     "starting_price_pkr": 2600,
     "starting_price_usd": 9.5,
     "starting_price_display": "From Rs. 2,600 PKR (~$9.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 82,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 40
   },
   "freepik-premium": {
     "slug": "freepik-premium",
@@ -1215,7 +1353,13 @@
     "starting_price_pkr": 1800,
     "starting_price_usd": 6.5,
     "starting_price_display": "From Rs. 1,800 PKR (~$6.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 82,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 41
   },
   "jetbrains-all": {
     "slug": "jetbrains-all",
@@ -1271,7 +1415,13 @@
     "starting_price_pkr": 2500,
     "starting_price_usd": 9.0,
     "starting_price_display": "From Rs. 2,500 PKR (~$9.00 USD)",
-    "total_plans": 2
+    "total_plans": 2,
+    "popularity_score": 84,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 33
   },
   "replit-core": {
     "slug": "replit-core",
@@ -1309,7 +1459,13 @@
     "starting_price_pkr": 2800,
     "starting_price_usd": 10.0,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 84,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 34
   },
   "linkedin-premium": {
     "slug": "linkedin-premium",
@@ -1347,7 +1503,13 @@
     "starting_price_pkr": 1500,
     "starting_price_usd": 5.5,
     "starting_price_display": "From Rs. 1,500 PKR (~$5.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 80,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 47
   },
   "gemini-advanced": {
     "slug": "gemini-advanced",
@@ -1385,7 +1547,13 @@
     "starting_price_pkr": 1200,
     "starting_price_usd": 4.5,
     "starting_price_display": "From Rs. 1,200 PKR (~$4.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 91,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 9
   },
   "grok-ai": {
     "slug": "grok-ai",
@@ -1423,7 +1591,13 @@
     "starting_price_pkr": 1100,
     "starting_price_usd": 4.0,
     "starting_price_display": "From Rs. 1,100 PKR (~$4.00 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 85,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 31
   },
   "kling-ai": {
     "slug": "kling-ai",
@@ -1461,7 +1635,13 @@
     "starting_price_pkr": 700,
     "starting_price_usd": 2.5,
     "starting_price_display": "From Rs. 700 PKR (~$2.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 88,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 19
   },
   "leonardo-ai": {
     "slug": "leonardo-ai",
@@ -1499,7 +1679,13 @@
     "starting_price_pkr": 1300,
     "starting_price_usd": 4.8,
     "starting_price_display": "From Rs. 1,300 PKR (~$4.80 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 87,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 23
   },
   "minimax-ai": {
     "slug": "minimax-ai",
@@ -1537,7 +1723,13 @@
     "starting_price_pkr": 1600,
     "starting_price_usd": 5.8,
     "starting_price_display": "From Rs. 1,600 PKR (~$5.80 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 82,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 42
   },
   "udio-ai": {
     "slug": "udio-ai",
@@ -1575,7 +1767,13 @@
     "starting_price_pkr": 2800,
     "starting_price_usd": 10.0,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 81,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 44
   },
   "google-veo": {
     "slug": "google-veo",
@@ -1613,7 +1811,13 @@
     "starting_price_pkr": 1900,
     "starting_price_usd": 6.8,
     "starting_price_display": "From Rs. 1,900 PKR (~$6.80 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 84,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 35
   },
   "chatgpt-codex": {
     "slug": "chatgpt-codex",
@@ -1651,7 +1855,13 @@
     "starting_price_pkr": 600,
     "starting_price_usd": 2.5,
     "starting_price_display": "From Rs. 600 PKR (~$2.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 78,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 48
   },
   "claude-artifacts": {
     "slug": "claude-artifacts",
@@ -1689,6 +1899,584 @@
     "starting_price_pkr": 1200,
     "starting_price_usd": 4.5,
     "starting_price_display": "From Rs. 1,200 PKR (~$4.50 USD)",
-    "total_plans": 1
+    "total_plans": 1,
+    "popularity_score": 78,
+    "featured": false,
+    "is_new_arrival": false,
+    "ranking_source": "Domestic order conversion & verified multi-channel demand",
+    "ranking_reason": "Established core product with proven checkout volume and high retention.",
+    "popularity_rank": 49
+  },
+  "heygen-ai": {
+    "slug": "heygen-ai",
+    "name": "HeyGen AI Video Avatar",
+    "brand": "HeyGen",
+    "brand_id": "heygen",
+    "category_key": "video",
+    "category_label": "Video & Motion AI",
+    "vendor": "HeyGen Inc.",
+    "description": "Fast video generation with 15 monthly credits \u2014 Standard video generation queue; fair use credit limits",
+    "official_domain": "heygen.com",
+    "official_url": "https://www.heygen.com/",
+    "url": "tools/heygen-ai.html",
+    "icon": "assets/product-logos/heygen-ai.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-HEYGEN-CREATOR-1M",
+        "name": "Creator Plan (1 Month)",
+        "plan_type": "Creator",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Profile",
+        "price_pkr": 4200,
+        "price_usd": 15.0,
+        "features": [
+          "Fast video generation with 15 monthly credits",
+          "Over 100+ realistic public AI avatars",
+          "Auto voice clone & multi-language translation",
+          "1080p full HD export with commercial license"
+        ],
+        "limits": "Standard video generation queue; fair use credit limits",
+        "badge": "High Demand",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 4200,
+    "starting_price_usd": 15.0,
+    "starting_price_display": "Rs. 4,200 PKR",
+    "total_plans": 1,
+    "popularity_score": 92,
+    "featured": true,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "High search volume and strong video creator conversion demand across Pakistani freelancers and agencies.",
+    "popularity_rank": 8
+  },
+  "gamma-app": {
+    "slug": "gamma-app",
+    "name": "Gamma App AI Presentations",
+    "brand": "Gamma",
+    "brand_id": "gamma",
+    "category_key": "coding",
+    "category_label": "Coding & Productivity",
+    "vendor": "Gamma Tech, Inc.",
+    "description": "Unlimited AI deck, document, and webpage generation \u2014 Subject to Gamma fair use generation limits",
+    "official_domain": "gamma.app",
+    "official_url": "https://gamma.app/",
+    "url": "tools/gamma-app.html",
+    "icon": "assets/product-logos/gamma-app.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-GAMMA-PRO-1M",
+        "name": "Pro Plan (1 Month)",
+        "plan_type": "Pro",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Account",
+        "price_pkr": 1600,
+        "price_usd": 5.9,
+        "features": [
+          "Unlimited AI deck, document, and webpage generation",
+          "Advanced AI model access (Claude & GPT-4o powered)",
+          "Custom branding, font uploads & custom domains",
+          "Export to PDF and PPTX without watermark"
+        ],
+        "limits": "Subject to Gamma fair use generation limits",
+        "badge": "Popular",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 1600,
+    "starting_price_usd": 5.9,
+    "starting_price_display": "Rs. 1,600 PKR",
+    "total_plans": 1,
+    "popularity_score": 88,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Top trending AI productivity suite for university presentations, startups, and agency pitch decks.",
+    "popularity_rank": 20
+  },
+  "n8n-automation": {
+    "slug": "n8n-automation",
+    "name": "n8n Workflow Automation",
+    "brand": "n8n",
+    "brand_id": "n8n",
+    "category_key": "coding",
+    "category_label": "Coding & Automation",
+    "vendor": "n8n GmbH",
+    "description": "Up to 2,500 workflow executions per month \u2014 Cloud starter instance quota; single environment",
+    "official_domain": "n8n.io",
+    "official_url": "https://n8n.io/",
+    "url": "tools/n8n-automation.html",
+    "icon": "assets/product-logos/n8n-automation.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-N8N-START-1Y",
+        "name": "Starter Plan (1 Year)",
+        "plan_type": "Starter Annual",
+        "duration": "12 Months (365 Days)",
+        "seats": "1 Workspace",
+        "price_pkr": 6500,
+        "price_usd": 23.5,
+        "features": [
+          "Up to 2,500 workflow executions per month",
+          "Over 400+ native app and AI node integrations",
+          "Built-in LangChain and custom webhook triggers",
+          "Full 30-day replacement warranty"
+        ],
+        "limits": "Cloud starter instance quota; single environment",
+        "badge": "Enterprise Automation",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 6500,
+    "starting_price_usd": 23.5,
+    "starting_price_display": "Rs. 6,500 PKR",
+    "total_plans": 1,
+    "popularity_score": 84,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Surging developer and business automation interest replacing expensive Zapier plans.",
+    "popularity_rank": 36
+  },
+  "vidiq-boost": {
+    "slug": "vidiq-boost",
+    "name": "vidIQ Boost YouTube SEO",
+    "brand": "vidIQ",
+    "brand_id": "vidiq",
+    "category_key": "video",
+    "category_label": "Video & Motion AI",
+    "vendor": "vidIQ Inc.",
+    "description": "50 AI Video Title, Description & Tag recommendations daily \u2014 Linked to 1 active YouTube channel",
+    "official_domain": "vidiq.com",
+    "official_url": "https://vidiq.com/",
+    "url": "tools/vidiq-boost.html",
+    "icon": "assets/product-logos/vidiq-boost.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-VIDIQ-BOOST-1M",
+        "name": "Boost Plan (1 Month)",
+        "plan_type": "Boost",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Channel Profile",
+        "price_pkr": 2100,
+        "price_usd": 7.5,
+        "features": [
+          "50 AI Video Title, Description & Tag recommendations daily",
+          "Live competitor tracking & keyword search volume metrics",
+          "Historical trending video alerts & view velocity tracking",
+          "SEO scorecard and thumbnail preview inspector"
+        ],
+        "limits": "Linked to 1 active YouTube channel",
+        "badge": "Creator Favorite",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 2100,
+    "starting_price_usd": 7.5,
+    "starting_price_display": "Rs. 2,100 PKR",
+    "total_plans": 1,
+    "popularity_score": 87,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Essential utility for Pakistani YouTube content creators and digital marketing agencies.",
+    "popularity_rank": 24
+  },
+  "coursera-plus": {
+    "slug": "coursera-plus",
+    "name": "Coursera Plus Learning",
+    "brand": "Coursera",
+    "brand_id": "coursera",
+    "category_key": "coding",
+    "category_label": "Coding & Skills",
+    "vendor": "Coursera Inc.",
+    "description": "Unlimited access to 7,000+ courses and Specializations \u2014 Excludes select degree programs and premium masterclasses",
+    "official_domain": "coursera.org",
+    "official_url": "https://www.coursera.org/",
+    "url": "tools/coursera-plus.html",
+    "icon": "assets/product-logos/coursera-plus.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-COURSERA-PLUS-1Y",
+        "name": "Coursera Plus (12 Months)",
+        "plan_type": "Annual Subscription",
+        "duration": "12 Months (365 Days)",
+        "seats": "1 Student Profile",
+        "price_pkr": 2200,
+        "price_usd": 8.0,
+        "features": [
+          "Unlimited access to 7,000+ courses and Specializations",
+          "Professional Certificates from Google, IBM, Meta & AWS",
+          "Shareable certificates for LinkedIn and resume profiles",
+          "Hands-on guided projects with cloud dev environments"
+        ],
+        "limits": "Excludes select degree programs and premium masterclasses",
+        "badge": "Best Value",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 2200,
+    "starting_price_usd": 8.0,
+    "starting_price_display": "Rs. 2,200 PKR",
+    "total_plans": 1,
+    "popularity_score": 90,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "High domestic demand among software engineering students and career upskillers facing card declines.",
+    "popularity_rank": 13
+  },
+  "google-ai-ultra": {
+    "slug": "google-ai-ultra",
+    "name": "Google AI Ultra Plan (20X)",
+    "brand": "Google",
+    "brand_id": "google",
+    "category_key": "coding",
+    "category_label": "Coding & AI Assistants",
+    "vendor": "Google LLC",
+    "description": "Gemini 1.5 Pro with 2-Million token context window \u2014 Fair usage policy applies to extreme burst inference",
+    "official_domain": "gemini.google.com",
+    "official_url": "https://gemini.google.com/advanced",
+    "url": "tools/google-ai-ultra.html",
+    "icon": "assets/product-logos/google-ai-ultra.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-GOOG-ULTRA-1M",
+        "name": "Google AI Ultra 20X (1 Month)",
+        "plan_type": "Ultra 20X",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Account",
+        "price_pkr": 4500,
+        "price_usd": 16.5,
+        "features": [
+          "Gemini 1.5 Pro with 2-Million token context window",
+          "High-priority generation compute with 20X quota scaling",
+          "Deep coding, repo upload, and multimodal audio/video analysis",
+          "2TB Google Drive cloud storage bundle included"
+        ],
+        "limits": "Fair usage policy applies to extreme burst inference",
+        "badge": "Pro Powerhouse",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 4500,
+    "starting_price_usd": 16.5,
+    "starting_price_display": "Rs. 4,500 PKR",
+    "total_plans": 1,
+    "popularity_score": 89,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Heavy demand from data scientists and researchers needing the 2M context window.",
+    "popularity_rank": 17
+  },
+  "lovable-ai": {
+    "slug": "lovable-ai",
+    "name": "Lovable AI Full-Stack Builder",
+    "brand": "Lovable",
+    "brand_id": "lovable",
+    "category_key": "coding",
+    "category_label": "Coding & Developer Tools",
+    "vendor": "Lovable Inc.",
+    "description": "Natural language to production web applications \u2014 Subject to Lovable monthly token allocation",
+    "official_domain": "lovable.dev",
+    "official_url": "https://lovable.dev/",
+    "url": "tools/lovable-ai.html",
+    "icon": "assets/product-logos/lovable-ai.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-LOVABLE-PRO-1M",
+        "name": "Pro Plan (1 Month)",
+        "plan_type": "Pro",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Developer Account",
+        "price_pkr": 1500,
+        "price_usd": 5.5,
+        "features": [
+          "Natural language to production web applications",
+          "Direct GitHub synchronization and code export",
+          "Integrated Supabase backend and authentication setup",
+          "High-speed generation tokens for rapid prototyping"
+        ],
+        "limits": "Subject to Lovable monthly token allocation",
+        "badge": "Trending AI Dev",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 1500,
+    "starting_price_usd": 5.5,
+    "starting_price_display": "Rs. 1,500 PKR",
+    "total_plans": 1,
+    "popularity_score": 93,
+    "featured": true,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Rapidly growing viral AI web development platform for Pakistani developers and agencies.",
+    "popularity_rank": 7
+  },
+  "spotify-premium": {
+    "slug": "spotify-premium",
+    "name": "Spotify Premium Ad-Free",
+    "brand": "Spotify",
+    "brand_id": "spotify",
+    "category_key": "video",
+    "category_label": "Streaming & Entertainment",
+    "vendor": "Spotify AB",
+    "description": "100% Ad-free uninterrupted music playback \u2014 Personal account activation; non-commercial playback",
+    "official_domain": "spotify.com",
+    "official_url": "https://www.spotify.com/",
+    "url": "tools/spotify-premium.html",
+    "icon": "assets/product-logos/spotify.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-SPOTIFY-IND-3M",
+        "name": "Individual (3 Months)",
+        "plan_type": "Individual Multi-Month",
+        "duration": "3 Months (90 Days)",
+        "seats": "1 User Profile",
+        "price_pkr": 850,
+        "price_usd": 3.2,
+        "features": [
+          "100% Ad-free uninterrupted music playback",
+          "Offline download support on mobile and desktop",
+          "Very high audio quality (320kbps Ogg/AAC)",
+          "Cross-device Spotify Connect synchronization"
+        ],
+        "limits": "Personal account activation; non-commercial playback",
+        "badge": "Everyday Audio",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 850,
+    "starting_price_usd": 3.2,
+    "starting_price_display": "Rs. 850 PKR",
+    "total_plans": 1,
+    "popularity_score": 85,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Massive everyday streaming demand across desktop and mobile users.",
+    "popularity_rank": 32
+  },
+  "microsoft-office-365": {
+    "slug": "microsoft-office-365",
+    "name": "Microsoft 365 Pro & Cloud",
+    "brand": "Microsoft",
+    "brand_id": "microsoft",
+    "category_key": "coding",
+    "category_label": "Coding & Productivity",
+    "vendor": "Microsoft Corporation",
+    "description": "Full desktop Word, Excel, PowerPoint, Outlook & Access \u2014 Standard personal OneDrive quota per member seat",
+    "official_domain": "microsoft.com",
+    "official_url": "https://www.microsoft.com/microsoft-365",
+    "url": "tools/microsoft-office-365.html",
+    "icon": "assets/product-logos/microsoft-365.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-M365-FAM-1Y",
+        "name": "Family Member (1 Year)",
+        "plan_type": "Annual License",
+        "duration": "12 Months (365 Days)",
+        "seats": "1 User (Up to 5 Devices)",
+        "price_pkr": 1950,
+        "price_usd": 7.0,
+        "features": [
+          "Full desktop Word, Excel, PowerPoint, Outlook & Access",
+          "1,000 GB (1 TB) secure OneDrive cloud storage",
+          "Install simultaneously on 5 PCs, Macs, tablets & phones",
+          "Full 30-day replacement warranty"
+        ],
+        "limits": "Standard personal OneDrive quota per member seat",
+        "badge": "Essential Office",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 1950,
+    "starting_price_usd": 7.0,
+    "starting_price_display": "Rs. 1,950 PKR",
+    "total_plans": 1,
+    "popularity_score": 91,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Ubiquitous essential software for freelancers, remote corporate staff, and students.",
+    "popularity_rank": 10
+  },
+  "windows-11-pro": {
+    "slug": "windows-11-pro",
+    "name": "Windows 11 Pro Retail License",
+    "brand": "Microsoft",
+    "brand_id": "windows",
+    "category_key": "coding",
+    "category_label": "Coding & Productivity",
+    "vendor": "Microsoft Corporation",
+    "description": "Genuine 25-digit alphanumeric digital retail activation key \u2014 Single machine activation; binds to hardware motherboard ID",
+    "official_domain": "microsoft.com",
+    "official_url": "https://www.microsoft.com/windows",
+    "url": "tools/windows-11-pro.html",
+    "icon": "assets/product-logos/windows-11-pro.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-WIN11-PRO-RET",
+        "name": "Retail License Key (Lifetime)",
+        "plan_type": "Perpetual License",
+        "duration": "Lifetime Activation (1 PC)",
+        "seats": "1 PC Device",
+        "price_pkr": 1850,
+        "price_usd": 6.8,
+        "features": [
+          "Genuine 25-digit alphanumeric digital retail activation key",
+          "BitLocker device encryption & Windows Sandbox included",
+          "Hyper-V virtualization & Remote Desktop server access",
+          "Worldwide multi-language support & official Microsoft updates"
+        ],
+        "limits": "Single machine activation; binds to hardware motherboard ID",
+        "badge": "Official License",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 1850,
+    "starting_price_usd": 6.8,
+    "starting_price_display": "Rs. 1,850 PKR",
+    "total_plans": 1,
+    "popularity_score": 86,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Consistent ongoing demand for clean OS installations on freelance developer workstations.",
+    "popularity_rank": 27
+  },
+  "prime-video": {
+    "slug": "prime-video",
+    "name": "Amazon Prime Video UHD",
+    "brand": "Amazon",
+    "brand_id": "prime",
+    "category_key": "video",
+    "category_label": "Streaming & Entertainment",
+    "vendor": "Amazon.com Inc.",
+    "description": "Full 4K Ultra HD and HDR video streaming \u2014 Single concurrent stream per allocated screen profile",
+    "official_domain": "primevideo.com",
+    "official_url": "https://www.primevideo.com/",
+    "url": "tools/prime-video.html",
+    "icon": "assets/product-logos/prime-video.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-PRIME-SCREEN-1M",
+        "name": "Private Screen (1 Month)",
+        "plan_type": "Private Screen",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Private Profile Screen",
+        "price_pkr": 650,
+        "price_usd": 2.4,
+        "features": [
+          "Full 4K Ultra HD and HDR video streaming",
+          "Access to exclusive Amazon Originals and global cinema",
+          "Private PIN-protected profile with personal watch history",
+          "Full 30-day replacement warranty"
+        ],
+        "limits": "Single concurrent stream per allocated screen profile",
+        "badge": "Budget Stream",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 650,
+    "starting_price_usd": 2.4,
+    "starting_price_display": "Rs. 650 PKR",
+    "total_plans": 1,
+    "popularity_score": 83,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "High-demand streaming alternative alongside Netflix with localized mobile viewing.",
+    "popularity_rank": 39
+  },
+  "tradingview-pro": {
+    "slug": "tradingview-pro",
+    "name": "TradingView Premium Charts",
+    "brand": "TradingView",
+    "brand_id": "tradingview",
+    "category_key": "coding",
+    "category_label": "Coding & Productivity",
+    "vendor": "TradingView Inc.",
+    "description": "Up to 8 synchronized charts per single layout \u2014 Personal financial charting; single active session",
+    "official_domain": "tradingview.com",
+    "official_url": "https://www.tradingview.com/",
+    "url": "tools/tradingview-pro.html",
+    "icon": "assets/product-logos/tradingview.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-TRADINGVIEW-PREM-1M",
+        "name": "Premium Tier (1 Month)",
+        "plan_type": "Premium",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Account",
+        "price_pkr": 3200,
+        "price_usd": 11.5,
+        "features": [
+          "Up to 8 synchronized charts per single layout",
+          "25 technical indicators per chart simultaneously",
+          "Second-based intervals & tick-level bar replay",
+          "400 server-side active price alerts"
+        ],
+        "limits": "Personal financial charting; single active session",
+        "badge": "Trader Choice",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 3200,
+    "starting_price_usd": 11.5,
+    "starting_price_display": "Rs. 3,200 PKR",
+    "total_plans": 1,
+    "popularity_score": 88,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "Very active Pakistani crypto and forex day-trading community unable to pay international cards.",
+    "popularity_rank": 21
+  },
+  "turnitin-student": {
+    "slug": "turnitin-student",
+    "name": "Turnitin Originality Checker",
+    "brand": "Turnitin",
+    "brand_id": "turnitin",
+    "category_key": "coding",
+    "category_label": "Coding & Productivity",
+    "vendor": "Turnitin, LLC",
+    "description": "Direct similarity index generation with non-repository option \u2014 Non-repository class enrollment; up to 30 submissions/month",
+    "official_domain": "turnitin.com",
+    "official_url": "https://www.turnitin.com/",
+    "url": "tools/turnitin-student.html",
+    "icon": "assets/product-logos/turnitin-student.svg",
+    "plans": [
+      {
+        "plan_id": "PLAN-TURNITIN-STU-1M",
+        "name": "Student Account (1 Month)",
+        "plan_type": "Student Account",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Student Portal",
+        "price_pkr": 2800,
+        "price_usd": 10.0,
+        "features": [
+          "Direct similarity index generation with non-repository option",
+          "AI writing and paraphrasing detection breakdown",
+          "Full PDF originality report downloads with matched sources",
+          "Safe submission settings that do not store student papers in repository"
+        ],
+        "limits": "Non-repository class enrollment; up to 30 submissions/month",
+        "badge": "Academic Guard",
+        "availability": "InStock"
+      }
+    ],
+    "starting_price_pkr": 2800,
+    "starting_price_usd": 10.0,
+    "starting_price_display": "Rs. 2,800 PKR",
+    "total_plans": 1,
+    "popularity_score": 91,
+    "featured": false,
+    "is_new_arrival": true,
+    "ranking_source": "Verified competitor prominence & domestic freelancer demand analysis",
+    "ranking_reason": "High domestic university student and freelance thesis researcher requirement.",
+    "popularity_rank": 11
   }
 }

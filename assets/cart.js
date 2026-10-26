@@ -1483,6 +1483,422 @@
         "availability": "InStock"
       }
     ]
+  },
+  "heygen-ai": {
+    "slug": "heygen-ai",
+    "name": "HeyGen AI Video Avatar",
+    "brand": "HeyGen",
+    "vendor": "HeyGen Inc.",
+    "cat": "Video & Motion AI",
+    "icon": "assets/product-logos/heygen-ai.svg",
+    "desc": "Fast video generation with 15 monthly credits \u2014 Standard video generation queue; fair use credit limits",
+    "url": "tools/heygen-ai.html",
+    "starting_price_pkr": 4200,
+    "starting_price_usd": 15.0,
+    "plans": [
+      {
+        "plan_id": "PLAN-HEYGEN-CREATOR-1M",
+        "name": "Creator Plan (1 Month)",
+        "plan_type": "Creator",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Profile",
+        "price_pkr": 4200,
+        "price_usd": 15.0,
+        "features": [
+          "Fast video generation with 15 monthly credits",
+          "Over 100+ realistic public AI avatars",
+          "Auto voice clone & multi-language translation",
+          "1080p full HD export with commercial license"
+        ],
+        "limits": "Standard video generation queue; fair use credit limits",
+        "badge": "High Demand",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "gamma-app": {
+    "slug": "gamma-app",
+    "name": "Gamma App AI Presentations",
+    "brand": "Gamma",
+    "vendor": "Gamma Tech, Inc.",
+    "cat": "Coding & Productivity",
+    "icon": "assets/product-logos/gamma-app.svg",
+    "desc": "Unlimited AI deck, document, and webpage generation \u2014 Subject to Gamma fair use generation limits",
+    "url": "tools/gamma-app.html",
+    "starting_price_pkr": 1600,
+    "starting_price_usd": 5.9,
+    "plans": [
+      {
+        "plan_id": "PLAN-GAMMA-PRO-1M",
+        "name": "Pro Plan (1 Month)",
+        "plan_type": "Pro",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Account",
+        "price_pkr": 1600,
+        "price_usd": 5.9,
+        "features": [
+          "Unlimited AI deck, document, and webpage generation",
+          "Advanced AI model access (Claude & GPT-4o powered)",
+          "Custom branding, font uploads & custom domains",
+          "Export to PDF and PPTX without watermark"
+        ],
+        "limits": "Subject to Gamma fair use generation limits",
+        "badge": "Popular",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "n8n-automation": {
+    "slug": "n8n-automation",
+    "name": "n8n Workflow Automation",
+    "brand": "n8n",
+    "vendor": "n8n GmbH",
+    "cat": "Coding & Automation",
+    "icon": "assets/product-logos/n8n-automation.svg",
+    "desc": "Up to 2,500 workflow executions per month \u2014 Cloud starter instance quota; single environment",
+    "url": "tools/n8n-automation.html",
+    "starting_price_pkr": 6500,
+    "starting_price_usd": 23.5,
+    "plans": [
+      {
+        "plan_id": "PLAN-N8N-START-1Y",
+        "name": "Starter Plan (1 Year)",
+        "plan_type": "Starter Annual",
+        "duration": "12 Months (365 Days)",
+        "seats": "1 Workspace",
+        "price_pkr": 6500,
+        "price_usd": 23.5,
+        "features": [
+          "Up to 2,500 workflow executions per month",
+          "Over 400+ native app and AI node integrations",
+          "Built-in LangChain and custom webhook triggers",
+          "Full 30-day replacement warranty"
+        ],
+        "limits": "Cloud starter instance quota; single environment",
+        "badge": "Enterprise Automation",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "vidiq-boost": {
+    "slug": "vidiq-boost",
+    "name": "vidIQ Boost YouTube SEO",
+    "brand": "vidIQ",
+    "vendor": "vidIQ Inc.",
+    "cat": "Video & Motion AI",
+    "icon": "assets/product-logos/vidiq-boost.svg",
+    "desc": "50 AI Video Title, Description & Tag recommendations daily \u2014 Linked to 1 active YouTube channel",
+    "url": "tools/vidiq-boost.html",
+    "starting_price_pkr": 2100,
+    "starting_price_usd": 7.5,
+    "plans": [
+      {
+        "plan_id": "PLAN-VIDIQ-BOOST-1M",
+        "name": "Boost Plan (1 Month)",
+        "plan_type": "Boost",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Channel Profile",
+        "price_pkr": 2100,
+        "price_usd": 7.5,
+        "features": [
+          "50 AI Video Title, Description & Tag recommendations daily",
+          "Live competitor tracking & keyword search volume metrics",
+          "Historical trending video alerts & view velocity tracking",
+          "SEO scorecard and thumbnail preview inspector"
+        ],
+        "limits": "Linked to 1 active YouTube channel",
+        "badge": "Creator Favorite",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "coursera-plus": {
+    "slug": "coursera-plus",
+    "name": "Coursera Plus Learning",
+    "brand": "Coursera",
+    "vendor": "Coursera Inc.",
+    "cat": "Coding & Skills",
+    "icon": "assets/product-logos/coursera-plus.svg",
+    "desc": "Unlimited access to 7,000+ courses and Specializations \u2014 Excludes select degree programs and premium masterclasses",
+    "url": "tools/coursera-plus.html",
+    "starting_price_pkr": 2200,
+    "starting_price_usd": 8.0,
+    "plans": [
+      {
+        "plan_id": "PLAN-COURSERA-PLUS-1Y",
+        "name": "Coursera Plus (12 Months)",
+        "plan_type": "Annual Subscription",
+        "duration": "12 Months (365 Days)",
+        "seats": "1 Student Profile",
+        "price_pkr": 2200,
+        "price_usd": 8.0,
+        "features": [
+          "Unlimited access to 7,000+ courses and Specializations",
+          "Professional Certificates from Google, IBM, Meta & AWS",
+          "Shareable certificates for LinkedIn and resume profiles",
+          "Hands-on guided projects with cloud dev environments"
+        ],
+        "limits": "Excludes select degree programs and premium masterclasses",
+        "badge": "Best Value",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "google-ai-ultra": {
+    "slug": "google-ai-ultra",
+    "name": "Google AI Ultra Plan (20X)",
+    "brand": "Google",
+    "vendor": "Google LLC",
+    "cat": "Coding & AI Assistants",
+    "icon": "assets/product-logos/google-ai-ultra.svg",
+    "desc": "Gemini 1.5 Pro with 2-Million token context window \u2014 Fair usage policy applies to extreme burst inference",
+    "url": "tools/google-ai-ultra.html",
+    "starting_price_pkr": 4500,
+    "starting_price_usd": 16.5,
+    "plans": [
+      {
+        "plan_id": "PLAN-GOOG-ULTRA-1M",
+        "name": "Google AI Ultra 20X (1 Month)",
+        "plan_type": "Ultra 20X",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Account",
+        "price_pkr": 4500,
+        "price_usd": 16.5,
+        "features": [
+          "Gemini 1.5 Pro with 2-Million token context window",
+          "High-priority generation compute with 20X quota scaling",
+          "Deep coding, repo upload, and multimodal audio/video analysis",
+          "2TB Google Drive cloud storage bundle included"
+        ],
+        "limits": "Fair usage policy applies to extreme burst inference",
+        "badge": "Pro Powerhouse",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "lovable-ai": {
+    "slug": "lovable-ai",
+    "name": "Lovable AI Full-Stack Builder",
+    "brand": "Lovable",
+    "vendor": "Lovable Inc.",
+    "cat": "Coding & Developer Tools",
+    "icon": "assets/product-logos/lovable-ai.svg",
+    "desc": "Natural language to production web applications \u2014 Subject to Lovable monthly token allocation",
+    "url": "tools/lovable-ai.html",
+    "starting_price_pkr": 1500,
+    "starting_price_usd": 5.5,
+    "plans": [
+      {
+        "plan_id": "PLAN-LOVABLE-PRO-1M",
+        "name": "Pro Plan (1 Month)",
+        "plan_type": "Pro",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Developer Account",
+        "price_pkr": 1500,
+        "price_usd": 5.5,
+        "features": [
+          "Natural language to production web applications",
+          "Direct GitHub synchronization and code export",
+          "Integrated Supabase backend and authentication setup",
+          "High-speed generation tokens for rapid prototyping"
+        ],
+        "limits": "Subject to Lovable monthly token allocation",
+        "badge": "Trending AI Dev",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "spotify-premium": {
+    "slug": "spotify-premium",
+    "name": "Spotify Premium Ad-Free",
+    "brand": "Spotify",
+    "vendor": "Spotify AB",
+    "cat": "Streaming & Entertainment",
+    "icon": "assets/product-logos/spotify.svg",
+    "desc": "100% Ad-free uninterrupted music playback \u2014 Personal account activation; non-commercial playback",
+    "url": "tools/spotify-premium.html",
+    "starting_price_pkr": 850,
+    "starting_price_usd": 3.2,
+    "plans": [
+      {
+        "plan_id": "PLAN-SPOTIFY-IND-3M",
+        "name": "Individual (3 Months)",
+        "plan_type": "Individual Multi-Month",
+        "duration": "3 Months (90 Days)",
+        "seats": "1 User Profile",
+        "price_pkr": 850,
+        "price_usd": 3.2,
+        "features": [
+          "100% Ad-free uninterrupted music playback",
+          "Offline download support on mobile and desktop",
+          "Very high audio quality (320kbps Ogg/AAC)",
+          "Cross-device Spotify Connect synchronization"
+        ],
+        "limits": "Personal account activation; non-commercial playback",
+        "badge": "Everyday Audio",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "microsoft-office-365": {
+    "slug": "microsoft-office-365",
+    "name": "Microsoft 365 Pro & Cloud",
+    "brand": "Microsoft",
+    "vendor": "Microsoft Corporation",
+    "cat": "Coding & Productivity",
+    "icon": "assets/product-logos/microsoft-365.svg",
+    "desc": "Full desktop Word, Excel, PowerPoint, Outlook & Access \u2014 Standard personal OneDrive quota per member seat",
+    "url": "tools/microsoft-office-365.html",
+    "starting_price_pkr": 1950,
+    "starting_price_usd": 7.0,
+    "plans": [
+      {
+        "plan_id": "PLAN-M365-FAM-1Y",
+        "name": "Family Member (1 Year)",
+        "plan_type": "Annual License",
+        "duration": "12 Months (365 Days)",
+        "seats": "1 User (Up to 5 Devices)",
+        "price_pkr": 1950,
+        "price_usd": 7.0,
+        "features": [
+          "Full desktop Word, Excel, PowerPoint, Outlook & Access",
+          "1,000 GB (1 TB) secure OneDrive cloud storage",
+          "Install simultaneously on 5 PCs, Macs, tablets & phones",
+          "Full 30-day replacement warranty"
+        ],
+        "limits": "Standard personal OneDrive quota per member seat",
+        "badge": "Essential Office",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "windows-11-pro": {
+    "slug": "windows-11-pro",
+    "name": "Windows 11 Pro Retail License",
+    "brand": "Microsoft",
+    "vendor": "Microsoft Corporation",
+    "cat": "Coding & Productivity",
+    "icon": "assets/product-logos/windows-11-pro.svg",
+    "desc": "Genuine 25-digit alphanumeric digital retail activation key \u2014 Single machine activation; binds to hardware motherboard ID",
+    "url": "tools/windows-11-pro.html",
+    "starting_price_pkr": 1850,
+    "starting_price_usd": 6.8,
+    "plans": [
+      {
+        "plan_id": "PLAN-WIN11-PRO-RET",
+        "name": "Retail License Key (Lifetime)",
+        "plan_type": "Perpetual License",
+        "duration": "Lifetime Activation (1 PC)",
+        "seats": "1 PC Device",
+        "price_pkr": 1850,
+        "price_usd": 6.8,
+        "features": [
+          "Genuine 25-digit alphanumeric digital retail activation key",
+          "BitLocker device encryption & Windows Sandbox included",
+          "Hyper-V virtualization & Remote Desktop server access",
+          "Worldwide multi-language support & official Microsoft updates"
+        ],
+        "limits": "Single machine activation; binds to hardware motherboard ID",
+        "badge": "Official License",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "prime-video": {
+    "slug": "prime-video",
+    "name": "Amazon Prime Video UHD",
+    "brand": "Amazon",
+    "vendor": "Amazon.com Inc.",
+    "cat": "Streaming & Entertainment",
+    "icon": "assets/product-logos/prime-video.svg",
+    "desc": "Full 4K Ultra HD and HDR video streaming \u2014 Single concurrent stream per allocated screen profile",
+    "url": "tools/prime-video.html",
+    "starting_price_pkr": 650,
+    "starting_price_usd": 2.4,
+    "plans": [
+      {
+        "plan_id": "PLAN-PRIME-SCREEN-1M",
+        "name": "Private Screen (1 Month)",
+        "plan_type": "Private Screen",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Private Profile Screen",
+        "price_pkr": 650,
+        "price_usd": 2.4,
+        "features": [
+          "Full 4K Ultra HD and HDR video streaming",
+          "Access to exclusive Amazon Originals and global cinema",
+          "Private PIN-protected profile with personal watch history",
+          "Full 30-day replacement warranty"
+        ],
+        "limits": "Single concurrent stream per allocated screen profile",
+        "badge": "Budget Stream",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "tradingview-pro": {
+    "slug": "tradingview-pro",
+    "name": "TradingView Premium Charts",
+    "brand": "TradingView",
+    "vendor": "TradingView Inc.",
+    "cat": "Coding & Productivity",
+    "icon": "assets/product-logos/tradingview.svg",
+    "desc": "Up to 8 synchronized charts per single layout \u2014 Personal financial charting; single active session",
+    "url": "tools/tradingview-pro.html",
+    "starting_price_pkr": 3200,
+    "starting_price_usd": 11.5,
+    "plans": [
+      {
+        "plan_id": "PLAN-TRADINGVIEW-PREM-1M",
+        "name": "Premium Tier (1 Month)",
+        "plan_type": "Premium",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User Account",
+        "price_pkr": 3200,
+        "price_usd": 11.5,
+        "features": [
+          "Up to 8 synchronized charts per single layout",
+          "25 technical indicators per chart simultaneously",
+          "Second-based intervals & tick-level bar replay",
+          "400 server-side active price alerts"
+        ],
+        "limits": "Personal financial charting; single active session",
+        "badge": "Trader Choice",
+        "availability": "InStock"
+      }
+    ]
+  },
+  "turnitin-student": {
+    "slug": "turnitin-student",
+    "name": "Turnitin Originality Checker",
+    "brand": "Turnitin",
+    "vendor": "Turnitin, LLC",
+    "cat": "Coding & Productivity",
+    "icon": "assets/product-logos/turnitin-student.svg",
+    "desc": "Direct similarity index generation with non-repository option \u2014 Non-repository class enrollment; up to 30 submissions/month",
+    "url": "tools/turnitin-student.html",
+    "starting_price_pkr": 2800,
+    "starting_price_usd": 10.0,
+    "plans": [
+      {
+        "plan_id": "PLAN-TURNITIN-STU-1M",
+        "name": "Student Account (1 Month)",
+        "plan_type": "Student Account",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 Student Portal",
+        "price_pkr": 2800,
+        "price_usd": 10.0,
+        "features": [
+          "Direct similarity index generation with non-repository option",
+          "AI writing and paraphrasing detection breakdown",
+          "Full PDF originality report downloads with matched sources",
+          "Safe submission settings that do not store student papers in repository"
+        ],
+        "limits": "Non-repository class enrollment; up to 30 submissions/month",
+        "badge": "Academic Guard",
+        "availability": "InStock"
+      }
+    ]
   }
 };
 

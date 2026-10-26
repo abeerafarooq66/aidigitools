@@ -35,7 +35,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
                     for b in blocks:
                         cls.jsonld_by_file[rel].append(json.loads(b.strip()))
         cls.html_files.sort()
-        assert len(cls.html_files) == 53, f"Expected 53 HTML files, found {len(cls.html_files)}"
+        assert len(cls.html_files) == 66, f"Expected 53 HTML files, found {len(cls.html_files)}"
 
     def test_01_all_jsonld_syntax_valid(self):
         """Every single HTML file must have at least one valid JSON-LD block and 0 syntax errors."""
@@ -79,7 +79,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
     def test_04_product_and_offer_rich_result_properties(self):
         """Every tool page must have valid Product, Offer, and SoftwareApplication metadata."""
         tool_pages = [f for f in self.html_files if f.startswith("tools/")]
-        self.assertEqual(len(tool_pages), 36)
+        self.assertEqual(len(tool_pages), 49)
         for rel in tool_pages:
             blocks = self.jsonld_by_file.get(rel, [])
             product_blocks = [b for b in blocks if b.get("@type") == "Product" or (isinstance(b.get("@type"), list) and "Product" in b.get("@type"))]
@@ -179,7 +179,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
                 self.assertEqual(items[0].get("position"), 1)
                 self.assertEqual(items[0].get("name"), "Home")
                 self.assertEqual(items[0].get("item"), "https://aidigitools.tech/")
-        self.assertEqual(bc_count, 51, f"Expected 51 pages with BreadcrumbList, found {bc_count}")
+        self.assertEqual(bc_count, 64, f"Expected 51 pages with BreadcrumbList, found {bc_count}")
 
     def test_08_category_collection_and_item_list(self):
         """Category pages must use CollectionPage with ItemList, never Product rich-result markup."""
@@ -219,7 +219,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
                     self.assertIn("acceptedAnswer", q)
                     self.assertEqual(q["acceptedAnswer"].get("@type"), "Answer")
                     self.assertIn("text", q["acceptedAnswer"])
-        self.assertEqual(faq_count, 37, f"Expected 37 FAQPage instances, found {faq_count}")
+        self.assertEqual(faq_count, 50, f"Expected 37 FAQPage instances, found {faq_count}")
 
     def test_10_no_duplicate_or_extraneous_schemas_per_page(self):
         """Verify pages do not carry redundant schema bloat or mismatched entity types."""

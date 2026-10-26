@@ -67,3 +67,135 @@
 - [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.
 - [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day replacement warranty for account access disruption. Refunds are not provided once credentials have been issued.
 - [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent review standards and FTC/Google Ads affiliate compliance.
+
+## Newly Verified Subscriptions (Stage 3.3)
+
+### HeyGen AI Video Avatar
+- Canonical URL: https://aidigitools.tech/tools/heygen-ai.html
+- Vendor: HeyGen Inc.
+- Category: Video & Motion AI
+- Starting Price: Rs. 4,200 PKR (~$15.00 USD)
+- Features: Fast video generation with 15 monthly credits — Standard video generation queue; fair use credit limits
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Gamma App AI Presentations
+- Canonical URL: https://aidigitools.tech/tools/gamma-app.html
+- Vendor: Gamma Tech, Inc.
+- Category: Coding & Productivity
+- Starting Price: Rs. 1,600 PKR (~$5.90 USD)
+- Features: Unlimited AI deck, document, and webpage generation — Subject to Gamma fair use generation limits
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### n8n Workflow Automation
+- Canonical URL: https://aidigitools.tech/tools/n8n-automation.html
+- Vendor: n8n GmbH
+- Category: Coding & Automation
+- Starting Price: Rs. 6,500 PKR (~$23.50 USD)
+- Features: Up to 2,500 workflow executions per month — Cloud starter instance quota; single environment
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### vidIQ Boost YouTube SEO
+- Canonical URL: https://aidigitools.tech/tools/vidiq-boost.html
+- Vendor: vidIQ Inc.
+- Category: Video & Motion AI
+- Starting Price: Rs. 2,100 PKR (~$7.50 USD)
+- Features: 50 AI Video Title, Description & Tag recommendations daily — Linked to 1 active YouTube channel
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Coursera Plus Learning
+- Canonical URL: https://aidigitools.tech/tools/coursera-plus.html
+- Vendor: Coursera Inc.
+- Category: Coding & Skills
+- Starting Price: Rs. 2,200 PKR (~$8.00 USD)
+- Features: Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Google AI Ultra Plan (20X)
+- Canonical URL: https://aidigitools.tech/tools/google-ai-ultra.html
+- Vendor: Google LLC
+- Category: Coding & AI Assistants
+- Starting Price: Rs. 4,500 PKR (~$16.50 USD)
+- Features: Gemini 1.5 Pro with 2-Million token context window — Fair usage policy applies to extreme burst inference
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Lovable AI Full-Stack Builder
+- Canonical URL: https://aidigitools.tech/tools/lovable-ai.html
+- Vendor: Lovable Inc.
+- Category: Coding & Developer Tools
+- Starting Price: Rs. 1,500 PKR (~$5.50 USD)
+- Features: Natural language to production web applications — Subject to Lovable monthly token allocation
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Spotify Premium Ad-Free
+- Canonical URL: https://aidigitools.tech/tools/spotify-premium.html
+- Vendor: Spotify AB
+- Category: Streaming & Entertainment
+- Starting Price: Rs. 850 PKR (~$3.20 USD)
+- Features: 100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Microsoft 365 Pro & Cloud
+- Canonical URL: https://aidigitools.tech/tools/microsoft-office-365.html
+- Vendor: Microsoft Corporation
+- Category: Coding & Productivity
+- Starting Price: Rs. 1,950 PKR (~$7.00 USD)
+- Features: Full desktop Word, Excel, PowerPoint, Outlook & Access — Standard personal OneDrive quota per member seat
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Windows 11 Pro Retail License
+- Canonical URL: https://aidigitools.tech/tools/windows-11-pro.html
+- Vendor: Microsoft Corporation
+- Category: Coding & Productivity
+- Starting Price: Rs. 1,850 PKR (~$6.80 USD)
+- Features: Genuine 25-digit alphanumeric digital retail activation key — Single machine activation; binds to hardware motherboard ID
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Amazon Prime Video UHD
+- Canonical URL: https://aidigitools.tech/tools/prime-video.html
+- Vendor: Amazon.com Inc.
+- Category: Streaming & Entertainment
+- Starting Price: Rs. 650 PKR (~$2.40 USD)
+- Features: Full 4K Ultra HD and HDR video streaming — Single concurrent stream per allocated screen profile
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### TradingView Premium Charts
+- Canonical URL: https://aidigitools.tech/tools/tradingview-pro.html
+- Vendor: TradingView Inc.
+- Category: Coding & Productivity
+- Starting Price: Rs. 3,200 PKR (~$11.50 USD)
+- Features: Up to 8 synchronized charts per single layout — Personal financial charting; single active session
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT
+
+### Turnitin Originality Checker
+- Canonical URL: https://aidigitools.tech/tools/turnitin-student.html
+- Vendor: Turnitin, LLC
+- Category: Coding & Productivity
+- Starting Price: Rs. 2,800 PKR (~$10.00 USD)
+- Features: Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month
+- Delivery Target: 15 Minutes via WhatsApp concierge
+- Warranty: 30-Day Replacement Warranty
+- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Wise, Crypto USDT

@@ -1445,5 +1445,161 @@
       </g:shipping>
     </item>
 
+    <item>
+      <g:id>heygen-ai</g:id>
+      <g:title>HeyGen AI Video Avatar Subscription</g:title>
+      <g:description>Fast video generation with 15 monthly credits — Standard video generation queue; fair use credit limits 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/heygen-ai.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/heygen-ai.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>4200 PKR</g:price>
+      <g:brand>HeyGen</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Video &amp; Motion AI</g:product_type>
+    </item>
+    <item>
+      <g:id>gamma-app</g:id>
+      <g:title>Gamma App AI Presentations Subscription</g:title>
+      <g:description>Unlimited AI deck, document, and webpage generation — Subject to Gamma fair use generation limits 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/gamma-app.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/gamma-app.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>1600 PKR</g:price>
+      <g:brand>Gamma</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Productivity</g:product_type>
+    </item>
+    <item>
+      <g:id>n8n-automation</g:id>
+      <g:title>n8n Workflow Automation Subscription</g:title>
+      <g:description>Up to 2,500 workflow executions per month — Cloud starter instance quota; single environment 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/n8n-automation.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/n8n-automation.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>6500 PKR</g:price>
+      <g:brand>n8n</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Automation</g:product_type>
+    </item>
+    <item>
+      <g:id>vidiq-boost</g:id>
+      <g:title>vidIQ Boost YouTube SEO Subscription</g:title>
+      <g:description>50 AI Video Title, Description &amp; Tag recommendations daily — Linked to 1 active YouTube channel 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/vidiq-boost.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/vidiq-boost.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>2100 PKR</g:price>
+      <g:brand>vidIQ</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Video &amp; Motion AI</g:product_type>
+    </item>
+    <item>
+      <g:id>coursera-plus</g:id>
+      <g:title>Coursera Plus Learning Subscription</g:title>
+      <g:description>Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/coursera-plus.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/coursera-plus.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>2200 PKR</g:price>
+      <g:brand>Coursera</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Skills</g:product_type>
+    </item>
+    <item>
+      <g:id>google-ai-ultra</g:id>
+      <g:title>Google AI Ultra Plan (20X) Subscription</g:title>
+      <g:description>Gemini 1.5 Pro with 2-Million token context window — Fair usage policy applies to extreme burst inference 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/google-ai-ultra.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/google-ai-ultra.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>4500 PKR</g:price>
+      <g:brand>Google</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; AI Assistants</g:product_type>
+    </item>
+    <item>
+      <g:id>lovable-ai</g:id>
+      <g:title>Lovable AI Full-Stack Builder Subscription</g:title>
+      <g:description>Natural language to production web applications — Subject to Lovable monthly token allocation 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/lovable-ai.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/lovable-ai.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>1500 PKR</g:price>
+      <g:brand>Lovable</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Developer Tools</g:product_type>
+    </item>
+    <item>
+      <g:id>spotify-premium</g:id>
+      <g:title>Spotify Premium Ad-Free Subscription</g:title>
+      <g:description>100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/spotify-premium.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/spotify.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>850 PKR</g:price>
+      <g:brand>Spotify</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Streaming &amp; Entertainment</g:product_type>
+    </item>
+    <item>
+      <g:id>microsoft-office-365</g:id>
+      <g:title>Microsoft 365 Pro &amp; Cloud Subscription</g:title>
+      <g:description>Full desktop Word, Excel, PowerPoint, Outlook &amp; Access — Standard personal OneDrive quota per member seat 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/microsoft-office-365.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/microsoft-365.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>1950 PKR</g:price>
+      <g:brand>Microsoft</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Productivity</g:product_type>
+    </item>
+    <item>
+      <g:id>windows-11-pro</g:id>
+      <g:title>Windows 11 Pro Retail License Subscription</g:title>
+      <g:description>Genuine 25-digit alphanumeric digital retail activation key — Single machine activation; binds to hardware motherboard ID 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/windows-11-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/windows-11-pro.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>1850 PKR</g:price>
+      <g:brand>Microsoft</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Productivity</g:product_type>
+    </item>
+    <item>
+      <g:id>prime-video</g:id>
+      <g:title>Amazon Prime Video UHD Subscription</g:title>
+      <g:description>Full 4K Ultra HD and HDR video streaming — Single concurrent stream per allocated screen profile 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/prime-video.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/prime-video.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>650 PKR</g:price>
+      <g:brand>Amazon</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Streaming &amp; Entertainment</g:product_type>
+    </item>
+    <item>
+      <g:id>tradingview-pro</g:id>
+      <g:title>TradingView Premium Charts Subscription</g:title>
+      <g:description>Up to 8 synchronized charts per single layout — Personal financial charting; single active session 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/tradingview-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/tradingview.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>3200 PKR</g:price>
+      <g:brand>TradingView</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Productivity</g:product_type>
+    </item>
+    <item>
+      <g:id>turnitin-student</g:id>
+      <g:title>Turnitin Originality Checker Subscription</g:title>
+      <g:description>Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
+      <g:link>https://aidigitools.tech/tools/turnitin-student.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/product-logos/turnitin-student.svg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>2800 PKR</g:price>
+      <g:brand>Turnitin</g:brand>
+      <g:condition>new</g:condition>
+      <g:product_type>Coding &amp; Productivity</g:product_type>
+    </item>
   </channel>
 </rss>

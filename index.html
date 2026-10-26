@@ -173,13 +173,13 @@
 
             <!-- ========================================================
          AUTHKIT LIVING COMPONENT WIDGET (CENTERPIECE)
-         Featuring Traveling Laser Border-Beam & All 36 Tools
+         Featuring Traveling Laser Border-Beam & All 49 Tools
          ======================================================== -->
     <div class="authkit-widget-wrapper border-beam-card" id="showcase">
       <div class="authkit-widget-card">
         <!-- Interactive Category Switcher Pills -->
         <div class="authkit-cat-filter-pills" role="tablist" aria-label="Tool Categories">
-          <button type="button" class="authkit-cat-pill active" onclick="filterShowcaseCategory('all', this)">⭐ All 36 Tools</button>
+          <button type="button" class="authkit-cat-pill active" onclick="filterShowcaseCategory('all', this)">⭐ All 49 Tools</button>
           <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('ai', this)">🤖 AI Assistants</button>
           <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('coding', this)">💻 AI Coding</button>
           <button type="button" class="authkit-cat-pill" onclick="filterShowcaseCategory('video', this)">🎬 AI Video &amp; Audio</button>
@@ -193,6 +193,7 @@
           <label for="showcaseToolSelect" style="display:block; font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; color:var(--text-secondary); margin-bottom:0.4rem;">Select Any Software Tool to Test Live Pricing &amp; Rails:</label>
           <select id="showcaseToolSelect" class="authkit-tool-select" onchange="setMasterTool(this.value)">
               <optgroup label="⭐ Featured AI Assistants" data-cat="ai">
+                <option value="google-ai-ultra">Google AI Ultra (20X) — Rs. 4,500 PKR / $16.50 USD</option>
                 <option value="chatgpt-plus" selected>ChatGPT Plus — Rs. 2,300 PKR / $8.00 USD</option>
                 <option value="claude-pro">Claude Pro — Rs. 2,500 PKR / $9.00 USD</option>
                 <option value="gemini-advanced">Google Gemini Advanced — Rs. 1,200 PKR / $4.50 USD</option>
@@ -200,6 +201,8 @@
                 <option value="grok-ai">Grok 2 / xAI SuperGrok — Rs. 1,100 PKR / $4 USD</option>
               </optgroup>
               <optgroup label="💻 AI Coding & Developer Tools" data-cat="coding">
+                <option value="lovable-ai">Lovable AI Full-Stack — Rs. 1,500 PKR / $5.50 USD</option>
+                <option value="n8n-automation">n8n Workflow Automation — Rs. 6,500 PKR / $23.50 USD</option>
                 <option value="cursor-pro">Cursor Pro — Rs. 3,800 PKR / $14 USD</option>
                 <option value="github-copilot">GitHub Copilot Pro — Rs. 1,500 PKR / $5.50 USD</option>
                 <option value="deepseek-pro">DeepSeek R1 / V3 Pro — Rs. 1,100 PKR / $4 USD</option>
@@ -209,6 +212,8 @@
                 <option value="claude-artifacts">Claude Artifacts Pro — Rs. 1,200 PKR / $4.50 USD</option>
               </optgroup>
               <optgroup label="🎬 AI Video & Audio Engines" data-cat="video">
+                <option value="heygen-ai">HeyGen AI Video Avatar — Rs. 4,200 PKR / $15.00 USD</option>
+                <option value="vidiq-boost">vidIQ Boost YouTube SEO — Rs. 2,100 PKR / $7.50 USD</option>
                 <option value="capcut-pro">CapCut Pro — Rs. 950 PKR / $3.50 USD</option>
                 <option value="runway-gen3">Runway Gen-3 Alpha — Rs. 1,800 PKR / $6.50 USD</option>
                 <option value="kling-ai">Kling AI Pro — Rs. 700 PKR / $2.50 USD</option>
@@ -255,9 +260,9 @@
                 <h3 class="authkit-tool-title" id="mToolTitle" style="margin:0; font-size:1.4rem;">ChatGPT Plus Subscription</h3>
               </div>
             </div>
-            
+
             <p class="authkit-tool-desc" id="mToolDesc" style="margin-top:0.75rem;">Full access to GPT-4o, Custom GPTs, Advanced Voice Mode, and DALL-E 3 image generation without foreign cards.</p>
-            
+
             <div class="authkit-price-row" style="margin:1rem 0;">
               <span class="authkit-price-val" id="mToolPrice" style="color:#0284C7; font-weight:700;">Rs. 2,300</span>
               <span class="authkit-price-sub" id="mToolPriceSub">PKR (~$8.00 USD) / month</span>
@@ -286,7 +291,7 @@
               </div>
               <div class="authkit-badge-nofx">⚡ Serving Pakistan &amp; Worldwide (PKR / USD)</div>
             </div>
-            
+
             <div class="authkit-showcase-actions">
               <a id="mWaLink" href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20$8.00%20USD." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
                 <span>Order on WhatsApp &rarr;</span>
@@ -331,12 +336,239 @@
       </div>
     </div>
 
+    <!-- ========================================================
+         POPULAR PRODUCTS / FEATURED MARKETPLACE TOOLS
+         Ranked by Domestic Order Demand & Verified Conversions
+         ======================================================== -->
+    <section id="popular-products" style="margin-top: 3.5rem; margin-bottom: 2rem;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+        <div>
+          <span class="badge" style="background:rgba(238, 77, 45, 0.1); color:#EE4D2D; border:1px solid rgba(238, 77, 45, 0.2); font-weight:700;">🔥 Buyer Demand Priority</span>
+          <h2 style="font-size:1.8rem; font-weight:800; letter-spacing:-0.03em; color:var(--text-primary); margin:0.35rem 0 0.25rem 0;">Popular Products</h2>
+          <p style="font-size:0.95rem; color:var(--text-secondary); margin:0;">Our most active verified AI software subscriptions based on verified customer orders and repeat renewals.</p>
+        </div>
+        <a href="#products" class="btn btn-secondary" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem;">
+          View Full 49 Tools Catalog ↓
+        </a>
+      </div>
+
+      <div class="grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.25rem;">
+        <!-- Popular 1: ChatGPT Plus -->
+        <div class="card popular-card" style="border:2px solid rgba(16, 185, 129, 0.4); box-shadow:0 4px 16px rgba(16, 185, 129, 0.08);">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background:rgba(16, 185, 129, 0.15); color:#047857; font-weight:800; font-size:0.75rem; padding:0.25rem 0.65rem; border-radius:9999px;">🔥 #1 Pro Choice</span>
+              <img src="assets/product-logos/chatgpt-plus.svg" alt="ChatGPT Plus Logo" width="44" height="44" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">AI Assistant</span>
+            </div>
+            <h3 class="tool-card-title">ChatGPT Plus</h3>
+            <span class="tool-card-vendor">OpenAI Enterprise Systems</span>
+            <p class="tool-card-desc">GPT-4o, Custom GPTs, Advanced Voice Mode &amp; DALL-E 3 image generation without foreign credit card friction.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,300 PKR</span> <span class="price-period">(~$8.00 USD) / mo</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Min Delivery Target • 30-Day Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-plus')" style="flex:1;">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20ChatGPT%20Plus" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/chatgpt-plus.html" class="tool-specs-link">View Full Specs &amp; Benchmarks →</a>
+          </div>
+        </div>
+
+        <!-- Popular 2: Claude Pro -->
+        <div class="card popular-card" style="border:2px solid rgba(67, 97, 238, 0.35); box-shadow:0 4px 16px rgba(67, 97, 238, 0.08);">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background:rgba(67, 97, 238, 0.15); color:#3730A3; font-weight:800; font-size:0.75rem; padding:0.25rem 0.65rem; border-radius:9999px;">⭐ #2 Reasoning</span>
+              <img src="assets/product-logos/claude-pro.svg" alt="Claude Pro Logo" width="44" height="44" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">AI Assistant</span>
+            </div>
+            <h3 class="tool-card-title">Claude Pro</h3>
+            <span class="tool-card-vendor">Anthropic AI Systems</span>
+            <p class="tool-card-desc">Claude 3.5 Sonnet with 200,000 token context window, interactive Artifacts canvas, and SWE-bench coding intelligence.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,500 PKR</span> <span class="price-period">(~$9.00 USD) / mo</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Min Delivery Target • 30-Day Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-pro')" style="flex:1;">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Pro" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/claude-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmarks →</a>
+          </div>
+        </div>
+
+        <!-- Popular 3: Canva Pro -->
+        <div class="card popular-card">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background:rgba(6, 182, 212, 0.12); color:#0891B2; font-weight:700; font-size:0.75rem; padding:0.25rem 0.65rem; border-radius:9999px;">🎨 #3 Design Choice</span>
+              <img src="assets/product-logos/canva-pro.svg" alt="Canva Pro Logo" width="44" height="44" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Design &amp; Image</span>
+            </div>
+            <h3 class="tool-card-title">Canva Pro</h3>
+            <span class="tool-card-vendor">Canva Visual Systems</span>
+            <p class="tool-card-desc">100M+ premium graphics, Magic Studio AI generators, brand kits, and background eraser with zero monthly hassle.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 600 PKR</span> <span class="price-period">(~$2.50 USD) / mo</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Min Delivery Target • 30-Day Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('canva-pro')" style="flex:1;">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Canva%20Pro" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/canva-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmarks →</a>
+          </div>
+        </div>
+
+        <!-- Popular 4: CapCut Pro -->
+        <div class="card popular-card">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background:rgba(16, 185, 129, 0.12); color:#047857; font-weight:700; font-size:0.75rem; padding:0.25rem 0.65rem; border-radius:9999px;">🎬 #4 Video Choice</span>
+              <img src="assets/product-logos/capcut-pro.svg" alt="CapCut Pro Logo" width="44" height="44" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Video &amp; Motion</span>
+            </div>
+            <h3 class="tool-card-title">CapCut Pro</h3>
+            <span class="tool-card-vendor">ByteDance Creative Tech</span>
+            <p class="tool-card-desc">Pro video editing on mobile and desktop: 4K 60fps export, AI auto-captions, and trending transition animations.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 950 PKR</span> <span class="price-period">(~$3.50 USD) / mo</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Min Delivery Target • 30-Day Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('capcut-pro')" style="flex:1;">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20CapCut%20Pro" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/capcut-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmarks →</a>
+          </div>
+        </div>
+
+        <!-- Popular 5: Lovable AI (New Popular) -->
+        <div class="card popular-card">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background:rgba(244, 63, 94, 0.12); color:#BE123C; font-weight:700; font-size:0.75rem; padding:0.25rem 0.65rem; border-radius:9999px;">💻 #7 AI App Builder</span>
+              <img src="assets/product-logos/lovable-ai.svg" alt="Lovable AI Logo" width="44" height="44" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">AI Coding &amp; Dev</span>
+            </div>
+            <h3 class="tool-card-title">Lovable AI Full-Stack Builder</h3>
+            <span class="tool-card-vendor">Lovable Inc.</span>
+            <p class="tool-card-desc">Transform natural-language prompts into production React web apps with Supabase backend and GitHub synchronization.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,500 PKR</span> <span class="price-period">(~$5.50 USD) / mo</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Min Delivery Target • 30-Day Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('lovable-ai')" style="flex:1;">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Lovable%20AI" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/lovable-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmarks →</a>
+          </div>
+        </div>
+
+        <!-- Popular 6: HeyGen AI (New Popular) -->
+        <div class="card popular-card">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background:rgba(124, 58, 237, 0.12); color:#6D28D9; font-weight:700; font-size:0.75rem; padding:0.25rem 0.65rem; border-radius:9999px;">🎬 #8 AI Video Avatar</span>
+              <img src="assets/product-logos/heygen-ai.svg" alt="HeyGen AI Logo" width="44" height="44" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Video &amp; Motion</span>
+            </div>
+            <h3 class="tool-card-title">HeyGen AI Video Avatar</h3>
+            <span class="tool-card-vendor">HeyGen Inc.</span>
+            <p class="tool-card-desc">Studio-quality AI video creation with 100+ public avatars, automated voice cloning, and multilingual lip-sync translation.</p>
+            <div class="price-tag"><span class="price-amount">Rs. 4,200 PKR</span> <span class="price-period">(~$15.00 USD) / mo</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Min Delivery Target • 30-Day Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('heygen-ai')" style="flex:1;">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20HeyGen%20AI" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/heygen-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmarks →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         NEW ARRIVALS (STAGE 3.3 EXPANSION)
+         Freshly Verified Tools Added with Verified Supply
+         ======================================================== -->
+    <section id="new-arrivals" style="margin-top: 2rem; margin-bottom: 2rem;">
+      <div style="background:var(--bg-subtle); border:1px solid var(--border-subtle); border-radius:16px; padding:1.5rem 1.75rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span class="badge emerald" style="font-size:0.78rem;">✨ New Arrivals</span>
+            <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-primary); margin:0;">Recently Added Software Tools</h3>
+          </div>
+          <span style="font-size:0.82rem; color:var(--text-muted);">Fully tested &amp; verified for immediate activation</span>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:0.85rem;">
+          <a href="tools/lovable-ai.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/lovable-ai.svg" alt="Lovable AI" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">Lovable AI</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 1,500 PKR</div></div>
+          </a>
+          <a href="tools/heygen-ai.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/heygen-ai.svg" alt="HeyGen AI" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">HeyGen AI</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 4,200 PKR</div></div>
+          </a>
+          <a href="tools/gamma-app.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/gamma-app.svg" alt="Gamma App" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">Gamma App</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 1,600 PKR</div></div>
+          </a>
+          <a href="tools/vidiq-boost.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/vidiq-boost.svg" alt="vidIQ Boost" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">vidIQ Boost</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 2,100 PKR</div></div>
+          </a>
+          <a href="tools/n8n-automation.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/n8n-automation.svg" alt="n8n Automation" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">n8n Automation</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 6,500 PKR</div></div>
+          </a>
+          <a href="tools/google-ai-ultra.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/google-ai-ultra.svg" alt="Google AI Ultra" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">Google AI Ultra</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 4,500 PKR</div></div>
+          </a>
+          <a href="tools/coursera-plus.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/coursera-plus.svg" alt="Coursera Plus" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">Coursera Plus</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 2,200 PKR</div></div>
+          </a>
+          <a href="tools/microsoft-office-365.html" style="text-decoration:none; display:flex; align-items:center; gap:0.75rem; padding:0.75rem; background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:10px;">
+            <img src="assets/product-logos/microsoft-365.svg" alt="Microsoft 365" width="32" height="32" loading="lazy" decoding="async" style="border-radius:6px;">
+            <div><div style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">Microsoft 365</div><div style="font-size:0.75rem; color:#059669; font-weight:600;">Rs. 1,950 PKR</div></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Live Search & Filter Bar -->
     <section style="margin-top: 3.5rem;">
       <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 2rem; max-width: 860px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
         <h2 style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary);">Find Your AI Software Tool</h2>
-        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across 36 verified subscriptions or filter by specialized creative and development workflows.</p>
-        
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across 49 verified subscriptions or filter by specialized creative and development workflows.</p>
+
         <form role="search" class="search-input-wrapper" onsubmit="event.preventDefault(); applyFilters();">
           <input type="text" id="toolSearchInput" class="search-input-field" role="searchbox" aria-label="Search tools by name, technology, or capability" placeholder="Search by tool name, model, or capability (e.g. ChatGPT, Claude, Video, Python, VPN)...">
           <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -345,7 +577,7 @@
 
         <!-- Accessible Category Filter Pills -->
         <div class="category-filter-pills" role="group" aria-label="Filter Tools by Category">
-          <button type="button" class="cat-pill-btn active" data-cat="" aria-pressed="true" onclick="filterCategory('')">All 36 Tools</button>
+          <button type="button" class="cat-pill-btn active" data-cat="" aria-pressed="true" onclick="filterCategory('')">All 49 Tools</button>
           <button type="button" class="cat-pill-btn" data-cat="coding" aria-pressed="false" onclick="filterCategory('coding')">💻 Coding &amp; AI Dev</button>
           <button type="button" class="cat-pill-btn" data-cat="video" aria-pressed="false" onclick="filterCategory('video')">🎬 Video &amp; Motion</button>
           <button type="button" class="cat-pill-btn" data-cat="image" aria-pressed="false" onclick="filterCategory('image')">🎨 Graphic &amp; Image</button>
@@ -379,7 +611,7 @@
           </div>
 
           <div class="filter-group">
-            <span id="searchCountBadge" class="search-count-badge" aria-live="polite">Showing 36 of 36 Tools</span>
+            <span id="searchCountBadge" class="search-count-badge" aria-live="polite">Showing 49 of 49 Tools</span>
             <button type="button" id="resetFiltersBtn" class="btn-reset-filters" onclick="resetAllFilters()" style="display:none;">Reset All</button>
           </div>
         </div>
@@ -397,14 +629,14 @@
     <section id="products" style="margin-top: 3.5rem;">
       <h2 class="section-title">Verified AI Subscriptions (Pakistan &amp; Worldwide)</h2>
       <p class="section-subtitle">Genuine access to world-leading AI intelligence with PKR &amp; USD payment options.</p>
-      
+
       <div class="grid" id="toolsGrid">
 
         <div class="card tool-card" data-tool="chatgpt-plus" data-name="ChatGPT Plus" data-price-pkr="2300" data-category="ai" data-vendor="OpenAI" data-terms="chatgpt plus openai gpt-4o dall-e 3 voice custom gpts llm assistant coding writing">
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🔥 #1 Pro Choice</span>
-              
+
               <img src="assets/product-logos/chatgpt-plus.svg" alt="ChatGPT Plus Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Assistant & LLM</span>
             </div>
@@ -432,7 +664,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(67, 97, 238, 0.12); color: #3730A3; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(67, 97, 238, 0.12); letter-spacing: 0.02em;">⭐ #2 Reasoning</span>
-              
+
               <img src="assets/product-logos/claude-pro.svg" alt="Claude Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Assistant & LLM</span>
             </div>
@@ -460,7 +692,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(245, 158, 11, 0.12); color: #B45309; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(245, 158, 11, 0.12); letter-spacing: 0.02em;">🎨 #3 Design & Stock</span>
-              
+
               <img src="assets/product-logos/canva-pro.svg" alt="Canva Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -488,7 +720,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(239, 68, 68, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(239, 68, 68, 0.12); letter-spacing: 0.02em;">🎬 #4 Video Editing</span>
-              
+
               <img src="assets/product-logos/capcut-pro.svg" alt="CapCut Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -516,7 +748,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(139, 92, 246, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(139, 92, 246, 0.12); letter-spacing: 0.02em;">🖼️ #5 AI Image</span>
-              
+
               <img src="assets/product-logos/midjourney.svg" alt="Midjourney v6.1 Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -544,7 +776,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(14, 165, 233, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.12); letter-spacing: 0.02em;">⚡ #6 AI Code Editor</span>
-              
+
               <img src="assets/product-logos/cursor-pro.svg" alt="Cursor Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -572,7 +804,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(220, 38, 38, 0.12); color: #991B1B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(220, 38, 38, 0.12); letter-spacing: 0.02em;">🖌️ #7 Creative Suite</span>
-              
+
               <img src="assets/product-logos/adobe-creative-cloud.svg" alt="Adobe Creative Cloud Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -600,7 +832,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(220, 38, 38, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(220, 38, 38, 0.12); letter-spacing: 0.02em;">🍿 #8 Ad-Free Video</span>
-              
+
               <img src="assets/product-logos/youtube-premium.svg" alt="YouTube Premium Ad-Free Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Premium Streaming</span>
             </div>
@@ -628,7 +860,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(229, 9, 20, 0.12); color: #B91C1C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(229, 9, 20, 0.12); letter-spacing: 0.02em;">📺 #9 4K UHD Movies</span>
-              
+
               <img src="assets/product-logos/netflix-premium.svg" alt="Netflix 4K UHD Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Premium Streaming</span>
             </div>
@@ -656,7 +888,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🧠 #10 Pro Search</span>
-              
+
               <img src="assets/product-logos/perplexity-pro.svg" alt="Perplexity Pro AI Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Assistant & LLM</span>
             </div>
@@ -684,7 +916,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(79, 70, 229, 0.12); color: #4338CA; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(79, 70, 229, 0.12); letter-spacing: 0.02em;">🎙️ #11 Voice AI</span>
-              
+
               <img src="assets/product-logos/elevenlabs-creator.svg" alt="ElevenLabs Creator Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -712,7 +944,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(30, 41, 59, 0.12); color: #1E293B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(30, 41, 59, 0.12); letter-spacing: 0.02em;">💻 #12 Dev Assistant</span>
-              
+
               <img src="assets/product-logos/github-copilot.svg" alt="GitHub Copilot Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -740,7 +972,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">🛡️ #13 Privacy VPN</span>
-              
+
               <img src="assets/product-logos/nordvpn.svg" alt="NordVPN Complete Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">VPN & Privacy</span>
             </div>
@@ -768,7 +1000,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(6, 182, 212, 0.12); color: #0E7490; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(6, 182, 212, 0.12); letter-spacing: 0.02em;">🔒 #14 High-Speed VPN</span>
-              
+
               <img src="assets/product-logos/surfshark-vpn.svg" alt="Surfshark One VPN Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">VPN & Privacy</span>
             </div>
@@ -796,7 +1028,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(99, 102, 241, 0.12); color: #4338CA; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(99, 102, 241, 0.12); letter-spacing: 0.02em;">🚀 #15 Open Reasoning</span>
-              
+
               <img src="assets/product-logos/deepseek-pro.svg" alt="DeepSeek R1 / V3 Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -824,7 +1056,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">✨ #16 Multimodal AI</span>
-              
+
               <img src="assets/product-logos/gemini-advanced.svg" alt="Google Gemini Advanced Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Assistant & LLM</span>
             </div>
@@ -852,7 +1084,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(168, 85, 247, 0.12); color: #7E22CE; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(168, 85, 247, 0.12); letter-spacing: 0.02em;">🎥 #17 Video Motion</span>
-              
+
               <img src="assets/product-logos/runway-gen3.svg" alt="Runway Gen-3 Alpha Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -880,7 +1112,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">🎵 #18 Music Creation</span>
-              
+
               <img src="assets/product-logos/suno-ai.svg" alt="Suno AI Music v3.5 Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -908,7 +1140,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(249, 115, 22, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(249, 115, 22, 0.12); letter-spacing: 0.02em;">⚙️ #19 Dev Suite</span>
-              
+
               <img src="assets/product-logos/jetbrains-all.svg" alt="JetBrains All Products Pack Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -936,7 +1168,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(100, 116, 139, 0.12); color: #334155; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(100, 116, 139, 0.12); letter-spacing: 0.02em;">📝 #20 Workspace AI</span>
-              
+
               <img src="assets/product-logos/notion-business.svg" alt="Notion Business & AI Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Productivity & SEO</span>
             </div>
@@ -964,7 +1196,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(244, 63, 94, 0.12); color: #BE123C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(244, 63, 94, 0.12); letter-spacing: 0.02em;">📐 #21 UI/UX Design</span>
-              
+
               <img src="assets/product-logos/figma-pro.svg" alt="Figma Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -992,7 +1224,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(14, 165, 233, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.12); letter-spacing: 0.02em;">📂 #22 Stock Vectors</span>
-              
+
               <img src="assets/product-logos/freepik-premium.svg" alt="Freepik Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -1020,7 +1252,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(34, 197, 94, 0.12); color: #15803D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(34, 197, 94, 0.12); letter-spacing: 0.02em;">📦 #23 Unlimited Assets</span>
-              
+
               <img src="assets/product-logos/envato-elements.svg" alt="Envato Elements Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -1048,7 +1280,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(249, 115, 22, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(249, 115, 22, 0.12); letter-spacing: 0.02em;">☁️ #24 Cloud IDE</span>
-              
+
               <img src="assets/product-logos/replit-core.svg" alt="Replit Core Cloud IDE Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -1076,7 +1308,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(34, 197, 94, 0.12); color: #15803D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(34, 197, 94, 0.12); letter-spacing: 0.02em;">✍️ #25 Writing Assistant</span>
-              
+
               <img src="assets/product-logos/grammarly-pro.svg" alt="Grammarly Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Productivity & SEO</span>
             </div>
@@ -1104,7 +1336,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🔄 #26 Paraphraser</span>
-              
+
               <img src="assets/product-logos/quillbot-premium.svg" alt="QuillBot Premium Suite Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Productivity & SEO</span>
             </div>
@@ -1132,7 +1364,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(10, 102, 194, 0.12); color: #0A66C2; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(10, 102, 194, 0.12); letter-spacing: 0.02em;">💼 #27 Career Pro</span>
-              
+
               <img src="assets/product-logos/linkedin-premium.svg" alt="LinkedIn Premium Career Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Productivity & SEO</span>
             </div>
@@ -1160,7 +1392,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(255, 100, 45, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(255, 100, 45, 0.12); letter-spacing: 0.02em;">📊 #28 SEO Analytics</span>
-              
+
               <img src="assets/product-logos/semrush-guru.svg" alt="Semrush Guru Platform Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Productivity & SEO</span>
             </div>
@@ -1188,7 +1420,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(168, 85, 247, 0.12); color: #7E22CE; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(168, 85, 247, 0.12); letter-spacing: 0.02em;">🎞️ #29 Cinematic AI</span>
-              
+
               <img src="assets/product-logos/kling-ai.svg" alt="Kling AI Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -1216,7 +1448,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">📽️ #30 Video Studio</span>
-              
+
               <img src="assets/product-logos/minimax-ai.svg" alt="MiniMax Hailuo AI Video Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -1244,7 +1476,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(139, 92, 246, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(139, 92, 246, 0.12); letter-spacing: 0.02em;">🎧 #31 Studio Audio</span>
-              
+
               <img src="assets/product-logos/udio-ai.svg" alt="Udio AI Music Lab Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -1272,7 +1504,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">🎬 #32 DeepMind Video</span>
-              
+
               <img src="assets/product-logos/google-veo.svg" alt="Google Veo 2 / Video FX Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Video & Audio</span>
             </div>
@@ -1300,7 +1532,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(234, 88, 12, 0.12); color: #C2410C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(234, 88, 12, 0.12); letter-spacing: 0.02em;">🖌️ #33 Visual Canvas</span>
-              
+
               <img src="assets/product-logos/leonardo-ai.svg" alt="Leonardo AI Visual Studio Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Design & Image</span>
             </div>
@@ -1328,7 +1560,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(15, 23, 42, 0.12); color: #0F172A; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(15, 23, 42, 0.12); letter-spacing: 0.02em;">⚡ #34 Real-Time Search</span>
-              
+
               <img src="assets/product-logos/grok-ai.svg" alt="Grok 2 / xAI SuperGrok Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Assistant & LLM</span>
             </div>
@@ -1356,7 +1588,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">💻 #35 Dev API Tokens</span>
-              
+
               <img src="assets/product-logos/chatgpt-codex.svg" alt="OpenAI API & Codex Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -1384,7 +1616,7 @@
           <div>
             <div class="tool-card-header">
               <span class="tool-rank-badge" style="background: rgba(67, 97, 238, 0.12); color: #3730A3; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(67, 97, 238, 0.12); letter-spacing: 0.02em;">🧩 #36 Code Canvas</span>
-              
+
               <img src="assets/product-logos/claude-artifacts.svg" alt="Claude Artifacts Pro Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">AI Coding & Dev</span>
             </div>
@@ -1405,6 +1637,370 @@
               <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Claude%20Artifacts%20Pro%20for%20Rs%201200%20PKR%20/%20$4.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
             </div>
             <a href="tools/claude-artifacts.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="heygen-ai" data-name="HeyGen AI Video Avatar" data-price-pkr="4200" data-category="video" data-vendor="HeyGen Inc." data-terms="heygen ai video avatar heygen inc. heygen ai video & motion ai video pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(124, 58, 237, 0.12); color: #6D28D9; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(124, 58, 237, 0.12); letter-spacing: 0.02em;">🎬 Top AI Avatar</span>
+
+              <img src="assets/product-logos/heygen-ai.svg" alt="HeyGen AI Video Avatar Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Video & Motion AI</span>
+            </div>
+            <h3 class="tool-card-title">HeyGen AI Video Avatar</h3>
+            <span class="tool-card-vendor">HeyGen Inc.</span>
+            <p class="tool-card-desc">Fast video generation with 15 monthly credits — Standard video generation queue; fair use credit limits</p>
+            <div class="price-tag"><span class="price-amount">Rs. 4,200 PKR</span> <span class="price-period">(~$15.00 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('heygen-ai')" aria-label="Compare HeyGen AI Video Avatar" data-slug="heygen-ai">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('heygen-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20HeyGen AI Video Avatar%20for%20Rs%204200%20PKR%20/%20$15.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/heygen-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="gamma-app" data-name="Gamma App AI Presentations" data-price-pkr="1600" data-category="productivity" data-vendor="Gamma Tech, Inc." data-terms="gamma app ai presentations gamma tech, inc. gamma app coding & productivity productivity pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(236, 72, 153, 0.12); color: #BE185D; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(236, 72, 153, 0.12); letter-spacing: 0.02em;">📊 AI Presentations</span>
+
+              <img src="assets/product-logos/gamma-app.svg" alt="Gamma App AI Presentations Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Productivity</span>
+            </div>
+            <h3 class="tool-card-title">Gamma App AI Presentations</h3>
+            <span class="tool-card-vendor">Gamma Tech, Inc.</span>
+            <p class="tool-card-desc">Unlimited AI deck, document, and webpage generation — Subject to Gamma fair use generation limits</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,600 PKR</span> <span class="price-period">(~$5.90 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('gamma-app')" aria-label="Compare Gamma App AI Presentations" data-slug="gamma-app">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('gamma-app')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Gamma App AI Presentations%20for%20Rs%201600%20PKR%20/%20$5.90%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/gamma-app.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="n8n-automation" data-name="n8n Workflow Automation" data-price-pkr="6500" data-category="coding" data-vendor="n8n GmbH" data-terms="n8n workflow automation n8n gmbh n8n automation coding & automation coding pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(234, 75, 113, 0.12); color: #9F1239; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(234, 75, 113, 0.12); letter-spacing: 0.02em;">⚡ Enterprise Automation</span>
+
+              <img src="assets/product-logos/n8n-automation.svg" alt="n8n Workflow Automation Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Automation</span>
+            </div>
+            <h3 class="tool-card-title">n8n Workflow Automation</h3>
+            <span class="tool-card-vendor">n8n GmbH</span>
+            <p class="tool-card-desc">Up to 2,500 workflow executions per month — Cloud starter instance quota; single environment</p>
+            <div class="price-tag"><span class="price-amount">Rs. 6,500 PKR</span> <span class="price-period">(~$23.50 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('n8n-automation')" aria-label="Compare n8n Workflow Automation" data-slug="n8n-automation">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('n8n-automation')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20n8n Workflow Automation%20for%20Rs%206500%20PKR%20/%20$23.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/n8n-automation.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="vidiq-boost" data-name="vidIQ Boost YouTube SEO" data-price-pkr="2100" data-category="video" data-vendor="vidIQ Inc." data-terms="vidiq boost youtube seo vidiq inc. vidiq boost video & motion ai video pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(2, 132, 199, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(2, 132, 199, 0.12); letter-spacing: 0.02em;">📈 YouTube Growth</span>
+
+              <img src="assets/product-logos/vidiq-boost.svg" alt="vidIQ Boost YouTube SEO Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Video & Motion AI</span>
+            </div>
+            <h3 class="tool-card-title">vidIQ Boost YouTube SEO</h3>
+            <span class="tool-card-vendor">vidIQ Inc.</span>
+            <p class="tool-card-desc">50 AI Video Title, Description & Tag recommendations daily — Linked to 1 active YouTube channel</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,100 PKR</span> <span class="price-period">(~$7.50 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('vidiq-boost')" aria-label="Compare vidIQ Boost YouTube SEO" data-slug="vidiq-boost">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('vidiq-boost')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20vidIQ Boost YouTube SEO%20for%20Rs%202100%20PKR%20/%20$7.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/vidiq-boost.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="coursera-plus" data-name="Coursera Plus Learning" data-price-pkr="2200" data-category="productivity" data-vendor="Coursera Inc." data-terms="coursera plus learning coursera inc. coursera plus coding & skills productivity pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(0, 86, 210, 0.12); color: #1E40AF; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0, 86, 210, 0.12); letter-spacing: 0.02em;">🎓 Top Learning</span>
+
+              <img src="assets/product-logos/coursera-plus.svg" alt="Coursera Plus Learning Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Skills</span>
+            </div>
+            <h3 class="tool-card-title">Coursera Plus Learning</h3>
+            <span class="tool-card-vendor">Coursera Inc.</span>
+            <p class="tool-card-desc">Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,200 PKR</span> <span class="price-period">(~$8.00 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('coursera-plus')" aria-label="Compare Coursera Plus Learning" data-slug="coursera-plus">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('coursera-plus')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Coursera Plus Learning%20for%20Rs%202200%20PKR%20/%20$8.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/coursera-plus.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="google-ai-ultra" data-name="Google AI Ultra Plan (20X)" data-price-pkr="4500" data-category="ai" data-vendor="Google LLC" data-terms="google ai ultra plan (20x) google llc google ai ultra coding & ai assistants ai pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(59, 130, 246, 0.12); color: #1D4ED8; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.12); letter-spacing: 0.02em;">⚡ 2M Ultra Context</span>
+
+              <img src="assets/product-logos/google-ai-ultra.svg" alt="Google AI Ultra Plan (20X) Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & AI Assistants</span>
+            </div>
+            <h3 class="tool-card-title">Google AI Ultra Plan (20X)</h3>
+            <span class="tool-card-vendor">Google LLC</span>
+            <p class="tool-card-desc">Gemini 1.5 Pro with 2-Million token context window — Fair usage policy applies to extreme burst inference</p>
+            <div class="price-tag"><span class="price-amount">Rs. 4,500 PKR</span> <span class="price-period">(~$16.50 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('google-ai-ultra')" aria-label="Compare Google AI Ultra Plan (20X)" data-slug="google-ai-ultra">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('google-ai-ultra')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Google AI Ultra Plan (20X)%20for%20Rs%204500%20PKR%20/%20$16.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/google-ai-ultra.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="lovable-ai" data-name="Lovable AI Full-Stack Builder" data-price-pkr="1500" data-category="coding" data-vendor="Lovable Inc." data-terms="lovable ai full-stack builder lovable inc. lovable ai coding & developer tools coding pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(244, 63, 94, 0.12); color: #BE123C; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(244, 63, 94, 0.12); letter-spacing: 0.02em;">💻 Top AI App Builder</span>
+
+              <img src="assets/product-logos/lovable-ai.svg" alt="Lovable AI Full-Stack Builder Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Developer Tools</span>
+            </div>
+            <h3 class="tool-card-title">Lovable AI Full-Stack Builder</h3>
+            <span class="tool-card-vendor">Lovable Inc.</span>
+            <p class="tool-card-desc">Natural language to production web applications — Subject to Lovable monthly token allocation</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,500 PKR</span> <span class="price-period">(~$5.50 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('lovable-ai')" aria-label="Compare Lovable AI Full-Stack Builder" data-slug="lovable-ai">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('lovable-ai')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Lovable AI Full-Stack Builder%20for%20Rs%201500%20PKR%20/%20$5.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/lovable-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="spotify-premium" data-name="Spotify Premium Ad-Free" data-price-pkr="850" data-category="streaming" data-vendor="Spotify AB" data-terms="spotify premium ad-free spotify ab spotify premium streaming & entertainment streaming pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(16, 185, 129, 0.12); color: #047857; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.12); letter-spacing: 0.02em;">🎵 High-Fi Audio</span>
+
+              <img src="assets/product-logos/spotify.svg" alt="Spotify Premium Ad-Free Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Streaming & Entertainment</span>
+            </div>
+            <h3 class="tool-card-title">Spotify Premium Ad-Free</h3>
+            <span class="tool-card-vendor">Spotify AB</span>
+            <p class="tool-card-desc">100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback</p>
+            <div class="price-tag"><span class="price-amount">Rs. 850 PKR</span> <span class="price-period">(~$3.20 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('spotify-premium')" aria-label="Compare Spotify Premium Ad-Free" data-slug="spotify-premium">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('spotify-premium')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Spotify Premium Ad-Free%20for%20Rs%20850%20PKR%20/%20$3.20%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/spotify-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="microsoft-office-365" data-name="Microsoft 365 Pro & Cloud" data-price-pkr="1950" data-category="productivity" data-vendor="Microsoft Corporation" data-terms="microsoft 365 pro & cloud microsoft corporation microsoft office 365 coding & productivity productivity pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(0, 120, 212, 0.12); color: #005A9E; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0, 120, 212, 0.12); letter-spacing: 0.02em;">💼 Essential Office</span>
+
+              <img src="assets/product-logos/microsoft-365.svg" alt="Microsoft 365 Pro & Cloud Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Productivity</span>
+            </div>
+            <h3 class="tool-card-title">Microsoft 365 Pro & Cloud</h3>
+            <span class="tool-card-vendor">Microsoft Corporation</span>
+            <p class="tool-card-desc">Full desktop Word, Excel, PowerPoint, Outlook & Access — Standard personal OneDrive quota per member seat</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,950 PKR</span> <span class="price-period">(~$7.00 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('microsoft-office-365')" aria-label="Compare Microsoft 365 Pro & Cloud" data-slug="microsoft-office-365">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('microsoft-office-365')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Microsoft 365 Pro & Cloud%20for%20Rs%201950%20PKR%20/%20$7.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/microsoft-office-365.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="windows-11-pro" data-name="Windows 11 Pro Retail License" data-price-pkr="1850" data-category="productivity" data-vendor="Microsoft Corporation" data-terms="windows 11 pro retail license microsoft corporation windows 11 pro coding & productivity productivity pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(0, 120, 212, 0.12); color: #005A9E; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0, 120, 212, 0.12); letter-spacing: 0.02em;">🔑 Genuine Retail</span>
+
+              <img src="assets/product-logos/windows-11-pro.svg" alt="Windows 11 Pro Retail License Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Productivity</span>
+            </div>
+            <h3 class="tool-card-title">Windows 11 Pro Retail License</h3>
+            <span class="tool-card-vendor">Microsoft Corporation</span>
+            <p class="tool-card-desc">Genuine 25-digit alphanumeric digital retail activation key — Single machine activation; binds to hardware motherboard ID</p>
+            <div class="price-tag"><span class="price-amount">Rs. 1,850 PKR</span> <span class="price-period">(~$6.80 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('windows-11-pro')" aria-label="Compare Windows 11 Pro Retail License" data-slug="windows-11-pro">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('windows-11-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Windows 11 Pro Retail License%20for%20Rs%201850%20PKR%20/%20$6.80%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/windows-11-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="prime-video" data-name="Amazon Prime Video UHD" data-price-pkr="650" data-category="streaming" data-vendor="Amazon.com Inc." data-terms="amazon prime video uhd amazon.com inc. prime video streaming & entertainment streaming pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(0, 168, 225, 0.12); color: #0369A1; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(0, 168, 225, 0.12); letter-spacing: 0.02em;">🍿 4K Streaming</span>
+
+              <img src="assets/product-logos/prime-video.svg" alt="Amazon Prime Video UHD Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Streaming & Entertainment</span>
+            </div>
+            <h3 class="tool-card-title">Amazon Prime Video UHD</h3>
+            <span class="tool-card-vendor">Amazon.com Inc.</span>
+            <p class="tool-card-desc">Full 4K Ultra HD and HDR video streaming — Single concurrent stream per allocated screen profile</p>
+            <div class="price-tag"><span class="price-amount">Rs. 650 PKR</span> <span class="price-period">(~$2.40 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('prime-video')" aria-label="Compare Amazon Prime Video UHD" data-slug="prime-video">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('prime-video')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Amazon Prime Video UHD%20for%20Rs%20650%20PKR%20/%20$2.40%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/prime-video.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="tradingview-pro" data-name="TradingView Premium Charts" data-price-pkr="3200" data-category="productivity" data-vendor="TradingView Inc." data-terms="tradingview premium charts tradingview inc. tradingview pro coding & productivity productivity pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(41, 98, 255, 0.12); color: #1E40AF; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(41, 98, 255, 0.12); letter-spacing: 0.02em;">📊 Market Charts</span>
+
+              <img src="assets/product-logos/tradingview.svg" alt="TradingView Premium Charts Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Productivity</span>
+            </div>
+            <h3 class="tool-card-title">TradingView Premium Charts</h3>
+            <span class="tool-card-vendor">TradingView Inc.</span>
+            <p class="tool-card-desc">Up to 8 synchronized charts per single layout — Personal financial charting; single active session</p>
+            <div class="price-tag"><span class="price-amount">Rs. 3,200 PKR</span> <span class="price-period">(~$11.50 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('tradingview-pro')" aria-label="Compare TradingView Premium Charts" data-slug="tradingview-pro">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('tradingview-pro')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20TradingView Premium Charts%20for%20Rs%203200%20PKR%20/%20$11.50%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/tradingview-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
+          </div>
+        </div>
+
+        <div class="card tool-card" data-tool="turnitin-student" data-name="Turnitin Originality Checker" data-price-pkr="2800" data-category="productivity" data-vendor="Turnitin, LLC" data-terms="turnitin originality checker turnitin, llc turnitin student coding & productivity productivity pakistan worldwide pricing subscription buy online">
+          <div>
+            <div class="tool-card-header">
+              <span class="tool-rank-badge" style="background: rgba(217, 56, 30, 0.12); color: #991B1B; font-weight: 700; font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(217, 56, 30, 0.12); letter-spacing: 0.02em;">🛡️ Academic Guard</span>
+
+              <img src="assets/product-logos/turnitin-student.svg" alt="Turnitin Originality Checker Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
+              <span class="tool-cat-badge">Coding & Productivity</span>
+            </div>
+            <h3 class="tool-card-title">Turnitin Originality Checker</h3>
+            <span class="tool-card-vendor">Turnitin, LLC</span>
+            <p class="tool-card-desc">Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month</p>
+            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10.00 USD)</span></div>
+            <ul class="tool-card-checklist">
+              <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
+              <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
+              <li><span class="check-icon">✓</span> EasyPaisa, JazzCash, SadaPay, Wise &amp; Crypto</li>
+            </ul>
+          </div>
+          <div class="tool-card-actions">
+            <div class="tool-card-cta-row">
+              <button type="button" class="btn-tool-compare" onclick="toggleCompare('turnitin-student')" aria-label="Compare Turnitin Originality Checker" data-slug="turnitin-student">⚖️ Compare</button>
+              <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('turnitin-student')">⚡ Quick Order</button>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20Turnitin Originality Checker%20for%20Rs%202800%20PKR%20/%20$10.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+            </div>
+            <a href="tools/turnitin-student.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
         </div>
       </div>
@@ -1742,6 +2338,8 @@
           <h2>Can international customers outside Pakistan order?</h2>
           <p>Yes! AIDigiTools serves customers worldwide with digital delivery via WhatsApp and Email within 15 minutes. We accept Wise, Binance Pay / Crypto USDT, and international cards.</p>
         </div>
+
+
       </div>
     </section>
 
@@ -1853,7 +2451,7 @@
       </div>
       <button type="button" class="cart-drawer-close" onclick="closeQuickOrderModal()" aria-label="Close Drawer">&times;</button>
     </div>
-    
+
     <div class="cart-drawer-body">
       <!-- Item Info Box -->
       <div class="cart-item-preview">
@@ -1955,7 +2553,7 @@
       <span class="floating-wa-label">WhatsApp Concierge</span>
     </a>
   </aside>
-  
+
   <script src="assets/cart.js"></script>
 
   <!-- ========================================================

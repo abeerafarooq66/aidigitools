@@ -23,7 +23,7 @@ class TestBingAndIndexNowCompliance(unittest.TestCase):
                     rel = os.path.relpath(os.path.join(root, f), WORKSPACE_DIR).replace("\\", "/")
                     cls.html_files.append(rel)
         cls.html_files.sort()
-        assert len(cls.html_files) == 53
+        assert len(cls.html_files) == 66
 
     def _read_file(self, rel):
         fpath = os.path.join(WORKSPACE_DIR, rel.replace("/", "\\"))
@@ -108,7 +108,7 @@ class TestBingAndIndexNowCompliance(unittest.TestCase):
         root = tree.getroot()
         ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
         urls = [elem.text for elem in root.findall('.//sm:loc', ns)]
-        self.assertEqual(len(urls), 52)
+        self.assertEqual(len(urls), 65)
         self.assertIn("https://aidigitools.tech/", urls)
 
     def test_07_canonical_consistency_for_bing(self):

@@ -62,7 +62,7 @@ class TestInternalSearchFilterConversion(unittest.TestCase):
     def test_04_all_36_cards_enriched_with_filter_attributes(self):
         """Verify all 36 tool cards in index.html are enriched with search and filter data attributes."""
         tool_cards = re.findall(r'<div class="card tool-card"[^>]*>', self.index_html)
-        self.assertEqual(len(tool_cards), 36, f"Expected 36 parent tool cards, found {len(tool_cards)}")
+        self.assertEqual(len(tool_cards), 49, f"Expected 36 parent tool cards, found {len(tool_cards)}")
 
         for i, card in enumerate(tool_cards):
             self.assertIn('data-tool="', card, f"Card {i} missing data-tool")
@@ -75,7 +75,7 @@ class TestInternalSearchFilterConversion(unittest.TestCase):
     def test_05_clear_product_comparison_controls(self):
         """Verify product comparison buttons, floating dock, and modal exist."""
         compare_btns = re.findall(r'btn-tool-compare', self.index_html)
-        self.assertEqual(len(compare_btns), 36, f"Expected 36 compare buttons, found {len(compare_btns)}")
+        self.assertEqual(len(compare_btns), 49, f"Expected 36 compare buttons, found {len(compare_btns)}")
 
         self.assertIn('id="compareDock"', self.index_html)
         self.assertIn('id="compareModalBackdrop"', self.index_html)

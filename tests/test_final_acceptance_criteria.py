@@ -53,7 +53,7 @@ class TestFinalAcceptanceCriteria(unittest.TestCase):
             f for f in os.listdir(os.path.join(REPO_ROOT, "tools"))
             if f.endswith(".html")
         ]
-        self.assertEqual(len(catalog_items), 36)
+        self.assertEqual(len(catalog_items), 49)
         # Check that tools contain verified specs and pricing
         sample_tool = os.path.join(REPO_ROOT, "tools", "chatgpt-plus.html")
         with open(sample_tool, "r", encoding="utf-8") as f:
@@ -82,7 +82,7 @@ class TestFinalAcceptanceCriteria(unittest.TestCase):
         tree = ET.parse(sitemap_path)
         root = tree.getroot()
         urls = [elem.text for elem in root.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-        self.assertEqual(len(urls), 52)
+        self.assertEqual(len(urls), 65)
         self.assertNotIn("https://aidigitools.tech/404.html", urls)
 
         robots_path = os.path.join(REPO_ROOT, "robots.txt")

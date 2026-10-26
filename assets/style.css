@@ -1464,7 +1464,8 @@ footer {
 /* ========================================================
    ENHANCED TOOL CARDS WITH OFFICIAL LOGOS (PIC 2)
    ======================================================== */
-.tool-card {
+.tool-card,
+.popular-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1476,7 +1477,8 @@ footer {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.tool-card:hover {
+.tool-card:hover,
+.popular-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-card-hover);
   border-color: #00B4D8;
@@ -1497,7 +1499,8 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.tool-card:hover .tool-brand-logo {
+.tool-card:hover .tool-brand-logo,
+.popular-card:hover .tool-brand-logo {
   transform: scale(1.08);
 }
 

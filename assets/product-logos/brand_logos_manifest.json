@@ -1,7 +1,7 @@
 {
-  "total_brands": 40,
+  "total_brands": 52,
   "asset_directory": "assets/product-logos",
-  "verification_date": "2026-10-25",
+  "verification_date": "2026-10-26",
   "brands": [
     {
       "brand_id": "openai",
@@ -322,6 +322,102 @@
       "official_domain": "zoom.us",
       "logo_file": "assets/product-logos/zoom.svg",
       "category": "Productivity"
+    },
+    {
+      "brand_id": "heygen",
+      "canonical_name": "HeyGen",
+      "slug": "heygen-ai",
+      "official_domain": "heygen.com",
+      "logo_file": "assets/product-logos/heygen-ai.svg",
+      "category": "AI Video & Audio"
+    },
+    {
+      "brand_id": "gamma",
+      "canonical_name": "Gamma App",
+      "slug": "gamma-app",
+      "official_domain": "gamma.app",
+      "logo_file": "assets/product-logos/gamma-app.svg",
+      "category": "Productivity & Documents"
+    },
+    {
+      "brand_id": "n8n",
+      "canonical_name": "n8n",
+      "slug": "n8n-automation",
+      "official_domain": "n8n.io",
+      "logo_file": "assets/product-logos/n8n-automation.svg",
+      "category": "Workflow Automation"
+    },
+    {
+      "brand_id": "vidiq",
+      "canonical_name": "vidIQ",
+      "slug": "vidiq-boost",
+      "official_domain": "vidiq.com",
+      "logo_file": "assets/product-logos/vidiq-boost.svg",
+      "category": "Video & SEO"
+    },
+    {
+      "brand_id": "coursera",
+      "canonical_name": "Coursera",
+      "slug": "coursera-plus",
+      "official_domain": "coursera.org",
+      "logo_file": "assets/product-logos/coursera-plus.svg",
+      "category": "Education & Skills"
+    },
+    {
+      "brand_id": "google-ultra",
+      "canonical_name": "Google AI Ultra",
+      "slug": "google-ai-ultra",
+      "official_domain": "gemini.google.com",
+      "logo_file": "assets/product-logos/google-ai-ultra.svg",
+      "category": "AI Assistants"
+    },
+    {
+      "brand_id": "lovable",
+      "canonical_name": "Lovable",
+      "slug": "lovable-ai",
+      "official_domain": "lovable.dev",
+      "logo_file": "assets/product-logos/lovable-ai.svg",
+      "category": "AI Coding"
+    },
+    {
+      "brand_id": "microsoft-office",
+      "canonical_name": "Microsoft 365",
+      "slug": "microsoft-office-365",
+      "official_domain": "microsoft.com",
+      "logo_file": "assets/product-logos/microsoft-365.svg",
+      "category": "Productivity & Cloud"
+    },
+    {
+      "brand_id": "windows",
+      "canonical_name": "Windows 11",
+      "slug": "windows-11-pro",
+      "official_domain": "microsoft.com",
+      "logo_file": "assets/product-logos/windows-11-pro.svg",
+      "category": "Operating Systems"
+    },
+    {
+      "brand_id": "amazon-prime",
+      "canonical_name": "Prime Video",
+      "slug": "prime-video",
+      "official_domain": "primevideo.com",
+      "logo_file": "assets/product-logos/prime-video.svg",
+      "category": "Streaming & Entertainment"
+    },
+    {
+      "brand_id": "tradingview",
+      "canonical_name": "TradingView",
+      "slug": "tradingview-pro",
+      "official_domain": "tradingview.com",
+      "logo_file": "assets/product-logos/tradingview.svg",
+      "category": "Finance & Analytics"
+    },
+    {
+      "brand_id": "turnitin",
+      "canonical_name": "Turnitin",
+      "slug": "turnitin-student",
+      "official_domain": "turnitin.com",
+      "logo_file": "assets/product-logos/turnitin-student.svg",
+      "category": "Education & Integrity"
     }
   ]
 }

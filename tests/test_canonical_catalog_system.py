@@ -121,7 +121,7 @@ class TestCanonicalCatalogSystem(unittest.TestCase):
 
     def test_08_product_logos_mapping_and_fallbacks(self):
         """Test 8: Product logos map to existing local assets with graceful fallbacks."""
-        self.assertEqual(self.brand_manifest["total_brands"], 40, "Brand manifest must track 40 brands")
+        self.assertEqual(self.brand_manifest["total_brands"], 52, "Brand manifest must track 40 brands")
         for b in self.brand_manifest["brands"]:
             logo_rel = b["logo_file"]
             logo_abs = os.path.join(BASE_DIR, logo_rel)

@@ -65,7 +65,7 @@ class TestAgentCoordination(unittest.TestCase):
             tree = ET.parse(self.feed_path)
             root = tree.getroot()
             items = root.findall(".//item")
-            self.assertEqual(len(items), 36, f"feed.xml must contain exactly 36 items, found {len(items)}")
+            self.assertEqual(len(items), 49, f"feed.xml must contain exactly 36 items, found {len(items)}")
         except Exception as e:
             self.fail(f"feed.xml XML parsing failed with error: {e}")
 

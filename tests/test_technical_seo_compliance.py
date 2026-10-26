@@ -23,7 +23,7 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
                 if f.endswith(".html"):
                     cls.html_files.append(os.path.join(root, f))
         cls.html_files.sort()
-        assert len(cls.html_files) == 53, f"Expected 53 HTML files, found {len(cls.html_files)}"
+        assert len(cls.html_files) == 66, f"Expected 53 HTML files, found {len(cls.html_files)}"
 
     def _read_file(self, fpath):
         with open(fpath, "r", encoding="utf-8") as f:
@@ -107,7 +107,7 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
             self.assertLessEqual(len(title), 85, f"Title too long in {rel}: '{title}'")
             self.assertNotIn(title, titles, f"Duplicate title found in {rel} and {titles.get(title)}: '{title}'")
             titles[title] = rel
-        self.assertEqual(len(titles), 53)
+        self.assertEqual(len(titles), 66)
 
     def test_07_unique_meta_descriptions_across_all_pages(self):
         """All 53 pages must have unique meta descriptions with reasonable lengths."""
@@ -122,7 +122,7 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
             self.assertLessEqual(len(desc), 180, f"Meta description too long in {rel}: '{desc}'")
             self.assertNotIn(desc, descriptions, f"Duplicate meta description in {rel} and {descriptions.get(desc)}: '{desc}'")
             descriptions[desc] = rel
-        self.assertEqual(len(descriptions), 53)
+        self.assertEqual(len(descriptions), 66)
 
     def test_08_open_graph_metadata_completeness(self):
         """All pages must have complete Open Graph social card tags."""
@@ -173,7 +173,7 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
         root = tree.getroot()
         ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
         urls = [elem.text for elem in root.findall('.//sm:loc', ns)]
-        self.assertEqual(len(urls), 52, f"Expected 52 URLs in sitemap, found {len(urls)}")
+        self.assertEqual(len(urls), 65, f"Expected 65 URLs in sitemap, found {len(urls)}")
         
         # Verify 404 is excluded
         self.assertFalse(any("404" in u for u in urls), "404.html must NOT be in sitemap.xml")

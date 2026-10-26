@@ -67,3 +67,18 @@
 - [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.
 - [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day replacement warranty for account access disruption. Refunds are not provided once credentials have been issued.
 - [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent review standards and FTC/Google Ads affiliate compliance.
+
+### Stage 3.3 New Additions
+- [HeyGen AI Video Avatar](https://aidigitools.tech/tools/heygen-ai.html) — Fast video generation with 15 monthly credits — Standard video generation queue; fair use credit limits (Starting at Rs. 4,200 PKR / $15.00 USD)
+- [Gamma App AI Presentations](https://aidigitools.tech/tools/gamma-app.html) — Unlimited AI deck, document, and webpage generation — Subject to Gamma fair use generation limits (Starting at Rs. 1,600 PKR / $5.90 USD)
+- [n8n Workflow Automation](https://aidigitools.tech/tools/n8n-automation.html) — Up to 2,500 workflow executions per month — Cloud starter instance quota; single environment (Starting at Rs. 6,500 PKR / $23.50 USD)
+- [vidIQ Boost YouTube SEO](https://aidigitools.tech/tools/vidiq-boost.html) — 50 AI Video Title, Description & Tag recommendations daily — Linked to 1 active YouTube channel (Starting at Rs. 2,100 PKR / $7.50 USD)
+- [Coursera Plus Learning](https://aidigitools.tech/tools/coursera-plus.html) — Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses (Starting at Rs. 2,200 PKR / $8.00 USD)
+- [Google AI Ultra Plan (20X)](https://aidigitools.tech/tools/google-ai-ultra.html) — Gemini 1.5 Pro with 2-Million token context window — Fair usage policy applies to extreme burst inference (Starting at Rs. 4,500 PKR / $16.50 USD)
+- [Lovable AI Full-Stack Builder](https://aidigitools.tech/tools/lovable-ai.html) — Natural language to production web applications — Subject to Lovable monthly token allocation (Starting at Rs. 1,500 PKR / $5.50 USD)
+- [Spotify Premium Ad-Free](https://aidigitools.tech/tools/spotify-premium.html) — 100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback (Starting at Rs. 850 PKR / $3.20 USD)
+- [Microsoft 365 Pro & Cloud](https://aidigitools.tech/tools/microsoft-office-365.html) — Full desktop Word, Excel, PowerPoint, Outlook & Access — Standard personal OneDrive quota per member seat (Starting at Rs. 1,950 PKR / $7.00 USD)
+- [Windows 11 Pro Retail License](https://aidigitools.tech/tools/windows-11-pro.html) — Genuine 25-digit alphanumeric digital retail activation key — Single machine activation; binds to hardware motherboard ID (Starting at Rs. 1,850 PKR / $6.80 USD)
+- [Amazon Prime Video UHD](https://aidigitools.tech/tools/prime-video.html) — Full 4K Ultra HD and HDR video streaming — Single concurrent stream per allocated screen profile (Starting at Rs. 650 PKR / $2.40 USD)
+- [TradingView Premium Charts](https://aidigitools.tech/tools/tradingview-pro.html) — Up to 8 synchronized charts per single layout — Personal financial charting; single active session (Starting at Rs. 3,200 PKR / $11.50 USD)
+- [Turnitin Originality Checker](https://aidigitools.tech/tools/turnitin-student.html) — Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month (Starting at Rs. 2,800 PKR / $10.00 USD)
