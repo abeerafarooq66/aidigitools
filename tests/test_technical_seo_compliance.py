@@ -184,7 +184,7 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
         # Verify each URL maps to a real file
         for u in urls:
             path = urlparse(u).path.lstrip("/")
-            local_file = os.path.join(WORKSPACE_DIR, "index.html") if not path else os.path.join(WORKSPACE_DIR, path.replace("/", "\\"))
+            local_file = os.path.join(WORKSPACE_DIR, "index.html") if not path else os.path.normpath(os.path.join(WORKSPACE_DIR, path))
             self.assertTrue(os.path.exists(local_file), f"Sitemap URL {u} does not exist on disk at {local_file}")
 
     def test_12_robots_txt_specifications_and_safety(self):

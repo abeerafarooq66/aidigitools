@@ -26,7 +26,7 @@ class TestBingAndIndexNowCompliance(unittest.TestCase):
         assert len(cls.html_files) == 66
 
     def _read_file(self, rel):
-        fpath = os.path.join(WORKSPACE_DIR, rel.replace("/", "\\"))
+        fpath = os.path.normpath(os.path.join(WORKSPACE_DIR, rel))
         with open(fpath, "r", encoding="utf-8") as fh:
             return fh.read()
 
