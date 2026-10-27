@@ -50,7 +50,21 @@ tools_list = [
     ("notion-business", "Notion Business AI", "Notion Labs", "1,400", "5.00", "#f8fafc", "#0f172a"),
     ("linkedin-premium", "LinkedIn Premium", "LinkedIn", "1,500", "5.50", "#0284c7", "#082f49"),
     ("youtube-premium", "YouTube Premium", "Google", "750", "2.80", "#ef4444", "#450a0a"),
-    ("netflix-premium", "Netflix 4K UHD", "Netflix", "1,100", "4.00", "#e11d48", "#4c0519")
+    ("netflix-premium", "Netflix 4K UHD", "Netflix", "1,100", "4.00", "#e11d48", "#4c0519"),
+    # Newly Expanded Tools (49 Total Catalog)
+    ("heygen-ai", "HeyGen AI Video Avatar", "HeyGen", "4,200", "15.00", "#6366f1", "#1e1b4b"),
+    ("gamma-app", "Gamma App AI Presentations", "Gamma", "1,600", "5.90", "#f43f5e", "#4c0519"),
+    ("n8n-automation", "n8n Workflow Automation", "n8n", "6,500", "23.50", "#ea580c", "#431407"),
+    ("vidiq-boost", "vidIQ Boost YouTube SEO", "vidIQ", "2,100", "7.50", "#0284c7", "#082f49"),
+    ("coursera-plus", "Coursera Plus Learning", "Coursera", "2,200", "8.00", "#2563eb", "#172554"),
+    ("google-ai-ultra", "Google AI Ultra Plan (20X)", "Google", "4,500", "16.50", "#3b82f6", "#1e3a8a"),
+    ("lovable-ai", "Lovable AI Full-Stack Builder", "Lovable", "1,500", "5.50", "#ec4899", "#500724"),
+    ("spotify-premium", "Spotify Premium Ad-Free", "Spotify", "850", "3.20", "#22c55e", "#052e16"),
+    ("microsoft-office-365", "Microsoft 365 Pro & Cloud", "Microsoft", "1,950", "7.00", "#ea580c", "#431407"),
+    ("windows-11-pro", "Windows 11 Pro Retail License", "Microsoft", "1,850", "6.80", "#0284c7", "#082f49"),
+    ("prime-video", "Amazon Prime Video UHD", "Amazon", "650", "2.40", "#0ea5e9", "#082f49"),
+    ("tradingview-pro", "TradingView Premium Charts", "TradingView", "3,200", "11.50", "#10b981", "#022c22"),
+    ("turnitin-student", "Turnitin Originality Checker", "Turnitin", "2,800", "10.00", "#f59e0b", "#451a03")
 ]
 
 def hex_to_rgb(hex_str):

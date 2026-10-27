@@ -168,7 +168,7 @@
     <item>
       <g:id>aidigitools-chatgpt-plus</g:id>
       <g:title>OpenAI ChatGPT Plus Subscription — 1 Month Access</g:title>
-      <g:description>Buy ChatGPT Plus in Pakistan &amp;amp; worldwide for Rs. 2,300 PKR / $8 USD. EasyPaisa, JazzCash, Wise, Crypto. Instant 15-minute delivery &amp;amp; 30-day warranty.</g:description>
+      <g:description>Buy ChatGPT Plus in Pakistan &amp;amp; worldwide for Rs. 2,300 PKR / $8 USD. EasyPaisa, JazzCash, Wise, Crypto. 15-minute delivery target &amp;amp; 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/chatgpt-plus.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/chatgpt-plus.png</g:image_link>
       <g:price>2300 PKR</g:price>
@@ -208,7 +208,7 @@
     <item>
       <g:id>aidigitools-claude-artifacts</g:id>
       <g:title>Anthropic Claude Code Developer Subscription — 1 Month Access</g:title>
-      <g:description>Get Claude Code Developer in Pakistan and worldwide for Rs. 1,200 PKR ($4.50 USD). EasyPaisa, Wise, Crypto. Instant 15-min delivery and 30-day replacement warranty.</g:description>
+      <g:description>Get Claude Code Developer in Pakistan and worldwide for Rs. 1,200 PKR ($4.50 USD). EasyPaisa, Wise, Crypto. 15-min delivery target and 30-day replacement warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/claude-artifacts.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/claude-artifacts.png</g:image_link>
       <g:price>1200 PKR</g:price>
@@ -286,9 +286,49 @@
     </item>
 
     <item>
+      <g:id>aidigitools-coursera-plus</g:id>
+      <g:title>Coursera Coursera Plus Learning Subscription — 1 Month Access</g:title>
+      <g:description>Get Coursera Plus in Pakistan for Rs. 2,200 PKR ($8 USD). 7,000+ courses, Google &amp; Meta certificates, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/coursera-plus.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/coursera-plus.png</g:image_link>
+      <g:price>2200 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Coursera</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-cursor-pro</g:id>
       <g:title>Anysphere Cursor AI Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Cursor Pro in Pakistan and worldwide for Rs. 3,800 PKR ($14 USD). 2600 fast credits, EasyPaisa, Wise, Crypto. Instant 15-min delivery with 30-day warranty.</g:description>
+      <g:description>Buy Cursor Pro in Pakistan and worldwide for Rs. 3,800 PKR ($14 USD). 2600 fast credits, EasyPaisa, Wise, Crypto. 15-minute delivery target with 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/cursor-pro.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/cursor-pro.png</g:image_link>
       <g:price>3800 PKR</g:price>
@@ -526,6 +566,46 @@
     </item>
 
     <item>
+      <g:id>aidigitools-gamma-app</g:id>
+      <g:title>Gamma Gamma App AI Presentations Subscription — 1 Month Access</g:title>
+      <g:description>Get Gamma App Pro in Pakistan from Rs. 1,600 PKR ($5.90 USD). Unlimited AI slides &amp; docs, EasyPaisa, Wise rails. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/gamma-app.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/gamma-app.png</g:image_link>
+      <g:price>1600 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Gamma</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-gemini-advanced</g:id>
       <g:title>Google Google Gemini Advanced Subscription — 1 Month Access</g:title>
       <g:description>Buy Google Gemini Advanced in Pakistan &amp; worldwide for Rs. 1,200 PKR ($4.50 USD). 2M token context, EasyPaisa, Wise, Crypto, 15-min delivery &amp; 30-day warranty.</g:description>
@@ -606,9 +686,49 @@
     </item>
 
     <item>
+      <g:id>aidigitools-google-ai-ultra</g:id>
+      <g:title>Google Google AI Ultra Plan (20X) Subscription — 1 Month Access</g:title>
+      <g:description>Get Google AI Ultra 20X in Pakistan for Rs. 4,500 PKR ($16.50 USD). 2M context window, high compute, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/google-ai-ultra.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/google-ai-ultra.png</g:image_link>
+      <g:price>4500 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Google</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-google-veo</g:id>
       <g:title>Google DeepMind Google Veo Omni Subscription — 1 Month Access</g:title>
-      <g:description>Buy Google Veo Omni in Pakistan and worldwide for Rs. 1,900 PKR ($7 USD). High-res video AI, EasyPaisa, Wise, Crypto. Instant 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:description>Buy Google Veo Omni in Pakistan and worldwide for Rs. 1,900 PKR ($7 USD). High-res video AI, EasyPaisa, Wise, Crypto. 15-minute delivery target &amp; 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/google-veo.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/google-veo.png</g:image_link>
       <g:price>1900 PKR</g:price>
@@ -726,6 +846,46 @@
     </item>
 
     <item>
+      <g:id>aidigitools-heygen-ai</g:id>
+      <g:title>HeyGen HeyGen AI Video Avatar Subscription — 1 Month Access</g:title>
+      <g:description>Get HeyGen AI Video in Pakistan from Rs. 4,200 PKR ($15 USD). 100+ realistic avatars, voice clone, EasyPaisa, Wise. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/heygen-ai.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/heygen-ai.png</g:image_link>
+      <g:price>4200 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>HeyGen</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-jetbrains-all</g:id>
       <g:title>JetBrains JetBrains All Products Subscription — 1 Month Access</g:title>
       <g:description>Get JetBrains All Products Pack in Pakistan and worldwide for Rs. 2,500 PKR ($9 USD). IntelliJ, PyCharm, WebStorm. EasyPaisa, Wise, Crypto. 30-day warranty.</g:description>
@@ -768,7 +928,7 @@
     <item>
       <g:id>aidigitools-kling-ai</g:id>
       <g:title>Kuaishou Kling AI Pro Subscription — 1 Month Access</g:title>
-      <g:description>Get Kling AI Pro in Pakistan and worldwide for Rs. 700 PKR ($2.50 USD). 1080p video generation, EasyPaisa, Wise, Crypto. Instant 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:description>Get Kling AI Pro in Pakistan and worldwide for Rs. 700 PKR ($2.50 USD). 1080p video generation, EasyPaisa, Wise, Crypto. 15-minute delivery target &amp; 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/kling-ai.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/kling-ai.png</g:image_link>
       <g:price>700 PKR</g:price>
@@ -886,6 +1046,86 @@
     </item>
 
     <item>
+      <g:id>aidigitools-lovable-ai</g:id>
+      <g:title>Lovable Lovable AI Full-Stack Builder Subscription — 1 Month Access</g:title>
+      <g:description>Get Lovable AI Pro in Pakistan from Rs. 1,500 PKR ($5.50 USD). Prompt to full-stack web apps, GitHub sync, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/lovable-ai.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/lovable-ai.png</g:image_link>
+      <g:price>1500 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Lovable</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-microsoft-office-365</g:id>
+      <g:title>Microsoft Microsoft 365 Pro &amp; Cloud Subscription — 1 Month Access</g:title>
+      <g:description>Get Microsoft 365 1-year in Pakistan for Rs. 1,950 PKR ($7 USD). Word, Excel, 1TB OneDrive, EasyPaisa, Wise. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/microsoft-office-365.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/microsoft-office-365.png</g:image_link>
+      <g:price>1950 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Microsoft</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-midjourney</g:id>
       <g:title>Midjourney Midjourney Subscription — 1 Month Access</g:title>
       <g:description>Buy Midjourney V6 in Pakistan &amp;amp; worldwide for Rs. 2,800 PKR / $10 USD. Fast GPU hours via EasyPaisa, Wise &amp;amp; Crypto with 30-day warranty.</g:description>
@@ -934,6 +1174,46 @@
       <g:price>1600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>MiniMax</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-n8n-automation</g:id>
+      <g:title>n8n n8n Workflow Automation Subscription — 1 Month Access</g:title>
+      <g:description>Get n8n Workflow Automation in Pakistan for Rs. 6,500 PKR ($23.50 USD). 2,500 executions, 400+ nodes, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/n8n-automation.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/n8n-automation.png</g:image_link>
+      <g:price>6500 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>n8n</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
       <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
@@ -1088,12 +1368,52 @@
     <item>
       <g:id>aidigitools-perplexity-pro</g:id>
       <g:title>Perplexity AI Perplexity Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Perplexity Pro in Pakistan and worldwide for Rs. 2,200 PKR ($8 USD). EasyPaisa, Wise, Crypto. Instant 15-min delivery with 30-day replacement warranty.</g:description>
+      <g:description>Buy Perplexity Pro in Pakistan and worldwide for Rs. 2,200 PKR ($8 USD). EasyPaisa, Wise, Crypto. 15-minute delivery target with 30-day replacement warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/perplexity-pro.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/perplexity-pro.png</g:image_link>
       <g:price>2200 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Perplexity AI</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-prime-video</g:id>
+      <g:title>Amazon Amazon Prime Video UHD Subscription — 1 Month Access</g:title>
+      <g:description>Get Amazon Prime Video in Pakistan from Rs. 650 PKR ($2.40 USD). 4K UHD streaming, private screen PIN, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/prime-video.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/prime-video.png</g:image_link>
+      <g:price>650 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Amazon</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
       <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
@@ -1286,6 +1606,46 @@
     </item>
 
     <item>
+      <g:id>aidigitools-spotify-premium</g:id>
+      <g:title>Spotify Spotify Premium Ad-Free Subscription — 1 Month Access</g:title>
+      <g:description>Get Spotify Premium in Pakistan from Rs. 850 PKR ($3.20 USD). 3 months ad-free audio, offline downloads, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/spotify-premium.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/spotify-premium.png</g:image_link>
+      <g:price>850 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Spotify</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-suno-ai</g:id>
       <g:title>Suno Suno AI Pro Subscription — 1 Month Access</g:title>
       <g:description>Get Suno AI Pro in Pakistan and worldwide for Rs. 2,600 PKR ($9.50 USD). 2500 credits, full song maker, EasyPaisa, Wise, Crypto. 30-day replacement warranty.</g:description>
@@ -1366,14 +1726,174 @@
     </item>
 
     <item>
+      <g:id>aidigitools-tradingview-pro</g:id>
+      <g:title>TradingView TradingView Premium Charts Subscription — 1 Month Access</g:title>
+      <g:description>Get TradingView Premium in Pakistan for Rs. 3,200 PKR ($11.50 USD). 8 charts/layout, 25 indicators, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/tradingview-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/tradingview-pro.png</g:image_link>
+      <g:price>3200 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>TradingView</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-turnitin-student</g:id>
+      <g:title>Turnitin Turnitin Originality Checker Subscription — 1 Month Access</g:title>
+      <g:description>Get Turnitin Student Account in Pakistan for Rs. 2,800 PKR ($10 USD). Non-repository similarity &amp; AI report, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/turnitin-student.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/turnitin-student.png</g:image_link>
+      <g:price>2800 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Turnitin</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
       <g:id>aidigitools-udio-ai</g:id>
       <g:title>Udio Udio AI Pro Subscription — 1 Month Access</g:title>
-      <g:description>Get Udio AI Pro in Pakistan and worldwide for Rs. 2,800 PKR ($10 USD). High-fidelity audio, EasyPaisa, Wise, Crypto. Instant 15-min delivery and 30-day warranty.</g:description>
+      <g:description>Get Udio AI Pro in Pakistan and worldwide for Rs. 2,800 PKR ($10 USD). High-fidelity audio, EasyPaisa, Wise, Crypto. 15-minute delivery target and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/udio-ai.html</g:link>
       <g:image_link>https://aidigitools.tech/assets/images/udio-ai.png</g:image_link>
       <g:price>2800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Udio</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-vidiq-boost</g:id>
+      <g:title>vidIQ vidIQ Boost YouTube SEO Subscription — 1 Month Access</g:title>
+      <g:description>Get vidIQ Boost in Pakistan from Rs. 2,100 PKR ($7.50 USD). 50 daily AI ideas, keyword tracker, EasyPaisa, Wise. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/vidiq-boost.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/vidiq-boost.png</g:image_link>
+      <g:price>2100 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>vidIQ</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
+      <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>PK</g:country>
+        <g:service>Digital Instant Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>US</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AE</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>CA</g:country>
+        <g:service>Worldwide Digital Delivery via WhatsApp and Email</g:service>
+        <g:price>0 PKR</g:price>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>aidigitools-windows-11-pro</g:id>
+      <g:title>Microsoft Windows 11 Pro Retail License Subscription — 1 Month Access</g:title>
+      <g:description>Get genuine Windows 11 Pro retail key in Pakistan for Rs. 1,850 PKR ($6.80 USD). BitLocker, Hyper-V, EasyPaisa. 15-min delivery &amp; 30-day warranty.</g:description>
+      <g:link>https://aidigitools.tech/tools/windows-11-pro.html</g:link>
+      <g:image_link>https://aidigitools.tech/assets/images/windows-11-pro.png</g:image_link>
+      <g:price>1850 PKR</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:brand>Microsoft</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
       <g:product_type>Software &gt; Artificial Intelligence</g:product_type>
@@ -1445,161 +1965,5 @@
       </g:shipping>
     </item>
 
-    <item>
-      <g:id>heygen-ai</g:id>
-      <g:title>HeyGen AI Video Avatar Subscription</g:title>
-      <g:description>Fast video generation with 15 monthly credits — Standard video generation queue; fair use credit limits 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/heygen-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/heygen-ai.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>4200 PKR</g:price>
-      <g:brand>HeyGen</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Video &amp; Motion AI</g:product_type>
-    </item>
-    <item>
-      <g:id>gamma-app</g:id>
-      <g:title>Gamma App AI Presentations Subscription</g:title>
-      <g:description>Unlimited AI deck, document, and webpage generation — Subject to Gamma fair use generation limits 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/gamma-app.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/gamma-app.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>1600 PKR</g:price>
-      <g:brand>Gamma</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Productivity</g:product_type>
-    </item>
-    <item>
-      <g:id>n8n-automation</g:id>
-      <g:title>n8n Workflow Automation Subscription</g:title>
-      <g:description>Up to 2,500 workflow executions per month — Cloud starter instance quota; single environment 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/n8n-automation.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/n8n-automation.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>6500 PKR</g:price>
-      <g:brand>n8n</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Automation</g:product_type>
-    </item>
-    <item>
-      <g:id>vidiq-boost</g:id>
-      <g:title>vidIQ Boost YouTube SEO Subscription</g:title>
-      <g:description>50 AI Video Title, Description &amp; Tag recommendations daily — Linked to 1 active YouTube channel 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/vidiq-boost.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/vidiq-boost.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>2100 PKR</g:price>
-      <g:brand>vidIQ</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Video &amp; Motion AI</g:product_type>
-    </item>
-    <item>
-      <g:id>coursera-plus</g:id>
-      <g:title>Coursera Plus Learning Subscription</g:title>
-      <g:description>Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/coursera-plus.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/coursera-plus.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>2200 PKR</g:price>
-      <g:brand>Coursera</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Skills</g:product_type>
-    </item>
-    <item>
-      <g:id>google-ai-ultra</g:id>
-      <g:title>Google AI Ultra Plan (20X) Subscription</g:title>
-      <g:description>Gemini 1.5 Pro with 2-Million token context window — Fair usage policy applies to extreme burst inference 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/google-ai-ultra.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/google-ai-ultra.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>4500 PKR</g:price>
-      <g:brand>Google</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; AI Assistants</g:product_type>
-    </item>
-    <item>
-      <g:id>lovable-ai</g:id>
-      <g:title>Lovable AI Full-Stack Builder Subscription</g:title>
-      <g:description>Natural language to production web applications — Subject to Lovable monthly token allocation 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/lovable-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/lovable-ai.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>1500 PKR</g:price>
-      <g:brand>Lovable</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Developer Tools</g:product_type>
-    </item>
-    <item>
-      <g:id>spotify-premium</g:id>
-      <g:title>Spotify Premium Ad-Free Subscription</g:title>
-      <g:description>100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/spotify-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/spotify.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>850 PKR</g:price>
-      <g:brand>Spotify</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Streaming &amp; Entertainment</g:product_type>
-    </item>
-    <item>
-      <g:id>microsoft-office-365</g:id>
-      <g:title>Microsoft 365 Pro &amp; Cloud Subscription</g:title>
-      <g:description>Full desktop Word, Excel, PowerPoint, Outlook &amp; Access — Standard personal OneDrive quota per member seat 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/microsoft-office-365.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/microsoft-365.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>1950 PKR</g:price>
-      <g:brand>Microsoft</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Productivity</g:product_type>
-    </item>
-    <item>
-      <g:id>windows-11-pro</g:id>
-      <g:title>Windows 11 Pro Retail License Subscription</g:title>
-      <g:description>Genuine 25-digit alphanumeric digital retail activation key — Single machine activation; binds to hardware motherboard ID 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/windows-11-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/windows-11-pro.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>1850 PKR</g:price>
-      <g:brand>Microsoft</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Productivity</g:product_type>
-    </item>
-    <item>
-      <g:id>prime-video</g:id>
-      <g:title>Amazon Prime Video UHD Subscription</g:title>
-      <g:description>Full 4K Ultra HD and HDR video streaming — Single concurrent stream per allocated screen profile 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/prime-video.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/prime-video.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>650 PKR</g:price>
-      <g:brand>Amazon</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Streaming &amp; Entertainment</g:product_type>
-    </item>
-    <item>
-      <g:id>tradingview-pro</g:id>
-      <g:title>TradingView Premium Charts Subscription</g:title>
-      <g:description>Up to 8 synchronized charts per single layout — Personal financial charting; single active session 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/tradingview-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/tradingview.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>3200 PKR</g:price>
-      <g:brand>TradingView</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Productivity</g:product_type>
-    </item>
-    <item>
-      <g:id>turnitin-student</g:id>
-      <g:title>Turnitin Originality Checker Subscription</g:title>
-      <g:description>Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month 15-minute delivery target, 30-day replacement warranty. Local PKR payment rails available.</g:description>
-      <g:link>https://aidigitools.tech/tools/turnitin-student.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/product-logos/turnitin-student.svg</g:image_link>
-      <g:availability>in stock</g:availability>
-      <g:price>2800 PKR</g:price>
-      <g:brand>Turnitin</g:brand>
-      <g:condition>new</g:condition>
-      <g:product_type>Coding &amp; Productivity</g:product_type>
-    </item>
   </channel>
 </rss>
