@@ -28,11 +28,11 @@ def run_master_verification():
     print(f"\n[PILLAR 1] Site Inventory & Catalog Architecture:")
     print(f"  • Total HTML Pages: {len(html_files)}")
     print(f"  • Dedicated Tool Pages: {len(tool_files)}")
-    if len(html_files) != 52:
-        failures.append(f"Expected 52 HTML pages, found {len(html_files)}")
-    if len(tool_files) != 36:
-        failures.append(f"Expected 36 tool pages, found {len(tool_files)}")
-    print("  [PASS] Catalog inventory is 100% complete (52 total / 36 tools).")
+    if len(html_files) != 66:
+        failures.append(f"Expected 66 HTML pages, found {len(html_files)}")
+    if len(tool_files) != 49:
+        failures.append(f"Expected 49 tool pages, found {len(tool_files)}")
+    print("  [PASS] Catalog inventory is 100% complete (66 total / 49 tools).")
 
     # Pillar 2: Technical SEO (Robots, Sitemap, Canonicals)
     print(f"\n[PILLAR 2] Technical SEO & Crawlability:")
@@ -53,8 +53,8 @@ def run_master_verification():
             root = tree.getroot()
             sitemap_urls = [elem.text for elem in root.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
             print(f"  • Sitemap entries: {len(sitemap_urls)}")
-            if len(sitemap_urls) != 52:
-                failures.append(f"sitemap.xml has {len(sitemap_urls)} URLs, expected 52")
+            if len(sitemap_urls) != 65:
+                failures.append(f"sitemap.xml has {len(sitemap_urls)} URLs, expected 65")
         except Exception as e:
             failures.append(f"sitemap.xml XML parsing error: {e}")
             
@@ -143,8 +143,8 @@ def run_master_verification():
             channel = root.find("channel")
             items = channel.findall("item") if channel is not None else []
             print(f"  • GMC feed products: {len(items)}")
-            if len(items) != 36:
-                failures.append(f"GMC feed has {len(items)} items, expected 36")
+            if len(items) != 49:
+                failures.append(f"GMC feed has {len(items)} items, expected 49")
                 
             # Verify images exist on disk
             missing_imgs = 0
@@ -158,7 +158,7 @@ def run_master_verification():
             if missing_imgs > 0:
                 failures.append(f"{missing_imgs} GMC products reference non-existent local image files")
             else:
-                print("  • All 36 product images physically exist in assets/images/ (1200x630 PNG).")
+                print("  • All 49 product images physically exist in assets/images/ (1200x630 PNG).")
                 
             # Check for disallowed account-sharing terms
             feed_raw = gmc_path.read_text(encoding="utf-8")
@@ -181,7 +181,7 @@ def run_master_verification():
     if missing_notice > 0:
         failures.append(f"{missing_notice} tool pages missing above-the-fold Reseller Notice")
     else:
-        print("  • Above-the-fold Reseller Notice confirmed across all 36 tool pages.")
+        print("  • Above-the-fold Reseller Notice confirmed across all 49 tool pages.")
         print("  [PASS] Reseller and Informational Site Policy compliant.")
 
     # Pillar 7: WhatsApp Helpline & Contact Honesty
