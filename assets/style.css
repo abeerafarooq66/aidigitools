@@ -733,22 +733,40 @@ h3 {
 }
 
 .card, .tool-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 16px;
-  padding: 1.5rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 55%, #F1F5F9 100%);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  padding: 1.65rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: var(--shadow-card);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  overflow: hidden;
+}
+
+.card::before, .tool-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #00B4D8 0%, #4361EE 50%, #00E5A3 100%);
+  opacity: 0.9;
+  transition: height 0.25s ease, opacity 0.25s ease;
 }
 
 .card:hover, .tool-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: #00B4D8;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -6px rgba(0, 180, 216, 0.16), 0 6px 14px -2px rgba(15, 23, 42, 0.05);
+  border-color: rgba(0, 180, 216, 0.45);
+}
+
+.card:hover::before, .tool-card:hover::before {
+  height: 5px;
+  opacity: 1;
 }
 
 .tool-header-row {
@@ -799,53 +817,81 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.3rem 0.5rem;
-  margin: 0.85rem 0;
+  justify-content: space-between;
+  gap: 0.35rem 0.6rem;
+  margin: 0.95rem 0;
   line-height: 1.35;
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.92) 0%, rgba(238, 242, 255, 0.88) 100%);
+  border: 1px solid rgba(0, 180, 216, 0.22);
+  border-radius: 12px;
+  padding: 0.65rem 0.95rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.price-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3.5px;
+  background: linear-gradient(180deg, #00B4D8 0%, #4361EE 100%);
+  border-radius: 12px 0 0 12px;
 }
 
 .price-tag .price-amount {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-size: 1.42rem;
+  font-weight: 800;
+  color: #0F172A;
   letter-spacing: -0.025em;
   white-space: nowrap;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
 }
 
 .price-tag .price-currency {
   font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-weight: 700;
+  color: #0284C7;
   white-space: nowrap;
 }
 
 .price-tag .price-period,
 .price-tag .period {
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  padding: 0.22rem 0.6rem;
+  border-radius: 9999px;
   white-space: nowrap;
   letter-spacing: normal;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .price-tag .price-usd {
   font-size: 0.82rem;
-  font-weight: 400;
-  color: var(--text-muted);
+  font-weight: 600;
+  color: #059669;
   white-space: nowrap;
 }
 
 @media (max-width: 480px) {
   .price-tag {
     font-size: 1.2rem;
-    gap: 0.2rem 0.35rem;
+    padding: 0.55rem 0.8rem;
+    gap: 0.25rem 0.4rem;
   }
   .price-tag .price-amount {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   .price-tag .price-period,
   .price-tag .period {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
+    padding: 0.18rem 0.5rem;
   }
 }
 
@@ -1541,70 +1587,110 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.75rem;
-  border-radius: 16px;
-  background: #FFFFFF;
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-card);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 18px;
+  background: radial-gradient(120% 50% at 50% 0%, rgba(0, 180, 216, 0.05) 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card::before,
+.popular-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #00B4D8 0%, #4361EE 50%, #00E5A3 100%);
+  opacity: 0.9;
+  transition: height 0.25s ease, opacity 0.25s ease;
 }
 
 .tool-card:hover,
 .popular-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: #00B4D8;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -6px rgba(0, 180, 216, 0.16), 0 6px 14px -2px rgba(15, 23, 42, 0.05);
+  border-color: rgba(0, 180, 216, 0.45);
+}
+
+.tool-card:hover::before,
+.popular-card:hover::before {
+  height: 5px;
+  opacity: 1;
+}
+
+/* Popular Section Theme Polish */
+.popular-card {
+  background: radial-gradient(120% 60% at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%) !important;
+  border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+.popular-card::before {
+  background: linear-gradient(90deg, #10B981 0%, #00B4D8 50%, #8B5CF6 100%) !important;
+  height: 4px;
+}
+
+.popular-card:hover {
+  border-color: #10B981 !important;
+  box-shadow: 0 18px 40px -6px rgba(16, 185, 129, 0.2), 0 6px 14px -2px rgba(15, 23, 42, 0.05) !important;
 }
 
 .tool-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.15rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(241, 245, 249, 0.9);
 }
 
 .tool-brand-logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  padding: 4px;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  padding: 5px;
   background: #FFFFFF;
-  border: 1px solid var(--border-subtle, rgba(226, 232, 240, 0.75));
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.06);
   object-fit: contain;
   flex-shrink: 0;
   display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tool-card:hover .tool-brand-logo,
 .popular-card:hover .tool-brand-logo {
-  transform: scale(1.06);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 180, 216, 0.2);
   border-color: #00B4D8;
 }
 
 .tool-cat-badge {
-  font-size: 0.74rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
-  background: #F1F5F9;
-  color: #475569;
-  border: 1px solid #E2E8F0;
+  background: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 100%);
+  color: #3730A3;
+  border: 1px solid rgba(99, 102, 241, 0.25);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .tool-card-title {
-  font-size: 1.22rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
 
 .tool-card-vendor {
   font-size: 0.8rem;
+  font-weight: 500;
   color: var(--text-muted);
   display: block;
   margin-bottom: 0.75rem;
@@ -1614,37 +1700,50 @@ footer {
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   min-height: 44px;
 }
 
 .tool-card-checklist {
   list-style: none;
-  margin: 1rem 0;
-  padding: 0;
+  margin: 0.85rem 0 1.15rem 0;
+  padding: 0.7rem 0.85rem;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  font-size: 0.84rem;
+  gap: 0.45rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
 }
 
 .tool-card-checklist li {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
+  line-height: 1.4;
 }
 
 .tool-card-checklist .check-icon {
-  color: #059669;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+  font-size: 0.7rem;
+  font-weight: 800;
+  flex-shrink: 0;
 }
 
 .tool-card-actions {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  margin-top: 1.25rem;
+  margin-top: 1.15rem;
 }
 
 .tool-card-cta-row {
@@ -1989,28 +2088,40 @@ tr:hover td {
 }
 
 .plan-card {
-  background: var(--bg-surface, #FFFFFF);
-  border: 1.5px solid var(--border-subtle, #E2E8F0);
-  border-radius: 18px;
-  padding: 2rem;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%);
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  overflow: hidden;
+}
+
+.plan-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0284C7 0%, #4361EE 50%, #10B981 100%);
+  opacity: 0.9;
 }
 
 .plan-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
   border-color: #0284C7;
 }
 
 .plan-card.featured {
   border-color: #0284C7;
-  background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 15%);
-  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+  background: radial-gradient(120% 60% at 50% 0%, rgba(2, 132, 199, 0.09) 0%, transparent 60%), linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
+  box-shadow: 0 8px 28px rgba(2, 132, 199, 0.16);
 }
 
 .plan-badge-top {
@@ -2046,9 +2157,23 @@ tr:hover td {
 }
 
 .plan-price-wrap {
-  margin-bottom: 1.25rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-subtle, #E2E8F0);
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.9) 0%, rgba(238, 242, 255, 0.85) 100%);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  border-radius: 14px;
+  padding: 0.95rem 1.25rem;
+  margin-bottom: 1.35rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-price-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #0284C7 0%, #4361EE 100%);
 }
 
 .plan-price-pkr {
