@@ -1,4 +1,5 @@
 import re
+import json
 from pathlib import Path
 
 class LLMsSync:
@@ -87,27 +88,62 @@ class LLMsSync:
         lines.extend([
             "",
             "## Operational Rails & Corporate Identity",
-            "- [About Company](https://aidigitools.tech/about.html): Founding mission, corporate background, and 1,200+ active subscriptions.",
+            "- [About Company](https://aidigitools.tech/about.html): Founding mission, digital concierge model, and customer support standards.",
             "- [Customer Help Desk](https://aidigitools.tech/contact.html): Real human assistance in Islamabad via WhatsApp (+92 332 6861112) and email (support@aidigitools.tech).",
-            "- [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute average fulfillment SLA.",
-            "- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT.",
-            "- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day full replacement guarantee or pro-rata domestic refund.",
-            "- [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent review standards and FTC/Google Ads affiliate compliance."
+            "- [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute target fulfillment.",
+            "- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT, Wise, and Crypto USDT.",
+            "- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).",
+            "- [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent reseller disclosures and advertising transparency."
         ])
 
         return "\n".join(lines) + "\n"
 
+    def generate_llms_full_txt(self) -> str:
+        base_index = self.generate_llms_txt().strip()
+        lines = [base_index, "", "## Detailed Software Product Specifications & Technical Profiles", ""]
+        
+        catalog_path = self.root / "scripts" / "tools_catalog.json"
+        if catalog_path.exists():
+            catalog = json.load(open(catalog_path, encoding="utf-8"))
+            for slug, info in sorted(catalog.items()):
+                name = info.get("name", slug)
+                vendor = info.get("vendor", info.get("brand", "AIDigiTools"))
+                cat = info.get("category_label", info.get("category_key", "Software"))
+                pkr = info.get("starting_price_pkr", 0)
+                usd = info.get("starting_price_usd", 0.0)
+                desc = info.get("description", "Verified subscription access via WhatsApp delivery.")
+                plans = info.get("plans", [])
+                features_list = []
+                if plans and "features" in plans[0]:
+                    features_list = plans[0]["features"]
+                feat_str = " — ".join(features_list) if features_list else desc
+                
+                lines.append(f"### {name}")
+                lines.append(f"- Canonical URL: https://aidigitools.tech/tools/{slug}.html")
+                lines.append(f"- Vendor: {vendor}")
+                lines.append(f"- Category: {cat}")
+                lines.append(f"- Starting Price: Rs. {pkr:,} PKR (~${usd:.2f} USD)")
+                lines.append(f"- Features: {feat_str}")
+                lines.append(f"- Delivery Target: 15 Minutes via WhatsApp concierge (03326861112)")
+                lines.append(f"- Warranty: 30-Day Replacement Warranty")
+                lines.append(f"- Payment Rails: EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT, Wise, Crypto USDT")
+                lines.append("")
+        return "\n".join(lines) + "\n"
+
     def sync(self) -> dict:
-        content = self.generate_llms_txt()
+        content_brief = self.generate_llms_txt()
+        content_full = self.generate_llms_full_txt()
+        
         llms_path = self.root / "llms.txt"
         llms_full_path = self.root / "llms-full.txt"
 
-        llms_path.write_text(content, encoding="utf-8")
-        llms_full_path.write_text(content, encoding="utf-8")
+        llms_path.write_text(content_brief, encoding="utf-8")
+        llms_full_path.write_text(content_full, encoding="utf-8")
 
         return {
             "status": "SUCCESS",
             "llms_path": str(llms_path),
             "llms_full_path": str(llms_full_path),
-            "bytes_written": len(content.encode("utf-8"))
+            "bytes_brief": len(content_brief.encode("utf-8")),
+            "bytes_full": len(content_full.encode("utf-8"))
         }
