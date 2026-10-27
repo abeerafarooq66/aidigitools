@@ -106,17 +106,8 @@ class TestStructuredDataCompliance(unittest.TestCase):
             self.assertEqual(offer.get("@type"), "Offer")
             self.assertIn("price", offer)
             self.assertEqual(offer.get("priceCurrency"), "PKR")
-            held_slugs = [
-                "tools/turnitin-student.html",
-                "tools/linkedin-premium.html",
-                "tools/netflix-premium.html",
-                "tools/spotify-premium.html",
-                "tools/coursera-plus.html"
-            ]
-            if rel in held_slugs:
-                self.assertEqual(offer.get("availability"), "https://schema.org/OutOfStock", f"Held product {rel} must have OutOfStock availability")
-            else:
-                self.assertEqual(offer.get("availability"), "https://schema.org/InStock", f"Active product {rel} must have InStock availability")
+            # All products have direct paid orders paused pending verification of official vendor supply rights
+            self.assertEqual(offer.get("availability"), "https://schema.org/OutOfStock", f"Product {rel} must have OutOfStock availability while direct orders are paused")
 
             # priceValidUntil must be absent (no genuine maintained expiration date)
             self.assertNotIn("priceValidUntil", offer, f"priceValidUntil must not be present in {rel}")

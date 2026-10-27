@@ -1903,7 +1903,7 @@
 };
 
   // State variables for Quick Order Drawer
-  var HELD_PRODUCTS = ['turnitin-student', 'linkedin-premium', 'netflix-premium', 'spotify-premium', 'coursera-plus'];
+  var HELD_PRODUCTS = ["youtube-premium", "chatgpt-plus", "claude-pro", "canva-pro", "capcut-pro", "midjourney", "adobe-creative-cloud", "nordvpn", "surfshark-vpn", "cursor-pro", "perplexity-pro", "elevenlabs-creator", "deepseek-pro", "netflix-premium", "suno-ai", "runway-gen3", "semrush-guru", "notion-business", "grammarly-pro", "quillbot-premium", "github-copilot", "figma-pro", "envato-elements", "freepik-premium", "jetbrains-all", "replit-core", "linkedin-premium", "gemini-advanced", "grok-ai", "kling-ai", "leonardo-ai", "minimax-ai", "udio-ai", "google-veo", "chatgpt-codex", "claude-artifacts", "heygen-ai", "gamma-app", "n8n-automation", "vidiq-boost", "coursera-plus", "google-ai-ultra", "lovable-ai", "spotify-premium", "microsoft-office-365", "windows-11-pro", "prime-video", "tradingview-pro", "turnitin-student"];
   var currentTool = TOOLS_DATA["chatgpt-plus"];
   var currentPlan = currentTool && currentTool.plans && currentTool.plans.length > 0 ? currentTool.plans[0] : null;
   var currentPaymentRail = "EasyPaisa";

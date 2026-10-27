@@ -44,7 +44,7 @@
       "price": "15.00",
       "priceCurrency": "USD"
     },
-    "availability": "https://schema.org/InStock",
+    "availability": "https://schema.org/OutOfStock",
     "url": "https://aidigitools.tech/tools/heygen-ai.html",
     "seller": {
 
@@ -259,6 +259,20 @@
 
     <!-- Pricing & Plans Section -->
     <section style="margin-top:2rem;">
+          <!-- Direct Orders Currently On Hold Banner -->
+    <div class="card" style="border:1px solid #f59e0b; background:rgba(245, 158, 11, 0.08); padding:1.25rem 1.5rem; border-radius:12px; margin-bottom:1.75rem;">
+      <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+        <span style="font-size:1.2rem;">⚠️</span>
+        <strong style="color:var(--text-primary); font-size:1.05rem;">Direct Orders Currently On Hold</strong>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin:0 0 0.5rem 0;">
+        Direct automated checkout and subscription fulfillment are currently paused for this service pending verification of secondary licensing and vendor distribution terms.
+      </p>
+      <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">
+        <strong>Notice:</strong> Inquiries submitted via WhatsApp are for stock and licensing inquiry only and do not constitute an order confirmation or binding sale.
+      </p>
+    </div>
+
       <h2 style="font-size:1.5rem; font-weight:800; margin-bottom:1.25rem; color:var(--text-primary);">Available Subscription Tiers</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
         <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; border:1px solid var(--border-subtle); border-radius:12px; padding:1.5rem; background:var(--bg-surface);">
@@ -284,7 +298,7 @@
             <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('heygen-ai')" style="width:100%;">
               ⚡ Quick Order (Creator Plan (1 Month))
             </button>
-            <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20want%20to%20order%20HeyGen AI Video Avatar%20(Creator Plan (1 Month))%20for%20Rs%204200%20PKR%20/%20$15.00%20USD" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center;">
+            <a href="https://wa.me/923326861112?text=Hi+AIDigiTools%2C+I+am+inquiring+about+availability+for+HeyGen+AI+Video+Avatar+%28Creator+Plan+%281+Month%29%29.+%28Inquiry+only%3B+not+an+order+confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center;">
               WhatsApp Checkout
             </a>
           </div>
@@ -548,7 +562,7 @@
       <span class="floating-wa-pulse"></span>
       <span class="floating-wa-status">🟢 Online • 15m Delivery</span>
     </div>
-    <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20have%20a%20question%20about%20your%20verified%20software%20subscriptions." target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat with AIDigiTools on WhatsApp">
+    <a href="https://wa.me/923326861112?text=Hi+AIDigiTools%2C+I+have+a+question+about+your+verified+software+subscriptions." target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat with AIDigiTools on WhatsApp">
       <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M16 2.5C8.54 2.5 2.5 8.54 2.5 16c0 2.61.74 5.05 2.02 7.12L2.6 29.4l6.45-1.89A13.43 13.43 0 0016 29.5c7.46 0 13.5-6.04 13.5-13.5S23.46 2.5 16 2.5zm6.83 19.22c-.28.81-1.65 1.56-2.32 1.62-.61.06-1.39.09-4.48-1.19-3.71-1.53-6.08-5.3-6.27-5.54-.18-.25-1.51-2-1.51-3.82s.95-2.7 1.29-3.07c.34-.36.74-.45 1-.45.24 0 .5 0 .71.01.24.01.56-.09.87.67.33.77 1.11 2.7 1.21 2.9.1.2.16.44.03.71-.13.26-.2.41-.39.64-.2.23-.41.5-.58.67-.2.19-.4.39-.17.79.23.39 1 1.65 2.15 2.67 1.48 1.32 2.73 1.73 3.12 1.93.39.19.61.16.84-.1.23-.26.98-1.14 1.24-1.54.27-.39.53-.33.9-.19.36.13 2.29 1.08 2.69 1.28.39.2.65.3.75.46.1.17.1.98-.18 1.79z" fill="#FFFFFF"/>
       </svg>
