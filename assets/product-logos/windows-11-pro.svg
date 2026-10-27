@@ -1,7 +1,1 @@
-<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" rx="12" fill="#0078D4"/>
-  <rect x="13" y="13" width="9" height="9" fill="#FFFFFF"/>
-  <rect x="25" y="13" width="9" height="9" fill="#FFFFFF"/>
-  <rect x="13" y="25" width="9" height="9" fill="#FFFFFF"/>
-  <rect x="25" y="25" width="9" height="9" fill="#FFFFFF"/>
-</svg>
+<svg fill="#0078D4" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Windows 11</title><path d="M0,0H11.377V11.372H0ZM12.623,0H24V11.372H12.623ZM0,12.623H11.377V24H0Zm12.623,0H24V24H12.623"/></svg>

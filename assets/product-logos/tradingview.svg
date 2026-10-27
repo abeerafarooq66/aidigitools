@@ -1,5 +1,1 @@
-<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" rx="12" fill="#131722"/>
-  <path d="M12 28l6-8 6 5 8-11 4 4" stroke="#2962FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="36" cy="18" r="2.5" fill="#2962FF"/>
-</svg>
+<svg fill="#131722" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TradingView</title><path d="M15.8654 8.2789c0 1.3541-1.0978 2.4519-2.452 2.4519-1.354 0-2.4519-1.0978-2.4519-2.452 0-1.354 1.0978-2.4518 2.452-2.4518 1.3541 0 2.4519 1.0977 2.4519 2.4519zM9.75 6H0v4.9038h4.8462v7.2692H9.75Zm8.5962 0H24l-5.1058 12.173h-5.6538z"/></svg>
