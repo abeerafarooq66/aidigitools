@@ -733,14 +733,14 @@ h3 {
 }
 
 .card, .tool-card {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 55%, #F1F5F9 100%);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 18px;
-  padding: 1.65rem;
+  background: linear-gradient(165deg, #F8FAFD 0%, #EEF4FA 50%, #F5F8FC 100%);
+  border: 1.5px solid #D8E3EF;
+  border-radius: 20px;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -1587,10 +1587,10 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.75rem;
-  border-radius: 18px;
-  background: radial-gradient(120% 50% at 50% 0%, rgba(0, 180, 216, 0.05) 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 60%, #F1F5F9 100%);
-  border: 1px solid rgba(226, 232, 240, 0.95);
-  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  border-radius: 20px;
+  background: linear-gradient(165deg, #F8FAFD 0%, #EEF4FA 50%, #F5F8FC 100%);
+  border: 1.5px solid #D8E3EF;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
@@ -1624,8 +1624,9 @@ footer {
 
 /* Popular Section Theme Polish */
 .popular-card {
-  background: radial-gradient(120% 60% at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%) !important;
-  border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+  background: linear-gradient(165deg, #F0FDF8 0%, #E3F8EE 50%, #ECFDF5 100%) !important;
+  border: 1.5px solid #86EFAC !important;
+  box-shadow: 0 4px 22px -2px rgba(16, 185, 129, 0.12), 0 2px 6px -1px rgba(16, 185, 129, 0.05);
 }
 
 .popular-card::before {
@@ -1650,11 +1651,11 @@ footer {
 .tool-brand-logo {
   width: 48px;
   height: 48px;
-  border-radius: 13px;
-  padding: 5px;
+  border-radius: 14px;
+  padding: 6px;
   background: #FFFFFF;
-  border: 1.5px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.06);
+  border: 1.5px solid #CBD5E1;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.07);
   object-fit: contain;
   flex-shrink: 0;
   display: block;
@@ -1706,16 +1707,17 @@ footer {
 
 .tool-card-checklist {
   list-style: none;
-  margin: 0.85rem 0 1.15rem 0;
-  padding: 0.7rem 0.85rem;
-  background: linear-gradient(180deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  border-radius: 12px;
+  margin: 0.9rem 0 1.15rem 0;
+  padding: 0.75rem 0.95rem;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 13px;
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-  font-size: 0.82rem;
-  color: var(--text-secondary);
+  font-size: 0.83rem;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
 }
 
 .tool-card-checklist li {
@@ -1779,16 +1781,17 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  background: #F0FDF4;
-  color: #15803D !important;
-  border: 1px solid #BBF7D0;
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 0.65rem 0.85rem;
-  border-radius: 10px;
+  gap: 0.35rem;
+  background: #25D366;
+  color: #FFFFFF !important;
+  border: none;
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 11px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.28);
 }
 
 .btn-wa-subtle:hover {
