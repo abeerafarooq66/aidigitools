@@ -2516,7 +2516,7 @@
         '<tr>' +
           '<th>USD Equivalent</th>' +
           tools.map(function (t) {
-            return '<td style="text-align:center; color:#64748B;">~$' + t.starting_price_usd.toFixed(2) + ' USD / mo</td>';
+            return '<td style="text-align:center; color:#64748B;">~$' + t.starting_price_usd.toFixed(2) + ' USD / month</td>';
           }).join('') +
         '</tr>' +
         '<tr>' +
