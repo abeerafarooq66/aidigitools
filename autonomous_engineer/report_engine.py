@@ -18,7 +18,8 @@ class ReportEngine:
         repair_summary: Dict[str, Any],
         history_diff: Dict[str, Any],
         bing_summary: Optional[Dict[str, Any]] = None,
-        gsc_summary: Optional[Dict[str, Any]] = None
+        gsc_summary: Optional[Dict[str, Any]] = None,
+        pagespeed_summary: Optional[Dict[str, Any]] = None
     ) -> Path:
         """Generates a detailed, timestamped Markdown report for the current maintenance cycle."""
         now_str = get_karachi_timestr()
@@ -65,6 +66,17 @@ class ReportEngine:
         for sr in sample_routes:
             md.append(f"| `{sr.get('url')}` | `{sr.get('status_code')}` | — | {'✅ OK' if sr.get('ok') else '❌ Failed'} |")
         md.append(f"")
+
+        if pagespeed_summary:
+            md.append(f"### Google PageSpeed Insights & Core Web Vitals Telemetry (Mobile):")
+            if pagespeed_summary.get("connected"):
+                sc = pagespeed_summary.get("scores", {})
+                met = pagespeed_summary.get("metrics", {})
+                md.append(f"- **Lighthouse Scores:** Performance: **{sc.get('performance', 0)}/100** | Accessibility: **{sc.get('accessibility', 0)}/100** | Best Practices: **{sc.get('best_practices', 0)}/100** | SEO: **{sc.get('seo', 0)}/100**")
+                md.append(f"- **Core Web Vitals:** LCP: `{met.get('largest_contentful_paint')}` | CLS: `{met.get('cumulative_layout_shift')}` | FCP: `{met.get('first_contentful_paint')}` | TBT: `{met.get('total_blocking_time')}`")
+            else:
+                md.append(f"- **PageSpeed Status:** ⚪ `{pagespeed_summary.get('status')}` — *{pagespeed_summary.get('message', 'PAGESPEED_API_KEY secret not set.')}*")
+            md.append(f"")
 
         # 3. Technical SEO & Content Quality Audit
         md.append(f"## 3. Technical SEO & Content Quality Inspection")

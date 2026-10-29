@@ -20,6 +20,7 @@ from .history_manager import HistoryManager
 from .report_engine import ReportEngine
 from .bing_client import BingWebmasterClient
 from .gsc_client import GoogleSearchConsoleClient
+from .pagespeed_client import PageSpeedInsightsClient
 
 def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> int:
     """Executes the complete autonomous maintenance and SEO engineering cycle."""
@@ -71,6 +72,14 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
     else:
         print(f"  [GSC API] Status: {gsc_summary.get('status')} ({gsc_summary.get('message')})")
 
+    # Query Google PageSpeed Insights & Core Web Vitals Telemetry
+    pagespeed_client = PageSpeedInsightsClient()
+    pagespeed_summary = pagespeed_client.run_pagespeed_audit()
+    if pagespeed_summary.get("connected"):
+        print(f"  [PAGESPEED API] Connected: Live Core Web Vitals & Performance Scores retrieved.")
+    else:
+        print(f"  [PAGESPEED API] Status: {pagespeed_summary.get('status')} ({pagespeed_summary.get('message')})")
+
     # 3. History Comparison (Trend Detection)
     print("\n[STEP 3/6] Comparing with Previous Runs...")
     history_mgr = HistoryManager()
@@ -114,7 +123,8 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
         repair_summary=repair_summary,
         history_diff=history_diff,
         bing_summary=bing_summary,
-        gsc_summary=gsc_summary
+        gsc_summary=gsc_summary,
+        pagespeed_summary=pagespeed_summary
     )
     print(f"  [REPORT] Report Saved: {report_path.relative_to(root_dir)}")
 

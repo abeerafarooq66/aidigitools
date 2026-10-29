@@ -207,5 +207,23 @@ class TestAutonomousEngineer(unittest.TestCase):
         content = wf_path.read_text(encoding="utf-8")
         self.assertIn("GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}", content)
 
+    def test_12_pagespeed_insights_client(self):
+        """Verifies PageSpeedInsightsClient unconfigured state, methods, and error resilience."""
+        from autonomous_engineer.pagespeed_client import PageSpeedInsightsClient
+        client = PageSpeedInsightsClient(api_key="")
+        self.assertFalse(client.is_configured())
+
+        audit = client.run_pagespeed_audit()
+        self.assertFalse(audit["connected"])
+        self.assertEqual(audit["status"], "UNCONFIGURED")
+
+        # Verify unconfigured calls fail gracefully without exceptions
+        self.assertEqual(client.audit_url()["status_code"], 0)
+
+        # Test workflow environment injection
+        wf_path = self.root / ".github" / "workflows" / "autonomous-seo-engineer.yml"
+        content = wf_path.read_text(encoding="utf-8")
+        self.assertIn("PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}", content)
+
 if __name__ == "__main__":
     unittest.main()
