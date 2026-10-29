@@ -24,5 +24,18 @@
     "repairs_applied": false,
     "repairs_rolled_back": false,
     "issues": []
+  },
+  {
+    "run_id": "run-2026-10-29_16-06-50_PKT",
+    "timestamp_pkt": "2026-10-29 16:06:50 PKT",
+    "health_score": 100,
+    "pages_scanned": 66,
+    "critical_count": 0,
+    "warning_count": 0,
+    "broken_links_count": 0,
+    "all_live_checks_passed": true,
+    "repairs_applied": false,
+    "repairs_rolled_back": false,
+    "issues": []
   }
 ]
