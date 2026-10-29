@@ -33,7 +33,10 @@ class HistoryManager:
                 "has_previous": False,
                 "new_issues": current_issues,
                 "resolved_issues": [],
-                "recurring_issues": []
+                "recurring_issues": [],
+                "new_count": len(current_issues),
+                "resolved_count": 0,
+                "recurring_count": 0
             }
 
         prev_issue_keys = {
