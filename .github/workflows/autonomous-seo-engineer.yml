@@ -20,10 +20,15 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: autonomous-engineer-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   autonomous-engineer-cycle:
     name: Execute Twice-Daily Autonomous Maintenance Cycle
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout Codebase
         uses: actions/checkout@v4

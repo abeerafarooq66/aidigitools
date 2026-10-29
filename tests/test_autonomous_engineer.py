@@ -225,5 +225,28 @@ class TestAutonomousEngineer(unittest.TestCase):
         content = wf_path.read_text(encoding="utf-8")
         self.assertIn("PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}", content)
 
+    def test_13_cloud_foundation_workflow_and_health_check(self):
+        """Verifies Cloud Foundation workflow configuration, least-privilege, timeout, and health script."""
+        wf_path = self.root / ".github" / "workflows" / "cloud-foundation.yml"
+        self.assertTrue(wf_path.exists(), f"Workflow missing: {wf_path}")
+        content = wf_path.read_text(encoding="utf-8")
+
+        # Verify twice daily cron schedule (08:00 & 20:00 PKT / 03:00 & 15:00 UTC)
+        self.assertIn("cron: '0 3,15 * * *'", content)
+        # Verify manual trigger
+        self.assertIn("workflow_dispatch:", content)
+        # Verify least-privilege read-only permissions
+        self.assertIn("contents: read", content)
+        self.assertNotIn("contents: write", content)
+        # Verify concurrency protection and timeout
+        self.assertIn("concurrency:", content)
+        self.assertIn("timeout-minutes: 10", content)
+        # Verify standard Ubuntu runner
+        self.assertIn("runs-on: ubuntu-latest", content)
+
+        # Verify health check script exists
+        script_path = self.root / "scripts" / "cloud_foundation_health_check.py"
+        self.assertTrue(script_path.exists(), f"Health script missing: {script_path}")
+
 if __name__ == "__main__":
     unittest.main()

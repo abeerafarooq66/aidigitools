@@ -1,0 +1,56 @@
+name: Cloud Foundation Health & Quality Gate (Twice Daily)
+
+on:
+  schedule:
+    # 08:00 PKT (03:00 UTC) and 20:00 PKT (15:00 UTC) every day in Asia/Karachi (UTC+5)
+    - cron: '0 3,15 * * *'
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Execution scope (all: health check + full test battery, health_only: live health check only)'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - health_only
+
+# Enforce least-privilege GitHub permissions (strictly read-only)
+permissions:
+  contents: read
+
+# Concurrency protection prevents duplicate overlapping runs
+concurrency:
+  group: cloud-foundation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cloud-foundation-check:
+    name: Verify Cloud Foundation & Live Telemetry
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Execute Live Cloud Health Check & SSL Certificate Audit
+        run: |
+          python scripts/cloud_foundation_health_check.py
+
+      - name: Verify Comprehensive Site Test Battery (214 Invariants)
+        if: ${{ github.event.inputs.scope != 'health_only' }}
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Verify Strict Link Graph & Fragment Anchors (2,147 Links)
+        if: ${{ github.event.inputs.scope != 'health_only' }}
+        run: |
+          python scripts/link_graph_checker.py --strict
