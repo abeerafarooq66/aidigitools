@@ -120,5 +120,15 @@ class TestBingAndIndexNowCompliance(unittest.TestCase):
             c_url = canon.group(1)
             self.assertTrue(c_url.startswith("https://aidigitools.tech/"))
 
+    def test_08_indexnow_github_actions_workflow(self):
+        """IndexNow GitHub Actions workflow must exist, trigger on content changes and dispatch, and use submit_indexnow.py."""
+        wf_path = os.path.join(WORKSPACE_DIR, ".github", "workflows", "indexnow-dispatch.yml")
+        self.assertTrue(os.path.exists(wf_path), f"Missing IndexNow workflow: {wf_path}")
+        with open(wf_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        self.assertIn("workflow_dispatch", content)
+        self.assertIn("submit_indexnow.py", content)
+        self.assertIn("contents: read", content)
+
 if __name__ == "__main__":
     unittest.main()

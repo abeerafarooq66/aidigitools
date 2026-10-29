@@ -1,0 +1,57 @@
+name: IndexNow Automatic Search Engine Dispatch
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '*.html'
+      - 'tools/**'
+      - 'categories/**'
+      - 'compare/**'
+      - 'best/**'
+      - 'guides/**'
+      - 'sitemap.xml'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Submission Scope'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - changed
+  schedule:
+    - cron: '0 8 * * 1' # Weekly automated ping every Monday at 08:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow-dispatch:
+    name: Submit Public URLs to IndexNow Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify Live IndexNow Key File Over HTTPS
+        run: |
+          python scripts/submit_indexnow.py --verify-live --dry-run
+
+      - name: Dispatch URLs to Participating Search Engines
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.mode }}" = "all" ]; then
+            echo "Mode: Submitting all canonical URLs from sitemap.xml..."
+            python scripts/submit_indexnow.py
+          else
+            echo "Mode: Submitting modified public HTML pages from git diff..."
+            python scripts/submit_indexnow.py --git-diff
+          fi
