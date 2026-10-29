@@ -186,5 +186,26 @@ class TestAutonomousEngineer(unittest.TestCase):
         content = wf_path.read_text(encoding="utf-8")
         self.assertIn("BING_API_KEY: ${{ secrets.BING_API_KEY }}", content)
 
+    def test_11_google_search_console_client(self):
+        """Verifies GoogleSearchConsoleClient unconfigured state, methods, and error resilience."""
+        from autonomous_engineer.gsc_client import GoogleSearchConsoleClient
+        client = GoogleSearchConsoleClient(key_json_str="")
+        self.assertFalse(client.is_configured())
+        self.assertIsNone(client.get_client_email())
+        self.assertIsNone(client.get_access_token())
+
+        audit = client.run_gsc_audit()
+        self.assertFalse(audit["connected"])
+        self.assertEqual(audit["status"], "UNCONFIGURED")
+
+        # Verify unconfigured calls fail gracefully without exceptions
+        self.assertEqual(client.get_search_analytics()["status_code"], 0)
+        self.assertEqual(client.get_sitemaps()["status_code"], 0)
+
+        # Test workflow environment injection
+        wf_path = self.root / ".github" / "workflows" / "autonomous-seo-engineer.yml"
+        content = wf_path.read_text(encoding="utf-8")
+        self.assertIn("GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}", content)
+
 if __name__ == "__main__":
     unittest.main()

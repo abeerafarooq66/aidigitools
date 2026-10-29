@@ -19,6 +19,7 @@ from .repair_executor import RepairExecutor
 from .history_manager import HistoryManager
 from .report_engine import ReportEngine
 from .bing_client import BingWebmasterClient
+from .gsc_client import GoogleSearchConsoleClient
 
 def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> int:
     """Executes the complete autonomous maintenance and SEO engineering cycle."""
@@ -62,6 +63,14 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
     else:
         print(f"  [BING API] Status: {bing_summary.get('status')} ({bing_summary.get('message')})")
 
+    # Query Google Search Console API Telemetry
+    gsc_client = GoogleSearchConsoleClient()
+    gsc_summary = gsc_client.run_gsc_audit()
+    if gsc_summary.get("connected"):
+        print(f"  [GSC API] Connected: Active Google Search Console Telemetry retrieved.")
+    else:
+        print(f"  [GSC API] Status: {gsc_summary.get('status')} ({gsc_summary.get('message')})")
+
     # 3. History Comparison (Trend Detection)
     print("\n[STEP 3/6] Comparing with Previous Runs...")
     history_mgr = HistoryManager()
@@ -104,7 +113,8 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
         reasoner_summary=reasoning_summary,
         repair_summary=repair_summary,
         history_diff=history_diff,
-        bing_summary=bing_summary
+        bing_summary=bing_summary,
+        gsc_summary=gsc_summary
     )
     print(f"  [REPORT] Report Saved: {report_path.relative_to(root_dir)}")
 

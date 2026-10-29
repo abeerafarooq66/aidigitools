@@ -17,7 +17,8 @@ class ReportEngine:
         reasoner_summary: Dict[str, Any],
         repair_summary: Dict[str, Any],
         history_diff: Dict[str, Any],
-        bing_summary: Optional[Dict[str, Any]] = None
+        bing_summary: Optional[Dict[str, Any]] = None,
+        gsc_summary: Optional[Dict[str, Any]] = None
     ) -> Path:
         """Generates a detailed, timestamped Markdown report for the current maintenance cycle."""
         now_str = get_karachi_timestr()
@@ -116,12 +117,26 @@ class ReportEngine:
                 md.append(f"- **[{m.get('risk')}] {m.get('action')}:** {m.get('details')}")
             md.append(f"")
 
-        # 7. Official Search Engine Protocols & Bing Webmaster Integration
-        md.append(f"## 7. Search Engine Protocols & Bing Webmaster Telemetry")
+        # 7. Official Search Engine Protocols, Bing & Google Webmaster Integration
+        md.append(f"## 7. Search Engine Protocols, Bing & Google Webmaster Telemetry")
         md.append(f"")
         md.append(f"- **IndexNow Protocol (Bing, Yandex, Seznam, Naver):** Active protocol with key [`{idx.get('url', '')}`]({idx.get('url', '')}).")
-        md.append(f"- **Google Search (Googlebot / AI Overviews):** Crawlability open via `robots.txt` and verified in `sitemap.xml`. (Google relies on GSC and sitemaps, not IndexNow).")
+        md.append(f"- **Google Search (Googlebot / AI Overviews):** Crawlability open via `robots.txt` and verified in `sitemap.xml`.")
         md.append(f"")
+
+        if gsc_summary:
+            md.append(f"### Google Search Console API Telemetry:")
+            if gsc_summary.get("connected"):
+                md.append(f"- **Google API Status:** 🟢 Connected & Authorized (`{gsc_summary.get('status')}`)")
+                if gsc_summary.get("client_email"):
+                    md.append(f"- **Service Account:** `{gsc_summary.get('client_email')}`")
+                if gsc_summary.get("sitemaps"):
+                    md.append(f"- **Sitemaps in Google Index:** `{gsc_summary.get('sitemaps')}`")
+                if gsc_summary.get("analytics"):
+                    md.append(f"- **Search Analytics Data:** Active performance tracking.")
+            else:
+                md.append(f"- **Google API Status:** ⚪ `{gsc_summary.get('status')}` — *{gsc_summary.get('message', 'GSC_SERVICE_ACCOUNT_KEY secret not set.')}*")
+            md.append(f"")
 
         if bing_summary:
             md.append(f"### Microsoft Bing Webmaster API Telemetry:")
