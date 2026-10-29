@@ -7,12 +7,14 @@ from datetime import datetime, timedelta, timezone
 from typing import Dict, Any, Optional, List
 from .config import BASE_URL
 
+IMPORT_ERROR_MSG = ""
 try:
     from google.oauth2 import service_account
     import google.auth.transport.requests
     HAS_GOOGLE_AUTH = True
-except ImportError:
+except Exception as e:
     HAS_GOOGLE_AUTH = False
+    IMPORT_ERROR_MSG = str(e)
 
 class GoogleSearchConsoleClient:
     """Official Google Search Console API Client.
@@ -197,7 +199,7 @@ class GoogleSearchConsoleClient:
             return {
                 "connected": False,
                 "status": "DEPENDENCY_NOTICE",
-                "message": "google-auth library not installed in runtime environment.",
+                "message": f"google-auth/requests library notice ({IMPORT_ERROR_MSG}).",
                 "client_email": client_email,
                 "analytics": None,
                 "sitemaps": None
