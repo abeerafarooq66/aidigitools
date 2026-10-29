@@ -1,0 +1,306 @@
+{
+  "summary": {
+    "timestamp": "2026-10-29T18:46:55.068362+05:00",
+    "domain": "aidigitools.tech",
+    "total_pages_discovered": 66,
+    "sitemap_urls_count": 65,
+    "orphan_pages_count": 0,
+    "health_score": 87,
+    "issues_by_severity": {
+      "CRITICAL": 0,
+      "ERROR": 0,
+      "WARNING": 13,
+      "NOTICE": 0
+    },
+    "issues_by_confidence": {
+      "CONFIRMED": 13,
+      "WARNING": 0,
+      "UNCERTAIN": 0
+    },
+    "issues_by_category": {
+      "CONTENT_QUALITY": 13
+    },
+    "laboratory_performance_disclaimer": "Scientific Disclaimer: Laboratory performance metrics (including synthetic Lighthouse, simulated PageSpeed audits, and local headless browser evaluations) measure performance under controlled, preset network throttling and device constraints. Laboratory scores represent diagnostic benchmarks for regression testing and optimization debugging, and do NOT equate to real-user Core Web Vitals (Chrome User Experience Report / CrUX field data aggregated across 28-day 75th percentile real-world device and network interactions). Field CrUX data may vary based on end-user hardware, network conditions, cache hit rates, and geographical routing."
+  },
+  "discovered_pages": [
+    "404.html",
+    "about.html",
+    "affiliate-disclosure.html",
+    "best/best-ai-coding-tools.html",
+    "best/best-ai-video-generators.html",
+    "categories/coding.html",
+    "categories/image.html",
+    "categories/video.html",
+    "categories/vpn.html",
+    "compare/chatgpt-vs-claude.html",
+    "compare/runway-vs-pika.html",
+    "contact.html",
+    "deals.html",
+    "guides/chatgpt-vs-claude.html",
+    "index.html",
+    "policies.html",
+    "shipping-policy.html",
+    "tools/adobe-creative-cloud.html",
+    "tools/canva-pro.html",
+    "tools/capcut-pro.html",
+    "tools/chatgpt-codex.html",
+    "tools/chatgpt-plus.html",
+    "tools/claude-artifacts.html",
+    "tools/claude-pro.html",
+    "tools/coursera-plus.html",
+    "tools/cursor-pro.html",
+    "tools/deepseek-pro.html",
+    "tools/elevenlabs-creator.html",
+    "tools/envato-elements.html",
+    "tools/figma-pro.html",
+    "tools/freepik-premium.html",
+    "tools/gamma-app.html",
+    "tools/gemini-advanced.html",
+    "tools/github-copilot.html",
+    "tools/google-ai-ultra.html",
+    "tools/google-veo.html",
+    "tools/grammarly-pro.html",
+    "tools/grok-ai.html",
+    "tools/heygen-ai.html",
+    "tools/jetbrains-all.html",
+    "tools/kling-ai.html",
+    "tools/leonardo-ai.html",
+    "tools/linkedin-premium.html",
+    "tools/lovable-ai.html",
+    "tools/microsoft-office-365.html",
+    "tools/midjourney.html",
+    "tools/minimax-ai.html",
+    "tools/n8n-automation.html",
+    "tools/netflix-premium.html",
+    "tools/nordvpn.html",
+    "tools/notion-business.html",
+    "tools/perplexity-pro.html",
+    "tools/prime-video.html",
+    "tools/quillbot-premium.html",
+    "tools/replit-core.html",
+    "tools/runway-gen3.html",
+    "tools/semrush-guru.html",
+    "tools/spotify-premium.html",
+    "tools/suno-ai.html",
+    "tools/surfshark-vpn.html",
+    "tools/tradingview-pro.html",
+    "tools/turnitin-student.html",
+    "tools/udio-ai.html",
+    "tools/vidiq-boost.html",
+    "tools/windows-11-pro.html",
+    "tools/youtube-premium.html"
+  ],
+  "orphan_pages": [],
+  "network": {
+    "sample_probes": [
+      {
+        "url": "https://aidigitools.tech/404.html",
+        "status_code": 200,
+        "latency_ms": 138.15,
+        "redirected": false,
+        "final_url": "https://aidigitools.tech/404.html"
+      },
+      {
+        "url": "https://aidigitools.tech/",
+        "status_code": 200,
+        "latency_ms": 158.78,
+        "redirected": false,
+        "final_url": "https://aidigitools.tech/"
+      },
+      {
+        "url": "https://aidigitools.tech/affiliate-disclosure.html",
+        "status_code": 200,
+        "latency_ms": 151.6,
+        "redirected": false,
+        "final_url": "https://aidigitools.tech/affiliate-disclosure.html"
+      },
+      {
+        "url": "https://aidigitools.tech/best/best-ai-coding-tools.html",
+        "status_code": 200,
+        "latency_ms": 508.53,
+        "redirected": false,
+        "final_url": "https://aidigitools.tech/best/best-ai-coding-tools.html"
+      },
+      {
+        "url": "https://aidigitools.tech/best/best-ai-video-generators.html",
+        "status_code": 200,
+        "latency_ms": 153.15,
+        "redirected": false,
+        "final_url": "https://aidigitools.tech/best/best-ai-video-generators.html"
+      },
+      {
+        "url": "https://aidigitools.tech/about.html",
+        "status_code": 200,
+        "latency_ms": 154.51,
+        "redirected": false,
+        "final_url": "https://aidigitools.tech/about.html"
+      }
+    ]
+  },
+  "link_graph": {
+    "total_internal_links_checked": 2582,
+    "broken_links_count": 0,
+    "broken_anchors_count": 0
+  },
+  "structured_data": {
+    "total_schemas_found": 230,
+    "schema_types_count": {
+      "WebPage": 54,
+      "AboutPage": 1,
+      "BreadcrumbList": 64,
+      "Article": 2,
+      "CollectionPage": 4,
+      "TechArticle": 3,
+      "ContactPage": 1,
+      "WebSite": 1,
+      "FAQPage": 50,
+      "Organization": 1,
+      "Product": 49
+    }
+  },
+  "accessibility": {
+    "total_images_checked": 167,
+    "total_buttons_checked": 260
+  },
+  "browser_interactions": {
+    "browser_tested": true,
+    "browser_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "interactions_passed": 4,
+    "interactions_failed": 0,
+    "console_errors_count": 0,
+    "responsive_checks_passed": 3
+  },
+  "lighthouse": {},
+  "issues": [
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/coursera-plus.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/coursera-plus.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/gamma-app.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/gamma-app.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/google-ai-ultra.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/google-ai-ultra.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/heygen-ai.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/heygen-ai.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/lovable-ai.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/lovable-ai.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/microsoft-office-365.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/microsoft-office-365.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/n8n-automation.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/n8n-automation.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/prime-video.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/prime-video.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/spotify-premium.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/spotify-premium.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/tradingview-pro.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/tradingview-pro.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/turnitin-student.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/turnitin-student.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/vidiq-boost.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/vidiq-boost.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    },
+    {
+      "id": "MISSING_COMPARISON_TABLE",
+      "timestamp": "2026-10-29T18:46:55.068362+05:00",
+      "tested_url": "tools/windows-11-pro.html",
+      "category": "CONTENT_QUALITY",
+      "severity": "WARNING",
+      "confidence": "CONFIRMED",
+      "evidence": "Tool page tools/windows-11-pro.html lacks a semantic <table> comparison element.",
+      "recommended_fix": "Add a structured comparison table with pricing, features, and alternatives."
+    }
+  ]
+}

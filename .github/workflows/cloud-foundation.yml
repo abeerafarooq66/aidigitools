@@ -45,7 +45,13 @@ jobs:
         run: |
           python scripts/cloud_foundation_health_check.py
 
-      - name: Verify Comprehensive Site Test Battery (214 Invariants)
+      - name: Execute Deep Audit Engine (Dynamic Discovery, SEO, Schema, A11y & Browser)
+        env:
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: |
+          python -m deep_audit.cli --mode full
+
+      - name: Verify Comprehensive Site Test Battery (222 Invariants)
         if: ${{ github.event.inputs.scope != 'health_only' }}
         run: |
           python -m unittest discover -s tests -v
