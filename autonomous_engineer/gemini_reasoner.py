@@ -86,6 +86,14 @@ class GeminiReasoner:
                     "details": iss.get("msg"),
                     "file": iss.get("file")
                 })
+            elif iss.get("type") == "missing_comparison_table":
+                auto_repairs.append({
+                    "id": f"repair-table-{iss.get('file')}",
+                    "risk": "LOW",
+                    "action": f"Inject structured comparison table into {iss.get('file')}",
+                    "details": iss.get("msg"),
+                    "file": iss.get("file")
+                })
             elif iss.get("severity") == "CRITICAL":
                 manual_reviews.append({
                     "id": f"review-critical-{iss.get('file')}",

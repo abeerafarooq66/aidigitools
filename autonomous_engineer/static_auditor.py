@@ -164,6 +164,15 @@ class StaticAuditor:
                     "msg": f"Malformed JSON-LD schema: {str(e)}"
                 })
 
+        # 9. Tool page comparison table check
+        if rel_path.startswith("tools/") and "<table" not in content.lower():
+            issues.append({
+                "severity": "WARNING",
+                "type": "missing_comparison_table",
+                "msg": f"Tool page {rel_path} lacks a semantic <table> comparison element.",
+                "file": rel_path
+            })
+
         return {
             "file": rel_path,
             "title": title,
