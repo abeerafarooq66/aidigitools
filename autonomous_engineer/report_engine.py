@@ -129,8 +129,12 @@ class ReportEngine:
                 md.append(f"- **Bing API Status:** 🟢 Connected & Authorized (`{bing_summary.get('status')}`)")
                 if bing_summary.get("quota"):
                     md.append(f"- **Daily URL Quota:** `{bing_summary.get('quota')}`")
+                if bing_summary.get("sitemap_synced"):
+                    md.append(f"- **Sitemaps Synchronized:** Verified `https://aidigitools.tech/sitemap.xml` active in Bing Webmaster Tools.")
                 if bing_summary.get("crawl_stats"):
                     md.append(f"- **Crawl Stats:** `{bing_summary.get('crawl_stats')}`")
+                if bing_summary.get("crawl_issues"):
+                    md.append(f"- **Crawl Issues:** `{bing_summary.get('crawl_issues')}`")
                 if bing_summary.get("query_stats"):
                     md.append(f"- **Query Stats:** `{bing_summary.get('query_stats')}`")
             else:

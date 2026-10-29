@@ -163,13 +163,23 @@ class TestAutonomousEngineer(unittest.TestCase):
         self.assertIn("[skip ci]", content)
 
     def test_10_bing_webmaster_client(self):
-        """Verifies BingWebmasterClient unconfigured state, is_configured flag, and error resilience."""
+        """Verifies BingWebmasterClient unconfigured state, methods, and error resilience."""
         from autonomous_engineer.bing_client import BingWebmasterClient
         client = BingWebmasterClient(api_key="")
         self.assertFalse(client.is_configured())
         audit = client.run_bing_audit()
         self.assertFalse(audit["connected"])
         self.assertEqual(audit["status"], "UNCONFIGURED")
+
+        # Verify unconfigured calls fail gracefully
+        self.assertEqual(client.get_url_submission_quota()["status_code"], 0)
+        self.assertEqual(client.get_crawl_stats()["status_code"], 0)
+        self.assertEqual(client.get_query_stats()["status_code"], 0)
+        self.assertEqual(client.get_feeds()["status_code"], 0)
+        self.assertEqual(client.get_crawl_issues()["status_code"], 0)
+        self.assertEqual(client.submit_feed()["status_code"], 0)
+        self.assertEqual(client.submit_url("https://aidigitools.tech/deals.html")["status_code"], 0)
+        self.assertEqual(client.submit_url_batch(["https://aidigitools.tech/deals.html"])["status_code"], 0)
 
         # Test workflow environment injection
         wf_path = self.root / ".github" / "workflows" / "autonomous-seo-engineer.yml"

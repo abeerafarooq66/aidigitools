@@ -57,6 +57,8 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
     bing_summary = bing_client.run_bing_audit()
     if bing_summary.get("connected"):
         print(f"  [BING API] Connected: Active Bing Webmaster Telemetry retrieved.")
+        if bing_summary.get("sitemap_synced"):
+            print(f"  [BING API] Sitemaps synchronized with Bing Webmaster Tools.")
     else:
         print(f"  [BING API] Status: {bing_summary.get('status')} ({bing_summary.get('message')})")
 
