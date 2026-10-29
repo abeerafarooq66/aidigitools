@@ -38,6 +38,7 @@ jobs:
       - name: Run Autonomous SEO & Website Engineer
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: |
           MODE="${{ github.event.inputs.mode || 'full' }}"
           echo "Executing Autonomous Engineer in mode: $MODE"

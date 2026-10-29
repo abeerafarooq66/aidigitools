@@ -18,6 +18,7 @@ from .gemini_reasoner import GeminiReasoner
 from .repair_executor import RepairExecutor
 from .history_manager import HistoryManager
 from .report_engine import ReportEngine
+from .bing_client import BingWebmasterClient
 
 def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> int:
     """Executes the complete autonomous maintenance and SEO engineering cycle."""
@@ -50,6 +51,14 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
     else:
         print("  [SKIPPED] Live probes skipped by flag.")
         live_summary = {"homepage": {"reachable": True, "status_code": 200}, "indexnow_key": {"valid": True}, "sample_routes": [], "all_live_checks_passed": True}
+
+    # Query Bing Webmaster API Telemetry
+    bing_client = BingWebmasterClient()
+    bing_summary = bing_client.run_bing_audit()
+    if bing_summary.get("connected"):
+        print(f"  [BING API] Connected: Active Bing Webmaster Telemetry retrieved.")
+    else:
+        print(f"  [BING API] Status: {bing_summary.get('status')} ({bing_summary.get('message')})")
 
     # 3. History Comparison (Trend Detection)
     print("\n[STEP 3/6] Comparing with Previous Runs...")
@@ -92,7 +101,8 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
         live_summary=live_summary,
         reasoner_summary=reasoning_summary,
         repair_summary=repair_summary,
-        history_diff=history_diff
+        history_diff=history_diff,
+        bing_summary=bing_summary
     )
     print(f"  [REPORT] Report Saved: {report_path.relative_to(root_dir)}")
 

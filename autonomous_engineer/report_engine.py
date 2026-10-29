@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from .config import REPORTS_DIR, BASE_URL, get_karachi_timestr, get_karachi_time
 
 class ReportEngine:
@@ -16,7 +16,8 @@ class ReportEngine:
         live_summary: Dict[str, Any],
         reasoner_summary: Dict[str, Any],
         repair_summary: Dict[str, Any],
-        history_diff: Dict[str, Any]
+        history_diff: Dict[str, Any],
+        bing_summary: Optional[Dict[str, Any]] = None
     ) -> Path:
         """Generates a detailed, timestamped Markdown report for the current maintenance cycle."""
         now_str = get_karachi_timestr()
@@ -115,12 +116,26 @@ class ReportEngine:
                 md.append(f"- **[{m.get('risk')}] {m.get('action')}:** {m.get('details')}")
             md.append(f"")
 
-        # 7. Official Search Engine Protocols Notice
-        md.append(f"## 7. Official Search Engine Protocol Status")
+        # 7. Official Search Engine Protocols & Bing Webmaster Integration
+        md.append(f"## 7. Search Engine Protocols & Bing Webmaster Telemetry")
         md.append(f"")
-        md.append(f"- **IndexNow (Bing / Yandex / Seznam / Naver):** Active protocol with key [`{idx.get('url', '')}`]({idx.get('url', '')}).")
+        md.append(f"- **IndexNow Protocol (Bing, Yandex, Seznam, Naver):** Active protocol with key [`{idx.get('url', '')}`]({idx.get('url', '')}).")
         md.append(f"- **Google Search (Googlebot / AI Overviews):** Crawlability open via `robots.txt` and verified in `sitemap.xml`. (Google relies on GSC and sitemaps, not IndexNow).")
         md.append(f"")
+
+        if bing_summary:
+            md.append(f"### Microsoft Bing Webmaster API Telemetry:")
+            if bing_summary.get("connected"):
+                md.append(f"- **Bing API Status:** 🟢 Connected & Authorized (`{bing_summary.get('status')}`)")
+                if bing_summary.get("quota"):
+                    md.append(f"- **Daily URL Quota:** `{bing_summary.get('quota')}`")
+                if bing_summary.get("crawl_stats"):
+                    md.append(f"- **Crawl Stats:** `{bing_summary.get('crawl_stats')}`")
+                if bing_summary.get("query_stats"):
+                    md.append(f"- **Query Stats:** `{bing_summary.get('query_stats')}`")
+            else:
+                md.append(f"- **Bing API Status:** ⚪ `{bing_summary.get('status')}` — *{bing_summary.get('message', 'BING_API_KEY secret not yet set in GitHub Actions.')}*")
+            md.append(f"")
 
         report_path.write_text("\n".join(md), encoding="utf-8")
         self._update_index()

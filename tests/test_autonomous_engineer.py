@@ -162,5 +162,19 @@ class TestAutonomousEngineer(unittest.TestCase):
         # Check skip ci tag
         self.assertIn("[skip ci]", content)
 
+    def test_10_bing_webmaster_client(self):
+        """Verifies BingWebmasterClient unconfigured state, is_configured flag, and error resilience."""
+        from autonomous_engineer.bing_client import BingWebmasterClient
+        client = BingWebmasterClient(api_key="")
+        self.assertFalse(client.is_configured())
+        audit = client.run_bing_audit()
+        self.assertFalse(audit["connected"])
+        self.assertEqual(audit["status"], "UNCONFIGURED")
+
+        # Test workflow environment injection
+        wf_path = self.root / ".github" / "workflows" / "autonomous-seo-engineer.yml"
+        content = wf_path.read_text(encoding="utf-8")
+        self.assertIn("BING_API_KEY: ${{ secrets.BING_API_KEY }}", content)
+
 if __name__ == "__main__":
     unittest.main()
