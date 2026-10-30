@@ -100,7 +100,7 @@ class PageSpeedInsightsClient:
             "seo": int((categories.get("seo", {}).get("score") or 0) * 100),
         }
 
-        metrics = {
+        lab_metrics = {
             "largest_contentful_paint": audits.get("largest-contentful-paint", {}).get("displayValue", "N/A"),
             "cumulative_layout_shift": audits.get("cumulative-layout-shift", {}).get("displayValue", "N/A"),
             "first_contentful_paint": audits.get("first-contentful-paint", {}).get("displayValue", "N/A"),
@@ -108,10 +108,46 @@ class PageSpeedInsightsClient:
             "speed_index": audits.get("speed-index", {}).get("displayValue", "N/A"),
         }
 
+        # Separate extraction of Real-User Field Experience (CrUX)
+        url_exp = data.get("loadingExperience", {})
+        origin_exp = data.get("originLoadingExperience", {})
+
+        def parse_crux_metrics(exp_dict: Dict[str, Any]) -> Dict[str, Any]:
+            if not exp_dict or not exp_dict.get("metrics"):
+                return {
+                    "available": False,
+                    "overall_category": exp_dict.get("overall_category", "INSUFFICIENT_DATA"),
+                    "status": "Insufficient CrUX real-user volume aggregated for date window."
+                }
+            crux_m = exp_dict.get("metrics", {})
+            return {
+                "available": True,
+                "overall_category": exp_dict.get("overall_category", "FAST"),
+                "lcp": crux_m.get("LARGEST_CONTENTFUL_PAINT_MS", {}).get("percentile", "N/A"),
+                "cls": crux_m.get("CUMULATIVE_LAYOUT_SHIFT_SCORE", {}).get("percentile", "N/A"),
+                "inp": crux_m.get("INTERACTION_TO_NEXT_PAINT", {}).get("percentile", "N/A"),
+                "fcp": crux_m.get("FIRST_CONTENTFUL_PAINT_MS", {}).get("percentile", "N/A"),
+            }
+
+        field_url = parse_crux_metrics(url_exp)
+        field_origin = parse_crux_metrics(origin_exp)
+
         return {
             "connected": True,
             "status": "ACTIVE",
-            "message": "Successfully retrieved live Google PageSpeed & Core Web Vitals telemetry.",
+            "message": "Successfully retrieved live Google PageSpeed lab diagnostics and CrUX field data.",
             "scores": scores,
-            "metrics": metrics
+            "metrics": lab_metrics,
+            "lab_diagnostics": {
+                "environment": "Controlled Simulated Laboratory (Lighthouse Mobile Moto G Power)",
+                "scores": scores,
+                "metrics": lab_metrics
+            },
+            "field_experience": {
+                "source": "Chrome User Experience Report (CrUX real-user field data)",
+                "has_field_data": field_url["available"] or field_origin["available"],
+                "url_metrics": field_url,
+                "origin_metrics": field_origin,
+                "disclaimer": "Laboratory scores reflect simulated synthetic conditions. Real-user Core Web Vitals (CrUX) require aggregated 28-day user sessions."
+            }
         }

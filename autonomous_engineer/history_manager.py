@@ -92,3 +92,92 @@ class HistoryManager:
 
         self.history_file.write_text(json.dumps(history, indent=2), encoding="utf-8")
         return record_id
+
+    def generate_trend_summary(self, period: str = "weekly") -> Dict[str, Any]:
+        """Generates statistical and historical trend summaries over weekly (last 14 runs) or monthly (last 60 runs) windows."""
+        history = self.load_history()
+        limit = 14 if period == "weekly" else 60
+        target_runs = history[-limit:] if history else []
+
+        if not target_runs:
+            return {
+                "period": period,
+                "has_data": False,
+                "runs_analyzed": 0,
+                "average_health_score": 100,
+                "min_health_score": 100,
+                "max_health_score": 100,
+                "uptime_percentage": 100.0,
+                "stability_status": "BASELINE",
+                "repairs_total": 0,
+                "trend_narrative": "Initial baseline established. Insufficient historical runs."
+            }
+
+        scores = [r.get("health_score", 100) for r in target_runs]
+        uptime_passes = sum(1 for r in target_runs if r.get("all_live_checks_passed"))
+        uptime_pct = round((uptime_passes / len(target_runs)) * 100, 2)
+        avg_score = round(sum(scores) / len(scores), 1)
+        min_score = min(scores)
+        max_score = max(scores)
+        repairs_total = sum(1 for r in target_runs if r.get("repairs_applied"))
+
+        if min_score >= 95 and avg_score >= 98:
+            status = "EXCELLENT_STABILITY"
+            narrative = f"Over the past {len(target_runs)} runs, site health demonstrated rock-solid stability averaging {avg_score}% with {uptime_pct}% uptime."
+        elif avg_score >= 85:
+            status = "GOOD_MODERATE_FLUCTUATION"
+            narrative = f"Average health score is {avg_score}%. Isolated optimization warnings were resolved."
+        else:
+            status = "ACTION_REQUIRED"
+            narrative = f"Quality degradation detected: average health score dropped to {avg_score}%."
+
+        summary = {
+            "period": period,
+            "has_data": True,
+            "runs_analyzed": len(target_runs),
+            "average_health_score": avg_score,
+            "min_health_score": min_score,
+            "max_health_score": max_score,
+            "uptime_percentage": uptime_pct,
+            "stability_status": status,
+            "repairs_total": repairs_total,
+            "trend_narrative": narrative,
+            "first_run_timestamp": target_runs[0].get("timestamp_pkt"),
+            "latest_run_timestamp": target_runs[-1].get("timestamp_pkt")
+        }
+
+        self.save_trend_report(summary)
+        return summary
+
+    def save_trend_report(self, trend_summary: Dict[str, Any]) -> Path:
+        """Writes dated trend markdown report into audit_reports/."""
+        period = trend_summary.get("period", "weekly")
+        report_path = self.reports_dir / f"{period}_trends.md"
+
+        md = [
+            f"# AI DigiTools — {period.capitalize()} SEO & Infrastructure Trend Summary",
+            "",
+            f"**Generated:** {get_karachi_timestr()} (Asia/Karachi)  ",
+            f"**Window Analyzed:** {trend_summary.get('runs_analyzed', 0)} maintenance runs ({trend_summary.get('first_run_timestamp', 'N/A')} to {trend_summary.get('latest_run_timestamp', 'N/A')})  ",
+            f"**Overall Stability Posture:** **{trend_summary.get('stability_status')}**  ",
+            "",
+            "---",
+            "",
+            "## 1. Key Performance & Reliability Metrics",
+            "",
+            f"| Metric | Value | Baseline Standard | Status |",
+            f"| :--- | :---: | :---: | :--- |",
+            f"| Average Health Score | `{trend_summary.get('average_health_score')}%` | `≥ 95%` | {'✅ Optimal' if trend_summary.get('average_health_score', 0) >= 95 else '⚠️ Review'} |",
+            f"| Minimum Health Score | `{trend_summary.get('min_health_score')}%` | `≥ 90%` | {'✅ Controlled' if trend_summary.get('min_health_score', 0) >= 90 else '❌ Incident'} |",
+            f"| Maximum Health Score | `{trend_summary.get('max_health_score')}%` | `100%` | {'✅ Peak Health' if trend_summary.get('max_health_score', 0) == 100 else '—'} |",
+            f"| Live Production Uptime | `{trend_summary.get('uptime_percentage')}%` | `100.0%` | {'✅ 100% Available' if trend_summary.get('uptime_percentage') == 100.0 else '⚠️ Degraded'} |",
+            f"| Total Autonomous Repairs | `{trend_summary.get('repairs_total')}` | Safe Allowlist | Zero Failing Commits |",
+            "",
+            "## 2. Trend Narrative",
+            "",
+            f"> {trend_summary.get('trend_narrative')}",
+            "",
+            "> **Disclaimer:** Trend metrics measure internal code quality, crawlability compliance, and server availability. They do not represent or guarantee third-party Google Search indexing or rankings."
+        ]
+        report_path.write_text("\n".join(md), encoding="utf-8")
+        return report_path

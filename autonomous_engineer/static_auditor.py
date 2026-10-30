@@ -150,13 +150,29 @@ class StaticAuditor:
                     "msg": f"Image tag has missing or empty alt attribute: <img {img}>"
                 })
 
-        # 8. Structured Data (JSON-LD)
+        # 8. Structured Data Validation & Claim Verification
         schemas = re.findall(r'<script\s+type=["\']application/ld\+json["\']>(.*?)</script>', content, re.IGNORECASE | re.DOTALL)
         valid_schemas = 0
         for s in schemas:
             try:
                 data = json.loads(s.strip())
                 valid_schemas += 1
+                # Check for prohibited unverified ratings
+                if isinstance(data, dict):
+                    if "aggregateRating" in data and not data.get("review"):
+                        issues.append({
+                            "severity": "CRITICAL",
+                            "type": "unverified_aggregate_rating",
+                            "msg": f"Prohibited unverified aggregateRating without visible review in {rel_path}"
+                        })
+                    if data.get("@type") == "Product":
+                        offers = data.get("offers", {})
+                        if not offers.get("price") or offers.get("priceCurrency") != "PKR":
+                            issues.append({
+                                "severity": "WARNING",
+                                "type": "schema_pricing_incomplete",
+                                "msg": f"Product schema missing explicit PKR price in {rel_path}"
+                            })
             except Exception as e:
                 issues.append({
                     "severity": "CRITICAL",
@@ -164,14 +180,38 @@ class StaticAuditor:
                     "msg": f"Malformed JSON-LD schema: {str(e)}"
                 })
 
-        # 9. Tool page comparison table check
-        if rel_path.startswith("tools/") and "<table" not in content.lower():
-            issues.append({
-                "severity": "WARNING",
-                "type": "missing_comparison_table",
-                "msg": f"Tool page {rel_path} lacks a semantic <table> comparison element.",
-                "file": rel_path
-            })
+        # 9. Tool page verification (Pricing, SLA, Warranty, Reseller Disclosure)
+        if rel_path.startswith("tools/"):
+            if "<table" not in content.lower():
+                issues.append({
+                    "severity": "WARNING",
+                    "type": "missing_comparison_table",
+                    "msg": f"Tool page {rel_path} lacks a semantic <table> comparison element.",
+                    "file": rel_path
+                })
+            # Verify explicit PKR and USD pricing
+            has_pkr = bool(re.search(r'\b(?:PKR|Rs\.?)\s*[\d,]+', content, re.IGNORECASE))
+            has_usd = bool(re.search(r'\$\s*[\d,]+(?:\.\d+)?|\bUSD\b', content, re.IGNORECASE))
+            if not (has_pkr and has_usd):
+                issues.append({
+                    "severity": "WARNING",
+                    "type": "pricing_transparency",
+                    "msg": f"Tool page {rel_path} must state both PKR and USD pricing figures."
+                })
+            # Verify Independent Reseller Disclosure
+            if "independent" not in content.lower() or "reseller" not in content.lower():
+                issues.append({
+                    "severity": "WARNING",
+                    "type": "reseller_disclosure_missing",
+                    "msg": f"Tool page {rel_path} missing independent reseller transparency notice."
+                })
+            # Check for unsupported claims
+            if re.search(r'\b(?:100% free forever|cheapest in the universe|zero risk guarantee 100% profit)\b', content, re.IGNORECASE):
+                issues.append({
+                    "severity": "WARNING",
+                    "type": "unsupported_marketing_claim",
+                    "msg": f"Unsupported or inaccurate marketing claim detected in {rel_path}"
+                })
 
         return {
             "file": rel_path,
@@ -196,44 +236,69 @@ class StaticAuditor:
             content = f.read_text(encoding="utf-8")
             # Collect anchors (ids)
             anchors = set(re.findall(r'\bid=["\']([^"\']+)["\']', content))
-            # Collect links
-            hrefs = re.findall(r'href=["\']([^"\']+)["\']', content)
+            # Collect links from <a> tags
+            hrefs = re.findall(r'<a\b[^>]*?\bhref=["\']([^"\']+)["\']', content, re.IGNORECASE)
             pages[rel] = (anchors, hrefs)
 
         broken_links = []
         broken_anchors = []
+        incoming_map: Dict[str, Set[str]] = {p: set() for p in pages.keys()}
 
         for source_page, (anchors, hrefs) in pages.items():
+            source_dir = Path(source_page).parent
             for href in hrefs:
-                if href.startswith(("http://", "https://", "mailto:", "tel:", "javascript:")):
+                if href.startswith(("http://", "https://")):
+                    if not (href.startswith("https://aidigitools.tech") or href.startswith("http://aidigitools.tech")):
+                        continue
+                    href_clean = href.replace("https://aidigitools.tech", "").replace("http://aidigitools.tech", "")
+                    if not href_clean:
+                        href_clean = "/"
+                elif href.startswith(("mailto:", "tel:", "javascript:", "wa.me", "https://wa.me")):
                     continue
-                if href.startswith("#"):
-                    # Local fragment on the same page
-                    frag = href[1:]
-                    if frag and frag not in anchors:
-                        broken_anchors.append({
-                            "source": source_page,
-                            "target": href,
-                            "anchor": frag
-                        })
-                    continue
+                else:
+                    href_clean = href
 
-                # Relative link
-                link_clean = href.split("?")[0].split("#")[0]
-                frag = href.split("#")[1] if "#" in href else None
-                
-                # Resolve relative path
-                source_dir = Path(source_page).parent
-                target_path = (source_dir / link_clean).resolve()
-                try:
-                    target_rel = target_path.relative_to(self.root.resolve()).as_posix()
-                except ValueError:
-                    broken_links.append({"source": source_page, "target": href, "error": "outside root"})
-                    continue
+                # Split path and fragment anchor
+                if "#" in href_clean:
+                    target_path_part, frag = href_clean.split("#", 1)
+                else:
+                    target_path_part, frag = href_clean, ""
 
-                if target_rel not in pages and not (self.root / target_rel).exists():
-                    broken_links.append({"source": source_page, "target": href, "resolved": target_rel})
-                elif frag:
+                # Same page anchor link (e.g. #pricing)
+                if not target_path_part:
+                    target_rel = source_page
+                elif target_path_part.startswith("/"):
+                    target_rel = target_path_part.lstrip("/")
+                    if not target_rel:
+                        target_rel = "index.html"
+                else:
+                    combined = os.path.join(str(source_dir), target_path_part)
+                    norm = os.path.normpath(combined).replace("\\", "/")
+                    if norm == ".":
+                        norm = "index.html"
+                    elif norm.startswith("./"):
+                        norm = norm[2:]
+                    target_rel = norm
+
+                # Clean up query params if present
+                target_rel = target_rel.split("?")[0]
+
+                # Check if target_rel exists in known pages
+                if target_rel not in pages:
+                    alt_rel = target_rel.rstrip("/") + "/index.html" if not target_rel.endswith(".html") else target_rel
+                    if alt_rel in pages:
+                        target_rel = alt_rel
+                    elif (self.root / target_rel).is_file():
+                        # Non-HTML static asset (e.g. image, css)
+                        continue
+                    else:
+                        broken_links.append({"source": source_page, "target": href, "resolved": target_rel})
+                        continue
+
+                if target_rel in incoming_map and target_rel != source_page:
+                    incoming_map[target_rel].add(source_page)
+
+                if frag:
                     target_anchors = pages.get(target_rel, (set(), []))[0]
                     if frag not in target_anchors:
                         broken_anchors.append({
@@ -243,13 +308,137 @@ class StaticAuditor:
                             "anchor": frag
                         })
 
+        orphan_pages = [
+            p for p, srcs in incoming_map.items()
+            if len(srcs) == 0 and p not in ("index.html", "404.html")
+        ]
+
         return {
             "total_pages_scanned": len(pages),
             "broken_links_count": len(broken_links),
             "broken_anchors_count": len(broken_anchors),
+            "orphan_pages_count": len(orphan_pages),
             "broken_links": broken_links,
             "broken_anchors": broken_anchors,
-            "passed": (len(broken_links) == 0 and len(broken_anchors) == 0)
+            "orphan_pages": orphan_pages,
+            "passed": (len(broken_links) == 0 and len(broken_anchors) == 0 and len(orphan_pages) == 0)
+        }
+
+    def check_content_uniqueness(self) -> Dict[str, Any]:
+        """Detects duplicate titles and identical or near-duplicate body content across pages."""
+        html_files = self.get_html_files()
+        titles_map: Dict[str, List[str]] = {}
+        content_hashes: Dict[str, List[str]] = {}
+
+        for f in html_files:
+            rel = f.relative_to(self.root).as_posix()
+            content = f.read_text(encoding="utf-8")
+
+            # Title extraction
+            m = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE)
+            t = m.group(1).strip() if m else ""
+            if t:
+                titles_map.setdefault(t, []).append(rel)
+
+            # Body text simplification
+            body_m = re.search(r'<main[^>]*>(.*?)</main>', content, re.IGNORECASE | re.DOTALL)
+            main_text = re.sub(r'<[^>]+>', ' ', body_m.group(1) if body_m else content)
+            normalized = " ".join(main_text.split())[:500]
+            content_hashes.setdefault(normalized, []).append(rel)
+
+        duplicate_titles = [
+            {"title": t, "pages": pages}
+            for t, pages in titles_map.items() if len(pages) > 1
+        ]
+        duplicate_content = [
+            {"snippet": s[:80], "pages": pages}
+            for s, pages in content_hashes.items() if len(pages) > 1 and len(s) > 100
+        ]
+
+        return {
+            "duplicate_titles_count": len(duplicate_titles),
+            "duplicate_titles": duplicate_titles,
+            "duplicate_content_count": len(duplicate_content),
+            "duplicate_content": duplicate_content,
+            "passed": (len(duplicate_titles) == 0 and len(duplicate_content) == 0)
+        }
+
+    def calculate_transparent_health_score(
+        self,
+        critical_count: int,
+        warning_count: int,
+        broken_links_count: int,
+        broken_anchors_count: int,
+        orphan_count: int,
+        dup_titles_count: int
+    ) -> Dict[str, Any]:
+        """Calculates transparent website health score based on published deterministic formula."""
+        deductions = []
+        total_deduction = 0
+
+        if critical_count > 0:
+            crit_pen = min(50, critical_count * 15)
+            deductions.append({
+                "category": "Critical Infrastructure & Errors",
+                "points": crit_pen,
+                "evidence": f"{critical_count} critical issue(s) detected (e.g., missing titles, broken canonicals, invalid JSON-LD)"
+            })
+            total_deduction += crit_pen
+
+        if warning_count > 0:
+            warn_pen = min(20, warning_count * 1)
+            deductions.append({
+                "category": "On-Page SEO Warnings",
+                "points": warn_pen,
+                "evidence": f"{warning_count} warning(s) detected (e.g., quick answer length, title length boundary)"
+            })
+            total_deduction += warn_pen
+
+        if broken_links_count > 0:
+            link_pen = min(15, broken_links_count * 5)
+            deductions.append({
+                "category": "Broken Internal Links",
+                "points": link_pen,
+                "evidence": f"{broken_links_count} broken internal link(s)"
+            })
+            total_deduction += link_pen
+
+        if broken_anchors_count > 0:
+            anc_pen = min(10, broken_anchors_count * 3)
+            deductions.append({
+                "category": "Broken Fragment Anchors",
+                "points": anc_pen,
+                "evidence": f"{broken_anchors_count} broken fragment anchor(s)"
+            })
+            total_deduction += anc_pen
+
+        if orphan_count > 0:
+            orph_pen = min(10, orphan_count * 3)
+            deductions.append({
+                "category": "Orphan Pages",
+                "points": orph_pen,
+                "evidence": f"{orphan_count} orphan page(s) with 0 incoming internal links"
+            })
+            total_deduction += orph_pen
+
+        if dup_titles_count > 0:
+            dup_pen = min(10, dup_titles_count * 3)
+            deductions.append({
+                "category": "Duplicate Title Tags",
+                "points": dup_pen,
+                "evidence": f"{dup_titles_count} duplicate title tag collision(s)"
+            })
+            total_deduction += dup_pen
+
+        final_score = max(0, 100 - total_deduction)
+
+        return {
+            "health_score": final_score,
+            "formula": "100 - sum(deductions) [bounded 0-100%]",
+            "total_deductions": total_deduction,
+            "deductions": deductions,
+            "passed": (final_score >= 90 and critical_count == 0 and broken_links_count == 0),
+            "disclaimer": "The Health Score measures internal technical compliance, crawlability, and code quality. It is NOT an algorithmic ranking factor and does not guarantee Google or Bing indexing, rankings, or organic traffic."
         }
 
     def run_static_audit(self) -> Dict[str, Any]:
@@ -259,6 +448,7 @@ class StaticAuditor:
         sitemap_urls = self.get_sitemap_urls()
         robots_check = self.check_robots_txt()
         link_graph = self.check_link_graph()
+        content_uniqueness = self.check_content_uniqueness()
 
         # Sitemap coverage check (excluding 404.html)
         expected_sitemap_urls = set(
@@ -279,13 +469,15 @@ class StaticAuditor:
         critical_count = sum(1 for i in all_issues if i["severity"] == "CRITICAL")
         warning_count = sum(1 for i in all_issues if i["severity"] == "WARNING")
 
-        # Health score calculation (100 - penalties)
-        score = 100
-        score -= min(50, critical_count * 10)
-        score -= min(30, warning_count * 2)
-        score -= min(10, link_graph["broken_links_count"] * 5)
-        score -= min(10, link_graph["broken_anchors_count"] * 3)
-        score = max(0, score)
+        health_breakdown = self.calculate_transparent_health_score(
+            critical_count=critical_count,
+            warning_count=warning_count,
+            broken_links_count=link_graph["broken_links_count"],
+            broken_anchors_count=link_graph["broken_anchors_count"],
+            orphan_count=link_graph.get("orphan_pages_count", 0),
+            dup_titles_count=content_uniqueness.get("duplicate_titles_count", 0)
+        )
+        score = health_breakdown["health_score"]
 
         return {
             "pages_scanned": len(html_files),
@@ -294,7 +486,9 @@ class StaticAuditor:
             "extra_in_sitemap": extra_in_sitemap,
             "robots_check": robots_check,
             "link_graph": link_graph,
+            "content_uniqueness": content_uniqueness,
             "health_score": score,
+            "health_breakdown": health_breakdown,
             "critical_count": critical_count,
             "warning_count": warning_count,
             "issues": all_issues,

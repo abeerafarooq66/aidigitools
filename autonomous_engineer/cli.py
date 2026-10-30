@@ -22,6 +22,8 @@ from .bing_client import BingWebmasterClient
 from .gsc_client import GoogleSearchConsoleClient
 from .pagespeed_client import PageSpeedInsightsClient
 from .security_scanner import SecurityScanner
+from .alert_manager import AlertManager
+from .self_monitor import SelfMonitor
 
 def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> int:
     """Executes the complete autonomous maintenance and SEO engineering cycle."""
@@ -122,7 +124,41 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
     else:
         print("  Zero autonomous repairs required this cycle. Workspace clean.")
 
-    # 6. Persistent History & Report Generation
+    # 6. Lifecycle Indexing Funnel & Agent Self-Monitoring
+    print("\n[LIFECYCLE & SELF-MONITOR] Evaluating Indexing Funnel & Agent Health...")
+    live_aud = LiveAuditor()
+    indexing_funnel = live_aud.get_indexing_funnel_status(
+        gsc_summary=gsc_summary,
+        bing_summary=bing_summary,
+        indexnow_valid=live_summary.get("indexnow_key", {}).get("valid", True)
+    )
+
+    self_monitor = SelfMonitor(root_dir)
+    agent_monitor_summary = self_monitor.evaluate_agent_health(
+        gsc_summary=gsc_summary,
+        bing_summary=bing_summary,
+        pagespeed_summary=pagespeed_summary,
+        reasoner_summary=reasoning_summary,
+        repair_summary=repair_summary
+    )
+    print(f"  Agent Status: {agent_monitor_summary.get('agent_status')} ({agent_monitor_summary.get('schedule_audit', {}).get('timezone')})")
+    print(f"  Secrets Configured: {agent_monitor_summary.get('secrets_audit', {}).get('configured_count')}/{agent_monitor_summary.get('secrets_audit', {}).get('total_tracked')}")
+
+    # Generate Weekly Trend Summary
+    weekly_trend = history_mgr.generate_trend_summary(period="weekly")
+    print(f"  Weekly Health Trend: {weekly_trend.get('average_health_score')}% average ({weekly_trend.get('stability_status')})")
+
+    # Evaluate & Dispatch Incident Alerts
+    alert_mgr = AlertManager()
+    alerts = alert_mgr.evaluate_alert_conditions(
+        audit_summary=audit_summary,
+        live_summary=live_summary,
+        history_diff=history_diff,
+        security_summary=security_summary
+    )
+    alerts_summary = alert_mgr.dispatch_alerts(alerts)
+
+    # 7. Persistent History & Report Generation
     print("\n[STEP 6/6] Generating Audit Report & Updating Historical Archive...")
     history_mgr.record_run(audit_summary, repair_summary, live_summary)
     report_engine = ReportEngine()
@@ -135,7 +171,10 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
         bing_summary=bing_summary,
         gsc_summary=gsc_summary,
         pagespeed_summary=pagespeed_summary,
-        security_summary=security_summary
+        security_summary=security_summary,
+        indexing_funnel=indexing_funnel,
+        agent_monitor_summary=agent_monitor_summary,
+        alerts_summary=alerts_summary
     )
     print(f"  [REPORT] Report Saved: {report_path.relative_to(root_dir)}")
 
