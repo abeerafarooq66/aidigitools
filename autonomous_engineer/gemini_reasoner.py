@@ -14,43 +14,55 @@ class GeminiReasoner:
 
     def _call_gemini_rest_api(self, prompt: str) -> str:
         """Invokes the official Google Generative Language API directly over HTTPS without external dependencies."""
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent?key={self.api_key}"
-        payload = {
-            "contents": [
-                {
-                    "parts": [
-                        {"text": prompt}
-                    ]
+        models_to_try = [self.model]
+        if FALLBACK_GEMINI_MODEL not in models_to_try:
+            models_to_try.append(FALLBACK_GEMINI_MODEL)
+        if "gemini-2.0-flash" not in models_to_try:
+            models_to_try.append("gemini-2.0-flash")
+        if "gemini-1.5-flash" not in models_to_try:
+            models_to_try.append("gemini-1.5-flash")
+
+        last_error = None
+        for model in models_to_try:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={self.api_key}"
+            payload = {
+                "contents": [
+                    {
+                        "parts": [
+                            {"text": prompt}
+                        ]
+                    }
+                ],
+                "generationConfig": {
+                    "temperature": 0.2,
+                    "maxOutputTokens": 2048,
+                    "responseMimeType": "application/json"
                 }
-            ],
-            "generationConfig": {
-                "temperature": 0.2,
-                "maxOutputTokens": 2048,
-                "responseMimeType": "application/json"
             }
-        }
-        data = json.dumps(payload).encode("utf-8")
-        req = urllib.request.Request(
-            url,
-            data=data,
-            headers={"Content-Type": "application/json"}
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                resp_json = json.loads(resp.read().decode("utf-8"))
-                candidates = resp_json.get("candidates", [])
-                if candidates and "content" in candidates[0]:
-                    parts = candidates[0]["content"].get("parts", [])
-                    if parts and "text" in parts[0]:
-                        return parts[0]["text"]
-                return "{}"
-        except urllib.error.HTTPError as e:
-            # Fallback to older flash model string if model version alias is not yet active on endpoint
-            if e.code in (404, 400) and self.model != FALLBACK_GEMINI_MODEL:
-                print(f"[REASONER] Model {self.model} returned {e.code}. Retrying with {FALLBACK_GEMINI_MODEL}...")
-                self.model = FALLBACK_GEMINI_MODEL
-                return self._call_gemini_rest_api(prompt)
-            raise e
+            data = json.dumps(payload).encode("utf-8")
+            req = urllib.request.Request(
+                url,
+                data=data,
+                headers={"Content-Type": "application/json"}
+            )
+            try:
+                with urllib.request.urlopen(req, timeout=35) as resp:
+                    resp_json = json.loads(resp.read().decode("utf-8"))
+                    candidates = resp_json.get("candidates", [])
+                    if candidates and "content" in candidates[0]:
+                        parts = candidates[0]["content"].get("parts", [])
+                        if parts and "text" in parts[0]:
+                            self.model = model
+                            return parts[0]["text"]
+                    return "{}"
+            except Exception as e:
+                last_error = e
+                print(f"[REASONER] Model {model} attempt encountered: {e}. Trying next model...")
+                continue
+
+        if last_error:
+            raise last_error
+        return "{}"
 
     def _deterministic_heuristic_plan(self, audit_summary: Dict[str, Any]) -> Dict[str, Any]:
         """Provides deterministic, rule-based diagnostic and repair planning when GEMINI_API_KEY is not configured."""
