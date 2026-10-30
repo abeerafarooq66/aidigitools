@@ -12,9 +12,43 @@ class GeminiReasoner:
         self.api_key = api_key or os.environ.get("GEMINI_API_KEY", "").strip()
         self.model = model
 
+    def get_available_models(self) -> List[str]:
+        """Queries official Google Generative Language API models.list to dynamically detect active models."""
+        if not self.api_key:
+            return []
+        url = f"https://generativelanguage.googleapis.com/v1beta/models?key={self.api_key}"
+        req = urllib.request.Request(url, headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                models = [
+                    m.get("name", "").replace("models/", "")
+                    for m in data.get("models", [])
+                    if "generateContent" in m.get("supportedGenerationMethods", [])
+                ]
+                print(f"[REASONER] Dynamic models discovered ({len(models)}): {models[:5]}")
+                return models
+        except Exception as e:
+            err_body = ""
+            if hasattr(e, "read"):
+                try:
+                    err_body = e.read().decode("utf-8", errors="ignore")
+                except Exception:
+                    pass
+            print(f"[REASONER] models.list query diagnostic: {e} {err_body}".strip())
+            return []
+
     def _call_gemini_rest_api(self, prompt: str) -> str:
         """Invokes the official Google Generative Language API directly over HTTPS without external dependencies."""
-        models_to_try = [self.model]
+        discovered = self.get_available_models()
+        # Prioritize discovered flash models if available
+        flash_discovered = [m for m in discovered if "flash" in m]
+        
+        models_to_try = []
+        if flash_discovered:
+            models_to_try.extend(flash_discovered)
+        if self.model not in models_to_try:
+            models_to_try.append(self.model)
         if FALLBACK_GEMINI_MODEL not in models_to_try:
             models_to_try.append(FALLBACK_GEMINI_MODEL)
         if "gemini-2.0-flash" not in models_to_try:
@@ -56,8 +90,15 @@ class GeminiReasoner:
                             return parts[0]["text"]
                     return "{}"
             except Exception as e:
-                last_error = e
-                print(f"[REASONER] Model {model} attempt encountered: {e}. Trying next model...")
+                err_body = ""
+                if hasattr(e, "read"):
+                    try:
+                        err_body = e.read().decode("utf-8", errors="ignore")
+                    except Exception:
+                        pass
+                full_err = f"{e} {err_body}".strip()
+                last_error = Exception(full_err)
+                print(f"[REASONER] Model {model} attempt encountered: {full_err}. Trying next model...")
                 continue
 
         if last_error:
