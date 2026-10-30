@@ -5,6 +5,9 @@ on:
     - cron: '45 23 * * *'  # 04:45 PKT daily
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   social-pack:
     runs-on: ubuntu-latest

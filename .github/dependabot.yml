@@ -1,0 +1,10 @@
+# GitHub Dependabot Configuration for AIDigiTools
+# Automatically scans GitHub Actions workflows for updates and security vulnerabilities
+version: 2
+updates:
+  # Maintain GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5

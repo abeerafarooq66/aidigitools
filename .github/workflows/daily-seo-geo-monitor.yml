@@ -5,6 +5,9 @@ on:
     - cron: '15 2 * * *'  # 07:15 PKT daily
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   seo-geo-check:
     runs-on: ubuntu-latest

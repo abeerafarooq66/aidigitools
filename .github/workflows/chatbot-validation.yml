@@ -13,6 +13,9 @@ on:
       - 'assets/**'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   validate-widget:
     runs-on: ubuntu-latest

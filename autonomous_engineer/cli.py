@@ -21,6 +21,7 @@ from .report_engine import ReportEngine
 from .bing_client import BingWebmasterClient
 from .gsc_client import GoogleSearchConsoleClient
 from .pagespeed_client import PageSpeedInsightsClient
+from .security_scanner import SecurityScanner
 
 def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> int:
     """Executes the complete autonomous maintenance and SEO engineering cycle."""
@@ -80,6 +81,15 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
     else:
         print(f"  [PAGESPEED API] Status: {pagespeed_summary.get('status')} ({pagespeed_summary.get('message')})")
 
+    # Security & Vulnerability Audit
+    print("\n[SECURITY AUDIT] Scanning for Exposed Secrets, Workflow Permissions & Supply Chain...")
+    security_scanner = SecurityScanner(root_dir)
+    security_summary = security_scanner.run_full_security_audit()
+    print(f"  Security Posture: {'🟢 SECURE' if security_summary['is_secure'] else '🔴 VULNERABILITY DETECTED'}")
+    print(f"  Exposed Secrets: {security_summary['critical_count']}")
+    print(f"  Workflow Permission Issues: {len(security_summary['workflow_permission_issues'])}")
+    print(f"  Dependabot Configured: {security_summary['supply_chain_security']['dependabot_configured']}")
+
     # 3. History Comparison (Trend Detection)
     print("\n[STEP 3/6] Comparing with Previous Runs...")
     history_mgr = HistoryManager()
@@ -124,7 +134,8 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
         history_diff=history_diff,
         bing_summary=bing_summary,
         gsc_summary=gsc_summary,
-        pagespeed_summary=pagespeed_summary
+        pagespeed_summary=pagespeed_summary,
+        security_summary=security_summary
     )
     print(f"  [REPORT] Report Saved: {report_path.relative_to(root_dir)}")
 
