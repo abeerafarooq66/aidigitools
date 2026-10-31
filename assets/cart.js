@@ -1,6 +1,6 @@
 /**
  * AIDigiTools Interactive Quick Order Drawer & Living Showcase Engine
- * Canonical Multi-Plan Support with Guaranteed Traceability and Zero Supplier Leaks.
+ * Canonical Multi-Plan Support.
  */
 
 (function () {
@@ -1975,14 +1975,14 @@
     var waMsg;
     if (isHeld) {
       waMsg = "Hi AIDigiTools, I am inquiring about current availability and compliance terms for " + tool.name + ". (Inquiry only; not an order confirmation).";
-      if (waLinkEl) {
-        waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 WhatsApp Contact &rarr;</span>';
-      }
     } else {
       waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD.";
-      if (waLinkEl) {
-        waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 WhatsApp Contact &rarr;</span>';
-      }
+    }
+    if (waLinkEl) {
+      waLinkEl.style.setProperty('background', '#10B981', 'important');
+      waLinkEl.style.setProperty('color', '#FFFFFF', 'important');
+      waLinkEl.style.setProperty('border', 'none', 'important');
+      waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 WhatsApp Contact &rarr;</span>';
     }
     if (waLinkEl) {
       waLinkEl.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waMsg);
@@ -2585,7 +2585,7 @@
           tools.map(function (t) {
             var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
             var actionBtn = isHeld
-              ? '<a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20' + encodeURIComponent(t.name) + '.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem; background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center; font-size:0.8rem;">💬 Inquire</a>'
+              ? '<a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20' + encodeURIComponent(t.name) + '.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; font-size:0.8rem;">⚡ Quick Order</a>'
               : '<button type="button" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem;" onclick="closeCompareModal(); openQuickOrderModal(\'' + t.slug + '\')">⚡ Quick Order</button>';
             return '<td style="text-align:center;">' +
               actionBtn +

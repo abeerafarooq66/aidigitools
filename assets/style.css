@@ -3884,3 +3884,249 @@ textarea:focus-visible {
     gap: 0.5rem;
   }
 }
+
+
+/* ========================================================
+   HIGH-CONTRAST GLOBAL BUTTON & CTA SAFEGUARDS (PHASE 14)
+   Ensures 100% WCAG AA/AAA contrast and eliminates white-on-white text
+   ======================================================== */
+
+/* 1. Primary Buttons: Vibrant Gradient with Guaranteed Crisp White Text */
+.btn-primary,
+.btn.btn-primary,
+.hero-btn-primary,
+.hero-cta-group .btn-primary,
+a.hero-btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #0369A1 0%, #4361EE 50%, #7C3AED 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+
+.btn-primary *,
+.btn.btn-primary *,
+.hero-btn-primary *,
+.hero-cta-group .btn-primary *,
+a.hero-btn-primary * {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.hero-btn-primary:hover,
+.hero-cta-group .btn-primary:hover,
+a.hero-btn-primary:hover {
+  background: linear-gradient(135deg, #075985 0%, #3B82F6 50%, #6D28D9 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.45) !important;
+}
+
+.btn-primary:hover *,
+.btn.btn-primary:hover *,
+.hero-btn-primary:hover *,
+.hero-cta-group .btn-primary:hover * {
+  color: #FFFFFF !important;
+}
+
+/* 2. Secondary Buttons: Clean White Surface with Dark Slate Text */
+.btn-secondary,
+.btn.btn-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1.5px solid #CBD5E1 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+.btn-secondary *,
+.btn.btn-secondary * {
+  color: #0F172A !important;
+}
+
+.btn-secondary:hover,
+.btn.btn-secondary:hover {
+  background: #F1F5F9 !important;
+  border-color: #0369A1 !important;
+  color: #0369A1 !important;
+}
+
+.btn-secondary:hover *,
+.btn.btn-secondary:hover * {
+  color: #0369A1 !important;
+}
+
+/* 3. WhatsApp Buttons: Solid Emerald Green with Crisp White Text */
+.btn-whatsapp,
+.btn.btn-whatsapp,
+#mWaLink,
+a#mWaLink,
+.authkit-showcase-actions #mWaLink {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #10B981 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+}
+
+.btn-whatsapp *,
+.btn.btn-whatsapp *,
+#mWaLink *,
+a#mWaLink *,
+.authkit-showcase-actions #mWaLink * {
+  color: #FFFFFF !important;
+}
+
+.btn-whatsapp:hover,
+.btn.btn-whatsapp:hover,
+#mWaLink:hover,
+a#mWaLink:hover,
+.authkit-showcase-actions #mWaLink:hover {
+  background: #059669 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45) !important;
+}
+
+.btn-whatsapp:hover *,
+.btn.btn-whatsapp:hover *,
+#mWaLink:hover *,
+a#mWaLink:hover * {
+  color: #FFFFFF !important;
+}
+
+/* 4. Quick Order Buttons on Tool Cards & Modals */
+.btn-quick-order,
+a.btn-quick-order,
+button.btn-quick-order,
+.tool-card-cta-row .btn-quick-order {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #0369A1 0%, #4361EE 50%, #7C3AED 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border: none !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(0, 180, 216, 0.25) !important;
+}
+
+.btn-quick-order *,
+a.btn-quick-order *,
+button.btn-quick-order *,
+.tool-card-cta-row .btn-quick-order * {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.btn-quick-order:hover,
+a.btn-quick-order:hover,
+button.btn-quick-order:hover,
+.tool-card-cta-row .btn-quick-order:hover {
+  background: linear-gradient(135deg, #075985 0%, #3B82F6 50%, #6D28D9 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4) !important;
+}
+
+.btn-quick-order:hover *,
+.tool-card-cta-row .btn-quick-order:hover * {
+  color: #FFFFFF !important;
+}
+
+/* 5. Subtle Card WhatsApp Button: Clean White with Emerald Text & Border */
+.btn-wa-subtle,
+a.btn-wa-subtle,
+.tool-card-cta-row .btn-wa-subtle {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #FFFFFF !important;
+  color: #047857 !important;
+  border: 1.5px solid #A7F3D0 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.1) !important;
+}
+
+.btn-wa-subtle *,
+a.btn-wa-subtle *,
+.tool-card-cta-row .btn-wa-subtle * {
+  color: #047857 !important;
+}
+
+.btn-wa-subtle:hover,
+a.btn-wa-subtle:hover,
+.tool-card-cta-row .btn-wa-subtle:hover {
+  background: #ECFDF5 !important;
+  border-color: #10B981 !important;
+  color: #065F46 !important;
+}
+
+.btn-wa-subtle:hover *,
+a.btn-wa-subtle:hover *,
+.tool-card-cta-row .btn-wa-subtle:hover * {
+  color: #065F46 !important;
+}
+
+/* 6. Floating WhatsApp Button: Solid Emerald Pill with White Text */
+.floating-wa-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.38), 0 4px 6px rgba(15, 23, 42, 0.1) !important;
+}
+
+.floating-wa-btn *,
+.floating-wa-label {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.floating-wa-btn:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #075E54 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5) !important;
+}
+
+.floating-wa-btn:hover * {
+  color: #FFFFFF !important;
+}
+
+/* 7. Compare Button on Cards */
+.btn-tool-compare {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1.5px solid #CBD5E1 !important;
+}
+
+.btn-tool-compare * {
+  color: #0F172A !important;
+}
+
+.btn-tool-compare:hover {
+  border-color: #4361EE !important;
+  color: #4361EE !important;
+  background: #F8FAFC !important;
+}
+
+.btn-tool-compare.active {
+  background: #4361EE !important;
+  color: #FFFFFF !important;
+  border-color: #4361EE !important;
+}
+
+.btn-tool-compare.active * {
+  color: #FFFFFF !important;
+}

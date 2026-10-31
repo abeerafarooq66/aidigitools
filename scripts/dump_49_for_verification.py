@@ -21,3 +21,4 @@ for idx, p in enumerate(master, 1):
     print(f"    AIDigiTools Price: Rs {p.get('aidigitools_price_pkr')} (${p.get('aidigitools_price_usd')})")
     print(f"    Features: {p.get('features')}")
     print(f"    Limitations: {p.get('limitations')}")
+

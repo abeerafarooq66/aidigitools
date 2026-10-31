@@ -55,3 +55,4 @@ for path in html_files:
 print(f"\n3. 'WhatsApp Inquiry' in HTML files: {len(inquiry_findings)} found")
 for inf in inquiry_findings[:10]:
     print(f"  {inf[0]}:{inf[1]} -> {inf[2][:80]}")
+
