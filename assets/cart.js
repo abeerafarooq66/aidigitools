@@ -819,6 +819,24 @@
         "limits": "Subject to daily query limits",
         "badge": "SEO Agency Standard",
         "availability": "InStock"
+      },
+      {
+        "plan_id": "PLAN-SEMRUSH-PRO-1M",
+        "name": "Pro Tier (1 Month)",
+        "plan_type": "Pro",
+        "duration": "1 Month (30 Days)",
+        "seats": "1 User",
+        "price_pkr": 1900,
+        "price_usd": 7.0,
+        "features": [
+          "5 projects & 500 keywords tracked daily",
+          "Domain & keyword analytics with competitor traffic estimates",
+          "On-page SEO checker & site audit crawler (100k pages)",
+          "PDF export reports"
+        ],
+        "limits": "Single user account terms apply",
+        "badge": "Freelancer Pick",
+        "availability": "InStock"
       }
     ]
   },

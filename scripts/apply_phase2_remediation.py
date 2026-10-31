@@ -235,3 +235,4 @@ if __name__ == '__main__':
     fix_footers_and_taglines()
     remove_unused_root_asset()
     print("--- Phase 2 Remediation Complete ---")
+
