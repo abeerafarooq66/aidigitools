@@ -285,8 +285,8 @@
     "icon": "assets/product-logos/midjourney.svg",
     "desc": "State-of-the-art photorealistic image generation, texture synthesis, and inpainting with commercial rights.",
     "url": "tools/midjourney.html",
-    "starting_price_pkr": 1800,
-    "starting_price_usd": 6.5,
+    "starting_price_pkr": 2800,
+    "starting_price_usd": 10.0,
     "plans": [
       {
         "plan_id": "PLAN-MIDJ-BASIC-1M",
@@ -294,8 +294,8 @@
         "plan_type": "Basic",
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
-        "price_pkr": 1800,
-        "price_usd": 6.5,
+        "price_pkr": 2800,
+        "price_usd": 10.0,
         "features": [
           "200 Fast GPU minutes (~200 images)",
           "General commercial usage terms",
@@ -2103,7 +2103,7 @@
         holdNotice.id = 'drawerHoldNotice';
         holdNotice.style.cssText = 'background:rgba(245,158,11,0.12); border:1px solid #f59e0b; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.75rem; font-size:0.82rem; color:var(--text-secondary);';
         holdNotice.innerHTML = '<strong>⏸️ Direct Orders Paused:</strong> Direct checkout for this service is on hold pending secondary licensing verification. Inquiries are for stock &amp; compliance verification only and an inquiry is not an order confirmation.';
-        var planWrap = document.getElementById('drawerPlansContainer');
+        var planWrap = document.getElementById('drawerPlanSelectorContainer');
         if (planWrap && planWrap.parentNode) {
           planWrap.parentNode.insertBefore(holdNotice, planWrap);
         }

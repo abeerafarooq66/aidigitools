@@ -347,8 +347,8 @@
         "plan_type": "Basic",
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
-        "price_pkr": 1800,
-        "price_usd": 6.5,
+        "price_pkr": 2800,
+        "price_usd": 10.0,
         "features": [
           "200 Fast GPU minutes (~200 images)",
           "General commercial usage terms",
@@ -396,9 +396,9 @@
         "availability": "InStock"
       }
     ],
-    "starting_price_pkr": 1800,
-    "starting_price_usd": 6.5,
-    "starting_price_display": "From Rs. 1,800 PKR (~$6.50 USD)",
+    "starting_price_pkr": 2800,
+    "starting_price_usd": 10.0,
+    "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
     "total_plans": 3,
     "popularity_score": 94,
     "featured": true,

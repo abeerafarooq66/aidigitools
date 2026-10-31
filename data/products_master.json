@@ -1,0 +1,1967 @@
+[
+  {
+    "id": "PROD-001",
+    "slug": "adobe-creative-cloud",
+    "brand": "Adobe",
+    "official_product_name": "Adobe Creative Cloud All Apps",
+    "official_plan_name": "All Apps Subscription (1 Month)",
+    "product_type": "Creative Suite & Generative AI",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "AI Video",
+    "official_url": "https://www.adobe.com/creativecloud.html",
+    "official_pricing_url": "https://www.adobe.com/creativecloud/plans.html",
+    "current_model": "Adobe CC 2026 / Firefly Image 3 Model",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Photoshop",
+      "Illustrator",
+      "Premiere Pro",
+      "After Effects",
+      "Firefly AI Generative Fill",
+      "100GB Cloud Storage"
+    ],
+    "limitations": "Individual user workspace activation; requires modern desktop GPU for 4K video rendering",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "iPadOS"
+    ],
+    "official_price": 59.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1400,
+    "aidigitools_price_usd": 5.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.adobe.com/creativecloud/plans.html"
+    ],
+    "notes": "Verified independent reseller concierge; 30-day replacement warranty"
+  },
+  {
+    "id": "PROD-002",
+    "slug": "canva-pro",
+    "brand": "Canva",
+    "official_product_name": "Canva Pro",
+    "official_plan_name": "Pro Individual Subscription (1 Month)",
+    "product_type": "Graphic Design Platform & Magic Studio AI",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://www.canva.com/",
+    "official_pricing_url": "https://www.canva.com/pricing/",
+    "current_model": "Magic Studio 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited premium templates",
+      "100M+ stock assets",
+      "One-click background remover",
+      "Magic Switch translation",
+      "1TB cloud storage"
+    ],
+    "limitations": "Single-seat professional account",
+    "supported_platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 14.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 600,
+    "aidigitools_price_usd": 2.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.canva.com/pricing/"
+    ],
+    "notes": "Direct WhatsApp delivery within 15 minutes; EasyPaisa and JazzCash supported"
+  },
+  {
+    "id": "PROD-003",
+    "slug": "capcut-pro",
+    "brand": "ByteDance",
+    "official_product_name": "CapCut Pro",
+    "official_plan_name": "Pro Subscription (1 Month)",
+    "product_type": "Video Editing Suite & AI Motion Studio",
+    "primary_category": "AI Video",
+    "secondary_category": "AI Image and Design",
+    "official_url": "https://www.capcut.com/",
+    "official_pricing_url": "https://www.capcut.com/pricing",
+    "current_model": "CapCut AI Engine 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Auto captions in 30+ languages",
+      "AI portrait cutout",
+      "4K 60fps high-bitrate exports",
+      "Premium transitions and VFX",
+      "Cloud collaboration"
+    ],
+    "limitations": "Single concurrent login device recommended",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "official_price": 9.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 950,
+    "aidigitools_price_usd": 3.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.capcut.com/pricing"
+    ],
+    "notes": "Fast-tracked Pakistani creator favorite for TikTok and YouTube Shorts"
+  },
+  {
+    "id": "PROD-004",
+    "slug": "chatgpt-codex",
+    "brand": "OpenAI",
+    "official_product_name": "OpenAI API & Developer Platform",
+    "official_plan_name": "Developer Platform Tier (1 Month Access)",
+    "product_type": "API Platform & Developer Account Tier",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Assistants",
+    "official_url": "https://platform.openai.com/",
+    "official_pricing_url": "https://openai.com/api/pricing/",
+    "current_model": "GPT-4o / GPT-4o-mini / o1-preview",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Full API key access",
+      "Custom GPT Assistants API",
+      "Function calling & JSON mode",
+      "Batch API endpoint support",
+      "Audio transcription whisper"
+    ],
+    "limitations": "Usage tokens billed against funded credit balance; rate limits apply per org tier",
+    "supported_platforms": [
+      "REST API",
+      "Python SDK",
+      "Node.js SDK",
+      "Web"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly / Usage",
+    "aidigitools_price_pkr": 600,
+    "aidigitools_price_usd": 2.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://openai.com/api/pricing/"
+    ],
+    "notes": "Verified developer account setup avoiding international card blocks"
+  },
+  {
+    "id": "PROD-005",
+    "slug": "chatgpt-plus",
+    "brand": "OpenAI",
+    "official_product_name": "ChatGPT Plus",
+    "official_plan_name": "Plus Subscription (1 Month)",
+    "product_type": "Conversational AI & Reasoning Assistant",
+    "primary_category": "AI Assistants",
+    "secondary_category": "AI Coding",
+    "official_url": "https://chatgpt.com/",
+    "official_pricing_url": "https://openai.com/chatgpt/pricing/",
+    "current_model": "GPT-4o, Advanced Voice Mode, o1 reasoning models",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited GPT-4o access with high messaging caps",
+      "Advanced Voice Mode with real-time inflection",
+      "Custom GPTs creation & browse",
+      "DALL-E 3 image generation",
+      "Deep code interpreter and canvas"
+    ],
+    "limitations": "Standard message caps during peak hours on frontier reasoning models",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "macOS",
+      "Windows"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2300,
+    "aidigitools_price_usd": 8.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://openai.com/chatgpt/pricing/"
+    ],
+    "notes": "Bestselling individual productivity subscription in Pakistan"
+  },
+  {
+    "id": "PROD-006",
+    "slug": "claude-artifacts",
+    "brand": "Anthropic",
+    "official_product_name": "Claude Developer Tier & Artifacts Workspace",
+    "official_plan_name": "Developer Artifacts Workspace (1 Month)",
+    "product_type": "Interactive Code & UI Artifacts Environment",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Assistants",
+    "official_url": "https://claude.ai/",
+    "official_pricing_url": "https://www.anthropic.com/pricing",
+    "current_model": "Claude 3.5 Sonnet",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Interactive React and SVG live rendering",
+      "Standalone modular code export",
+      "Multi-file project workspaces",
+      "200K token context window",
+      "SWE-bench leading software synthesis"
+    ],
+    "limitations": "Workspace seat quota applies",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1200,
+    "aidigitools_price_usd": 4.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.anthropic.com/pricing"
+    ],
+    "notes": "Specialized developer workstation tier"
+  },
+  {
+    "id": "PROD-007",
+    "slug": "claude-pro",
+    "brand": "Anthropic",
+    "official_product_name": "Claude Pro",
+    "official_plan_name": "Pro Subscription (1 Month)",
+    "product_type": "Frontier AI Assistant & Reasoning Workspace",
+    "primary_category": "AI Assistants",
+    "secondary_category": "AI Coding",
+    "official_url": "https://claude.ai/",
+    "official_pricing_url": "https://claude.ai/upgrade",
+    "current_model": "Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude 3 Opus",
+    "model_verification_date": "October 2026",
+    "features": [
+      "5x usage limits vs free tier",
+      "Claude 3.5 Sonnet priority access",
+      "Artifacts live preview window",
+      "Project knowledge upload (documents, code bases)",
+      "Priority access during high traffic"
+    ],
+    "limitations": "Usage resets dynamically every 5 hours based on message volume",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2500,
+    "aidigitools_price_usd": 9.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://claude.ai/upgrade"
+    ],
+    "notes": "Premier coding and deep document analysis subscription"
+  },
+  {
+    "id": "PROD-008",
+    "slug": "coursera-plus",
+    "brand": "Coursera",
+    "official_product_name": "Coursera Plus",
+    "official_plan_name": "Plus Learning Subscription (1 Month Access)",
+    "product_type": "Online Course & Specialization Learning Subscription",
+    "primary_category": "Education and Learning",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://www.coursera.org/",
+    "official_pricing_url": "https://www.coursera.org/courseraplus",
+    "current_model": "Coursera Platform 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "7,000+ courses and specializations",
+      "Unlimited verified certificates",
+      "Professional certificates from Google, IBM, Meta",
+      "Hands-on guided projects",
+      "Mobile offline learning"
+    ],
+    "limitations": "Degree programs and select mastertracks excluded",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 59.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2200,
+    "aidigitools_price_usd": 8.0,
+    "website_display_status": "Inquiry Only (Held)",
+    "availability_status": "Paused (Inquiry Only)",
+    "verification_status": "Verified (Tier 1 Hold)",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.coursera.org/courseraplus"
+    ],
+    "notes": "Direct checkout paused; inquiries routed to WhatsApp for stock & compliance verification"
+  },
+  {
+    "id": "PROD-009",
+    "slug": "cursor-pro",
+    "brand": "Anysphere",
+    "official_product_name": "Cursor Pro",
+    "official_plan_name": "Pro Developer Subscription (1 Month)",
+    "product_type": "AI-First Code Editor",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Assistants",
+    "official_url": "https://www.cursor.com/",
+    "official_pricing_url": "https://www.cursor.com/pricing",
+    "current_model": "Claude 3.5 Sonnet, GPT-4o, Cursor Tab Engine",
+    "model_verification_date": "October 2026",
+    "features": [
+      "500 fast frontier model requests per month",
+      "Unlimited slow requests",
+      "Cursor Tab multi-line copilot autocompletion",
+      "Full codebase indexing and retrieval (@codebase)",
+      "Terminal AI agent & command prediction"
+    ],
+    "limitations": "Fast requests quota consumed per complex chat/composer interaction",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 3800,
+    "aidigitools_price_usd": 14.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.cursor.com/pricing"
+    ],
+    "notes": "The leading frontier AI IDE for full-stack software engineers in Pakistan"
+  },
+  {
+    "id": "PROD-010",
+    "slug": "deepseek-pro",
+    "brand": "DeepSeek AI",
+    "official_product_name": "DeepSeek Platform & Pro Access",
+    "official_plan_name": "Developer Pro Tier (1 Month Access)",
+    "product_type": "High-Efficiency Reasoning & Coding Engine",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Assistants",
+    "official_url": "https://www.deepseek.com/",
+    "official_pricing_url": "https://platform.deepseek.com/api-docs/pricing",
+    "current_model": "DeepSeek-V3 / DeepSeek-R1",
+    "model_verification_date": "October 2026",
+    "features": [
+      "DeepSeek-V3 671B MoE architecture",
+      "DeepSeek-R1 mathematical & reasoning mode",
+      "128K context window support",
+      "Unfiltered technical problem-solving",
+      "Full API and Web Chat integration"
+    ],
+    "limitations": "Server concurrency peaks during global high-load periods",
+    "supported_platforms": [
+      "Web",
+      "API",
+      "Mobile"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly / API",
+    "aidigitools_price_pkr": 1100,
+    "aidigitools_price_usd": 4.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://platform.deepseek.com/api-docs/pricing"
+    ],
+    "notes": "Ultra-popular open-weights frontier model deployment for engineering workloads"
+  },
+  {
+    "id": "PROD-011",
+    "slug": "elevenlabs-creator",
+    "brand": "ElevenLabs",
+    "official_product_name": "ElevenLabs Creator Plan",
+    "official_plan_name": "Creator Subscription (1 Month)",
+    "product_type": "AI Voice Synthesis & Voice Cloning Platform",
+    "primary_category": "AI Audio and Music",
+    "secondary_category": "AI Video",
+    "official_url": "https://elevenlabs.io/",
+    "official_pricing_url": "https://elevenlabs.io/pricing",
+    "current_model": "Eleven Multilingual v2 / Turbo v2.5",
+    "model_verification_date": "October 2026",
+    "features": [
+      "100,000 characters per month (~2 hours audio)",
+      "Professional voice cloning with 30-min sample training",
+      "Commercial rights on generated audio",
+      "High-accuracy Dubbing Studio in 29+ languages",
+      "192 kbps high-fidelity audio exports"
+    ],
+    "limitations": "Characters rollover capped per billing cycle",
+    "supported_platforms": [
+      "Web",
+      "API",
+      "Mobile App"
+    ],
+    "official_price": 22.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2800,
+    "aidigitools_price_usd": 10.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://elevenlabs.io/pricing"
+    ],
+    "notes": "Standard audio production engine for YouTubers, podcasters and voiceover agencies"
+  },
+  {
+    "id": "PROD-012",
+    "slug": "envato-elements",
+    "brand": "Envato",
+    "official_product_name": "Envato Elements Individual",
+    "official_plan_name": "Individual Subscription (1 Month)",
+    "product_type": "Digital Creative Assets & Templates Library",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "AI Video",
+    "official_url": "https://elements.envato.com/",
+    "official_pricing_url": "https://elements.envato.com/pricing",
+    "current_model": "Envato Elements Library 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited asset downloads",
+      "15M+ graphic templates, stock footage & audio",
+      "WordPress themes & plugins",
+      "Broad commercial license",
+      "Font library with web font kits"
+    ],
+    "limitations": "Fair-use personal download policy applies; mass scrapers prohibited",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 33.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2600,
+    "aidigitools_price_usd": 9.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://elements.envato.com/pricing"
+    ],
+    "notes": "Comprehensive creative resource subscription for digital agencies and freelancers"
+  },
+  {
+    "id": "PROD-013",
+    "slug": "figma-pro",
+    "brand": "Figma",
+    "official_product_name": "Figma Professional",
+    "official_plan_name": "Professional Editor (1 Month Access)",
+    "product_type": "Collaborative UI/UX Design & Prototyping Platform",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://www.figma.com/",
+    "official_pricing_url": "https://www.figma.com/pricing/",
+    "current_model": "Figma AI & Dev Mode 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited Figma files and version history",
+      "Shared team component libraries",
+      "Figma AI first-draft generator",
+      "Dev Mode inspect with code snippets",
+      "Advanced prototype interactions & variables"
+    ],
+    "limitations": "Single-seat professional workspace editor",
+    "supported_platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "iPadOS"
+    ],
+    "official_price": 15.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1800,
+    "aidigitools_price_usd": 6.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.figma.com/pricing/"
+    ],
+    "notes": "Essential platform for UI/UX product teams and software agencies"
+  },
+  {
+    "id": "PROD-014",
+    "slug": "freepik-premium",
+    "brand": "Freepik",
+    "official_product_name": "Freepik Premium",
+    "official_plan_name": "Premium Subscription (1 Month)",
+    "product_type": "Stock Vectors, Photos & Pikaso AI Generator",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "AI Video",
+    "official_url": "https://www.freepik.com/",
+    "official_pricing_url": "https://www.freepik.com/pricing",
+    "current_model": "Freepik Pikaso AI & Mystic Engine",
+    "model_verification_date": "October 2026",
+    "features": [
+      "100 downloads per day of premium vectors & PSDs",
+      "Full commercial attribution-free license",
+      "Freepik Mystic high-detail AI generation",
+      "Pikaso real-time drawing to image",
+      "Ad-free high-speed download experience"
+    ],
+    "limitations": "Daily download counter resets at UTC midnight",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 16.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1800,
+    "aidigitools_price_usd": 6.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.freepik.com/pricing"
+    ],
+    "notes": "Everyday graphic asset engine for digital marketers and content creators"
+  },
+  {
+    "id": "PROD-015",
+    "slug": "gamma-app",
+    "brand": "Gamma",
+    "official_product_name": "Gamma Plus / Pro",
+    "official_plan_name": "Plus Subscription (1 Month)",
+    "product_type": "AI Document, Presentation & Webpage Generator",
+    "primary_category": "AI Productivity",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://gamma.app/",
+    "official_pricing_url": "https://gamma.app/pricing",
+    "current_model": "Gamma AI Engine 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited AI deck and document generations",
+      "Custom fonts and company branding themes",
+      "Interactive web embed components",
+      "Export to PDF and PPTX",
+      "Detailed slide engagement analytics"
+    ],
+    "limitations": "AI credit replenishment rules apply per workspace",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1600,
+    "aidigitools_price_usd": 6.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://gamma.app/pricing"
+    ],
+    "notes": "Leading pitch deck and AI proposal generation tool for Pakistani startups"
+  },
+  {
+    "id": "PROD-016",
+    "slug": "gemini-advanced",
+    "brand": "Google",
+    "official_product_name": "Google Gemini Advanced",
+    "official_plan_name": "Google One AI Premium (1 Month)",
+    "product_type": "Multimodal AI Assistant with 2M Token Context",
+    "primary_category": "AI Assistants",
+    "secondary_category": "AI Productivity",
+    "official_url": "https://gemini.google.com/",
+    "official_pricing_url": "https://one.google.com/about/plans",
+    "current_model": "Gemini 1.5 Pro / Gemini Live",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Gemini 1.5 Pro with 1M-2M token context window",
+      "Native multimodal video, audio and text upload",
+      "Google Workspace integration (Docs, Gmail, Sheets)",
+      "Gemini Live voice conversations",
+      "2TB Google One cloud storage included"
+    ],
+    "limitations": "Requires standard Google account activation",
+    "supported_platforms": [
+      "Web",
+      "Android",
+      "iOS"
+    ],
+    "official_price": 19.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1200,
+    "aidigitools_price_usd": 4.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://one.google.com/about/plans"
+    ],
+    "notes": "Extremely cost-effective multimodal assistant with 2TB storage bundle"
+  },
+  {
+    "id": "PROD-017",
+    "slug": "github-copilot",
+    "brand": "GitHub",
+    "official_product_name": "GitHub Copilot Pro",
+    "official_plan_name": "Individual Developer Subscription (1 Month)",
+    "product_type": "AI Pair Programmer & IDE Extension",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Assistants",
+    "official_url": "https://github.com/features/copilot",
+    "official_pricing_url": "https://github.com/pricing",
+    "current_model": "Copilot Workspace (Claude 3.5 Sonnet & GPT-4o)",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Real-time in-line code autocompletion",
+      "Copilot Chat in VS Code and JetBrains",
+      "Multi-model switcher (Claude 3.5 Sonnet, GPT-4o, Gemini)",
+      "Pull request summary generator on GitHub.com",
+      "CLI command assistant"
+    ],
+    "limitations": "Subject to GitHub personal account seat terms",
+    "supported_platforms": [
+      "VS Code",
+      "JetBrains IDEs",
+      "Visual Studio",
+      "Neovim"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1500,
+    "aidigitools_price_usd": 5.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://github.com/pricing"
+    ],
+    "notes": "Ubiquitous coding companion for software engineers across Pakistan"
+  },
+  {
+    "id": "PROD-018",
+    "slug": "google-ai-ultra",
+    "brand": "Google",
+    "official_product_name": "Google AI Ultra Plan (20X)",
+    "official_plan_name": "High-Throughput Dedicated Tier (1 Month)",
+    "product_type": "Frontier Model Evaluation & High-Throughput Developer Tier",
+    "primary_category": "AI Assistants",
+    "secondary_category": "AI Coding",
+    "official_url": "https://ai.google.dev/",
+    "official_pricing_url": "https://ai.google.dev/pricing",
+    "current_model": "Gemini 1.5 Pro High Rate Limit (20X)",
+    "model_verification_date": "October 2026",
+    "features": [
+      "20X rate limits over standard Gemini tiers",
+      "Massive 2M token context window processing",
+      "Dedicated compute reservation",
+      "Multi-modal video benchmark execution",
+      "Priority enterprise token throughput"
+    ],
+    "limitations": "Advanced developer profile required",
+    "supported_platforms": [
+      "Google AI Studio",
+      "Vertex AI API",
+      "Web"
+    ],
+    "official_price": 40.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 4500,
+    "aidigitools_price_usd": 16.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://ai.google.dev/pricing"
+    ],
+    "notes": "Powerhouse configuration for AI researchers and heavy pipeline developers"
+  },
+  {
+    "id": "PROD-019",
+    "slug": "google-veo",
+    "brand": "Google DeepMind",
+    "official_product_name": "Google Veo 2",
+    "official_plan_name": "Veo Generative Motion Tier (1 Month Access)",
+    "product_type": "High-Definition Cinematic Generative Video Model",
+    "primary_category": "AI Video",
+    "secondary_category": "AI Image and Design",
+    "official_url": "https://deepmind.google/technologies/veo/",
+    "official_pricing_url": "https://deepmind.google/technologies/veo/veo-2/",
+    "current_model": "Veo 2 Cinematic Temporal Model",
+    "model_verification_date": "October 2026",
+    "features": [
+      "1080p photorealistic cinematic generation",
+      "Precise camera controls (pan, zoom, orbit)",
+      "Physics-based object consistency",
+      "Visual prompt understanding with high prompt fidelity",
+      "Seamless scene extension"
+    ],
+    "limitations": "Model queue limits apply per generation batch",
+    "supported_platforms": [
+      "Web Studio",
+      "Vertex AI API"
+    ],
+    "official_price": 25.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1900,
+    "aidigitools_price_usd": 7.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://deepmind.google/technologies/veo/"
+    ],
+    "notes": "State-of-the-art cinematic video synthesis from Google DeepMind"
+  },
+  {
+    "id": "PROD-020",
+    "slug": "grammarly-pro",
+    "brand": "Grammarly",
+    "official_product_name": "Grammarly Premium",
+    "official_plan_name": "Premium Subscription (1 Month)",
+    "product_type": "AI Writing Assistant, Tone & Plagiarism Detector",
+    "primary_category": "AI Productivity",
+    "secondary_category": "Education and Learning",
+    "official_url": "https://www.grammarly.com/",
+    "official_pricing_url": "https://www.grammarly.com/plans",
+    "current_model": "Grammarly generative AI 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Full sentence rewrites & clarity suggestions",
+      "Academic plagiarism checker against billions of pages",
+      "Tone and formality adjustment",
+      "1,000 AI generation prompts per month",
+      "Integration across browser, desktop & MS Word"
+    ],
+    "limitations": "Single-user personal account activation",
+    "supported_platforms": [
+      "Browser Extensions",
+      "Windows",
+      "macOS",
+      "Word Plugin"
+    ],
+    "official_price": 30.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 750,
+    "aidigitools_price_usd": 2.8,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.grammarly.com/plans"
+    ],
+    "notes": "Crucial proofreading and academic integrity assistant for students and professionals"
+  },
+  {
+    "id": "PROD-021",
+    "slug": "grok-ai",
+    "brand": "xAI",
+    "official_product_name": "Grok 2",
+    "official_plan_name": "X Premium+ & SuperGrok Access (1 Month)",
+    "product_type": "Real-Time Web Grounded Assistant & Image Generator",
+    "primary_category": "AI Assistants",
+    "secondary_category": "AI Image and Design",
+    "official_url": "https://x.ai/",
+    "official_pricing_url": "https://x.com/i/premium_sign_up",
+    "current_model": "Grok 2, Grok 2 mini, Flux.1 image generator",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Real-time X platform live news search grounding",
+      "Flux.1 high-detail unfiltered image generation",
+      "Grok 2 frontier reasoning and coding capabilities",
+      "No ads in For You and Following timelines on X",
+      "Blue verification badge eligibility"
+    ],
+    "limitations": "Requires associated X account handle",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 16.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1100,
+    "aidigitools_price_usd": 4.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://x.ai/"
+    ],
+    "notes": "Real-time news discovery and creative image synthesis engine"
+  },
+  {
+    "id": "PROD-022",
+    "slug": "heygen-ai",
+    "brand": "HeyGen",
+    "official_product_name": "HeyGen Creator",
+    "official_plan_name": "Creator Subscription (1 Month)",
+    "product_type": "AI Avatar Video Generator & Multilingual Voice Cloning",
+    "primary_category": "AI Video",
+    "secondary_category": "AI Audio and Music",
+    "official_url": "https://www.heygen.com/",
+    "official_pricing_url": "https://www.heygen.com/pricing",
+    "current_model": "Avatar IV & Video Translate 3.0",
+    "model_verification_date": "October 2026",
+    "features": [
+      "15 video credits per month (~15 minutes of avatar video)",
+      "100+ realistic photorealistic studio avatars",
+      "Natural lip-sync in 175+ languages & dialects",
+      "Instant custom talking avatar generation",
+      "Auto-captions and multi-speaker video translations"
+    ],
+    "limitations": "Credits consumed per minute of rendered video",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 29.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 4200,
+    "aidigitools_price_usd": 15.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.heygen.com/pricing"
+    ],
+    "notes": "Leading video marketing and localized corporate training tool"
+  },
+  {
+    "id": "PROD-023",
+    "slug": "jetbrains-all",
+    "brand": "JetBrains",
+    "official_product_name": "JetBrains All Products Pack",
+    "official_plan_name": "All Products Pack Commercial (1 Month Access)",
+    "product_type": "Professional IDE Suite",
+    "primary_category": "AI Coding",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://www.jetbrains.com/",
+    "official_pricing_url": "https://www.jetbrains.com/all/buy/",
+    "current_model": "JetBrains IDE 2026 with AI Assistant",
+    "model_verification_date": "October 2026",
+    "features": [
+      "IntelliJ IDEA Ultimate, PyCharm Pro, WebStorm, Rider, CLion",
+      "DataGrip, GoLand, PhpStorm, RubyMine included",
+      "JetBrains AI Assistant code suggestions",
+      "Profiling, remote development & debugger suites",
+      "Cross-platform license for all machines"
+    ],
+    "limitations": "Single named developer user seat",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "official_price": 28.9,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2500,
+    "aidigitools_price_usd": 9.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.jetbrains.com/all/buy/"
+    ],
+    "notes": "The gold standard development environment for software engineering teams"
+  },
+  {
+    "id": "PROD-024",
+    "slug": "kling-ai",
+    "brand": "Kuaishou",
+    "official_product_name": "Kling AI Pro",
+    "official_plan_name": "Pro Subscription (1 Month)",
+    "product_type": "Diffusion-Based Physics-Accurate Video Generator",
+    "primary_category": "AI Video",
+    "secondary_category": "AI Image and Design",
+    "official_url": "https://klingai.com/",
+    "official_pricing_url": "https://klingai.com/pricing",
+    "current_model": "Kling 1.5 Diffusion Engine",
+    "model_verification_date": "October 2026",
+    "features": [
+      "660 credits per month with fast generation queue",
+      "Up to 10-second cinematic video generations",
+      "1080p high definition output with accurate human anatomy",
+      "Complex camera motion controls and multi-prompt interpolation",
+      "Negative prompts and seed consistency control"
+    ],
+    "limitations": "Queue prioritization depends on credit consumption",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 700,
+    "aidigitools_price_usd": 2.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://klingai.com/pricing"
+    ],
+    "notes": "Cost-effective high-motion video generation tool"
+  },
+  {
+    "id": "PROD-025",
+    "slug": "leonardo-ai",
+    "brand": "Leonardo.Ai",
+    "official_product_name": "Leonardo.Ai Apprentice",
+    "official_plan_name": "Apprentice Plan (1 Month)",
+    "product_type": "Generative Art, Fine-Tuned Models & Realtime Canvas",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "AI Video",
+    "official_url": "https://leonardo.ai/",
+    "official_pricing_url": "https://leonardo.ai/pricing",
+    "current_model": "Phoenix, Kino XL, Lightning XL",
+    "model_verification_date": "October 2026",
+    "features": [
+      "8,500 fast tokens per month (~8,500 images)",
+      "Commercial usage rights for game assets & marketing",
+      "Realtime Canvas live generative sketching",
+      "Motion video creation from generated stills",
+      "Custom LoRA fine-tuning training slots"
+    ],
+    "limitations": "Concurrent generation slots limited to 2 on Apprentice tier",
+    "supported_platforms": [
+      "Web",
+      "iOS App"
+    ],
+    "official_price": 12.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1300,
+    "aidigitools_price_usd": 5.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://leonardo.ai/pricing"
+    ],
+    "notes": "Game asset, product design, and architectural concept visualizer"
+  },
+  {
+    "id": "PROD-026",
+    "slug": "linkedin-premium",
+    "brand": "LinkedIn",
+    "official_product_name": "LinkedIn Premium Career",
+    "official_plan_name": "Career Plan (1 Month Access)",
+    "product_type": "Professional Networking & Job Search Intelligence",
+    "primary_category": "Business and Productivity Software",
+    "secondary_category": "Education and Learning",
+    "official_url": "https://www.linkedin.com/premium/",
+    "official_pricing_url": "https://www.linkedin.com/premium/products/",
+    "current_model": "LinkedIn AI Recruiter & Job Seeker 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "5 InMail messages per month to reach hiring managers",
+      "See who viewed your profile in the past 90 days",
+      "Competitive applicant insights & salary benchmarks",
+      "LinkedIn Learning access with 20,000+ expert courses",
+      "Top Applicant badges and AI profile optimizer"
+    ],
+    "limitations": "Single member profile activation",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 39.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1500,
+    "aidigitools_price_usd": 5.5,
+    "website_display_status": "Inquiry Only (Held)",
+    "availability_status": "Paused (Inquiry Only)",
+    "verification_status": "Verified (Tier 1 Hold)",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.linkedin.com/premium/products/"
+    ],
+    "notes": "Direct checkout paused; inquiries routed to WhatsApp for stock & compliance verification"
+  },
+  {
+    "id": "PROD-027",
+    "slug": "lovable-ai",
+    "brand": "Lovable",
+    "official_product_name": "Lovable AI Full-Stack Builder",
+    "official_plan_name": "Full-Stack Pro Subscription (1 Month)",
+    "product_type": "Full-Stack Web App Generator",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Productivity",
+    "official_url": "https://lovable.dev/",
+    "official_pricing_url": "https://lovable.dev/pricing",
+    "current_model": "Lovable v1 Engine",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Text-to-full-stack React application generation",
+      "Automatic Supabase database integration & authentication",
+      "GitHub bidirectional sync and pull request export",
+      "Live responsive browser preview",
+      "Custom domain deployment capabilities"
+    ],
+    "limitations": "Message quotas apply per workspace generation cycle",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1500,
+    "aidigitools_price_usd": 5.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://lovable.dev/pricing"
+    ],
+    "notes": "Next-generation autonomous software development tool for rapid MVPs"
+  },
+  {
+    "id": "PROD-028",
+    "slug": "microsoft-office-365",
+    "brand": "Microsoft",
+    "official_product_name": "Microsoft 365 Personal",
+    "official_plan_name": "Personal Subscription with Copilot (1 Month)",
+    "product_type": "Office Productivity Suite & Cloud Storage",
+    "primary_category": "Business and Productivity Software",
+    "secondary_category": "AI Productivity",
+    "official_url": "https://www.microsoft.com/microsoft-365",
+    "official_pricing_url": "https://www.microsoft.com/microsoft-365/buy/compare-all-microsoft-365-products",
+    "current_model": "Microsoft 365 with Copilot AI",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Word, Excel, PowerPoint, Outlook, OneNote desktop apps",
+      "1TB secure OneDrive cloud storage with ransomware protection",
+      "Copilot AI smart drafting and formula suggestions",
+      "Up to 5 devices connected simultaneously per user",
+      "Advanced security & identity management"
+    ],
+    "limitations": "Single user account activation",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android",
+      "Web"
+    ],
+    "official_price": 6.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1100,
+    "aidigitools_price_usd": 4.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.microsoft.com/microsoft-365/buy/compare-all-microsoft-365-products"
+    ],
+    "notes": "Foundational suite for students, corporate employees, and digital freelancers"
+  },
+  {
+    "id": "PROD-029",
+    "slug": "midjourney",
+    "brand": "Midjourney",
+    "official_product_name": "Midjourney v6.1",
+    "official_plan_name": "Basic Subscription (1 Month)",
+    "product_type": "Generative Image & Photorealistic Art Engine",
+    "primary_category": "AI Image and Design",
+    "secondary_category": "AI Video",
+    "official_url": "https://www.midjourney.com/",
+    "official_pricing_url": "https://docs.midjourney.com/docs/plans",
+    "current_model": "Midjourney v6.1",
+    "model_verification_date": "October 2026",
+    "features": [
+      "200 Fast GPU minutes (~200 high-res image generations)",
+      "Commercial usage rights for marketing and merchandise",
+      "Access to member web gallery and showcase",
+      "Discord bot and Midjourney Web generation interface",
+      "Inpainting, outpainting, zoom and style tuning"
+    ],
+    "limitations": "Basic tier does not include unlimited Relax mode generations",
+    "supported_platforms": [
+      "Web",
+      "Discord"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2800,
+    "aidigitools_price_usd": 10.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://docs.midjourney.com/docs/plans"
+    ],
+    "notes": "Synchronized to verified Rs. 2,800 starting tier across website and cart engine"
+  },
+  {
+    "id": "PROD-030",
+    "slug": "minimax-ai",
+    "brand": "MiniMax",
+    "official_product_name": "Hailuo AI Video",
+    "official_plan_name": "Standard Subscription (1 Month)",
+    "product_type": "High-Motion Physics Video Generation Engine",
+    "primary_category": "AI Video",
+    "secondary_category": "AI Image and Design",
+    "official_url": "https://hailuoai.video/",
+    "official_pricing_url": "https://hailuoai.video/pricing",
+    "current_model": "MiniMax Video-01",
+    "model_verification_date": "October 2026",
+    "features": [
+      "720p/1080p high dynamic range motion video",
+      "Extreme physics accuracy (water, smoke, collisions)",
+      "6-second fast generation queue",
+      "Text-to-video and Image-to-video modes",
+      "Commercial usage clearance"
+    ],
+    "limitations": "Daily fast generation limits apply",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 15.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1600,
+    "aidigitools_price_usd": 6.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://hailuoai.video/pricing"
+    ],
+    "notes": "Celebrated for dynamic kinetic motion and realistic character expressions"
+  },
+  {
+    "id": "PROD-031",
+    "slug": "n8n-automation",
+    "brand": "n8n",
+    "official_product_name": "n8n Cloud Starter",
+    "official_plan_name": "Starter Cloud Subscription (1 Month)",
+    "product_type": "Fair-Code Workflow Automation & AI Agent Orchestrator",
+    "primary_category": "Business and Productivity Software",
+    "secondary_category": "AI Coding",
+    "official_url": "https://n8n.io/",
+    "official_pricing_url": "https://n8n.io/pricing/",
+    "current_model": "n8n AI Agents & Nodes 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "2,500 workflow executions per month",
+      "Unlimited active automation workflows",
+      "400+ native app integrations & HTTP node",
+      "AI agent nodes supporting OpenAI, Anthropic, LangChain",
+      "Visual drag-and-drop builder with custom code support"
+    ],
+    "limitations": "Executions count towards total quota; self-hosted enterprise requires dedicated license",
+    "supported_platforms": [
+      "Web Cloud",
+      "Self-Hosted Docker"
+    ],
+    "official_price": 22.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 6500,
+    "aidigitools_price_usd": 23.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://n8n.io/pricing/"
+    ],
+    "notes": "Crucial automation infrastructure for e-commerce, customer support and CRM routing"
+  },
+  {
+    "id": "PROD-032",
+    "slug": "netflix-premium",
+    "brand": "Netflix",
+    "official_product_name": "Netflix Premium (4K UHD)",
+    "official_plan_name": "Premium 4K HDR Plan (1 Month)",
+    "product_type": "Video-on-Demand Streaming Platform",
+    "primary_category": "Streaming and Entertainment",
+    "secondary_category": "Operating Systems and Utilities",
+    "official_url": "https://www.netflix.com/",
+    "official_pricing_url": "https://help.netflix.com/en/node/24926/pk",
+    "current_model": "Netflix Platform 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "4K Ultra HD and HDR video resolution",
+      "Dolby Atmos immersive spatial audio",
+      "Watch on 4 supported devices simultaneously",
+      "Download on 6 devices for offline viewing",
+      "Full global and regional content library"
+    ],
+    "limitations": "Household account location policies apply",
+    "supported_platforms": [
+      "Smart TV",
+      "iOS",
+      "Android",
+      "Web",
+      "PlayStation",
+      "Xbox"
+    ],
+    "official_price": 4.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1100,
+    "aidigitools_price_usd": 4.0,
+    "website_display_status": "Inquiry Only (Held)",
+    "availability_status": "Paused (Inquiry Only)",
+    "verification_status": "Verified (Tier 1 Hold)",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://help.netflix.com/en/node/24926/pk"
+    ],
+    "notes": "Direct checkout paused; inquiries routed to WhatsApp for stock & compliance verification"
+  },
+  {
+    "id": "PROD-033",
+    "slug": "nordvpn",
+    "brand": "Nord Security",
+    "official_product_name": "NordVPN Standard",
+    "official_plan_name": "Standard Secure VPN (1 Month)",
+    "product_type": "Virtual Private Network & Cyber Security Suite",
+    "primary_category": "VPN and Privacy",
+    "secondary_category": "Operating Systems and Utilities",
+    "official_url": "https://nordvpn.com/",
+    "official_pricing_url": "https://nordvpn.com/pricing/",
+    "current_model": "NordLynx Protocol 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "6,400+ ultra-fast servers across 111 countries",
+      "NordLynx wireguard proprietary high-speed protocol",
+      "Threat Protection ad, malware and tracker blocker",
+      "Strict audited no-logs policy",
+      "Connect up to 10 devices simultaneously"
+    ],
+    "limitations": "Dedicated IP requires add-on configuration",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android",
+      "Routers"
+    ],
+    "official_price": 12.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 850,
+    "aidigitools_price_usd": 3.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://nordvpn.com/pricing/"
+    ],
+    "notes": "Top privacy and streaming bypass utility for Pakistani developers and remote workers"
+  },
+  {
+    "id": "PROD-034",
+    "slug": "notion-business",
+    "brand": "Notion",
+    "official_product_name": "Notion Plus with Notion AI",
+    "official_plan_name": "Plus Workspace with AI (1 Month)",
+    "product_type": "Connected Workspace, Wiki & AI Knowledge Base",
+    "primary_category": "Business and Productivity Software",
+    "secondary_category": "AI Productivity",
+    "official_url": "https://www.notion.so/",
+    "official_pricing_url": "https://www.notion.so/pricing",
+    "current_model": "Notion AI 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited blocks and file uploads",
+      "Unlimited page version history up to 30 days",
+      "Notion AI Q&A across entire workspace knowledge base",
+      "Sync databases across Jira, GitHub and Slack",
+      "Custom team permissions and guest collaboration"
+    ],
+    "limitations": "Single active seat workspace activation",
+    "supported_platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1400,
+    "aidigitools_price_usd": 5.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.notion.so/pricing"
+    ],
+    "notes": "Organizes knowledge bases, development sprints, and personal productivity"
+  },
+  {
+    "id": "PROD-035",
+    "slug": "perplexity-pro",
+    "brand": "Perplexity AI",
+    "official_product_name": "Perplexity Pro",
+    "official_plan_name": "Pro Subscription (1 Month)",
+    "product_type": "Answer Engine with Citation Grounding & Multi-Model Access",
+    "primary_category": "AI Assistants",
+    "secondary_category": "AI Coding",
+    "official_url": "https://www.perplexity.ai/",
+    "official_pricing_url": "https://www.perplexity.ai/pro",
+    "current_model": "Claude 3.5 Sonnet, GPT-4o, Sonar Large 32k",
+    "model_verification_date": "October 2026",
+    "features": [
+      "300+ Pro Searches per day with deep reasoning",
+      "Model switcher (Claude 3.5 Sonnet, GPT-4o, Sonar)",
+      "Unlimited file uploads (PDFs, CSVs, images)",
+      "Perplexity Collections with collaborative search spaces",
+      "API credits and playground access"
+    ],
+    "limitations": "Pro search query limits refresh every 24 hours",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "Chrome Extension"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2200,
+    "aidigitools_price_usd": 8.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.perplexity.ai/pro"
+    ],
+    "notes": "Academic, market research, and factual search engine with clickable citations"
+  },
+  {
+    "id": "PROD-036",
+    "slug": "prime-video",
+    "brand": "Amazon",
+    "official_product_name": "Amazon Prime Video",
+    "official_plan_name": "Prime Video Subscription (1 Month)",
+    "product_type": "On-Demand Movies, Series & Originals",
+    "primary_category": "Streaming and Entertainment",
+    "secondary_category": "Operating Systems and Utilities",
+    "official_url": "https://www.primevideo.com/",
+    "official_pricing_url": "https://www.amazon.com/amazonprime",
+    "current_model": "Prime Video Platform 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Access to exclusive Amazon Originals and live sports",
+      "4K Ultra HD with HDR and X-Ray cast information",
+      "Download to mobile device for offline watching",
+      "Watch on up to 3 screens simultaneously",
+      "Multiple user profiles per account"
+    ],
+    "limitations": "Ad-free tier requires supplementary configuration in select regions",
+    "supported_platforms": [
+      "Smart TV",
+      "iOS",
+      "Android",
+      "Fire TV",
+      "Web"
+    ],
+    "official_price": 8.99,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 700,
+    "aidigitools_price_usd": 2.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.amazon.com/amazonprime"
+    ],
+    "notes": "Affordable international and regional entertainment streaming"
+  },
+  {
+    "id": "PROD-037",
+    "slug": "quillbot-premium",
+    "brand": "QuillBot",
+    "official_product_name": "QuillBot Premium",
+    "official_plan_name": "Premium Subscription (1 Month)",
+    "product_type": "Paraphrasing Tool, Summarizer & Grammar Checker",
+    "primary_category": "AI Productivity",
+    "secondary_category": "Education and Learning",
+    "official_url": "https://quillbot.com/",
+    "official_pricing_url": "https://quillbot.com/upgrade",
+    "current_model": "QuillBot AI 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited words in paraphraser",
+      "Custom and pre-set paraphrase modes (Creative, Academic, Formal)",
+      "Plagiarism checker scanning 20 pages per month",
+      "Full sentence rewrite recommendations",
+      "Chrome extension and Google Docs integration"
+    ],
+    "limitations": "Plagiarism scanning pages quota refreshes monthly",
+    "supported_platforms": [
+      "Web",
+      "Chrome Extension",
+      "MS Word Plugin"
+    ],
+    "official_price": 19.95,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1600,
+    "aidigitools_price_usd": 6.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://quillbot.com/upgrade"
+    ],
+    "notes": "Indispensable academic paraphrasing and thesis structuring assistant"
+  },
+  {
+    "id": "PROD-038",
+    "slug": "replit-core",
+    "brand": "Replit",
+    "official_product_name": "Replit Core",
+    "official_plan_name": "Core Membership (1 Month)",
+    "product_type": "Cloud Development Environment & Replit Agent",
+    "primary_category": "AI Coding",
+    "secondary_category": "AI Assistants",
+    "official_url": "https://replit.com/",
+    "official_pricing_url": "https://replit.com/pricing",
+    "current_model": "Replit Agent & Ghostwriter 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Autonomous Replit Agent for building full-stack web applications",
+      "Unlimited private repls and persistent cloud workspaces",
+      "Enhanced compute resources (4 vCPUs and 8GB RAM)",
+      "Custom domain deployment and background workers",
+      "Collaborative real-time pair programming"
+    ],
+    "limitations": "Agent checkpoint credit limits apply",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 25.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2800,
+    "aidigitools_price_usd": 10.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://replit.com/pricing"
+    ],
+    "notes": "Instant zero-setup cloud coding environment with autonomous agent synthesis"
+  },
+  {
+    "id": "PROD-039",
+    "slug": "runway-gen3",
+    "brand": "Runway",
+    "official_product_name": "Runway Standard / Pro",
+    "official_plan_name": "Standard Plan (1 Month)",
+    "product_type": "Generative Video Studio & Motion Brush Platform",
+    "primary_category": "AI Video",
+    "secondary_category": "AI Image and Design",
+    "official_url": "https://runwayml.com/",
+    "official_pricing_url": "https://runwayml.com/pricing/",
+    "current_model": "Runway Gen-3 Alpha / Gen-3 Alpha Turbo",
+    "model_verification_date": "October 2026",
+    "features": [
+      "625 credits per month (~125 seconds of Gen-3 Alpha Turbo video)",
+      "Cinematic 4K upscale and Camera Control suite",
+      "Motion Brush for localized directional physics",
+      "Text-to-Video and Image-to-Video modes",
+      "Remove watermark & full commercial export license"
+    ],
+    "limitations": "Credits consumed per second of rendered footage",
+    "supported_platforms": [
+      "Web",
+      "iOS App"
+    ],
+    "official_price": 15.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 1800,
+    "aidigitools_price_usd": 6.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://runwayml.com/pricing/"
+    ],
+    "notes": "Leading Hollywood-grade visual effects and AI video studio"
+  },
+  {
+    "id": "PROD-040",
+    "slug": "semrush-guru",
+    "brand": "Semrush",
+    "official_product_name": "Semrush Guru / Pro",
+    "official_plan_name": "Guru Marketing Suite (1 Month Access)",
+    "product_type": "All-in-One SEO, Keyword Research & Competitor Analytics Suite",
+    "primary_category": "SEO and Marketing",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://www.semrush.com/",
+    "official_pricing_url": "https://www.semrush.com/prices/",
+    "current_model": "Semrush AI Toolkit 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Historical data access back to 2012",
+      "Track up to 1,500 keywords with daily rank updates",
+      "Crawl up to 300,000 pages for technical SEO audits",
+      "Content Marketing Toolkit and SEO Writing Assistant",
+      "Competitor backlink gap and keyword gap analysis"
+    ],
+    "limitations": "Single user seat login session",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 249.95,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2500,
+    "aidigitools_price_usd": 9.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.semrush.com/prices/"
+    ],
+    "notes": "The primary intelligence tool for SEO agencies and content marketers"
+  },
+  {
+    "id": "PROD-041",
+    "slug": "spotify-premium",
+    "brand": "Spotify",
+    "official_product_name": "Spotify Premium Individual",
+    "official_plan_name": "Individual Premium (1 Month)",
+    "product_type": "Ad-Free Music & Podcast Streaming Platform",
+    "primary_category": "Streaming and Entertainment",
+    "secondary_category": "AI Audio and Music",
+    "official_url": "https://www.spotify.com/",
+    "official_pricing_url": "https://www.spotify.com/premium/",
+    "current_model": "Spotify AI DJ & Daylist 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Ad-free music listening with unlimited skips",
+      "Offline music downloads on mobile and desktop",
+      "320 kbps high-bitrate streaming audio quality",
+      "Spotify AI DJ with personalized commentary",
+      "Group session remote listening with friends"
+    ],
+    "limitations": "Personal account activation",
+    "supported_platforms": [
+      "iOS",
+      "Android",
+      "Windows",
+      "macOS",
+      "Web",
+      "PlayStation"
+    ],
+    "official_price": 2.5,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 650,
+    "aidigitools_price_usd": 2.5,
+    "website_display_status": "Inquiry Only (Held)",
+    "availability_status": "Paused (Inquiry Only)",
+    "verification_status": "Verified (Tier 1 Hold)",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.spotify.com/premium/"
+    ],
+    "notes": "Direct checkout paused; inquiries routed to WhatsApp for stock & compliance verification"
+  },
+  {
+    "id": "PROD-042",
+    "slug": "suno-ai",
+    "brand": "Suno",
+    "official_product_name": "Suno Pro",
+    "official_plan_name": "Pro Membership (1 Month)",
+    "product_type": "Generative Music Creation Platform (Full Songs with Vocals)",
+    "primary_category": "AI Audio and Music",
+    "secondary_category": "AI Video",
+    "official_url": "https://suno.com/",
+    "official_pricing_url": "https://suno.com/pricing",
+    "current_model": "Suno v3.5 / v4",
+    "model_verification_date": "October 2026",
+    "features": [
+      "2,500 credits per month (~500 songs / 250 prompts)",
+      "Full commercial ownership of generated music",
+      "Up to 4-minute full song generations in any genre",
+      "Multi-lingual vocal synthesis and stem separation",
+      "Fast priority generation queue"
+    ],
+    "limitations": "Credits refresh each monthly billing period",
+    "supported_platforms": [
+      "Web",
+      "iOS App"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2600,
+    "aidigitools_price_usd": 9.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://suno.com/pricing"
+    ],
+    "notes": "The leading generative music platform for content creators and producers"
+  },
+  {
+    "id": "PROD-043",
+    "slug": "surfshark-vpn",
+    "brand": "Surfshark",
+    "official_product_name": "Surfshark Starter",
+    "official_plan_name": "Starter VPN (1 Month)",
+    "product_type": "Virtual Private Network & Privacy Suite",
+    "primary_category": "VPN and Privacy",
+    "secondary_category": "Operating Systems and Utilities",
+    "official_url": "https://surfshark.com/",
+    "official_pricing_url": "https://surfshark.com/pricing",
+    "current_model": "Surfshark WireGuard 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Unlimited simultaneous device connections per account",
+      "3,200+ servers across 100 countries",
+      "CleanWeb ad, cookie and phishing blocker",
+      "Kill Switch and Bypasser split tunneling",
+      "Strict no-logs RAM-only server architecture"
+    ],
+    "limitations": "Dedicated IP sold separately",
+    "supported_platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android",
+      "Fire TV"
+    ],
+    "official_price": 15.45,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 800,
+    "aidigitools_price_usd": 3.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://surfshark.com/pricing"
+    ],
+    "notes": "Highly economical VPN solution allowing multi-device household coverage"
+  },
+  {
+    "id": "PROD-044",
+    "slug": "tradingview-pro",
+    "brand": "TradingView",
+    "official_product_name": "TradingView Essential / Plus",
+    "official_plan_name": "Essential Plan (1 Month)",
+    "product_type": "Financial Market Charting, Pine Script & Technical Indicators",
+    "primary_category": "Business and Productivity Software",
+    "secondary_category": "AI Productivity",
+    "official_url": "https://www.tradingview.com/",
+    "official_pricing_url": "https://www.tradingview.com/pricing/",
+    "current_model": "TradingView Pine Script v6 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "5 indicators per chart layout",
+      "2 charts in one browser window",
+      "20 active server-side price alerts",
+      "Ad-free experience with high-speed data",
+      "Custom Pine Script backtesting and strategy optimizer"
+    ],
+    "limitations": "Single active concurrent trading session",
+    "supported_platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "official_price": 14.95,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2800,
+    "aidigitools_price_usd": 10.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.tradingview.com/pricing/"
+    ],
+    "notes": "Indispensable platform for crypto, forex, and Pakistan Stock Exchange (PSX) traders"
+  },
+  {
+    "id": "PROD-045",
+    "slug": "turnitin-student",
+    "brand": "Turnitin",
+    "official_product_name": "Turnitin Originality",
+    "official_plan_name": "Student Similarity & AI Detection Workspace (1 Month)",
+    "product_type": "Academic Plagiarism Detection & AI Writing Recognition",
+    "primary_category": "Education and Learning",
+    "secondary_category": "AI Productivity",
+    "official_url": "https://www.turnitin.com/",
+    "official_pricing_url": "https://www.turnitin.com/products/originality",
+    "current_model": "Turnitin AI Writing Detector 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "Comprehensive similarity checking against global student papers",
+      "AI writing detection (ChatGPT, Claude, Gemini recognition)",
+      "Detailed interactive color-coded match breakdown",
+      "Non-repository submission options ensuring privacy",
+      "Fast multi-page academic thesis scanning"
+    ],
+    "limitations": "Instructor/student seat account allocation",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 20.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 950,
+    "aidigitools_price_usd": 3.5,
+    "website_display_status": "Inquiry Only (Held)",
+    "availability_status": "Paused (Inquiry Only)",
+    "verification_status": "Verified (Tier 1 Hold)",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.turnitin.com/products/originality"
+    ],
+    "notes": "Direct checkout paused; inquiries routed to WhatsApp for stock & compliance verification"
+  },
+  {
+    "id": "PROD-046",
+    "slug": "udio-ai",
+    "brand": "Udio",
+    "official_product_name": "Udio Standard",
+    "official_plan_name": "Standard Subscription (1 Month)",
+    "product_type": "High-Fidelity Generative Music & Track Extension Studio",
+    "primary_category": "AI Audio and Music",
+    "secondary_category": "AI Video",
+    "official_url": "https://www.udio.com/",
+    "official_pricing_url": "https://www.udio.com/pricing",
+    "current_model": "Udio v1.5 Audio Model",
+    "model_verification_date": "October 2026",
+    "features": [
+      "1,200 priority credits per month (~1,200 songs / extensions)",
+      "Commercial usage rights for generated tracks",
+      "Advanced audio inpainting & track continuation",
+      "Custom lyrics, genre blending & stem downloads (WAV)",
+      "High-quality stereo separation"
+    ],
+    "limitations": "Credits refresh each monthly billing period",
+    "supported_platforms": [
+      "Web"
+    ],
+    "official_price": 10.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2800,
+    "aidigitools_price_usd": 10.0,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.udio.com/pricing"
+    ],
+    "notes": "Celebrated for emotional vocal nuances and complex musical arrangements"
+  },
+  {
+    "id": "PROD-047",
+    "slug": "vidiq-boost",
+    "brand": "vidIQ",
+    "official_product_name": "vidIQ Boost",
+    "official_plan_name": "Boost Plan (1 Month)",
+    "product_type": "YouTube Video SEO, AI Title Suggestions & Competitor Tracking",
+    "primary_category": "SEO and Marketing",
+    "secondary_category": "AI Video",
+    "official_url": "https://vidiq.com/",
+    "official_pricing_url": "https://vidiq.com/plans/",
+    "current_model": "vidIQ AI Coach 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "AI video title and thumbnail generator",
+      "Daily video ideas tailored to channel history",
+      "Competitor keyword tracking and alert triggers",
+      "Search keyword engine with competition scoring",
+      "Bulk SEO tag optimization for YouTube channels"
+    ],
+    "limitations": "Channel connection quota applies",
+    "supported_platforms": [
+      "Web",
+      "Chrome Extension"
+    ],
+    "official_price": 49.0,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 2100,
+    "aidigitools_price_usd": 7.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://vidiq.com/plans/"
+    ],
+    "notes": "Accelerates channel discovery, retention and monetization for video creators"
+  },
+  {
+    "id": "PROD-048",
+    "slug": "windows-11-pro",
+    "brand": "Microsoft",
+    "official_product_name": "Windows 11 Pro",
+    "official_plan_name": "Retail / OEM License (Lifetime Activation)",
+    "product_type": "Desktop Operating System & Virtualization Security",
+    "primary_category": "Operating Systems and Utilities",
+    "secondary_category": "Business and Productivity Software",
+    "official_url": "https://www.microsoft.com/windows/windows-11-pro",
+    "official_pricing_url": "https://www.microsoft.com/d/windows-11-pro/dg7gmgf0d8h4",
+    "current_model": "Windows 11 24H2 with Copilot+ Runtime",
+    "model_verification_date": "October 2026",
+    "features": [
+      "BitLocker device encryption & hardware TPM 2.0 security",
+      "Hyper-V and Windows Sandbox virtualization",
+      "Remote Desktop Host capabilities",
+      "Windows Subsystem for Linux 2 (WSL2)",
+      "Active Directory & Microsoft Entra ID domain joining"
+    ],
+    "limitations": "1 PC lifetime activation key bound to motherboard hardware hash",
+    "supported_platforms": [
+      "PC Hardware (x64 & ARM64)"
+    ],
+    "official_price": 199.99,
+    "currency": "USD",
+    "billing_period": "Lifetime License",
+    "aidigitools_price_pkr": 1500,
+    "aidigitools_price_usd": 5.5,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.microsoft.com/windows/windows-11-pro"
+    ],
+    "notes": "Standard secure workstation operating system for developers and businesses"
+  },
+  {
+    "id": "PROD-049",
+    "slug": "youtube-premium",
+    "brand": "Google",
+    "official_product_name": "YouTube Premium Individual",
+    "official_plan_name": "Individual Subscription (1 Month)",
+    "product_type": "Ad-Free Video Streaming, Background Audio & Music",
+    "primary_category": "Streaming and Entertainment",
+    "secondary_category": "AI Audio and Music",
+    "official_url": "https://www.youtube.com/premium",
+    "official_pricing_url": "https://www.youtube.com/premium",
+    "current_model": "YouTube Platform 2026",
+    "model_verification_date": "October 2026",
+    "features": [
+      "100% ad-free video playback across all devices",
+      "Background playback while using other apps or screen off",
+      "High-bitrate 1080p and 4K offline video downloads",
+      "YouTube Music Premium full subscription included",
+      "Smart downloads and picture-in-picture (PiP)"
+    ],
+    "limitations": "Single personal Google account activation",
+    "supported_platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "Smart TV",
+      "Consoles"
+    ],
+    "official_price": 2.8,
+    "currency": "USD",
+    "billing_period": "Monthly",
+    "aidigitools_price_pkr": 750,
+    "aidigitools_price_usd": 2.8,
+    "website_display_status": "Active",
+    "availability_status": "InStock",
+    "verification_status": "Verified",
+    "last_verified": "October 2026",
+    "source_urls": [
+      "https://www.youtube.com/premium"
+    ],
+    "notes": "Everyday streaming and audio essential with zero mobile ad interruptions"
+  }
+]
