@@ -97,9 +97,9 @@
         "price_pkr": 2300,
         "price_usd": 8.0,
         "features": [
-          "Access to GPT-4o, GPT-4, and OpenAI o1 reasoning",
+          "Access to GPT-5/GPT-6, o1/o3 reasoning, and GPT-4o fallback",
           "Advanced Voice Mode on iOS & Android",
-          "DALL-E 3 high-res image generation",
+          "DALL-E image generation & Canvas visual synthesis",
           "File analysis, web browsing & custom GPTs"
         ],
         "limits": "Standard OpenAI message frequency caps apply",
@@ -115,7 +115,7 @@
         "price_pkr": 4800,
         "price_usd": 17.0,
         "features": [
-          "Higher message limits on GPT-4o and o1",
+          "Higher message limits on GPT-5/GPT-6 and o1/o3",
           "Dedicated collaborative workspace & admin console",
           "Shared custom GPTs within organization",
           "Zero model training on proprietary business data"
@@ -148,7 +148,7 @@
         "price_usd": 9.0,
         "features": [
           "5x higher usage limits vs free Claude tier",
-          "Claude 3.5 Sonnet & Claude 3.5 Haiku models",
+          "Claude Sonnet 5.5 & Claude 3.5 Haiku models",
           "Interactive split-screen Artifacts live runner",
           "Early access to new Anthropic features"
         ],
@@ -515,7 +515,7 @@
         "price_pkr": 3800,
         "price_usd": 13.5,
         "features": [
-          "500 Fast Premium requests / month (Claude 3.5 Sonnet & GPT-4o)",
+          "500 Fast Premium requests / month (Claude Sonnet 5.5 & GPT-5/4o)",
           "Unlimited Slow requests after fast quota",
           "Multi-file Composer codebase refactoring",
           "Smart line and multi-line code auto-complete"
@@ -548,7 +548,7 @@
         "price_usd": 8.0,
         "features": [
           "600+ Pro Searches / day with multi-step reasoning",
-          "Model switcher: Claude 3.5 Sonnet, GPT-4o, Sonar Large",
+          "Model switcher: Claude Sonnet 5.5, GPT-5/4o, Sonar Large",
           "Unlimited file and PDF research uploads",
           "Includes $5/month API credits"
         ],
@@ -1460,7 +1460,7 @@
         "price_usd": 2.5,
         "features": [
           "Pre-funded OpenAI developer API balance",
-          "Access to GPT-4o, GPT-4o-mini, and embeddings",
+          "Access to GPT-5/4o, GPT-4o-mini, and embeddings",
           "Rate limits up to 500 requests per minute",
           "Full developer dashboard access & usage monitoring"
         ],
@@ -1494,7 +1494,7 @@
           "Interactive split-screen code and UI renderer",
           "Instant React components, HTML5 games, and SVG graphics",
           "Download and fork generated Artifact code snippets",
-          "Claude 3.5 Sonnet reasoning backing every generation"
+          "Claude Sonnet 5.5 reasoning backing every generation"
         ],
         "limits": "Anthropic platform limits apply",
         "badge": "Live Prototyping",
@@ -1556,7 +1556,7 @@
         "price_usd": 5.9,
         "features": [
           "Unlimited AI deck, document, and webpage generation",
-          "Advanced AI model access (Claude & GPT-4o powered)",
+          "Advanced AI model access (Claude & GPT-5/4o powered)",
           "Custom branding, font uploads & custom domains",
           "Export to PDF and PPTX without watermark"
         ],

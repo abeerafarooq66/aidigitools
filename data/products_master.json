@@ -207,10 +207,10 @@
     "current_model": "GPT-5.5 / GPT-6 series with native deep reasoning, Canvas, Voice",
     "model_verification_date": "October 2026",
     "features": [
-      "Unlimited GPT-4o access with high messaging caps",
+      "Frontier GPT-5/GPT-6 access with high messaging caps",
       "Advanced Voice Mode with real-time inflection",
       "Custom GPTs creation & browse",
-      "DALL-E 3 image generation",
+      "DALL-E image generation & Canvas visual synthesis",
       "Deep code interpreter and canvas"
     ],
     "limitations": "Standard message caps during peak hours on frontier reasoning models",
@@ -304,7 +304,7 @@
     "model_verification_date": "October 2026",
     "features": [
       "5x usage limits vs free tier",
-      "Claude 3.5 Sonnet priority access",
+      "Claude Sonnet 5.5 priority access (with Claude 3.5 support)",
       "Artifacts live preview window",
       "Project knowledge upload (documents, code bases)",
       "Priority access during high traffic"
@@ -770,7 +770,7 @@
     "features": [
       "Real-time in-line code autocompletion",
       "Copilot Chat in VS Code and JetBrains",
-      "Multi-model switcher (Claude 3.5 Sonnet, GPT-4o, Gemini)",
+      "Multi-model switcher (Claude Sonnet 5.5, GPT-5/4o, Gemini)",
       "Pull request summary generator on GitHub.com",
       "CLI command assistant"
     ],
@@ -1615,7 +1615,7 @@
     "model_verification_date": "October 2026",
     "features": [
       "300+ Pro Searches per day with deep reasoning",
-      "Model switcher (Claude 3.5 Sonnet, GPT-4o, Sonar)",
+      "Model switcher (Claude Sonnet 5.5, GPT-5/4o, Sonar)",
       "Unlimited file uploads (PDFs, CSVs, images)",
       "Perplexity Collections with collaborative search spaces",
       "API credits and playground access"
