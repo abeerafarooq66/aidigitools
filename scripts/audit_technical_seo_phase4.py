@@ -216,3 +216,4 @@ def audit_technical_seo():
 
 if __name__ == '__main__':
     audit_technical_seo()
+
