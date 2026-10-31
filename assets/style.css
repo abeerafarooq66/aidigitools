@@ -2016,22 +2016,24 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
   color: #FFFFFF !important;
   text-decoration: none;
   padding: 1rem;
   border-radius: 12px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
   transition: all 0.2s ease;
   cursor: pointer;
-  border: none;
+  border: none !important;
   width: 100%;
 }
 
 .cart-checkout-btn:hover {
   transform: translateY(-2px);
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+  color: #FFFFFF !important;
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
 }
 

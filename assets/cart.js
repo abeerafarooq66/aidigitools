@@ -1976,12 +1976,12 @@
     if (isHeld) {
       waMsg = "Hi AIDigiTools, I am inquiring about current availability and compliance terms for " + tool.name + ". (Inquiry only; not an order confirmation).";
       if (waLinkEl) {
-        waLinkEl.textContent = "💬 Inquire on WhatsApp for Current Availability";
+        waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 WhatsApp Contact &rarr;</span>';
       }
     } else {
       waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD.";
       if (waLinkEl) {
-        waLinkEl.textContent = "⚡ Order Now via WhatsApp";
+        waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 WhatsApp Contact &rarr;</span>';
       }
     }
     if (waLinkEl) {
