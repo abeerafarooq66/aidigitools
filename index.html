@@ -122,7 +122,7 @@
   }
   </script>
 </head>
-<body class="homepage-theme">
+<body id="top" class="homepage-theme">
   <header>
     <div class="container nav-wrapper">
       <a href="index.html" class="logo" aria-label="AIDigiTools Home">
@@ -157,7 +157,7 @@
         </svg>
         <span class="logo-text-wrap">
           <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
-          <span class="tagline">SMART TOOLS • BIGGER POSSIBILITIES</span>
+          <span class="tagline">Smart Tools • Bigger Possibilities</span>
         </span>
       </a>
       <nav>
@@ -194,7 +194,7 @@
       </div>
       <div class="hero-cta-group" style="display:flex; justify-content:center; align-items:center; gap:0.75rem; flex-wrap:wrap; margin-top:1.5rem; position:relative; z-index:1;">
         <a href="#products" class="btn btn-primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem; padding:0.85rem 1.75rem; font-size:1rem; font-weight:700; box-shadow:0 4px 16px rgba(0,180,216,0.35);">
-          <span>🔍 Explore 49 AI Tools</span>
+          <span>⚡ Explore 49 AI Tools →</span>
         </a>
         <a href="#categories" class="btn btn-secondary" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem; padding:0.65rem 1.25rem; font-size:0.88rem; font-weight:600; background:#FFFFFF; border:1.5px solid #CBD5E1; color:#334155;">
           <span>📂 Browse Categories</span>
@@ -269,9 +269,9 @@
          ======================================================== -->
     <section id="directory" style="margin-top: 3.5rem;">
       <div style="text-align:center; max-width:760px; margin:0 auto 1.5rem;">
-        <span class="badge" style="background:#E0F2FE; color:#0284C7; border:1px solid #BAE6FD; font-weight:700;">⚡ Interactive Directory</span>
-        <h2 style="font-size:1.85rem; font-weight:800; letter-spacing:-0.03em; color:#0F172A; margin:0.45rem 0 0.35rem;">Search &amp; Discover AI Tools</h2>
-        <p style="font-size:0.95rem; color:#475569; margin:0;">Filter across 49 verified software profiles by technology stack, technical capability, or reference pricing.</p>
+        <span class="badge" style="background:#E0F2FE; color:#0284C7; border:1px solid #BAE6FD; font-weight:700;">⚡ Interactive Simulator</span>
+        <h2 style="font-size:1.85rem; font-weight:800; letter-spacing:-0.03em; color:#0F172A; margin:0.45rem 0 0.35rem;">Featured Software Simulator</h2>
+        <p style="font-size:0.95rem; color:#475569; margin:0;">Test live pricing, inspect domestic payment rails, and review technical specifications for top AI software.</p>
       </div>
 
       <!-- Interactive Living Console Centerpiece -->
@@ -394,10 +394,10 @@
             </div>
 
             <div class="authkit-showcase-actions">
-              <a id="mWaLink" href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20%248.00%20USD..%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
-                <span>Inquire on WhatsApp &rarr;</span>
+              <a id="mWaLink" href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20%248.00%20USD..%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-decoration: none; min-height: 44px;">
+                <span>💬 Inquire on WhatsApp &rarr;</span>
               </a>
-              <button type="button" onclick="openQuickOrderModal(document.getElementById('showcaseToolSelect').value)" class="btn-quick-order" style="width: 100%;">
+              <button type="button" onclick="openQuickOrderModal(document.getElementById('showcaseToolSelect').value)" class="btn btn-secondary" style="width: 100%; min-height: 40px; margin-top: 0.5rem;">
                 <span>🛒 Open Quick Order Drawer (1 / 3 / 12 Mo)</span>
               </button>
             </div>
@@ -409,9 +409,9 @@
       <!-- Live Search & Category Filter Controls -->
       <!-- Live Search & Filter Bar -->
     <section style="margin-top: 3.5rem;">
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 2rem; max-width: 860px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
-        <h2 style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary);">Find Your AI Software Tool</h2>
-        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across 49 verified subscriptions or filter by specialized creative and development workflows.</p>
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 2rem; max-width: 860px; margin: 0 auto; text-align: left; box-shadow: var(--shadow-sm);">
+        <h2 style="font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text-primary);">Search &amp; Filter Full 49 Tools Directory</h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Search across all 49 verified subscriptions or filter by specialized creative, coding, and enterprise workflows.</p>
 
         <form role="search" class="search-input-wrapper" onsubmit="event.preventDefault(); applyFilters();">
           <input type="text" id="toolSearchInput" class="search-input-field" role="searchbox" aria-label="Search tools by name, technology, or capability" placeholder="Search by tool name, model, or capability (e.g. ChatGPT, Claude, Video, Python, VPN)...">
@@ -504,7 +504,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('chatgpt-plus')" aria-label="Compare ChatGPT Plus" data-slug="chatgpt-plus">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-plus')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20%248.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20ChatGPT%20Plus%20for%20Rs%202300%20PKR%20/%20%248.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/chatgpt-plus.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -532,7 +532,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('claude-pro')" aria-label="Compare Claude Pro" data-slug="claude-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Claude%20Pro%20for%20Rs%202500%20PKR%20/%20%249.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Claude%20Pro%20for%20Rs%202500%20PKR%20/%20%249.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/claude-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -560,7 +560,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('canva-pro')" aria-label="Compare Canva Pro" data-slug="canva-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('canva-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Canva%20Pro%20for%20Rs%20600%20PKR%20/%20%242.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Canva%20Pro%20for%20Rs%20600%20PKR%20/%20%242.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/canva-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -588,7 +588,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('capcut-pro')" aria-label="Compare CapCut Pro" data-slug="capcut-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('capcut-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20CapCut%20Pro%20for%20Rs%20950%20PKR%20/%20%243.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20CapCut%20Pro%20for%20Rs%20950%20PKR%20/%20%243.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/capcut-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -616,7 +616,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('midjourney')" aria-label="Compare Midjourney" data-slug="midjourney">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('midjourney', 'PLAN-MIDJ-STD-1M')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Midjourney%20v6.1%20for%20Rs%202800%20PKR%20/%20%2410.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Midjourney%20v6.1%20for%20Rs%202800%20PKR%20/%20%2410.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/midjourney.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -644,7 +644,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('cursor-pro')" aria-label="Compare Cursor Pro" data-slug="cursor-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('cursor-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Cursor%20Pro%20for%20Rs%203800%20PKR%20/%20%2414%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Cursor%20Pro%20for%20Rs%203800%20PKR%20/%20%2414%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/cursor-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -672,7 +672,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('adobe-creative-cloud')" aria-label="Compare Adobe Creative Cloud" data-slug="adobe-creative-cloud">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('adobe-creative-cloud')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Adobe%20Creative%20Cloud%20for%20Rs%201400%20PKR%20/%20%245.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Adobe%20Creative%20Cloud%20for%20Rs%201400%20PKR%20/%20%245.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/adobe-creative-cloud.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -700,7 +700,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('youtube-premium')" aria-label="Compare YouTube Premium" data-slug="youtube-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('youtube-premium')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20YouTube%20Premium%20Ad-Free%20for%20Rs%20750%20PKR%20/%20%242.80%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20YouTube%20Premium%20Ad-Free%20for%20Rs%20750%20PKR%20/%20%242.80%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/youtube-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -714,11 +714,10 @@
               <img src="assets/product-logos/netflix-premium.svg" alt="Netflix Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Premium Streaming</span>
             </div>
-            <div class="tool-status-wrap"><span class="tool-status-badge inquiry-badge">📋 Inquiry Only • Direct Orders Paused</span></div>
             <h3 class="tool-card-title">Netflix Premium</h3>
             <span class="tool-card-vendor">Netflix</span>
             <p class="tool-card-desc">4K Ultra HD video resolution, Dolby Vision, spatial audio, and simultaneous 4-screen household streaming.</p>
-            <div class="price-tag"><span class="price-amount">Rs. 1,100 PKR</span> <span class="price-period">(~$4 USD) / month</span></div>
+            <div class="price-tag"><span class="price-amount">Rs. 1,100 PKR</span> <span class="price-period">(~$4 USD) / month</span> <span class="tool-status-badge inquiry-badge" style="font-size:0.72rem; margin-left:0.4rem; padding:0.15rem 0.5rem; vertical-align:middle;">📋 Inquiry Only</span></div>
             <ul class="tool-card-checklist">
               <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
               <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
@@ -728,8 +727,8 @@
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('netflix-premium')" aria-label="Compare Netflix Premium" data-slug="netflix-premium">⚖️ Compare</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Netflix%204K%20UHD%20Premium.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Inquiry</a>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Netflix%204K%20UHD%20Premium.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Netflix%204K%20UHD%20Premium.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Contact</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Netflix%204K%20UHD%20Premium.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/netflix-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -757,7 +756,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('perplexity-pro')" aria-label="Compare Perplexity Pro" data-slug="perplexity-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('perplexity-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Perplexity%20Pro%20AI%20for%20Rs%202200%20PKR%20/%20%248%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Perplexity%20Pro%20AI%20for%20Rs%202200%20PKR%20/%20%248%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/perplexity-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -785,7 +784,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('elevenlabs-creator')" aria-label="Compare ElevenLabs Creator" data-slug="elevenlabs-creator">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('elevenlabs-creator')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20ElevenLabs%20Creator%20for%20Rs%202800%20PKR%20/%20%2410%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20ElevenLabs%20Creator%20for%20Rs%202800%20PKR%20/%20%2410%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/elevenlabs-creator.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -813,7 +812,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('github-copilot')" aria-label="Compare GitHub Copilot Pro" data-slug="github-copilot">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('github-copilot')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20GitHub%20Copilot%20Pro%20for%20Rs%201500%20PKR%20/%20%245.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20GitHub%20Copilot%20Pro%20for%20Rs%201500%20PKR%20/%20%245.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/github-copilot.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -841,7 +840,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('nordvpn')" aria-label="Compare NordVPN" data-slug="nordvpn">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('nordvpn')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20NordVPN%20Complete%20for%20Rs%20850%20PKR%20/%20%243.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20NordVPN%20Complete%20for%20Rs%20850%20PKR%20/%20%243.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/nordvpn.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -869,7 +868,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('surfshark-vpn')" aria-label="Compare Surfshark VPN" data-slug="surfshark-vpn">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('surfshark-vpn')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Surfshark%20One%20VPN%20for%20Rs%20800%20PKR%20/%20%243%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Surfshark%20One%20VPN%20for%20Rs%20800%20PKR%20/%20%243%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/surfshark-vpn.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -897,7 +896,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('deepseek-pro')" aria-label="Compare DeepSeek" data-slug="deepseek-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('deepseek-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20DeepSeek%20R1%20/%20V3%20Pro%20for%20Rs%201100%20PKR%20/%20%244%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20DeepSeek%20R1%20/%20V3%20Pro%20for%20Rs%201100%20PKR%20/%20%244%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/deepseek-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -925,7 +924,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('gemini-advanced')" aria-label="Compare Google Gemini Advanced" data-slug="gemini-advanced">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('gemini-advanced')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Google%20Gemini%20Advanced%20for%20Rs%201200%20PKR%20/%20%244.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Google%20Gemini%20Advanced%20for%20Rs%201200%20PKR%20/%20%244.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/gemini-advanced.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -953,7 +952,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('runway-gen3')" aria-label="Compare Runway Gen-3" data-slug="runway-gen3">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('runway-gen3')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Runway%20Gen-3%20Alpha%20for%20Rs%201800%20PKR%20/%20%246.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Runway%20Gen-3%20Alpha%20for%20Rs%201800%20PKR%20/%20%246.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/runway-gen3.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -981,7 +980,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('suno-ai')" aria-label="Compare Suno AI" data-slug="suno-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('suno-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Suno%20AI%20Music%20v3.5%20for%20Rs%202600%20PKR%20/%20%249.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Suno%20AI%20Music%20v3.5%20for%20Rs%202600%20PKR%20/%20%249.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/suno-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1009,7 +1008,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('jetbrains-all')" aria-label="Compare JetBrains All Products Pack" data-slug="jetbrains-all">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('jetbrains-all')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20JetBrains%20All%20Products%20Pack%20for%20Rs%202500%20PKR%20/%20%249%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20JetBrains%20All%20Products%20Pack%20for%20Rs%202500%20PKR%20/%20%249%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/jetbrains-all.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1037,7 +1036,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('notion-business')" aria-label="Compare Notion Business & AI" data-slug="notion-business">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('notion-business')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Notion%20Business%20%26%20AI%20for%20Rs%201400%20PKR%20/%20%245%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Notion%20Business%20%26%20AI%20for%20Rs%201400%20PKR%20/%20%245%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/notion-business.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1065,7 +1064,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('figma-pro')" aria-label="Compare Figma Pro" data-slug="figma-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('figma-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Figma%20Pro%20for%20Rs%201800%20PKR%20/%20%246.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Figma%20Pro%20for%20Rs%201800%20PKR%20/%20%246.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/figma-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1093,7 +1092,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('freepik-premium')" aria-label="Compare Freepik Premium" data-slug="freepik-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('freepik-premium')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Freepik%20Premium%20for%20Rs%201800%20PKR%20/%20%246.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Freepik%20Premium%20for%20Rs%201800%20PKR%20/%20%246.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/freepik-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1121,7 +1120,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('envato-elements')" aria-label="Compare Envato Elements" data-slug="envato-elements">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('envato-elements')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Envato%20Elements%20for%20Rs%202600%20PKR%20/%20%249.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Envato%20Elements%20for%20Rs%202600%20PKR%20/%20%249.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/envato-elements.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1149,7 +1148,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('replit-core')" aria-label="Compare Replit Core" data-slug="replit-core">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('replit-core')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Replit%20Core%20Cloud%20IDE%20for%20Rs%202800%20PKR%20/%20%2410%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Replit%20Core%20Cloud%20IDE%20for%20Rs%202800%20PKR%20/%20%2410%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/replit-core.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1177,7 +1176,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('grammarly-pro')" aria-label="Compare Grammarly Premium" data-slug="grammarly-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('grammarly-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Grammarly%20Premium%20for%20Rs%20750%20PKR%20/%20%242.80%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Grammarly%20Premium%20for%20Rs%20750%20PKR%20/%20%242.80%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/grammarly-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1205,7 +1204,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('quillbot-premium')" aria-label="Compare QuillBot Premium" data-slug="quillbot-premium">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('quillbot-premium')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20QuillBot%20Premium%20Suite%20for%20Rs%201600%20PKR%20/%20%246%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20QuillBot%20Premium%20Suite%20for%20Rs%201600%20PKR%20/%20%246%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/quillbot-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1219,11 +1218,10 @@
               <img src="assets/product-logos/linkedin-premium.svg" alt="LinkedIn Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Productivity & SEO</span>
             </div>
-            <div class="tool-status-wrap"><span class="tool-status-badge inquiry-badge">📋 Inquiry Only • Direct Orders Paused</span></div>
             <h3 class="tool-card-title">LinkedIn Premium</h3>
             <span class="tool-card-vendor">LinkedIn</span>
             <p class="tool-card-desc">Direct InMail messaging to recruiters, applicant insights, salary benchmarks, and 20,000+ LinkedIn Learning courses.</p>
-            <div class="price-tag"><span class="price-amount">Rs. 1,500 PKR</span> <span class="price-period">(~$5.50 USD) / month</span></div>
+            <div class="price-tag"><span class="price-amount">Rs. 1,500 PKR</span> <span class="price-period">(~$5.50 USD) / month</span> <span class="tool-status-badge inquiry-badge" style="font-size:0.72rem; margin-left:0.4rem; padding:0.15rem 0.5rem; vertical-align:middle;">📋 Inquiry Only</span></div>
             <ul class="tool-card-checklist">
               <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
               <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
@@ -1233,8 +1231,8 @@
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('linkedin-premium')" aria-label="Compare LinkedIn Premium" data-slug="linkedin-premium">⚖️ Compare</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20LinkedIn%20Premium%20Career.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Inquiry</a>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20LinkedIn%20Premium%20Career.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20LinkedIn%20Premium%20Career.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Contact</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20LinkedIn%20Premium%20Career.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/linkedin-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1262,7 +1260,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('semrush-guru')" aria-label="Compare Semrush Guru" data-slug="semrush-guru">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('semrush-guru')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Semrush%20Guru%20Platform%20for%20Rs%202500%20PKR%20/%20%249%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Semrush%20Guru%20Platform%20for%20Rs%202500%20PKR%20/%20%249%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/semrush-guru.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1290,7 +1288,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('kling-ai')" aria-label="Compare Kling AI Pro" data-slug="kling-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('kling-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Kling%20AI%20Pro%20for%20Rs%20700%20PKR%20/%20%242.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Kling%20AI%20Pro%20for%20Rs%20700%20PKR%20/%20%242.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/kling-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1318,7 +1316,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('minimax-ai')" aria-label="Compare Hailuo AI (MiniMax)" data-slug="minimax-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('minimax-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20MiniMax%20Hailuo%20AI%20Video%20for%20Rs%201600%20PKR%20/%20%246%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20MiniMax%20Hailuo%20AI%20Video%20for%20Rs%201600%20PKR%20/%20%246%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/minimax-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1346,7 +1344,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('udio-ai')" aria-label="Compare Udio AI" data-slug="udio-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('udio-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Udio%20AI%20Music%20Lab%20for%20Rs%202800%20PKR%20/%20%2410%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Udio%20AI%20Music%20Lab%20for%20Rs%202800%20PKR%20/%20%2410%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/udio-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1374,7 +1372,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('google-veo')" aria-label="Compare Google Veo 2" data-slug="google-veo">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('google-veo')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Google%20Veo%202%20/%20Video%20FX%20for%20Rs%201900%20PKR%20/%20%247%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Google%20Veo%202%20/%20Video%20FX%20for%20Rs%201900%20PKR%20/%20%247%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/google-veo.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1402,7 +1400,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('leonardo-ai')" aria-label="Compare Leonardo.Ai" data-slug="leonardo-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('leonardo-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Leonardo%20AI%20Visual%20Studio%20for%20Rs%201300%20PKR%20/%20%245%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Leonardo%20AI%20Visual%20Studio%20for%20Rs%201300%20PKR%20/%20%245%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/leonardo-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1430,7 +1428,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('grok-ai')" aria-label="Compare Grok" data-slug="grok-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('grok-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Grok%202%20/%20xAI%20SuperGrok%20for%20Rs%201100%20PKR%20/%20%244%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Grok%202%20/%20xAI%20SuperGrok%20for%20Rs%201100%20PKR%20/%20%244%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/grok-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1458,7 +1456,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('chatgpt-codex')" aria-label="Compare OpenAI API" data-slug="chatgpt-codex">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('chatgpt-codex')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20OpenAI%20API%20%26%20Codex%20for%20Rs%20600%20PKR%20/%20%242.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20OpenAI%20API%20%26%20Codex%20for%20Rs%20600%20PKR%20/%20%242.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/chatgpt-codex.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1486,7 +1484,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('claude-artifacts')" aria-label="Compare Claude Artifacts" data-slug="claude-artifacts">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('claude-artifacts')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Claude%20Artifacts%20Pro%20for%20Rs%201200%20PKR%20/%20%244.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Claude%20Artifacts%20Pro%20for%20Rs%201200%20PKR%20/%20%244.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/claude-artifacts.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1514,7 +1512,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('heygen-ai')" aria-label="Compare HeyGen" data-slug="heygen-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('heygen-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20HeyGen%20AI%20Video%20Avatar%20for%20Rs%204200%20PKR%20/%20%2415.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20HeyGen%20AI%20Video%20Avatar%20for%20Rs%204200%20PKR%20/%20%2415.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/heygen-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1542,7 +1540,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('gamma-app')" aria-label="Compare Gamma" data-slug="gamma-app">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('gamma-app')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Gamma%20App%20AI%20Presentations%20for%20Rs%201600%20PKR%20/%20%245.90%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Gamma%20App%20AI%20Presentations%20for%20Rs%201600%20PKR%20/%20%245.90%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/gamma-app.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1570,7 +1568,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('n8n-automation')" aria-label="Compare n8n Workflow Automation" data-slug="n8n-automation">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('n8n-automation')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20n8n%20Workflow%20Automation%20for%20Rs%206500%20PKR%20/%20%2423.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20n8n%20Workflow%20Automation%20for%20Rs%206500%20PKR%20/%20%2423.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/n8n-automation.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1598,7 +1596,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('vidiq-boost')" aria-label="Compare vidIQ Boost" data-slug="vidiq-boost">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('vidiq-boost')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20vidIQ%20Boost%20YouTube%20SEO%20for%20Rs%202100%20PKR%20/%20%247.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20vidIQ%20Boost%20YouTube%20SEO%20for%20Rs%202100%20PKR%20/%20%247.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/vidiq-boost.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1612,11 +1610,10 @@
               <img src="assets/product-logos/coursera-plus.svg" alt="Coursera Plus Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Coding & Skills</span>
             </div>
-            <div class="tool-status-wrap"><span class="tool-status-badge inquiry-badge">📋 Inquiry Only • Direct Orders Paused</span></div>
             <h3 class="tool-card-title">Coursera Plus</h3>
             <span class="tool-card-vendor">Coursera</span>
             <p class="tool-card-desc">Unlimited access to 7,000+ courses and Specializations — Excludes select degree programs and premium masterclasses</p>
-            <div class="price-tag"><span class="price-amount">Rs. 2,200 PKR</span> <span class="price-period">(~$8.00 USD)</span></div>
+            <div class="price-tag"><span class="price-amount">Rs. 2,200 PKR</span> <span class="price-period">(~$8.00 USD)</span> <span class="tool-status-badge inquiry-badge" style="font-size:0.72rem; margin-left:0.4rem; padding:0.15rem 0.5rem; vertical-align:middle;">📋 Inquiry Only</span></div>
             <ul class="tool-card-checklist">
               <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
               <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
@@ -1626,8 +1623,8 @@
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('coursera-plus')" aria-label="Compare Coursera Plus" data-slug="coursera-plus">⚖️ Compare</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Coursera%20Plus%20Learning.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Inquiry</a>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Coursera%20Plus%20Learning.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Coursera%20Plus%20Learning.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Contact</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Coursera%20Plus%20Learning.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/coursera-plus.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1655,7 +1652,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('google-ai-ultra')" aria-label="Compare Google One AI Premium" data-slug="google-ai-ultra">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('google-ai-ultra')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Google%20AI%20Ultra%20Plan%20%2820X%29%20for%20Rs%204500%20PKR%20/%20%2416.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Google%20AI%20Ultra%20Plan%20%2820X%29%20for%20Rs%204500%20PKR%20/%20%2416.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/google-ai-ultra.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1683,7 +1680,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('lovable-ai')" aria-label="Compare Lovable" data-slug="lovable-ai">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('lovable-ai')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Lovable%20AI%20Full-Stack%20Builder%20for%20Rs%201500%20PKR%20/%20%245.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Lovable%20AI%20Full-Stack%20Builder%20for%20Rs%201500%20PKR%20/%20%245.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/lovable-ai.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1697,11 +1694,10 @@
               <img src="assets/product-logos/spotify.svg" alt="Spotify Premium Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Streaming & Entertainment</span>
             </div>
-            <div class="tool-status-wrap"><span class="tool-status-badge inquiry-badge">📋 Inquiry Only • Direct Orders Paused</span></div>
             <h3 class="tool-card-title">Spotify Premium</h3>
             <span class="tool-card-vendor">Spotify</span>
             <p class="tool-card-desc">100% Ad-free uninterrupted music playback — Personal account activation; non-commercial playback</p>
-            <div class="price-tag"><span class="price-amount">Rs. 850 PKR</span> <span class="price-period">(~$3.20 USD)</span></div>
+            <div class="price-tag"><span class="price-amount">Rs. 850 PKR</span> <span class="price-period">(~$3.20 USD)</span> <span class="tool-status-badge inquiry-badge" style="font-size:0.72rem; margin-left:0.4rem; padding:0.15rem 0.5rem; vertical-align:middle;">📋 Inquiry Only</span></div>
             <ul class="tool-card-checklist">
               <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
               <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
@@ -1711,8 +1707,8 @@
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('spotify-premium')" aria-label="Compare Spotify Premium" data-slug="spotify-premium">⚖️ Compare</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Spotify%20Premium%20Ad-Free.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Inquiry</a>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Spotify%20Premium%20Ad-Free.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Spotify%20Premium%20Ad-Free.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Contact</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Spotify%20Premium%20Ad-Free.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/spotify-premium.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1740,7 +1736,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('microsoft-office-365')" aria-label="Compare Microsoft 365" data-slug="microsoft-office-365">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('microsoft-office-365')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Microsoft%20365%20Pro%20%26%20Cloud%20for%20Rs%201950%20PKR%20/%20%247.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Microsoft%20365%20Pro%20%26%20Cloud%20for%20Rs%201950%20PKR%20/%20%247.00%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/microsoft-office-365.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1768,7 +1764,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('windows-11-pro')" aria-label="Compare Windows 11 Pro" data-slug="windows-11-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('windows-11-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Windows%2011%20Pro%20Retail%20License%20for%20Rs%201850%20PKR%20/%20%246.80%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Windows%2011%20Pro%20Retail%20License%20for%20Rs%201850%20PKR%20/%20%246.80%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/windows-11-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1796,7 +1792,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('prime-video')" aria-label="Compare Amazon Prime Video" data-slug="prime-video">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('prime-video')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Amazon%20Prime%20Video%20UHD%20for%20Rs%20650%20PKR%20/%20%242.40%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20Amazon%20Prime%20Video%20UHD%20for%20Rs%20650%20PKR%20/%20%242.40%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/prime-video.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1824,7 +1820,7 @@
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('tradingview-pro')" aria-label="Compare TradingView Pro" data-slug="tradingview-pro">⚖️ Compare</button>
               <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('tradingview-pro')">⚡ Quick Order</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20TradingView%20Premium%20Charts%20for%20Rs%203200%20PKR%20/%20%2411.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20availability%20for%20TradingView%20Premium%20Charts%20for%20Rs%203200%20PKR%20/%20%2411.50%20USD.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/tradingview-pro.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -1838,11 +1834,10 @@
               <img src="assets/product-logos/turnitin-student.svg" alt="Turnitin Official Logo" width="46" height="46" class="tool-brand-logo" loading="lazy" decoding="async">
               <span class="tool-cat-badge">Coding & Productivity</span>
             </div>
-            <div class="tool-status-wrap"><span class="tool-status-badge inquiry-badge">📋 Inquiry Only • Direct Orders Paused</span></div>
             <h3 class="tool-card-title">Turnitin</h3>
             <span class="tool-card-vendor">Turnitin</span>
             <p class="tool-card-desc">Direct similarity index generation with non-repository option — Non-repository class enrollment; up to 30 submissions/month</p>
-            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10.00 USD)</span></div>
+            <div class="price-tag"><span class="price-amount">Rs. 2,800 PKR</span> <span class="price-period">(~$10.00 USD)</span> <span class="tool-status-badge inquiry-badge" style="font-size:0.72rem; margin-left:0.4rem; padding:0.15rem 0.5rem; vertical-align:middle;">📋 Inquiry Only</span></div>
             <ul class="tool-card-checklist">
               <li><span class="check-icon">✓</span> 15-Minute Target WhatsApp Delivery</li>
               <li><span class="check-icon">✓</span> 30-Day Replacement Warranty</li>
@@ -1852,8 +1847,8 @@
           <div class="tool-card-actions">
             <div class="tool-card-cta-row">
               <button type="button" class="btn-tool-compare" onclick="toggleCompare('turnitin-student')" aria-label="Compare Turnitin" data-slug="turnitin-student">⚖️ Compare</button>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Turnitin%20Originality%20Checker.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Inquiry</a>
-              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Turnitin%20Originality%20Checker.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Turnitin%20Originality%20Checker.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="background:rgba(245,158,11,0.15); color:#d97706; border:1px solid rgba(245,158,11,0.4); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">💬 WhatsApp Contact</a>
+              <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Turnitin%20Originality%20Checker.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle">WhatsApp Contact</a>
             </div>
             <a href="tools/turnitin-student.html" class="tool-specs-link">View Full Specs &amp; Benchmark Data →</a>
           </div>
@@ -2309,7 +2304,7 @@
             </svg>
             <span class="logo-text-wrap">
               <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
-              <span class="tagline">SMART TOOLS • BIGGER POSSIBILITIES</span>
+              <span class="tagline">Smart Tools • Bigger Possibilities</span>
             </span>
           </a>
           <p style="font-size:0.88rem; color:var(--text-secondary); margin-top:0.75rem; line-height:1.55;">
@@ -2504,5 +2499,13 @@
       </div>
     </div>
   </div>
+
+  <!-- Persistent Back to Top Floating Button (Issue 2) -->
+  <a href="#top" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top of page" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+    <span>Top</span>
+  </a>
 </body>
 </html>
