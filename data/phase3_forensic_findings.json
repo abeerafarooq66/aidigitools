@@ -1,0 +1,43 @@
+{
+  "instant_guarantee_claims": [],
+  "support_24_7_claims": [],
+  "refund_vs_replacement_discrepancies": [],
+  "partner_or_authorized_claims": [
+    {
+      "file": "affiliate-disclosure.html",
+      "match": "authorized distributor",
+      "snippet": "g, AIDigiTools is not sponsored, endorsed, certified, or an authorized distributor of these upstream software companies.       </p>     </sect"
+    }
+  ],
+  "lifetime_claims": [
+    {
+      "file": "tools/envato-elements.html",
+      "match": "Lifetime",
+      "snippet": "      <strong>Terms &amp; SLA:</strong> Lifetime commercial license for downloaded items"
+    }
+  ],
+  "stale_price_references": [],
+  "schema_discrepancies": [],
+  "held_products_anomalies": [
+    {
+      "file": "tools/coursera-plus.html",
+      "issue": "Found openQuickOrderModal on held product detail page"
+    },
+    {
+      "file": "tools/linkedin-premium.html",
+      "issue": "Found openQuickOrderModal on held product detail page"
+    },
+    {
+      "file": "tools/netflix-premium.html",
+      "issue": "Found openQuickOrderModal on held product detail page"
+    },
+    {
+      "file": "tools/spotify-premium.html",
+      "issue": "Found openQuickOrderModal on held product detail page"
+    },
+    {
+      "file": "tools/turnitin-student.html",
+      "issue": "Found openQuickOrderModal on held product detail page"
+    }
+  ]
+}
