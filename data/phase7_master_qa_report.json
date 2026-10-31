@@ -17,7 +17,7 @@
   },
   "geo_aeo_results": {},
   "ui_ux_results": {
-    "total_links_audited": 3405,
+    "total_links_audited": 3408,
     "broken_whatsapp_links": 0,
     "dead_anchors": 0,
     "skip_links_count": 66,
@@ -25,7 +25,7 @@
   },
   "performance_results": {
     "css_size_kb": 93.58,
-    "js_size_kb": 97.51
+    "js_size_kb": 99.45
   },
   "security_results": {
     "violations_count": 0
