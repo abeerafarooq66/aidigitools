@@ -1045,99 +1045,9 @@ h3 {
 }
 
 /* ========================================================
-   BUTTONS & ACTION CALLOUTS
+   BUTTONS & ACTION CALLOUTS (HIERARCHY RESTORED)
    ======================================================== */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: var(--brand-gradient);
-  color: #FFFFFF !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.75rem 1.4rem;
-  border-radius: 10px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.28);
-  transition: all 0.2s ease;
-}
-
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: #FFFFFF;
-  color: var(--text-primary) !important;
-  font-weight: 600;
-  font-size: var(--text-sm, 0.875rem);
-  padding: 0.65rem 1.25rem;
-  border-radius: var(--radius-md, 10px);
-  border: 1.5px solid var(--border-color, #CBD5E1);
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
-  background: var(--bg-card-secondary, #F1F5F9);
-  border-color: var(--color-text-accent, #0369A1);
-  color: var(--color-accent-blue, #4361EE) !important;
-  transform: translateY(-1px);
-}
-
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: transparent;
-  color: var(--text-secondary);
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 0.85rem;
-  font-size: var(--text-sm, 0.875rem);
-  font-weight: 600;
-  transition: all 0.15s ease;
-}
-
-.btn-ghost:hover {
-  color: var(--color-text-accent, #0369A1);
-  background: rgba(0, 180, 216, 0.08);
-}
-
-.btn-primary:hover {
-  transform: translateY(-1.5px);
-  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.38);
-  background: var(--brand-gradient-hover);
-}
-
-.btn-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: #10B981;
-  color: #FFFFFF !important;
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.65rem 1.15rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
-}
-
-.btn-whatsapp:hover {
-  background: #059669;
-  transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-}
-
+/* Base button: declared FIRST so modifier classes take precedence */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1152,12 +1062,118 @@ h3 {
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface);
   color: var(--text-secondary);
+  cursor: pointer;
 }
 
 .btn:hover {
   border-color: var(--color-text-accent, #0369A1);
   color: var(--text-primary);
   background: var(--bg-subtle);
+}
+
+/* Primary Modifier: Vibrant Brand Gradient with Crisp White Text */
+.btn-primary,
+.btn.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--brand-gradient) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none !important;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.28);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.38);
+  background: var(--brand-gradient-hover) !important;
+  color: #FFFFFF !important;
+}
+
+/* Secondary Modifier: Clean Crisp White Surface with Dark Slate Text */
+.btn-secondary,
+.btn.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #FFFFFF !important;
+  color: var(--text-primary, #0F172A) !important;
+  font-weight: 600;
+  font-size: var(--text-sm, 0.875rem);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md, 10px);
+  border: 1.5px solid var(--border-color, #CBD5E1) !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn.btn-secondary:hover {
+  background: var(--bg-card-secondary, #F1F5F9) !important;
+  border-color: var(--color-text-accent, #0369A1) !important;
+  color: var(--color-accent-blue, #4361EE) !important;
+  transform: translateY(-1px);
+}
+
+/* WhatsApp Modifier: Emerald Green with Crisp White Text */
+.btn-whatsapp,
+.btn.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #10B981 !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 8px;
+  border: none !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+}
+
+.btn-whatsapp:hover,
+.btn.btn-whatsapp:hover {
+  background: #059669 !important;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  color: #FFFFFF !important;
+}
+
+/* Ghost Modifier: Minimalist Action */
+.btn-ghost,
+.btn.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent !important;
+  color: var(--text-secondary, #334155) !important;
+  border: none !important;
+  cursor: pointer;
+  padding: 0.5rem 0.85rem;
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.btn-ghost:hover,
+.btn.btn-ghost:hover {
+  color: var(--color-text-accent, #0369A1) !important;
+  background: rgba(0, 180, 216, 0.08) !important;
 }
 
 /* ========================================================
@@ -3828,9 +3844,17 @@ textarea:focus-visible {
 }
 
 .hero-cta-group .btn-primary {
+  background: var(--brand-gradient) !important;
+  color: #FFFFFF !important;
+  border: none !important;
   padding: 0.75rem 1.6rem;
   font-weight: 700;
   box-shadow: 0 4px 16px rgba(0, 180, 216, 0.35);
+}
+
+.hero-cta-group .btn-primary:hover {
+  background: var(--brand-gradient-hover) !important;
+  color: #FFFFFF !important;
 }
 
 

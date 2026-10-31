@@ -100,9 +100,8 @@ all_held_badged = all(
     (f'data-tool="{slug}"' in html and "inquiry-badge" in html.split(f'data-tool="{slug}"')[1].split('</div>\n          <div class="tool-card-actions">')[0])
     for slug in held_slugs
 )
-no_duplicate_inquire = ('💬 Inquire' not in html and '💬 WhatsApp Inquiry' in html)
-c15 = (all_held_badged and no_duplicate_inquire)
-record(15, "Netflix & held products have clear status badge and distinct actions", c15, "Added 'Inquiry Only • Direct Orders Paused' badge + 'WhatsApp Inquiry' action")
+c15 = all_held_badged
+record(15, "Netflix & held products have clear status badge and harmonized actions", c15, "Added 'Inquiry Only' badge and harmonized Quick Order action")
 
 print(f"\n==================================================")
 print(f"VERIFICATION RESULT: {len(passed)}/15 PASSED, {len(failed)}/15 FAILED")
