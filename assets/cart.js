@@ -1924,7 +1924,7 @@
   var HELD_PRODUCTS = ["turnitin-student", "linkedin-premium", "netflix-premium", "spotify-premium", "coursera-plus", "claude-artifacts", "deepseek-pro"];
   var currentTool = TOOLS_DATA["chatgpt-plus"];
   var currentPlan = currentTool && currentTool.plans && currentTool.plans.length > 0 ? currentTool.plans[0] : null;
-  var currentPaymentRail = "EasyPaisa";
+  var currentPaymentRail = "SadaPay";
 
   // Check prefix for assets (subfolder vs root)
   function getPathPrefix() {
@@ -1976,7 +1976,7 @@
     if (isHeld) {
       waMsg = "Hi AIDigiTools, I am inquiring about current availability and compliance terms for " + tool.name + ". (Inquiry only; not an order confirmation).";
     } else {
-      waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD.";
+      waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD via " + currentPaymentRail + ". Please confirm availability and share payment details.";
     }
     if (waLinkEl) {
       waLinkEl.style.setProperty('background', '#10B981', 'important');
@@ -2133,7 +2133,7 @@
     }
 
     renderDrawerPlans();
-    window.selectCartRail('EasyPaisa');
+    window.selectCartRail('SadaPay');
 
     var drawer = document.getElementById('cartDrawer');
     var backdrop = document.getElementById('cartBackdrop');
@@ -2193,9 +2193,9 @@
         checkoutBtn.textContent = "💬 Inquire on WhatsApp for Current Availability";
       }
     } else {
-      waMsg = "Hi AIDigiTools! I want to order " + currentTool.name + " (" + planTitle + " - " + duration + ") for Rs. " + pricePkr.toLocaleString() + " PKR (~$" + priceUsd.toFixed(2) + " USD) via " + currentPaymentRail + ". Please share payment details and 15m delivery activation.";
+      waMsg = "Hi AIDigiTools! I want to order " + currentTool.name + " (" + planTitle + " - " + duration + ") for Rs. " + pricePkr.toLocaleString() + " PKR (~$" + priceUsd.toFixed(2) + " USD). I prefer paying via " + currentPaymentRail + ". Please confirm availability and share payment details.";
       if (checkoutBtn) {
-        checkoutBtn.textContent = "⚡ Complete Order on WhatsApp";
+        checkoutBtn.textContent = "⚡ Continue to WhatsApp to Order";
       }
     }
 

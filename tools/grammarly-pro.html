@@ -65,7 +65,7 @@
       "refundType": "https://schema.org/ExchangeRefund",
       "merchantReturnLink": "https://aidigitools.tech/policies.html#refunds"
     },
-    "description": "Direct paid orders are currently paused pending supply authorization. WhatsApp desk is inquiry-only."
+    "description": "Paid orders accepted via WhatsApp with manual payment confirmation (SadaPay, NayaPay, EasyPaisa)."
   }
 }
   </script>
@@ -215,8 +215,8 @@
       </nav>
 
       <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
-        <span class="badge" style="background:#fef3c7; color:#92400e;">Orders On Hold</span>
-        <span class="badge">Inquiry Only</span>
+        <span class="badge" style="background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0;">🟢 Orders Accepted</span>
+        <span class="badge">WhatsApp Manual Payment</span>
         <span class="badge">30-Day Replacement Policy</span>
       </div>
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
@@ -226,26 +226,28 @@
       <h1>Grammarly Premium Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">Grammarly Premium provides comprehensive real-time grammar correction, vocabulary enhancement, tone adjustments, full-sentence rewrites, and plagiarism detection across all desktop, web, and mobile applications. AIDigiTools delivers genuine private accounts in Pakistan with instant PKR settlement, 15-minute delivery, and a 30-day replacement warranty.</p>
       <div class="price-tag">Rs. 750 PKR <span class="period">(~$2.80 USD) / month</span></div>
-      <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20Grammarly%20Pro" target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center; display:block; padding:0.75rem 1rem; border-radius:8px; font-weight:600; text-decoration:none;">
-            💬 Inquire on WhatsApp for Current Availability
-          </a>
-          <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.4rem; line-height:1.35; margin-bottom:0;">
-            Inquiries are for compliance &amp; stock verification only. An inquiry is not an order confirmation.
-          </p>
-      <a href="#compare-plans" class="btn-secondary" style="margin-left:0.6rem; display:inline-flex; align-items:center; gap:0.4rem; padding:0.85rem 1.4rem; border-radius:12px; font-weight:700; text-decoration:none; background:var(--bg-card); color:var(--text-primary); border:1.5px solid var(--border-color); vertical-align:middle;">Compare 2 Plans ↓</a>
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin:1rem 0; align-items:center;">
+        <button type="button" onclick="openQuickOrderModal('grammarly-pro')" class="btn btn-primary" style="padding:0.75rem 1.5rem; font-weight:700; border:none; cursor:pointer; border-radius:8px; font-size:1rem; display:inline-flex; align-items:center; gap:0.5rem;">
+          <span>⚡ Quick Order via WhatsApp →</span>
+        </button>
+        <a href="#compare-plans" class="btn-secondary" style="margin-left:0.6rem; display:inline-flex; align-items:center; gap:0.4rem; padding:0.85rem 1.4rem; border-radius:12px; font-weight:700; text-decoration:none; background:var(--bg-card); color:var(--text-primary); border:1.5px solid var(--border-color); vertical-align:middle;">Compare 2 Plans ↓</a>
+      </div>
+      <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem; line-height:1.4;">
+        Manual payment via SadaPay, NayaPay &amp; EasyPaisa. Delivered via WhatsApp within 15–30 min (10:00 AM – 11:00 PM PKT).
+      </p>
     </section>
 <!-- Canonical Plan Comparison Section -->
-        <!-- Direct Orders Currently On Hold Banner -->
-    <div class="card" style="border:1px solid #f59e0b; background:rgba(245, 158, 11, 0.08); padding:1.25rem 1.5rem; border-radius:12px; margin-bottom:1.75rem;">
+        <!-- Manual WhatsApp Order & Payment Flow Notice -->
+    <div class="card" style="border:1px solid #10b981; background:rgba(16, 185, 129, 0.06); padding:1.25rem 1.5rem; border-radius:12px; margin-bottom:1.75rem;">
       <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
-        <span style="font-size:1.2rem;">⚠️</span>
-        <strong style="color:var(--text-primary); font-size:1.05rem;">Direct Orders Currently On Hold</strong>
+        <span style="font-size:1.2rem;">🟢</span>
+        <strong style="color:var(--text-primary); font-size:1.05rem;">Manual WhatsApp Order &amp; Payment Flow</strong>
       </div>
       <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin:0 0 0.5rem 0;">
-        Direct automated checkout and subscription fulfillment are currently paused for this service pending verification of secondary licensing and vendor distribution terms.
+        Paid orders accepted via WhatsApp with manual payment confirmation. Choose a plan below, continue to WhatsApp, confirm stock and price, and pay securely via SadaPay, NayaPay, or EasyPaisa.
       </p>
       <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">
-        <strong>Notice:</strong> Inquiries submitted via WhatsApp are for workflow consultation and licensing guidance only and do not guarantee availability or authorize a sale.
+        <strong>Fulfillment SLA:</strong> Digital credentials delivered within 15–30 minutes during operating hours (10:00 AM – 11:00 PM PKT / UTC+5) backed by our 30-day replacement warranty.
       </p>
     </div>
 
@@ -276,12 +278,12 @@
         <div class="plan-terms-note">
           <strong>Terms &amp; SLA:</strong> Personal user activation
         </div>
-        <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20Premium%20%281%20Month%29%20for%20Grammarly%20Pro.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center; display:block; padding:0.75rem 1rem; border-radius:8px; font-weight:600; text-decoration:none;">
-              💬 Inquire on WhatsApp for Current Availability
-            </a>
-            <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.4rem; line-height:1.35; margin-bottom:0;">
-              Inquiries are for compliance &amp; stock verification only. An inquiry is not an order confirmation.
-            </p>
+        <button type="button" onclick="openQuickOrderModal('grammarly-pro', 'PLAN-GRAMMARLY-1M')" class="btn btn-primary" style="width:100%; text-align:center; display:block; padding:0.75rem 1rem; border-radius:8px; font-weight:700; border:none; cursor:pointer; font-size:0.95rem;">
+          ⚡ Order This Plan via WhatsApp
+        </button>
+        <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.4rem; line-height:1.35; margin-bottom:0;">
+          Manual payment via SadaPay, NayaPay &amp; EasyPaisa. 15–30m delivery SLA.
+        </p>
       </div>
       <div class="plan-card" id="plan-PLAN-GRAMMARLY-12M">
         <div class="plan-badge-top">Save 50%</div>
@@ -305,12 +307,12 @@
         <div class="plan-terms-note">
           <strong>Terms &amp; SLA:</strong> Annual license
         </div>
-        <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%2C%20I%20am%20inquiring%20about%20Premium%20Annual%20%2812%20Months%29%20for%20Grammarly%20Pro.%20%28Inquiry%20only%3B%20not%20an%20order%20confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center; display:block; padding:0.75rem 1rem; border-radius:8px; font-weight:600; text-decoration:none;">
-              💬 Inquire on WhatsApp for Current Availability
-            </a>
-            <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.4rem; line-height:1.35; margin-bottom:0;">
-              Inquiries are for compliance &amp; stock verification only. An inquiry is not an order confirmation.
-            </p>
+        <button type="button" onclick="openQuickOrderModal('grammarly-pro', 'PLAN-GRAMMARLY-12M')" class="btn btn-primary" style="width:100%; text-align:center; display:block; padding:0.75rem 1rem; border-radius:8px; font-weight:700; border:none; cursor:pointer; font-size:0.95rem;">
+          ⚡ Order This Plan via WhatsApp
+        </button>
+        <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.4rem; line-height:1.35; margin-bottom:0;">
+          Manual payment via SadaPay, NayaPay &amp; EasyPaisa. 15–30m delivery SLA.
+        </p>
       </div>
       </div>
     </section>
@@ -584,17 +586,14 @@
       <div>
         <div class="cart-section-title">Select Payment Method:</div>
         <div class="payment-rails-selector">
-          <div class="rail-option active" data-rail="EasyPaisa" onclick="selectCartRail('EasyPaisa')">
-            <span>🟢</span><span>EasyPaisa</span>
-          </div>
-          <div class="rail-option" data-rail="JazzCash" onclick="selectCartRail('JazzCash')">
-            <span>🔴</span><span>JazzCash</span>
-          </div>
-          <div class="rail-option" data-rail="SadaPay" onclick="selectCartRail('SadaPay')">
+          <div class="rail-option active" data-rail="SadaPay" onclick="selectCartRail('SadaPay')">
             <span>🟠</span><span>SadaPay</span>
           </div>
-          <div class="rail-option" data-rail="Wise / Crypto" onclick="selectCartRail('Wise / Crypto')">
-            <span>🌐</span><span>Wise / Crypto</span>
+          <div class="rail-option" data-rail="NayaPay" onclick="selectCartRail('NayaPay')">
+            <span>🔵</span><span>NayaPay</span>
+          </div>
+          <div class="rail-option" data-rail="EasyPaisa" onclick="selectCartRail('EasyPaisa')">
+            <span>🟢</span><span>EasyPaisa</span>
           </div>
         </div>
       </div>
@@ -620,13 +619,13 @@
 
       <!-- Delivery & Warranty Target Box -->
       <div class="cart-sla-box">
-        <div><strong>⚡ 15-Minute Delivery Target:</strong> Credentials delivered directly to your WhatsApp after payment confirmation.</div>
-        <div style="margin-top:0.35rem;"><strong>🛡️ 30-Day Replacement Warranty:</strong> Account replacement provided if access is disrupted during the 30-day term. WhatsApp support is available with variable response times throughout the day.</div>
+        <div><strong>⚡ 15–30 Min Delivery:</strong> Delivered via WhatsApp during operating hours (10:00 AM – 11:00 PM PKT / UTC+5) after payment confirmation.</div>
+        <div style="margin-top:0.35rem;"><strong>🛡️ 30-Day Replacement Warranty:</strong> Covers subscription downtime, access loss, or account lockouts during the 30-day term.</div>
       </div>
 
       <!-- Checkout CTA -->
       <a id="drawerCheckoutBtn" href="https://wa.me/923326861112" target="_blank" rel="noopener noreferrer" class="cart-checkout-btn">
-        <span>Proceed to WhatsApp Checkout &rarr;</span>
+        <span>Proceed to WhatsApp Order &rarr;</span>
       </a>
       <div style="text-align:center; font-size:0.75rem; color:var(--text-muted);">
         Encrypted direct communication with official AIDigiTools Concierge (03326861112)

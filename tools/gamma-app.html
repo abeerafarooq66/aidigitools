@@ -65,7 +65,7 @@
       "refundType": "https://schema.org/ExchangeRefund",
       "merchantReturnLink": "https://aidigitools.tech/policies.html#refunds"
     },
-    "description": "Direct paid orders are currently paused pending supply authorization. WhatsApp desk is inquiry-only."
+    "description": "Paid orders accepted via WhatsApp with manual payment confirmation (SadaPay, NayaPay, EasyPaisa)."
   }
 }
   </script>
@@ -267,8 +267,8 @@
         <span class="badge">30-Day Replacement Warranty</span>
       </div>
             <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
-        <span class="badge" style="background:#fef3c7; color:#92400e;">Orders On Hold</span>
-        <span class="badge">Inquiry Only</span>
+        <span class="badge" style="background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0;">🟢 Orders Accepted</span>
+        <span class="badge">WhatsApp Manual Payment</span>
         <span class="badge">30-Day Replacement Policy</span>
       </div>
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
@@ -276,23 +276,23 @@
       </div>
       <h1>Gamma Pro Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer" style="font-size:1.05rem; line-height:1.6; color:var(--text-secondary); max-width:850px;">
-        Gamma App is an AI-powered presentation and document generator that transforms text prompts into formatted slide decks, interactive webpages, and executive summaries. Direct paid orders are currently paused pending supply authorization. Users can contact our WhatsApp desk (+92 332 6861112) for workflow advisory, licensing guidance, and stock inquiries. Inquiries do not guarantee availability or authorize a sale.
+        Gamma App is an AI-powered presentation and document generator that transforms text prompts into formatted slide decks, interactive webpages, and executive summaries. Paid orders accepted via WhatsApp with manual payment confirmation (SadaPay, NayaPay, EasyPaisa). Credentials delivered within 15–30 minutes during operating hours with a 30-day replacement warranty.
       </p>
     </section>
 
     <!-- Pricing & Plans Section -->
     <section style="margin-top:2rem;">
-          <!-- Direct Orders Currently On Hold Banner -->
-    <div class="card" style="border:1px solid #f59e0b; background:rgba(245, 158, 11, 0.08); padding:1.25rem 1.5rem; border-radius:12px; margin-bottom:1.75rem;">
+          <!-- Manual WhatsApp Order & Payment Flow Notice -->
+    <div class="card" style="border:1px solid #10b981; background:rgba(16, 185, 129, 0.06); padding:1.25rem 1.5rem; border-radius:12px; margin-bottom:1.75rem;">
       <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
-        <span style="font-size:1.2rem;">⚠️</span>
-        <strong style="color:var(--text-primary); font-size:1.05rem;">Direct Orders Currently On Hold</strong>
+        <span style="font-size:1.2rem;">🟢</span>
+        <strong style="color:var(--text-primary); font-size:1.05rem;">Manual WhatsApp Order &amp; Payment Flow</strong>
       </div>
       <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6; margin:0 0 0.5rem 0;">
-        Direct automated checkout and subscription fulfillment are currently paused for this service pending verification of secondary licensing and vendor distribution terms.
+        Paid orders accepted via WhatsApp with manual payment confirmation. Choose a plan below, continue to WhatsApp, confirm stock and price, and pay securely via SadaPay, NayaPay, or EasyPaisa.
       </p>
       <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5; margin:0;">
-        <strong>Notice:</strong> Inquiries submitted via WhatsApp are for stock and licensing inquiry only and do not constitute an order confirmation or binding sale.
+        <strong>Fulfillment SLA:</strong> Digital credentials delivered within 15–30 minutes during operating hours (10:00 AM – 11:00 PM PKT / UTC+5) backed by our 30-day replacement warranty.
       </p>
     </div>
 
@@ -321,9 +321,9 @@
             <button type="button" class="btn-quick-order" onclick="openQuickOrderModal('gamma-app')" style="width:100%;">
               ⚡ Quick Order (Pro Plan (1 Month))
             </button>
-            <a href="https://wa.me/923326861112?text=Hi+AIDigiTools%2C+I+am+inquiring+about+availability+for+Gamma+App+AI+Presentations+%28Pro+Plan+%281+Month%29%29.+%28Inquiry+only%3B+not+an+order+confirmation%29." target="_blank" rel="noopener noreferrer" class="btn-wa-subtle" style="width:100%; text-align:center;">
-              WhatsApp Checkout
-            </a>
+            <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:0.25rem; line-height:1.35; margin-bottom:0;">
+              Manual payment via SadaPay, NayaPay &amp; EasyPaisa. 15–30m delivery SLA.
+            </p>
           </div>
         </div>
       </div>
@@ -585,17 +585,14 @@
       <div>
         <div class="cart-section-title">Select Payment Method:</div>
         <div class="payment-rails-selector">
-          <div class="rail-option active" data-rail="EasyPaisa" onclick="selectCartRail('EasyPaisa')">
-            <span>🟢</span><span>EasyPaisa</span>
-          </div>
-          <div class="rail-option" data-rail="JazzCash" onclick="selectCartRail('JazzCash')">
-            <span>🔴</span><span>JazzCash</span>
-          </div>
-          <div class="rail-option" data-rail="SadaPay" onclick="selectCartRail('SadaPay')">
+          <div class="rail-option active" data-rail="SadaPay" onclick="selectCartRail('SadaPay')">
             <span>🟠</span><span>SadaPay</span>
           </div>
-          <div class="rail-option" data-rail="Wise / Crypto" onclick="selectCartRail('Wise / Crypto')">
-            <span>🌐</span><span>Wise / Crypto</span>
+          <div class="rail-option" data-rail="NayaPay" onclick="selectCartRail('NayaPay')">
+            <span>🔵</span><span>NayaPay</span>
+          </div>
+          <div class="rail-option" data-rail="EasyPaisa" onclick="selectCartRail('EasyPaisa')">
+            <span>🟢</span><span>EasyPaisa</span>
           </div>
         </div>
       </div>
@@ -619,12 +616,12 @@
       </div>
 
       <div class="cart-sla-box">
-        <div><strong>⚡ 15-Minute Delivery Target:</strong> Credentials delivered directly to your WhatsApp after payment confirmation.</div>
-        <div style="margin-top:0.35rem;"><strong>🛡️ 30-Day Replacement Warranty:</strong> Account replacement provided if access is disrupted during the 30-day term. WhatsApp support is available with variable response times throughout the day.</div>
+        <div><strong>⚡ 15–30 Min Delivery:</strong> Delivered via WhatsApp during operating hours (10:00 AM – 11:00 PM PKT / UTC+5) after payment confirmation.</div>
+        <div style="margin-top:0.35rem;"><strong>🛡️ 30-Day Replacement Warranty:</strong> Covers subscription downtime, access loss, or account lockouts during the 30-day term.</div>
       </div>
 
       <a id="drawerCheckoutBtn" href="https://wa.me/923326861112" target="_blank" rel="noopener noreferrer" class="cart-checkout-btn">
-        <span>Proceed to WhatsApp Checkout &rarr;</span>
+        <span>Proceed to WhatsApp Order &rarr;</span>
       </a>
       <div style="text-align:center; font-size:0.75rem; color:var(--text-muted);">
         Encrypted direct communication with official AIDigiTools Concierge (03326861112)
