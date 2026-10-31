@@ -1,0 +1,283 @@
+{
+  "summary": {
+    "total_pages": 66,
+    "canonical_errors": [],
+    "robots_errors": [],
+    "h1_errors": [],
+    "heading_hierarchy_errors": [],
+    "title_errors": [],
+    "meta_desc_errors": [],
+    "og_errors": [],
+    "twitter_errors": [],
+    "image_errors": [],
+    "schema_errors": [],
+    "internal_link_anomalies": [],
+    "broken_links": []
+  },
+  "pages": {
+    "404.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "about.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "affiliate-disclosure.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "best/best-ai-coding-tools.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "best/best-ai-video-generators.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "categories/coding.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "categories/image.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "categories/video.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "categories/vpn.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "compare/chatgpt-vs-claude.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "compare/runway-vs-pika.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "contact.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "deals.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "guides/chatgpt-vs-claude.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "index.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "policies.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "shipping-policy.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/adobe-creative-cloud.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/canva-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/capcut-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/chatgpt-codex.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/chatgpt-plus.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/claude-artifacts.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/claude-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/coursera-plus.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/cursor-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/deepseek-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/elevenlabs-creator.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/envato-elements.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/figma-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/freepik-premium.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/gamma-app.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/gemini-advanced.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/github-copilot.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/google-ai-ultra.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/google-veo.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/grammarly-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/grok-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/heygen-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/jetbrains-all.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/kling-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/leonardo-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/linkedin-premium.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/lovable-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/microsoft-office-365.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/midjourney.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/minimax-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/n8n-automation.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/netflix-premium.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/nordvpn.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/notion-business.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/perplexity-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/prime-video.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/quillbot-premium.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/replit-core.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/runway-gen3.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/semrush-guru.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/spotify-premium.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/suno-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/surfshark-vpn.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/tradingview-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/turnitin-student.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/udio-ai.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/vidiq-boost.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/windows-11-pro.html": {
+      "status": "PASS",
+      "issues": []
+    },
+    "tools/youtube-premium.html": {
+      "status": "PASS",
+      "issues": []
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "core_assets": {
+    "assets/style.css": "83.89 KB",
+    "assets/cart.js": "97.50 KB"
+  },
+  "total_images": 151,
+  "avg_html_kb": 37.406753077651516,
+  "missing_lazy_images": 0,
+  "missing_dimensions": 0,
+  "external_fonts": 0,
+  "third_party_scripts": 0
+}
