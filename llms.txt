@@ -1,7 +1,7 @@
 # AIDigiTools (aidigitools.tech)
 
-> Pakistan's Premier AI Software Intelligence, Comparison & Licensing Consultation Hub.
-> Direct paid orders are paused pending vendor authorization verification. WhatsApp desk (+92 332 6861112) provides workflow consultation and licensing guidance.
+> Premier localized AI software marketplace and subscription concierge desk based in Islamabad, Pakistan.
+> Direct WhatsApp order routing (+92 332 6861112) with transparent PKR & USD reference pricing, manual transfer verification, 15-minute target delivery SLA, and 30-day replacement warranty.
 
 ## Core Product Offerings
 
@@ -77,6 +77,7 @@
 - [About Company](https://aidigitools.tech/about.html): Founding mission, digital concierge model, and customer support standards.
 - [Customer Help Desk](https://aidigitools.tech/contact.html): Real human assistance in Islamabad via WhatsApp (+92 332 6861112) and email (support@aidigitools.tech).
 - [Digital Delivery Policy & SLA](https://aidigitools.tech/shipping-policy.html): Free electronic delivery (Rs. 0) with a 15-minute target fulfillment.
-- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, Raast, Bank IBFT, Wise, and Crypto USDT.
-- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
-- [Affiliate Disclosure & Transparency](https://aidigitools.tech/affiliate-disclosure.html): Independent reseller disclosures and advertising transparency.
+- [Payment Rails & Protection](https://aidigitools.tech/policies.html#payments): EasyPaisa, JazzCash, SadaPay, NayaPay, State Bank Raast, Bank IBFT, Wise International, and Binance Pay (USDT).
+- [Replacement Warranty](https://aidigitools.tech/policies.html#refunds): 30-day replacement warranty policy (account replacement support for access disruption with 2-24h resolution SLA; 100% pre-fulfillment cancellation refund/reversal).
+- [Terms & Lawful Use](https://aidigitools.tech/policies.html#terms): Lawful professional use, anti-abuse standards, and access integrity.
+- [Affiliate & Reseller Disclosures](https://aidigitools.tech/affiliate-disclosure.html): Independent reseller disclosures, nominative fair-use trademark notices, and zero-tolerance anti-fraud charter.
