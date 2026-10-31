@@ -46,3 +46,4 @@ for p in data_json:
         print(f"  - {p['slug']} ({p.get('display_name')}): Status='{st}', Eligibility='{se}', Type='{p.get('product_type')}'")
 
 print(f"\nTotal restricted products: {len(restricted)}")
+

@@ -348,7 +348,7 @@
     },
     {
       "brand_id": "google-ai-ultra",
-      "canonical_name": "Google AI Ultra Plan (20X)",
+      "canonical_name": "Google AI Ultra",
       "slug": "google-ai-ultra",
       "category": "AI Writing & Productivity",
       "official_vendor": "Google LLC",
@@ -368,7 +368,7 @@
     },
     {
       "brand_id": "google-veo",
-      "canonical_name": "Google Veo 2 / Video FX",
+      "canonical_name": "Google Veo 3.1",
       "slug": "google-veo",
       "category": "AI Video Generators",
       "official_vendor": "Google DeepMind",
@@ -408,7 +408,7 @@
     },
     {
       "brand_id": "grok-ai",
-      "canonical_name": "Grok 2 / SuperGrok",
+      "canonical_name": "xAI Grok / SuperGrok",
       "slug": "grok-ai",
       "category": "AI Writing & Productivity",
       "official_vendor": "xAI Corp.",
@@ -568,7 +568,7 @@
     },
     {
       "brand_id": "midjourney",
-      "canonical_name": "Midjourney v6.1",
+      "canonical_name": "Midjourney V8",
       "slug": "midjourney",
       "category": "Creative & Design Suites",
       "official_vendor": "Midjourney Inc.",
@@ -768,7 +768,7 @@
     },
     {
       "brand_id": "runway-gen3",
-      "canonical_name": "Runway Gen-3 Alpha",
+      "canonical_name": "Runway AI Video",
       "slug": "runway-gen3",
       "category": "AI Video Generators",
       "official_vendor": "Runway AI Inc.",

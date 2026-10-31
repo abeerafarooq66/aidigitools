@@ -93,3 +93,4 @@ has_drawer_hold_notice = "Direct Orders Paused" in cart_js
 has_inquire_checkout_text = "Inquire on WhatsApp for Current Availability" in cart_js
 print(f"  Drawer shows hold notice for held products: {has_drawer_hold_notice}")
 print(f"  Drawer replaces checkout button text with inquiry for held products: {has_inquire_checkout_text}")
+
