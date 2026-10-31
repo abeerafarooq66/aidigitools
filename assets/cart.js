@@ -1986,14 +1986,20 @@
     });
   };
 
-  // Category filter for Living Showcase dropdown & tabs
+  // Category filter for Living Showcase dropdown & tabs (Harmonized with Directory)
   window.filterShowcaseCategory = function (catName, btnEl) {
     var selectEl = document.getElementById('showcaseToolSelect');
     if (!selectEl) return;
 
     var pills = document.querySelectorAll('.authkit-cat-pill');
-    pills.forEach(function (p) { p.classList.remove('active'); });
-    if (btnEl) btnEl.classList.add('active');
+    pills.forEach(function (p) {
+      p.classList.remove('active');
+      p.setAttribute('aria-selected', 'false');
+    });
+    if (btnEl) {
+      btnEl.classList.add('active');
+      btnEl.setAttribute('aria-selected', 'true');
+    }
 
     var optgroups = selectEl.querySelectorAll('optgroup');
     var firstMatchingSlug = null;
