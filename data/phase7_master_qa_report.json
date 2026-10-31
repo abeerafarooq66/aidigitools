@@ -1,0 +1,41 @@
+{
+  "pages_tested": {
+    "total_discovered": 66,
+    "passed": 66,
+    "failed": 0,
+    "untested": 0
+  },
+  "seo_results": {
+    "crawl_passed": true,
+    "sitemap_url_count": 65,
+    "breadcrumb_schemas": 49,
+    "faq_schemas": 49
+  },
+  "product_data_results": {
+    "tool_pages_count": 49,
+    "discrepancies": 0
+  },
+  "geo_aeo_results": {},
+  "ui_ux_results": {
+    "total_links_audited": 3405,
+    "broken_whatsapp_links": 0,
+    "dead_anchors": 0,
+    "skip_links_count": 66,
+    "main_id_count": 66
+  },
+  "performance_results": {
+    "css_size_kb": 85.94,
+    "js_size_kb": 97.5
+  },
+  "security_results": {
+    "violations_count": 0
+  },
+  "consistency_results": {
+    "llms_parity": 49,
+    "merchant_feed_parity": 49,
+    "homepage_cards": 49,
+    "passed": true
+  },
+  "regression_results": {},
+  "defects": []
+}

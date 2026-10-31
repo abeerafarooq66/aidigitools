@@ -217,7 +217,7 @@
     "primary_category": "AI Coding",
     "secondary_category": "AI Assistants",
     "official_url": "https://claude.ai/",
-    "official_pricing_url": "https://www.anthropic.com/pricing",
+    "official_pricing_url": "https://www.anthropic.com/claude",
     "current_model": "Claude 3.5 Sonnet",
     "model_verification_date": "October 2026",
     "features": [
@@ -257,7 +257,7 @@
     "primary_category": "AI Assistants",
     "secondary_category": "AI Coding",
     "official_url": "https://claude.ai/",
-    "official_pricing_url": "https://claude.ai/upgrade",
+    "official_pricing_url": "https://www.anthropic.com/pricing",
     "current_model": "Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude 3 Opus",
     "model_verification_date": "October 2026",
     "features": [
@@ -612,7 +612,7 @@
     "primary_category": "AI Assistants",
     "secondary_category": "AI Productivity",
     "official_url": "https://gemini.google.com/",
-    "official_pricing_url": "https://one.google.com/about/plans",
+    "official_pricing_url": "https://one.google.com/explore-plan/gemini-advanced",
     "current_model": "Gemini 1.5 Pro / Gemini Live",
     "model_verification_date": "October 2026",
     "features": [
@@ -693,7 +693,7 @@
     "primary_category": "AI Assistants",
     "secondary_category": "AI Coding",
     "official_url": "https://ai.google.dev/",
-    "official_pricing_url": "https://ai.google.dev/pricing",
+    "official_pricing_url": "https://gemini.google.com/advanced",
     "current_model": "Gemini 1.5 Pro High Rate Limit (20X)",
     "model_verification_date": "October 2026",
     "features": [
