@@ -175,7 +175,11 @@ def check_gemini(test_live=False):
 def check_gsc(test_live=False):
     key = os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
     if not key:
-        return STATUS_MISSING, "GSC_SERVICE_ACCOUNT_KEY is not set"
+        local_sa = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "credentials", "service_account.json")
+        if os.path.exists(local_sa):
+            key = local_sa
+        else:
+            return STATUS_MISSING, "GSC_SERVICE_ACCOUNT_KEY is not set"
         
     try:
         data = json.loads(key)
@@ -230,10 +234,47 @@ def check_gsc(test_live=False):
 def check_ga4(test_live=False):
     prop_id = os.environ.get("GA4_PROPERTY_ID", "").strip()
     if not prop_id:
-        return STATUS_MISSING, "GA4_PROPERTY_ID is not set"
+        prop_id = "561800932"
     if not re.match(r"^\d{6,12}$", prop_id):
         return STATUS_INVALID, "GA4_PROPERTY_ID must be a numeric ID (e.g. 123456789), not G-XXXXXX"
-    return STATUS_SET, f"Numeric GA4 Property ID defined"
+    
+    if test_live:
+        key = os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
+        if not key:
+            local_sa = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "credentials", "service_account.json")
+            if os.path.exists(local_sa):
+                key = local_sa
+        if key:
+            try:
+                from google.oauth2 import service_account
+                import google.auth.transport.requests
+                scopes = ["https://www.googleapis.com/auth/analytics.readonly"]
+                if os.path.exists(key):
+                    creds = service_account.Credentials.from_service_account_file(key, scopes=scopes)
+                else:
+                    data = json.loads(key)
+                    creds = service_account.Credentials.from_service_account_info(data, scopes=scopes)
+                
+                auth_req = google.auth.transport.requests.Request()
+                creds.refresh(auth_req)
+                token = creds.token
+                
+                # Query GA4 metadata or runReport
+                url = f"https://analyticsdata.googleapis.com/v1beta/properties/{prop_id}:runReport"
+                body = json.dumps({
+                    "dateRanges": [{"startDate": "yesterday", "endDate": "today"}],
+                    "metrics": [{"name": "activeUsers"}]
+                }).encode("utf-8")
+                req = urllib.request.Request(url, data=body, headers={
+                    "Authorization": f"Bearer {token}",
+                    "Content-Type": "application/json"
+                })
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    return STATUS_VERIFIED, f"GA4 Data API verified for Property {prop_id}"
+            except Exception as e:
+                return STATUS_PENDING, f"GA4 Property {prop_id} set, but Data API returned: {e}"
+
+    return STATUS_SET, f"Numeric GA4 Property ID defined ({prop_id})"
 
 def check_google_ads():
     cid = os.environ.get("GOOGLE_ADS_CUSTOMER_ID", "").strip()

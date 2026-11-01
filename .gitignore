@@ -5,6 +5,12 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
 # Private wholesale ledgers & scratch data
 catalog_*.json
 scratch/
@@ -17,6 +23,7 @@ scratch/
 *.pem
 *.key
 *service_account*.json
+credentials/
 credentials.json
 client_secrets*.json
 token.json
