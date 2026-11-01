@@ -86,7 +86,7 @@ class TestInternalSearchFilterConversion(unittest.TestCase):
     def test_06_pre_order_transparency_terms_present(self):
         """Verify pre-order transparency terms are clearly stated before purchase."""
         self.assertIn('pre-order-terms-bar', self.index_html)
-        self.assertIn('15–30 Min', self.index_html)
+        self.assertTrue('15-Minute' in self.index_html or '15–30 Min' in self.index_html)
         self.assertIn('30-Day Replacement Warranty', self.index_html)
         self.assertIn('shared', self.index_html.lower())
         self.assertIn('EasyPaisa', self.index_html)

@@ -9,7 +9,7 @@
    - Every product and guide page must explicitly answer:
      * **Pricing**: Explicit numerical PKR price and USD equivalent.
      * **Payment Rails**: Domestic (EasyPaisa, JazzCash, SadaPay, NayaPay, Raast, Bank IBFT) and Global (Wise, Crypto USDT).
-     * **Delivery SLA**: 15–30 minute digital delivery via WhatsApp helpline `03326861112`.
+     * **Delivery SLA**: 15-minute target digital delivery via WhatsApp helpline `03326861112`.
      * **Warranty & Replacement**: 30-day replacement warranty.
      * **Audience & Use-Case**: Freelancers, students, content creators, developers, and digital marketing agencies.
 3. **Structured HTML Elements**:

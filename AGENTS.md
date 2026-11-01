@@ -117,7 +117,7 @@ For every tool and topical guide, structure the content in this sequence:
 Every tool page must address the 5 essential branches of user intent:
 1. **Pricing**: Explicit PKR price and USD equivalent.
 2. **Payment Rails**: Domestic (EasyPaisa, JazzCash, SadaPay, Raast) and Global (Wise, Crypto USDT).
-3. **Delivery SLA**: 15–30 minute digital delivery via WhatsApp.
+3. **Delivery SLA**: 15-minute target digital delivery via WhatsApp.
 4. **Warranty & Guarantee**: 30-day replacement warranty.
 5. **Audience & Use-Case**: Freelancers, students, content creators, software engineers, and agencies.
 

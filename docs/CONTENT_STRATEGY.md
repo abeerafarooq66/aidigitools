@@ -303,7 +303,7 @@ flowchart TD
 
 ### Pillar 2: Product Eligibility & Fulfillment Review
 - Is every featured product currently supported in the AI DigiTools master catalog?
-- Is supplier stock verified and reliable for 15–30 minute fulfillment?
+- Is supplier stock verified and reliable for 15-minute target fulfillment?
 - Does the product meet our 30-day replacement warranty standard?
 
 ### Pillar 3: Licensing & Arrangement Claims Review

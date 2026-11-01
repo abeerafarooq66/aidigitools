@@ -1982,7 +1982,11 @@
       waLinkEl.style.setProperty('background', '#10B981', 'important');
       waLinkEl.style.setProperty('color', '#FFFFFF', 'important');
       waLinkEl.style.setProperty('border', 'none', 'important');
-      waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 WhatsApp Contact &rarr;</span>';
+      if (isHeld) {
+        waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 Inquire on WhatsApp &rarr;</span>';
+      } else {
+        waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 Order via WhatsApp &rarr;</span>';
+      }
     }
     if (waLinkEl) {
       waLinkEl.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waMsg);
@@ -2565,7 +2569,7 @@
             var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
             return isHeld
               ? '<td style="text-align:center; color:#d97706; font-weight:600;">⏸️ Paused (Inquire)</td>'
-              : '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15–30 Minutes</td>';
+              : '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15-Minute Target</td>';
           }).join('') +
         '</tr>' +
         '<tr>' +
