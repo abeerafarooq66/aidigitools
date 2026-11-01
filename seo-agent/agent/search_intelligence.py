@@ -406,3 +406,4 @@ if __name__ == "__main__":
     agg = SearchIntelligenceAggregator()
     report = agg.generate_unified_intelligence_report()
     print("Report Summary:", json.dumps(report["summary"], indent=2))
+
