@@ -1,0 +1,159 @@
+{
+  "report_generated_at_utc": "2026-11-01T17:31:56.142411+00:00",
+  "target_domain": "https://aidigitools.tech",
+  "google_search_console": {
+    "provenance": {
+      "source": "Google Search Console API",
+      "property": "https://aidigitools.tech/",
+      "date_range": "Last 28 days",
+      "fetch_timestamp": "2026-11-01T17:31:52.883312+00:00",
+      "metric_type": "observed",
+      "status": "UNAVAILABLE",
+      "limitations": "Data restricted to authorized AIDigiTools property; missing rows denote no recorded impressions on this property, not zero market demand."
+    },
+    "opportunities": [],
+    "cannibalization_risks": [],
+    "queries_summary": {},
+    "notes": "GSC_SERVICE_ACCOUNT_KEY not present in environment; live data fetch skipped."
+  },
+  "google_analytics_4": {
+    "provenance": {
+      "source": "Google Analytics 4 Data API",
+      "property_id": "561800932",
+      "fetch_timestamp": "2026-11-01T17:31:52.883312+00:00",
+      "metric_type": "observed",
+      "status": "UNAVAILABLE",
+      "limitations": "GA4 records user browser interactions; WhatsApp button clicks represent lead inquiries, NOT confirmed purchases."
+    },
+    "organic_landing_pages": [],
+    "whatsapp_lead_inquiries": 0,
+    "notes": "GA4 / Service Account credentials not provided in current context."
+  },
+  "bing_webmaster": {
+    "provenance": {
+      "source": "Microsoft Bing Webmaster REST API",
+      "property": "https://aidigitools.tech",
+      "fetch_timestamp": "2026-11-01T17:31:52.883312+00:00",
+      "metric_type": "observed",
+      "status": "UNAVAILABLE",
+      "limitations": "Data represents organic search activity exclusively on the Bing Search network."
+    },
+    "daily_submission_quota": "N/A",
+    "notes": "BING_WEBMASTER_API_KEY not configured."
+  },
+  "predictive_trends": {
+    "provenance": {
+      "source": "Google Autocomplete Predictive Trends Engine",
+      "fetch_timestamp": "2026-11-01T17:31:52.883312+00:00",
+      "metric_type": "inferred_trend_interest",
+      "status": "CONNECTED",
+      "limitations": "Reflects real-time predictive user search velocity. Does not represent absolute monthly search volume counts."
+    },
+    "seeds_scanned": 8,
+    "total_trending_queries_discovered": 64,
+    "trends_by_seed": {
+      "ai tools": [
+        "ai tools free",
+        "ai tools like chatgpt",
+        "ai tools flow",
+        "ai tools for video creation",
+        "ai tools list",
+        "ai tools directory",
+        "ai tools for image generation",
+        "ai tools for research"
+      ],
+      "best ai video generator": [
+        "best ai video generator free",
+        "best ai video generator app",
+        "best ai video generator tools",
+        "best ai video generator free unlimited",
+        "best ai video generator free website",
+        "best ai video generator free app",
+        "best ai video generator free without watermark",
+        "best ai video generator 2026"
+      ],
+      "cursor ai vs": [
+        "cursor ai vs claude",
+        "cursor ai vs claude code",
+        "cursor ai vscode",
+        "cursor ai vs code extension",
+        "cursor ai vs copilot",
+        "cursor ai vs antigravity",
+        "cursor ai vs codex",
+        "cursor ai vs claude code vs codex"
+      ],
+      "chatgpt plus pakistan": [
+        "chatgpt plus pakistan price",
+        "chatgpt plus pakistan cost",
+        "buy chatgpt plus pakistan",
+        "chatgpt plus subscription pakistan",
+        "chatgpt plus free pakistan",
+        "chatgpt plus account pakistan",
+        "get chatgpt plus pakistan",
+        "chatgpt plus rate in.pakistan"
+      ],
+      "claude 3.5 sonnet": [
+        "claude 3.5 sonnet free",
+        "claude 3.5 sonnet (anthropic)",
+        "claude 3.5 sonnet ai",
+        "claude 3.5 sonnet pricing",
+        "claude 3.5 sonnet website",
+        "claude 3.5 sonnet download",
+        "claude 3.5 sonnet free api key",
+        "claude 3.5 sonnet free download"
+      ],
+      "midjourney alternatives": [
+        "midjourney alternatives free",
+        "midjourney alternatives reddit",
+        "midjourney alternatives 2026",
+        "midjourney alternatives free reddit",
+        "midjourney alternatives 2025",
+        "midjourney alternatives janitor ai",
+        "best midjourney alternatives",
+        "midjourney ai alternatives"
+      ],
+      "deepseek r1": [
+        "deepseek r1 free",
+        "deepseek r1 api",
+        "deepseek r1 download",
+        "deepseek r1 model",
+        "deepseek r1 free api",
+        "deepseek r1 paper",
+        "deepseek r1 api key",
+        "deepseek r1 free api key"
+      ],
+      "ai coding assistant": [
+        "ai coding assistant free",
+        "ai coding assistant tools",
+        "ai coding assistant in a code repository environment",
+        "ai coding assistant easy",
+        "ai coding assistant cursor",
+        "ai coding assistants list",
+        "ai coding assistant github",
+        "ai coding assistant comparison"
+      ]
+    },
+    "notes": "Successfully captured 64 live real-time query suggestions across 8 AI clusters."
+  },
+  "pagespeed_and_crux": {
+    "provenance": {
+      "source": "Google PageSpeed Insights & CrUX API",
+      "property": "https://aidigitools.tech",
+      "fetch_timestamp": "2026-11-01T17:31:56.142411+00:00",
+      "metric_type": "observed",
+      "status": "UNAVAILABLE",
+      "limitations": "Lighthouse simulates mobile device conditions. CrUX reports 28-day rolling real-user metrics where sample density permits."
+    },
+    "performance_score": "N/A",
+    "core_web_vitals": {},
+    "notes": "PAGESPEED_API_KEY not configured."
+  },
+  "summary": {
+    "active_sources": [
+      "Trends"
+    ],
+    "total_trending_queries": 64,
+    "high_impression_low_ctr_opportunities": 0,
+    "cannibalization_risks_detected": 0
+  }
+}
