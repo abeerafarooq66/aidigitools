@@ -1,0 +1,228 @@
+"""
+AIDigiTools — Topic Opportunity Registry Builder
+Strictly implements Section 5 of Master Architecture Charter:
+KEYWORD AND TOPIC INTELLIGENCE
+"""
+
+import json
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_PATH = ROOT_DIR / "data" / "topic_opportunity_registry.json"
+
+# Vetted candidate topics with rigorous 13-point metadata & 7-dimension scoring
+CANDIDATE_TOPICS = [
+    {
+        "topic_id": "TOPIC-001",
+        "primary_keyword": "cursor ai vs github copilot",
+        "secondary_keywords": [
+            "cursor vs copilot 2026",
+            "best ai code editor pakistan",
+            "cursor composer vs copilot workspace",
+            "ai coding assistant price comparison"
+        ],
+        "long_tail_queries": [
+            "is cursor pro better than github copilot for python developers in pakistan",
+            "cursor ai vs copilot price in pkr",
+            "how to use cursor composer without credit card"
+        ],
+        "question_based_queries": [
+            "Which is better: Cursor AI or GitHub Copilot?",
+            "Can Cursor AI replace GitHub Copilot completely?",
+            "How much does Cursor Pro cost compared to Copilot in PKR?"
+        ],
+        "related_entities": [
+            "Anysphere Cursor", "GitHub Copilot", "Claude 3.5 Sonnet", "GPT-4o", "VS Code", "Composer IDE"
+        ],
+        "search_intent": "Commercial Investigation",
+        "language": "English (with localized Pakistan Rupee context)",
+        "country_market_relevance": "Pakistan, South Asia, and Global Remote Developers",
+        "existing_ranking_opportunities": "Ranking on page 2 for 'cursor pro pakistan' and 'copilot pricing'",
+        "competitor_coverage": "AI Tools Pak and AI Tool Gems lack technical IDE benchmark tables; global blogs lack PKR breakdown",
+        "product_category_relevance": "AI Coding & Dev (Tools: cursor-pro, github-copilot)",
+        "existing_target_urls": [
+            "tools/cursor-pro.html",
+            "tools/github-copilot.html",
+            "categories/coding.html"
+        ],
+        "cannibalization_risk": "Low. Dedicated head-to-head comparison does not exist; tool pages focus on individual purchases.",
+        "scoring_breakdown": {
+            "search_opportunity": 14,          # max 15
+            "gsc_bing_opportunity": 18,        # max 20
+            "audience_relevance": 15,          # max 15
+            "competitor_content_gap": 14,      # max 15
+            "trend_freshness": 10,             # max 10
+            "original_research_potential": 14, # max 15
+            "business_relevance": 10           # max 10
+        },
+        "total_opportunity_score": 95,
+        "score_threshold_passed": True,
+        "recommended_action": "PUBLISH_NEW_ARTICLE",
+        "target_canonical_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
+        "editorial_rationale": "High-intent developer query where competitors provide zero quantitative benchmark tables or PKR cost analysis."
+    },
+    {
+        "topic_id": "TOPIC-002",
+        "primary_keyword": "claude 3.5 sonnet artifacts guide",
+        "secondary_keywords": [
+            "claude artifacts tutorial",
+            "how to use claude artifacts for web design",
+            "claude pro artifacts react components",
+            "claude sonnet 5.5 pakistan"
+        ],
+        "long_tail_queries": [
+            "how to build react apps with claude artifacts in pakistan",
+            "claude artifacts limitations for freelance developers",
+            "claude pro vs free artifacts usage limits"
+        ],
+        "question_based_queries": [
+            "What can you build with Claude Artifacts?",
+            "How do I export code from Claude Artifacts?",
+            "Is Claude Pro required to use Artifacts?"
+        ],
+        "related_entities": [
+            "Anthropic", "Claude 3.5 Sonnet", "Claude Opus", "React", "Tailwind CSS", "SVG", "Artifacts Canvas"
+        ],
+        "search_intent": "Informational",
+        "language": "English",
+        "country_market_relevance": "Pakistani Freelancers, Frontend Engineers, Digital Agencies",
+        "existing_ranking_opportunities": "Targeting high-impression 'claude artifacts' query in GSC",
+        "competitor_coverage": "Regional resellers provide 150-word sales pitches; official docs lack beginner visual walkthroughs",
+        "product_category_relevance": "AI Coding & Dev (Tools: claude-pro, claude-artifacts)",
+        "existing_target_urls": [
+            "tools/claude-pro.html",
+            "tools/claude-artifacts.html"
+        ],
+        "cannibalization_risk": "Low. Existing pages are tool specs; an informational workflow guide targets a distinct how-to intent.",
+        "scoring_breakdown": {
+            "search_opportunity": 13,
+            "gsc_bing_opportunity": 17,
+            "audience_relevance": 15,
+            "competitor_content_gap": 15,
+            "trend_freshness": 10,
+            "original_research_potential": 14,
+            "business_relevance": 9
+        },
+        "total_opportunity_score": 93,
+        "score_threshold_passed": True,
+        "recommended_action": "PUBLISH_NEW_ARTICLE",
+        "target_canonical_path": "blog/claude-artifacts-practical-guide-freelancers.html",
+        "editorial_rationale": "Huge educational search intent with high organic backlink and engagement potential for frontend creators."
+    },
+    {
+        "topic_id": "TOPIC-003",
+        "primary_keyword": "runway gen-3 vs capcut pro",
+        "secondary_keywords": [
+            "runway gen 3 alpha vs capcut",
+            "best ai video editor for youtube shorts",
+            "ai video generator cost pakistan",
+            "runway alpha credits comparison"
+        ],
+        "long_tail_queries": [
+            "is runway gen 3 better than capcut pro for faceless channels",
+            "runway gen 3 price in pakistan easypaisa",
+            "capcut pro 4k 60fps vs runway generative rendering"
+        ],
+        "question_based_queries": [
+            "Can CapCut Pro generate AI video like Runway Gen-3?",
+            "Which is cheaper: Runway Gen-3 or CapCut Pro in PKR?",
+            "What are the credit burn rates for Runway Gen-3?"
+        ],
+        "related_entities": [
+            "Runway ML", "Gen-3 Alpha", "CapCut Pro", "ByteDance", "YouTube Shorts", "TikTok Video AI"
+        ],
+        "search_intent": "Commercial Investigation",
+        "language": "English",
+        "country_market_relevance": "Pakistan & South Asian Content Creators, Video Editors, Agency Leads",
+        "existing_ranking_opportunities": "Growing impressions for 'runway gen 3 pakistan' and 'capcut pro pkr'",
+        "competitor_coverage": "Competitors fail to explain the difference between generative rendering (Runway) vs timeline editing (CapCut)",
+        "product_category_relevance": "AI Video & Audio (Tools: runway-gen3, capcut-pro)",
+        "existing_target_urls": [
+            "tools/runway-gen3.html",
+            "tools/capcut-pro.html",
+            "categories/video.html"
+        ],
+        "cannibalization_risk": "Low. Clear comparison intent distinct from individual product order pages.",
+        "scoring_breakdown": {
+            "search_opportunity": 14,
+            "gsc_bing_opportunity": 16,
+            "audience_relevance": 15,
+            "competitor_content_gap": 14,
+            "trend_freshness": 10,
+            "original_research_potential": 13,
+            "business_relevance": 9
+        },
+        "total_opportunity_score": 91,
+        "score_threshold_passed": True,
+        "recommended_action": "PUBLISH_NEW_ARTICLE",
+        "target_canonical_path": "blog/runway-gen3-vs-capcut-pro-video-comparison.html",
+        "editorial_rationale": "High-interest video workflow dilemma for content creators needing both generative assets and fast timeline editing."
+    },
+    {
+        "topic_id": "TOPIC-004",
+        "primary_keyword": "chatgpt plus pakistan price update",
+        "secondary_keywords": [
+            "chatgpt plus pkr cost",
+            "chatgpt plus easypaisa",
+            "chatgpt plus payment decline fix"
+        ],
+        "long_tail_queries": [
+            "how much is chatgpt plus in pakistan rupees today",
+            "how to pay for chatgpt plus with easypaisa or sadapay"
+        ],
+        "question_based_queries": [
+            "What is the official price of ChatGPT Plus in Pakistan?",
+            "Why is my Pakistani debit card declined on ChatGPT?"
+        ],
+        "related_entities": [
+            "OpenAI", "ChatGPT Plus", "GPT-5", "EasyPaisa", "SadaPay", "Forex Tax"
+        ],
+        "search_intent": "Transactional / Commercial",
+        "language": "English",
+        "country_market_relevance": "Pakistan Nationwide",
+        "existing_ranking_opportunities": "Already ranking on Page 1 (#4) with /tools/chatgpt-plus.html",
+        "competitor_coverage": "Covered extensively across regional resellers",
+        "product_category_relevance": "AI Coding & Dev (Tool: chatgpt-plus)",
+        "existing_target_urls": [
+            "tools/chatgpt-plus.html"
+        ],
+        "cannibalization_risk": "HIGH. Publishing a new blog post for this exact query will cannibalize our top-ranking tool page.",
+        "scoring_breakdown": {
+            "search_opportunity": 15,
+            "gsc_bing_opportunity": 19,
+            "audience_relevance": 15,
+            "competitor_content_gap": 8,
+            "trend_freshness": 7,
+            "original_research_potential": 8,
+            "business_relevance": 10
+        },
+        "total_opportunity_score": 82,
+        "score_threshold_passed": False,
+        "recommended_action": "UPDATE_EXISTING_PAGE",
+        "target_canonical_path": "tools/chatgpt-plus.html",
+        "editorial_rationale": "Score (82/100) is below 85 threshold and cannibalization risk is High. The existing tool page should be updated rather than creating a competing URL."
+    }
+]
+
+def build_registry():
+    data = {
+        "registry_version": "2.0.0",
+        "scoring_model": {
+            "search_opportunity": 15,
+            "gsc_bing_opportunity": 20,
+            "audience_relevance": 15,
+            "competitor_content_gap": 15,
+            "trend_freshness": 10,
+            "original_research_potential": 15,
+            "business_relevance": 10,
+            "max_total_score": 100,
+            "preferred_threshold": 85
+        },
+        "candidate_topics": CANDIDATE_TOPICS
+    }
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"Topic Opportunity Registry built successfully ({len(CANDIDATE_TOPICS)} topics) -> {OUTPUT_PATH}")
+
+if __name__ == "__main__":
+    build_registry()
