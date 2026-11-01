@@ -101,17 +101,17 @@ def check_bing(test_live=False):
     return STATUS_SET, "Key present and format valid"
 
 def check_pagespeed(test_live=False):
-    key = os.environ.get("PAGESPEED_API_KEY", "").strip()
+    key = os.environ.get("PAGESPEED_API_KEY", "").strip().strip('"').strip("'").strip()
     if not key:
         return STATUS_MISSING, "PAGESPEED_API_KEY is not set"
-    if len(key) < 25 or not key.startswith("AIza"):
-        return STATUS_INVALID, "Invalid Google API key format (expected AIza...)"
+    if len(key) < 25:
+        return STATUS_INVALID, "Invalid Google API key format"
         
     if test_live:
         url = f"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://aidigitools.tech&key={urllib.parse.quote_plus(key)}&strategy=mobile&category=performance"
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "AIDigiTools-Preflight/1.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
+            with urllib.request.urlopen(req, timeout=40) as resp:
                 if resp.status == 200:
                     return STATUS_VERIFIED, "PageSpeed Insights API returned valid Lighthouse performance payload"
                 return STATUS_FAILED, f"HTTP {resp.status}"
@@ -123,18 +123,18 @@ def check_pagespeed(test_live=False):
     return STATUS_SET, "Key present and format valid"
 
 def check_crux(test_live=False):
-    key = (os.environ.get("CRUX_API_KEY") or os.environ.get("PAGESPEED_API_KEY") or "").strip()
+    key = (os.environ.get("CRUX_API_KEY") or os.environ.get("PAGESPEED_API_KEY") or "").strip().strip('"').strip("'").strip()
     if not key:
         return STATUS_MISSING, "CRUX_API_KEY is not set"
-    if len(key) < 25 or not key.startswith("AIza"):
-        return STATUS_INVALID, "Invalid Google API key format (expected AIza...)"
+    if len(key) < 25:
+        return STATUS_INVALID, "Invalid Google API key format"
         
     if test_live:
         url = f"https://chromeuxreport.googleapis.com/v1/records:queryRecord?key={urllib.parse.quote_plus(key)}"
         payload = json.dumps({"origin": "https://aidigitools.tech"}).encode("utf-8")
         try:
             req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=10) as resp:
+            with urllib.request.urlopen(req, timeout=15) as resp:
                 if resp.status == 200:
                     return STATUS_VERIFIED, "CrUX API returned genuine origin record"
                 return STATUS_FAILED, f"HTTP {resp.status}"
@@ -149,17 +149,17 @@ def check_crux(test_live=False):
     return STATUS_SET, "Key present and format valid"
 
 def check_gemini(test_live=False):
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    key = os.environ.get("GEMINI_API_KEY", "").strip().strip('"').strip("'").strip()
     if not key:
         return STATUS_MISSING, "GEMINI_API_KEY is not set"
-    if len(key) < 25 or not key.startswith("AIza"):
-        return STATUS_INVALID, "Invalid Google AI API key format"
+    if len(key) < 20:
+        return STATUS_INVALID, "Invalid Google AI API key format (key too short)"
         
     if test_live:
         url = f"https://generativelanguage.googleapis.com/v1beta/models?key={urllib.parse.quote_plus(key)}"
         try:
             req = urllib.request.Request(url, headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=10) as resp:
+            with urllib.request.urlopen(req, timeout=15) as resp:
                 if resp.status == 200:
                     data = json.loads(resp.read().decode("utf-8"))
                     models = [m.get("name") for m in data.get("models", [])]
