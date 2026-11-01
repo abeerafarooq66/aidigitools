@@ -1,0 +1,12 @@
+{
+  "ledger_version": "1.0.0",
+  "business_timezone": "PKT (UTC+5)",
+  "current_phase": "PHASE_1_SUPERVISED",
+  "approved_supervised_publications_count": 0,
+  "phase_2_threshold": 3,
+  "pending_previews": [],
+  "approved_history": [],
+  "rejected_history": [],
+  "last_updated_pkt": "2026-11-02 00:55:00 PKT"
+}
+
