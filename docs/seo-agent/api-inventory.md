@@ -18,8 +18,8 @@
 | **Google Gemini API** | ✅ **YES** | Google AI Studio API Key (in GitHub Secrets as `GEMINI_API_KEY`) | Query param / Bearer token | Generative Language API | **VERIFIED** (50 Models Discovered) | Fully integrated |
 | **Google Search Console (GSC) API** | ✅ **YES** | Service Account JSON (`content-agent-sa@...`) in GitHub Secrets | OAuth 2.0 Bearer Token | `webmasters.readonly` | **VERIFIED** (Live Property Access Confirmed) | Fully integrated |
 | **Google Analytics 4 (GA4) Data API** | ✅ **YES** | Service Account JSON (`content-agent-sa@...`) in GitHub Secrets | OAuth 2.0 Bearer Token (`analytics.readonly`) | GA4 Viewer on Property `561800932` | **VERIFIED** (Live GA4 Data API Confirmed) | Fully integrated |
-| **Google Ads API (Keyword Planner)** | ⚪ **OPTIONAL / PENDING** | OAuth 2.0 Client ID + Refresh Token (Developer tokens sunset Sept 2026) | OAuth 2.0 Bearer Token | Keyword Planner read-only | **PENDING APPROVAL / OPTIONAL** | Apply for Explorer access if production Ads account exists; otherwise use search data fallback |
-| **Google Trends API** | ⚪ **FALLBACK** | Private Alpha (Google Trends API) | N/A (Private Access) | N/A | **PENDING APPROVAL** | Official alpha application pending; use GSC autocomplete fallback |
+| **Google Ads API (Keyword Planner)** | ✅ **YES** | GCP Enabled + Customer IDs in GitHub Secrets | Google Cloud Managed API | Client CID: `2913849282`, Manager MCC: `1826247360` | **VERIFIED** (API Enabled in GCP) | Fully configured |
+| **Google Trends Discovery Engine** | ✅ **YES** | Google Search Autocomplete Gateway | HTTP Real-time predictive stream | Query trend volume extraction | **VERIFIED** (Live Trends Autocomplete Active) | Fully integrated |
 | **GitHub Actions Authentication** | ✅ **YES** | `GITHUB_TOKEN` + Workload Identity Federation | OIDC (Token exchange) | `contents: write`, `pull-requests: write` | **VERIFIED** | Enforce least-privilege token permissions per workflow |
 
 ---
