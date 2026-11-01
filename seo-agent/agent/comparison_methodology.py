@@ -219,3 +219,4 @@ if __name__ == "__main__":
     print(f"Errors: {res['errors']}")
     assert res["overall_valid"]
     print("ComparisonMethodologyEngine self-test PASSED!")
+
