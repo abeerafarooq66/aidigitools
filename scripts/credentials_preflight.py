@@ -279,9 +279,12 @@ def check_ga4(test_live=False):
 def check_google_ads():
     cid = os.environ.get("GOOGLE_ADS_CUSTOMER_ID", "").strip()
     mid = os.environ.get("GOOGLE_ADS_MANAGER_ID", "").strip()
-    if not cid and not mid:
+    dev_token = os.environ.get("GOOGLE_ADS_DEVELOPER_TOKEN", "").strip()
+    if not cid and not mid and not dev_token:
         return STATUS_OPTIONAL, "Google Ads API access is currently PENDING/OPTIONAL (Developer token model sunset in Sept 2026)"
     detail = []
+    if dev_token:
+        detail.append("Developer Token: [SET]")
     if cid:
         detail.append(f"Client CID: {cid}")
     if mid:
