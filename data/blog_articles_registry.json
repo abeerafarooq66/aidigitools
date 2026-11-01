@@ -1,0 +1,121 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-11-01",
+  "blog_architecture": {
+    "base_url": "https://aidigitools.tech",
+    "route_patterns": {
+      "comparisons": "/compare/{slug}.html",
+      "guides": "/guides/{slug}.html",
+      "curations": "/best/{slug}.html"
+    },
+    "evergreen_urls_only": true,
+    "no_date_based_slugs": true,
+    "no_thin_tag_pages": true,
+    "mandatory_breadcrumbs": true,
+    "mandatory_author_profile": true,
+    "mandatory_related_tools": 2,
+    "mandatory_related_articles": 2
+  },
+  "articles": [
+    {
+      "id": "ART-001",
+      "slug": "chatgpt-vs-claude",
+      "relative_url": "compare/chatgpt-vs-claude.html",
+      "canonical_url": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+      "title": "ChatGPT Plus vs Claude Pro: AI Shootout & Benchmark",
+      "cluster_slug": "ai-assistants-and-llms",
+      "article_type": "comparison",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "chatgpt plus vs claude pro",
+      "related_tools": ["chatgpt-plus", "claude-pro"],
+      "related_articles": ["guides/chatgpt-vs-claude.html", "best/best-ai-coding-tools.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Comparisons", "url": "https://aidigitools.tech/#products"},
+        {"name": "ChatGPT Plus vs Claude Pro", "url": "https://aidigitools.tech/compare/chatgpt-vs-claude.html"}
+      ],
+      "evidence_classification": "Tier B: Research-based independent analysis",
+      "status": "published"
+    },
+    {
+      "id": "ART-002",
+      "slug": "runway-vs-pika",
+      "relative_url": "compare/runway-vs-pika.html",
+      "canonical_url": "https://aidigitools.tech/compare/runway-vs-pika.html",
+      "title": "Runway Gen-3 vs Pika 2.0: AI Video Shootout (2026)",
+      "cluster_slug": "ai-video-and-audio-tools",
+      "article_type": "comparison",
+      "author_slug": "aidigitools-editorial",
+      "primary_keyword": "runway gen 3 vs pika 2.0",
+      "related_tools": ["runway-gen3", "kling-ai", "google-veo"],
+      "related_articles": ["best/best-ai-video-generators.html", "compare/chatgpt-vs-claude.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Comparisons", "url": "https://aidigitools.tech/#products"},
+        {"name": "Runway vs Pika", "url": "https://aidigitools.tech/compare/runway-vs-pika.html"}
+      ],
+      "evidence_classification": "Tier B: Research-based independent analysis",
+      "status": "published"
+    },
+    {
+      "id": "ART-003",
+      "slug": "chatgpt-vs-claude-guide",
+      "relative_url": "guides/chatgpt-vs-claude.html",
+      "canonical_url": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+      "title": "ChatGPT Plus vs Claude Pro: Frontier Models Guide",
+      "cluster_slug": "ai-assistants-and-llms",
+      "article_type": "guide",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "ai models comparison guide",
+      "related_tools": ["chatgpt-plus", "claude-pro", "gemini-advanced"],
+      "related_articles": ["compare/chatgpt-vs-claude.html", "best/best-ai-coding-tools.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Guides", "url": "https://aidigitools.tech/#products"},
+        {"name": "AI Models Guide", "url": "https://aidigitools.tech/guides/chatgpt-vs-claude.html"}
+      ],
+      "evidence_classification": "Tier B: Research-based independent analysis",
+      "status": "published"
+    },
+    {
+      "id": "ART-004",
+      "slug": "best-ai-coding-tools",
+      "relative_url": "best/best-ai-coding-tools.html",
+      "canonical_url": "https://aidigitools.tech/best/best-ai-coding-tools.html",
+      "title": "Best AI Coding Tools (2026) — Tested for Developers",
+      "cluster_slug": "ai-coding-and-development",
+      "article_type": "curation",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "best ai coding tools",
+      "related_tools": ["cursor-pro", "github-copilot", "chatgpt-codex"],
+      "related_articles": ["compare/chatgpt-vs-claude.html", "guides/chatgpt-vs-claude.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Best Tools", "url": "https://aidigitools.tech/#products"},
+        {"name": "Best AI Coding Tools", "url": "https://aidigitools.tech/best/best-ai-coding-tools.html"}
+      ],
+      "evidence_classification": "Tier B: Research-based independent analysis",
+      "status": "published"
+    },
+    {
+      "id": "ART-005",
+      "slug": "best-ai-video-generators",
+      "relative_url": "best/best-ai-video-generators.html",
+      "canonical_url": "https://aidigitools.tech/best/best-ai-video-generators.html",
+      "title": "Best AI Video Generators (2026) — Tested & Compared",
+      "cluster_slug": "ai-video-and-audio-tools",
+      "article_type": "curation",
+      "author_slug": "aidigitools-editorial",
+      "primary_keyword": "best ai video generators",
+      "related_tools": ["runway-gen3", "kling-ai", "google-veo", "heygen-ai"],
+      "related_articles": ["compare/runway-vs-pika.html", "best/best-ai-coding-tools.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Best Tools", "url": "https://aidigitools.tech/#products"},
+        {"name": "Best AI Video Generators", "url": "https://aidigitools.tech/best/best-ai-video-generators.html"}
+      ],
+      "evidence_classification": "Tier B: Research-based independent analysis",
+      "status": "published"
+    }
+  ]
+}

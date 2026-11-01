@@ -276,3 +276,4 @@ if __name__ == "__main__":
     assert not res_cat["passed"]
 
     print("StructuredDataEngine self-test PASSED!")
+
