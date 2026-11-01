@@ -9,3 +9,15 @@ Thumbs.db
 catalog_*.json
 scratch/
 *_private/
+
+# Environment and Credentials Security
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service_account*.json
+credentials.json
+client_secrets*.json
+token.json
+token_cache/
