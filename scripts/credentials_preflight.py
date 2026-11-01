@@ -274,3 +274,4 @@ def run_preflight(test_live=False):
 if __name__ == "__main__":
     test_mode = "--test" in sys.argv
     run_preflight(test_live=test_mode)
+

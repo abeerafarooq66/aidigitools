@@ -40,3 +40,4 @@
 * `CRUX_API_KEY`: Restricted Google Cloud API key for Chrome User Experience Report real-user metrics.
 * `GEMINI_API_KEY`: Google AI Studio API key for content intelligence and autonomous reasoning.
 * `GSC_SERVICE_ACCOUNT_KEY`: Service Account JSON key (for local execution fallback when not using Workload Identity Federation).
+

@@ -56,3 +56,4 @@ Prior to deploying any autonomous agent workflow:
 1. Run `python scripts/credentials_preflight.py` to confirm format and presence.
 2. Ensure the preflight checker displays only `[SET]`, `[MISSING]`, `[INVALID FORMAT]`, or `[VERIFIED]`.
 3. Confirm that no secrets are echoed or logged.
+

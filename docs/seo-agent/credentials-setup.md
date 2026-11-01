@@ -127,3 +127,4 @@ gh variable set GA4_PROPERTY_ID --body "<YOUR_NUMERIC_GA4_PROPERTY_ID>"
 1. Copy template: `cp .env.example .env`
 2. Populate the keys into `.env`.
 3. Run preflight verification: `python scripts/credentials_preflight.py --test`
+
