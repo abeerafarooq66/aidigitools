@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-11-01",
+  "organization": {
+    "name": "AIDigiTools",
+    "domain": "aidigitools.tech",
+    "location": "Islamabad, Pakistan",
+    "editorial_desk_email": "support@aidigitools.tech",
+    "official_whatsapp": "+92 332 6861112"
+  },
+  "authors": [
+    {
+      "id": "abeera-farooq",
+      "slug": "abeera-farooq",
+      "name": "Abeera Farooq",
+      "role": "Founder & Principal Technical Editor",
+      "is_human": true,
+      "verified_identity": true,
+      "location": "Islamabad, Pakistan",
+      "bio": "Software practitioner, developer tools researcher, and founder of AIDigiTools. Focuses on full-stack developer ecosystems, AI coding assistants, generative video pipelines, and localized digital payment architectures in South Asia.",
+      "areas_of_expertise": [
+        "AI Coding Assistants",
+        "LLM Benchmarks & API Economics",
+        "Creative AI & Video Generation",
+        "Pakistani Forex & Domestic Payment Rails"
+      ],
+      "contact_email": "support@aidigitools.tech",
+      "social_profiles": {
+        "github": "https://github.com/abeerafarooq66",
+        "website": "https://aidigitools.tech/about.html"
+      }
+    },
+    {
+      "id": "aidigitools-editorial",
+      "slug": "aidigitools-editorial",
+      "name": "AIDigiTools Technical Editorial Desk",
+      "role": "Software Evaluation & Research Team",
+      "is_human": true,
+      "verified_identity": true,
+      "location": "Islamabad, Pakistan",
+      "bio": "Collective technical research desk of software engineers, QA analysts, and tech journalists at AIDigiTools. Conducts multi-point benchmark testing, API pricing reconciliation, and cross-border SaaS accessibility analysis.",
+      "areas_of_expertise": [
+        "Software Verification & QA",
+        "Pricing Verification & Subscription Audits",
+        "Comparative SaaS Feature Analysis",
+        "Consumer Transparency Policies"
+      ],
+      "contact_email": "support@aidigitools.tech",
+      "social_profiles": {
+        "website": "https://aidigitools.tech/about.html#editorial-guidelines"
+      }
+    }
+  ],
+  "editorial_policy": {
+    "no_fictional_personas": true,
+    "no_fake_credentials": true,
+    "no_fabricated_endorsements": true,
+    "human_review_required_for_human_byline": true,
+    "mandatory_ai_disclosure": true,
+    "mandatory_sponsored_rel_for_affiliate_links": true
+  }
+}
