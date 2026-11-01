@@ -1,0 +1,60 @@
+{
+  "last_cycle_run": "2026-11-02T00:16:33.772507",
+  "outdated_articles_count": 5,
+  "outdated_articles": [
+    {
+      "article_id": "ART-001",
+      "slug": "chatgpt-vs-claude",
+      "relative_url": "compare/chatgpt-vs-claude.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 305,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-002",
+      "slug": "runway-vs-pika",
+      "relative_url": "compare/runway-vs-pika.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 305,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-003",
+      "slug": "chatgpt-vs-claude-guide",
+      "relative_url": "guides/chatgpt-vs-claude.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 305,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-004",
+      "slug": "best-ai-coding-tools",
+      "relative_url": "best/best-ai-coding-tools.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 305,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-005",
+      "slug": "best-ai-video-generators",
+      "relative_url": "best/best-ai-video-generators.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 305,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    }
+  ],
+  "performance_decay_detected": [
+    {
+      "url": "https://aidigitools.tech/compare/runway-vs-pika.html",
+      "clicks_drop_percent": 20.0,
+      "impressions_drop_percent": 22.6,
+      "current_clicks": 280,
+      "previous_clicks": 350,
+      "status": "DECAY_DETECTED",
+      "recommendation": "Content refresh recommended: update comparison metrics, review PAA questions, and refresh screenshots."
+    }
+  ],
+  "orphan_pages_count": 0,
+  "orphan_pages": [],
+  "scheduled_cycle_status": "CYCLE_COMPLETED"
+}
