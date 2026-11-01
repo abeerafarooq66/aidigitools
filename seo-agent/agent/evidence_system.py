@@ -115,3 +115,4 @@ if __name__ == "__main__":
     res = ResearchEvidenceSystem()
     print(f"Research Evidence System initialized. Storage directory: {res.evidence_dir}")
     print(f"Total evidence files: {len(res.list_all_evidence_files())}")
+
