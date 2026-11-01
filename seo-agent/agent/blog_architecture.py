@@ -231,3 +231,4 @@ if __name__ == "__main__":
     assert "<item>" in rss_item and "<title>ChatGPT vs Claude</title>" in rss_item
 
     print("BlogArchitectureEngine self-test PASSED!")
+

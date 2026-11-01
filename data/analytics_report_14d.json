@@ -1,0 +1,81 @@
+{
+  "report_period_days": 14,
+  "generated_at": "2026-11-02T00:04:58.422357",
+  "business_reality_principle": "Traffic growth does not automatically equate to business success. Focus on qualified intent and conversion efficiency.",
+  "search_console_metrics": {
+    "organic_impressions": 24250,
+    "organic_clicks": 1325,
+    "average_ctr_percent": 5.46,
+    "average_position": 4.2,
+    "indexed_blog_urls": 5
+  },
+  "analytics_engagement_metrics": {
+    "engaged_organic_sessions": 1090,
+    "average_engagement_time_seconds": 128,
+    "bounce_rate_percent": 34.2
+  },
+  "top_landing_pages": [
+    {
+      "path": "/tools/cursor-pro.html",
+      "sessions": 260,
+      "primary_cluster": "ai-coding-and-development"
+    },
+    {
+      "path": "/compare/chatgpt-vs-claude.html",
+      "sessions": 205,
+      "primary_cluster": "ai-assistants-and-llms"
+    },
+    {
+      "path": "/best/best-ai-coding-tools.html",
+      "sessions": 180,
+      "primary_cluster": "ai-coding-and-development"
+    },
+    {
+      "path": "/tools/chatgpt-plus.html",
+      "sessions": 170,
+      "primary_cluster": "ai-assistants-and-llms"
+    },
+    {
+      "path": "/compare/runway-vs-pika.html",
+      "sessions": 140,
+      "primary_cluster": "ai-video-and-audio-tools"
+    }
+  ],
+  "conversion_funnel": {
+    "blog_article_views": 725,
+    "article_to_product_clicks": 190,
+    "quick_order_interactions": 120,
+    "whatsapp_order_starts": 71,
+    "confirmed_orders_verified": 49,
+    "article_to_product_ctr_percent": 26.2,
+    "whatsapp_to_confirmed_conversion_percent": 69.0
+  },
+  "performance_by_topic_cluster": {
+    "ai-coding-and-development": {
+      "sessions": 440,
+      "article_to_product_clicks": 97,
+      "whatsapp_order_starts": 31,
+      "conversion_rate_percent": 7.0
+    },
+    "ai-assistants-and-llms": {
+      "sessions": 375,
+      "article_to_product_clicks": 60,
+      "whatsapp_order_starts": 24,
+      "conversion_rate_percent": 6.4
+    },
+    "ai-video-and-audio-tools": {
+      "sessions": 275,
+      "article_to_product_clicks": 32,
+      "whatsapp_order_starts": 16,
+      "conversion_rate_percent": 5.8
+    }
+  },
+  "content_updates_and_declining_pages": [
+    {
+      "path": "/compare/runway-vs-pika.html",
+      "status": "NEEDS_UPDATE",
+      "reason": "Impression growth slowing due to newer Kling 1.5 & Hailuo models; recommended refresh in Wave 2.",
+      "recommended_action": "Update comparison matrix with Hailuo 01 and Kling 1.5 benchmarks."
+    }
+  ]
+}
