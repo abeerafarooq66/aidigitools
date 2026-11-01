@@ -1,0 +1,52 @@
+{
+  "last_audited": "2026-11-01",
+  "ai_referrers_tracked": [
+    "chatgpt.com",
+    "chat.openai.com",
+    "perplexity.ai",
+    "claude.ai",
+    "copilot.microsoft.com",
+    "gemini.google.com"
+  ],
+  "referral_breakdown": {
+    "chatgpt.com": {
+      "sessions": 42,
+      "users": 38,
+      "top_landing_page": "/tools/cursor-pro.html"
+    },
+    "perplexity.ai": {
+      "sessions": 28,
+      "users": 25,
+      "top_landing_page": "/compare/chatgpt-vs-claude.html"
+    },
+    "claude.ai": {
+      "sessions": 15,
+      "users": 14,
+      "top_landing_page": "/best/best-ai-coding-tools.html"
+    },
+    "copilot.microsoft.com": {
+      "sessions": 9,
+      "users": 8,
+      "top_landing_page": "/tools/github-copilot.html"
+    }
+  },
+  "google_aio_tracked_queries": [
+    {
+      "query": "buy cursor pro easypaisa",
+      "aio_presence": true,
+      "cited_url": "https://aidigitools.tech/tools/cursor-pro.html"
+    },
+    {
+      "query": "chatgpt plus price in pakistan",
+      "aio_presence": true,
+      "cited_url": "https://aidigitools.tech/tools/chatgpt-plus.html"
+    },
+    {
+      "query": "runway gen 3 alternatives pakistan",
+      "aio_presence": true,
+      "cited_url": "https://aidigitools.tech/compare/runway-vs-pika.html"
+    }
+  ],
+  "total_ai_referral_sessions": 94,
+  "citation_status": "ACTIVE_RETRIEVAL"
+}
