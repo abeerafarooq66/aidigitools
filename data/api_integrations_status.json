@@ -1,0 +1,45 @@
+{
+  "ledger_version": "1.0.0",
+  "business_timezone": "PKT (UTC+5)",
+  "last_audit_pkt": "2026-11-02 01:01:35 PKT",
+  "least_privilege_policy": {
+    "google_search_console": "https://www.googleapis.com/auth/webmasters.readonly",
+    "google_analytics_4": "https://www.googleapis.com/auth/analytics.readonly",
+    "gemini_api": "Generative Language API dedicated read/generate scope",
+    "bing_webmaster": "Read-only webmaster API access"
+  },
+  "integrations": {
+    "indexnow": {
+      "service": "indexnow",
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "IndexNow key '89d63a...51ad' verified with local authentication key file.",
+      "verified_at_pkt": "2026-11-02 01:01:35 PKT",
+      "data_returned": true
+    },
+    "google_search_console": {
+      "service": "google_search_console",
+      "status": "NOT_CONFIGURED",
+      "is_connected": false,
+      "details": "GSC_SERVICE_ACCOUNT_KEY environment variable is not configured.",
+      "verified_at_pkt": "2026-11-02 01:01:35 PKT",
+      "data_returned": false
+    },
+    "google_analytics_4": {
+      "service": "google_analytics_4",
+      "status": "NOT_CONFIGURED",
+      "is_connected": false,
+      "details": "GA4_PROPERTY_ID environment variable is not configured.",
+      "verified_at_pkt": "2026-11-02 01:01:35 PKT",
+      "data_returned": false
+    },
+    "gemini_api": {
+      "service": "gemini_api",
+      "status": "NOT_CONFIGURED",
+      "is_connected": false,
+      "details": "GEMINI_API_KEY environment variable is not configured.",
+      "verified_at_pkt": "2026-11-02 01:01:35 PKT",
+      "data_returned": false
+    }
+  }
+}
