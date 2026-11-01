@@ -115,6 +115,7 @@ class KeywordIntelligenceEngine:
         """
         Validate all 13 attributes, calculate the 7-part score, and determine
         recommended action (PUBLISH_NEW_ARTICLE vs UPDATE_EXISTING_PAGE vs SKIP_REJECT).
+        Strict Rule: If an existing page already satisfies the intent, action is UPDATE_EXISTING_PAGE.
         """
         missing = [attr for attr in REQUIRED_ATTRIBUTES if attr not in topic or not topic[attr]]
         if missing:
@@ -129,15 +130,15 @@ class KeywordIntelligenceEngine:
             target_canonical_path=target_path
         )
 
-        if not passed:
-            action = "SKIP_REJECT"
-            rationale = f"Opportunity score ({score}/100) is below the preferred threshold of {PREFERRED_THRESHOLD}/100."
-        elif cannibalization_risk:
+        if cannibalization_risk:
             action = "UPDATE_EXISTING_PAGE"
             rationale = (
-                f"Opportunity score is strong ({score}/100), but existing page(s) "
-                f"{existing_matches} already target this intent. Update existing page instead of creating a competing URL."
+                f"Existing page(s) {existing_matches} already target this intent. "
+                "Update the existing page instead of creating a competing URL."
             )
+        elif not passed:
+            action = "SKIP_REJECT"
+            rationale = f"Opportunity score ({score}/100) is below the preferred threshold of {PREFERRED_THRESHOLD}/100."
         else:
             action = "PUBLISH_NEW_ARTICLE"
             rationale = f"Score ({score}/100) satisfies threshold and no competing URL targets this intent. Eligible for publication."

@@ -128,3 +128,4 @@ if __name__ == "__main__":
     assert not valid_bad
     
     print("ClusterMapper self-test PASSED!")
+
