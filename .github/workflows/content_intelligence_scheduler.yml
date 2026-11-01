@@ -1,0 +1,104 @@
+name: AIDigiTools Autonomous Content Intelligence Cloud Scheduler (Part 17)
+
+# ==============================================================================
+# AIDigiTools Autonomous Content Intelligence & Cloud Scheduler
+# ==============================================================================
+# Operational Charter: Built on Part 17 of the Master Architecture Charter.
+# 
+# CRITICAL RELIABILITY DIRECTIVE:
+# Cloud Scheduler: Runs independently in GitHub Actions cloud infrastructure.
+# DO NOT rely on Antigravity remaining open on a local laptop.
+# 
+# Business Reporting Timezone: Pakistan Standard Time (PKT = UTC+5)
+# Schedule: Daily at 09:00 PKT (04:00 UTC) -> cron: '0 4 * * *'
+# 
+# 48-Hour Cadence Rule:
+# Publish ONLY when at least 48 hours have passed since the last successful
+# article publication AND a candidate topic passes all quality gates.
+# If no topic qualifies, NO filler content is published; skips are explained.
+# ==============================================================================
+
+on:
+  schedule:
+    # 04:00 UTC daily = 09:00 PKT (Pakistan Standard Time, UTC+5)
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+    inputs:
+      force_cadence:
+        description: 'Bypass 48-hour cadence lock for urgent breaking publication (Default: false)'
+        required: false
+        default: 'false'
+        type: boolean
+      mode:
+        description: 'Scheduler operational mode'
+        required: true
+        default: 'run-daily-check'
+        type: choice
+        options:
+          - run-daily-check
+          - audit-ledger
+          - check-cadence
+          - usage-report
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  BUSINESS_TIMEZONE: "Asia/Karachi"
+  TZ: "Asia/Karachi"
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  autonomous-scheduler-cycle:
+    name: Execute Daily Research & Publishing Cycle
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 2. Set up Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 3. Install Core Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: 4. Pre-Flight Lock & Cadence Audit
+        run: |
+          python -m seo-agent.agent.automation_scheduler --mode check-cadence
+
+      - name: 5. Execute Daily Research Check & Quality Evaluation
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          FORCE_CADENCE: ${{ github.event.inputs.force_cadence || 'false' }}
+          SCHEDULER_MODE: ${{ github.event.inputs.mode || 'run-daily-check' }}
+        run: |
+          python -m seo-agent.agent.automation_scheduler --mode "${SCHEDULER_MODE}"
+
+      - name: 6. Run Regression Test Battery (If changes produced)
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: 7. Commit & Persist Publication Ledger, Cache & Reports
+        run: |
+          git config --global user.name "aidigitools-cloud-agent[bot]"
+          git config --global user.email "cloud-agent@aidigitools.tech"
+          git add data/publication_ledger.json data/monthly_usage_ledger.json data/scheduler_run_report.json data/cache/ || true
+          if git diff --staged --quiet; then
+            echo "No ledger or cache state changes to commit."
+          else
+            git commit -m "chore(scheduler): persist publication ledger, usage and daily run report [skip ci]"
+            git push origin main
+          fi
+

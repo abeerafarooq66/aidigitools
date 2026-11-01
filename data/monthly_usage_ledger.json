@@ -1,0 +1,24 @@
+{
+  "ledger_version": "1.0.0",
+  "year_month": "2026-11",
+  "business_timezone": "PKT (UTC+5)",
+  "monthly_budget_usd": 50.0,
+  "currency_conversion_usd_to_pkr": 280.0,
+  "total_api_calls": 0,
+  "total_prompt_tokens": 0,
+  "total_completion_tokens": 0,
+  "total_spend_usd": 0.0,
+  "total_spend_pkr": 0.0,
+  "budget_exceeded": false,
+  "pricing_model_per_million_tokens": {
+    "gemini-1.5-flash": {
+      "input_usd": 0.075,
+      "output_usd": 0.30
+    },
+    "gemini-1.5-pro": {
+      "input_usd": 1.25,
+      "output_usd": 5.00
+    }
+  },
+  "records": []
+}
