@@ -1,0 +1,53 @@
+{
+  "report_id": "REP-CYCLE-UNIT-TEST",
+  "cycle_id": "CYCLE-UNIT-TEST",
+  "timestamp_pkt": "2026-11-02 01:31:26 PKT",
+  "business_timezone": "PKT (UTC+5)",
+  "data_sources_accessed": [
+    "Google Trends Fallback",
+    "IndexNow"
+  ],
+  "data_sources_unavailable": [
+    "GSC"
+  ],
+  "search_opportunity_findings": {
+    "score": 92
+  },
+  "selected_topic": {
+    "topic_id": "TOPIC-001",
+    "primary_keyword": "cursor ai vs github copilot"
+  },
+  "primary_keyword": "cursor ai vs github copilot",
+  "secondary_keywords": [
+    "cursor vs copilot"
+  ],
+  "search_intent": "Commercial Investigation",
+  "competitor_gap": "No quantitative comparison tables or PKR rates",
+  "relevant_products": [
+    "cursor-pro",
+    "github-copilot"
+  ],
+  "research_sources": [
+    "https://cursor.com"
+  ],
+  "evidence_verification_status": {
+    "classification": "B. Research-based",
+    "verified": true
+  },
+  "quality_gate_results": {
+    "passed": true,
+    "critical_failures": []
+  },
+  "publication_or_skip_decision": {
+    "decision": "APPROVED",
+    "reason": "Passed all 20 Quality Gates in Phase 1 Supervised Mode."
+  },
+  "deployed_url": null,
+  "sitemap_indexnow_submission_result": {
+    "sitemap_updated": false,
+    "indexnow_submitted": false,
+    "details": "No deployment in this cycle."
+  },
+  "google_indexing_status": "PENDING_CRAWL",
+  "errors_and_recommended_improvements": []
+}
