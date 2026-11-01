@@ -49,21 +49,21 @@ Go to **APIs & Services > Library** and enable each of the following:
 3. In the left sidebar, click **Settings** (gear icon) at the bottom.
 4. Click **Users and permissions**.
 5. Click **Add user** (top right).
-6. **Email address**: Paste your service account email (`content-agent-sa@...`).
+6. **Email address**: Paste your service account email (`content-agent-sa@aidigitools-content-agent.iam.gserviceaccount.com`).
 7. **Permission**: Select **Restricted** (read-only queries and search analytics).
 8. Click **Add**.
 
 ### Step 2.3: Add Service Account to Google Analytics 4 (GA4)
 1. Open [Google Analytics](https://analytics.google.com/).
-2. Select your AIDigiTools GA4 property.
+2. Select your AIDigiTools GA4 property (`AIDigiTools Production`).
 3. In the bottom-left corner, click **Admin** (gear icon).
 4. Under the *Property* column, click **Property Access Management**.
 5. Click the blue **+** button (top right) and select **Add users**.
-6. **Email addresses**: Paste your service account email (`content-agent-sa@...`).
+6. **Email addresses**: Paste `content-agent-sa@aidigitools-content-agent.iam.gserviceaccount.com`.
 7. **Direct roles**: Select **Viewer** (read-only reporting; zero administrative or edit rights).
 8. Click **Add**.
-9. Under *Property Settings > Property Details*, copy the numeric **Property ID** (e.g., `123456789`).  
-   *(IMPORTANT: Do not confuse this with the Measurement ID starting with `G-`)*.
+9. Numeric **Property ID**: `561800932` (Configured in GitHub Secrets & environment).  
+   Web Stream **Measurement ID**: `G-NE094X2Q7H` (Installed on all 66 HTML pages).
 
 ---
 

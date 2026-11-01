@@ -17,7 +17,7 @@
 | **Chrome UX Report (CrUX) API** | 🟡 **PARTIAL** | Google Cloud API Key | Query parameter (`key=...`) | Chrome UX Report API | **READY IN CI / PENDING LOCAL** | Enable CrUX API in GCP; restrict key |
 | **Google Gemini API** | 🟡 **PARTIAL** | Google AI Studio API Key (in GitHub Secrets as `GEMINI_API_KEY`) | Query param / Bearer token | Generative Language API | **READY IN CI / PENDING LOCAL** | Verify quota; restrict to `generativelanguage.googleapis.com` |
 | **Google Search Console (GSC) API** | 🟡 **PARTIAL** | Service Account JSON / Workload Identity (in GitHub Secrets as `GSC_SERVICE_ACCOUNT_KEY`) | OAuth 2.0 Bearer Token | `webmasters.readonly` | **READY IN CI / PENDING PROPERTY CONFIRMATION** | Add Service Account email to Search Console as Restricted User |
-| **Google Analytics 4 (GA4) Data API** | 🔴 **PENDING** | Service Account / Workload Identity | OAuth 2.0 Bearer Token (`analytics.readonly`) | GA4 Viewer permission on Property ID | **PENDING USER ACTION** | Add SA email as GA4 Viewer; set `GA4_PROPERTY_ID` |
+| **Google Analytics 4 (GA4) Data API** | 🟡 **CONFIGURED** | Service Account / Workload Identity | OAuth 2.0 Bearer Token (`analytics.readonly`) | GA4 Viewer permission on Property `561800932` | **SECRET CONFIGURED / PENDING IAM ROLE** | Add `content-agent-sa@aidigitools-content-agent.iam.gserviceaccount.com` as GA4 Viewer |
 | **Google Ads API (Keyword Planner)** | ⚪ **OPTIONAL / PENDING** | OAuth 2.0 Client ID + Refresh Token (Developer tokens sunset Sept 2026) | OAuth 2.0 Bearer Token | Keyword Planner read-only | **PENDING APPROVAL / OPTIONAL** | Apply for Explorer access if production Ads account exists; otherwise use search data fallback |
 | **Google Trends API** | ⚪ **FALLBACK** | Private Alpha (Google Trends API) | N/A (Private Access) | N/A | **PENDING APPROVAL** | Official alpha application pending; use GSC autocomplete fallback |
 | **GitHub Actions Authentication** | ✅ **YES** | `GITHUB_TOKEN` + Workload Identity Federation | OIDC (Token exchange) | `contents: write`, `pull-requests: write` | **VERIFIED** | Enforce least-privilege token permissions per workflow |
@@ -31,7 +31,8 @@
 * `GCP_SERVICE_ACCOUNT_EMAIL`: Dedicated IAM Service Account email (`content-agent-sa@aidigitools-content-agent.iam.gserviceaccount.com`).
 * `GCP_WORKLOAD_IDENTITY_PROVIDER`: Workload Identity Provider resource string for GitHub Actions keyless authentication.
 * `GSC_SITE_URL`: Verified Search Console property root (`https://aidigitools.tech/`).
-* `GA4_PROPERTY_ID`: Numeric Google Analytics 4 property ID (e.g., `123456789`). Note: Never use the `G-XXXXXX` Measurement ID.
+* `GA4_PROPERTY_ID`: Numeric Google Analytics 4 property ID (`561800932`).
+* `GA4_MEASUREMENT_ID`: Web Stream Measurement ID (`G-NE094X2Q7H`) installed on all 66 HTML pages.
 * `INDEXNOW_KEY`: Standard 32-character hexadecimal string (`89d63ab53a63527b12a199a3096e51ad`).
 
 ### Secret Credentials (Stored in GitHub Secrets & Local .env)
