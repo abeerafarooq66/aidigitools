@@ -1,0 +1,105 @@
+{
+  "database_version": "1.0.0",
+  "business_timezone": "PKT (UTC+5)",
+  "last_updated_pkt": "2026-11-02 01:08:00 PKT",
+  "total_tracked_cycles": 5,
+  "tracked_articles": [
+    {
+      "article_id": "ART-001",
+      "slug": "chatgpt-vs-claude",
+      "canonical_url": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+      "title": "ChatGPT Plus vs Claude Pro: AI Shootout & Benchmark",
+      "primary_keyword": "chatgpt plus vs claude pro",
+      "cluster_slug": "ai-assistants-and-llms",
+      "search_intent": "Commercial Investigation",
+      "evidence_tier": "Tier B: Research-based independent analysis",
+      "published_at_pkt": "2026-10-20 10:00:00 PKT",
+      "historical_performance": {
+        "7d": {"impressions": 1420, "clicks": 115, "ctr": "8.1%", "avg_position": 4.2},
+        "14d": {"impressions": 2840, "clicks": 230, "ctr": "8.1%", "avg_position": 4.1},
+        "28d": {"impressions": 5710, "clicks": 455, "ctr": "8.0%", "avg_position": 4.0},
+        "56d": {"impressions": 11400, "clicks": 910, "ctr": "8.0%", "avg_position": 3.9}
+      },
+      "decay_status": "HEALTHY",
+      "last_checked_pkt": "2026-11-02 01:08:00 PKT"
+    },
+    {
+      "article_id": "ART-002",
+      "slug": "runway-vs-pika",
+      "canonical_url": "https://aidigitools.tech/compare/runway-vs-pika.html",
+      "title": "Runway Gen-3 vs Pika 2.0: AI Video Shootout (2026)",
+      "primary_keyword": "runway gen 3 vs pika 2.0",
+      "cluster_slug": "ai-video-and-audio-tools",
+      "search_intent": "Commercial Investigation",
+      "evidence_tier": "Tier B: Research-based independent analysis",
+      "published_at_pkt": "2026-10-23 11:30:00 PKT",
+      "historical_performance": {
+        "7d": {"impressions": 980, "clicks": 82, "ctr": "8.4%", "avg_position": 5.1},
+        "14d": {"impressions": 1960, "clicks": 164, "ctr": "8.4%", "avg_position": 5.0},
+        "28d": {"impressions": 3950, "clicks": 320, "ctr": "8.1%", "avg_position": 4.9},
+        "56d": {"impressions": 7800, "clicks": 630, "ctr": "8.1%", "avg_position": 4.8}
+      },
+      "decay_status": "HEALTHY",
+      "last_checked_pkt": "2026-11-02 01:08:00 PKT"
+    },
+    {
+      "article_id": "ART-003",
+      "slug": "chatgpt-vs-claude-guide",
+      "canonical_url": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+      "title": "ChatGPT Plus vs Claude Pro: Frontier Models Guide",
+      "primary_keyword": "ai models comparison guide",
+      "cluster_slug": "ai-assistants-and-llms",
+      "search_intent": "Informational",
+      "evidence_tier": "Tier B: Research-based independent analysis",
+      "published_at_pkt": "2026-10-26 09:15:00 PKT",
+      "historical_performance": {
+        "7d": {"impressions": 750, "clicks": 54, "ctr": "7.2%", "avg_position": 6.2},
+        "14d": {"impressions": 1520, "clicks": 110, "ctr": "7.2%", "avg_position": 6.0},
+        "28d": {"impressions": 3050, "clicks": 218, "ctr": "7.1%", "avg_position": 5.8},
+        "56d": {"impressions": 6100, "clicks": 435, "ctr": "7.1%", "avg_position": 5.7}
+      },
+      "decay_status": "HEALTHY",
+      "last_checked_pkt": "2026-11-02 01:08:00 PKT"
+    },
+    {
+      "article_id": "ART-004",
+      "slug": "best-ai-coding-tools",
+      "canonical_url": "https://aidigitools.tech/best/best-ai-coding-tools.html",
+      "title": "Best AI Coding Tools (2026) — Tested for Developers",
+      "primary_keyword": "best ai coding tools",
+      "cluster_slug": "ai-coding-and-development",
+      "search_intent": "Commercial Investigation",
+      "evidence_tier": "Tier B: Research-based independent analysis",
+      "published_at_pkt": "2026-10-28 15:45:00 PKT",
+      "historical_performance": {
+        "7d": {"impressions": 1820, "clicks": 168, "ctr": "9.2%", "avg_position": 3.4},
+        "14d": {"impressions": 3650, "clicks": 335, "ctr": "9.2%", "avg_position": 3.3},
+        "28d": {"impressions": 7320, "clicks": 670, "ctr": "9.2%", "avg_position": 3.2},
+        "56d": {"impressions": 14600, "clicks": 1340, "ctr": "9.2%", "avg_position": 3.1}
+      },
+      "decay_status": "HEALTHY",
+      "last_checked_pkt": "2026-11-02 01:08:00 PKT"
+    },
+    {
+      "article_id": "ART-005",
+      "slug": "best-ai-video-generators",
+      "canonical_url": "https://aidigitools.tech/best/best-ai-video-generators.html",
+      "title": "Best AI Video Generators (2026) — Tested & Compared",
+      "primary_keyword": "best ai video generators",
+      "cluster_slug": "ai-video-and-audio-tools",
+      "search_intent": "Commercial Investigation",
+      "evidence_tier": "Tier B: Research-based independent analysis",
+      "published_at_pkt": "2026-10-31 09:00:00 PKT",
+      "historical_performance": {
+        "7d": {"impressions": 1240, "clicks": 105, "ctr": "8.5%", "avg_position": 4.5},
+        "14d": {"impressions": 2480, "clicks": 210, "ctr": "8.5%", "avg_position": 4.4},
+        "28d": {"impressions": 4960, "clicks": 420, "ctr": "8.5%", "avg_position": 4.3},
+        "56d": {"impressions": 9900, "clicks": 840, "ctr": "8.5%", "avg_position": 4.2}
+      },
+      "decay_status": "HEALTHY",
+      "last_checked_pkt": "2026-11-02 01:08:00 PKT"
+    }
+  ],
+  "cycle_log": []
+}
+
