@@ -26,9 +26,44 @@
       "reviewed_by": null,
       "reviewed_at_pkt": null,
       "reviewer_notes": null
+    },
+    {
+      "preview_id": "PRV-0002",
+      "slug": "cursor-ai-vs-github-copilot-comparison",
+      "title": "cursor ai vs github copilot",
+      "metadata": {
+        "canonical_url": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+        "topic_id": "TOPIC-001",
+        "primary_keyword": "cursor ai vs github copilot",
+        "article_metadata": {
+          "slug": "cursor-ai-vs-github-copilot-comparison",
+          "title": "cursor ai vs github copilot",
+          "primary_keyword": "cursor ai vs github copilot",
+          "canonical_url": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+          "cluster_slug": "ai-video-and-audio-tools",
+          "article_type": "comparison",
+          "author_slug": "abeera-farooq",
+          "target_canonical_path": "/blog/cursor-ai-vs-github-copilot-comparison.html",
+          "is_fallback": false,
+          "generation_method": "GEMINI_API",
+          "is_gemini_generated": true
+        }
+      },
+      "preview_path": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
+      "preview_file_path": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
+      "current_phase": "PHASE_1_SUPERVISED",
+      "approval_required": true,
+      "decision": "HELD_FOR_HUMAN_APPROVAL",
+      "decision_reason": "Phase 1 Supervised Mode Active: The first 3 publishing cycles require explicit preview and human approval. (Completed: 0/3).",
+      "high_risk_triggers": [],
+      "status": "PENDING",
+      "created_at_pkt": "2026-11-02 14:11:47 PKT",
+      "reviewed_by": null,
+      "reviewed_at_pkt": null,
+      "reviewer_notes": null
     }
   ],
   "approved_history": [],
   "rejected_history": [],
-  "last_updated_pkt": "2026-11-02 13:18:46 PKT"
+  "last_updated_pkt": "2026-11-02 14:11:47 PKT"
 }

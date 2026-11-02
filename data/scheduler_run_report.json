@@ -1,20 +1,24 @@
 {
-  "executed_at_pkt": "2026-11-02 13:57:37 PKT",
+  "executed_at_pkt": "2026-11-02 14:11:02 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK",
-    "TOPIC_SELECTION_AND_DUPLICATE_GUARD"
+    "TOPIC_SELECTION_AND_DUPLICATE_GUARD",
+    "CONTENT_DRAFTING",
+    "EVIDENCE_VERIFICATION",
+    "QUALITY_GATES",
+    "HUMAN_REVIEW_PREVIEW_GENERATION"
   ],
-  "pipeline_status": "GENERATION_FAILED",
-  "article_generated": false,
+  "pipeline_status": "AWAITING_HUMAN_APPROVAL",
+  "article_generated": true,
   "published": false,
-  "preview_created": false,
+  "preview_created": true,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-02 13:57:37 PKT",
+    "check_timestamp_pkt": "2026-11-02 14:11:02 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
       "passed": true,
-      "elapsed_hours": 52.96,
-      "message": "Cadence gate cleared: 53.0 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
+      "elapsed_hours": 53.18,
+      "message": "Cadence gate cleared: 53.2 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
       "bypassed": false
     },
     "budget_status": {
@@ -24,7 +28,7 @@
     "evaluated_candidates_count": 4,
     "decision": "TOPIC_SELECTED",
     "reason_code": "TOPIC_QUALIFIED",
-    "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (53.0h elapsed).",
+    "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (53.2h elapsed).",
     "selected_topic": {
       "topic_id": "TOPIC-001",
       "primary_keyword": "cursor ai vs github copilot",
@@ -34,12 +38,81 @@
     }
   },
   "generation_telemetry": {
-    "success": false,
-    "status": "GENERATION_FAILED",
+    "success": true,
+    "status": "ARTICLE_GENERATED",
     "generation_method": "GEMINI_API",
-    "is_gemini_generated": false,
-    "model_used": "models/gemma-4-26b-a4b-it",
-    "error": "Gemini article generation failed: HTML validation failed: Expected exactly 1 <h1> tag, found 0."
+    "is_gemini_generated": true,
+    "model_used": "models/gemini-3-flash-preview",
+    "error": null
   },
-  "explanation": "Article content generation failed or produced heuristic fallback: Gemini article generation failed: HTML validation failed: Expected exactly 1 <h1> tag, found 0."
+  "evidence_verification": {
+    "verified": true,
+    "status": "VERIFIED",
+    "evidence_file": "/home/runner/work/aidigitools/aidigitools/data/research_evidence/EVID-cursor-ai-vs-github-copilot-comparison.json",
+    "verified_claims": [
+      "Comparison entity 'cursor ai' verified in registry as 'Cursor Pro'.",
+      "Comparison entity 'github copilot' verified in registry as 'GitHub Copilot Individual'.",
+      "Price for 'Cursor Pro' verified: Rs. 3,800 PKR.",
+      "Price for 'GitHub Copilot Individual' verified: Rs. 1,500 PKR.",
+      "Material claims grounded in primary vendor documentation or official sources."
+    ],
+    "rejected_claims": [],
+    "errors": [],
+    "evidence_record": {
+      "article_topic": "cursor ai vs github copilot",
+      "target_audience": "Developers, freelancers, and creative agencies in Pakistan & globally",
+      "search_intent": "Commercial Investigation & Comparison",
+      "selected_keywords": [
+        "cursor ai vs github copilot",
+        "cursor ai vs github copilot pricing",
+        "cursor ai vs github copilot review 2026"
+      ],
+      "competitor_gap_findings": "Transparent localized PKR pricing and verified domestic payment options missing on generic comparison blogs.",
+      "official_sources": [
+        "Cursor Pro",
+        "GitHub Copilot Individual"
+      ],
+      "source_urls": [
+        "https://github.com/pricing",
+        "https://www.cursor.com/pricing",
+        "https://github.com/features/copilot",
+        "https://www.cursor.com/"
+      ],
+      "source_publication_update_dates": [
+        "October 2026",
+        "November 2026"
+      ],
+      "actual_verification_date": "2026-11-02",
+      "product_versions": [
+        "Cursor Pro",
+        "GitHub Copilot Individual"
+      ],
+      "pricing_evidence": {
+        "cursor-pro": "Rs. 3,800 PKR (~$14.0 USD)",
+        "github-copilot": "Rs. 1,500 PKR (~$5.5 USD)"
+      },
+      "research_methodology": "Verified against official documentation and upstream pricing portals.",
+      "original_contribution": "Localized price parity breakdown, domestic payment accessibility, and 15-minute delivery SLA audit.",
+      "internal_links": [
+        "https://aidigitools.tech/#tools",
+        "https://aidigitools.tech/policies.html",
+        "https://aidigitools.tech/affiliate-disclosure.html"
+      ],
+      "claims_requiring_extra_verification": [
+        "None - all claims verified against official vendor documentation"
+      ],
+      "evidence_classification": "B. Research-based"
+    }
+  },
+  "quality_gate_result": {
+    "decision": "APPROVED",
+    "passed_count": 20,
+    "failed_count": 0,
+    "failed_gates": []
+  },
+  "operational_phase": "PHASE_1_SUPERVISED",
+  "approved_supervised_count": 0,
+  "preview_id": "PRV-0002",
+  "preview_file": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
+  "explanation": "Article preview 'PRV-0002' generated and enqueued for human review. Phase 1 supervised mode active (0/3 threshold). Autonomous publishing is strictly locked."
 }
