@@ -1,25 +1,45 @@
 {
-  "check_timestamp_pkt": "2026-11-02 13:18:46 PKT",
-  "business_timezone": "PKT (UTC+5)",
-  "cadence_status": {
-    "passed": true,
-    "elapsed_hours": 52.31,
-    "message": "Cadence gate cleared: 52.3 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
-    "bypassed": true
+  "executed_at_pkt": "2026-11-02 13:21:02 PKT",
+  "stages_completed": [
+    "RESEARCH_CADENCE_CHECK",
+    "TOPIC_SELECTION_AND_DUPLICATE_GUARD"
+  ],
+  "pipeline_status": "GENERATION_FAILED",
+  "article_generated": false,
+  "published": false,
+  "preview_created": false,
+  "research_check": {
+    "check_timestamp_pkt": "2026-11-02 13:21:02 PKT",
+    "business_timezone": "PKT (UTC+5)",
+    "cadence_status": {
+      "passed": true,
+      "elapsed_hours": 52.35,
+      "message": "Cadence gate cleared: 52.4 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
+      "bypassed": false
+    },
+    "budget_status": {
+      "exceeded": false,
+      "message": "Within budget: $0.00 spent of $50.00 cap."
+    },
+    "evaluated_candidates_count": 4,
+    "decision": "TOPIC_SELECTED",
+    "reason_code": "TOPIC_QUALIFIED",
+    "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (52.4h elapsed).",
+    "selected_topic": {
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "score": 95,
+      "target_canonical_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
+      "editorial_rationale": "High-intent developer query where competitors provide zero quantitative benchmark tables or PKR cost analysis."
+    }
   },
-  "budget_status": {
-    "exceeded": false,
-    "message": "Within budget: $0.00 spent of $50.00 cap."
+  "generation_telemetry": {
+    "success": false,
+    "status": "GENERATION_FAILED",
+    "generation_method": "GEMINI_API",
+    "is_gemini_generated": false,
+    "model_used": "models/gemini-2.5-flash",
+    "error": "Gemini endpoint verification failed on 'models/gemini-2.5-flash': Verification endpoint failed with HTTP 404"
   },
-  "evaluated_candidates_count": 4,
-  "decision": "TOPIC_SELECTED",
-  "reason_code": "TOPIC_QUALIFIED",
-  "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (52.3h elapsed).",
-  "selected_topic": {
-    "topic_id": "TOPIC-001",
-    "primary_keyword": "cursor ai vs github copilot",
-    "score": 95,
-    "target_canonical_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
-    "editorial_rationale": "High-intent developer query where competitors provide zero quantitative benchmark tables or PKR cost analysis."
-  }
+  "explanation": "Article content generation failed or produced heuristic fallback: Gemini endpoint verification failed on 'models/gemini-2.5-flash': Verification endpoint failed with HTTP 404"
 }
