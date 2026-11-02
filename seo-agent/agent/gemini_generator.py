@@ -417,29 +417,31 @@ class GeminiArticleGenerator:
                 "error": f"Gemini model discovery failed: {err_msg}"
             }
 
-        # Step 2: Select candidate model in priority order
+        # Step 2: Select candidate model in priority order and verify endpoint
         supported = discovery["supported_models"]
-        selected_model = None
+        candidate_models = []
         for pref in PREFERRED_MODELS:
-            if pref in supported:
-                selected_model = pref
-                break
-            # Also check without 'models/' prefix
             clean_pref = pref.replace("models/", "")
             for s in supported:
-                if s.replace("models/", "") == clean_pref:
-                    selected_model = s
-                    break
-            if selected_model:
+                if s == pref or s.replace("models/", "") == clean_pref:
+                    if s not in candidate_models:
+                        candidate_models.append(s)
+        for s in supported:
+            if s not in candidate_models:
+                candidate_models.append(s)
+
+        selected_model = None
+        last_endpoint_error = None
+        for candidate in candidate_models:
+            endpoint_test = self.verify_generation_endpoint(candidate)
+            if endpoint_test.get("verified"):
+                selected_model = candidate
                 break
+            else:
+                last_endpoint_error = endpoint_test.get("error", "Endpoint verification failed.")
 
         if not selected_model:
-            selected_model = supported[0]
-
-        # Step 3: Test generation endpoint before full generation
-        endpoint_test = self.verify_generation_endpoint(selected_model)
-        if not endpoint_test.get("verified"):
-            err_msg = endpoint_test.get("error", "Endpoint verification failed.")
+            err_msg = last_endpoint_error or "All candidate model endpoints failed verification."
             if allow_fallback:
                 fallback_html = self.generate_heuristic_fallback(topic_info, canonical_url)
                 return {
@@ -448,17 +450,17 @@ class GeminiArticleGenerator:
                     "html_draft": fallback_html,
                     "generation_method": "FALLBACK_HEURISTIC",
                     "is_gemini_generated": False,
-                    "model_used": selected_model,
+                    "model_used": None,
                     "error": f"Endpoint verification failed: {err_msg}. Fallback generated for dev/test."
                 }
             return {
                 "success": False,
                 "status": "GENERATION_FAILED",
                 "html_draft": "",
-                "generation_method": "GEMINI_API",
+                "generation_method": "NONE",
                 "is_gemini_generated": False,
-                "model_used": selected_model,
-                "error": f"Gemini endpoint verification failed on '{selected_model}': {err_msg}"
+                "model_used": None,
+                "error": f"Gemini endpoint verification failed on all models: {err_msg}"
             }
 
         # Step 4: Build grounded prompt using verified registry facts

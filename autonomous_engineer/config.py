@@ -38,8 +38,8 @@ PROTECTED_PATTERNS = [
 ]
 
 # Preferred Gemini Models for Cloud Reasoning (Free tier / zero billing)
-DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
-FALLBACK_GEMINI_MODEL = "gemini-2.0-flash"
+DEFAULT_GEMINI_MODEL = "gemini-2.0-flash"
+FALLBACK_GEMINI_MODEL = "gemini-1.5-flash"
 
 def get_karachi_time() -> datetime:
     """Returns the current timestamp in Asia/Karachi (UTC+5)."""
