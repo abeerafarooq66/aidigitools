@@ -37,11 +37,11 @@ jobs:
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
           git config --global user.email "cloud-agent@aidigitools.tech"
-          git add sitemap.xml llms.txt llms-full.txt data/previews/ data/publishing_control_ledger.json data/reports/ data/scheduler_run_report.json || true
+          git add sitemap.xml llms.txt llms-full.txt data/
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
             git commit -m "chore(publisher): persist preview, sitemap and content report [skip ci]"
-            git pull --rebase origin main
-            git push
+            git pull --rebase --autostash origin main || true
+            git push origin main
           fi
