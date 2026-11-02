@@ -649,17 +649,30 @@ class AutomationScheduler:
         with open(self.publication_ledger_path, "w", encoding="utf-8") as f:
             json.dump(ledger, f, indent=2)
 
-        # Automatically execute search engine discovery & indexing workflow
+        # Independently verify production deployment before triggering search engine discovery
         try:
             from agent.indexing_notifier import IndexingNotifierEngine
             notifier = IndexingNotifierEngine(workspace_root=self.workspace_root)
-            discovery_result = notifier.execute_post_publication_discovery(
-                url=canonical_url,
-                is_deployed=True,
-                dry_run=False
-            )
-            new_entry["discovery_telemetry"] = discovery_result
-            new_entry["status_breakdown"] = discovery_result.get("status_breakdown", {})
+            live_check = notifier.verify_live_http(canonical_url)
+            if live_check.get("status") == "LIVE_HTTP_VERIFIED":
+                discovery_result = notifier.execute_post_publication_discovery(
+                    url=canonical_url,
+                    verify_live_deployment=True,
+                    dry_run=False
+                )
+                new_entry["discovery_telemetry"] = discovery_result
+                new_entry["status_breakdown"] = discovery_result.get("status_breakdown", {})
+            else:
+                new_entry["discovery_telemetry"] = {
+                    "status": "PENDING_DEPLOYMENT_VERIFICATION",
+                    "reason": "Publication recorded locally, but production deployment is not yet verified over live HTTPS. Search engine discovery deferred.",
+                    "live_http": live_check
+                }
+                new_entry["status_breakdown"] = {
+                    "publication_status": "PUBLISHED",
+                    "deployment_status": "PENDING_DEPLOYMENT",
+                    "discovery_status": "PENDING_DEPLOYMENT_VERIFICATION"
+                }
         except Exception as e:
             new_entry["discovery_telemetry_error"] = str(e)
 

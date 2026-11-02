@@ -331,18 +331,29 @@ class PublishingControlEngine:
         with open(self.control_ledger_path, "w", encoding="utf-8") as f:
             json.dump(ledger, f, indent=2)
 
-        # Automatically execute search engine discovery & indexing workflow for approved article
+        # Check independent production deployment before triggering post-publication discovery
         discovery_telemetry = None
-        if target.get("canonical_url"):
+        target_canon = target.get("canonical_url") or target.get("metadata", {}).get("canonical_url")
+        if target_canon:
             try:
                 from agent.indexing_notifier import IndexingNotifierEngine
                 notifier = IndexingNotifierEngine(workspace_root=self.workspace_root)
-                discovery_telemetry = notifier.execute_post_publication_discovery(
-                    url=target["canonical_url"],
-                    html_content=target.get("html_preview"),
-                    is_deployed=True,
-                    dry_run=False
-                )
+                live_check = notifier.verify_live_http(target_canon)
+                if live_check.get("status") == "LIVE_HTTP_VERIFIED":
+                    discovery_telemetry = notifier.execute_post_publication_discovery(
+                        url=target_canon,
+                        html_content=target.get("html_preview"),
+                        verify_live_deployment=True,
+                        dry_run=False
+                    )
+                else:
+                    discovery_telemetry = {
+                        "status": "PENDING_DEPLOYMENT_VERIFICATION",
+                        "passed": False,
+                        "reason": "HUMAN_APPROVED_DEPLOYMENT_PENDING",
+                        "message": "Human approval recorded, but production deployment is not yet verified over live HTTPS. Search engine discovery deferred until deployment completes.",
+                        "live_http": live_check
+                    }
             except Exception as e:
                 discovery_telemetry = {"error": str(e)}
 

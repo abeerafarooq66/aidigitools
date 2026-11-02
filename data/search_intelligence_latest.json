@@ -1,12 +1,12 @@
 {
-  "report_generated_at_utc": "2026-11-02T02:51:09.710982+00:00",
+  "report_generated_at_utc": "2026-11-02T03:26:08.583646+00:00",
   "target_domain": "https://aidigitools.tech",
   "google_search_console": {
     "provenance": {
       "source": "Google Search Console API",
       "property": "https://aidigitools.tech/",
       "date_range": "Last 28 days",
-      "fetch_timestamp": "2026-11-02T02:51:06.563375+00:00",
+      "fetch_timestamp": "2026-11-02T03:26:04.638927+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "Data restricted to authorized AIDigiTools property; missing rows denote no recorded impressions on this property, not zero market demand."
@@ -20,7 +20,7 @@
     "provenance": {
       "source": "Google Analytics 4 Data API",
       "property_id": "561800932",
-      "fetch_timestamp": "2026-11-02T02:51:06.563375+00:00",
+      "fetch_timestamp": "2026-11-02T03:26:04.638927+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "GA4 records user browser interactions; WhatsApp button clicks represent lead inquiries, NOT confirmed purchases."
@@ -33,7 +33,7 @@
     "provenance": {
       "source": "Microsoft Bing Webmaster REST API",
       "property": "https://aidigitools.tech",
-      "fetch_timestamp": "2026-11-02T02:51:06.563375+00:00",
+      "fetch_timestamp": "2026-11-02T03:26:04.638927+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "Data represents organic search activity exclusively on the Bing Search network."
@@ -44,7 +44,7 @@
   "predictive_trends": {
     "provenance": {
       "source": "Google Autocomplete Predictive Trends Engine",
-      "fetch_timestamp": "2026-11-02T02:51:06.564370+00:00",
+      "fetch_timestamp": "2026-11-02T03:26:04.638927+00:00",
       "metric_type": "inferred_trend_interest",
       "status": "CONNECTED",
       "limitations": "Reflects real-time predictive user search velocity. Does not represent absolute monthly search volume counts."
@@ -139,7 +139,7 @@
     "provenance": {
       "source": "Google PageSpeed Insights & CrUX API",
       "property": "https://aidigitools.tech",
-      "fetch_timestamp": "2026-11-02T02:51:09.710982+00:00",
+      "fetch_timestamp": "2026-11-02T03:26:08.583646+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "Lighthouse simulates mobile device conditions. CrUX reports 28-day rolling real-user metrics where sample density permits."

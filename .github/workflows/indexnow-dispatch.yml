@@ -10,6 +10,7 @@ on:
       - 'compare/**'
       - 'best/**'
       - 'guides/**'
+      - 'blog/**'
       - 'sitemap.xml'
   workflow_dispatch:
     inputs:
