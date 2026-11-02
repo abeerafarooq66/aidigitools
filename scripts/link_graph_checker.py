@@ -29,7 +29,8 @@ class LinkExtractor(HTMLParser):
 
 def check_link_graph(root_dir: Path | str = ".", strict: bool = False) -> dict:
     root = Path(root_dir).resolve()
-    html_files = [p for p in root.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)]
+    excluded_parts = {".git", ".github", ".agents", ".gemini", ".gsd", "venv", "node_modules", "data", "drafts", "tests"}
+    html_files = [p for p in root.glob("**/*.html") if not any(part in excluded_parts or part.startswith((".", "venv", "node_modules")) for part in p.parts)]
 
     if not html_files:
         print("[LinkGraph] No HTML files found.")
@@ -59,8 +60,16 @@ def check_link_graph(root_dir: Path | str = ".", strict: bool = False) -> dict:
             if href.startswith(("http://", "https://")):
                 if not href.startswith("https://aidigitools.tech"):
                     continue
-                # Canonical self-referencing links
-                href_clean = href.replace("https://aidigitools.tech/", "")
+                # Canonical self-referencing links from site root
+                sub = href[len("https://aidigitools.tech"):]
+                if not sub or sub == "/":
+                    href_clean = "/index.html"
+                elif sub.startswith("/#"):
+                    href_clean = "/index.html" + sub[1:]
+                elif not sub.startswith("/"):
+                    href_clean = "/" + sub
+                else:
+                    href_clean = sub
             elif href.startswith(("mailto:", "tel:", "javascript:", "wa.me", "https://wa.me")):
                 continue
             else:
