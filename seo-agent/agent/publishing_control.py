@@ -440,6 +440,13 @@ class PublishingControlEngine:
         except Exception:
             pass
 
+        # Update blog.html hub
+        try:
+            from scripts.update_blog_hub import update_blog_hub
+            update_blog_hub(self.workspace_root)
+        except Exception:
+            pass
+
         # Search Engine Discovery via IndexNow
         discovery_telemetry = None
         try:
@@ -478,6 +485,23 @@ class PublishingControlEngine:
 
         with open(self.control_ledger_path, "w", encoding="utf-8") as f:
             json.dump(c_ledger, f, indent=2)
+
+        # Dispatch publication email notification to website owner/admin
+        try:
+            from agent.email_notifier import BlogEmailNotifier
+            email_notifier = BlogEmailNotifier(workspace_root=self.workspace_root)
+            email_res = email_notifier.send_publication_alert({
+                "title": title,
+                "slug": slug,
+                "canonical_url": canonical_url,
+                "article_id": metadata.get("article_id", "ART-BLOG"),
+                "published_at_pkt": now_pkt,
+                "model_used": metadata.get("model_used", "Gemini API"),
+                "content_hash": content_hash
+            })
+            pub_record["email_notification"] = email_res
+        except Exception as e:
+            pub_record["email_notification"] = {"sent": False, "error": str(e)}
 
         return pub_record
 

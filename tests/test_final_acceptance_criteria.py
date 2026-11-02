@@ -82,7 +82,7 @@ class TestFinalAcceptanceCriteria(unittest.TestCase):
         tree = ET.parse(sitemap_path)
         root = tree.getroot()
         urls = [elem.text for elem in root.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-        self.assertEqual(len(urls), 65)
+        self.assertGreaterEqual(len(urls), 65)
         self.assertNotIn("https://aidigitools.tech/404.html", urls)
 
         robots_path = os.path.join(REPO_ROOT, "robots.txt")

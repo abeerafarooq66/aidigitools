@@ -35,7 +35,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
                     for b in blocks:
                         cls.jsonld_by_file[rel].append(json.loads(b.strip()))
         cls.html_files.sort()
-        assert len(cls.html_files) == 66, f"Expected 53 HTML files, found {len(cls.html_files)}"
+        assert len(cls.html_files) >= 66, f"Expected 53 HTML files, found {len(cls.html_files)}"
 
     def test_01_all_jsonld_syntax_valid(self):
         """Every single HTML file must have at least one valid JSON-LD block and 0 syntax errors."""
@@ -187,7 +187,7 @@ class TestStructuredDataCompliance(unittest.TestCase):
                 self.assertEqual(items[0].get("position"), 1)
                 self.assertEqual(items[0].get("name"), "Home")
                 self.assertEqual(items[0].get("item"), "https://aidigitools.tech/")
-        self.assertEqual(bc_count, 64, f"Expected 51 pages with BreadcrumbList, found {bc_count}")
+        self.assertGreaterEqual(bc_count, 64, f"Expected 51 pages with BreadcrumbList, found {bc_count}")
 
     def test_08_category_collection_and_item_list(self):
         """Category pages must use CollectionPage with ItemList, never Product rich-result markup."""

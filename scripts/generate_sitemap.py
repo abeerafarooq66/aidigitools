@@ -11,6 +11,7 @@ def generate_sitemap(root_dir: Path | str = "."):
     # 1. Primary Root Pages
     root_pages = [
         ("index.html", "", "daily", "1.0"),
+        ("blog.html", "blog.html", "daily", "0.9"),
         ("deals.html", "deals.html", "daily", "0.9"),
         ("about.html", "about.html", "monthly", "0.8"),
         ("contact.html", "contact.html", "monthly", "0.8"),

@@ -326,7 +326,7 @@ class TestGeminiGenerationQualityGateRegression(unittest.TestCase):
         }
 
         with patch("agent.gemini_generator.GeminiArticleGenerator", return_value=mock_generator_instance):
-            result = self.scheduler.execute_full_content_pipeline()
+            result = self.scheduler.execute_full_content_pipeline(force_cadence=True)
             self.assertEqual(result["pipeline_status"], "GENERATION_FAILED")
             self.assertFalse(result["article_generated"])
             self.assertFalse(result.get("preview_created", False))

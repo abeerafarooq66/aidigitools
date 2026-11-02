@@ -118,6 +118,7 @@ class QualityGateEngine:
 
     def _ensure_queue_file(self) -> None:
         """Ensures human review queue JSON exists."""
+        self.data_dir.mkdir(parents=True, exist_ok=True)
         if not self.human_review_queue_path.exists():
             default_queue = {
                 "queue_version": "1.0.0",
@@ -320,8 +321,11 @@ class QualityGateEngine:
         # Gate 4: No Cannibalization / Intent Duplication
         # ----------------------------------------------------------------------
         dup_found = False
-        if PUBLICATION_LEDGER_PATH.exists():
-            with open(PUBLICATION_LEDGER_PATH, "r", encoding="utf-8") as f:
+        ledger_path = self.data_dir / "publication_ledger.json"
+        if not ledger_path.exists() and self.workspace_root == WORKSPACE_ROOT:
+            ledger_path = PUBLICATION_LEDGER_PATH
+        if ledger_path.exists():
+            with open(ledger_path, "r", encoding="utf-8") as f:
                 p_ledger = json.load(f)
             for pub in p_ledger.get("publications", []):
                 if pub.get("slug") != slug and pub.get("primary_keyword", "").lower() == primary_kw.lower():

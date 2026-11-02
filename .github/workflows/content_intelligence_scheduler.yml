@@ -109,7 +109,7 @@ jobs:
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
           git config --global user.email "cloud-agent@aidigitools.tech"
-          git add blog/ compare/ guides/ best/ sitemap.xml llms.txt llms-full.txt audit_reports/ data/ || true
+          git add blog/ blog.html compare/ guides/ best/ sitemap.xml llms.txt llms-full.txt audit_reports/ data/ || true
           if git diff --staged --quiet; then
             echo "No ledger or cache state changes to commit."
           else

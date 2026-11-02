@@ -27,8 +27,12 @@ jobs:
           GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
         run: |
           python -m seo-agent.agent.automation_scheduler --mode run-pipeline
+          python scripts/update_blog_hub.py
           python scripts/generate_sitemap.py
           python -m aio_agent sync-llms
           python scripts/link_graph_checker.py --strict
@@ -37,11 +41,11 @@ jobs:
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
           git config --global user.email "cloud-agent@aidigitools.tech"
-          git add blog/ compare/ guides/ best/ sitemap.xml llms.txt llms-full.txt data/ audit_reports/ || true
+          git add blog/ blog.html compare/ guides/ best/ sitemap.xml llms.txt llms-full.txt data/ audit_reports/ || true
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore(publisher): persist published articles, preview, sitemap and content report [skip ci]"
+            git commit -m "chore(publisher): persist published articles, blog hub, sitemap and content report [skip ci]"
             git pull --rebase --autostash origin main || true
             git push origin main
           fi

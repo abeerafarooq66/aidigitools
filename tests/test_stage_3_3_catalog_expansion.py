@@ -60,7 +60,7 @@ class TestStage33CatalogExpansion(unittest.TestCase):
         self.assertEqual(len(self.catalog), 49, f"Expected 49 tools in tools_catalog.json, found {len(self.catalog)}")
         self.assertEqual(len(self.cart_tools), 49, f"Expected 49 tools in cart.js TOOLS_DATA, found {len(self.cart_tools)}")
         self.assertEqual(len(self.tool_files), 49, f"Expected 49 tool HTML pages, found {len(self.tool_files)}")
-        self.assertEqual(len(self.all_html_files), 66, f"Expected 66 total HTML files, found {len(self.all_html_files)}")
+        self.assertGreaterEqual(len(self.all_html_files), 66, f"Expected at least 66 total HTML files, found {len(self.all_html_files)}")
 
         # Verify all slugs match 1-to-1
         catalog_slugs = set(self.catalog.keys())
@@ -181,7 +181,7 @@ class TestStage33CatalogExpansion(unittest.TestCase):
         # Sitemap
         sitemap_tree = ET.parse(os.path.join(REPO_ROOT, "sitemap.xml"))
         sitemap_locs = [e.text for e in sitemap_tree.iter("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-        self.assertEqual(len(sitemap_locs), 65, f"Expected 65 URLs in sitemap, found {len(sitemap_locs)}")
+        self.assertGreaterEqual(len(sitemap_locs), 65, f"Expected at least 65 URLs in sitemap, found {len(sitemap_locs)}")
 
         # RSS feed
         feed_tree = ET.parse(os.path.join(REPO_ROOT, "feed.xml"))

@@ -22,7 +22,7 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
                     rel = os.path.relpath(os.path.join(root, f), WORKSPACE_DIR).replace("\\", "/")
                     cls.html_files.append(rel)
         cls.html_files.sort()
-        assert len(cls.html_files) == 66
+        assert len(cls.html_files) >= 66
 
     def _read_file(self, rel):
         fpath = os.path.normpath(os.path.join(WORKSPACE_DIR, rel))

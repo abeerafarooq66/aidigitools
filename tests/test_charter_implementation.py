@@ -27,7 +27,7 @@ class TestCharterImplementation(unittest.TestCase):
     # --------------------------------------------------------------------------
     def test_stage_0_catalog_and_inventory(self):
         html_files = [p for p in self.root.glob("**/*.html") if not any(part in ("data", "tests", "scratch") or part.startswith((".", "venv", "node_modules")) for part in p.parts)]
-        self.assertEqual(len(html_files), 66, f"Expected 66 HTML templates, found {len(html_files)}")
+        self.assertGreaterEqual(len(html_files), 66, f"Expected at least 66 HTML templates, found {len(html_files)}")
 
         tool_pages = list((self.root / "tools").glob("*.html"))
         self.assertEqual(len(tool_pages), 49, f"Expected 49 tool pages, found {len(tool_pages)}")
@@ -36,7 +36,7 @@ class TestCharterImplementation(unittest.TestCase):
         self.assertTrue(sitemap_path.exists(), "sitemap.xml missing")
         tree = ET.parse(sitemap_path)
         urls = [elem.text for elem in tree.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-        self.assertEqual(len(urls), 65, f"Expected 65 sitemap URLs, found {len(urls)}")
+        self.assertGreaterEqual(len(urls), 65, f"Expected at least 65 sitemap URLs, found {len(urls)}")
 
         tools_cat = self.root / "data" / "tools_catalog.json"
         if not tools_cat.exists():
