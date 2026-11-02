@@ -356,6 +356,35 @@ class TestGeminiGenerationQualityGateRegression(unittest.TestCase):
         )
         self.assertTrue(gate_res["gate_results"]["GATE_01_REAL_READER_PROBLEM"]["passed"])
 
+    def test_12_model_ranking_and_single_h1_normalization(self):
+        """
+        Invariant 12: Gemini candidate models are prioritized with Flash and Pro first,
+        and articles with missing or multiple <h1> are normalized to exactly one <h1>.
+        """
+        gen = GeminiArticleGenerator(workspace_root=self.workspace_root)
+        models = [
+            "models/gemma-4-26b-a4b-it",
+            "models/gemini-1.5-pro-latest",
+            "models/gemini-1.5-flash",
+            "models/gemini-2.0-flash",
+            "models/random-other-model"
+        ]
+        ranked = gen._rank_candidate_models(models)
+        self.assertEqual(ranked[0], "models/gemini-2.0-flash")
+        self.assertEqual(ranked[1], "models/gemini-1.5-flash")
+        self.assertEqual(ranked[2], "models/gemini-1.5-pro-latest")
+
+        # Heading normalization test: Markdown # heading converts to single <h1>
+        raw_markdown_heading = """<!DOCTYPE html><html><body>
+# Cursor AI vs GitHub Copilot
+<p class="quick-answer">Cursor AI and GitHub Copilot are leading AI code assistants offering intelligent autocompletion and codebase indexing. In Pakistan, AIDigiTools provides verified subscriptions starting from Rs. 1,500 PKR ($5.50) with 15-minute digital workspace delivery via WhatsApp concierge and a 30-day replacement warranty.</p>
+</body></html>"""
+        normalized = gen._normalize_headings(raw_markdown_heading, "Cursor AI vs GitHub Copilot")
+        import re
+        h1s = re.findall(r'<h1[^>]*>(.*?)</h1>', normalized, re.IGNORECASE)
+        self.assertEqual(len(h1s), 1)
+        self.assertIn("Cursor AI vs GitHub Copilot", h1s[0])
+
 
 if __name__ == "__main__":
     unittest.main()

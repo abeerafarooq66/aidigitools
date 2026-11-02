@@ -419,16 +419,7 @@ class GeminiArticleGenerator:
 
         # Step 2: Select candidate model in priority order and verify endpoint
         supported = discovery["supported_models"]
-        candidate_models = []
-        for pref in PREFERRED_MODELS:
-            clean_pref = pref.replace("models/", "")
-            for s in supported:
-                if s == pref or s.replace("models/", "") == clean_pref:
-                    if s not in candidate_models:
-                        candidate_models.append(s)
-        for s in supported:
-            if s not in candidate_models:
-                candidate_models.append(s)
+        candidate_models = self._rank_candidate_models(supported)
 
         selected_model = None
         last_endpoint_error = None
@@ -706,9 +697,83 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
 </body>
 </html>"""
 
-        # Post-processing: normalize quick-answer capsule and metadata metrics
+        # Post-processing: normalize headings, quick-answer capsule, and metadata metrics
+        text = self._normalize_headings(text, primary_kw)
         text = self._normalize_quick_answer(text, primary_kw, comp_context)
         text = self._normalize_seo_metadata(text, primary_kw)
+        return text
+
+    def _rank_candidate_models(self, supported: List[str]) -> List[str]:
+        """
+        Ranks candidate models prioritizing Gemini Flash and Pro models:
+        1. gemini-2.0-flash (any variant)
+        2. gemini-1.5-flash (any variant)
+        3. gemini-1.5-pro (any variant)
+        4. Any model with 'gemini' in its name
+        5. Any other supported models (e.g. gemma)
+        """
+        tier_1 = []  # gemini-2.0-flash
+        tier_2 = []  # gemini-1.5-flash
+        tier_3 = []  # gemini-1.5-pro
+        tier_4 = []  # other gemini models
+        tier_5 = []  # everything else
+
+        for m in supported:
+            clean = m.lower()
+            if "gemini-2.0-flash" in clean:
+                tier_1.append(m)
+            elif "gemini-1.5-flash" in clean:
+                tier_2.append(m)
+            elif "gemini-1.5-pro" in clean:
+                tier_3.append(m)
+            elif "gemini" in clean:
+                tier_4.append(m)
+            else:
+                tier_5.append(m)
+
+        ranked = []
+        for tier in [tier_1, tier_2, tier_3, tier_4, tier_5]:
+            for m in tier:
+                if m not in ranked:
+                    ranked.append(m)
+        return ranked
+
+    def _normalize_headings(self, html_content: str, primary_kw: str) -> str:
+        """
+        Ensures the HTML document contains exactly one <h1> tag.
+        Converts markdown # headers to <h1> and ## to <h2>, or inserts <h1> if missing.
+        Demotes extra <h1> tags to <h2> to maintain strict single-h1 hierarchy.
+        """
+        text = html_content
+
+        # Convert markdown headers if present
+        text = re.sub(r'^\s*###\s+(.+)$', r'<h3>\1</h3>', text, flags=re.MULTILINE)
+        text = re.sub(r'^\s*##\s+(.+)$', r'<h2>\1</h2>', text, flags=re.MULTILINE)
+        if not re.search(r'<h1[^>]*>.*?</h1>', text, re.IGNORECASE | re.DOTALL):
+            m_h1 = re.search(r'^\s*#\s+(.+)$', text, re.MULTILINE)
+            if m_h1:
+                h1_text = m_h1.group(1).strip()
+                text = text[:m_h1.start()] + f"<h1>{h1_text}</h1>" + text[m_h1.end():]
+
+        # Check existing <h1> count
+        h1_matches = list(re.finditer(r'<h1[^>]*>(.*?)</h1>', text, re.IGNORECASE | re.DOTALL))
+        if not h1_matches:
+            # Inject <h1> into article or body
+            h1_html = f"\n    <h1>{primary_kw}</h1>"
+            if re.search(r'<article[^>]*>', text, re.IGNORECASE):
+                text = re.sub(r'(<article[^>]*>)', r'\1' + h1_html, text, count=1, flags=re.IGNORECASE)
+            elif re.search(r'<body[^>]*>', text, re.IGNORECASE):
+                text = re.sub(r'(<body[^>]*>)', r'\1' + h1_html, text, count=1, flags=re.IGNORECASE)
+            else:
+                text = h1_html + "\n" + text
+        elif len(h1_matches) > 1:
+            # Keep first <h1>, demote remaining <h1> to <h2>
+            first_end = h1_matches[0].end()
+            before = text[:first_end]
+            after = text[first_end:]
+            after = re.sub(r'<h1([^>]*)>(.*?)</h1>', r'<h2\1>\2</h2>', after, flags=re.IGNORECASE | re.DOTALL)
+            text = before + after
+
         return text
 
     def _normalize_quick_answer(
