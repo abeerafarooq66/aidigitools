@@ -48,7 +48,7 @@ class GeminiArticleGenerator:
         self,
         api_key: Optional[str] = None,
         workspace_root: Optional[Path] = None,
-        timeout: float = 45.0,
+        timeout: float = 120.0,
         max_retries: int = 3
     ):
         if isinstance(api_key, Path):
