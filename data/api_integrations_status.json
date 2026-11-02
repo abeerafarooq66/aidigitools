@@ -1,7 +1,7 @@
 {
   "ledger_version": "1.2.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_audit_pkt": "2026-11-02 12:03:47 PKT",
+  "last_audit_pkt": "2026-11-02 12:19:48 PKT",
   "least_privilege_policy": {
     "google_search_console": "https://www.googleapis.com/auth/webmasters.readonly",
     "google_analytics_4": "https://www.googleapis.com/auth/analytics.readonly",
@@ -14,7 +14,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "Live HTTPS file verified and matching key",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true
     },
     "bing_webmaster_api": {
@@ -22,7 +22,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "Authenticated HTTP 200 OK (Daily quota: 41)",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true
     },
     "google_search_console": {
@@ -30,7 +30,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "Service Account verified. Property https://aidigitools.tech/ accessible (Inspection API: VERIFIED_200). Note: Read access does not imply sitemap submitted.",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true,
       "read_property_access": "VERIFIED_200",
       "url_inspection_api_status": "VERIFIED_200",
@@ -44,7 +44,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "GA4 Data API verified for Property 561800932",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true
     },
     "gemini_api": {
@@ -52,15 +52,15 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "API authenticated (50 models discovered)",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true
     },
     "pagespeed_insights": {
       "service": "pagespeed_insights",
       "status": "CONNECTED",
       "is_connected": true,
-      "details": "PageSpeed Insights parsed Lighthouse JSON successfully: score 97/100 (FCP: 1.1\u00a0s, LCP: 1.1\u00a0s)",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "details": "PageSpeed Insights parsed Lighthouse JSON successfully: score 98/100 (FCP: 1.1\u00a0s, LCP: 1.1\u00a0s)",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true
     },
     "crux_api": {
@@ -68,7 +68,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "CrUX API authenticated; Origin has insufficient 28-day traffic density for CrUX (origin traffic data unavailable, not zero)",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": false,
       "traffic_density_state": "INSUFFICIENT_28_DAY_TRAFFIC",
       "api_key_valid": true
@@ -78,7 +78,7 @@
       "status": "CONFIGURED_NOT_TESTED",
       "is_connected": false,
       "details": "Google Ads configured (Developer Token: [SET], Client CID: 2913849282, Manager MCC: 1826247360) \u2014 genuine read query requires OAuth user refresh token (marked CONFIGURED_NOT_TESTED, never VERIFIED without live query)",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": false
     },
     "google_search_autocomplete": {
@@ -86,7 +86,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "Google Search Autocomplete active (15 real query suggestions discovered)",
-      "verified_at_pkt": "2026-11-02 12:03:47 PKT",
+      "verified_at_pkt": "2026-11-02 12:19:48 PKT",
       "data_returned": true
     }
   }
