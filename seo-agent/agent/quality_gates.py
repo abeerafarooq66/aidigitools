@@ -286,9 +286,25 @@ class QualityGateEngine:
         # Gate 3: Search Intent Accuracy
         # ----------------------------------------------------------------------
         has_table = "<table" in html_content.lower()
-        if article_type == "comparison":
-            g3_pass = has_table and "vs" in title.lower()
-            details = "Comparison intent matched with structured comparison table and head-to-head title."
+        if article_type == "comparison" or "vs" in title.lower() or "vs" in slug.lower():
+            # A table and 'vs' in a title must not be enough to pass comparison intent.
+            # Must verify that BOTH compared entities are substantively analyzed.
+            comp_terms = re.split(r'\b(?:vs\.?|versus)\b', title if "vs" in title.lower() else slug.replace("-", " "), flags=re.IGNORECASE)
+            has_both_entities = False
+            if len(comp_terms) >= 2:
+                term_1 = comp_terms[0].strip().lower()
+                term_2 = comp_terms[1].strip().lower()
+                t1_toks = set(re.findall(r'[a-z0-9]+', term_1)) - {"ai", "tools", "tool", "app", "pro", "plus", "the"}
+                t2_toks = set(re.findall(r'[a-z0-9]+', term_2)) - {"ai", "tools", "tool", "app", "pro", "plus", "the"}
+                has_t1 = any(t in html_content.lower() for t in t1_toks) if t1_toks else True
+                has_t2 = any(t in html_content.lower() for t in t2_toks) if t2_toks else True
+                has_both_entities = has_t1 and has_t2
+
+            tr_count = len(re.findall(r'<tr[^>]*>', html_content, re.IGNORECASE))
+            has_sufficient_rows = tr_count >= 3  # Header + at least 2 comparison data rows
+
+            g3_pass = has_table and has_both_entities and has_sufficient_rows
+            details = f"Comparison intent matched with dual-entity analysis and {tr_count} comparison table rows." if g3_pass else "Comparison article lacks concrete dual-entity rows or substantive analysis."
         else:
             g3_pass = True
             details = f"Intent '{article_type}' matched with structured educational content."
@@ -298,7 +314,7 @@ class QualityGateEngine:
             "details": details
         }
         if not g3_pass:
-            critical_failures.append("GATE_03_SEARCH_INTENT_ACCURACY: Content structure does not fulfill user search intent.")
+            critical_failures.append("GATE_03_SEARCH_INTENT_ACCURACY: Comparison article lacks dual-product data rows or substantive comparison analysis.")
 
         # ----------------------------------------------------------------------
         # Gate 4: No Cannibalization / Intent Duplication
@@ -323,17 +339,24 @@ class QualityGateEngine:
         # ----------------------------------------------------------------------
         # Gate 5: Original Value & Real Research
         # ----------------------------------------------------------------------
+        is_fallback = meta.get("is_fallback") or (meta.get("generation_method") == "FALLBACK_HEURISTIC") or (meta.get("is_gemini_generated") is False)
+        has_fallback_marker = bool(re.search(r'\b(?:pro multi-seat|is an advanced software solution designed for creative professionals and digital agencies seeking scalable productivity)\b', html_content, re.IGNORECASE))
+
         has_table_or_matrix = "<table" in html_content.lower() or "comparison matrix" in html_content.lower() or "<ol" in html_content.lower()
         has_pricing_data = bool(re.search(r'\b(?:pkr|rs\.?|\$)\b', html_content, re.IGNORECASE))
         has_use_cases_or_pros_or_steps = bool(re.search(r'\b(?:pros|cons|strengths|use cases?|recommended|ideal for|best for|how to|steps?|guide|workflow)\b', html_content, re.IGNORECASE))
-        g5_pass = has_table_or_matrix and has_pricing_data and has_use_cases_or_pros_or_steps
+
+        g5_pass = has_table_or_matrix and has_pricing_data and has_use_cases_or_pros_or_steps and not is_fallback and not has_fallback_marker
         gate_results["GATE_05_ORIGINAL_VALUE"] = {
             "passed": g5_pass,
             "score": 10 if g5_pass else 0,
-            "details": f"Contains quantitative matrix/table={has_table_or_matrix}, localized pricing={has_pricing_data}, use cases/steps={has_use_cases_or_pros_or_steps}."
+            "details": "Contains genuine original research and comparison matrix." if g5_pass else ("Fallback heuristic article detected; prohibited from approval." if (is_fallback or has_fallback_marker) else "Missing quantitative matrix/table or localized pricing.")
         }
         if not g5_pass:
-            critical_failures.append("GATE_05_ORIGINAL_VALUE: Missing quantitative comparison table/matrix, localized pricing, or use case breakdown.")
+            if is_fallback or has_fallback_marker:
+                critical_failures.append("GATE_05_ORIGINAL_VALUE: Fallback heuristic article detected. Fallback content is strictly prohibited from receiving APPROVED status.")
+            else:
+                critical_failures.append("GATE_05_ORIGINAL_VALUE: Missing quantitative comparison table/matrix, localized pricing, or use case breakdown.")
 
         # ----------------------------------------------------------------------
         # Gate 6: Sources & Primary Documentation
@@ -368,14 +391,53 @@ class QualityGateEngine:
         # ----------------------------------------------------------------------
         has_pkr = bool(re.search(r'\b(?:pkr|rs\.?)\s*[\d,]+', html_content, re.IGNORECASE))
         has_usd = bool(re.search(r'\$\s*[\d,]+', html_content))
-        g8_pass = has_pkr and has_usd
+
+        pricing_matched = True
+        pricing_errors = []
+        if CENTRAL_PRODUCT_REGISTRY_PATH.exists():
+            try:
+                with open(CENTRAL_PRODUCT_REGISTRY_PATH, "r", encoding="utf-8") as f:
+                    p_reg = json.load(f)
+                    p_list = p_reg if isinstance(p_reg, list) else p_reg.get("products", [])
+
+                    article_kw = (primary_kw + " " + title + " " + slug).lower()
+                    for p in p_list:
+                        p_slug = p.get("slug", "").lower()
+                        p_name = p.get("canonical_product_name", "").lower()
+                        pkr_val = p.get("aidigitools_offer_price_pkr")
+
+                        is_ref = False
+                        if p_slug in article_kw or p_name in article_kw:
+                            is_ref = True
+                        else:
+                            clean_tokens = set(re.findall(r'[a-z0-9]+', p_slug)) - {"ai", "tools", "tool", "app", "pro", "plus", "the"}
+                            if clean_tokens and clean_tokens.issubset(set(re.findall(r'[a-z0-9]+', article_kw))):
+                                is_ref = True
+
+                        if is_ref and pkr_val:
+                            expected_pkr = f"{pkr_val:,}"
+                            if expected_pkr not in html_content and str(pkr_val) not in html_content:
+                                pricing_matched = False
+                                pricing_errors.append(f"Price for '{p.get('canonical_product_name')}' contradicts registry (expected Rs. {expected_pkr} PKR).")
+
+                            if "cursor" in p_slug:
+                                if "4,500" in html_content or "4500" in html_content:
+                                    pricing_matched = False
+                                    pricing_errors.append("Fabricated price Rs. 4,500 detected for Cursor Pro (central registry requires Rs. 3,800).")
+            except Exception:
+                pass
+
+        g8_pass = has_pkr and has_usd and pricing_matched
         gate_results["GATE_08_PRICING_VERIFICATION"] = {
             "passed": g8_pass,
             "score": 10 if g8_pass else 0,
-            "details": f"Separates localized PKR concierge pricing from upstream USD pricing (PKR={has_pkr}, USD={has_usd})."
+            "details": f"Separates localized PKR concierge pricing from upstream USD pricing (PKR={has_pkr}, USD={has_usd}). All prices match central registry." if g8_pass else f"Pricing error: {'; '.join(pricing_errors) if pricing_errors else 'Missing PKR or USD pricing.'}"
         }
         if not g8_pass:
-            critical_failures.append("GATE_08_PRICING_VERIFICATION: Missing clear distinction between PKR concierge price and USD provider price.")
+            if pricing_errors:
+                critical_failures.append(f"GATE_08_PRICING_VERIFICATION: {'; '.join(pricing_errors)}")
+            else:
+                critical_failures.append("GATE_08_PRICING_VERIFICATION: Missing clear distinction between PKR concierge price and USD provider price.")
 
         # ----------------------------------------------------------------------
         # Gate 9: Disclosed Comparison Methodology & Plan Parity
@@ -398,16 +460,28 @@ class QualityGateEngine:
         # ----------------------------------------------------------------------
         # Gate 10: No Invented Hands-On Tests or Fabricated Benchmarks
         # ----------------------------------------------------------------------
-        has_tier_badge = bool(re.search(r'(?:tier\s+[abc]:|evidence:|research-based|tested by|benchmark|verified (?:technical )?releases|hands-on)', html_content, re.IGNORECASE))
-        has_fake_benchmarks = bool(re.search(r'\b(?:we\s+tested\s+on\s+1000\s+users|in\s+our\s+hardware\s+cluster\s+of\s+100\s+gpus)\b', html_content, re.IGNORECASE))
-        g10_pass = has_tier_badge and not has_fake_benchmarks
+        has_tier_badge = bool(re.search(r'(?:tier\s+[abc]:|evidence:|research-based|verified (?:technical )?documentation)', html_content, re.IGNORECASE))
+        fake_bench_patterns = [
+            r'\btested\s+on\s+\d+\s+(?:developers|users|teams)\b',
+            r'\bin\s+our\s+(?:hardware\s+cluster|secret\s+benchmark|in-house\s+lab)\b',
+            r'\bmeasured\s+99\.\d+%',
+            r'\b10x\s+(?:faster|speed|productivity)\b',
+            r'\b(?:100%\s+money[- ]back\s+guarantee|instant\s+cash\s+refund|lifetime\s+warranty)\b'
+        ]
+        detected_fakes = []
+        for pat in fake_bench_patterns:
+            m = re.findall(pat, html_content, re.IGNORECASE)
+            if m:
+                detected_fakes.extend(m)
+
+        g10_pass = has_tier_badge and (len(detected_fakes) == 0)
         gate_results["GATE_10_NO_INVENTED_TESTS"] = {
             "passed": g10_pass,
             "score": 10 if g10_pass else 0,
-            "details": "Features transparent evidence classification; zero fabricated testing claims." if g10_pass else "Missing evidence classification tier or contains fabricated testing claims."
+            "details": "Features transparent evidence classification; zero fabricated testing or benchmark claims." if g10_pass else f"Fabricated claims detected: {detected_fakes}"
         }
         if not g10_pass:
-            critical_failures.append("GATE_10_NO_INVENTED_TESTS: Missing evidence classification tier badge (Tier A/B/C) or invented tests detected.")
+            critical_failures.append(f"GATE_10_NO_INVENTED_TESTS: Missing evidence tier badge or contains unverified benchmark/performance claim: {detected_fakes}")
 
         # ----------------------------------------------------------------------
         # Gate 11: Accurate CTAs & WhatsApp Concierge Preservation
@@ -505,16 +579,22 @@ class QualityGateEngine:
         # ----------------------------------------------------------------------
         # Gate 17: Canonical, Sitemap & Indexability Integrity
         # ----------------------------------------------------------------------
-        has_canonical = bool(re.search(r'<link[^>]*rel=["\']canonical["\'][^>]*href=["\']https://aidigitools\.tech/[^"\']+["\']', html_content, re.IGNORECASE))
+        expected_canonical = meta.get("canonical_url", "")
+        canon_m = re.search(r'<link[^>]*rel=["\']canonical["\'][^>]*href=["\'](https://aidigitools\.tech/[^"\']+)["\']', html_content, re.IGNORECASE)
+        has_canonical = bool(canon_m)
+        canon_matches_expected = True
+        if expected_canonical and canon_m:
+            canon_matches_expected = (canon_m.group(1).strip() == expected_canonical.strip())
         has_robots_index = "noindex" not in html_content.lower()
-        g17_pass = has_canonical and has_robots_index
+
+        g17_pass = has_canonical and canon_matches_expected and has_robots_index
         gate_results["GATE_17_CANONICAL_AND_INDEXABILITY"] = {
             "passed": g17_pass,
             "score": 10 if g17_pass else 0,
-            "details": f"Canonical URL verified; robots directives permit indexation." if g17_pass else "Missing HTTPS canonical tag or contains noindex directive."
+            "details": f"Canonical URL verified matching metadata ({expected_canonical}); robots directives permit indexation." if g17_pass else "Missing/mismatched canonical tag or contains noindex directive."
         }
         if not g17_pass:
-            critical_failures.append("GATE_17_CANONICAL_AND_INDEXABILITY: Canonical URL missing/invalid or page blocked from indexing.")
+            critical_failures.append(f"GATE_17_CANONICAL_AND_INDEXABILITY: Canonical URL missing, mismatched with expected canonical, or page blocked from indexing.")
 
         # ----------------------------------------------------------------------
         # Gate 18: Mobile Responsiveness & Performance

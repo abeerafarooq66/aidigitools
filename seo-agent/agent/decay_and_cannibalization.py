@@ -205,7 +205,7 @@ class DecayAndCannibalizationEngine:
         if not html_files:
             html_files = []
             for p in ROOT_DIR.glob("**/*.html"):
-                if any(part in p.parts for part in [".git", "tests", "scratch", ".venv"]):
+                if any(part in p.parts for part in [".git", "tests", "scratch", ".venv", "data"]):
                     continue
                 html_files.append(p.relative_to(ROOT_DIR).as_posix())
 

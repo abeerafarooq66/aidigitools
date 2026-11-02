@@ -14,7 +14,8 @@
         "topic_id": "TOPIC-001",
         "primary_keyword": "cursor ai vs github copilot"
       },
-      "preview_path": "/home/runner/work/aidigitools/aidigitools/data/previews/cursor-ai-vs-github-copilot-comparison.html",
+      "preview_path": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
+      "preview_file_path": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
       "current_phase": "PHASE_1_SUPERVISED",
       "approval_required": true,
       "decision": "HELD_FOR_HUMAN_APPROVAL",
@@ -29,5 +30,5 @@
   ],
   "approved_history": [],
   "rejected_history": [],
-  "last_updated_pkt": "2026-11-02 12:22:59 PKT"
+  "last_updated_pkt": "2026-11-02 13:18:46 PKT"
 }

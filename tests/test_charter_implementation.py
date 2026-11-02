@@ -26,7 +26,7 @@ class TestCharterImplementation(unittest.TestCase):
     # STAGE 0: Repository, Catalog, Website Pages & Baseline SEO
     # --------------------------------------------------------------------------
     def test_stage_0_catalog_and_inventory(self):
-        html_files = [p for p in self.root.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts)]
+        html_files = [p for p in self.root.glob("**/*.html") if not any(part in ("data", "tests", "scratch") or part.startswith((".", "venv", "node_modules")) for part in p.parts)]
         self.assertEqual(len(html_files), 66, f"Expected 66 HTML templates, found {len(html_files)}")
 
         tool_pages = list((self.root / "tools").glob("*.html"))

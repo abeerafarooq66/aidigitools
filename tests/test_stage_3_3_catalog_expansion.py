@@ -46,7 +46,7 @@ class TestStage33CatalogExpansion(unittest.TestCase):
 
         cls.all_html_files = []
         for root, dirs, files in os.walk(REPO_ROOT):
-            if any(p in root for p in [".git", "tests", "scratch"]):
+            if any(p in root for p in [".git", "tests", "scratch", "data"]):
                 continue
             for file in files:
                 if file.endswith(".html"):
@@ -143,7 +143,7 @@ class TestStage33CatalogExpansion(unittest.TestCase):
         ]
         public_exts = (".html", ".js", ".json", ".xml", ".txt")
         for root, dirs, files in os.walk(REPO_ROOT):
-            if any(p in root for p in [".git", "tests", "scratch"]):
+            if any(p in root for p in [".git", "tests", "scratch", "data"]):
                 continue
             for f in files:
                 if f.endswith(public_exts):

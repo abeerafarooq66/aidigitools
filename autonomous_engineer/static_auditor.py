@@ -21,7 +21,7 @@ class StaticAuditor:
         """Discovers all valid HTML files excluding tests, scratch, and git dirs."""
         html_files = []
         for root, dirs, files in os.walk(self.root):
-            if any(p in root for p in [".git", "tests", "scratch", ".github"]):
+            if any(p in root for p in [".git", "tests", "scratch", ".github", "data"]):
                 continue
             for f in files:
                 if f.endswith(".html"):

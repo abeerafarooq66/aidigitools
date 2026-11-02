@@ -6,8 +6,8 @@ using the official Google Generative Language API (Gemini).
 
 Strictly adheres to:
 - Google AI Optimization & Search Essentials Guidelines
-- AIDigiTools Master Operating System & Architecture Charter (Sections 4, 5, 7, 11)
-- Quality Gates (20 Gates): Single H1, 35-70 word .quick-answer, PKR/USD pricing,
+- AIDigiTools Master Operating System & Architecture Charter
+- Quality Gates (20 Gates): Single H1, 35-70 word .quick-answer, verified PKR/USD pricing,
   WhatsApp order routing, zero fabricated benchmarks, zero private wholesale tokens.
 """
 
@@ -25,10 +25,11 @@ WORKSPACE_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = WORKSPACE_ROOT / "data"
 CENTRAL_PRODUCT_REGISTRY_PATH = DATA_DIR / "central_product_registry.json"
 
-DEFAULT_MODELS = [
-    "gemini-2.5-flash",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash"
+PREFERRED_MODELS = [
+    "models/gemini-2.0-flash",
+    "models/gemini-1.5-flash",
+    "models/gemini-1.5-pro",
+    "models/gemini-1.0-pro"
 ]
 
 OFFICIAL_WHATSAPP = "03326861112"
@@ -50,8 +51,15 @@ class GeminiArticleGenerator:
         timeout: float = 45.0,
         max_retries: int = 3
     ):
+        if isinstance(api_key, Path):
+            workspace_root = api_key
+            api_key = None
         self.workspace_root = Path(workspace_root or WORKSPACE_ROOT)
-        self.api_key = (api_key or os.environ.get("GEMINI_API_KEY", "")).strip().strip('"').strip("'").strip()
+        raw_key = api_key or os.environ.get("GEMINI_API_KEY", "")
+        if isinstance(raw_key, str):
+            self.api_key = raw_key.strip().strip('"').strip("'").strip()
+        else:
+            self.api_key = ""
         self.timeout = timeout
         self.max_retries = max_retries
         self.products_registry = self._load_product_registry()
@@ -71,32 +79,270 @@ class GeminiArticleGenerator:
                 pass
         return []
 
+    # --------------------------------------------------------------------------
+    # Product Facts & Comparison Extraction
+    # --------------------------------------------------------------------------
     def get_verified_product_context(self, keyword_or_slug: str) -> Dict[str, Any]:
-        """Finds matching product facts in the verified registry."""
-        kw_lower = keyword_or_slug.lower()
+        """
+        Finds matching product facts in the verified registry using token matching.
+        NEVER invents or returns fabricated default pricing (e.g. Rs. 4,500 / $16).
+        If unmatched, returns verified=False with explicit UNKNOWN indicators.
+        """
+        kw_lower = keyword_or_slug.lower().strip()
         products = self.products_registry if isinstance(self.products_registry, list) else []
+        stop_words = {"ai", "tool", "tools", "software", "app", "the", "vs", "versus", "pro", "plus"}
+
+        kw_tokens = set(re.findall(r'[a-z0-9]+', kw_lower)) - stop_words
+        if not kw_tokens:
+            kw_tokens = set(re.findall(r'[a-z0-9]+', kw_lower))
+
+        best_match = None
+        best_score = 0.0
+
         for p in products:
             p_name = p.get("canonical_product_name", p.get("name", "")).lower()
             p_slug = p.get("slug", "").lower()
-            if p_slug in kw_lower or p_name in kw_lower or kw_lower in p_name:
-                pkr_val = p.get("aidigitools_offer_price_pkr", 4500)
-                usd_val = p.get("aidigitools_offer_price_usd", 16)
-                return {
-                    "canonical_product_name": p.get("canonical_product_name", p_name),
-                    "slug": p.get("slug", p_slug),
-                    "provider_brand": p.get("provider_brand", "Verified Provider"),
-                    "price_pkr": f"Rs. {pkr_val:,} PKR" if isinstance(pkr_val, (int, float)) else str(pkr_val),
-                    "price_usd": f"${usd_val} USD" if isinstance(usd_val, (int, float)) else str(usd_val),
-                    "official_provider_price": p.get("official_provider_price", ""),
-                    "verified_features": p.get("verified_features", []),
-                    "ordering_info": p.get("aidigitools_warranty_and_ordering_info", "")
-                }
+
+            # Exact match
+            if p_slug == kw_lower or p_name == kw_lower:
+                best_match = p
+                best_score = 10.0
+                break
+
+            # Substring match
+            if p_slug in kw_lower or p_name in kw_lower or (len(kw_lower) > 3 and kw_lower in p_name):
+                best_match = p
+                best_score = 5.0
+                continue
+
+            # Token overlap match
+            slug_tokens = set(re.findall(r'[a-z0-9]+', p_slug)) - stop_words
+            name_tokens = set(re.findall(r'[a-z0-9]+', p_name)) - stop_words
+            target_tokens = slug_tokens | name_tokens
+            overlap = kw_tokens & target_tokens
+            score = len(overlap) / max(len(kw_tokens), 1)
+            if score > 0.4 and score > best_score:
+                best_match = p
+                best_score = score
+
+        if best_match:
+            pkr_val = best_match.get("aidigitools_offer_price_pkr")
+            usd_val = best_match.get("aidigitools_offer_price_usd")
+            pkr_str = f"Rs. {pkr_val:,} PKR" if isinstance(pkr_val, (int, float)) else str(pkr_val or "UNKNOWN")
+            usd_str = f"${usd_val:g} USD" if isinstance(usd_val, (int, float)) else str(usd_val or "UNKNOWN")
+            return {
+                "verified": True,
+                "canonical_product_name": best_match.get("canonical_product_name", best_match.get("slug")),
+                "slug": best_match.get("slug", ""),
+                "provider_brand": best_match.get("provider_brand", "Verified Provider"),
+                "price_pkr": pkr_str,
+                "price_usd": usd_str,
+                "price_pkr_numeric": pkr_val,
+                "price_usd_numeric": usd_val,
+                "official_provider_price": best_match.get("official_provider_price", "UNKNOWN"),
+                "official_website_url": best_match.get("official_website_url", ""),
+                "official_documentation_url": best_match.get("official_documentation_url", ""),
+                "official_pricing_source_url": best_match.get("official_pricing_source_url", ""),
+                "verified_features": best_match.get("verified_features", []),
+                "verified_limitations": best_match.get("verified_limitations", ""),
+                "ordering_info": best_match.get("aidigitools_warranty_and_ordering_info", "")
+            }
+
         return {
-            "price_pkr": "Rs. 4,500 PKR",
-            "price_usd": "$16 USD",
-            "provider_brand": "Verified AI Suite"
+            "verified": False,
+            "canonical_product_name": "UNKNOWN",
+            "slug": "unknown",
+            "provider_brand": "UNKNOWN",
+            "price_pkr": "UNKNOWN",
+            "price_usd": "UNKNOWN",
+            "price_pkr_numeric": None,
+            "price_usd_numeric": None,
+            "official_provider_price": "UNKNOWN",
+            "official_website_url": "",
+            "official_documentation_url": "",
+            "official_pricing_source_url": "",
+            "verified_features": [],
+            "verified_limitations": "",
+            "ordering_info": ""
         }
 
+    def get_verified_comparison_context(self, keyword_or_slug: str) -> Dict[str, Any]:
+        """
+        For comparison queries (e.g. 'cursor ai vs github copilot'),
+        identifies and verifies BOTH products separately from central product registry.
+        """
+        cleaned = keyword_or_slug.strip().lower()
+        parts = re.split(r'\b(?:vs\.?|versus|compared\s+to)\b', cleaned, flags=re.IGNORECASE)
+
+        if len(parts) >= 2:
+            term_a = parts[0].strip()
+            term_b = parts[1].strip()
+            prod_a = self.get_verified_product_context(term_a)
+            prod_b = self.get_verified_product_context(term_b)
+            return {
+                "is_comparison": True,
+                "term_a": term_a,
+                "term_b": term_b,
+                "product_a": prod_a,
+                "product_b": prod_b,
+                "both_verified": prod_a.get("verified", False) and prod_b.get("verified", False)
+            }
+
+        single = self.get_verified_product_context(cleaned)
+        return {
+            "is_comparison": False,
+            "product_a": single,
+            "product_b": None,
+            "both_verified": single.get("verified", False)
+        }
+
+    # --------------------------------------------------------------------------
+    # Model Discovery & Endpoint Verification (Section 1)
+    # --------------------------------------------------------------------------
+    def discover_supported_models(self) -> Dict[str, Any]:
+        """
+        Queries available models from the official Generative Language API.
+        Returns:
+            Dict containing:
+                status: 'MODEL_DISCOVERY_VERIFIED', 'API_AUTHENTICATION_FAILED', 'GEMINI_KEY_MISSING', 'GENERATION_FAILED'
+                api_authenticated: bool
+                supported_models: List[str] with 'generateContent' support
+                error: Optional[str]
+        Never exposes the API key.
+        """
+        if not self.api_key:
+            return {
+                "status": "GEMINI_KEY_MISSING",
+                "api_authenticated": False,
+                "supported_models": [],
+                "error": "GEMINI_API_KEY environment variable is not configured."
+            }
+
+        encoded_key = urllib.parse.quote_plus(self.api_key)
+        url = f"https://generativelanguage.googleapis.com/v1beta/models?key={encoded_key}"
+        req = urllib.request.Request(
+            url,
+            headers={
+                "Content-Type": "application/json",
+                "User-Agent": "AIDigiTools-Gemini-Generator/2026"
+            }
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                if resp.status == 200:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    models = data.get("models", [])
+                    generate_models = []
+                    for m in models:
+                        methods = m.get("supportedGenerationMethods", [])
+                        if "generateContent" in methods:
+                            generate_models.append(m.get("name", ""))
+
+                    if not generate_models and "candidates" in data:
+                        generate_models = ["models/gemini-2.0-flash"]
+
+                    return {
+                        "status": "MODEL_DISCOVERY_VERIFIED",
+                        "api_authenticated": True,
+                        "supported_models": generate_models,
+                        "raw_models_count": len(models),
+                        "error": None
+                    }
+                return {
+                    "status": "GENERATION_FAILED",
+                    "api_authenticated": False,
+                    "supported_models": [],
+                    "error": f"Model discovery returned HTTP {resp.status}"
+                }
+        except urllib.error.HTTPError as e:
+            auth_fail = e.code in (401, 403)
+            return {
+                "status": "API_AUTHENTICATION_FAILED" if auth_fail else "GENERATION_FAILED",
+                "api_authenticated": False,
+                "supported_models": [],
+                "error": f"Gemini API discovery error HTTP {e.code}"
+            }
+        except Exception as e:
+            return {
+                "status": "GENERATION_FAILED",
+                "api_authenticated": False,
+                "supported_models": [],
+                "error": f"Gemini discovery request network error: {str(e)}"
+            }
+
+    def verify_generation_endpoint(self, model_name: str) -> Dict[str, Any]:
+        """
+        Tests the exact model endpoint using a minimal verification prompt before full pipeline use.
+        States:
+        - GENERATION_ENDPOINT_VERIFIED
+        - GENERATION_FAILED
+        Never exposes the API key.
+        """
+        if not self.api_key:
+            return {
+                "status": "GEMINI_KEY_MISSING",
+                "verified": False,
+                "model": model_name,
+                "http_status": None,
+                "error": "GEMINI_API_KEY is not configured."
+            }
+
+        clean_model = model_name if model_name.startswith("models/") else f"models/{model_name}"
+        encoded_key = urllib.parse.quote_plus(self.api_key)
+        url = f"https://generativelanguage.googleapis.com/v1beta/{clean_model}:generateContent?key={encoded_key}"
+        payload = {
+            "contents": [{"parts": [{"text": "Verification ping. Reply with OK."}]}],
+            "generationConfig": {"maxOutputTokens": 10}
+        }
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Content-Type": "application/json",
+                "User-Agent": "AIDigiTools-Gemini-Generator/2026"
+            }
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=15.0) as resp:
+                if resp.status == 200:
+                    body = json.loads(resp.read().decode("utf-8"))
+                    candidates = body.get("candidates", [])
+                    if candidates and "content" in candidates[0]:
+                        return {
+                            "status": "GENERATION_ENDPOINT_VERIFIED",
+                            "verified": True,
+                            "model": clean_model,
+                            "http_status": 200,
+                            "error": None
+                        }
+                return {
+                    "status": "GENERATION_FAILED",
+                    "verified": False,
+                    "model": clean_model,
+                    "http_status": resp.status,
+                    "error": f"Verification endpoint returned HTTP {resp.status} with empty candidates."
+                }
+        except urllib.error.HTTPError as e:
+            return {
+                "status": "GENERATION_FAILED",
+                "verified": False,
+                "model": clean_model,
+                "http_status": e.code,
+                "error": f"Verification endpoint failed with HTTP {e.code}"
+            }
+        except Exception as e:
+            return {
+                "status": "GENERATION_FAILED",
+                "verified": False,
+                "model": clean_model,
+                "http_status": None,
+                "error": f"Verification request failed: {str(e)}"
+            }
+
+    # --------------------------------------------------------------------------
+    # Article Generation Workflow
+    # --------------------------------------------------------------------------
     def generate_article(
         self,
         topic_info: Dict[str, Any],
@@ -106,11 +352,11 @@ class GeminiArticleGenerator:
         """
         Executes genuine Gemini article generation using configured API key.
         Validates the output against Master Charter invariants before returning.
-        
+
         Returns:
             Dict containing:
                 success: bool
-                status: 'ARTICLE_GENERATED', 'GEMINI_KEY_MISSING', 'GEMINI_GENERATION_FAILED'
+                status: 'ARTICLE_GENERATED', 'GEMINI_KEY_MISSING', 'GENERATION_FAILED'
                 html_draft: str
                 generation_method: 'GEMINI_API' or 'FALLBACK_HEURISTIC'
                 is_gemini_generated: bool
@@ -123,7 +369,7 @@ class GeminiArticleGenerator:
         article_type = topic_info.get("article_type", "guide")
         rationale = topic_info.get("editorial_rationale", "In-depth research guide and authentic pricing comparison.")
 
-        # Guard: If API key is missing, report accurately without fabricating success
+        # Guard: If API key is missing
         if not self.api_key:
             if allow_fallback:
                 fallback_html = self.generate_heuristic_fallback(topic_info, canonical_url)
@@ -134,7 +380,7 @@ class GeminiArticleGenerator:
                     "generation_method": "FALLBACK_HEURISTIC",
                     "is_gemini_generated": False,
                     "model_used": None,
-                    "error": "GEMINI_API_KEY not configured. Generated deterministic heuristic fallback."
+                    "error": "GEMINI_API_KEY not configured. Generated deterministic heuristic fallback for development/test only."
                 }
             return {
                 "success": False,
@@ -146,46 +392,114 @@ class GeminiArticleGenerator:
                 "error": "GEMINI_API_KEY environment variable is not configured. Real article generation halted."
             }
 
-        # Build prompt with verified evidence and Master Charter invariants
-        product_fact = self.get_verified_product_context(primary_kw)
+        # Step 1: Model Discovery
+        discovery = self.discover_supported_models()
+        if discovery.get("status") != "MODEL_DISCOVERY_VERIFIED" or not discovery.get("supported_models"):
+            err_msg = discovery.get("error", "No Gemini models supporting generateContent found.")
+            if allow_fallback:
+                fallback_html = self.generate_heuristic_fallback(topic_info, canonical_url)
+                return {
+                    "success": True,
+                    "status": "FALLBACK_AFTER_FAILURE",
+                    "html_draft": fallback_html,
+                    "generation_method": "FALLBACK_HEURISTIC",
+                    "is_gemini_generated": False,
+                    "model_used": None,
+                    "error": f"Model discovery failed: {err_msg}. Fallback generated for dev/test."
+                }
+            return {
+                "success": False,
+                "status": "GENERATION_FAILED",
+                "html_draft": "",
+                "generation_method": "GEMINI_API",
+                "is_gemini_generated": False,
+                "model_used": None,
+                "error": f"Gemini model discovery failed: {err_msg}"
+            }
+
+        # Step 2: Select candidate model in priority order
+        supported = discovery["supported_models"]
+        selected_model = None
+        for pref in PREFERRED_MODELS:
+            if pref in supported:
+                selected_model = pref
+                break
+            # Also check without 'models/' prefix
+            clean_pref = pref.replace("models/", "")
+            for s in supported:
+                if s.replace("models/", "") == clean_pref:
+                    selected_model = s
+                    break
+            if selected_model:
+                break
+
+        if not selected_model:
+            selected_model = supported[0]
+
+        # Step 3: Test generation endpoint before full generation
+        endpoint_test = self.verify_generation_endpoint(selected_model)
+        if not endpoint_test.get("verified"):
+            err_msg = endpoint_test.get("error", "Endpoint verification failed.")
+            if allow_fallback:
+                fallback_html = self.generate_heuristic_fallback(topic_info, canonical_url)
+                return {
+                    "success": True,
+                    "status": "FALLBACK_AFTER_FAILURE",
+                    "html_draft": fallback_html,
+                    "generation_method": "FALLBACK_HEURISTIC",
+                    "is_gemini_generated": False,
+                    "model_used": selected_model,
+                    "error": f"Endpoint verification failed: {err_msg}. Fallback generated for dev/test."
+                }
+            return {
+                "success": False,
+                "status": "GENERATION_FAILED",
+                "html_draft": "",
+                "generation_method": "GEMINI_API",
+                "is_gemini_generated": False,
+                "model_used": selected_model,
+                "error": f"Gemini endpoint verification failed on '{selected_model}': {err_msg}"
+            }
+
+        # Step 4: Build grounded prompt using verified registry facts
+        comp_context = self.get_verified_comparison_context(primary_kw)
         prompt = self._build_gemini_prompt(
             primary_kw=primary_kw,
             canonical_url=canonical_url,
             cluster_slug=cluster_slug,
             article_type=article_type,
             rationale=rationale,
-            product_fact=product_fact
+            comp_context=comp_context
         )
 
         last_error = None
-        for model in DEFAULT_MODELS:
-            for attempt in range(1, self.max_retries + 1):
-                try:
-                    generated_text, model_used = self._call_gemini_model(model, prompt)
-                    cleaned_html = self._clean_and_wrap_html(
-                        raw_content=generated_text,
-                        primary_kw=primary_kw,
-                        canonical_url=canonical_url
-                    )
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                generated_text, model_used = self._call_gemini_model(selected_model, prompt)
+                cleaned_html = self._clean_and_wrap_html(
+                    raw_content=generated_text,
+                    primary_kw=primary_kw,
+                    canonical_url=canonical_url
+                )
 
-                    is_valid, validation_errors = self.validate_generated_html(cleaned_html, topic_info)
-                    if is_valid:
-                        return {
-                            "success": True,
-                            "status": "ARTICLE_GENERATED",
-                            "html_draft": cleaned_html,
-                            "generation_method": "GEMINI_API",
-                            "is_gemini_generated": True,
-                            "model_used": model_used,
-                            "error": None
-                        }
-                    else:
-                        last_error = f"Validation failed: {', '.join(validation_errors)}"
-                except Exception as e:
-                    last_error = str(e)
-                    time.sleep(1.0 * attempt)
+                is_valid, validation_errors = self.validate_generated_html(cleaned_html, topic_info)
+                if is_valid:
+                    return {
+                        "success": True,
+                        "status": "ARTICLE_GENERATED",
+                        "html_draft": cleaned_html,
+                        "generation_method": "GEMINI_API",
+                        "is_gemini_generated": True,
+                        "model_used": model_used,
+                        "error": None
+                    }
+                else:
+                    last_error = f"HTML validation failed: {', '.join(validation_errors)}"
+            except Exception as e:
+                last_error = str(e)
+                time.sleep(1.0 * attempt)
 
-        # If Gemini generation failed across all models and retries
+        # Failure handling
         if allow_fallback:
             fallback_html = self.generate_heuristic_fallback(topic_info, canonical_url)
             return {
@@ -194,19 +508,54 @@ class GeminiArticleGenerator:
                 "html_draft": fallback_html,
                 "generation_method": "FALLBACK_HEURISTIC",
                 "is_gemini_generated": False,
-                "model_used": None,
-                "error": f"Gemini API generation failed after retries: {last_error}. Safe fallback generated."
+                "model_used": selected_model,
+                "error": f"Gemini generation failed: {last_error}. Fallback generated for dev/test."
             }
 
         return {
             "success": False,
-            "status": "GEMINI_GENERATION_FAILED",
+            "status": "GENERATION_FAILED",
             "html_draft": "",
             "generation_method": "GEMINI_API",
             "is_gemini_generated": False,
-            "model_used": None,
-            "error": f"Gemini API request failed across all models: {last_error}"
+            "model_used": selected_model,
+            "error": f"Gemini article generation failed: {last_error}"
         }
+
+    def _call_gemini_model(self, model: str, prompt: str) -> Tuple[str, str]:
+        """Calls the official Generative Language API generateContent endpoint safely."""
+        clean_model = model if model.startswith("models/") else f"models/{model}"
+        encoded_key = urllib.parse.quote_plus(self.api_key)
+        url = f"https://generativelanguage.googleapis.com/v1beta/{clean_model}:generateContent?key={encoded_key}"
+        payload = {
+            "contents": [
+                {
+                    "parts": [{"text": prompt}]
+                }
+            ],
+            "generationConfig": {
+                "temperature": 0.2,
+                "maxOutputTokens": 4096
+            }
+        }
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Content-Type": "application/json",
+                "User-Agent": "AIDigiTools-Gemini-Generator/2026"
+            }
+        )
+        with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+            if resp.status == 200:
+                body = json.loads(resp.read().decode("utf-8"))
+                candidates = body.get("candidates", [])
+                if candidates and "content" in candidates[0]:
+                    parts = candidates[0]["content"].get("parts", [])
+                    if parts and "text" in parts[0]:
+                        return parts[0]["text"], clean_model
+            raise ValueError(f"Gemini API returned status {resp.status} with empty candidates.")
 
     def _build_gemini_prompt(
         self,
@@ -215,12 +564,36 @@ class GeminiArticleGenerator:
         cluster_slug: str,
         article_type: str,
         rationale: str,
-        product_fact: Dict[str, Any]
+        comp_context: Dict[str, Any]
     ) -> str:
         """Constructs the grounding prompt with verified facts and charter constraints."""
-        price_pkr = product_fact.get("price_pkr", "Rs. 4,500 PKR")
-        price_usd = product_fact.get("price_usd", "$16 USD")
         headline_title = f"{primary_kw} (2026 Guide & Pricing)"
+
+        # Product facts block
+        is_comp = comp_context.get("is_comparison", False)
+        if is_comp:
+            pa = comp_context.get("product_a", {})
+            pb = comp_context.get("product_b", {})
+            facts_block = f"""
+COMPARISON PRODUCTS (VERIFIED FROM REGISTRY):
+- Product A: {pa.get('canonical_product_name')} by {pa.get('provider_brand')}
+  * Local Price: {pa.get('price_pkr')} (approx {pa.get('price_usd')})
+  * Upstream Price: {pa.get('official_provider_price')}
+  * Key Features: {', '.join(pa.get('verified_features', []))}
+- Product B: {pb.get('canonical_product_name')} by {pb.get('provider_brand')}
+  * Local Price: {pb.get('price_pkr')} (approx {pb.get('price_usd')})
+  * Upstream Price: {pb.get('official_provider_price')}
+  * Key Features: {', '.join(pb.get('verified_features', []))}
+"""
+        else:
+            pa = comp_context.get("product_a", {})
+            facts_block = f"""
+PRODUCT FACTS (VERIFIED FROM REGISTRY):
+- Product: {pa.get('canonical_product_name')} by {pa.get('provider_brand')}
+  * Local Price: {pa.get('price_pkr')} (approx {pa.get('price_usd')})
+  * Upstream Price: {pa.get('official_provider_price')}
+  * Key Features: {', '.join(pa.get('verified_features', []))}
+"""
 
         prompt = f"""You are the Lead Technical Research Writer for AIDigiTools (https://aidigitools.tech).
 Write a comprehensive, authentic, high-utility HTML article for the topic: '{primary_kw}'.
@@ -231,20 +604,20 @@ VERIFIED FACTS & CONSTRAINTS (STRICTLY REQUIRED):
 3. Cluster: {cluster_slug}
 4. Article Type: {article_type}
 5. Editorial Rationale: {rationale}
-6. Verified Local Pricing: {price_pkr} (approx {price_usd})
-7. Payment Rails: Domestic (EasyPaisa, JazzCash, SadaPay, NayaPay, Raast, Bank IBFT) and Global (Wise, Crypto USDT)
-8. Delivery SLA: 15-minute digital workspace delivery via WhatsApp ({OFFICIAL_WHATSAPP})
-9. Warranty: 30-day replacement warranty managed by our Islamabad operations desk
-10. Independent Reseller Disclosure: AIDigiTools is an independent subscription concierge and digital marketplace. We are not directly affiliated with or endorsed by upstream tool providers.
+{facts_block}
+6. Payment Rails: Domestic (EasyPaisa, JazzCash, SadaPay, NayaPay, Raast, Bank IBFT) and Global (Wise, Crypto USDT)
+7. Delivery SLA: 15-minute digital workspace delivery via WhatsApp ({OFFICIAL_WHATSAPP})
+8. Warranty: 30-day replacement warranty managed by our Islamabad operations desk
+9. Independent Reseller Disclosure: AIDigiTools is an independent subscription concierge and digital marketplace. We are not directly affiliated with or endorsed by upstream tool providers.
 
 MANDATORY HTML STRUCTURE:
 - Exactly ONE <h1> tag matching '{primary_kw}'.
 - Immediately after <h1>, provide a <p class="quick-answer"> capsule between 40 and 60 words (hard limit: 35 to 70 words) directly defining the software, use case, PKR/USD price, and WhatsApp delivery.
-- Add an evidence tier badge: <p class="evidence-tier"><strong>Evidence Classification:</strong> Tier B: Research-based and verified technical releases tested by AIDigiTools engineers.</p>
+- Add an evidence tier badge: <p class="evidence-tier"><strong>Evidence Classification:</strong> Tier B: Research-based and verified technical documentation.</p>
 - Detailed sections with <h2> and <h3>:
   * Overview & Workflow Problem Solved
   * Evaluation Criteria & Technical Methodology
-  * Direct Comparison Matrix (semantic <table> with Plan, Pricing PKR, Pricing USD, Delivery SLA, and Warranty)
+  * Direct Comparison Matrix (semantic <table> with Plan / Product, Pricing PKR, Pricing USD, Delivery SLA, and Warranty)
   * Strengths, Practical Use Cases & Considerations
   * How to Order via WhatsApp Concierge ({OFFICIAL_WHATSAPP})
   * Frequently Asked Questions (<details><summary> elements answering 3 key questions)
@@ -265,8 +638,9 @@ MANDATORY HTML STRUCTURE:
   </script>
 
 STRICT ANTI-HALLUCINATION RULES:
+- NEVER invent or alter product prices. Use only the exact verified pricing above.
 - NEVER claim official partnership, authorization, or distributor status with OpenAI, Anthropic, Google, Microsoft, or Adobe.
-- NEVER invent fake benchmark labs (e.g. "tested on 500 developers").
+- NEVER invent fake benchmark labs or claim unverified speed test numbers (e.g. 'tested on 500 developers', 'measured 99.9%').
 - NEVER invent fake money-back guarantees (we offer a 30-day replacement warranty, not instant cash refunds).
 - NEVER leak wholesale/supplier names or tokens (e.g. cost_usd, wholesale_price, bunnytoolsbot).
 - NEVER claim automated website credit card checkouts exist on our site; all orders route through WhatsApp ({OFFICIAL_WHATSAPP}).
@@ -274,40 +648,6 @@ STRICT ANTI-HALLUCINATION RULES:
 Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do not wrap in markdown code fences.
 """
         return prompt
-
-    def _call_gemini_model(self, model: str, prompt: str) -> Tuple[str, str]:
-        """Calls the official Generative Language API generateContent endpoint."""
-        encoded_key = urllib.parse.quote_plus(self.api_key)
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={encoded_key}"
-        payload = {
-            "contents": [
-                {
-                    "parts": [{"text": prompt}]
-                }
-            ],
-            "generationConfig": {
-                "temperature": 0.3,
-                "maxOutputTokens": 4096
-            }
-        }
-        data = json.dumps(payload).encode("utf-8")
-        req = urllib.request.Request(
-            url,
-            data=data,
-            headers={
-                "Content-Type": "application/json",
-                "User-Agent": "AIDigiTools-Gemini-Generator/2026"
-            }
-        )
-        with urllib.request.urlopen(req, timeout=self.timeout) as resp:
-            if resp.status == 200:
-                body = json.loads(resp.read().decode("utf-8"))
-                candidates = body.get("candidates", [])
-                if candidates and "content" in candidates[0]:
-                    parts = candidates[0]["content"].get("parts", [])
-                    if parts and "text" in parts[0]:
-                        return parts[0]["text"], model
-            raise ValueError(f"Gemini API returned status {resp.status} with empty candidates.")
 
     def _clean_and_wrap_html(self, raw_content: str, primary_kw: str, canonical_url: str) -> str:
         """Strips markdown fences and ensures complete HTML document structure."""
@@ -317,7 +657,6 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
             text = re.sub(r"\s*```$", "", text)
         text = text.strip()
 
-        # If model returned body fragment only, wrap into full compliant HTML
         if "<!doctype html" not in text.lower():
             text = f"""<!DOCTYPE html>
 <html lang="en">
@@ -355,18 +694,14 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
     def validate_generated_html(self, html_content: str, topic_info: Dict[str, Any]) -> Tuple[bool, List[str]]:
         """Validates that generated HTML satisfies basic structure before Quality Gates."""
         errors = []
-        kw = topic_info.get("primary_keyword", "")
 
-        # 1. Root tags
         if "<html" not in html_content.lower() or "<body" not in html_content.lower():
             errors.append("Missing standard HTML document root tags.")
 
-        # 2. Single H1
         h1s = re.findall(r'<h1[^>]*>(.*?)</h1>', html_content, re.IGNORECASE | re.DOTALL)
         if len(h1s) != 1:
             errors.append(f"Expected exactly 1 <h1> tag, found {len(h1s)}.")
 
-        # 3. Quick answer
         qa_match = re.search(r'<p[^>]*class=["\'][^"\']*quick-answer[^"\']*["\'][^>]*>(.*?)</p>', html_content, re.IGNORECASE | re.DOTALL)
         if not qa_match:
             errors.append("Missing mandatory .quick-answer paragraph.")
@@ -375,40 +710,79 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
             if qa_words < 35 or qa_words > 75:
                 errors.append(f".quick-answer word count ({qa_words}) outside 35-75 range.")
 
-        # 4. Table presence
         if "<table" not in html_content.lower():
             errors.append("Missing comparison table (<table>).")
 
-        # 5. Schema presence
         if '<script type="application/ld+json">' not in html_content:
             errors.append("Missing JSON-LD structured data script.")
 
-        # 6. Pricing & Currency
         if not re.search(r'\b(?:pkr|rs\.?)\b', html_content, re.IGNORECASE):
             errors.append("Missing localized PKR pricing.")
 
-        # 7. WhatsApp contact
         if OFFICIAL_WHATSAPP not in html_content and "wa.me" not in html_content:
             errors.append("Missing official WhatsApp concierge routing.")
 
         return len(errors) == 0, errors
 
+    # --------------------------------------------------------------------------
+    # Deterministic Heuristic Fallback (Development & Isolated Tests Only)
+    # --------------------------------------------------------------------------
     def generate_heuristic_fallback(
         self,
         topic_info: Dict[str, Any],
         canonical_url: str
     ) -> str:
         """
-        Deterministic, evidence-grounded fallback template used ONLY when
-        GEMINI_API_KEY is not configured or in offline test environments.
-        Flags itself clearly to prevent misrepresentation as Gemini-generated.
+        Deterministic, evidence-grounded fallback template used ONLY in isolated
+        development tests or offline environments.
+        Uses exact verified registry facts without invented pricing or plans.
         """
         slug = Path(canonical_url).stem
         kw = topic_info.get("primary_keyword", slug.replace("-", " ").title())
         rationale = topic_info.get("editorial_rationale", "In-depth guide and authentic pricing comparison.")
-        product_fact = self.get_verified_product_context(kw)
-        price_pkr = product_fact.get("price_pkr", "Rs. 4,500 PKR")
-        price_usd = product_fact.get("price_usd", "$16 USD")
+
+        comp_context = self.get_verified_comparison_context(kw)
+        is_comp = comp_context.get("is_comparison", False)
+
+        if is_comp and comp_context.get("both_verified"):
+            pa = comp_context["product_a"]
+            pb = comp_context["product_b"]
+            pkr_summary = f"{pa['price_pkr']} ({pa['canonical_product_name']}) and {pb['price_pkr']} ({pb['canonical_product_name']})"
+            table_rows = f"""
+          <tr>
+            <td>{pa['canonical_product_name']}</td>
+            <td>{pa['price_pkr']}</td>
+            <td>{pa['price_usd']}</td>
+            <td>15 Minutes</td>
+            <td>30-Day Replacement</td>
+          </tr>
+          <tr>
+            <td>{pb['canonical_product_name']}</td>
+            <td>{pb['price_pkr']}</td>
+            <td>{pb['price_usd']}</td>
+            <td>15 Minutes</td>
+            <td>30-Day Replacement</td>
+          </tr>"""
+            breakdown_section = f"""
+      <h2>{pa['canonical_product_name']} vs {pb['canonical_product_name']} Detailed Breakdown</h2>
+      <h3>{pa['canonical_product_name']} Capabilities</h3>
+      <p>{pa['canonical_product_name']} by {pa['provider_brand']} offers: {', '.join(pa.get('verified_features', []))}. Official provider rate: {pa.get('official_provider_price')}.</p>
+      <h3>{pb['canonical_product_name']} Capabilities</h3>
+      <p>{pb['canonical_product_name']} by {pb['provider_brand']} offers: {', '.join(pb.get('verified_features', []))}. Official provider rate: {pb.get('official_provider_price')}.</p>"""
+        else:
+            prod_single = self.get_verified_product_context(kw)
+            pkr_summary = f"{prod_single['price_pkr']} ({prod_single['price_usd']})"
+            table_rows = f"""
+          <tr>
+            <td>{prod_single['canonical_product_name']}</td>
+            <td>{prod_single['price_pkr']}</td>
+            <td>{prod_single['price_usd']}</td>
+            <td>15 Minutes</td>
+            <td>30-Day Replacement</td>
+          </tr>"""
+            breakdown_section = f"""
+      <h2>Product Specifications & Features</h2>
+      <p>{prod_single['canonical_product_name']} by {prod_single['provider_brand']} includes: {', '.join(prod_single.get('verified_features', []))}. Official upstream rate: {prod_single.get('official_provider_price')}.</p>"""
 
         return f'''<!DOCTYPE html>
 <html lang="en">
@@ -441,48 +815,36 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
     <article>
       <h1>{kw}</h1>
       <p class="quick-answer">
-        {kw} is an advanced software solution designed for creative professionals and digital agencies seeking scalable productivity. On AIDigiTools, subscriptions cost {price_pkr} ({price_usd}) with payment via EasyPaisa, JazzCash, or Raast, instant WhatsApp order routing within 15 minutes, and our verified 30-day replacement warranty.
+        {kw} provides professional developers and creative practitioners with authentic software seat access. On AIDigiTools, subscriptions start at {pkr_summary} with domestic payment via EasyPaisa, JazzCash, or Raast, 15-minute digital workspace delivery via WhatsApp ({OFFICIAL_WHATSAPP}), and our verified 30-day replacement warranty.
       </p>
 
-      <p class="evidence-tier"><strong>Evidence Classification:</strong> Tier B: Research-based and verified technical releases tested by AIDigiTools engineers.</p>
+      <p class="evidence-tier"><strong>Evidence Classification:</strong> Tier B: Research-based and verified technical documentation.</p>
 
       <h2>Overview & Architecture</h2>
-      <p>{rationale} In our evaluations with verified technical releases from OpenAI, Anthropic, and Google, latency and model throughput remained optimal across real-world workflows.</p>
+      <p>{rationale} Upstream documentation from vendor release notes and pricing portals confirms current model capabilities and regional access conditions.</p>
 
       <h2>Evaluation Criteria & Technical Methodology</h2>
-      <p>Tested by AIDigiTools engineers based on verified technical releases, upstream token constraints, and localized payment accessibility across Pakistan and international jurisdictions.</p>
+      <p>Evaluated using verified technical documentation, upstream token constraints, and localized payment accessibility across Pakistan and international jurisdictions.</p>
 
       <h2>Pricing & Specifications Comparison Matrix</h2>
       <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%;">
         <thead>
           <tr>
-            <th>Plan</th>
+            <th>Product / Plan</th>
             <th>Pricing (PKR)</th>
             <th>Pricing (USD)</th>
             <th>Delivery SLA</th>
             <th>Warranty</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Standard Workspace</td>
-            <td>{price_pkr}</td>
-            <td>{price_usd}</td>
-            <td>15 Minutes</td>
-            <td>30 Days Replacement</td>
-          </tr>
-          <tr>
-            <td>Pro Multi-Seat</td>
-            <td>Rs. 8,500 PKR</td>
-            <td>$30 USD</td>
-            <td>15 Minutes</td>
-            <td>30 Days Replacement</td>
-          </tr>
+        <tbody>{table_rows}
         </tbody>
       </table>
 
+{breakdown_section}
+
       <h2>Strengths, Recommended Use Cases & Considerations</h2>
-      <p>Ideal for freelancers, developers, and content creators requiring uninterrupted software seats without international credit card restrictions.</p>
+      <p>Ideal for freelancers, developers, and agency teams requiring uninterrupted software seats without international credit card barriers.</p>
 
       <h2>How to Order via WhatsApp Concierge</h2>
       <ol>
@@ -510,4 +872,3 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
   </main>
 </body>
 </html>'''
-

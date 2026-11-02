@@ -786,7 +786,7 @@ class AutomationScheduler:
         gen_result = gemini_gen.generate_article(
             topic_info=chosen,
             canonical_url=canonical_url,
-            allow_fallback=True
+            allow_fallback=False
         )
 
         pipeline_log["generation_telemetry"] = {
@@ -798,10 +798,10 @@ class AutomationScheduler:
             "error": gen_result.get("error")
         }
 
-        if not gen_result.get("success") or not gen_result.get("html_draft"):
+        if not gen_result.get("success") or not gen_result.get("is_gemini_generated") or not gen_result.get("html_draft"):
             pipeline_log["article_generated"] = False
             pipeline_log["pipeline_status"] = "GENERATION_FAILED"
-            pipeline_log["explanation"] = f"Article content generation failed: {gen_result.get('error')}"
+            pipeline_log["explanation"] = f"Article content generation failed or produced heuristic fallback: {gen_result.get('error')}"
             self.save_run_report(pipeline_log)
             return pipeline_log
 
@@ -811,22 +811,39 @@ class AutomationScheduler:
 
         # Stage 4: Evidence & Fact Verification
         from .evidence_system import ResearchEvidenceSystem
-        evidence_sys = ResearchEvidenceSystem(self.workspace_root / "data" / "evidence")
-        pipeline_log["stages_completed"].append("EVIDENCE_VERIFICATION")
+        evidence_sys = ResearchEvidenceSystem(self.workspace_root / "data" / "research_evidence")
 
-        # Stage 5: Quality Gate Evaluation (All 20 Gates)
-        from .quality_gates import QualityGateEngine
-        gate_engine = QualityGateEngine(self.workspace_root)
         article_metadata = {
             "slug": slug,
             "title": title,
             "primary_keyword": chosen.get("primary_keyword", title),
             "canonical_url": canonical_url,
             "cluster_slug": chosen.get("cluster_slug", "ai-video-and-audio-tools"),
-            "article_type": chosen.get("article_type", "guide"),
+            "article_type": chosen.get("article_type", "comparison" if "vs" in slug else "guide"),
             "author_slug": chosen.get("author_slug", "abeera-farooq"),
-            "target_canonical_path": canonical_path
+            "target_canonical_path": canonical_path,
+            "is_fallback": gen_result.get("is_fallback", False),
+            "generation_method": gen_result.get("generation_method", "GEMINI_API"),
+            "is_gemini_generated": gen_result.get("is_gemini_generated", False)
         }
+
+        evid_res = evidence_sys.verify_article_evidence(
+            html_content=html_draft,
+            metadata=article_metadata
+        )
+        pipeline_log["evidence_verification"] = evid_res
+
+        if not evid_res.get("verified"):
+            pipeline_log["pipeline_status"] = "EVIDENCE_VERIFICATION_FAILED"
+            pipeline_log["explanation"] = f"Evidence verification failed: {'; '.join(evid_res.get('errors', []))}"
+            self.save_run_report(pipeline_log)
+            return pipeline_log
+
+        pipeline_log["stages_completed"].append("EVIDENCE_VERIFICATION")
+
+        # Stage 5: Quality Gate Evaluation (All 20 Gates)
+        from .quality_gates import QualityGateEngine
+        gate_engine = QualityGateEngine(self.workspace_root)
         gate_result = gate_engine.evaluate_article(
             html_content=html_draft,
             metadata=article_metadata
@@ -859,13 +876,14 @@ class AutomationScheduler:
             metadata={
                 "canonical_url": canonical_url,
                 "topic_id": chosen.get("topic_id"),
-                "primary_keyword": title
+                "primary_keyword": chosen.get("primary_keyword", title),
+                "article_metadata": article_metadata
             },
             quality_gate_report=gate_result
         )
         pipeline_log["preview_created"] = True
         pipeline_log["preview_id"] = preview_record.get("preview_id")
-        pipeline_log["preview_file"] = str(preview_record.get("preview_file_path"))
+        pipeline_log["preview_file"] = preview_record.get("preview_path", f"data/previews/{slug}.html")
         pipeline_log["stages_completed"].append("HUMAN_REVIEW_PREVIEW_GENERATION")
 
         # In Phase 1: Always HALTS for human review!

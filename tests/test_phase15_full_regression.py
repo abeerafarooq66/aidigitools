@@ -14,7 +14,7 @@ class TestPhase15FullRegression(unittest.TestCase):
     """
 
     def setUp(self):
-        self.all_html_files = glob.glob(os.path.join(REPO_ROOT, "**", "*.html"), recursive=True)
+        self.all_html_files = [f for f in glob.glob(os.path.join(REPO_ROOT, "**", "*.html"), recursive=True) if not any(k in f for k in [".git", "tests", "scratch", "data", "node_modules"])]
         self.tool_files = glob.glob(os.path.join(REPO_ROOT, "tools", "*.html"))
         self.category_files = glob.glob(os.path.join(REPO_ROOT, "categories", "*.html"))
         self.css_path = os.path.join(REPO_ROOT, "assets", "style.css")

@@ -252,12 +252,14 @@ class PublishingControlEngine:
             )
 
         now_pkt = get_pkt_now_str()
+        preview_rel_path = f"data/previews/{slug}.html"
         preview_record = {
             "preview_id": preview_id,
             "slug": slug,
             "title": title,
             "metadata": metadata,
-            "preview_path": str(preview_file_path),
+            "preview_path": preview_rel_path,
+            "preview_file_path": preview_rel_path,
             "current_phase": current_phase,
             "approval_required": approval_required,
             "decision": decision,

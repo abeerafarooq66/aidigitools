@@ -16,7 +16,7 @@ class TestBingAndIndexNowCompliance(unittest.TestCase):
     def setUpClass(cls):
         cls.html_files = []
         for root, dirs, files in os.walk(WORKSPACE_DIR):
-            if any(p in root for p in [".git", "tests", "scratch"]):
+            if any(p in root for p in [".git", "tests", "scratch", "data"]):
                 continue
             for f in files:
                 if f.endswith(".html"):
