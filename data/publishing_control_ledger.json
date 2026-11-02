@@ -67,6 +67,22 @@
   ],
   "approved_history": [],
   "rejected_history": [],
-  "published_history": [],
-  "last_updated_pkt": "2026-11-02 18:23:30 PKT"
+  "published_history": [
+    {
+      "slug": "cursor-ai-vs-github-copilot-comparison",
+      "title": "cursor ai vs github copilot",
+      "canonical_url": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+      "relative_url": "blog/cursor-ai-vs-github-copilot-comparison.html",
+      "content_hash": "7265f743457ed9b9d0c9df85c068327e95675c6c1d8c17410f35e2f1b296402f",
+      "published_at_pkt": "2026-11-02 20:06:28 PKT",
+      "status": "PUBLISHED_AUTONOMOUSLY",
+      "sitemap_url_count": 66,
+      "discovery_telemetry": {
+        "status": "DISCOVERY_DEFERRED",
+        "reason": "Discovery execution deferred or local environment",
+        "error": "No module named 'agent'"
+      }
+    }
+  ],
+  "last_updated_pkt": "2026-11-02 20:06:28 PKT"
 }

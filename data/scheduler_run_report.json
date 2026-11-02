@@ -1,25 +1,132 @@
 {
-  "check_timestamp_pkt": "2026-11-02 18:42:06 PKT",
-  "business_timezone": "PKT (UTC+5)",
-  "cadence_status": {
-    "passed": true,
-    "elapsed_hours": 57.7,
-    "message": "Cadence gate cleared: 57.7 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
-    "bypassed": true
+  "executed_at_pkt": "2026-11-02 20:06:03 PKT",
+  "stages_completed": [
+    "RESEARCH_CADENCE_CHECK",
+    "TOPIC_SELECTION_AND_DUPLICATE_GUARD",
+    "CONTENT_DRAFTING",
+    "EVIDENCE_VERIFICATION",
+    "QUALITY_GATES",
+    "PUBLISHING_CONTROL_EVALUATION",
+    "AUTONOMOUS_PRODUCTION_PUBLISHING"
+  ],
+  "pipeline_status": "PUBLISHED_AUTONOMOUSLY",
+  "article_generated": true,
+  "published": true,
+  "preview_created": true,
+  "research_check": {
+    "check_timestamp_pkt": "2026-11-02 20:06:03 PKT",
+    "business_timezone": "PKT (UTC+5)",
+    "cadence_status": {
+      "passed": true,
+      "elapsed_hours": 59.1,
+      "message": "Cadence gate cleared: 59.1 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
+      "bypassed": false
+    },
+    "budget_status": {
+      "exceeded": false,
+      "message": "Within budget: $0.00 spent of $50.00 cap."
+    },
+    "evaluated_candidates_count": 4,
+    "decision": "TOPIC_SELECTED",
+    "reason_code": "TOPIC_QUALIFIED",
+    "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (59.1h elapsed).",
+    "selected_topic": {
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "score": 95,
+      "target_canonical_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
+      "editorial_rationale": "High-intent developer query where competitors provide zero quantitative benchmark tables or PKR cost analysis."
+    }
   },
-  "budget_status": {
-    "exceeded": false,
-    "message": "Within budget: $0.00 spent of $50.00 cap."
+  "generation_telemetry": {
+    "success": true,
+    "status": "ARTICLE_GENERATED",
+    "generation_method": "GEMINI_API",
+    "is_gemini_generated": true,
+    "model_used": "models/gemini-flash-lite-latest",
+    "error": null
   },
-  "evaluated_candidates_count": 4,
-  "decision": "TOPIC_SELECTED",
-  "reason_code": "TOPIC_QUALIFIED",
-  "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (57.7h elapsed).",
-  "selected_topic": {
-    "topic_id": "TOPIC-001",
-    "primary_keyword": "cursor ai vs github copilot",
-    "score": 95,
-    "target_canonical_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
-    "editorial_rationale": "High-intent developer query where competitors provide zero quantitative benchmark tables or PKR cost analysis."
-  }
+  "evidence_verification": {
+    "verified": true,
+    "status": "VERIFIED",
+    "evidence_file": "/home/runner/work/aidigitools/aidigitools/data/research_evidence/EVID-cursor-ai-vs-github-copilot-comparison.json",
+    "verified_claims": [
+      "Comparison entity 'cursor ai' verified in registry as 'Cursor Pro'.",
+      "Comparison entity 'github copilot' verified in registry as 'GitHub Copilot Individual'.",
+      "Price for 'Cursor Pro' verified: Rs. 3,800 PKR.",
+      "Price for 'GitHub Copilot Individual' verified: Rs. 1,500 PKR.",
+      "Material claims grounded in primary vendor documentation or official sources."
+    ],
+    "rejected_claims": [],
+    "errors": [],
+    "evidence_record": {
+      "article_topic": "cursor ai vs github copilot",
+      "target_audience": "Developers, freelancers, and creative agencies in Pakistan & globally",
+      "search_intent": "Commercial Investigation & Comparison",
+      "selected_keywords": [
+        "cursor ai vs github copilot",
+        "cursor ai vs github copilot pricing",
+        "cursor ai vs github copilot review 2026"
+      ],
+      "competitor_gap_findings": "Transparent localized PKR pricing and verified domestic payment options missing on generic comparison blogs.",
+      "official_sources": [
+        "Cursor Pro",
+        "GitHub Copilot Individual"
+      ],
+      "source_urls": [
+        "https://github.com/pricing",
+        "https://github.com/features/copilot",
+        "https://www.cursor.com/",
+        "https://www.cursor.com/pricing"
+      ],
+      "source_publication_update_dates": [
+        "October 2026",
+        "November 2026"
+      ],
+      "actual_verification_date": "2026-11-02",
+      "product_versions": [
+        "Cursor Pro",
+        "GitHub Copilot Individual"
+      ],
+      "pricing_evidence": {
+        "cursor-pro": "Rs. 3,800 PKR (~$14.0 USD)",
+        "github-copilot": "Rs. 1,500 PKR (~$5.5 USD)"
+      },
+      "research_methodology": "Verified against official documentation and upstream pricing portals.",
+      "original_contribution": "Localized price parity breakdown, domestic payment accessibility, and 15-minute delivery SLA audit.",
+      "internal_links": [
+        "https://aidigitools.tech/#tools",
+        "https://aidigitools.tech/policies.html",
+        "https://aidigitools.tech/affiliate-disclosure.html"
+      ],
+      "claims_requiring_extra_verification": [
+        "None - all claims verified against official vendor documentation"
+      ],
+      "evidence_classification": "B. Research-based"
+    }
+  },
+  "quality_gate_result": {
+    "decision": "APPROVED",
+    "passed_count": 20,
+    "failed_count": 0,
+    "failed_gates": []
+  },
+  "operational_phase": "FULL_AUTONOMOUS",
+  "is_autonomous": true,
+  "emergency_publishing_disabled": false,
+  "approved_supervised_count": 0,
+  "preview_id": "PRV-0003",
+  "preview_file": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
+  "decision": "APPROVED_FOR_AUTO_PUBLICATION",
+  "published_url": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+  "relative_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
+  "content_hash": "7265f743457ed9b9d0c9df85c068327e95675c6c1d8c17410f35e2f1b296402f",
+  "article_id": "ART-006",
+  "sitemap_url_count": 66,
+  "discovery_telemetry": {
+    "status": "DISCOVERY_DEFERRED",
+    "reason": "Discovery execution deferred or local environment",
+    "error": "No module named 'agent'"
+  },
+  "explanation": "Article 'cursor-ai-vs-github-copilot-comparison' passed 100% of quality gates, verified against product registry, and published autonomously to https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html."
 }

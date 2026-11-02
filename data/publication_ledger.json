@@ -2,7 +2,7 @@
   "ledger_version": "1.0.0",
   "business_timezone": "PKT (UTC+5)",
   "min_cadence_hours": 48.0,
-  "last_updated_pkt": "2026-11-02 00:20:00 PKT",
+  "last_updated_pkt": "2026-11-02 20:06:28 PKT",
   "publications": [
     {
       "article_id": "ART-001",
@@ -55,7 +55,7 @@
     {
       "article_id": "ART-004",
       "slug": "best-ai-coding-tools",
-      "title": "Best AI Coding Tools (2026) — Tested for Developers",
+      "title": "Best AI Coding Tools (2026) \u2014 Tested for Developers",
       "canonical_url": "https://aidigitools.tech/best/best-ai-coding-tools.html",
       "relative_url": "best/best-ai-coding-tools.html",
       "cluster_slug": "ai-coding-and-development",
@@ -71,7 +71,7 @@
     {
       "article_id": "ART-005",
       "slug": "best-ai-video-generators",
-      "title": "Best AI Video Generators (2026) — Tested & Compared",
+      "title": "Best AI Video Generators (2026) \u2014 Tested & Compared",
       "canonical_url": "https://aidigitools.tech/best/best-ai-video-generators.html",
       "relative_url": "best/best-ai-video-generators.html",
       "cluster_slug": "ai-video-and-audio-tools",
@@ -83,7 +83,22 @@
       "git_commit_hash": "8370562",
       "quality_gate_passed": true,
       "status": "PUBLISHED"
+    },
+    {
+      "article_id": "ART-006",
+      "slug": "cursor-ai-vs-github-copilot-comparison",
+      "title": "cursor ai vs github copilot",
+      "canonical_url": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+      "relative_url": "blog/cursor-ai-vs-github-copilot-comparison.html",
+      "cluster_slug": "ai-tools",
+      "article_type": "blog",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "cursor ai vs github copilot",
+      "published_at_pkt": "2026-11-02 20:06:28 PKT",
+      "published_at_utc": "2026-11-02T15:06:28Z",
+      "git_commit_hash": "uncommitted_local",
+      "quality_gate_passed": true,
+      "status": "PUBLISHED"
     }
   ]
 }
-
