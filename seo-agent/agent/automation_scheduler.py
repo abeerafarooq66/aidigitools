@@ -649,6 +649,20 @@ class AutomationScheduler:
         with open(self.publication_ledger_path, "w", encoding="utf-8") as f:
             json.dump(ledger, f, indent=2)
 
+        # Automatically execute search engine discovery & indexing workflow
+        try:
+            from agent.indexing_notifier import IndexingNotifierEngine
+            notifier = IndexingNotifierEngine(workspace_root=self.workspace_root)
+            discovery_result = notifier.execute_post_publication_discovery(
+                url=canonical_url,
+                is_deployed=True,
+                dry_run=False
+            )
+            new_entry["discovery_telemetry"] = discovery_result
+            new_entry["status_breakdown"] = discovery_result.get("status_breakdown", {})
+        except Exception as e:
+            new_entry["discovery_telemetry_error"] = str(e)
+
         return new_entry
 
     # --------------------------------------------------------------------------

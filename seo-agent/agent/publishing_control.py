@@ -331,6 +331,21 @@ class PublishingControlEngine:
         with open(self.control_ledger_path, "w", encoding="utf-8") as f:
             json.dump(ledger, f, indent=2)
 
+        # Automatically execute search engine discovery & indexing workflow for approved article
+        discovery_telemetry = None
+        if target.get("canonical_url"):
+            try:
+                from agent.indexing_notifier import IndexingNotifierEngine
+                notifier = IndexingNotifierEngine(workspace_root=self.workspace_root)
+                discovery_telemetry = notifier.execute_post_publication_discovery(
+                    url=target["canonical_url"],
+                    html_content=target.get("html_preview"),
+                    is_deployed=True,
+                    dry_run=False
+                )
+            except Exception as e:
+                discovery_telemetry = {"error": str(e)}
+
         return {
             "preview_id": target["preview_id"],
             "slug": target["slug"],
@@ -338,7 +353,8 @@ class PublishingControlEngine:
             "reviewed_by": reviewer_name,
             "current_phase": ledger["current_phase"],
             "approved_supervised_count": ledger["approved_supervised_publications_count"],
-            "phase_2_unlocked": ledger["current_phase"] == PHASE_2_AUTONOMOUS_LOW_RISK
+            "phase_2_unlocked": ledger["current_phase"] == PHASE_2_AUTONOMOUS_LOW_RISK,
+            "discovery_telemetry": discovery_telemetry
         }
 
     # --------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 {
   "ledger_version": "1.0.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_audit_pkt": "2026-11-02 01:31:21 PKT",
+  "last_audit_pkt": "2026-11-02 07:50:36 PKT",
   "least_privilege_policy": {
     "google_search_console": "https://www.googleapis.com/auth/webmasters.readonly",
     "google_analytics_4": "https://www.googleapis.com/auth/analytics.readonly",
@@ -14,7 +14,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "IndexNow key '89d63a...51ad' verified with local authentication key file.",
-      "verified_at_pkt": "2026-11-02 01:31:21 PKT",
+      "verified_at_pkt": "2026-11-02 07:50:36 PKT",
       "data_returned": true
     },
     "google_search_console": {
@@ -22,7 +22,7 @@
       "status": "NOT_CONFIGURED",
       "is_connected": false,
       "details": "GSC_SERVICE_ACCOUNT_KEY environment variable is not configured.",
-      "verified_at_pkt": "2026-11-02 01:31:21 PKT",
+      "verified_at_pkt": "2026-11-02 07:50:36 PKT",
       "data_returned": false
     },
     "google_analytics_4": {

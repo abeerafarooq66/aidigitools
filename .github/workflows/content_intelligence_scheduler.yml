@@ -81,24 +81,33 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
           FORCE_CADENCE: ${{ github.event.inputs.force_cadence || 'false' }}
           SCHEDULER_MODE: ${{ github.event.inputs.mode || 'run-daily-check' }}
         run: |
           python -m seo-agent.agent.automation_scheduler --mode "${SCHEDULER_MODE}"
 
-      - name: 6. Run Regression Test Battery (If changes produced)
+      - name: 6. Search Engine Discovery & Technical Indexing Audit
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+        run: |
+          python -m seo-agent.agent.indexing_notifier --sync-sitemap --audit-indexing
+
+      - name: 7. Run Regression Test Battery (If changes produced)
         run: |
           python -m unittest discover -s tests -v
 
-      - name: 7. Commit & Persist Publication Ledger, Cache & Reports
+      - name: 8. Commit & Persist Publication Ledger, Cache & Reports
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
           git config --global user.email "cloud-agent@aidigitools.tech"
-          git add data/publication_ledger.json data/monthly_usage_ledger.json data/scheduler_run_report.json data/cache/ || true
+          git add sitemap.xml data/publication_ledger.json data/indexing_status_ledger.json data/monthly_usage_ledger.json data/scheduler_run_report.json data/cache/ || true
           if git diff --staged --quiet; then
             echo "No ledger or cache state changes to commit."
           else
-            git commit -m "chore(scheduler): persist publication ledger, usage and daily run report [skip ci]"
+            git commit -m "chore(scheduler): persist publication ledger, indexing status and daily run report [skip ci]"
             git push origin main
           fi
 

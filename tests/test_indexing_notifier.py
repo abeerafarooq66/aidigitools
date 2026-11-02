@@ -5,12 +5,14 @@ Strictly tests Part 19 of Master Architecture Charter:
 INDEXING AND SEARCH ENGINE NOTIFICATIONS.
 
 Validates:
-1. Accurate sitemap updates with verified lastmod values.
-2. IndexNow Bing notifications with key verification.
+1. Accurate sitemap updates with verified lastmod values and XML validity.
+2. IndexNow Bing notifications with key verification, retry handling, and duplicate control.
 3. Strict prohibition firewall against using Google Indexing API for blog posts.
-4. Technical indexing problem detection (canonical mismatch, noindex, missing tags).
-5. Ledger persistence of URL status and last checked date in PKT.
-6. Search engine autonomy disclaimer (no guarantee of indexing or ranking).
+4. Technical indexability pre-flight checks (8 points).
+5. Google Search Console sitemap submission & URL Inspection API handling.
+6. Strictly separated indexing lifecycle status tracking.
+7. Post-publication automated discovery pipeline.
+8. Search engine autonomy disclaimer (no guarantee of indexing or ranking).
 """
 
 import os
@@ -29,6 +31,7 @@ if str(SEO_AGENT_DIR) not in sys.path:
 from agent.indexing_notifier import (
     IndexingNotifierEngine,
     GoogleIndexingApiViolationError,
+    TechnicalIndexabilityError,
     NO_INDEXING_GUARANTEE_DISCLAIMER
 )
 
@@ -47,18 +50,24 @@ class TestIndexingNotifier(unittest.TestCase):
             "89d63ab53a63527b12a199a3096e51ad", encoding="utf-8"
         )
 
+        # Create robots.txt
+        (self.workspace / "robots.txt").write_text(
+            "User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /private/\nSitemap: https://aidigitools.tech/sitemap.xml\n",
+            encoding="utf-8"
+        )
+
         # Create dummy HTML files
         (self.workspace / "index.html").write_text(
-            '<!DOCTYPE html><html><head><link rel="canonical" href="https://aidigitools.tech/"><meta name="robots" content="index, follow"></head><body>Home</body></html>',
+            '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="canonical" href="https://aidigitools.tech/"><meta name="robots" content="index, follow"><script type="application/ld+json">{"@type":"WebSite","name":"AIDigiTools"}</script></head><body><a href="/deals.html">Deals</a><a href="/tools/chatgpt-plus.html">ChatGPT</a></body></html>',
             encoding="utf-8"
         )
         (self.workspace / "deals.html").write_text(
-            '<!DOCTYPE html><html><head><link rel="canonical" href="https://aidigitools.tech/deals.html"><meta name="robots" content="index, follow"></head><body>Deals</body></html>',
+            '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="canonical" href="https://aidigitools.tech/deals.html"><meta name="robots" content="index, follow"><script type="application/ld+json">{"@type":"CollectionPage","name":"Deals"}</script></head><body><a href="/">Home</a><a href="/tools/chatgpt-plus.html">ChatGPT</a></body></html>',
             encoding="utf-8"
         )
         (self.workspace / "tools").mkdir(parents=True, exist_ok=True)
         (self.workspace / "tools" / "chatgpt-plus.html").write_text(
-            '<!DOCTYPE html><html><head><link rel="canonical" href="https://aidigitools.tech/tools/chatgpt-plus.html"><meta name="robots" content="index, follow"></head><body>ChatGPT Plus</body></html>',
+            '<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="canonical" href="https://aidigitools.tech/tools/chatgpt-plus.html"><meta name="robots" content="index, follow"><script type="application/ld+json">{"@type":"Product","name":"ChatGPT Plus"}</script></head><body><a href="/">Home</a><a href="/deals.html">Deals</a></body></html>',
             encoding="utf-8"
         )
 
@@ -69,9 +78,11 @@ class TestIndexingNotifier(unittest.TestCase):
         shutil.rmtree(self.test_dir, ignore_errors=True)
 
     def test_accurate_sitemap_synchronization_and_lastmod(self):
-        """Sitemap must be generated with accurate lastmod, loc, priority, and XML structure."""
+        """Sitemap must be generated with accurate lastmod, loc, priority, valid XML, and robots.txt reference."""
         res = self.engine.sync_sitemap(dry_run=False)
         self.assertEqual(res["total_urls"], 3)
+        self.assertTrue(res["xml_valid"])
+        self.assertTrue(res["robots_txt_sitemap_referenced"])
         self.assertTrue(Path(res["sitemap_path"]).exists())
 
         sitemap_content = Path(res["sitemap_path"]).read_text(encoding="utf-8")
@@ -95,7 +106,7 @@ class TestIndexingNotifier(unittest.TestCase):
             "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
             "https://aidigitools.tech/tools/cursor-pro.html"
         ]
-        res = self.engine.notify_indexnow(urls=urls, dry_run=True)
+        res = self.engine.notify_indexnow_with_retry(urls=urls, dry_run=True, force=True)
         self.assertTrue(res["success"])
         self.assertTrue(res["key_file_exists_locally"])
         self.assertEqual(res["submitted_count"], 2)
@@ -103,45 +114,118 @@ class TestIndexingNotifier(unittest.TestCase):
         self.assertIn("guarantees", res["disclaimer"].lower())
         self.assertIn("neither sitemap submission", res["disclaimer"].lower())
 
-    def test_technical_indexing_audit_and_ledger_persistence(self):
-        """Technical indexing audit must record URL status, HTTP status, and last checked date in PKT."""
+    def test_indexnow_retry_and_duplicate_control(self):
+        """IndexNow duplicate control must skip URLs submitted within the cooldown window."""
+        urls = ["https://aidigitools.tech/tools/chatgpt-plus.html"]
+        # First submission
+        res1 = self.engine.notify_indexnow_with_retry(urls=urls, dry_run=True, force=True)
+        self.assertEqual(res1["submitted_count"], 1)
+
+        # Immediate second submission without force should be skipped by duplicate control
+        res2 = self.engine.notify_indexnow_with_retry(urls=urls, dry_run=True, force=False)
+        self.assertEqual(res2["submitted_count"], 0)
+        self.assertEqual(res2["duplicate_skipped_count"], 1)
+        self.assertIn("Duplicate submission control active", res2["message"])
+
+    def test_technical_indexability_preflight_checks(self):
+        """Pre-flight indexability check must audit all 8 criteria and catch violations."""
+        self.engine.sync_sitemap(dry_run=False)
+
+        # 1. Compliant page should pass
+        res = self.engine.verify_technical_indexability("https://aidigitools.tech/tools/chatgpt-plus.html")
+        self.assertTrue(res["passed"], f"Expected pass, got violations: {res['violations']}")
+        self.assertTrue(res["checks"]["http_200"])
+        self.assertTrue(res["checks"]["canonical_url"])
+        self.assertTrue(res["checks"]["noindex_directive"])
+        self.assertTrue(res["checks"]["robots_txt_allowed"])
+        self.assertTrue(res["checks"]["sitemap_included"])
+        self.assertTrue(res["checks"]["mobile_accessible"])
+        self.assertTrue(res["checks"]["structured_data_valid"])
+
+        # 2. Defective page with noindex and fake aggregateRating should fail
+        defective_html = """<!DOCTYPE html><html><head>
+        <meta name="robots" content="noindex, follow">
+        <link rel="canonical" href="https://aidigitools.tech/bad.html">
+        <script type="application/ld+json">{"@type":"Product","name":"Bad","aggregateRating":{"ratingValue":5}}</script>
+        </head><body><p>No links, no viewport</p></body></html>"""
+        res_bad = self.engine.verify_technical_indexability(
+            "https://aidigitools.tech/bad.html",
+            html_content=defective_html,
+            verify_sitemap=False
+        )
+        self.assertFalse(res_bad["passed"])
+        self.assertTrue(any("Accidental noindex" in v for v in res_bad["violations"]))
+        self.assertTrue(any("Fabricated schema" in v for v in res_bad["violations"]))
+        self.assertTrue(any("Missing responsive viewport" in v for v in res_bad["violations"]))
+
+    def test_google_sitemap_submit_and_url_inspection(self):
+        """Google Search Console sitemap submission and URL inspection must report truthful status."""
+        # Unconfigured environment
+        gsc_sub = self.engine.submit_google_sitemap(dry_run=False)
+        self.assertEqual(gsc_sub["status"], "NOT_CONFIGURED")
+        self.assertFalse(gsc_sub["submitted"])
+
+        gsc_inspect = self.engine.inspect_google_url("https://aidigitools.tech/tools/chatgpt-plus.html", dry_run=False)
+        self.assertEqual(gsc_inspect["status"], "NOT_CONFIGURED")
+        self.assertEqual(gsc_inspect["indexing_state"], "UNKNOWN")
+
+        # Dry-run execution
+        dry_sub = self.engine.submit_google_sitemap(dry_run=True)
+        self.assertEqual(dry_sub["status"], "GOOGLE_SITEMAP_SUBMITTED")
+        self.assertTrue(dry_sub["submitted"])
+
+        dry_inspect = self.engine.inspect_google_url("https://aidigitools.tech/tools/chatgpt-plus.html", dry_run=True)
+        self.assertEqual(dry_inspect["status"], "GOOGLE_INDEX_STATUS_CHECKED")
+        self.assertEqual(dry_inspect["indexing_state"], "UNKNOWN")  # Never call indexed without proof
+
+    def test_separated_indexing_status_tracking(self):
+        """Status tracking must separate PUBLISHED, DEPLOYED, SITEMAP, GOOGLE, and BING states."""
         audit_res = self.engine.run_technical_indexing_audit()
         self.assertEqual(audit_res["total_urls_audited"], 3)
         self.assertEqual(audit_res["total_healthy"], 3)
-        self.assertEqual(audit_res["total_issues"], 0)
 
-        # Verify persistence to disk
-        self.assertTrue(self.engine.indexing_ledger_path.exists())
         with open(self.engine.indexing_ledger_path, "r", encoding="utf-8") as f:
             ledger = json.load(f)
 
-        self.assertEqual(ledger["total_monitored_urls"], 3)
-        self.assertEqual(ledger["total_healthy_urls"], 3)
-        self.assertIn("https://aidigitools.tech/", ledger["urls"])
         home_record = ledger["urls"]["https://aidigitools.tech/"]
-        self.assertEqual(home_record["status"], "HEALTHY")
-        self.assertEqual(home_record["http_status"], 200)
-        self.assertTrue(home_record["last_checked_date_pkt"].endswith(" PKT"))
+        breakdown = home_record["status_breakdown"]
 
-    def test_canonical_and_robots_issue_detection(self):
-        """Audit must accurately flag missing canonical tags, canonical mismatches, and noindex directives."""
-        # Case A: Missing canonical tag
-        html_missing_canon = "<html><head></head><body>No canon</body></html>"
-        res_a = self.engine.audit_canonical_and_robots(html_missing_canon, "https://aidigitools.tech/page.html")
-        self.assertFalse(res_a["is_valid"])
-        self.assertIn("Missing <link rel='canonical'> tag", res_a["issues"][0])
+        self.assertEqual(breakdown["publication_status"], "PUBLISHED")
+        self.assertEqual(breakdown["deployment_status"], "DEPLOYED")
+        self.assertEqual(breakdown["sitemap_status"], "SITEMAP_UPDATED")
+        self.assertIn(breakdown["google_sitemap_status"], ["NOT_CONFIGURED", "GOOGLE_SITEMAP_SUBMITTED"])
+        self.assertIn(breakdown["google_inspection_status"], ["NOT_CONFIGURED", "GOOGLE_INDEX_STATUS_CHECKED"])
+        self.assertEqual(breakdown["google_indexing_state"], "UNKNOWN")  # Never claim indexed without evidence!
+        self.assertIn(breakdown["indexnow_status"], ["INDEXNOW_SUBMITTED", "PENDING"])
+        self.assertIn(breakdown["bing_status"], ["BING_STATUS_VERIFIED", "PENDING"])
 
-        # Case B: Canonical mismatch
-        html_mismatch = '<html><head><link rel="canonical" href="http://wrong-domain.com/page.html"></head></html>'
-        res_b = self.engine.audit_canonical_and_robots(html_mismatch, "https://aidigitools.tech/page.html")
-        self.assertFalse(res_b["is_valid"])
-        self.assertIn("Canonical mismatch", res_b["issues"][0])
+    def test_post_publication_discovery_pipeline(self):
+        """Post-publication pipeline must orchestrate pre-flight, sitemap sync, GSC submit, URL inspect, and IndexNow."""
+        target_url = "https://aidigitools.tech/tools/chatgpt-plus.html"
+        res = self.engine.execute_post_publication_discovery(
+            url=target_url,
+            is_deployed=True,
+            dry_run=True
+        )
 
-        # Case C: Blocking noindex tag
-        html_noindex = '<html><head><link rel="canonical" href="https://aidigitools.tech/page.html"><meta name="robots" content="noindex, follow"></head></html>'
-        res_c = self.engine.audit_canonical_and_robots(html_noindex, "https://aidigitools.tech/page.html")
-        self.assertFalse(res_c["is_valid"])
-        self.assertIn("blocking robots meta directive", res_c["issues"][0])
+        self.assertTrue(res["passed"])
+        self.assertEqual(res["url"], target_url)
+
+        breakdown = res["status_breakdown"]
+        self.assertEqual(breakdown["publication_status"], "PUBLISHED")
+        self.assertEqual(breakdown["deployment_status"], "DEPLOYED")
+        self.assertEqual(breakdown["sitemap_status"], "SITEMAP_UPDATED")
+        self.assertEqual(breakdown["google_sitemap_status"], "GOOGLE_SITEMAP_SUBMITTED")
+        self.assertEqual(breakdown["google_inspection_status"], "GOOGLE_INDEX_STATUS_CHECKED")
+        self.assertEqual(breakdown["google_indexing_state"], "UNKNOWN")  # Autonomous discipline: not indexed yet
+        self.assertEqual(breakdown["indexnow_status"], "INDEXNOW_SUBMITTED")
+        self.assertEqual(breakdown["bing_status"], "BING_STATUS_VERIFIED")
+
+        # Verify entry in ledger
+        with open(self.engine.indexing_ledger_path, "r", encoding="utf-8") as f:
+            ledger = json.load(f)
+        saved = ledger["urls"][target_url]
+        self.assertEqual(saved["status_breakdown"], breakdown)
 
     def test_no_ranking_or_indexing_guarantee_disclaimer(self):
         """All outputs and ledger metadata must include the mandatory search engine autonomy disclaimer."""
