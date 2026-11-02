@@ -74,7 +74,7 @@ jobs:
 
       - name: 4. Pre-Flight Lock & Cadence Audit
         run: |
-          python -m seo-agent.agent.automation_scheduler --mode check-cadence
+          python -m seo-agent.agent.automation_scheduler --mode check-cadence || echo "Notice: Cadence lock active; evaluation will report skip reason."
 
       - name: 5. Execute Daily Research Check & Quality Evaluation
         env:
