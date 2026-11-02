@@ -4,8 +4,30 @@
   "current_phase": "PHASE_1_SUPERVISED",
   "approved_supervised_publications_count": 0,
   "phase_2_threshold": 3,
-  "pending_previews": [],
+  "pending_previews": [
+    {
+      "preview_id": "PRV-0001",
+      "slug": "cursor-ai-vs-github-copilot-comparison",
+      "title": "cursor ai vs github copilot",
+      "metadata": {
+        "canonical_url": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+        "topic_id": "TOPIC-001",
+        "primary_keyword": "cursor ai vs github copilot"
+      },
+      "preview_path": "/home/runner/work/aidigitools/aidigitools/data/previews/cursor-ai-vs-github-copilot-comparison.html",
+      "current_phase": "PHASE_1_SUPERVISED",
+      "approval_required": true,
+      "decision": "HELD_FOR_HUMAN_APPROVAL",
+      "decision_reason": "Phase 1 Supervised Mode Active: The first 3 publishing cycles require explicit preview and human approval. (Completed: 0/3).",
+      "high_risk_triggers": [],
+      "status": "PENDING",
+      "created_at_pkt": "2026-11-02 12:22:59 PKT",
+      "reviewed_by": null,
+      "reviewed_at_pkt": null,
+      "reviewer_notes": null
+    }
+  ],
   "approved_history": [],
   "rejected_history": [],
-  "last_updated_pkt": "2026-11-02 12:10:34 PKT"
+  "last_updated_pkt": "2026-11-02 12:22:59 PKT"
 }
