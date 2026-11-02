@@ -1,16 +1,25 @@
 {
-  "check_timestamp_pkt": "2026-11-02 08:47:18 PKT",
+  "check_timestamp_pkt": "2026-11-02 09:50:11 PKT",
   "business_timezone": "PKT (UTC+5)",
   "cadence_status": {
-    "passed": false,
-    "elapsed_hours": 47.79,
-    "message": "Cadence lock active: Only 47.8 hours have elapsed since the last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared' on 2026-10-31 09:00:00 PKT). Minimum 48.0 hours required to prevent publishing fatigue and maintain high quality.",
-    "bypassed": false
+    "passed": true,
+    "elapsed_hours": 48.84,
+    "message": "Cadence gate cleared: 48.8 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
+    "bypassed": true
   },
-  "budget_status": {},
-  "evaluated_candidates_count": 0,
-  "decision": "SKIP",
-  "reason_code": "CADENCE_LOCK_ACTIVE",
-  "explanation": "Cadence lock active: Only 47.8 hours have elapsed since the last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared' on 2026-10-31 09:00:00 PKT). Minimum 48.0 hours required to prevent publishing fatigue and maintain high quality.",
-  "selected_topic": null
+  "budget_status": {
+    "exceeded": false,
+    "message": "Within budget: $0.00 spent of $50.00 cap."
+  },
+  "evaluated_candidates_count": 4,
+  "decision": "TOPIC_SELECTED",
+  "reason_code": "TOPIC_QUALIFIED",
+  "explanation": "Candidate topic 'cursor ai vs github copilot' (ID: TOPIC-001) qualified with score 95/100. Selected for content generation pipeline. Cadence gate satisfied (48.8h elapsed).",
+  "selected_topic": {
+    "topic_id": "TOPIC-001",
+    "primary_keyword": "cursor ai vs github copilot",
+    "score": 95,
+    "target_canonical_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
+    "editorial_rationale": "High-intent developer query where competitors provide zero quantitative benchmark tables or PKR cost analysis."
+  }
 }
