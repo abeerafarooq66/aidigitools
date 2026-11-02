@@ -1,7 +1,7 @@
 {
   "ledger_version": "1.1.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_audit_pkt": "2026-11-02 08:25:21 PKT",
+  "last_audit_pkt": "2026-11-02 09:39:47 PKT",
   "least_privilege_policy": {
     "google_search_console": "https://www.googleapis.com/auth/webmasters.readonly",
     "google_analytics_4": "https://www.googleapis.com/auth/analytics.readonly",
@@ -14,15 +14,15 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "IndexNow key '89d63a...51ad' verified with local authentication key file.",
-      "verified_at_pkt": "2026-11-02 08:25:21 PKT",
+      "verified_at_pkt": "2026-11-02 09:39:47 PKT",
       "data_returned": true
     },
     "bing_webmaster_api": {
       "service": "bing_webmaster_api",
-      "status": "NOT_CONFIGURED",
+      "status": "MISSING",
       "is_connected": false,
-      "details": "BING_WEBMASTER_API_KEY environment variable is not configured. Separate from IndexNow protocol.",
-      "verified_at_pkt": "2026-11-02 08:15:00 PKT",
+      "details": "BING_WEBMASTER_API_KEY is not set",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
       "data_returned": false
     },
     "google_search_console": {
@@ -30,23 +30,55 @@
       "status": "NOT_CONFIGURED",
       "is_connected": false,
       "details": "GSC_SERVICE_ACCOUNT_KEY environment variable is not configured.",
-      "verified_at_pkt": "2026-11-02 08:25:21 PKT",
+      "verified_at_pkt": "2026-11-02 09:39:47 PKT",
       "data_returned": false
     },
     "google_analytics_4": {
       "service": "google_analytics_4",
-      "status": "NOT_CONFIGURED",
+      "status": "SET",
       "is_connected": false,
-      "details": "GA4 reporting service account credentials are not configured.",
-      "verified_at_pkt": "2026-11-02 08:15:00 PKT",
+      "details": "Numeric GA4 Property ID defined (561800932)",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
       "data_returned": false
     },
     "gemini_api": {
       "service": "gemini_api",
-      "status": "NOT_CONFIGURED",
+      "status": "MISSING",
       "is_connected": false,
-      "details": "GEMINI_API_KEY environment variable is not configured.",
-      "verified_at_pkt": "2026-11-02 08:15:00 PKT",
+      "details": "GEMINI_API_KEY is not set",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
+      "data_returned": false
+    },
+    "pagespeed_insights": {
+      "service": "pagespeed_insights",
+      "status": "MISSING",
+      "is_connected": false,
+      "details": "PAGESPEED_API_KEY is not set",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
+      "data_returned": false
+    },
+    "crux_api": {
+      "service": "crux_api",
+      "status": "MISSING",
+      "is_connected": false,
+      "details": "CRUX_API_KEY is not set",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
+      "data_returned": false
+    },
+    "google_ads": {
+      "service": "google_ads",
+      "status": "OPTIONAL / NOT CONFIGURED",
+      "is_connected": false,
+      "details": "Google Ads API access is currently OPTIONAL / NOT CONFIGURED",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
+      "data_returned": false
+    },
+    "google_search_autocomplete": {
+      "service": "google_search_autocomplete",
+      "status": "SET",
+      "is_connected": false,
+      "details": "Google Search Autocomplete query suggestions configured",
+      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
       "data_returned": false
     }
   }

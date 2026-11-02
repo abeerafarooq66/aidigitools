@@ -621,7 +621,7 @@ class IndexingNotifierEngine:
                     violations.append(f"Live HTTP check returned non-verified status: {live_res['status']}.")
         else:
             checks["live_http_status"] = "SKIPPED"
-            checks["http_200"] = local_file_exists or (html_content is not None)
+            checks["http_200"] = "SKIPPED"
 
         # 3. Correct canonical URL
         canon_m = re.search(r'<link[^>]*rel=["\']canonical["\'][^>]*href=["\'](.*?)["\']', content, re.IGNORECASE)
@@ -723,8 +723,11 @@ class IndexingNotifierEngine:
     # --------------------------------------------------------------------------
     # 3. Google Search Console: Sitemap Submit & URL Inspection
     # --------------------------------------------------------------------------
-    def _get_gsc_access_token(self) -> Optional[str]:
-        """Obtains OAuth 2.0 access token for Google Search Console API."""
+    def _get_gsc_access_token(self, write_scope: bool = False) -> Optional[str]:
+        """
+        Obtains OAuth 2.0 access token for Google Search Console API.
+        Separates read-only property access (webmasters.readonly) from sitemap write access (webmasters).
+        """
         raw_key = os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
         if not raw_key:
             return None
@@ -732,11 +735,11 @@ class IndexingNotifierEngine:
         try:
             from google.oauth2 import service_account
             import google.auth.transport.requests
-            parsed = json.loads(raw_key)
-            scopes = [
-                "https://www.googleapis.com/auth/webmasters.readonly",
-                "https://www.googleapis.com/auth/webmasters"
-            ]
+            parsed = json.loads(raw_key) if raw_key.startswith("{") else json.load(open(raw_key))
+            if write_scope:
+                scopes = ["https://www.googleapis.com/auth/webmasters"]
+            else:
+                scopes = ["https://www.googleapis.com/auth/webmasters.readonly"]
             creds = service_account.Credentials.from_service_account_info(parsed, scopes=scopes)
             req = google.auth.transport.requests.Request()
             creds.refresh(req)
@@ -754,12 +757,13 @@ class IndexingNotifierEngine:
         """
         Submits sitemap.xml to Google Search Console via official Webmasters API:
         PUT https://www.googleapis.com/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}
+        Requires write authorization scope (webmasters).
         """
         target_sitemap = sitemap_url or f"{self.domain}/sitemap.xml"
         target_site = (site_url or self.domain).rstrip("/") + "/"
         now_pkt = get_pkt_now_str()
 
-        token = access_token or self._get_gsc_access_token()
+        token = access_token or self._get_gsc_access_token(write_scope=True)
 
         if dry_run:
             return {
@@ -855,7 +859,7 @@ class IndexingNotifierEngine:
         target_site = (site_url or self.domain).rstrip("/") + "/"
         now_pkt = get_pkt_now_str()
 
-        token = access_token or self._get_gsc_access_token()
+        token = access_token or self._get_gsc_access_token(write_scope=False)
 
         if dry_run:
             return {
@@ -1393,10 +1397,23 @@ class IndexingNotifierEngine:
     # --------------------------------------------------------------------------
     # 7. Full Technical Indexing Audit & Ledger Update
     # --------------------------------------------------------------------------
-    def run_technical_indexing_audit(self) -> Dict[str, Any]:
+    def run_technical_indexing_audit(
+        self,
+        check_live_http: bool = True,
+        verify_live_sitemap: bool = True,
+        live_http_mock: Optional[Dict[str, Any]] = None,
+        mock_sitemap_xml: Optional[str] = None,
+        robots_content: Optional[str] = None
+    ) -> Dict[str, Any]:
         """
         Performs a full audit across all canonical URLs in the site.
-        Enforces separate status tracking and persists into data/indexing_status_ledger.json.
+        - Enforces real HTTPS GET checks for every public canonical URL when check_live_http=True.
+        - Verifies actual HTTP status, final URL, content type, canonical, meta robots and X-Robots-Tag.
+        - Checks the actual public robots.txt for Googlebot and Bingbot.
+        - Verifies each URL exists in the live sitemap.
+        - Never assigns HTTP 200 or DEPLOYED from local file existence alone.
+        - Stores UNKNOWN or SKIPPED whenever a check was not actually performed.
+        - Enforces separate status tracking and persists into data/indexing_status_ledger.json.
         """
         with open(self.indexing_ledger_path, "r", encoding="utf-8") as f:
             ledger = json.load(f)
@@ -1419,7 +1436,7 @@ class IndexingNotifierEngine:
                     "relative_path": rel_path,
                     "last_checked_date_pkt": now_pkt,
                     "in_sitemap": True,
-                    "http_status": 404,
+                    "http_status": 404 if check_live_http else "UNKNOWN",
                     "status": "MISSING_FILE",
                     "status_breakdown": {
                         "publication_status": "PUBLISHED",
@@ -1442,13 +1459,34 @@ class IndexingNotifierEngine:
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                 html = f.read()
 
-            preflight = self.verify_technical_indexability(loc, html_content=html, file_path=file_path)
+            preflight = self.verify_technical_indexability(
+                loc,
+                html_content=html,
+                file_path=file_path,
+                check_live_http=check_live_http,
+                live_http_mock=live_http_mock,
+                verify_live_sitemap=verify_live_sitemap,
+                mock_sitemap_xml=mock_sitemap_xml,
+                robots_content=robots_content
+            )
             prev_record = ledger.get("urls", {}).get(loc, {})
             prev_breakdown = prev_record.get("status_breakdown", {})
 
+            live_status = preflight["checks"].get("live_http_status", "SKIPPED")
+            live_details = preflight["checks"].get("live_http_details", {})
+
+            if check_live_http:
+                actual_http_status = live_details.get("http_code", 0)
+                is_live_verified = (live_status == "LIVE_HTTP_VERIFIED")
+                deployment_status = "DEPLOYED" if is_live_verified else "LIVE_HTTP_FAILED"
+            else:
+                actual_http_status = "SKIPPED"
+                deployment_status = "UNKNOWN"
+                is_live_verified = False
+
             status_breakdown = {
                 "publication_status": "PUBLISHED",
-                "deployment_status": "DEPLOYED",
+                "deployment_status": deployment_status,
                 "sitemap_status": "SITEMAP_UPDATED",
                 "google_sitemap_status": prev_breakdown.get("google_sitemap_status", "NOT_CONFIGURED"),
                 "google_inspection_status": prev_breakdown.get("google_inspection_status", "NOT_CONFIGURED"),
@@ -1460,25 +1498,36 @@ class IndexingNotifierEngine:
                 "bing_status": prev_breakdown.get("bing_status", "BING_STATUS_VERIFIED" if prev_record.get("indexnow_notified") else "PENDING")
             }
 
+            is_healthy = preflight["passed"] and (is_live_verified if check_live_http else True)
+
             record = {
                 "canonical_url": loc,
                 "relative_path": rel_path,
                 "last_checked_date_pkt": now_pkt,
                 "in_sitemap": True,
                 "sitemap_lastmod": s_info["lastmod"],
-                "http_status": 200,
+                "http_status": actual_http_status,
+                "live_http_status": live_status,
                 "canonical_valid": preflight["checks"].get("canonical_url", True),
                 "found_canonical": loc,
-                "robots_directive": "index, follow",
+                "live_canonical": live_details.get("live_canonical", "UNKNOWN" if not check_live_http else ""),
+                "final_url": live_details.get("final_url", "UNKNOWN" if not check_live_http else ""),
+                "content_type": live_details.get("content_type", "UNKNOWN" if not check_live_http else ""),
+                "x_robots_tag": live_details.get("x_robots_tag", "UNKNOWN" if not check_live_http else ""),
+                "meta_robots": live_details.get("meta_robots", "UNKNOWN" if not check_live_http else ""),
+                "googlebot_allowed": preflight["checks"].get("googlebot_allowed", "UNKNOWN"),
+                "bingbot_allowed": preflight["checks"].get("bingbot_allowed", "UNKNOWN"),
+                "robots_txt_status": preflight["checks"].get("robots_txt_fetch_status", "UNKNOWN"),
+                "in_live_sitemap": preflight["checks"].get("live_sitemap", {}).get("url_present_in_live_sitemap", "SKIPPED" if not verify_live_sitemap else False),
                 "indexnow_notified": prev_record.get("indexnow_notified", True),
                 "google_indexing_state": status_breakdown["google_indexing_state"],
                 "status_breakdown": status_breakdown,
                 "preflight_checks": preflight["checks"],
-                "status": "HEALTHY" if preflight["passed"] else "TECHNICAL_ISSUE",
+                "status": "HEALTHY" if is_healthy else "TECHNICAL_ISSUE",
                 "detected_issues": preflight["violations"]
             }
 
-            if preflight["passed"]:
+            if is_healthy:
                 total_healthy += 1
             else:
                 total_issues += 1
@@ -1501,7 +1550,8 @@ class IndexingNotifierEngine:
             "total_healthy": total_healthy,
             "total_issues": total_issues,
             "audit_timestamp_pkt": now_pkt,
-            "disclaimer": NO_INDEXING_GUARANTEE_DISCLAIMER
+            "disclaimer": NO_INDEXING_GUARANTEE_DISCLAIMER,
+            "urls": audit_records
         }
 
     # --------------------------------------------------------------------------

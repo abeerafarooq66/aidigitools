@@ -20,10 +20,15 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Run Auto Content Generator & Sitemap Update
+      - name: Run Content Intelligence & Article Pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY || '89d63ab53a63527b12a199a3096e51ad' }}
+          GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
         run: |
+          python -m seo-agent.agent.automation_scheduler --mode run-pipeline
           python scripts/generate_sitemap.py
           python -m aio_agent sync-llms
           python scripts/link_graph_checker.py --strict
