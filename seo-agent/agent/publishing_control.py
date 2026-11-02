@@ -273,6 +273,17 @@ class PublishingControlEngine:
         status_info = self.get_operational_status()
         current_phase = status_info["current_phase"]
 
+        # Invariant check: Gemini generation authenticity (never publish fallback)
+        if (
+            metadata.get("is_fallback") is True
+            or metadata.get("is_gemini_generated") is False
+            or metadata.get("generation_method") == "FALLBACK_HEURISTIC"
+        ):
+            raise QualityGateBypassProhibitedError(
+                f"Article '{slug}' is marked as heuristic fallback. "
+                "CRITICAL INVARIANT: Heuristic fallback content must never be published to production."
+            )
+
         # Invariant check: Quality Gates must pass
         if quality_gate_report:
             if quality_gate_report.get("decision") == "DO NOT PUBLISH" or quality_gate_report.get("failed_gates_count", 0) > 0:
@@ -382,6 +393,21 @@ class PublishingControlEngine:
         if self.is_emergency_disabled():
             raise EmergencyPublishingDisabledError(
                 "Cannot publish article: global emergency publishing disable switch is active."
+            )
+
+        # Strict Invariant: Never publish heuristic fallback content to production
+        if (
+            metadata.get("is_fallback") is True
+            or metadata.get("is_gemini_generated") is False
+            or metadata.get("generation_method") == "FALLBACK_HEURISTIC"
+        ):
+            raise QualityGateBypassProhibitedError(
+                "CRITICAL INVARIANT: Heuristic fallback content must never be published to production."
+            )
+
+        if metadata.get("quality_gate_passed") is False:
+            raise QualityGateBypassProhibitedError(
+                "CRITICAL INVARIANT: Articles failing quality gates must never be published to production."
             )
 
         # Determine target file destination

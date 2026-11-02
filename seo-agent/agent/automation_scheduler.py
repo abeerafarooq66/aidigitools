@@ -798,11 +798,29 @@ class AutomationScheduler:
             "error": gen_result.get("error")
         }
 
-        if not gen_result.get("success") or not gen_result.get("is_gemini_generated") or not gen_result.get("html_draft"):
+        # Strictest production gate: genuine Gemini generation only, zero heuristic fallback
+        is_genuine_gemini = (
+            gen_result.get("success") is True
+            and gen_result.get("generation_method") == "GEMINI_API"
+            and gen_result.get("is_gemini_generated") is True
+            and bool(gen_result.get("html_draft"))
+            and not gen_result.get("is_fallback", False)
+        )
+
+        if not is_genuine_gemini:
             pipeline_log["article_generated"] = False
             pipeline_log["pipeline_status"] = "GENERATION_FAILED"
-            pipeline_log["explanation"] = f"Article content generation failed or produced heuristic fallback: {gen_result.get('error')}"
+            fail_reason = (
+                gen_result.get("error")
+                or gen_result.get("status")
+                or "Article content generation failed: non-Gemini or heuristic fallback content detected"
+            )
+            pipeline_log["explanation"] = (
+                f"Article generation halted: {fail_reason}. "
+                "CRITICAL INVARIANT: Heuristic fallback content must never publish to production."
+            )
             self.save_run_report(pipeline_log)
+            self._save_detailed_autonomous_report(pipeline_log)
             return pipeline_log
 
         html_draft = gen_result["html_draft"]
@@ -881,7 +899,11 @@ class AutomationScheduler:
                 "primary_keyword": chosen.get("primary_keyword", title),
                 "article_metadata": article_metadata,
                 "target_canonical_path": raw_path,
-                "relative_url": raw_path
+                "relative_url": raw_path,
+                "generation_method": gen_result.get("generation_method"),
+                "is_gemini_generated": gen_result.get("is_gemini_generated"),
+                "is_fallback": gen_result.get("is_fallback", False),
+                "quality_gate_passed": gate_result.get("decision") == "APPROVED" and gate_result.get("failed_gates_count", 0) == 0
             },
             quality_gate_report=gate_result
         )
@@ -917,6 +939,23 @@ class AutomationScheduler:
             return pipeline_log
 
         elif decision == "APPROVED_FOR_AUTO_PUBLICATION":
+            # Safety gate: Strictly require genuine Gemini generation and passed quality gates
+            if (
+                not article_metadata.get("is_gemini_generated")
+                or article_metadata.get("generation_method") != "GEMINI_API"
+                or article_metadata.get("is_fallback") is True
+                or gate_result.get("decision") != "APPROVED"
+                or gate_result.get("failed_gates_count", 0) > 0
+            ):
+                pipeline_log["pipeline_status"] = "GENERATION_FAILED"
+                pipeline_log["explanation"] = (
+                    "CRITICAL INVARIANT VIOLATION: Production publishing blocked. "
+                    "Content is not verified as genuine Gemini-generated or failed quality gates."
+                )
+                self.save_run_report(pipeline_log)
+                self._save_detailed_autonomous_report(pipeline_log)
+                return pipeline_log
+
             # Stage 7: Autonomous Production Publishing
             pipeline_log["stages_completed"].append("AUTONOMOUS_PRODUCTION_PUBLISHING")
             pub_res = control_engine.publish_verified_article(
@@ -930,7 +969,11 @@ class AutomationScheduler:
                     "cluster_slug": chosen.get("cluster_slug", "ai-tools"),
                     "article_type": chosen.get("article_type", "blog"),
                     "author_slug": chosen.get("author_slug", "abeera-farooq"),
-                    "primary_keyword": chosen.get("primary_keyword", title)
+                    "primary_keyword": chosen.get("primary_keyword", title),
+                    "generation_method": "GEMINI_API",
+                    "is_gemini_generated": True,
+                    "is_fallback": False,
+                    "quality_gate_passed": True
                 },
                 dry_run=dry_run
             )
@@ -1022,13 +1065,21 @@ class AutomationScheduler:
         canonical_url: str,
         topic_info: Dict[str, Any]
     ) -> str:
-        """Generates clean HTML article using Gemini generator with verified deterministic fallback."""
+        """Generates clean HTML article using Gemini generator. Heuristic fallback is strictly prohibited."""
         from .gemini_generator import GeminiArticleGenerator
         gen = GeminiArticleGenerator(workspace_root=self.workspace_root)
-        res = gen.generate_article(topic_info=topic_info, canonical_url=canonical_url, allow_fallback=True)
-        if res.get("success") and res.get("html_draft"):
+        res = gen.generate_article(topic_info=topic_info, canonical_url=canonical_url, allow_fallback=False)
+        if (
+            res.get("success") is True
+            and res.get("generation_method") == "GEMINI_API"
+            and res.get("is_gemini_generated") is True
+            and res.get("html_draft")
+        ):
             return res["html_draft"]
-        return gen.generate_heuristic_fallback(topic_info=topic_info, canonical_url=canonical_url)
+        raise RuntimeError(
+            f"Production draft generation failed: {res.get('error') or res.get('status')}. "
+            "Heuristic fallback content is strictly prohibited from production."
+        )
 
 
 # ==============================================================================

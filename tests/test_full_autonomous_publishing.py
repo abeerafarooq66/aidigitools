@@ -363,5 +363,254 @@ class TestFullAutonomousPublishing(unittest.TestCase):
             self.assertIn("cursor-pro-vs-copilot-pro-2026.html", report_text)
 
 
+    # --------------------------------------------------------------------------
+    # 9. Regression: Missing API Key Halts Pipeline with GENERATION_FAILED
+    # --------------------------------------------------------------------------
+    def test_09_missing_api_key_halts_production_pipeline_with_generation_failed(self):
+        """Missing GEMINI_API_KEY must return GENERATION_FAILED, creating no article or ledger entry."""
+        scheduler = AutomationScheduler(workspace_root=self.workspace)
+        mock_topic = {
+            "topic_id": "TOPIC-KEY-MISSING",
+            "primary_keyword": "uncredentialed gemini topic",
+            "target_canonical_path": "blog/uncredentialed-gemini-topic.html"
+        }
+        mock_research = {
+            "decision": "TOPIC_SELECTED",
+            "reason_code": "TOPIC_QUALIFIED",
+            "selected_topic": mock_topic
+        }
+        mock_missing_key_res = {
+            "success": False,
+            "status": "GEMINI_KEY_MISSING",
+            "generation_method": "NONE",
+            "is_gemini_generated": False,
+            "model_used": None,
+            "html_draft": "",
+            "error": "GEMINI_API_KEY environment variable is not configured. Real article generation halted."
+        }
+
+        with patch.object(scheduler, "evaluate_daily_research_check", return_value=mock_research), \
+             patch("agent.gemini_generator.GeminiArticleGenerator.generate_article", return_value=mock_missing_key_res):
+
+            pipeline_result = scheduler.execute_full_content_pipeline(force_cadence=True)
+
+            self.assertEqual(pipeline_result["pipeline_status"], "GENERATION_FAILED")
+            self.assertFalse(pipeline_result["article_generated"])
+            self.assertFalse(pipeline_result.get("published", False))
+            self.assertIn("CRITICAL INVARIANT", pipeline_result["explanation"])
+
+            # Verify no article written to production
+            pub_file = self.workspace / "blog" / "uncredentialed-gemini-topic.html"
+            self.assertFalse(pub_file.exists())
+
+            # Verify publication ledger unchanged
+            with open(self.pub_ledger_path, "r", encoding="utf-8") as f:
+                pub_ledger = json.load(f)
+            self.assertEqual(len(pub_ledger["publications"]), 1)
+
+            # Verify control ledger published_history empty
+            with open(self.control_ledger_path, "r", encoding="utf-8") as f:
+                ctrl_ledger = json.load(f)
+            self.assertEqual(len(ctrl_ledger["published_history"]), 0)
+
+            # Verify report in audit_reports/ records failure reason
+            latest_report = self.workspace / "audit_reports" / "AUTONOMOUS_PUBLISHER_LATEST.md"
+            self.assertTrue(latest_report.exists())
+            report_text = latest_report.read_text(encoding="utf-8")
+            self.assertIn("GENERATION_FAILED", report_text)
+            self.assertIn("GEMINI_API_KEY environment variable is not configured", report_text)
+
+    # --------------------------------------------------------------------------
+    # 10. Regression: API Failure Halts Pipeline with GENERATION_FAILED
+    # --------------------------------------------------------------------------
+    def test_10_api_failure_halts_production_pipeline_with_generation_failed(self):
+        """Gemini API failure (e.g. HTTP 500) returns GENERATION_FAILED and stops publication."""
+        scheduler = AutomationScheduler(workspace_root=self.workspace)
+        mock_topic = {
+            "topic_id": "TOPIC-API-FAIL",
+            "primary_keyword": "api failure test topic",
+            "target_canonical_path": "blog/api-failure-test-topic.html"
+        }
+        mock_research = {
+            "decision": "TOPIC_SELECTED",
+            "reason_code": "TOPIC_QUALIFIED",
+            "selected_topic": mock_topic
+        }
+        mock_api_fail_res = {
+            "success": False,
+            "status": "GENERATION_FAILED",
+            "generation_method": "GEMINI_API",
+            "is_gemini_generated": False,
+            "model_used": "models/gemini-2.0-flash",
+            "html_draft": "",
+            "error": "HTTP 500: Internal Server Error from Generative Language API"
+        }
+
+        with patch.object(scheduler, "evaluate_daily_research_check", return_value=mock_research), \
+             patch("agent.gemini_generator.GeminiArticleGenerator.generate_article", return_value=mock_api_fail_res):
+
+            pipeline_result = scheduler.execute_full_content_pipeline(force_cadence=True)
+
+            self.assertEqual(pipeline_result["pipeline_status"], "GENERATION_FAILED")
+            self.assertFalse(pipeline_result["article_generated"])
+            self.assertFalse(pipeline_result.get("published", False))
+
+            # Verify no file written and ledgers untouched
+            pub_file = self.workspace / "blog" / "api-failure-test-topic.html"
+            self.assertFalse(pub_file.exists())
+
+            with open(self.pub_ledger_path, "r", encoding="utf-8") as f:
+                pub_ledger = json.load(f)
+            self.assertEqual(len(pub_ledger["publications"]), 1)
+
+            with open(self.control_ledger_path, "r", encoding="utf-8") as f:
+                ctrl_ledger = json.load(f)
+            self.assertEqual(len(ctrl_ledger["published_history"]), 0)
+
+    # --------------------------------------------------------------------------
+    # 11. Regression: Model Discovery Failure Halts Production Pipeline
+    # --------------------------------------------------------------------------
+    def test_11_model_discovery_failure_halts_production_pipeline(self):
+        """Model discovery failure must halt the pipeline with GENERATION_FAILED."""
+        scheduler = AutomationScheduler(workspace_root=self.workspace)
+        mock_topic = {
+            "topic_id": "TOPIC-DISCOVERY-FAIL",
+            "primary_keyword": "model discovery fail topic",
+            "target_canonical_path": "blog/model-discovery-fail-topic.html"
+        }
+        mock_research = {
+            "decision": "TOPIC_SELECTED",
+            "reason_code": "TOPIC_QUALIFIED",
+            "selected_topic": mock_topic
+        }
+        mock_discovery_fail_res = {
+            "success": False,
+            "status": "GENERATION_FAILED",
+            "generation_method": "GEMINI_API",
+            "is_gemini_generated": False,
+            "model_used": None,
+            "html_draft": "",
+            "error": "Gemini model discovery failed: No Gemini models supporting generateContent found."
+        }
+
+        with patch.object(scheduler, "evaluate_daily_research_check", return_value=mock_research), \
+             patch("agent.gemini_generator.GeminiArticleGenerator.generate_article", return_value=mock_discovery_fail_res):
+
+            pipeline_result = scheduler.execute_full_content_pipeline(force_cadence=True)
+
+            self.assertEqual(pipeline_result["pipeline_status"], "GENERATION_FAILED")
+            self.assertFalse(pipeline_result["article_generated"])
+            self.assertFalse(pipeline_result.get("published", False))
+
+            pub_file = self.workspace / "blog" / "model-discovery-fail-topic.html"
+            self.assertFalse(pub_file.exists())
+
+    # --------------------------------------------------------------------------
+    # 12. Regression: Heuristic Fallback Strictly Rejected Everywhere
+    # --------------------------------------------------------------------------
+    def test_12_heuristic_fallback_strictly_rejected_from_autonomous_publishing(self):
+        """Heuristic fallback content must NEVER be approved or published to production."""
+        fallback_meta = {
+            "slug": "fallback-test-article",
+            "title": "Fallback Test Article",
+            "canonical_url": "https://aidigitools.tech/blog/fallback-test-article.html",
+            "is_fallback": True,
+            "generation_method": "FALLBACK_HEURISTIC",
+            "is_gemini_generated": False
+        }
+
+        # 1. prepare_article_preview must raise QualityGateBypassProhibitedError
+        with self.assertRaises(QualityGateBypassProhibitedError) as ctx1:
+            self.engine.prepare_article_preview(
+                slug=fallback_meta["slug"],
+                title=fallback_meta["title"],
+                html_content=self.sample_html,
+                metadata=fallback_meta,
+                quality_gate_report={"decision": "APPROVED", "failed_gates_count": 0}
+            )
+        self.assertIn("heuristic fallback", str(ctx1.exception).lower())
+
+        # 2. publish_verified_article must raise QualityGateBypassProhibitedError
+        with self.assertRaises(QualityGateBypassProhibitedError) as ctx2:
+            self.engine.publish_verified_article(
+                slug=fallback_meta["slug"],
+                title=fallback_meta["title"],
+                html_content=self.sample_html,
+                canonical_url=fallback_meta["canonical_url"],
+                metadata=fallback_meta,
+                dry_run=False
+            )
+        self.assertIn("heuristic fallback", str(ctx2.exception).lower())
+
+        # 3. Pipeline execution with fallback generation result halts with GENERATION_FAILED
+        scheduler = AutomationScheduler(workspace_root=self.workspace)
+        mock_topic = {
+            "topic_id": "TOPIC-FALLBACK",
+            "primary_keyword": "fallback test topic",
+            "target_canonical_path": "blog/fallback-test-article.html"
+        }
+        mock_research = {
+            "decision": "TOPIC_SELECTED",
+            "reason_code": "TOPIC_QUALIFIED",
+            "selected_topic": mock_topic
+        }
+        mock_fallback_gen_res = {
+            "success": True,
+            "status": "FALLBACK_AFTER_FAILURE",
+            "generation_method": "FALLBACK_HEURISTIC",
+            "is_gemini_generated": False,
+            "is_fallback": True,
+            "model_used": None,
+            "html_draft": self.sample_html,
+            "error": "Gemini generation failed: Model endpoint error. Fallback generated for dev/test."
+        }
+
+        with patch.object(scheduler, "evaluate_daily_research_check", return_value=mock_research), \
+             patch("agent.gemini_generator.GeminiArticleGenerator.generate_article", return_value=mock_fallback_gen_res):
+
+            pipeline_result = scheduler.execute_full_content_pipeline(force_cadence=True)
+
+            self.assertEqual(pipeline_result["pipeline_status"], "GENERATION_FAILED")
+            self.assertFalse(pipeline_result["article_generated"])
+            self.assertFalse(pipeline_result.get("published", False))
+
+            pub_file = self.workspace / "blog" / "fallback-test-article.html"
+            self.assertFalse(pub_file.exists())
+
+            with open(self.pub_ledger_path, "r", encoding="utf-8") as f:
+                pub_ledger = json.load(f)
+            self.assertEqual(len(pub_ledger["publications"]), 1)
+
+    # --------------------------------------------------------------------------
+    # 13. Regression: _generate_compliant_article_draft Prohibits Fallback
+    # --------------------------------------------------------------------------
+    def test_13_generate_compliant_article_draft_disallows_fallback(self):
+        """_generate_compliant_article_draft passes allow_fallback=False and raises on failure."""
+        scheduler = AutomationScheduler(workspace_root=self.workspace)
+        mock_failed_res = {
+            "success": False,
+            "status": "GENERATION_FAILED",
+            "generation_method": "NONE",
+            "is_gemini_generated": False,
+            "html_draft": "",
+            "error": "Model failure"
+        }
+
+        with patch("agent.gemini_generator.GeminiArticleGenerator.generate_article", return_value=mock_failed_res) as mock_gen:
+            with self.assertRaises(RuntimeError) as ctx:
+                scheduler._generate_compliant_article_draft(
+                    slug="test-slug",
+                    title="Test Title",
+                    canonical_url="https://aidigitools.tech/blog/test-slug.html",
+                    topic_info={"primary_keyword": "test"}
+                )
+            mock_gen.assert_called_once_with(
+                topic_info={"primary_keyword": "test"},
+                canonical_url="https://aidigitools.tech/blog/test-slug.html",
+                allow_fallback=False
+            )
+            self.assertIn("Heuristic fallback content is strictly prohibited", str(ctx.exception))
+
+
 if __name__ == "__main__":
     unittest.main()
