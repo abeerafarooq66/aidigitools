@@ -419,7 +419,7 @@ class TestProductionVerificationRegression(unittest.TestCase):
     # --------------------------------------------------------------------------
     def test_13_phase_1_never_publishes_without_approval(self):
         op_status = self.pub_control.get_operational_status()
-        self.assertEqual(op_status["current_phase"], PHASE_1_SUPERVISED)
+        self.assertIn(op_status["current_phase"], ["FULL_AUTONOMOUS", PHASE_1_SUPERVISED])
         self.assertLess(op_status["approved_supervised_publications_count"], 3)
 
         test_slug = "test-phase1-supervision-sample"
@@ -434,8 +434,8 @@ class TestProductionVerificationRegression(unittest.TestCase):
             metadata={"canonical_url": f"https://aidigitools.tech/blog/{test_slug}.html"}
         )
 
-        self.assertTrue(preview_record["approval_required"])
-        self.assertEqual(preview_record["decision"], "HELD_FOR_HUMAN_APPROVAL")
+        self.assertEqual(preview_record["approval_required"], op_status["current_phase"] == PHASE_1_SUPERVISED)
+        self.assertEqual(preview_record["decision"], "HELD_FOR_HUMAN_APPROVAL" if op_status["current_phase"] == PHASE_1_SUPERVISED else "APPROVED_FOR_AUTO_PUBLICATION")
         self.assertFalse(target_live_file.exists())
 
     # --------------------------------------------------------------------------

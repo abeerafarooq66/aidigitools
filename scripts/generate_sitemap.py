@@ -36,6 +36,7 @@ def generate_sitemap(root_dir: Path | str = "."):
         ("compare", "weekly", "0.8"),
         ("best", "weekly", "0.8"),
         ("guides", "weekly", "0.8"),
+        ("blog", "weekly", "0.8"),
     ]
 
     for dir_name, freq, priority in dir_configs:

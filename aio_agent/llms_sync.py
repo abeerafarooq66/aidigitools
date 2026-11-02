@@ -85,6 +85,12 @@ class LLMsSync:
                 meta = self.extract_meta(p)
                 lines.append(f"- [{meta['title']}]({meta['url']}): {meta['description']}")
 
+        blog_dir = self.root / "blog"
+        if blog_dir.exists():
+            for p in sorted(blog_dir.glob("*.html")):
+                meta = self.extract_meta(p)
+                lines.append(f"- [{meta['title']}]({meta['url']}): {meta['description']}")
+
         lines.extend([
             "",
             "## Operational Rails & Corporate Identity",

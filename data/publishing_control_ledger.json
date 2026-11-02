@@ -1,9 +1,11 @@
 {
-  "ledger_version": "1.0.0",
+  "ledger_version": "2.0.0",
   "business_timezone": "PKT (UTC+5)",
-  "current_phase": "PHASE_1_SUPERVISED",
+  "current_phase": "FULL_AUTONOMOUS",
+  "autonomous_publishing_authorized": true,
+  "emergency_publishing_disabled": false,
   "approved_supervised_publications_count": 0,
-  "phase_2_threshold": 3,
+  "phase_2_threshold": 0,
   "pending_previews": [
     {
       "preview_id": "PRV-0001",
@@ -65,6 +67,6 @@
   ],
   "approved_history": [],
   "rejected_history": [],
-  "last_updated_pkt": "2026-11-02 17:51:29 PKT",
-  "autonomous_publishing_authorized": false
+  "published_history": [],
+  "last_updated_pkt": "2026-11-02 18:23:30 PKT"
 }

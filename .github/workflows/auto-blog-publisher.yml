@@ -33,15 +33,15 @@ jobs:
           python -m aio_agent sync-llms
           python scripts/link_graph_checker.py --strict
 
-      - name: Safely Persist Previews, Sitemaps & Run Reports
+      - name: Safely Persist Published Articles, Sitemaps & Run Reports
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
           git config --global user.email "cloud-agent@aidigitools.tech"
-          git add sitemap.xml llms.txt llms-full.txt data/
+          git add blog/ compare/ guides/ best/ sitemap.xml llms.txt llms-full.txt data/ audit_reports/ || true
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore(publisher): persist preview, sitemap and content report [skip ci]"
+            git commit -m "chore(publisher): persist published articles, preview, sitemap and content report [skip ci]"
             git pull --rebase --autostash origin main || true
             git push origin main
           fi

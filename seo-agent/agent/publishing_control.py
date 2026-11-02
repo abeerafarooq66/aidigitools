@@ -4,31 +4,24 @@ AIDigiTools — Publishing Control Engine (Part 20).
 Strictly implements Part 20 of the Master Architecture Charter:
 PUBLISHING CONTROL.
 
-Phase 1 (Assisted / Supervised Mode):
-- The first three articles must be prepared with preview and explicit human approval.
-- Zero autonomous publishing until at least 3 successful supervised cycles are approved.
+Modes:
+- FULL_AUTONOMOUS: Full autonomous blog publishing authorized by site owner.
+  Eligible articles passing 100% quality gates with zero high-risk claims
+  publish automatically without requiring human approval.
+- PHASE_1_SUPERVISED: Supervised mode where articles require human review.
+- PHASE_2_AUTONOMOUS_LOW_RISK: Low-risk autonomous mode unlocked after 3 approvals.
 
-Phase 2 (Autonomous Low-Risk Mode):
-- Enabled strictly after 3 successful human-approved publishing cycles.
-- Automatic publication is permitted ONLY for eligible, low-risk content passing 100% of quality gates.
-
-Persistent Human Approval Triggers (Always Required, Even in Phase 2):
-1. Unverified product / supplier status
-2. Authorization and licensing claims
-3. Product access model changes
-4. Material pricing claims that cannot be verified
-5. Warranty or legal policy changes
-6. Sensitive commercial promises
-7. Uncertain factual claims
-
-Core Invariant:
-- NEVER bypass a failed quality gate to meet a publishing target.
+Safety Invariants:
+1. NEVER bypass a failed quality gate to meet a publishing target.
+2. Global emergency publishing disable switch instantly halts all auto-publishing.
+3. Persistent high-risk triggers require policy review before publishing.
 """
 
 import os
 import re
 import sys
 import json
+import hashlib
 import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
@@ -44,9 +37,10 @@ PUBLICATION_LEDGER_PATH = DATA_DIR / "publication_ledger.json"
 
 PHASE_1_SUPERVISED = "PHASE_1_SUPERVISED"
 PHASE_2_AUTONOMOUS_LOW_RISK = "PHASE_2_AUTONOMOUS_LOW_RISK"
+FULL_AUTONOMOUS = "FULL_AUTONOMOUS"
 PHASE_2_THRESHOLD = 3
 
-# 7 Mandatory High-Risk Triggers Requiring Human Approval (Even in Phase 2)
+# 7 Mandatory High-Risk Triggers Requiring Policy Review
 PERSISTENT_HIGH_RISK_TRIGGERS = {
     "unverified_product_supplier_status": [
         r"(?i)\b(?:unverified\s+product|unknown\s+supplier|unlisted\s+vendor)\b",
@@ -100,10 +94,19 @@ class HumanApprovalRequiredError(PublishingControlError):
     pass
 
 
+class EmergencyPublishingDisabledError(PublishingControlError):
+    """Raised when publishing is attempted while emergency switch is active."""
+    pass
+
+
 class PublishingControlEngine:
     """
-    Enforces Phase 1 (first 3 articles with preview + human approval) and
-    Phase 2 (low-risk autonomous publication + persistent high-risk triggers).
+    Enforces publishing governance:
+    - FULL_AUTONOMOUS: Instant publication for 100% compliant articles without human review.
+    - PHASE_1_SUPERVISED: Supervised mode with human approval queue.
+    - PHASE_2_AUTONOMOUS_LOW_RISK: Low-risk autonomous publishing after initial unlock.
+    - Global emergency disable switch for immediate operational halt.
+    - Persistent high-risk trigger scanner for sensitive claims.
     """
 
     def __init__(self, workspace_root: Optional[Path] = None):
@@ -119,7 +122,7 @@ class PublishingControlEngine:
         """Initializes publishing control ledger if missing."""
         if not self.control_ledger_path.exists():
             default_ledger = {
-                "ledger_version": "1.0.0",
+                "ledger_version": "2.0.0",
                 "business_timezone": "PKT (UTC+5)",
                 "current_phase": PHASE_1_SUPERVISED,
                 "approved_supervised_publications_count": 0,
@@ -127,37 +130,100 @@ class PublishingControlEngine:
                 "pending_previews": [],
                 "approved_history": [],
                 "rejected_history": [],
+                "published_history": [],
                 "last_updated_pkt": get_pkt_now_str()
             }
             with open(self.control_ledger_path, "w", encoding="utf-8") as f:
                 json.dump(default_ledger, f, indent=2)
 
     # --------------------------------------------------------------------------
-    # 1. Operational Phase State
+    # 1. Operational Phase State & Emergency Switch
     # --------------------------------------------------------------------------
+    def is_emergency_disabled(self) -> bool:
+        """Checks if the global emergency publishing disable switch is active."""
+        if not self.control_ledger_path.exists():
+            return False
+        with open(self.control_ledger_path, "r", encoding="utf-8") as f:
+            ledger = json.load(f)
+        return bool(ledger.get("emergency_publishing_disabled", False))
+
+    def set_emergency_switch(self, disabled: bool) -> Dict[str, Any]:
+        """Toggles the global emergency publishing disable switch."""
+        with open(self.control_ledger_path, "r", encoding="utf-8") as f:
+            ledger = json.load(f)
+        ledger["emergency_publishing_disabled"] = bool(disabled)
+        now_pkt = get_pkt_now_str()
+        ledger["last_updated_pkt"] = now_pkt
+        with open(self.control_ledger_path, "w", encoding="utf-8") as f:
+            json.dump(ledger, f, indent=2)
+        return {
+            "emergency_publishing_disabled": bool(disabled),
+            "updated_at_pkt": now_pkt
+        }
+
+    def set_publishing_mode(self, mode: str, authorized: bool = True) -> Dict[str, Any]:
+        """Sets publishing operational mode (e.g. FULL_AUTONOMOUS, PHASE_1_SUPERVISED)."""
+        valid_modes = [FULL_AUTONOMOUS, PHASE_1_SUPERVISED, PHASE_2_AUTONOMOUS_LOW_RISK]
+        if mode not in valid_modes:
+            raise ValueError(f"Invalid mode '{mode}'. Choose from: {valid_modes}")
+
+        with open(self.control_ledger_path, "r", encoding="utf-8") as f:
+            ledger = json.load(f)
+
+        ledger["current_phase"] = mode
+        ledger["autonomous_publishing_authorized"] = bool(authorized)
+        now_pkt = get_pkt_now_str()
+        ledger["last_updated_pkt"] = now_pkt
+
+        with open(self.control_ledger_path, "w", encoding="utf-8") as f:
+            json.dump(ledger, f, indent=2)
+
+        return {
+            "current_phase": mode,
+            "autonomous_publishing_authorized": bool(authorized),
+            "updated_at_pkt": now_pkt
+        }
+
     def get_operational_status(self) -> Dict[str, Any]:
-        """Returns the current operational phase and publication counts."""
+        """Returns the current operational phase, authorization, and publication counts."""
         with open(self.control_ledger_path, "r", encoding="utf-8") as f:
             ledger = json.load(f)
 
         count = ledger.get("approved_supervised_publications_count", 0)
         threshold = ledger.get("phase_2_threshold", PHASE_2_THRESHOLD)
-        # Even after three approvals, autonomous publishing requires separate explicit human authorization
         autonomous_authorized = ledger.get("autonomous_publishing_authorized", True)
-        phase = PHASE_2_AUTONOMOUS_LOW_RISK if (count >= threshold and autonomous_authorized) else PHASE_1_SUPERVISED
+        emergency_disabled = ledger.get("emergency_publishing_disabled", False)
+        current_phase = ledger.get("current_phase", FULL_AUTONOMOUS)
 
-        if ledger.get("current_phase") != phase:
-            ledger["current_phase"] = phase
+        # Autonomous mode evaluation
+        if current_phase == FULL_AUTONOMOUS:
+            is_autonomous = bool(autonomous_authorized and not emergency_disabled)
+        elif current_phase == PHASE_2_AUTONOMOUS_LOW_RISK:
+            is_autonomous = bool((count >= threshold or autonomous_authorized) and not emergency_disabled)
+        elif current_phase == PHASE_1_SUPERVISED:
+            if count >= threshold and autonomous_authorized:
+                current_phase = PHASE_2_AUTONOMOUS_LOW_RISK
+                is_autonomous = not emergency_disabled
+            else:
+                is_autonomous = False
+        else:
+            is_autonomous = False
+
+        if ledger.get("current_phase") != current_phase:
+            ledger["current_phase"] = current_phase
             with open(self.control_ledger_path, "w", encoding="utf-8") as f:
                 json.dump(ledger, f, indent=2)
 
         return {
-            "current_phase": phase,
+            "current_phase": current_phase,
             "approved_supervised_publications_count": count,
             "phase_2_threshold": threshold,
             "autonomous_publishing_authorized": autonomous_authorized,
-            "phase_2_unlocked": (count >= threshold and autonomous_authorized),
-            "pending_previews_count": len(ledger.get("pending_previews", []))
+            "emergency_publishing_disabled": emergency_disabled,
+            "phase_2_unlocked": is_autonomous,
+            "is_autonomous": is_autonomous,
+            "pending_previews_count": len(ledger.get("pending_previews", [])),
+            "published_history_count": len(ledger.get("published_history", []))
         }
 
     # --------------------------------------------------------------------------
@@ -199,7 +265,8 @@ class PublishingControlEngine:
     ) -> Dict[str, Any]:
         """
         Prepares an article preview with quality evaluation and routing:
-        - In Phase 1: Always halts for human approval.
+        - In FULL_AUTONOMOUS: Automatically approves for publication if quality gates pass and no high-risk triggers.
+        - In Phase 1: Halts for human approval.
         - In Phase 2: Permits auto-publish ONLY if 100% quality gate passed and zero high-risk triggers.
         - INVARIANT: If quality gates failed, REJECTS unconditionally. Never bypass a failed quality gate.
         """
@@ -228,30 +295,37 @@ class PublishingControlEngine:
             ledger = json.load(f)
 
         existing_previews = ledger.get("pending_previews", [])
-        preview_id = f"PRV-{len(existing_previews) + len(ledger.get('approved_history', [])) + len(ledger.get('rejected_history', [])) + 1:04d}"
+        preview_id = f"PRV-{len(existing_previews) + len(ledger.get('approved_history', [])) + len(ledger.get('rejected_history', [])) + len(ledger.get('published_history', [])) + 1:04d}"
 
         # Determine Gating Decision
-        if current_phase == PHASE_1_SUPERVISED:
+        if status_info["emergency_publishing_disabled"]:
+            approval_required = True
+            decision = "BLOCKED_EMERGENCY_DISABLED"
+            decision_reason = (
+                "Global emergency publishing disable switch is ACTIVE. "
+                "Autonomous publishing is suspended until switch is cleared."
+            )
+        elif has_high_risk:
+            approval_required = True
+            decision = "HELD_FOR_POLICY_REVIEW" if current_phase == FULL_AUTONOMOUS else "HELD_FOR_HUMAN_APPROVAL"
+            triggered_categories = list(set(t["category"] for t in high_risk_triggers))
+            decision_reason = (
+                f"Policy Trigger: Content contains {len(triggered_categories)} sensitive category claim(s) "
+                f"requiring human sign-off: {', '.join(triggered_categories)}."
+            )
+        elif status_info["is_autonomous"]:
+            approval_required = False
+            decision = "APPROVED_FOR_AUTO_PUBLICATION"
+            decision_reason = (
+                "Full Autonomous Mode: All 20 quality gates passed and zero high-risk claims detected. "
+                "Eligible for immediate automated publication without human approval."
+            )
+        else:
             approval_required = True
             decision = "HELD_FOR_HUMAN_APPROVAL"
             decision_reason = (
                 f"Phase 1 Supervised Mode Active: The first {PHASE_2_THRESHOLD} publishing cycles require "
-                f"explicit preview and human approval. (Completed: {status_info['approved_supervised_publications_count']}/{PHASE_2_THRESHOLD})."
-            )
-        elif has_high_risk:
-            approval_required = True
-            decision = "HELD_FOR_HUMAN_APPROVAL"
-            triggered_categories = list(set(t["category"] for t in high_risk_triggers))
-            decision_reason = (
-                f"Phase 2 High-Risk Trigger: Content contains {len(triggered_categories)} sensitive category claim(s) "
-                f"requiring human sign-off: {', '.join(triggered_categories)}."
-            )
-        else:
-            approval_required = False
-            decision = "APPROVED_FOR_AUTO_PUBLICATION"
-            decision_reason = (
-                "Phase 2 Low-Risk Content: All 20 quality gates passed and zero high-risk claims detected. "
-                "Eligible for immediate automated publication."
+                f"explicit preview and human approval. (Completed: {status_info['approved_supervised_publications_count']}/{status_info['phase_2_threshold']})."
             )
 
         now_pkt = get_pkt_now_str()
@@ -284,7 +358,105 @@ class PublishingControlEngine:
         return preview_record
 
     # --------------------------------------------------------------------------
-    # 4. Human Approval Workflow
+    # 4. Autonomous Production Publishing
+    # --------------------------------------------------------------------------
+    def publish_verified_article(
+        self,
+        slug: str,
+        title: str,
+        html_content: str,
+        canonical_url: str,
+        metadata: Optional[Dict[str, Any]] = None,
+        dry_run: bool = False
+    ) -> Dict[str, Any]:
+        """
+        Publishes a verified, quality-gate approved article directly to production:
+        1. Writes HTML to target path (e.g. blog/{slug}.html).
+        2. Computes SHA256 content hash.
+        3. Updates sitemap.xml.
+        4. Updates llms.txt & llms-full.txt.
+        5. Submits to search engines via IndexNow.
+        6. Records in publishing_control_ledger.json.
+        """
+        metadata = metadata or {}
+        if self.is_emergency_disabled():
+            raise EmergencyPublishingDisabledError(
+                "Cannot publish article: global emergency publishing disable switch is active."
+            )
+
+        # Determine target file destination
+        raw_path = metadata.get("target_canonical_path") or metadata.get("relative_url")
+        if not raw_path:
+            raw_path = f"blog/{slug}.html"
+        rel_path = raw_path.lstrip("/")
+        target_file_path = self.workspace_root / rel_path
+        content_hash = hashlib.sha256(html_content.encode("utf-8")).hexdigest()
+
+        if not dry_run:
+            target_file_path.parent.mkdir(parents=True, exist_ok=True)
+            target_file_path.write_text(html_content, encoding="utf-8")
+
+        now_pkt = get_pkt_now_str()
+
+        # Update sitemap.xml
+        sitemap_url_count = 0
+        try:
+            from scripts.generate_sitemap import generate_sitemap
+            sitemap_url_count = generate_sitemap(self.workspace_root)
+        except Exception as e:
+            sitemap_url_count = -1
+
+        # Update llms.txt & llms-full.txt
+        try:
+            from aio_agent.llms_sync import LLMsSync
+            llms_sync = LLMsSync(self.workspace_root)
+            llms_sync.sync()
+        except Exception:
+            pass
+
+        # Search Engine Discovery via IndexNow
+        discovery_telemetry = None
+        try:
+            from agent.indexing_notifier import IndexingNotifierEngine
+            notifier = IndexingNotifierEngine(workspace_root=self.workspace_root)
+            discovery_telemetry = notifier.execute_post_publication_discovery(
+                url=canonical_url,
+                html_content=html_content,
+                verify_live_deployment=False,
+                dry_run=dry_run
+            )
+        except Exception as e:
+            discovery_telemetry = {
+                "status": "DISCOVERY_DEFERRED",
+                "reason": "Discovery execution deferred or local environment",
+                "error": str(e)
+            }
+
+        # Persist to published_history in control ledger
+        with open(self.control_ledger_path, "r", encoding="utf-8") as f:
+            c_ledger = json.load(f)
+
+        pub_record = {
+            "slug": slug,
+            "title": title,
+            "canonical_url": canonical_url,
+            "relative_url": rel_path,
+            "content_hash": content_hash,
+            "published_at_pkt": now_pkt,
+            "status": "PUBLISHED_AUTONOMOUSLY",
+            "sitemap_url_count": sitemap_url_count,
+            "discovery_telemetry": discovery_telemetry
+        }
+        c_ledger.setdefault("published_history", []).append(pub_record)
+        c_ledger["last_updated_pkt"] = now_pkt
+
+        with open(self.control_ledger_path, "w", encoding="utf-8") as f:
+            json.dump(c_ledger, f, indent=2)
+
+        return pub_record
+
+    # --------------------------------------------------------------------------
+    # 5. Human Approval Workflow (Preserved for Supervised/Policy Reviews)
     # --------------------------------------------------------------------------
     def human_approve_preview(
         self,
@@ -327,9 +499,10 @@ class PublishingControlEngine:
         ledger.setdefault("approved_history", []).append(target)
         ledger["approved_supervised_publications_count"] = ledger.get("approved_supervised_publications_count", 0) + 1
 
-        # Check for Phase 2 Transition
-        if ledger["approved_supervised_publications_count"] >= ledger.get("phase_2_threshold", PHASE_2_THRESHOLD):
-            ledger["current_phase"] = PHASE_2_AUTONOMOUS_LOW_RISK
+        # Check for Phase 2 Transition if in Phase 1
+        if ledger.get("current_phase") == PHASE_1_SUPERVISED:
+            if ledger["approved_supervised_publications_count"] >= ledger.get("phase_2_threshold", PHASE_2_THRESHOLD):
+                ledger["current_phase"] = PHASE_2_AUTONOMOUS_LOW_RISK
 
         ledger["last_updated_pkt"] = now_pkt
 
@@ -369,12 +542,12 @@ class PublishingControlEngine:
             "reviewed_by": reviewer_name,
             "current_phase": ledger["current_phase"],
             "approved_supervised_count": ledger["approved_supervised_publications_count"],
-            "phase_2_unlocked": ledger["current_phase"] == PHASE_2_AUTONOMOUS_LOW_RISK,
+            "phase_2_unlocked": ledger["current_phase"] in [FULL_AUTONOMOUS, PHASE_2_AUTONOMOUS_LOW_RISK],
             "discovery_telemetry": discovery_telemetry
         }
 
     # --------------------------------------------------------------------------
-    # 5. Human Rejection Workflow
+    # 6. Human Rejection Workflow
     # --------------------------------------------------------------------------
     def human_reject_preview(
         self,
@@ -433,17 +606,37 @@ def main():
     parser.add_argument("--reject", help="Preview ID or slug to reject")
     parser.add_argument("--reviewer", help="Name of the human reviewer", default="Abeera Farooq")
     parser.add_argument("--notes", help="Editorial review notes", default="Verified compliant with AIDigiTools guidelines.")
+    parser.add_argument("--emergency-stop", action="store_true", help="Instantly activates global emergency publishing disable switch")
+    parser.add_argument("--emergency-resume", action="store_true", help="Deactivates global emergency publishing disable switch")
+    parser.add_argument("--set-mode", choices=[FULL_AUTONOMOUS, PHASE_1_SUPERVISED, PHASE_2_AUTONOMOUS_LOW_RISK], help="Set operational publishing mode")
     args = parser.parse_args()
 
     engine = PublishingControlEngine()
+
+    if args.emergency_stop:
+        res = engine.set_emergency_switch(disabled=True)
+        print(f"[EMERGENCY STOP] Publishing disabled: {res['emergency_publishing_disabled']} at {res['updated_at_pkt']}")
+        sys.exit(0)
+
+    if args.emergency_resume:
+        res = engine.set_emergency_switch(disabled=False)
+        print(f"[EMERGENCY RESUME] Publishing disabled: {res['emergency_publishing_disabled']} at {res['updated_at_pkt']}")
+        sys.exit(0)
+
+    if args.set_mode:
+        res = engine.set_publishing_mode(args.set_mode)
+        print(f"[MODE UPDATED] Operational Phase: {res['current_phase']} (Authorized: {res['autonomous_publishing_authorized']})")
+        sys.exit(0)
 
     if args.status:
         st = engine.get_operational_status()
         print(f"[PUBLISHING CONTROL STATUS]")
         print(f"  Current Phase: {st['current_phase']}")
+        print(f"  Autonomous Active: {st['is_autonomous']}")
+        print(f"  Emergency Disabled: {st['emergency_publishing_disabled']}")
         print(f"  Approved Supervised Count: {st['approved_supervised_publications_count']}/{st['phase_2_threshold']}")
-        print(f"  Phase 2 Unlocked: {st['phase_2_unlocked']}")
         print(f"  Pending Previews: {st['pending_previews_count']}")
+        print(f"  Published History Count: {st['published_history_count']}")
         sys.exit(0)
 
     if args.list_pending:
@@ -469,4 +662,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

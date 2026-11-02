@@ -862,11 +862,13 @@ class AutomationScheduler:
             self.save_run_report(pipeline_log)
             return pipeline_log
 
-        # Stage 6: Publishing Control & Human Approval Routing
+        # Stage 6: Publishing Control & Human Approval / Auto-Publish Routing
         from .publishing_control import PublishingControlEngine
         control_engine = PublishingControlEngine(self.workspace_root)
         op_status = control_engine.get_operational_status()
         pipeline_log["operational_phase"] = op_status.get("current_phase")
+        pipeline_log["is_autonomous"] = op_status.get("is_autonomous", False)
+        pipeline_log["emergency_publishing_disabled"] = op_status.get("emergency_publishing_disabled", False)
         pipeline_log["approved_supervised_count"] = op_status.get("approved_supervised_publications_count")
 
         preview_record = control_engine.prepare_article_preview(
@@ -877,29 +879,141 @@ class AutomationScheduler:
                 "canonical_url": canonical_url,
                 "topic_id": chosen.get("topic_id"),
                 "primary_keyword": chosen.get("primary_keyword", title),
-                "article_metadata": article_metadata
+                "article_metadata": article_metadata,
+                "target_canonical_path": raw_path,
+                "relative_url": raw_path
             },
             quality_gate_report=gate_result
         )
         pipeline_log["preview_created"] = True
         pipeline_log["preview_id"] = preview_record.get("preview_id")
         pipeline_log["preview_file"] = preview_record.get("preview_path", f"data/previews/{slug}.html")
-        pipeline_log["stages_completed"].append("HUMAN_REVIEW_PREVIEW_GENERATION")
+        pipeline_log["decision"] = preview_record.get("decision")
+        pipeline_log["stages_completed"].append("PUBLISHING_CONTROL_EVALUATION")
 
-        # In Phase 1: Always HALTS for human review!
-        if op_status.get("current_phase") == "PHASE_1_SUPERVISED":
+        decision = preview_record.get("decision")
+        if decision == "BLOCKED_EMERGENCY_DISABLED":
+            pipeline_log["pipeline_status"] = "EMERGENCY_DISABLED"
+            pipeline_log["explanation"] = preview_record.get("decision_reason")
+            self.save_run_report(pipeline_log)
+            self._save_detailed_autonomous_report(pipeline_log)
+            return pipeline_log
+
+        elif decision == "HELD_FOR_POLICY_REVIEW":
+            pipeline_log["pipeline_status"] = "HELD_FOR_POLICY_REVIEW"
+            pipeline_log["explanation"] = preview_record.get("decision_reason")
+            self.save_run_report(pipeline_log)
+            self._save_detailed_autonomous_report(pipeline_log)
+            return pipeline_log
+
+        elif decision == "HELD_FOR_HUMAN_APPROVAL":
             pipeline_log["pipeline_status"] = "AWAITING_HUMAN_APPROVAL"
             pipeline_log["explanation"] = (
                 f"Article preview '{preview_record.get('preview_id')}' generated and enqueued for human review. "
-                "Phase 1 supervised mode active (0/3 threshold). Autonomous publishing is strictly locked."
+                "Supervised mode active. Autonomous publishing is locked."
             )
             self.save_run_report(pipeline_log)
+            self._save_detailed_autonomous_report(pipeline_log)
             return pipeline_log
 
-        # If in Phase 2 and reviewer_id or low-risk auto-publish permitted:
+        elif decision == "APPROVED_FOR_AUTO_PUBLICATION":
+            # Stage 7: Autonomous Production Publishing
+            pipeline_log["stages_completed"].append("AUTONOMOUS_PRODUCTION_PUBLISHING")
+            pub_res = control_engine.publish_verified_article(
+                slug=slug,
+                title=title,
+                html_content=html_draft,
+                canonical_url=canonical_url,
+                metadata={
+                    "target_canonical_path": raw_path,
+                    "relative_url": raw_path,
+                    "cluster_slug": chosen.get("cluster_slug", "ai-tools"),
+                    "article_type": chosen.get("article_type", "blog"),
+                    "author_slug": chosen.get("author_slug", "abeera-farooq"),
+                    "primary_keyword": chosen.get("primary_keyword", title)
+                },
+                dry_run=dry_run
+            )
+
+            pub_entry = self.record_publication(
+                slug=slug,
+                title=title,
+                canonical_url=canonical_url,
+                cluster_slug=chosen.get("cluster_slug", "ai-tools"),
+                article_type=chosen.get("article_type", "blog"),
+                author_slug=chosen.get("author_slug", "abeera-farooq"),
+                primary_keyword=chosen.get("primary_keyword", title),
+                quality_gate_passed=True
+            )
+
+            pipeline_log["published"] = True
+            pipeline_log["pipeline_status"] = "PUBLISHED_AUTONOMOUSLY"
+            pipeline_log["published_url"] = canonical_url
+            pipeline_log["relative_path"] = raw_path
+            pipeline_log["content_hash"] = pub_res.get("content_hash")
+            pipeline_log["article_id"] = pub_entry.get("article_id")
+            pipeline_log["sitemap_url_count"] = pub_res.get("sitemap_url_count")
+            pipeline_log["discovery_telemetry"] = pub_res.get("discovery_telemetry")
+            pipeline_log["explanation"] = (
+                f"Article '{slug}' passed 100% of quality gates, verified against product registry, "
+                f"and published autonomously to {canonical_url}."
+            )
+            self.save_run_report(pipeline_log)
+            self._save_detailed_autonomous_report(pipeline_log)
+            return pipeline_log
+
         pipeline_log["pipeline_status"] = "PREPARED_FOR_DEPLOYMENT"
         self.save_run_report(pipeline_log)
+        self._save_detailed_autonomous_report(pipeline_log)
         return pipeline_log
+
+
+    def _save_detailed_autonomous_report(self, log_data: dict) -> str:
+        """Saves detailed markdown execution report in audit_reports/."""
+        audit_dir = self.workspace_root / "audit_reports"
+        audit_dir.mkdir(parents=True, exist_ok=True)
+        now_str = get_pkt_now().strftime("%Y-%m-%d_%H%M")
+        report_file = audit_dir / f"autonomous_publisher_{now_str}.md"
+        latest_file = audit_dir / "AUTONOMOUS_PUBLISHER_LATEST.md"
+
+        lines = [
+            "# AIDigiTools Autonomous Content Intelligence & Publishing Report",
+            f"- **Execution Timestamp**: {log_data.get('executed_at_pkt')}",
+            f"- **Execution Status**: {log_data.get('pipeline_status')}",
+            f"- **Operational Phase**: {log_data.get('operational_phase')}",
+            f"- **Autonomous Active**: {log_data.get('is_autonomous', False)}",
+            f"- **Emergency Disabled**: {log_data.get('emergency_publishing_disabled', False)}",
+            "",
+            "## 1. Candidate Research & Cadence",
+            f"- **Research Decision**: {log_data.get('research_check', {}).get('decision', 'N/A')}",
+            f"- **Selected Topic**: {log_data.get('research_check', {}).get('selected_topic', {}).get('topic_id', 'None')} ({log_data.get('research_check', {}).get('selected_topic', {}).get('primary_keyword', 'N/A')})",
+            "",
+            "## 2. Gemini Generation Telemetry",
+            f"- **Generation Method**: {log_data.get('generation_telemetry', {}).get('generation_method', 'N/A')}",
+            f"- **Model Used**: {log_data.get('generation_telemetry', {}).get('model_used', 'N/A')}",
+            f"- **Gemini Generated**: {log_data.get('generation_telemetry', {}).get('is_gemini_generated', False)}",
+            "",
+            "## 3. Quality Gate Evaluation",
+            f"- **Decision**: {log_data.get('quality_gate_result', {}).get('decision', 'N/A')}",
+            f"- **Passed Gates**: {log_data.get('quality_gate_result', {}).get('passed_count', 0)}/20",
+            f"- **Failed Gates**: {log_data.get('quality_gate_result', {}).get('failed_count', 0)}",
+            "",
+            "## 4. Production Publishing & Indexing Telemetry",
+            f"- **Published**: {log_data.get('published', False)}",
+            f"- **Published URL**: {log_data.get('published_url', 'N/A')}",
+            f"- **Relative Path**: {log_data.get('relative_path', 'N/A')}",
+            f"- **Content Hash (SHA-256)**: {log_data.get('content_hash', 'N/A')}",
+            f"- **Article ID**: {log_data.get('article_id', 'N/A')}",
+            f"- **Sitemap URL Count**: {log_data.get('sitemap_url_count', 'N/A')}",
+            "",
+            "## 5. Summary Explanation",
+            f"> {log_data.get('explanation', 'No explanation provided.')}",
+            ""
+        ]
+        content_str = "\n".join(lines)
+        report_file.write_text(content_str, encoding="utf-8")
+        latest_file.write_text(content_str, encoding="utf-8")
+        return str(report_file)
 
     def _generate_compliant_article_draft(
         self,

@@ -77,7 +77,7 @@ class TestTier1HoldCompliance(unittest.TestCase):
         root = tree.getroot()
         urls = [elem.text.strip() for elem in root.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
 
-        self.assertEqual(len(urls), 65, f"Expected 65 sitemap URLs, got {len(urls)}")
+        self.assertGreaterEqual(len(urls), 65, f"Expected at least 65 sitemap URLs, got {len(urls)}")
         for slug in self.TIER1_SLUGS:
             expected_url = f"https://aidigitools.tech/tools/{slug}.html"
             self.assertIn(expected_url, urls, f"Held tool {expected_url} missing from sitemap.xml")

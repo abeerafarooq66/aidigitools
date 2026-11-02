@@ -36,6 +36,7 @@ on:
         type: choice
         options:
           - run-daily-check
+          - run-pipeline
           - audit-ledger
           - check-cadence
           - usage-report
@@ -108,7 +109,7 @@ jobs:
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
           git config --global user.email "cloud-agent@aidigitools.tech"
-          git add sitemap.xml data/publication_ledger.json data/indexing_status_ledger.json data/monthly_usage_ledger.json data/scheduler_run_report.json data/cache/ || true
+          git add blog/ compare/ guides/ best/ sitemap.xml llms.txt llms-full.txt audit_reports/ data/ || true
           if git diff --staged --quiet; then
             echo "No ledger or cache state changes to commit."
           else

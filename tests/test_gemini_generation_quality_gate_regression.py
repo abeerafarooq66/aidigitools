@@ -17,6 +17,7 @@ Covers 10 mandatory production regression invariants:
 import os
 import sys
 import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch, MagicMock
@@ -267,16 +268,28 @@ class TestGeminiGenerationQualityGateRegression(unittest.TestCase):
         Invariant 8: Under Phase 1 Supervised Mode (0/3 threshold),
         no article can ever be published automatically to /blog/ or added to sitemap.xml.
         """
-        status = self.pub_control.get_operational_status()
-        self.assertEqual(status["current_phase"], PHASE_1_SUPERVISED)
-        self.assertEqual(status["approved_supervised_publications_count"], 0)
-        self.assertFalse(status["phase_2_unlocked"])
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_ws = Path(tmp_dir)
+            (tmp_ws / "data").mkdir(parents=True, exist_ok=True)
+            with open(tmp_ws / "data" / "publishing_control_ledger.json", "w", encoding="utf-8") as f:
+                json.dump({
+                    "current_phase": PHASE_1_SUPERVISED,
+                    "approved_supervised_publications_count": 0,
+                    "phase_2_threshold": 3,
+                    "autonomous_publishing_authorized": False,
+                    "pending_previews": []
+                }, f)
+            phase1_engine = PublishingControlEngine(workspace_root=tmp_ws)
+            status = phase1_engine.get_operational_status()
+            self.assertEqual(status["current_phase"], PHASE_1_SUPERVISED)
+            self.assertEqual(status["approved_supervised_publications_count"], 0)
+            self.assertFalse(status["phase_2_unlocked"])
 
-        # Attempting to approve non-existent preview raises KeyError; missing reviewer raises ValueError
-        with self.assertRaises(ValueError):
-            self.pub_control.human_approve_preview(preview_id_or_slug="any-preview", reviewer_name="", reviewer_notes="")
-        with self.assertRaises(KeyError):
-            self.pub_control.human_approve_preview(preview_id_or_slug="non-existent-preview", reviewer_name="Abeera Farooq", reviewer_notes="Approved")
+            # Attempting to approve non-existent preview raises KeyError; missing reviewer raises ValueError
+            with self.assertRaises(ValueError):
+                phase1_engine.human_approve_preview(preview_id_or_slug="any-preview", reviewer_name="", reviewer_notes="")
+            with self.assertRaises(KeyError):
+                phase1_engine.human_approve_preview(preview_id_or_slug="non-existent-preview", reviewer_name="Abeera Farooq", reviewer_notes="Approved")
 
     def test_09_preview_file_paths_persisted_as_repository_relative(self):
         """
