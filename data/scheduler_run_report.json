@@ -1,5 +1,5 @@
 {
-  "executed_at_pkt": "2026-11-02 13:21:02 PKT",
+  "executed_at_pkt": "2026-11-02 13:26:03 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK",
     "TOPIC_SELECTION_AND_DUPLICATE_GUARD"
@@ -9,11 +9,11 @@
   "published": false,
   "preview_created": false,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-02 13:21:02 PKT",
+    "check_timestamp_pkt": "2026-11-02 13:26:03 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
       "passed": true,
-      "elapsed_hours": 52.35,
+      "elapsed_hours": 52.43,
       "message": "Cadence gate cleared: 52.4 hours have elapsed since last publication ('Best AI Video Generators (2026) \u2014 Tested & Compared'), satisfying the 48.0h minimum requirement.",
       "bypassed": false
     },
@@ -38,8 +38,8 @@
     "status": "GENERATION_FAILED",
     "generation_method": "GEMINI_API",
     "is_gemini_generated": false,
-    "model_used": "models/gemini-2.5-flash",
-    "error": "Gemini endpoint verification failed on 'models/gemini-2.5-flash': Verification endpoint failed with HTTP 404"
+    "model_used": "models/gemma-4-26b-a4b-it",
+    "error": "Gemini article generation failed: The read operation timed out"
   },
-  "explanation": "Article content generation failed or produced heuristic fallback: Gemini endpoint verification failed on 'models/gemini-2.5-flash': Verification endpoint failed with HTTP 404"
+  "explanation": "Article content generation failed or produced heuristic fallback: Gemini article generation failed: The read operation timed out"
 }
