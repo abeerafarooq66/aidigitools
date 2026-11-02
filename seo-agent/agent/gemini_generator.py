@@ -481,7 +481,8 @@ class GeminiArticleGenerator:
                 cleaned_html = self._clean_and_wrap_html(
                     raw_content=generated_text,
                     primary_kw=primary_kw,
-                    canonical_url=canonical_url
+                    canonical_url=canonical_url,
+                    comp_context=comp_context
                 )
 
                 is_valid, validation_errors = self.validate_generated_html(cleaned_html, topic_info)
@@ -614,7 +615,14 @@ VERIFIED FACTS & CONSTRAINTS (STRICTLY REQUIRED):
 
 MANDATORY HTML STRUCTURE:
 - Exactly ONE <h1> tag matching '{primary_kw}'.
-- Immediately after <h1>, provide a <p class="quick-answer"> capsule between 40 and 60 words (hard limit: 35 to 70 words) directly defining the software, use case, PKR/USD price, and WhatsApp delivery.
+- Immediately after <h1>, provide a <p class="quick-answer"> capsule.
+  CRITICAL LENGTH CONSTRAINT: The <p class="quick-answer"> MUST contain between 42 and 58 words (absolute hard bounds: 35 to 70 words).
+  It must be EXACTLY 2 clear, informative sentences:
+  Sentence 1: Directly define what the software tools are and their primary developer or creative use case.
+  Sentence 2: State localized pricing in PKR and USD, 15-minute digital workspace delivery via WhatsApp concierge ({OFFICIAL_WHATSAPP}), and a 30-day replacement warranty.
+  EXAMPLE TEMPLATE (48 words):
+  <p class="quick-answer">Cursor AI and GitHub Copilot are leading AI code assistants for software development, offering intelligent autocompletion, agentic refactoring, and codebase indexing. In Pakistan, AIDigiTools provides verified subscriptions starting from Rs. 1,500 PKR ($5.50) with 15-minute digital workspace delivery via WhatsApp concierge and a 30-day replacement warranty.</p>
+  DO NOT write a long paragraph, add fluff, or exceed 65 words in .quick-answer.
 - Add an evidence tier badge: <p class="evidence-tier"><strong>Evidence Classification:</strong> Tier B: Research-based and verified technical documentation.</p>
 - Detailed sections with <h2> and <h3>:
   * Overview & Workflow Problem Solved
@@ -651,8 +659,14 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
 """
         return prompt
 
-    def _clean_and_wrap_html(self, raw_content: str, primary_kw: str, canonical_url: str) -> str:
-        """Strips markdown fences and ensures complete HTML document structure."""
+    def _clean_and_wrap_html(
+        self,
+        raw_content: str,
+        primary_kw: str,
+        canonical_url: str,
+        comp_context: Optional[Dict[str, Any]] = None
+    ) -> str:
+        """Strips markdown fences, ensures complete HTML document structure, and normalizes SEO capsules."""
         text = raw_content.strip()
         if text.startswith("```"):
             text = re.sub(r"^```(?:html)?\s*", "", text, flags=re.IGNORECASE)
@@ -691,7 +705,143 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
   </main>
 </body>
 </html>"""
+
+        # Post-processing: normalize quick-answer capsule and metadata metrics
+        text = self._normalize_quick_answer(text, primary_kw, comp_context)
+        text = self._normalize_seo_metadata(text, primary_kw)
         return text
+
+    def _normalize_quick_answer(
+        self,
+        html_content: str,
+        primary_kw: str,
+        comp_context: Optional[Dict[str, Any]] = None
+    ) -> str:
+        """
+        Ensures the <p class="quick-answer"> capsule satisfies Master Charter Section 4.2
+        invariants: length strictly between 35 and 70 words (optimal target: 40-60 words).
+        Trims extraneous sentences from Gemini output or formats the grounded factual capsule.
+        """
+        comp = comp_context or self.get_verified_comparison_context(primary_kw)
+        is_comp = comp.get("is_comparison", False)
+        if is_comp and comp.get("product_a") and comp.get("product_b"):
+            pa = comp["product_a"]
+            pb = comp["product_b"]
+            name_a = pa.get("canonical_product_name", "Cursor AI")
+            name_b = pb.get("canonical_product_name", "GitHub Copilot")
+            p_pkr_a = pa.get("price_pkr_numeric") or 3800
+            p_pkr_b = pb.get("price_pkr_numeric") or 1500
+            min_pkr = min(p_pkr_a, p_pkr_b)
+            p_usd_a = pa.get("price_usd_numeric") or 14.0
+            p_usd_b = pb.get("price_usd_numeric") or 5.5
+            min_usd = min(p_usd_a, p_usd_b)
+            fallback_qa = (
+                f"{name_a} and {name_b} are leading AI code assistants offering intelligent code completion, "
+                f"refactoring, and codebase indexing. In Pakistan, AIDigiTools provides verified subscriptions "
+                f"starting from Rs. {min_pkr:,} PKR (${min_usd:g}) with 15-minute digital workspace delivery "
+                f"via WhatsApp concierge ({OFFICIAL_WHATSAPP}) and a 30-day replacement warranty."
+            )
+        else:
+            pa = comp.get("product_a") or {}
+            p_name = pa.get("canonical_product_name", primary_kw.title())
+            p_pkr = pa.get("price_pkr", "Rs. 3,800 PKR")
+            p_usd = pa.get("price_usd", "$14.00")
+            fallback_qa = (
+                f"{p_name} is an advanced software solution engineered for professional productivity, offering "
+                f"streamlined workflow automation and intelligent digital capabilities. In Pakistan, AIDigiTools "
+                f"provides genuine subscriptions at {p_pkr} (approx {p_usd}) with fast 15-minute digital "
+                f"delivery via WhatsApp concierge ({OFFICIAL_WHATSAPP}) and a 30-day replacement warranty."
+            )
+
+        qa_match = re.search(r'<p[^>]*class=["\'][^"\']*quick-answer[^"\']*["\'][^>]*>(.*?)</p>', html_content, re.IGNORECASE | re.DOTALL)
+        if not qa_match:
+            qa_html = f'\n    <p class="quick-answer">{fallback_qa}</p>'
+            if re.search(r'</h1>', html_content, re.IGNORECASE):
+                return re.sub(r'(</h1>)', r'\1' + qa_html, html_content, count=1, flags=re.IGNORECASE)
+            elif re.search(r'<h2', html_content, re.IGNORECASE):
+                return re.sub(r'(<h2)', qa_html + r'\n\1', html_content, count=1, flags=re.IGNORECASE)
+            return html_content
+
+        qa_raw = qa_match.group(1)
+        clean_text = re.sub(r'<[^>]+>', ' ', qa_raw).strip()
+        clean_text = re.sub(r'\s+', ' ', clean_text)
+        words = clean_text.split()
+        word_count = len(words)
+
+        if 35 <= word_count <= 70:
+            return html_content
+
+        # If too long, attempt to select leading sentences from Gemini's output
+        if word_count > 70:
+            sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', clean_text) if s.strip()]
+            if len(sentences) >= 2:
+                two_s = sentences[0] + " " + sentences[1]
+                two_w = len(two_s.split())
+                if 35 <= two_w <= 68:
+                    return html_content[:qa_match.start()] + f'<p class="quick-answer">{two_s}</p>' + html_content[qa_match.end():]
+
+            if len(sentences) >= 1:
+                one_s = sentences[0]
+                one_w = len(one_s.split())
+                if 35 <= one_w <= 68:
+                    return html_content[:qa_match.start()] + f'<p class="quick-answer">{one_s}</p>' + html_content[qa_match.end():]
+
+            if len(sentences) >= 3:
+                three_s = " ".join(sentences[:3])
+                three_w = len(three_s.split())
+                if 35 <= three_w <= 68:
+                    return html_content[:qa_match.start()] + f'<p class="quick-answer">{three_s}</p>' + html_content[qa_match.end():]
+
+            # Try trimming at the last sentence boundary before word index 55
+            words_55 = words[:55]
+            trimmed_str = " ".join(words_55)
+            last_period = trimmed_str.rfind(".")
+            if last_period != -1:
+                cand = trimmed_str[:last_period + 1].strip()
+                if 35 <= len(cand.split()) <= 68:
+                    return html_content[:qa_match.start()] + f'<p class="quick-answer">{cand}</p>' + html_content[qa_match.end():]
+
+        # If outside limits and trimming didn't produce 35-70 words, use the grounded fallback
+        return html_content[:qa_match.start()] + f'<p class="quick-answer">{fallback_qa}</p>' + html_content[qa_match.end():]
+
+    def _normalize_seo_metadata(self, html_content: str, primary_kw: str) -> str:
+        """
+        Ensures <title> length is 30-65 chars and <meta name="description"> is 70-165 chars.
+        """
+        res = html_content
+
+        title_m = re.search(r'<title>(.*?)</title>', res, re.IGNORECASE | re.DOTALL)
+        if title_m:
+            t = title_m.group(1).strip()
+            if len(t) < 30:
+                new_t = f"{t} (2026 Guide) — AIDigiTools"
+                if len(new_t) > 65:
+                    new_t = f"{t} — AIDigiTools"
+                res = res[:title_m.start()] + f"<title>{new_t[:65]}</title>" + res[title_m.end():]
+            elif len(t) > 65:
+                trimmed = t[:65]
+                last_space = trimmed.rfind(" ")
+                if last_space > 35:
+                    trimmed = trimmed[:last_space]
+                res = res[:title_m.start()] + f"<title>{trimmed}</title>" + res[title_m.end():]
+
+        desc_m = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=(["\'])(.*?)\1', res, re.IGNORECASE | re.DOTALL)
+        if desc_m:
+            d = desc_m.group(2).strip()
+            if len(d) < 70:
+                new_d = f"{d} Verified PKR rates, 15-minute digital delivery via WhatsApp, and 30-day warranty in Pakistan."
+                if len(new_d) > 165:
+                    new_d = new_d[:162].rstrip() + "..."
+                res = res[:desc_m.start(2)] + new_d + res[desc_m.end(2):]
+            elif len(d) > 165:
+                trimmed_d = d[:160]
+                last_space = trimmed_d.rfind(" ")
+                if last_space > 80:
+                    trimmed_d = trimmed_d[:last_space]
+                trimmed_d = trimmed_d.rstrip() + "..."
+                res = res[:desc_m.start(2)] + trimmed_d + res[desc_m.end(2):]
+
+        return res
 
     def validate_generated_html(self, html_content: str, topic_info: Dict[str, Any]) -> Tuple[bool, List[str]]:
         """Validates that generated HTML satisfies basic structure before Quality Gates."""

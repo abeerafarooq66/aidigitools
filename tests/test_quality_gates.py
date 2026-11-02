@@ -79,8 +79,9 @@ class TestQualityGatesEngine(unittest.TestCase):
     <div class="reseller-badge">Independent Reseller & Service Desk: AIDigiTools is an independent concierge.</div>
     <h1>Cursor AI vs GitHub Copilot: Developer Comparison</h1>
     <p class="quick-answer">
-      Cursor Pro costs Rs. 3,800 PKR ($13.50 USD) while GitHub Copilot costs Rs. 2,900 PKR ($10 USD) on AIDigiTools for Pakistan and worldwide developers. Cursor excels in multi-file Composer editing with Claude 3.5 Sonnet, whereas Copilot integrates directly across VS Code and JetBrains. Both subscriptions activate within 15 minutes via WhatsApp with our 30-day replacement warranty.
+      Cursor Pro costs Rs. 3,800 PKR ($14.00 USD) while GitHub Copilot costs Rs. 1,500 PKR ($5.50 USD) on AIDigiTools for Pakistan and worldwide developers. Cursor excels in multi-file Composer editing with Claude 3.5 Sonnet, whereas Copilot integrates directly across VS Code and JetBrains. Both subscriptions activate within 15 minutes via WhatsApp with our 30-day replacement warranty.
     </p>
+    <p class="evidence-tier"><strong>Evidence Classification:</strong> Tier B: Research-based and verified technical documentation.</p>
 
     <h2>Evaluation Criteria &amp; Comparison Methodology</h2>
     <p>Tested by AIDigiTools engineers based on verified technical releases from OpenAI, Anthropic, and GitHub.</p>
@@ -91,7 +92,7 @@ class TestQualityGatesEngine(unittest.TestCase):
         <tr><th>Feature</th><th>Cursor Pro</th><th>GitHub Copilot</th></tr>
       </thead>
       <tbody>
-        <tr><td>Price (PKR / USD)</td><td>Rs. 3,800 PKR / $13.50 USD</td><td>Rs. 2,900 PKR / $10 USD</td></tr>
+        <tr><td>Price (PKR / USD)</td><td>Rs. 3,800 PKR / $14.00 USD</td><td>Rs. 1,500 PKR / $5.50 USD</td></tr>
         <tr><td>Primary Model</td><td>Claude 3.5 Sonnet &amp; GPT-4o</td><td>GPT-4o &amp; Claude 3.5 Sonnet</td></tr>
       </tbody>
     </table>

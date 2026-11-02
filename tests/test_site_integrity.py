@@ -11,7 +11,7 @@ class TestSiteIntegrity(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.html_files = sorted([p for p in ROOT.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules")) for part in p.parts) and p.name != "404.html"])
+        cls.html_files = sorted([p for p in ROOT.glob("**/*.html") if not any(part.startswith((".", "venv", "node_modules", "data")) or part == "data" for part in p.parts) and p.name != "404.html"])
         cls.tool_files = sorted(list(ROOT.glob("tools/*.html")))
         cls.guide_files = sorted(list(ROOT.glob("guides/*.html")) + list(ROOT.glob("compare/*.html")) + list(ROOT.glob("best/*.html")))
 

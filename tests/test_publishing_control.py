@@ -88,7 +88,7 @@ class TestPublishingControl(unittest.TestCase):
 
         self.assertTrue(preview["approval_required"])
         self.assertEqual(preview["decision"], "HELD_FOR_HUMAN_APPROVAL")
-        self.assertTrue(Path(preview["preview_path"]).exists())
+        self.assertTrue((self.workspace / preview["preview_path"]).exists())
         self.assertEqual(preview["status"], "PENDING")
 
         # Verify ledger persistence

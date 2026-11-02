@@ -319,6 +319,43 @@ class TestGeminiGenerationQualityGateRegression(unittest.TestCase):
             self.assertFalse(result.get("preview_created", False))
             self.assertIsNone(result.get("preview_id"))
 
+    def test_11_quick_answer_normalization_enforces_word_count_limits(self):
+        """
+        Invariant 11: When Gemini generates an over-length quick-answer (e.g. 150+ words),
+        or under-length (< 35 words), post-processing normalizes it to strictly between
+        35 and 70 words (optimal target 40-60 words), satisfying Gate 1 and check_seo_metrics.py.
+        """
+        gen = GeminiArticleGenerator(workspace_root=self.workspace_root)
+        comp_context = gen.get_verified_comparison_context("cursor ai vs github copilot")
+
+        # Case 1: 150-word verbose text from LLM
+        verbose_text = """<!DOCTYPE html><html><head><title>Test Title That Fits Correct Length Bounds Here</title>
+<meta name="description" content="In-depth guide and pricing breakdown for Cursor AI vs GitHub Copilot in Pakistan with verified details.">
+</head><body><h1>Cursor AI vs GitHub Copilot</h1>
+<p class="quick-answer">Cursor AI and GitHub Copilot are two premier AI-powered coding assistants designed for modern software developers, offering deep IDE integrations, automated multi-file edits, and intelligent codebase comprehension across complex repositories. Cursor provides native agentic editing and specialized background refactoring starting from Rs. 3,800 PKR per month, while GitHub Copilot offers broad multi-editor autocompletion starting from Rs. 1,500 PKR. In Pakistan, AIDigiTools provides verified workspace seats for both tools with fast 15-minute digital delivery via WhatsApp and a 30-day replacement warranty. Software engineers across Islamabad, Lahore, Karachi, and global freelance hubs require reliable access without international credit card restrictions. This in-depth comparison covers everything you need to make an informed decision for your workflow, including benchmark analysis, response latency, supported models such as Claude 3.5 Sonnet and GPT-4o, and pricing plans with complete transparency.</p>
+</body></html>"""
+
+        normalized = gen._clean_and_wrap_html(
+            raw_content=verbose_text,
+            primary_kw="cursor ai vs github copilot",
+            canonical_url="https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+            comp_context=comp_context
+        )
+
+        import re
+        qa_match = re.search(r'<p[^>]*class=["\']quick-answer["\'][^>]*>(.*?)</p>', normalized, re.IGNORECASE | re.DOTALL)
+        self.assertIsNotNone(qa_match)
+        words = len(re.sub(r'<[^>]+>', ' ', qa_match.group(1)).split())
+        self.assertGreaterEqual(words, 35)
+        self.assertLessEqual(words, 70)
+
+        # Gate 1 evaluation must pass on normalized output
+        gate_res = self.gate_engine.evaluate_article(
+            html_content=normalized,
+            metadata={"slug": "cursor-ai-vs-github-copilot-comparison", "title": "Cursor AI vs GitHub Copilot"}
+        )
+        self.assertTrue(gate_res["gate_results"]["GATE_01_REAL_READER_PROBLEM"]["passed"])
+
 
 if __name__ == "__main__":
     unittest.main()
