@@ -78,5 +78,6 @@ jobs:
           else
             echo "Committing audit report and verified autonomous updates..."
             git commit -m "chore(audit): automated twice-daily SEO & site health audit [skip ci]"
+            git pull --rebase --autostash origin main || true
             git push origin main
           fi

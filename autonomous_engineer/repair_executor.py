@@ -195,10 +195,10 @@ class RepairExecutor:
         test_cmd = ["python", "-m", "unittest", "discover", "-s", "tests", "-v"]
         link_cmd = ["python", "scripts/link_graph_checker.py", "--strict"]
 
-        t_res = subprocess.run(test_cmd, cwd=self.root, capture_output=True, text=True)
+        t_res = subprocess.run(test_cmd, cwd=self.root, capture_output=True, text=True, encoding="utf-8", errors="replace")
         tests_passed = (t_res.returncode == 0)
 
-        l_res = subprocess.run(link_cmd, cwd=self.root, capture_output=True, text=True)
+        l_res = subprocess.run(link_cmd, cwd=self.root, capture_output=True, text=True, encoding="utf-8", errors="replace")
         link_passed = (l_res.returncode == 0)
 
         all_passed = tests_passed and link_passed
@@ -255,7 +255,7 @@ class RepairExecutor:
     def get_git_diff(self) -> str:
         """Returns the current unstaged and staged git diff."""
         try:
-            res = subprocess.run(["git", "diff"], cwd=self.root, capture_output=True, text=True)
+            res = subprocess.run(["git", "diff"], cwd=self.root, capture_output=True, text=True, encoding="utf-8", errors="replace")
             return res.stdout
         except Exception:
             return ""

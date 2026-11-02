@@ -142,7 +142,9 @@ class PublishingControlEngine:
 
         count = ledger.get("approved_supervised_publications_count", 0)
         threshold = ledger.get("phase_2_threshold", PHASE_2_THRESHOLD)
-        phase = PHASE_2_AUTONOMOUS_LOW_RISK if count >= threshold else PHASE_1_SUPERVISED
+        # Even after three approvals, autonomous publishing requires separate explicit human authorization
+        autonomous_authorized = ledger.get("autonomous_publishing_authorized", True)
+        phase = PHASE_2_AUTONOMOUS_LOW_RISK if (count >= threshold and autonomous_authorized) else PHASE_1_SUPERVISED
 
         if ledger.get("current_phase") != phase:
             ledger["current_phase"] = phase
@@ -153,7 +155,8 @@ class PublishingControlEngine:
             "current_phase": phase,
             "approved_supervised_publications_count": count,
             "phase_2_threshold": threshold,
-            "phase_2_unlocked": count >= threshold,
+            "autonomous_publishing_authorized": autonomous_authorized,
+            "phase_2_unlocked": (count >= threshold and autonomous_authorized),
             "pending_previews_count": len(ledger.get("pending_previews", []))
         }
 

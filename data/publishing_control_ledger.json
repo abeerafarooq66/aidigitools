@@ -65,5 +65,6 @@
   ],
   "approved_history": [],
   "rejected_history": [],
-  "last_updated_pkt": "2026-11-02 14:11:47 PKT"
+  "last_updated_pkt": "2026-11-02 17:51:29 PKT",
+  "autonomous_publishing_authorized": false
 }

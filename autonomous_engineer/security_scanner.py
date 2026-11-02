@@ -58,7 +58,7 @@ class SecurityScanner:
         findings = []
 
         # Directories and files to exclude from secret scan
-        exclude_dirs = {".git", "__pycache__", ".pytest_cache", "node_modules", ".venv", "venv", ".idea", "tests"}
+        exclude_dirs = {".git", "__pycache__", ".pytest_cache", "node_modules", ".venv", "venv", ".idea", "tests", ".gemini", ".agent", ".agents", ".gsd"}
         exclude_exts = {".png", ".jpg", ".jpeg", ".webp", ".ico", ".svg", ".woff", ".woff2", ".ttf", ".eot"}
 
         for root, dirs, files in os.walk(scan_dir):
@@ -256,7 +256,7 @@ class SecurityScanner:
 
         pip_status = "clean"
         try:
-            res = subprocess.run(["pip", "check"], capture_output=True, text=True)
+            res = subprocess.run(["pip", "check"], capture_output=True, text=True, encoding="utf-8", errors="replace")
             if res.returncode != 0:
                 pip_status = f"warning: {res.stdout.strip()}"
         except Exception as e:

@@ -57,31 +57,34 @@ def run_full_cycle(root_dir: Path = PROJECT_ROOT, skip_live: bool = False) -> in
         print("  [SKIPPED] Live probes skipped by flag.")
         live_summary = {"homepage": {"reachable": True, "status_code": 200}, "indexnow_key": {"valid": True}, "sample_routes": [], "all_live_checks_passed": True}
 
-    # Query Bing Webmaster API Telemetry
-    bing_client = BingWebmasterClient()
-    bing_summary = bing_client.run_bing_audit()
-    if bing_summary.get("connected"):
-        print(f"  [BING API] Connected: Active Bing Webmaster Telemetry retrieved.")
-        if bing_summary.get("sitemap_synced"):
-            print(f"  [BING API] Sitemaps synchronized with Bing Webmaster Tools.")
-    else:
-        print(f"  [BING API] Status: {bing_summary.get('status')} ({bing_summary.get('message')})")
+    # Query External Webmaster & Telemetry APIs
+    if not skip_live:
+        bing_client = BingWebmasterClient()
+        bing_summary = bing_client.run_bing_audit()
+        if bing_summary.get("connected"):
+            print(f"  [BING API] Connected: Active Bing Webmaster Telemetry retrieved.")
+            if bing_summary.get("sitemap_synced"):
+                print(f"  [BING API] Sitemaps synchronized with Bing Webmaster Tools.")
+        else:
+            print(f"  [BING API] Status: {bing_summary.get('status')} ({bing_summary.get('message')})")
 
-    # Query Google Search Console API Telemetry
-    gsc_client = GoogleSearchConsoleClient()
-    gsc_summary = gsc_client.run_gsc_audit()
-    if gsc_summary.get("connected"):
-        print(f"  [GSC API] Connected: Active Google Search Console Telemetry retrieved.")
-    else:
-        print(f"  [GSC API] Status: {gsc_summary.get('status')} ({gsc_summary.get('message')})")
+        gsc_client = GoogleSearchConsoleClient()
+        gsc_summary = gsc_client.run_gsc_audit()
+        if gsc_summary.get("connected"):
+            print(f"  [GSC API] Connected: Active Google Search Console Telemetry retrieved.")
+        else:
+            print(f"  [GSC API] Status: {gsc_summary.get('status')} ({gsc_summary.get('message')})")
 
-    # Query Google PageSpeed Insights & Core Web Vitals Telemetry
-    pagespeed_client = PageSpeedInsightsClient()
-    pagespeed_summary = pagespeed_client.run_pagespeed_audit()
-    if pagespeed_summary.get("connected"):
-        print(f"  [PAGESPEED API] Connected: Live Core Web Vitals & Performance Scores retrieved.")
+        pagespeed_client = PageSpeedInsightsClient()
+        pagespeed_summary = pagespeed_client.run_pagespeed_audit()
+        if pagespeed_summary.get("connected"):
+            print(f"  [PAGESPEED API] Connected: Live Core Web Vitals & Performance Scores retrieved.")
+        else:
+            print(f"  [PAGESPEED API] Status: {pagespeed_summary.get('status')} ({pagespeed_summary.get('message')})")
     else:
-        print(f"  [PAGESPEED API] Status: {pagespeed_summary.get('status')} ({pagespeed_summary.get('message')})")
+        bing_summary = {"connected": False, "status": "SKIPPED", "message": "Live API queries skipped by --skip-live"}
+        gsc_summary = {"connected": False, "status": "SKIPPED", "message": "Live API queries skipped by --skip-live"}
+        pagespeed_summary = {"connected": False, "status": "SKIPPED", "message": "Live API queries skipped by --skip-live"}
 
     # Security & Vulnerability Audit
     print("\n[SECURITY AUDIT] Scanning for Exposed Secrets, Workflow Permissions & Supply Chain...")
