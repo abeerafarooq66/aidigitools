@@ -79,10 +79,13 @@ jobs:
       - name: 5. Execute Daily Research Check & Quality Evaluation
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY || '89d63ab53a63527b12a199a3096e51ad' }}
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
-          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_API_KEY || secrets.BING_WEBMASTER_API_KEY }}
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+          CRUX_API_KEY: ${{ secrets.CRUX_API_KEY || secrets.PAGESPEED_API_KEY }}
           FORCE_CADENCE: ${{ github.event.inputs.force_cadence || 'false' }}
           SCHEDULER_MODE: ${{ github.event.inputs.mode || 'run-daily-check' }}
         run: |
@@ -90,8 +93,10 @@ jobs:
 
       - name: 6. Search Engine Discovery & Technical Indexing Audit
         env:
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY || '89d63ab53a63527b12a199a3096e51ad' }}
           GSC_SERVICE_ACCOUNT_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_API_KEY || secrets.BING_WEBMASTER_API_KEY }}
         run: |
           python -m seo-agent.agent.indexing_notifier --sync-sitemap --audit-indexing
 
