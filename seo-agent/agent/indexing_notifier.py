@@ -145,6 +145,7 @@ class IndexingNotifierEngine:
         self.indexnow_key = os.environ.get("INDEXNOW_KEY", INDEXNOW_KEY).strip()
         self.domain = DOMAIN
         self.host = HOST
+        self._cached_live_sitemap_xml: Optional[str] = None
         self._ensure_ledger_file()
 
     def _ensure_ledger_file(self) -> None:
@@ -396,6 +397,9 @@ class IndexingNotifierEngine:
 
         if xml_raw is not None:
             fetch_status = "FETCHED_MOCK"
+        elif self._cached_live_sitemap_xml is not None:
+            xml_raw = self._cached_live_sitemap_xml
+            fetch_status = "FETCHED_CACHED"
         else:
             try:
                 req = urllib.request.Request(
@@ -405,6 +409,7 @@ class IndexingNotifierEngine:
                 with urllib.request.urlopen(req, timeout=timeout) as resp:
                     if resp.status == 200:
                         xml_raw = resp.read().decode("utf-8", errors="ignore")
+                        self._cached_live_sitemap_xml = xml_raw
                         fetch_status = "FETCHED"
                     else:
                         fetch_status = "FAILED"

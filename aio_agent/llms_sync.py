@@ -145,5 +145,6 @@ class LLMsSync:
             "llms_path": str(llms_path),
             "llms_full_path": str(llms_full_path),
             "bytes_brief": len(content_brief.encode("utf-8")),
-            "bytes_full": len(content_full.encode("utf-8"))
+            "bytes_full": len(content_full.encode("utf-8")),
+            "bytes_written": len(content_brief.encode("utf-8")) + len(content_full.encode("utf-8"))
         }

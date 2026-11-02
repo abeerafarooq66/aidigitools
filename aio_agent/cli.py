@@ -71,7 +71,8 @@ def main():
     elif args.command == "sync-llms":
         syncer = LLMsSync(args.root)
         res = syncer.sync()
-        print(f"[AIO] Synchronized llms.txt and llms-full.txt ({res['bytes_written']} bytes)")
+        written = res.get('bytes_written', res.get('bytes_brief', 0) + res.get('bytes_full', 0))
+        print(f"[AIO] Synchronized llms.txt and llms-full.txt ({written} bytes)")
         return 0
 
 if __name__ == "__main__":
