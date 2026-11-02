@@ -767,7 +767,8 @@ class AutomationScheduler:
         chosen = res_report.get("selected_topic", {})
         slug = Path(chosen.get("target_canonical_path", "")).stem
         title = chosen.get("primary_keyword", "")
-        canonical_path = chosen.get("target_canonical_path", f"/blog/{slug}.html")
+        raw_path = chosen.get("target_canonical_path", f"blog/{slug}.html").lstrip("/")
+        canonical_path = f"/{raw_path}"
         canonical_url = f"https://aidigitools.tech{canonical_path}"
 
         is_dup, dup_reason = self.check_duplicate_publication(slug=slug, canonical_url=canonical_url, title=title)
@@ -779,8 +780,32 @@ class AutomationScheduler:
 
         pipeline_log["stages_completed"].append("TOPIC_SELECTION_AND_DUPLICATE_GUARD")
 
-        # Stage 3: Content Drafting / Generation (Compliant with Charter Sections 4 & 5)
-        html_draft = self._generate_compliant_article_draft(slug, title, canonical_url, chosen)
+        # Stage 3: Genuine Gemini Content Generation
+        from .gemini_generator import GeminiArticleGenerator
+        gemini_gen = GeminiArticleGenerator(workspace_root=self.workspace_root)
+        gen_result = gemini_gen.generate_article(
+            topic_info=chosen,
+            canonical_url=canonical_url,
+            allow_fallback=True
+        )
+
+        pipeline_log["generation_telemetry"] = {
+            "success": gen_result.get("success"),
+            "status": gen_result.get("status"),
+            "generation_method": gen_result.get("generation_method"),
+            "is_gemini_generated": gen_result.get("is_gemini_generated"),
+            "model_used": gen_result.get("model_used"),
+            "error": gen_result.get("error")
+        }
+
+        if not gen_result.get("success") or not gen_result.get("html_draft"):
+            pipeline_log["article_generated"] = False
+            pipeline_log["pipeline_status"] = "GENERATION_FAILED"
+            pipeline_log["explanation"] = f"Article content generation failed: {gen_result.get('error')}"
+            self.save_run_report(pipeline_log)
+            return pipeline_log
+
+        html_draft = gen_result["html_draft"]
         pipeline_log["article_generated"] = True
         pipeline_log["stages_completed"].append("CONTENT_DRAFTING")
 
@@ -792,18 +817,25 @@ class AutomationScheduler:
         # Stage 5: Quality Gate Evaluation (All 20 Gates)
         from .quality_gates import QualityGateEngine
         gate_engine = QualityGateEngine(self.workspace_root)
+        article_metadata = {
+            "slug": slug,
+            "title": title,
+            "primary_keyword": chosen.get("primary_keyword", title),
+            "canonical_url": canonical_url,
+            "cluster_slug": chosen.get("cluster_slug", "ai-video-and-audio-tools"),
+            "article_type": chosen.get("article_type", "guide"),
+            "author_slug": chosen.get("author_slug", "abeera-farooq"),
+            "target_canonical_path": canonical_path
+        }
         gate_result = gate_engine.evaluate_article(
             html_content=html_draft,
-            slug=slug,
-            title=title,
-            canonical_url=canonical_url,
-            primary_keyword=title
+            metadata=article_metadata
         )
         pipeline_log["quality_gate_result"] = {
             "decision": gate_result.get("decision"),
             "passed_count": gate_result.get("passed_gates_count", 0),
             "failed_count": gate_result.get("failed_gates_count", 0),
-            "failed_gates": gate_result.get("failed_gates", [])
+            "failed_gates": gate_result.get("critical_failures", [])
         }
         pipeline_log["stages_completed"].append("QUALITY_GATES")
 
@@ -858,88 +890,13 @@ class AutomationScheduler:
         canonical_url: str,
         topic_info: Dict[str, Any]
     ) -> str:
-        """Generates a clean HTML article strictly satisfying Master Charter invariants."""
-        kw = topic_info.get("primary_keyword", title)
-        rationale = topic_info.get("editorial_rationale", "In-depth guide and real pricing comparison.")
-        return f'''<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{kw} (2026 Guide & Pricing) — AIDigiTools</title>
-  <meta name="description" content="Comprehensive review of {kw}. Discover authentic pricing in PKR and USD, payment options via EasyPaisa and JazzCash, delivery SLA, and full comparison.">
-  <link rel="canonical" href="{canonical_url}">
-  <meta name="robots" content="index, follow">
-</head>
-<body>
-  <header>
-    <div class="reseller-notice" style="background:#f1f5f9;padding:12px;font-size:0.875rem;">
-      <strong>Independent Reseller & Service Desk:</strong> AIDigiTools is an independent subscription concierge and digital marketplace. All product names, logos, and trademarks belong to their respective owners. We are not directly affiliated with or endorsed by upstream tool providers.
-    </div>
-  </header>
-  <main>
-    <article>
-      <h1>{kw}</h1>
-      <p class="quick-answer">
-        {kw} is an advanced software solution designed for creative professionals and digital agencies seeking scalable productivity. In Pakistan, subscriptions are settled via EasyPaisa, JazzCash, and Raast with instant WhatsApp order routing and a verified 30-day replacement warranty.
-      </p>
-
-      <h2>Overview & Architecture</h2>
-      <p>{rationale} In our first-hand testing with benchmark workflows, throughput and latency remained optimal across diverse tasks.</p>
-
-      <h2>Pricing & Specifications Comparison</h2>
-      <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%;">
-        <thead>
-          <tr>
-            <th>Plan</th>
-            <th>Pricing (PKR)</th>
-            <th>Pricing (USD)</th>
-            <th>Delivery SLA</th>
-            <th>Warranty</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Standard Workspace</td>
-            <td>Rs. 4,500</td>
-            <td>$16</td>
-            <td>15 Minutes</td>
-            <td>30 Days Replacement</td>
-          </tr>
-          <tr>
-            <td>Pro Multi-Seat</td>
-            <td>Rs. 8,500</td>
-            <td>$30</td>
-            <td>15 Minutes</td>
-            <td>30 Days Replacement</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>How to Order via WhatsApp Concierge</h2>
-      <ol>
-        <li>Select your plan from our <a href="https://aidigitools.tech/#tools">catalog</a>.</li>
-        <li>Contact our desk via <a href="https://aidigitools.tech/policies/payment-methods.html">verified payment rails</a>.</li>
-        <li>Receive your workspace credentials within 15 minutes.</li>
-      </ol>
-
-      <h2>Frequently Asked Questions</h2>
-      <details>
-        <summary>What payment rails are accepted?</summary>
-        <p>Domestic rails include EasyPaisa, JazzCash, SadaPay, NayaPay, Raast, and Bank Transfer. International users can pay via Wise and Crypto USDT.</p>
-      </details>
-      <details>
-        <summary>What is the replacement warranty policy?</summary>
-        <p>All active accounts include our genuine 30-day replacement warranty managed by our Islamabad operations desk.</p>
-      </details>
-      <details>
-        <summary>How fast is delivery?</summary>
-        <p>Orders are dispatched within our 15-minute SLA after payment verification.</p>
-      </details>
-    </article>
-  </main>
-</body>
-</html>'''
+        """Generates clean HTML article using Gemini generator with verified deterministic fallback."""
+        from .gemini_generator import GeminiArticleGenerator
+        gen = GeminiArticleGenerator(workspace_root=self.workspace_root)
+        res = gen.generate_article(topic_info=topic_info, canonical_url=canonical_url, allow_fallback=True)
+        if res.get("success") and res.get("html_draft"):
+            return res["html_draft"]
+        return gen.generate_heuristic_fallback(topic_info=topic_info, canonical_url=canonical_url)
 
 
 # ==============================================================================

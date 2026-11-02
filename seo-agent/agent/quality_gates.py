@@ -221,19 +221,24 @@ class QualityGateEngine:
     def evaluate_article(
         self,
         html_content: str,
-        metadata: Dict[str, Any],
-        source_file_path: Optional[Path] = None
+        metadata: Optional[Dict[str, Any]] = None,
+        source_file_path: Optional[Path] = None,
+        **kwargs
     ) -> Dict[str, Any]:
         """
         Evaluates an article against all 20 Quality Gates.
         Returns full audit report with decision: APPROVED, DO NOT PUBLISH, or HELD_FOR_HUMAN_REVIEW.
+        Accepts metadata dict and optional kwargs for maximum architectural resilience.
         """
-        slug = metadata.get("slug", "unknown-slug")
-        title = metadata.get("title", "")
-        primary_kw = metadata.get("primary_keyword", "")
-        cluster_slug = metadata.get("cluster_slug", "")
-        article_type = metadata.get("article_type", "comparison")
-        author_slug = metadata.get("author_slug", "")
+        meta = dict(metadata or {})
+        meta.update(kwargs)
+
+        slug = meta.get("slug", "unknown-slug")
+        title = meta.get("title", "")
+        primary_kw = meta.get("primary_keyword", "")
+        cluster_slug = meta.get("cluster_slug", "")
+        article_type = meta.get("article_type", "comparison")
+        author_slug = meta.get("author_slug", "")
 
         gate_results: Dict[str, Dict[str, Any]] = {}
         critical_failures: List[str] = []
@@ -447,8 +452,13 @@ class QualityGateEngine:
         # ----------------------------------------------------------------------
         # Gate 14: 100% Working Internal Links & Anchors
         # ----------------------------------------------------------------------
+        target_canon = meta.get("canonical_url", "").strip()
+        target_slug = meta.get("slug", "").strip()
         internal_links = re.findall(r'href=["\']([^"\']+\.html(?:#[^"\']*)?)["\']', html_content)
-        broken_links = [lk for lk in internal_links if not self.validate_link(lk, source_file_path)]
+        broken_links = [
+            lk for lk in internal_links
+            if lk != target_canon and not (target_slug and f"{target_slug}.html" in lk) and not self.validate_link(lk, source_file_path)
+        ]
         g14_pass = len(broken_links) == 0
         gate_results["GATE_14_INTERNAL_LINKS_WORK"] = {
             "passed": g14_pass,

@@ -424,6 +424,20 @@ def sync_api_integrations_status(results: list, test_live: bool):
             "verified_at_pkt": now_pkt,
             "data_returned": data_ret
         }
+
+        # Track separate GSC sub-capabilities independently (Requirement 5)
+        if svc_key == "google_search_console":
+            integrations[svc_key]["read_property_access"] = "VERIFIED_200" if is_conn else "NOT_CONFIGURED"
+            integrations[svc_key]["url_inspection_api_status"] = "VERIFIED_200" if "VERIFIED_200" in detail else "PENDING"
+            integrations[svc_key]["sitemap_submission_scope"] = "https://www.googleapis.com/auth/webmasters"
+            integrations[svc_key]["sitemap_submission_status"] = "NOT_SUBMITTED_DURING_PREFLIGHT"
+            integrations[svc_key]["indexing_api_policy"] = "Google Indexing API is strictly forbidden for standard editorial blog content."
+            integrations[svc_key]["disclaimer"] = "Search engines retain full algorithmic discretion; neither sitemap submission nor URL inspection guarantees indexing."
+
+        # Track CrUX distinction (Requirement 4)
+        if svc_key == "crux_api":
+            integrations[svc_key]["traffic_density_state"] = "INSUFFICIENT_28_DAY_TRAFFIC" if st == STATUS_AUTHENTICATED_NO_DATA else "AVAILABLE"
+            integrations[svc_key]["api_key_valid"] = is_conn
         
     with open(status_path, "w", encoding="utf-8") as f:
         json.dump(status_data, f, indent=2)

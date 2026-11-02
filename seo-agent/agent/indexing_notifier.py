@@ -1403,7 +1403,8 @@ class IndexingNotifierEngine:
         verify_live_sitemap: bool = True,
         live_http_mock: Optional[Dict[str, Any]] = None,
         mock_sitemap_xml: Optional[str] = None,
-        robots_content: Optional[str] = None
+        robots_content: Optional[str] = None,
+        save_ledger: bool = True
     ) -> Dict[str, Any]:
         """
         Performs a full audit across all canonical URLs in the site.
@@ -1424,6 +1425,7 @@ class IndexingNotifierEngine:
         now_pkt = get_pkt_now_str()
         audit_records = {}
         total_healthy = 0
+        total_skipped = 0
         total_issues = 0
 
         for loc, s_info in sitemap_urls_map.items():
@@ -1437,11 +1439,11 @@ class IndexingNotifierEngine:
                     "last_checked_date_pkt": now_pkt,
                     "in_sitemap": True,
                     "http_status": 404 if check_live_http else "UNKNOWN",
-                    "status": "MISSING_FILE",
+                    "status": "LOCAL_FILE_MISSING",
                     "status_breakdown": {
-                        "publication_status": "PUBLISHED",
+                        "publication_status": "MISSING_LOCAL",
                         "deployment_status": "LOCAL_MISSING",
-                        "sitemap_status": "SITEMAP_UPDATED",
+                        "sitemap_status": "SITEMAP_INVALID",
                         "google_sitemap_status": "NOT_CONFIGURED",
                         "google_inspection_status": "NOT_CONFIGURED",
                         "google_indexing_state": "UNKNOWN",
@@ -1478,7 +1480,12 @@ class IndexingNotifierEngine:
             if check_live_http:
                 actual_http_status = live_details.get("http_code", 0)
                 is_live_verified = (live_status == "LIVE_HTTP_VERIFIED")
-                deployment_status = "DEPLOYED" if is_live_verified else "LIVE_HTTP_FAILED"
+                if is_live_verified:
+                    deployment_status = "DEPLOYED"
+                elif live_status == "LIVE_HTTP_FAILED":
+                    deployment_status = "LIVE_HTTP_FAILED"
+                else:
+                    deployment_status = "LIVE_HTTP_UNKNOWN"
             else:
                 actual_http_status = "SKIPPED"
                 deployment_status = "UNKNOWN"
@@ -1498,7 +1505,27 @@ class IndexingNotifierEngine:
                 "bing_status": prev_breakdown.get("bing_status", "BING_STATUS_VERIFIED" if prev_record.get("indexnow_notified") else "PENDING")
             }
 
-            is_healthy = preflight["passed"] and (is_live_verified if check_live_http else True)
+            # Invariant: Only genuine successful live HTTP GET produces HEALTHY in live audit.
+            # Skipped live checks must NEVER count toward total_healthy!
+            if check_live_http:
+                if preflight["passed"] and is_live_verified:
+                    url_status = "HEALTHY"
+                    total_healthy += 1
+                elif live_status == "LIVE_HTTP_FAILED":
+                    url_status = "LIVE_HTTP_FAILED"
+                    total_issues += 1
+                elif live_status == "LIVE_HTTP_UNKNOWN":
+                    url_status = "LIVE_HTTP_UNKNOWN"
+                    total_issues += 1
+                elif live_status == "SKIPPED":
+                    url_status = "LIVE_CHECK_SKIPPED"
+                    total_skipped += 1
+                else:
+                    url_status = "TECHNICAL_ISSUE"
+                    total_issues += 1
+            else:
+                url_status = "LOCAL_VALID_LIVE_SKIPPED"
+                total_skipped += 1
 
             record = {
                 "canonical_url": loc,
@@ -1523,32 +1550,32 @@ class IndexingNotifierEngine:
                 "google_indexing_state": status_breakdown["google_indexing_state"],
                 "status_breakdown": status_breakdown,
                 "preflight_checks": preflight["checks"],
-                "status": "HEALTHY" if is_healthy else "TECHNICAL_ISSUE",
+                "status": url_status,
                 "detected_issues": preflight["violations"]
             }
-
-            if is_healthy:
-                total_healthy += 1
-            else:
-                total_issues += 1
 
             audit_records[loc] = record
 
         ledger["last_audit_pkt"] = now_pkt
         ledger["total_monitored_urls"] = len(audit_records)
         ledger["total_healthy_urls"] = total_healthy
+        ledger["total_skipped_urls"] = total_skipped
         ledger["total_issues_detected"] = total_issues
+        ledger["audit_mode"] = "LIVE_HTTPS_VERIFIED" if check_live_http else "LOCAL_PREFLIGHT_ONLY_LIVE_SKIPPED"
         ledger["disclaimer"] = NO_INDEXING_GUARANTEE_DISCLAIMER
         ledger["google_indexing_api_policy"] = GOOGLE_INDEXING_API_POLICY_NOTICE
         ledger["urls"] = audit_records
 
-        with open(self.indexing_ledger_path, "w", encoding="utf-8") as f:
-            json.dump(ledger, f, indent=2)
+        if save_ledger:
+            with open(self.indexing_ledger_path, "w", encoding="utf-8") as f:
+                json.dump(ledger, f, indent=2)
 
         return {
             "total_urls_audited": len(audit_records),
             "total_healthy": total_healthy,
+            "total_skipped": total_skipped,
             "total_issues": total_issues,
+            "audit_mode": "LIVE_HTTPS_VERIFIED" if check_live_http else "LOCAL_PREFLIGHT_ONLY_LIVE_SKIPPED",
             "audit_timestamp_pkt": now_pkt,
             "disclaimer": NO_INDEXING_GUARANTEE_DISCLAIMER,
             "urls": audit_records

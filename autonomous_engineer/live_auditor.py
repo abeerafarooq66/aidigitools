@@ -80,6 +80,7 @@ class LiveAuditor:
                 "url": INDEXNOW_URL,
                 "status_code": e.code,
                 "valid": False,
+                "indexing_disclaimer": "HTTP 200/202 IndexNow response indicates successful notification delivery to search engine ingest queue; it does NOT constitute evidence of crawling, indexation, or ranking.",
                 "error": f"HTTPError {e.code}: {e.reason}"
             }
         except Exception as e:
@@ -87,6 +88,7 @@ class LiveAuditor:
                 "url": INDEXNOW_URL,
                 "status_code": 0,
                 "valid": False,
+                "indexing_disclaimer": "HTTP 200/202 IndexNow response indicates successful notification delivery to search engine ingest queue; it does NOT constitute evidence of crawling, indexation, or ranking.",
                 "error": f"Network exception: {str(e)}"
             }
 

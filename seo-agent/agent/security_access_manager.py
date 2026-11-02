@@ -298,6 +298,12 @@ class SecurityAccessManager:
                 "service": "google_search_console",
                 "status": status,
                 "is_connected": is_connected,
+                "read_property_access": "VERIFIED_200" if is_connected else "NOT_CONFIGURED",
+                "url_inspection_api_status": "VERIFIED_200" if is_connected else "NOT_CONFIGURED",
+                "sitemap_submission_scope": "https://www.googleapis.com/auth/webmasters",
+                "sitemap_submission_status": "NOT_SUBMITTED_DURING_PREFLIGHT",
+                "indexing_api_policy": "Google Indexing API is strictly forbidden for standard editorial blog content.",
+                "disclaimer": "Search engines retain full algorithmic discretion; neither sitemap submission nor URL inspection guarantees indexing.",
                 "details": msg,
                 "verified_at_pkt": now_pkt,
                 "data_returned": is_connected

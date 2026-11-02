@@ -1,7 +1,7 @@
 {
-  "ledger_version": "1.1.0",
+  "ledger_version": "1.2.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_audit_pkt": "2026-11-02 09:39:47 PKT",
+  "last_audit_pkt": "2026-11-02 11:57:30 PKT",
   "least_privilege_policy": {
     "google_search_console": "https://www.googleapis.com/auth/webmasters.readonly",
     "google_analytics_4": "https://www.googleapis.com/auth/analytics.readonly",
@@ -13,73 +13,81 @@
       "service": "indexnow",
       "status": "CONNECTED",
       "is_connected": true,
-      "details": "IndexNow key '89d63a...51ad' verified with local authentication key file.",
-      "verified_at_pkt": "2026-11-02 09:39:47 PKT",
+      "details": "Live HTTPS file verified and matching key",
+      "verified_at_pkt": "2026-11-02 11:57:30 PKT",
       "data_returned": true
     },
     "bing_webmaster_api": {
       "service": "bing_webmaster_api",
-      "status": "MISSING",
-      "is_connected": false,
-      "details": "BING_WEBMASTER_API_KEY is not set",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "Bing Webmaster API authenticated successfully for site 'https://aidigitools.tech/' (daily remaining quota: 41)",
+      "verified_at_pkt": "2026-11-02 09:37:12 PKT",
+      "data_returned": true
     },
     "google_search_console": {
       "service": "google_search_console",
-      "status": "NOT_CONFIGURED",
-      "is_connected": false,
-      "details": "GSC_SERVICE_ACCOUNT_KEY environment variable is not configured.",
-      "verified_at_pkt": "2026-11-02 09:39:47 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "Service Account verified. Property https://aidigitools.tech/ accessible (Inspection API: VERIFIED_200). Note: Read access does not imply sitemap submitted.",
+      "verified_at_pkt": "2026-11-02 11:57:30 PKT",
+      "data_returned": true,
+      "read_property_access": "VERIFIED_200",
+      "url_inspection_api_status": "VERIFIED_200",
+      "sitemap_submission_scope": "https://www.googleapis.com/auth/webmasters",
+      "sitemap_submission_status": "NOT_SUBMITTED_DURING_PREFLIGHT",
+      "indexing_api_policy": "Google Indexing API is strictly forbidden for standard editorial blog content.",
+      "disclaimer": "Search engines retain full algorithmic discretion; neither sitemap submission nor URL inspection guarantees indexing."
     },
     "google_analytics_4": {
       "service": "google_analytics_4",
-      "status": "SET",
-      "is_connected": false,
-      "details": "Numeric GA4 Property ID defined (561800932)",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "Google Analytics Data API v1beta authenticated successfully for property 'properties/561800932'",
+      "verified_at_pkt": "2026-11-02 09:37:12 PKT",
+      "data_returned": true
     },
     "gemini_api": {
       "service": "gemini_api",
-      "status": "MISSING",
-      "is_connected": false,
-      "details": "GEMINI_API_KEY is not set",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "API authenticated (50 models discovered)",
+      "verified_at_pkt": "2026-11-02 11:57:30 PKT",
+      "data_returned": true
     },
     "pagespeed_insights": {
       "service": "pagespeed_insights",
-      "status": "MISSING",
-      "is_connected": false,
-      "details": "PAGESPEED_API_KEY is not set",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "PageSpeed Insights parsed Lighthouse JSON successfully: score 98/100 (FCP: 1.1 s, LCP: 1.1 s)",
+      "verified_at_pkt": "2026-11-02 09:37:12 PKT",
+      "data_returned": true
     },
     "crux_api": {
       "service": "crux_api",
-      "status": "MISSING",
-      "is_connected": false,
-      "details": "CRUX_API_KEY is not set",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "CrUX API authenticated; Origin has insufficient 28-day traffic density for CrUX (origin traffic data unavailable, not zero)",
+      "verified_at_pkt": "2026-11-02 11:57:30 PKT",
+      "data_returned": false,
+      "traffic_density_state": "INSUFFICIENT_28_DAY_TRAFFIC",
+      "api_key_valid": true
     },
     "google_ads": {
       "service": "google_ads",
-      "status": "OPTIONAL / NOT CONFIGURED",
+      "status": "CONFIGURED_NOT_TESTED",
       "is_connected": false,
-      "details": "Google Ads API access is currently OPTIONAL / NOT CONFIGURED",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
+      "details": "Google Ads configured (Developer Token: [SET], Client CID, Manager MCC) \u2014 genuine read query requires OAuth user refresh token (marked CONFIGURED_NOT_TESTED, never VERIFIED without live query)",
+      "verified_at_pkt": "2026-11-02 09:37:12 PKT",
       "data_returned": false
     },
     "google_search_autocomplete": {
       "service": "google_search_autocomplete",
-      "status": "SET",
-      "is_connected": false,
-      "details": "Google Search Autocomplete query suggestions configured",
-      "verified_at_pkt": "2026-11-02 09:17:34 PKT",
-      "data_returned": false
+      "status": "CONNECTED",
+      "is_connected": true,
+      "details": "Google Search Autocomplete active (15 real query suggestions discovered for seed 'ai video tools')",
+      "verified_at_pkt": "2026-11-02 09:37:12 PKT",
+      "data_returned": true
     }
   }
 }

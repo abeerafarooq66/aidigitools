@@ -3,13 +3,13 @@
   "business_timezone": "PKT (UTC+5)",
   "disclaimer": "Notice: Neither sitemap submission, search console inspection, nor IndexNow notification guarantees that a URL will be crawled, indexed, or ranked by Google, Bing, or any other search engine. Search engines determine indexing dynamically based on content quality, uniqueness, user intent satisfaction, and algorithmic ranking signals.",
   "google_indexing_api_policy": "Google Indexing API Policy: The Google Indexing API is strictly reserved for pages with JobPosting or BroadcastEvent structured data. Using the Google Indexing API for ordinary blog posts, product pages, or commercial listings violates Google Search Central policies and can lead to search penalties. AIDigiTools strictly prohibits using the Indexing API for standard editorial content.",
-  "last_audit_pkt": "2026-11-02 09:50:14 PKT",
+  "last_audit_pkt": "2026-11-02 11:57:31 PKT",
   "total_monitored_urls": 65,
   "urls": {
     "https://aidigitools.tech/about.html": {
       "canonical_url": "https://aidigitools.tech/about.html",
       "relative_path": "about.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -58,13 +58,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/affiliate-disclosure.html": {
       "canonical_url": "https://aidigitools.tech/affiliate-disclosure.html",
       "relative_path": "affiliate-disclosure.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -113,13 +113,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/best/best-ai-coding-tools.html": {
       "canonical_url": "https://aidigitools.tech/best/best-ai-coding-tools.html",
       "relative_path": "best/best-ai-coding-tools.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -168,13 +168,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/best/best-ai-video-generators.html": {
       "canonical_url": "https://aidigitools.tech/best/best-ai-video-generators.html",
       "relative_path": "best/best-ai-video-generators.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -223,13 +223,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/categories/coding.html": {
       "canonical_url": "https://aidigitools.tech/categories/coding.html",
       "relative_path": "categories/coding.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -278,13 +278,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/categories/image.html": {
       "canonical_url": "https://aidigitools.tech/categories/image.html",
       "relative_path": "categories/image.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -333,13 +333,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/categories/video.html": {
       "canonical_url": "https://aidigitools.tech/categories/video.html",
       "relative_path": "categories/video.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -388,13 +388,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/categories/vpn.html": {
       "canonical_url": "https://aidigitools.tech/categories/vpn.html",
       "relative_path": "categories/vpn.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -443,13 +443,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/compare/chatgpt-vs-claude.html": {
       "canonical_url": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
       "relative_path": "compare/chatgpt-vs-claude.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -498,13 +498,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/compare/runway-vs-pika.html": {
       "canonical_url": "https://aidigitools.tech/compare/runway-vs-pika.html",
       "relative_path": "compare/runway-vs-pika.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -553,13 +553,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/contact.html": {
       "canonical_url": "https://aidigitools.tech/contact.html",
       "relative_path": "contact.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -608,13 +608,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/deals.html": {
       "canonical_url": "https://aidigitools.tech/deals.html",
       "relative_path": "deals.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -663,13 +663,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/guides/chatgpt-vs-claude.html": {
       "canonical_url": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
       "relative_path": "guides/chatgpt-vs-claude.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -718,13 +718,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/": {
       "canonical_url": "https://aidigitools.tech/",
       "relative_path": "index.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -773,13 +773,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/policies.html": {
       "canonical_url": "https://aidigitools.tech/policies.html",
       "relative_path": "policies.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -828,13 +828,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/shipping-policy.html": {
       "canonical_url": "https://aidigitools.tech/shipping-policy.html",
       "relative_path": "shipping-policy.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -883,13 +883,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/adobe-creative-cloud.html": {
       "canonical_url": "https://aidigitools.tech/tools/adobe-creative-cloud.html",
       "relative_path": "tools/adobe-creative-cloud.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -938,13 +938,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/canva-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/canva-pro.html",
       "relative_path": "tools/canva-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -993,13 +993,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/capcut-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/capcut-pro.html",
       "relative_path": "tools/capcut-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1048,13 +1048,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/chatgpt-codex.html": {
       "canonical_url": "https://aidigitools.tech/tools/chatgpt-codex.html",
       "relative_path": "tools/chatgpt-codex.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1103,13 +1103,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/chatgpt-plus.html": {
       "canonical_url": "https://aidigitools.tech/tools/chatgpt-plus.html",
       "relative_path": "tools/chatgpt-plus.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:14 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:57:31 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": 200,
@@ -1181,10 +1181,10 @@
           "message": "Dry-run simulated success for Microsoft Bing."
         }
       ],
-      "indexnow_central_timestamp_pkt": "2026-11-02 09:50:15 PKT",
-      "microsoft_bing_timestamp_pkt": "2026-11-02 09:50:15 PKT",
-      "indexnow_last_successful_submission_pkt": "2026-11-02 09:50:15 PKT",
-      "indexnow_submission_count": 1,
+      "indexnow_central_timestamp_pkt": "2026-11-02 11:57:50 PKT",
+      "microsoft_bing_timestamp_pkt": "2026-11-02 11:57:50 PKT",
+      "indexnow_last_successful_submission_pkt": "2026-11-02 11:57:50 PKT",
+      "indexnow_submission_count": 2,
       "live_http_verification": {
         "url": "https://aidigitools.tech/tools/chatgpt-plus.html",
         "status": "LIVE_HTTP_VERIFIED",
@@ -1194,7 +1194,7 @@
         "live_canonical": "https://aidigitools.tech/tools/chatgpt-plus.html",
         "x_robots_tag": "",
         "meta_robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-        "verified_at_pkt": "2026-11-02 09:50:14 PKT",
+        "verified_at_pkt": "2026-11-02 11:57:31 PKT",
         "issues": []
       },
       "google_telemetry": {
@@ -1240,7 +1240,7 @@
     "https://aidigitools.tech/tools/claude-artifacts.html": {
       "canonical_url": "https://aidigitools.tech/tools/claude-artifacts.html",
       "relative_path": "tools/claude-artifacts.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1289,13 +1289,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/claude-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/claude-pro.html",
       "relative_path": "tools/claude-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1344,13 +1344,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/coursera-plus.html": {
       "canonical_url": "https://aidigitools.tech/tools/coursera-plus.html",
       "relative_path": "tools/coursera-plus.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1399,13 +1399,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/cursor-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/cursor-pro.html",
       "relative_path": "tools/cursor-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1454,13 +1454,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/deepseek-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/deepseek-pro.html",
       "relative_path": "tools/deepseek-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1509,13 +1509,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/elevenlabs-creator.html": {
       "canonical_url": "https://aidigitools.tech/tools/elevenlabs-creator.html",
       "relative_path": "tools/elevenlabs-creator.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1564,13 +1564,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/envato-elements.html": {
       "canonical_url": "https://aidigitools.tech/tools/envato-elements.html",
       "relative_path": "tools/envato-elements.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1619,13 +1619,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/figma-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/figma-pro.html",
       "relative_path": "tools/figma-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1674,13 +1674,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/freepik-premium.html": {
       "canonical_url": "https://aidigitools.tech/tools/freepik-premium.html",
       "relative_path": "tools/freepik-premium.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1729,13 +1729,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/gamma-app.html": {
       "canonical_url": "https://aidigitools.tech/tools/gamma-app.html",
       "relative_path": "tools/gamma-app.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1784,13 +1784,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/gemini-advanced.html": {
       "canonical_url": "https://aidigitools.tech/tools/gemini-advanced.html",
       "relative_path": "tools/gemini-advanced.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1839,13 +1839,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/github-copilot.html": {
       "canonical_url": "https://aidigitools.tech/tools/github-copilot.html",
       "relative_path": "tools/github-copilot.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1894,13 +1894,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/google-ai-ultra.html": {
       "canonical_url": "https://aidigitools.tech/tools/google-ai-ultra.html",
       "relative_path": "tools/google-ai-ultra.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -1949,13 +1949,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/google-veo.html": {
       "canonical_url": "https://aidigitools.tech/tools/google-veo.html",
       "relative_path": "tools/google-veo.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2004,13 +2004,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/grammarly-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/grammarly-pro.html",
       "relative_path": "tools/grammarly-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2059,13 +2059,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/grok-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/grok-ai.html",
       "relative_path": "tools/grok-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2114,13 +2114,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/heygen-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/heygen-ai.html",
       "relative_path": "tools/heygen-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2169,13 +2169,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/jetbrains-all.html": {
       "canonical_url": "https://aidigitools.tech/tools/jetbrains-all.html",
       "relative_path": "tools/jetbrains-all.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2224,13 +2224,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/kling-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/kling-ai.html",
       "relative_path": "tools/kling-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2279,13 +2279,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/leonardo-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/leonardo-ai.html",
       "relative_path": "tools/leonardo-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2334,13 +2334,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/linkedin-premium.html": {
       "canonical_url": "https://aidigitools.tech/tools/linkedin-premium.html",
       "relative_path": "tools/linkedin-premium.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2389,13 +2389,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/lovable-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/lovable-ai.html",
       "relative_path": "tools/lovable-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2444,13 +2444,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/microsoft-office-365.html": {
       "canonical_url": "https://aidigitools.tech/tools/microsoft-office-365.html",
       "relative_path": "tools/microsoft-office-365.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2499,13 +2499,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/midjourney.html": {
       "canonical_url": "https://aidigitools.tech/tools/midjourney.html",
       "relative_path": "tools/midjourney.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2554,13 +2554,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/minimax-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/minimax-ai.html",
       "relative_path": "tools/minimax-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2609,13 +2609,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/n8n-automation.html": {
       "canonical_url": "https://aidigitools.tech/tools/n8n-automation.html",
       "relative_path": "tools/n8n-automation.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2664,13 +2664,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/netflix-premium.html": {
       "canonical_url": "https://aidigitools.tech/tools/netflix-premium.html",
       "relative_path": "tools/netflix-premium.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2719,13 +2719,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/nordvpn.html": {
       "canonical_url": "https://aidigitools.tech/tools/nordvpn.html",
       "relative_path": "tools/nordvpn.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2774,13 +2774,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/notion-business.html": {
       "canonical_url": "https://aidigitools.tech/tools/notion-business.html",
       "relative_path": "tools/notion-business.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2829,13 +2829,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/perplexity-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/perplexity-pro.html",
       "relative_path": "tools/perplexity-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2884,13 +2884,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/prime-video.html": {
       "canonical_url": "https://aidigitools.tech/tools/prime-video.html",
       "relative_path": "tools/prime-video.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2939,13 +2939,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/quillbot-premium.html": {
       "canonical_url": "https://aidigitools.tech/tools/quillbot-premium.html",
       "relative_path": "tools/quillbot-premium.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -2994,13 +2994,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/replit-core.html": {
       "canonical_url": "https://aidigitools.tech/tools/replit-core.html",
       "relative_path": "tools/replit-core.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3049,13 +3049,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/runway-gen3.html": {
       "canonical_url": "https://aidigitools.tech/tools/runway-gen3.html",
       "relative_path": "tools/runway-gen3.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3104,13 +3104,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/semrush-guru.html": {
       "canonical_url": "https://aidigitools.tech/tools/semrush-guru.html",
       "relative_path": "tools/semrush-guru.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3159,13 +3159,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/spotify-premium.html": {
       "canonical_url": "https://aidigitools.tech/tools/spotify-premium.html",
       "relative_path": "tools/spotify-premium.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3214,13 +3214,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/suno-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/suno-ai.html",
       "relative_path": "tools/suno-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3269,13 +3269,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/surfshark-vpn.html": {
       "canonical_url": "https://aidigitools.tech/tools/surfshark-vpn.html",
       "relative_path": "tools/surfshark-vpn.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3324,13 +3324,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/tradingview-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/tradingview-pro.html",
       "relative_path": "tools/tradingview-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3379,13 +3379,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/turnitin-student.html": {
       "canonical_url": "https://aidigitools.tech/tools/turnitin-student.html",
       "relative_path": "tools/turnitin-student.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3434,13 +3434,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/udio-ai.html": {
       "canonical_url": "https://aidigitools.tech/tools/udio-ai.html",
       "relative_path": "tools/udio-ai.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3489,13 +3489,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/vidiq-boost.html": {
       "canonical_url": "https://aidigitools.tech/tools/vidiq-boost.html",
       "relative_path": "tools/vidiq-boost.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3544,13 +3544,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/windows-11-pro.html": {
       "canonical_url": "https://aidigitools.tech/tools/windows-11-pro.html",
       "relative_path": "tools/windows-11-pro.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3599,13 +3599,13 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     },
     "https://aidigitools.tech/tools/youtube-premium.html": {
       "canonical_url": "https://aidigitools.tech/tools/youtube-premium.html",
       "relative_path": "tools/youtube-premium.html",
-      "last_checked_date_pkt": "2026-11-02 09:50:12 PKT",
+      "last_checked_date_pkt": "2026-11-02 11:56:04 PKT",
       "in_sitemap": true,
       "sitemap_lastmod": "2026-11-01",
       "http_status": "SKIPPED",
@@ -3654,10 +3654,12 @@
         "mobile_accessible": true,
         "structured_data_valid": true
       },
-      "status": "HEALTHY",
+      "status": "LOCAL_VALID_LIVE_SKIPPED",
       "detected_issues": []
     }
   },
-  "total_healthy_urls": 65,
-  "total_issues_detected": 0
+  "total_healthy_urls": 0,
+  "total_issues_detected": 0,
+  "total_skipped_urls": 65,
+  "audit_mode": "LOCAL_PREFLIGHT_ONLY_LIVE_SKIPPED"
 }
