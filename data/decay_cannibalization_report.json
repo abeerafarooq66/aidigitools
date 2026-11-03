@@ -1,5 +1,5 @@
 {
-  "last_cycle_run": "2026-11-02T08:25:29.958700",
+  "last_cycle_run": "2026-11-03T09:42:04.630584",
   "outdated_articles_count": 5,
   "outdated_articles": [
     {
@@ -7,7 +7,7 @@
       "slug": "chatgpt-vs-claude",
       "relative_url": "compare/chatgpt-vs-claude.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 305,
+      "days_since_verification": 306,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -15,7 +15,7 @@
       "slug": "runway-vs-pika",
       "relative_url": "compare/runway-vs-pika.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 305,
+      "days_since_verification": 306,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -23,7 +23,7 @@
       "slug": "chatgpt-vs-claude-guide",
       "relative_url": "guides/chatgpt-vs-claude.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 305,
+      "days_since_verification": 306,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -31,7 +31,7 @@
       "slug": "best-ai-coding-tools",
       "relative_url": "best/best-ai-coding-tools.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 305,
+      "days_since_verification": 306,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -39,7 +39,7 @@
       "slug": "best-ai-video-generators",
       "relative_url": "best/best-ai-video-generators.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 305,
+      "days_since_verification": 306,
       "status": "NEEDS_FRESHNESS_AUDIT"
     }
   ],

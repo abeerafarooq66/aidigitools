@@ -1,7 +1,7 @@
 {
   "ledger_version": "1.2.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_audit_pkt": "2026-11-02 20:56:38 PKT",
+  "last_audit_pkt": "2026-11-03 09:42:33 PKT",
   "least_privilege_policy": {
     "google_search_console": "https://www.googleapis.com/auth/webmasters.readonly",
     "google_analytics_4": "https://www.googleapis.com/auth/analytics.readonly",
@@ -14,7 +14,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "Live HTTPS file verified and matching key",
-      "verified_at_pkt": "2026-11-02 20:56:38 PKT",
+      "verified_at_pkt": "2026-11-03 09:42:33 PKT",
       "data_returned": true
     },
     "bing_webmaster_api": {
@@ -30,7 +30,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "Service Account verified. Property https://aidigitools.tech/ accessible (Inspection API: VERIFIED_200). Note: Read access does not imply sitemap submitted.",
-      "verified_at_pkt": "2026-11-02 20:56:38 PKT",
+      "verified_at_pkt": "2026-11-03 09:42:33 PKT",
       "data_returned": true,
       "read_property_access": "VERIFIED_200",
       "url_inspection_api_status": "VERIFIED_200",
@@ -52,7 +52,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "API authenticated (50 models discovered)",
-      "verified_at_pkt": "2026-11-02 20:56:38 PKT",
+      "verified_at_pkt": "2026-11-03 09:42:33 PKT",
       "data_returned": true
     },
     "pagespeed_insights": {
@@ -68,7 +68,7 @@
       "status": "CONNECTED",
       "is_connected": true,
       "details": "CrUX API authenticated; Origin has insufficient 28-day traffic density for CrUX (origin traffic data unavailable, not zero)",
-      "verified_at_pkt": "2026-11-02 20:56:38 PKT",
+      "verified_at_pkt": "2026-11-03 09:42:33 PKT",
       "data_returned": false,
       "traffic_density_state": "INSUFFICIENT_28_DAY_TRAFFIC",
       "api_key_valid": true
