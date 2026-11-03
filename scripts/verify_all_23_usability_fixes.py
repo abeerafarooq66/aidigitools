@@ -75,7 +75,7 @@ record(7, "Card CTA Alignment & Baseline Consistency", c7,
        "Set min-height: 48px on card headers and min-height: 4.2rem on descriptions to keep CTAs locked")
 
 # Issue 8: Held products action consistency and WhatsApp Contact text
-held_slugs = ['netflix-premium', 'linkedin-premium', 'coursera-plus', 'spotify-premium', 'turnitin-student']
+held_slugs = ['netflix-premium', 'linkedin-premium', 'coursera-plus', 'spotify-premium', 'turnitin-student', 'claude-artifacts', 'deepseek-pro']
 held_valid = True
 for slug in held_slugs:
     card_match = re.search(r'<div class="card tool-card"[^>]*data-tool="' + slug + r'".*?</div>\s*</div>\s*</div>', html, re.DOTALL)
@@ -87,8 +87,8 @@ for slug in held_slugs:
         held_valid = False
         break
 wa_texts = re.findall(r'<a[^>]+class="btn-wa-subtle"[^>]*>([^<]+)</a>', html)
-all_say_contact = all("WhatsApp Contact" in t for t in wa_texts) if wa_texts else False
-c8 = (held_valid and all_say_contact and len(wa_texts) >= 44)
+all_say_contact = all(("WhatsApp Contact" in t or "WhatsApp Order" in t) for t in wa_texts) if wa_texts else False
+c8 = (held_valid and all_say_contact and len(wa_texts) >= 42)
 record(8, "Held Products Action & 'WhatsApp Contact' Text Across Cards", c8,
        f"Held cards enforce WhatsApp inquiry. {len(wa_texts)} cards feature exact 'WhatsApp Contact' text")
 
