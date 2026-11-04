@@ -60,3 +60,4 @@ def defer_cart_js_in_html():
 if __name__ == "__main__":
     optimize_style_css()
     defer_cart_js_in_html()
+
