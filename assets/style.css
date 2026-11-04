@@ -496,9 +496,9 @@ header .nav-cta {
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
 }
 
 h1 {
@@ -1133,7 +1133,7 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #10B981 !important;
+  background: #047857 !important;
   color: #FFFFFF !important;
   font-weight: 700;
   font-size: 0.9rem;
@@ -1142,14 +1142,14 @@ h3 {
   border: none !important;
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 2px 8px rgba(4, 120, 87, 0.25);
 }
 
 .btn-whatsapp:hover,
 .btn.btn-whatsapp:hover {
-  background: #059669 !important;
+  background: #065F46 !important;
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(6, 95, 70, 0.35);
   color: #FFFFFF !important;
 }
 
@@ -1623,13 +1623,13 @@ footer {
 }
 
 @keyframes satellite-float {
-  0%, 100% { transform: translate(0, 0) scale(1); filter: drop-shadow(0 0 2px rgba(67, 97, 238, 0.4)); }
-  50% { transform: translate(-2px, -3px) scale(1.15); filter: drop-shadow(0 0 5px rgba(0, 229, 163, 0.7)); }
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.85; }
+  50% { transform: translate(-2px, -3px) scale(1.15); opacity: 1; }
 }
 
 @keyframes star-twinkle {
   0%, 100% { transform: scale(1); opacity: 0.75; }
-  50% { transform: scale(1.28); opacity: 1; filter: drop-shadow(0 0 3px #00E5A3); }
+  50% { transform: scale(1.28); opacity: 1; }
 }
 
 .logo-brand-icon .orbit-front,
@@ -3972,12 +3972,12 @@ a#mWaLink,
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: #10B981 !important;
+  background: #047857 !important;
   color: #FFFFFF !important;
   border: none !important;
   font-weight: 700 !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.35) !important;
 }
 
 .btn-whatsapp *,
@@ -3993,9 +3993,9 @@ a#mWaLink *,
 #mWaLink:hover,
 a#mWaLink:hover,
 .authkit-showcase-actions #mWaLink:hover {
-  background: #059669 !important;
+  background: #065F46 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45) !important;
+  box-shadow: 0 6px 18px rgba(6, 95, 70, 0.45) !important;
 }
 
 .btn-whatsapp:hover *,
