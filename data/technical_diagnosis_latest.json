@@ -1,0 +1,114 @@
+{
+  "status": "ACTION_REQUIRED",
+  "summary": {
+    "total_diagnosed_issues": 5,
+    "critical_count": 0,
+    "high_count": 3,
+    "medium_count": 2,
+    "low_count": 0,
+    "clean_system": false
+  },
+  "issues": [
+    {
+      "id": "DIAG-DUPCANON-https://aidigitools.tech/test",
+      "severity": "HIGH",
+      "category": "INDEXING",
+      "affected_resource": "https://aidigitools.tech/test",
+      "root_cause": "Multiple files point to the exact same canonical URL: ['a.html', 'b.html']",
+      "evidence": "Files ['a.html', 'b.html'] compete for canonical https://aidigitools.tech/test.",
+      "official_guidance": "Google Search Central: Consolidate duplicate URLs using unique canonical tags.",
+      "proposed_solutions": [
+        {
+          "approach": "Assign unique canonical URL reflecting each page's distinct file path",
+          "risk": "LOW",
+          "benefit": "CRITICAL",
+          "recommended": true
+        }
+      ],
+      "confidence_score": 100,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "DIAG-MISSING-SITEMAP-https://aidigitools.tech/missi",
+      "severity": "HIGH",
+      "category": "INDEXING",
+      "affected_resource": "https://aidigitools.tech/missing.html",
+      "root_cause": "Valid canonical page is missing from sitemap.xml.",
+      "evidence": "URL https://aidigitools.tech/missing.html exists on disk but is absent from sitemap loc elements.",
+      "official_guidance": "Google Search Central: Sitemaps help search engines discover canonical URLs.",
+      "proposed_solutions": [
+        {
+          "approach": "Run indexing_notifier --sync-sitemap to regenerate sitemap with verified git lastmod",
+          "risk": "LOW",
+          "benefit": "HIGH",
+          "recommended": true
+        }
+      ],
+      "confidence_score": 98,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "DIAG-CWV-RENDER_BLOCKING_SCRIPT-test.html",
+      "severity": "HIGH",
+      "category": "PERFORMANCE_AND_ACCESSIBILITY",
+      "affected_resource": "test.html",
+      "root_cause": "Script lacks defer",
+      "evidence": "Static invariant detected in test.html: None",
+      "official_guidance": "web.dev & WCAG 2.1: Maintain accessible contrast and defer non-critical JS.",
+      "proposed_solutions": [
+        {
+          "approach": "Execute CoreWebVitalsEngine.heal_pagespeed_issues() to apply verified patches",
+          "risk": "LOW",
+          "benefit": "HIGH",
+          "recommended": true
+        }
+      ],
+      "confidence_score": 99,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "DIAG-ORPHAN-blog-orphan-article",
+      "severity": "MEDIUM",
+      "category": "CRAWLABILITY",
+      "affected_resource": "blog/orphan-article.html",
+      "root_cause": "Page exists in filesystem but has 0 inbound internal links from other site pages.",
+      "evidence": "File blog/orphan-article.html is not targeted by any relative or canonical href in the site.",
+      "official_guidance": "Google Search Essentials: Make your site easily crawlable via logical link structure.",
+      "proposed_solutions": [
+        {
+          "approach": "Contextual internal link from relevant category or sibling tool page",
+          "risk": "LOW",
+          "benefit": "HIGH",
+          "recommended": true
+        },
+        {
+          "approach": "Add link to site footer",
+          "risk": "LOW",
+          "benefit": "MEDIUM",
+          "recommended": false
+        }
+      ],
+      "confidence_score": 95,
+      "resolution_status": "OPEN"
+    },
+    {
+      "id": "DIAG-GSC-CTR-cursor-ai-vs-copilot",
+      "severity": "MEDIUM",
+      "category": "SEARCH_INTELLIGENCE",
+      "affected_resource": "https://aidigitools.tech/compare/cursor-vs-copilot.html",
+      "root_cause": "Query 'cursor ai vs copilot' receives 120 impressions on Page 1-2 (Pos 8.5) with weak CTR (0.8%).",
+      "evidence": "Search Console data confirms high visibility but low click-through engagement.",
+      "official_guidance": "Google Search Central: Optimize titles, snippets, and provide direct quick answers.",
+      "proposed_solutions": [
+        {
+          "approach": "Optimize title and meta description for query 'cursor ai vs copilot' and refine quick-answer block",
+          "risk": "LOW",
+          "benefit": "HIGH",
+          "recommended": true
+        }
+      ],
+      "confidence_score": 90,
+      "resolution_status": "OPEN"
+    }
+  ]
+}
