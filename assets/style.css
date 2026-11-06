@@ -15,7 +15,7 @@
   --color-text-muted: #475569;     /* Refined Slate Gray */
   --color-accent-cyan: #00B4D8;    /* Brand Vibrant Cyan */
   --color-accent-blue: #4361EE;    /* Brand Royal Blue */
-  --color-accent-emerald: #10B981; /* Verified Emerald Green */
+  --color-accent-emerald: #047857; /* Verified Emerald Green */
 
   /* Canvas & Background Surfaces */
   --bg-dark: #F8FAFD;
@@ -46,10 +46,10 @@
   --brand-gradient-hover: linear-gradient(135deg, #075985 0%, #3B82F6 50%, #6D28D9 100%);
   
   /* Compatibility with existing test suite */
-  --accent-gold: #00B4D8;
+  --accent-gold: #0369A1;
   --accent-gold-light: #E0F2FE;
   --accent-gold-glow: rgba(0, 180, 216, 0.15);
-  --accent-emerald: #059669;
+  --accent-emerald: #047857;
   --accent-emerald-light: #D1FAE5;
   --accent-violet: #7C3AED;
   --accent-cyan: #00B4D8;
@@ -107,7 +107,7 @@
   --color-text-accent: #0369A1;       /* Deep Accessible Sky (5.60:1 WCAG AA) */
   --color-text-accent-hover: #075985; /* Accessible Slate Blue (7.50:1 WCAG AAA) */
   --text-accent-hover: #075985;
-  --focus-ring-color: #0284C7;
+  --focus-ring-color: #0369A1;
   --focus-ring: 2px solid var(--focus-ring-color);
 }
 
@@ -461,7 +461,7 @@ header .nav-cta {
 
 .hero .badge:hover {
   border-color: #00B4D8;
-  color: #0284C7;
+  color: #0369A1;
   background: #F0F9FF;
   transform: translateY(-1px);
 }
@@ -482,7 +482,7 @@ header .nav-cta {
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #0284C7;
+  color: #0369A1;
   margin-bottom: 1.25rem;
 }
 
@@ -649,7 +649,7 @@ h3 {
 .authkit-cat-pill:hover {
   background: #F0F9FF;
   border-color: #00B4D8;
-  color: #0284C7;
+  color: #0369A1;
 }
 
 .authkit-cat-pill.active {
@@ -683,7 +683,7 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #0284C7;
+  color: #0369A1;
   background: #E0F2FE;
   border: 1px solid #BAE6FD;
   padding: 0.25rem 0.65rem;
@@ -716,7 +716,7 @@ h3 {
 .authkit-price-val {
   font-size: 1.9rem;
   font-weight: 800;
-  color: #0284C7;
+  color: #0369A1;
   letter-spacing: -0.03em;
 }
 
@@ -834,7 +834,7 @@ h3 {
 
 .authkit-tab-btn.active {
   background: #FFFFFF;
-  color: #0284C7;
+  color: #0369A1;
   border-color: var(--border-subtle);
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
 }
@@ -871,7 +871,7 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #0284C7;
+  color: #0369A1;
   background: rgba(0, 180, 216, 0.08);
   padding: 0.25rem 0.65rem;
   border-radius: 6px;
@@ -1308,7 +1308,7 @@ h3 {
 .price-tag .price-currency {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #0284C7;
+  color: #0369A1;
   white-space: nowrap;
 }
 
@@ -1512,7 +1512,7 @@ footer {
 }
 
 .footer-col a:hover {
-  color: #0284C7;
+  color: #0369A1;
   font-weight: 600;
 }
 
@@ -1567,7 +1567,7 @@ footer {
   padding: 0.3rem 0.75rem;
   border-radius: 9999px;
   background: rgba(0, 180, 216, 0.1);
-  color: #0284C7;
+  color: #0369A1;
   border: 1px solid rgba(0, 180, 216, 0.25);
   margin-bottom: 1rem;
 }
@@ -1997,7 +1997,7 @@ footer {
 
 .cart-total-pkr {
   font-size: 1.35rem;
-  color: #0284C7;
+  color: #0369A1;
   font-weight: 700;
 }
 
@@ -2271,7 +2271,7 @@ footer {
 .tool-specs-link {
   font-size: 0.84rem;
   font-weight: 600;
-  color: #0284C7;
+  color: #0369A1;
   text-decoration: none;
   text-align: center;
   padding: 0.35rem 0;
@@ -2362,7 +2362,7 @@ tr:hover td {
 
 .pricing-pkr-val {
   font-weight: 650;
-  color: #0284C7;
+  color: #0369A1;
   font-size: 1rem;
 }
 
@@ -2414,7 +2414,7 @@ tr:hover td {
 }
 
 .btn-table-specs:hover {
-  color: #0284C7;
+  color: #0369A1;
 }
 
 /* ========================================================
@@ -2445,7 +2445,7 @@ tr:hover td {
 
 .authkit-cat-pill:hover {
   background: #E0F2FE;
-  color: #0284C7;
+  color: #0369A1;
   border-color: #00B4D8;
   font-weight: 600;
 }
@@ -2543,7 +2543,7 @@ tr:hover td {
 }
 
 .breadcrumbs a:hover {
-  color: #0284C7;
+  color: #0369A1;
   text-decoration: underline;
 }
 
@@ -2594,11 +2594,11 @@ tr:hover td {
 .plan-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
-  border-color: #0284C7;
+  border-color: #0369A1;
 }
 
 .plan-card.featured {
-  border-color: #0284C7;
+  border-color: #0369A1;
   background: radial-gradient(120% 60% at 50% 0%, rgba(2, 132, 199, 0.09) 0%, transparent 60%), linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
   box-shadow: 0 8px 28px rgba(2, 132, 199, 0.16);
 }
@@ -2623,7 +2623,7 @@ tr:hover td {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #0284C7;
+  color: #0369A1;
   margin-bottom: 0.35rem;
 }
 
@@ -2658,7 +2658,7 @@ tr:hover td {
 .plan-price-pkr {
   font-size: 1.85rem;
   font-weight: 800;
-  color: #0284C7;
+  color: #0369A1;
   letter-spacing: -0.02em;
 }
 
@@ -3177,7 +3177,7 @@ textarea:focus-visible {
 .search-count-badge {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #0284C7;
+  color: #0369A1;
   background: rgba(0, 180, 216, 0.08);
   padding: 0.35rem 0.85rem;
   border-radius: 9999px;
@@ -3572,7 +3572,7 @@ textarea:focus-visible {
 
 .cat-pill-btn.active {
   background: linear-gradient(135deg, #00B4D8 0%, #0284C7 100%) !important;
-  border-color: #0284C7 !important;
+  border-color: #0369A1 !important;
   color: #FFFFFF !important;
   box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
 }
@@ -3673,7 +3673,7 @@ textarea:focus-visible {
 .category-card-link {
   font-size: 0.88rem;
   font-weight: 700;
-  color: #0284C7;
+  color: #0369A1;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -4129,4 +4129,10 @@ a.btn-wa-subtle:hover *,
 
 .btn-tool-compare.active * {
   color: #FFFFFF !important;
+}
+
+/* Accessible Text Contrast Overrides (WCAG 2.2 AA / AAA 5.93:1) */
+[style*="color:var(--brand-cyan)"], [style*="color: var(--brand-cyan)"],
+[style*="color:var(--accent-gold)"], [style*="color: var(--accent-gold)"] {
+  color: #0369A1 !important;
 }

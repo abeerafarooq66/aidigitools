@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE094X2Q7H"></script>
   <script>
@@ -19,6 +21,7 @@
   <link rel="alternate" hreflang="x-default" href="https://aidigitools.tech/tools/claude-artifacts.html">
   <link rel="alternate" hreflang="en" href="https://aidigitools.tech/tools/claude-artifacts.html">
   <link rel="alternate" hreflang="en-PK" href="https://aidigitools.tech/tools/claude-artifacts.html">
+  <link rel="preload" href="../assets/product-logos/claude-artifacts.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css?v=2.5">
   <meta property="og:site_name" content="AI DigiTools">
   <meta property="og:type" content="product">
@@ -231,7 +234,7 @@
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
         <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, Wise, USDT). Direct official resale authorization from Anthropic is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
       </div>
-      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/claude-artifacts.svg" alt="Claude Artifacts Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="lazy" decoding="async"></div>
+      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/claude-artifacts.svg" alt="Claude Artifacts Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="eager" fetchpriority="high" decoding="async"></div>
       <h1>Claude Artifacts Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">Claude Artifacts is a dedicated live-rendering UI and code canvas feature within Claude.ai that displays interactive React components, HTML documents, SVG graphics, and architectural diagrams side-by-side with chat. AIDigiTools provides informational access and compliance guidance in Pakistan.</p>
       <div class="price-tag">Rs. 1200 PKR <span class="period">(~$4.50 USD) / month</span></div>
@@ -330,15 +333,15 @@
       <p class="section-subtitle">Grounded in official Anthropic releases, benchmarks, and licensing standards.</p>
       <div class="grid">
         <div class="card">
-          <h2>Interactive Artifact Rendering</h2>
+          <h3>Interactive Artifact Rendering</h3>
           <p>Generate and preview live React components, SVG diagrams, and HTML5 prototypes side-by-side in real time.</p>
         </div>
         <div class="card">
-          <h2>200K Context Window Architecture</h2>
+          <h3>200K Context Window Architecture</h3>
           <p>Analyze complex multi-file pull requests and extensive architectural documents without token degradation.</p>
         </div>
         <div class="card">
-          <h2>Mathematical & Algorithmic Rigor</h2>
+          <h3>Mathematical & Algorithmic Rigor</h3>
           <p>Produce clean, bug-free algorithms with industry-leading code reasoning benchmarks on Claude Sonnet 5.5 and Claude 3.5.</p>
         </div>
       </div>
@@ -355,9 +358,9 @@
         <table>
         <thead>
           <tr>
-            <th>System Parameter</th>
-            <th>Technical Specification</th>
-            <th>Verification Standard</th>
+            <th scope="col">System Parameter</th>
+            <th scope="col">Technical Specification</th>
+            <th scope="col">Verification Standard</th>
           </tr>
         </thead>
         <tbody>

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE094X2Q7H"></script>
   <script>
@@ -19,6 +21,7 @@
   <link rel="alternate" hreflang="x-default" href="https://aidigitools.tech/tools/nordvpn.html">
   <link rel="alternate" hreflang="en" href="https://aidigitools.tech/tools/nordvpn.html">
   <link rel="alternate" hreflang="en-PK" href="https://aidigitools.tech/tools/nordvpn.html">
+  <link rel="preload" href="../assets/product-logos/nordvpn.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css?v=2.5">
   <meta property="og:site_name" content="AI DigiTools">
   <meta property="og:type" content="product">
@@ -232,7 +235,7 @@
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
         <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, Wise, USDT). Direct official resale authorization from Nord Security is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
       </div>
-      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/nordvpn.svg" alt="NordVPN Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="lazy" decoding="async"></div>
+      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/nordvpn.svg" alt="NordVPN Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="eager" fetchpriority="high" decoding="async"></div>
       <h1>NordVPN Standard Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">NordVPN Standard secures your internet connection across 10 concurrent devices with high-speed NordLynx WireGuard protocols, Threat Protection malware filtering, and verified zero-logs privacy across 111 countries. AIDigiTools delivers authentic subscriptions in Pakistan with domestic PKR settlement, 15-minute setup, and 30-day warranty.</p>
       <div class="price-tag">Rs. 850 PKR <span class="period">(~$3.00 USD) / month</span></div>
@@ -332,15 +335,15 @@
       <h2 class="section-title">NordVPN Security & Speed Specs</h2>
       <div class="grid">
         <div class="card">
-          <h2>6,000+ Ultra-Fast Servers</h2>
+          <h3>6,000+ Ultra-Fast Servers</h3>
           <p>Global coverage across 111 countries with NordLynx protocol guaranteeing minimum latency and 10Gbps line speeds.</p>
         </div>
         <div class="card">
-          <h2>Threat Protection Pro</h2>
+          <h3>Threat Protection Pro</h3>
           <p>Real-time malware blocking, web tracker defense, and automated ad-blockers running continuously at the network level.</p>
         </div>
         <div class="card">
-          <h2>Double VPN & Dark Web Monitor</h2>
+          <h3>Double VPN & Dark Web Monitor</h3>
           <p>Route your internet traffic through two remote encryption servers while scanning leaked databases for compromised team credentials.</p>
         </div>
       </div>
@@ -353,9 +356,9 @@
         <table>
         <thead>
           <tr>
-            <th>System Parameter</th>
-            <th>Technical Specification</th>
-            <th>Verification Standard</th>
+            <th scope="col">System Parameter</th>
+            <th scope="col">Technical Specification</th>
+            <th scope="col">Verification Standard</th>
           </tr>
         </thead>
         <tbody>

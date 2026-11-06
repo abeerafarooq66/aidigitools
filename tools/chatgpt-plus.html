@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE094X2Q7H"></script>
   <script>
@@ -19,6 +21,7 @@
   <link rel="alternate" hreflang="x-default" href="https://aidigitools.tech/tools/chatgpt-plus.html">
   <link rel="alternate" hreflang="en" href="https://aidigitools.tech/tools/chatgpt-plus.html">
   <link rel="alternate" hreflang="en-PK" href="https://aidigitools.tech/tools/chatgpt-plus.html">
+  <link rel="preload" href="../assets/product-logos/chatgpt-plus.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css?v=2.5">
   <meta property="og:site_name" content="AI DigiTools">
   <meta property="og:type" content="product">
@@ -331,15 +334,15 @@
       <p class="section-subtitle">Grounded in official OpenAI frontier benchmarks and system releases.</p>
       <div class="grid">
         <div class="card">
-          <h2>GPT-5 / GPT-6 & Canvas Engine</h2>
+          <h3>GPT-5 / GPT-6 & Canvas Engine</h3>
           <p>Full speed OpenAI flagship model featuring 128,000 token context window with advanced code editing and visual reasoning.</p>
         </div>
         <div class="card">
-          <h2>AI Image Generation & Canvas</h2>
+          <h3>AI Image Generation & Canvas</h3>
           <p>Native high-resolution image rendering directly inside conversation threads for advertising and creative branding.</p>
         </div>
         <div class="card">
-          <h2>Low-Latency Voice Mode</h2>
+          <h3>Low-Latency Voice Mode</h3>
           <p>Conversational speech mode with emotional nuance and zero keyboard barrier for language and executive tutoring.</p>
         </div>
       </div>
@@ -356,9 +359,9 @@
         <table>
         <thead>
           <tr>
-            <th>System Parameter</th>
-            <th>Technical Specification</th>
-            <th>Verification Standard</th>
+            <th scope="col">System Parameter</th>
+            <th scope="col">Technical Specification</th>
+            <th scope="col">Verification Standard</th>
           </tr>
         </thead>
         <tbody>
@@ -561,7 +564,7 @@
     <div class="cart-drawer-body">
       <!-- Item Info Box -->
       <div class="cart-item-preview">
-        <img id="drawerItemIcon" src="../assets/product-logos/chatgpt-plus.svg" alt="Selected AI Tool Brand Icon" width="48" height="48" class="cart-item-icon" loading="lazy" decoding="async">
+        <img id="drawerItemIcon" src="../assets/product-logos/chatgpt-plus.svg" alt="Selected AI Tool Brand Icon" width="48" height="48" class="cart-item-icon" loading="eager" fetchpriority="high" decoding="async">
         <div>
           <div class="cart-item-name" id="drawerItemName">ChatGPT Plus</div>
           <div class="cart-item-vendor" id="drawerItemVendor">OpenAI</div>

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE094X2Q7H"></script>
   <script>
@@ -19,6 +21,7 @@
   <link rel="alternate" hreflang="x-default" href="https://aidigitools.tech/tools/grok-ai.html">
   <link rel="alternate" hreflang="en" href="https://aidigitools.tech/tools/grok-ai.html">
   <link rel="alternate" hreflang="en-PK" href="https://aidigitools.tech/tools/grok-ai.html">
+  <link rel="preload" href="../assets/product-logos/grok-ai.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css?v=2.5">
   <meta property="og:site_name" content="AI DigiTools">
   <meta property="og:type" content="product">
@@ -231,7 +234,7 @@
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
         <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, Wise, USDT). Direct official resale authorization from xAI Corp is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
       </div>
-      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/grok-ai.svg" alt="Grok Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="lazy" decoding="async"></div>
+      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/grok-ai.svg" alt="Grok Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="eager" fetchpriority="high" decoding="async"></div>
       <h1>xAI Grok Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">xAI Grok is an unfiltered reasoning model developed by xAI, integrated directly with live global news data from the X platform alongside Aurora image synthesis. AIDigiTools provides convenient PKR payment facilitation and verified access across Pakistan.</p>
       <div class="price-tag">Rs. 1100 PKR <span class="period">(~$4.00 USD) / month</span></div>
@@ -332,15 +335,15 @@
       <p class="section-subtitle">Grounded in official xAI releases, benchmarks, and licensing standards.</p>
       <div class="grid">
         <div class="card">
-          <h2>Real-Time X Platform Access</h2>
+          <h3>Real-Time X Platform Access</h3>
           <p>Analyze breaking news, live sentiment, and trending world topics with unfiltered real-time data access.</p>
         </div>
         <div class="card">
-          <h2>Fun & Normal Reasoning Modes</h2>
+          <h3>Fun & Normal Reasoning Modes</h3>
           <p>Toggle between wit-driven humorous responses and rigorous academic reasoning for complex analytical queries.</p>
         </div>
         <div class="card">
-          <h2>High-Speed Grok Vision</h2>
+          <h3>High-Speed Grok Vision</h3>
           <p>Upload images, graphs, and screenshots for rapid mathematical parsing and automated visual code breakdown.</p>
         </div>
       </div>
@@ -357,9 +360,9 @@
         <table>
         <thead>
           <tr>
-            <th>System Parameter</th>
-            <th>Technical Specification</th>
-            <th>Verification Standard</th>
+            <th scope="col">System Parameter</th>
+            <th scope="col">Technical Specification</th>
+            <th scope="col">Verification Standard</th>
           </tr>
         </thead>
         <tbody>

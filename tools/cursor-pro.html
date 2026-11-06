@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE094X2Q7H"></script>
   <script>
@@ -19,6 +21,7 @@
   <link rel="alternate" hreflang="x-default" href="https://aidigitools.tech/tools/cursor-pro.html">
   <link rel="alternate" hreflang="en" href="https://aidigitools.tech/tools/cursor-pro.html">
   <link rel="alternate" hreflang="en-PK" href="https://aidigitools.tech/tools/cursor-pro.html">
+  <link rel="preload" href="../assets/product-logos/cursor-pro.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css?v=2.5">
   <meta property="og:site_name" content="AI DigiTools">
   <meta property="og:type" content="product">
@@ -231,7 +234,7 @@
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
         <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, Wise, USDT). Direct official resale authorization from Anysphere Inc is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
       </div>
-      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/cursor-pro.svg" alt="Cursor Pro Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="lazy" decoding="async"></div>
+      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/cursor-pro.svg" alt="Cursor Pro Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="eager" fetchpriority="high" decoding="async"></div>
       <h1>Cursor Pro Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">Cursor Pro is an AI-first fork of VS Code featuring Composer multi-file editing, predictive Cursor Tab code generation, and deep semantic codebase indexing powered by Claude Sonnet 5.5 and GPT-6. AIDigiTools provides instant PKR activation and 30-day warranty.</p>
       <div class="price-tag">Rs. 3800 PKR <span class="period">(~$14.00 USD) / month</span></div>
@@ -332,15 +335,15 @@
       <p class="section-subtitle">Grounded in official Anysphere releases, benchmarks, and licensing standards.</p>
       <div class="grid">
         <div class="card">
-          <h2>2600 Fast Premium Requests</h2>
+          <h3>2600 Fast Premium Requests</h3>
           <p>Unlimited monthly usage with 2600 priority fast requests for Claude Sonnet 5.5 and GPT-5/4o code completion.</p>
         </div>
         <div class="card">
-          <h2>Full Codebase Composer Agent</h2>
+          <h3>Full Codebase Composer Agent</h3>
           <p>Multi-file editing agent that inspects your entire workspace, refactors functions, and writes unit tests automatically.</p>
         </div>
         <div class="card">
-          <h2>Smart Copilot Tab Autocomplete</h2>
+          <h3>Smart Copilot Tab Autocomplete</h3>
           <p>Next-token prediction that anticipates multi-line edits and variable renames across dependent repository files.</p>
         </div>
       </div>
@@ -358,9 +361,9 @@
         <table>
         <thead>
           <tr>
-            <th>System Parameter</th>
-            <th>Technical Specification</th>
-            <th>Verification Standard</th>
+            <th scope="col">System Parameter</th>
+            <th scope="col">Technical Specification</th>
+            <th scope="col">Verification Standard</th>
           </tr>
         </thead>
         <tbody>

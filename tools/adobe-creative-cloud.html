@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NE094X2Q7H"></script>
   <script>
@@ -19,6 +21,7 @@
   <link rel="alternate" hreflang="x-default" href="https://aidigitools.tech/tools/adobe-creative-cloud.html">
   <link rel="alternate" hreflang="en" href="https://aidigitools.tech/tools/adobe-creative-cloud.html">
   <link rel="alternate" hreflang="en-PK" href="https://aidigitools.tech/tools/adobe-creative-cloud.html">
+  <link rel="preload" href="../assets/product-logos/adobe-creative-cloud.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css?v=2.5">
   <meta property="og:site_name" content="AI DigiTools">
   <meta property="og:type" content="product">
@@ -231,7 +234,7 @@
       <div class="reseller-notice" style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:8px; padding:0.6rem 1rem; font-size:0.82rem; color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">
         <strong>Independent Reseller Notice:</strong> AI DigiTools is an independent subscription brokerage and digital concierge service providing domestic payment processing (EasyPaisa, JazzCash, Raast, Bank Transfer, Wise, USDT). Direct official resale authorization from Adobe Inc is unverified. Access is provided via third-party subscription invitations, promo keys, or group allocations under our 30-day replacement warranty policy (account replacement support for access disruption; refunds not provided once credentials are issued).
       </div>
-      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/adobe-creative-cloud.svg" alt="Adobe Creative Cloud Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="lazy" decoding="async"></div>
+      <div style="text-align:center; margin-bottom:1rem;"><img src="../assets/product-logos/adobe-creative-cloud.svg" alt="Adobe Creative Cloud Logo" width="64" height="64" style="border-radius:14px; box-shadow:0 4px 14px rgba(15,23,42,0.08);" loading="eager" fetchpriority="high" decoding="async"></div>
       <h1>Adobe Creative Cloud Pakistan & Worldwide — Pricing & Rails</h1>
       <p class="quick-answer">Adobe Creative Cloud All Apps is the industry-standard software suite providing Photoshop, Illustrator, Premiere Pro, After Effects, and 1,000 monthly Firefly generative credits for designers and video editors. AIDigiTools provides authenticated concierge access with PKR settlement, 15-minute delivery, and a 30-day warranty.</p>
       <div class="price-tag">Rs. 1400 PKR <span class="period">(~$5.50 USD) / month</span></div>
@@ -332,15 +335,15 @@
       <p class="section-subtitle">Grounded in official Adobe releases, benchmarks, and licensing standards.</p>
       <div class="grid">
         <div class="card">
-          <h2>20+ Pro Creative Apps</h2>
+          <h3>20+ Pro Creative Apps</h3>
           <p>Full desktop access to Adobe Photoshop, Illustrator, Premiere Pro, After Effects, and Lightroom Classic.</p>
         </div>
         <div class="card">
-          <h2>100GB Adobe Cloud Storage</h2>
+          <h3>100GB Adobe Cloud Storage</h3>
           <p>Sync project assets, typography libraries, and brand color palettes smoothly across editing workstations.</p>
         </div>
         <div class="card">
-          <h2>Adobe Firefly Generative AI</h2>
+          <h3>Adobe Firefly Generative AI</h3>
           <p>Integrated Generative Fill and Generative Expand capabilities inside Photoshop for rapid asset retouching.</p>
         </div>
       </div>
@@ -357,9 +360,9 @@
         <table>
         <thead>
           <tr>
-            <th>System Parameter</th>
-            <th>Technical Specification</th>
-            <th>Verification Standard</th>
+            <th scope="col">System Parameter</th>
+            <th scope="col">Technical Specification</th>
+            <th scope="col">Verification Standard</th>
           </tr>
         </thead>
         <tbody>
