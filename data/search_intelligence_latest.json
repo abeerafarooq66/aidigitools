@@ -1,12 +1,12 @@
 {
-  "report_generated_at_utc": "2026-11-06T04:48:40.807275+00:00",
+  "report_generated_at_utc": "2026-11-06T15:02:43.823112+00:00",
   "target_domain": "https://aidigitools.tech",
   "google_search_console": {
     "provenance": {
       "source": "Google Search Console API",
       "property": "https://aidigitools.tech/",
       "date_range": "Last 28 days",
-      "fetch_timestamp": "2026-11-06T04:48:40.245240+00:00",
+      "fetch_timestamp": "2026-11-06T15:02:36.661724+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "Data restricted to authorized AIDigiTools property; missing rows denote no recorded impressions on this property, not zero market demand."
@@ -20,7 +20,7 @@
     "provenance": {
       "source": "Google Analytics 4 Data API",
       "property_id": "561800932",
-      "fetch_timestamp": "2026-11-06T04:48:40.245254+00:00",
+      "fetch_timestamp": "2026-11-06T15:02:36.661724+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "GA4 records user browser interactions; WhatsApp button clicks represent lead inquiries, NOT confirmed purchases."
@@ -33,7 +33,7 @@
     "provenance": {
       "source": "Microsoft Bing Webmaster REST API",
       "property": "https://aidigitools.tech",
-      "fetch_timestamp": "2026-11-06T04:48:40.245259+00:00",
+      "fetch_timestamp": "2026-11-06T15:02:36.661724+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "Data represents organic search activity exclusively on the Bing Search network."
@@ -44,7 +44,7 @@
   "predictive_trends": {
     "provenance": {
       "source": "Google Autocomplete Predictive Trends Engine",
-      "fetch_timestamp": "2026-11-06T04:48:40.245265+00:00",
+      "fetch_timestamp": "2026-11-06T15:02:36.661724+00:00",
       "metric_type": "inferred_trend_interest",
       "status": "CONNECTED",
       "limitations": "Reflects real-time predictive user search velocity. Does not represent absolute monthly search volume counts."
@@ -53,34 +53,34 @@
     "total_trending_queries_discovered": 64,
     "trends_by_seed": {
       "ai tools": [
-        "ai tools list",
         "ai tools free",
         "ai tools like chatgpt",
-        "ai tools for research",
-        "ai tools for interview",
-        "ai tools for interior design",
-        "ai tools to apply for jobs",
-        "ai tools for job search"
+        "ai tools flow",
+        "ai tools for video creation",
+        "ai tools list",
+        "ai tools for image generation",
+        "ai tools directory",
+        "ai tools for research"
       ],
       "best ai video generator": [
         "best ai video generator free",
-        "best ai video generator without restrictions",
-        "best ai video generator reddit",
         "best ai video generator app",
-        "best ai video generator for long videos",
-        "best ai video generator free reddit",
-        "best ai video generator for youtube",
-        "best ai video generator 2026"
+        "best ai video generator tools",
+        "best ai video generator free unlimited",
+        "best ai video generator free without watermark",
+        "best ai video generator free app",
+        "best ai video generator 2026",
+        "best ai video generator for youtube"
       ],
       "cursor ai vs": [
-        "cursor ai vs claude code",
         "cursor ai vs claude",
-        "cursor ai vs codex",
-        "cursor ai vs copilot",
-        "cursor ai vs vscode",
-        "cursor ai vs chatgpt",
+        "cursor ai vs claude code",
         "cursor ai vscode",
-        "cursor ai vs devin ai"
+        "cursor ai vs copilot",
+        "cursor ai vs antigravity",
+        "cursor ai vs codex",
+        "cursor ai vs claude code vs codex",
+        "cursor ai vs github copilot"
       ],
       "chatgpt plus pakistan": [
         "chatgpt plus pakistan price",
@@ -93,14 +93,14 @@
         "chatgpt plus fee in pakistan"
       ],
       "claude 3.5 sonnet": [
-        "claude 3.5 sonnet website",
         "claude 3.5 sonnet free",
-        "claude 3.5 sonnet price",
         "claude 3.5 sonnet (anthropic)",
-        "claude 3.5 sonnet release date",
         "claude 3.5 sonnet ai",
+        "claude 3.5 sonnet pricing",
+        "claude 3.5 sonnet website",
         "claude 3.5 sonnet download",
-        "claude 3.5 sonnet api"
+        "claude 3.5 sonnet free download",
+        "claude 3.5 sonnet api pricing"
       ],
       "midjourney alternatives": [
         "midjourney alternatives free",
@@ -113,24 +113,24 @@
         "midjourney ai alternatives"
       ],
       "deepseek r1": [
+        "deepseek r1 free",
+        "deepseek r1 api",
+        "deepseek r1 model",
+        "deepseek r1 download",
         "deepseek r1 paper",
-        "deepseek r1 release date",
-        "deepseek r1 distill",
-        "deepseek r1 model size",
-        "deepseek r1 vs v3",
-        "deepseek r1 huggingface",
-        "deepseek r1 vs v4",
-        "deepseek r1 size"
+        "deepseek r1 free api",
+        "deepseek r1 api key",
+        "deepseek r1 login"
       ],
       "ai coding assistant": [
         "ai coding assistant free",
         "ai coding assistant tools",
-        "ai coding assistant comparison",
-        "ai coding assistants code review bottleneck",
-        "ai coding assistant ranking",
         "ai coding assistant in a code repository environment",
         "ai coding assistant easy",
-        "ai coding assistants list"
+        "ai coding assistants list",
+        "ai coding assistant cursor",
+        "ai coding assistant ranking",
+        "ai coding assistant github"
       ]
     },
     "notes": "Successfully captured 64 live real-time query suggestions across 8 AI clusters."
@@ -139,7 +139,7 @@
     "provenance": {
       "source": "Google PageSpeed Insights & CrUX API",
       "property": "https://aidigitools.tech",
-      "fetch_timestamp": "2026-11-06T04:48:40.807258+00:00",
+      "fetch_timestamp": "2026-11-06T15:02:43.823112+00:00",
       "metric_type": "observed",
       "status": "UNAVAILABLE",
       "limitations": "Lighthouse simulates mobile device conditions. CrUX reports 28-day rolling real-user metrics where sample density permits."

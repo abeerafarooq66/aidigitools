@@ -1,10 +1,10 @@
 {
-  "check_timestamp_pkt": "2026-11-06 09:48:39 PKT",
+  "check_timestamp_pkt": "2026-11-06 20:02:02 PKT",
   "business_timezone": "PKT (UTC+5)",
   "cadence_status": {
     "passed": true,
-    "elapsed_hours": 85.7,
-    "message": "Cadence gate cleared: 85.7 hours have elapsed since last publication ('cursor ai vs github copilot'), satisfying the 48.0h minimum requirement.",
+    "elapsed_hours": 95.93,
+    "message": "Cadence gate cleared: 95.9 hours have elapsed since last publication ('cursor ai vs github copilot'), satisfying the 48.0h minimum requirement.",
     "bypassed": true
   },
   "budget_status": {
@@ -14,7 +14,7 @@
   "evaluated_candidates_count": 4,
   "decision": "TOPIC_SELECTED",
   "reason_code": "TOPIC_QUALIFIED",
-  "explanation": "Candidate topic 'claude 3.5 sonnet artifacts guide' (ID: TOPIC-002) qualified with score 93/100. Selected for content generation pipeline. Cadence gate satisfied (85.7h elapsed).",
+  "explanation": "Candidate topic 'claude 3.5 sonnet artifacts guide' (ID: TOPIC-002) qualified with score 93/100. Selected for content generation pipeline. Cadence gate satisfied (95.9h elapsed).",
   "selected_topic": {
     "topic_id": "TOPIC-002",
     "primary_keyword": "claude 3.5 sonnet artifacts guide",
