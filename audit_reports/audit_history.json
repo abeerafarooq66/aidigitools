@@ -336,5 +336,18 @@
     "repairs_applied": false,
     "repairs_rolled_back": false,
     "issues": []
+  },
+  {
+    "run_id": "run-2026-11-06_08-49-21_PKT",
+    "timestamp_pkt": "2026-11-06 08:49:21 PKT",
+    "health_score": 100,
+    "pages_scanned": 68,
+    "critical_count": 0,
+    "warning_count": 0,
+    "broken_links_count": 0,
+    "all_live_checks_passed": true,
+    "repairs_applied": false,
+    "repairs_rolled_back": false,
+    "issues": []
   }
 ]
