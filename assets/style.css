@@ -1617,9 +1617,14 @@ footer {
    ORBIT EMBLEM AMBIENT ANIMATION SYSTEM
    ======================================================== */
 @keyframes orbit-trace-ambient {
-  0% { stroke-dashoffset: 0; }
-  50% { stroke-dashoffset: 50; }
-  100% { stroke-dashoffset: 0; }
+  0%, 100% {
+    transform: rotate(0deg);
+    opacity: 0.85;
+  }
+  50% {
+    transform: rotate(3deg);
+    opacity: 1;
+  }
 }
 
 @keyframes satellite-float {
@@ -1634,14 +1639,18 @@ footer {
 
 .logo-brand-icon .orbit-front,
 .aidigitools-orbit-logo .orbit-front {
-  stroke-dasharray: 200;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: orbit-trace-ambient 6s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .logo-brand-icon .orbit-back,
 .aidigitools-orbit-logo .orbit-back {
-  stroke-dasharray: 200;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: orbit-trace-ambient 8s ease-in-out infinite reverse;
+  will-change: transform, opacity;
 }
 
 .logo-brand-icon .orbit-node,
