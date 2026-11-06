@@ -1,7 +1,7 @@
 {
   "queue_version": "1.0.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_updated_pkt": "2026-11-03 09:42:05 PKT",
+  "last_updated_pkt": "2026-11-06 09:48:12 PKT",
   "pending_reviews": [
     {
       "review_id": "REV-0001",
@@ -121,6 +121,30 @@
       },
       "status": "PENDING",
       "enqueued_at_pkt": "2026-11-03 09:42:05 PKT",
+      "reviewer_notes": null
+    },
+    {
+      "review_id": "REV-0006",
+      "article_slug": "test-fabricated-claims",
+      "title": "Cursor AI vs GitHub Copilot Comparison",
+      "triggers": [
+        {
+          "category": "warranty_interpretation",
+          "pattern": "(?i)\\b(?:100%\\s+money[- ]back\\s+guarantee|full\\s+cash\\s+refund|lifetime\\s+warranty|instant\\s+cash\\s+reversal)\\b",
+          "matches": [
+            "100% money-back guarantee"
+          ]
+        }
+      ],
+      "metadata": {
+        "slug": "test-fabricated-claims",
+        "title": "Cursor AI vs GitHub Copilot Comparison",
+        "primary_keyword": "cursor ai vs github copilot",
+        "canonical_url": "https://aidigitools.tech/blog/test-fabricated-claims.html",
+        "article_type": "comparison"
+      },
+      "status": "PENDING",
+      "enqueued_at_pkt": "2026-11-06 09:48:12 PKT",
       "reviewer_notes": null
     }
   ],
