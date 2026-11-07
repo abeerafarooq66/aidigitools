@@ -26,8 +26,8 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="preload" href="assets/style.css?v=2.6" as="style">
-  <link rel="stylesheet" href="assets/style.css?v=2.6">
+  <link rel="preload" href="/assets/style.css?v=2.6" as="style">
+  <link rel="stylesheet" href="/assets/style.css?v=2.6">
   <meta property="og:title" content="Page Not Found (404) | AIDigiTools AI Software Marketplace">
   <meta property="og:description" content="The requested page could not be found on AIDigiTools. Browse our verified AI tools catalog or contact WhatsApp concierge for instant assistance.">
   <meta property="og:url" content="https://aidigitools.tech/404.html">
@@ -55,6 +55,8 @@
         var p = window.location.pathname;
         if (p && p.indexOf('.html') !== -1) {
           var clean = p.split('%20')[0].split(' ')[0];
+          // Strip accidental suffix characters typed after .html (e.g. .htmlv -> .html)
+          clean = clean.replace(/(\.html)[a-zA-Z0-9_\-]+$/, '$1');
           if (clean !== p && clean.slice(-5) === '.html') {
             window.location.replace(clean + window.location.search + window.location.hash);
           }
@@ -67,7 +69,7 @@
   <a href="#main" class="skip-link">Skip to main content</a>
   <header>
     <div class="container nav-wrapper">
-      <a href="index.html" class="logo" aria-label="AIDigiTools Home">
+      <a href="/index.html" class="logo" aria-label="AIDigiTools Home">
         <svg class="logo-brand-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <linearGradient id="navTeal" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -102,21 +104,21 @@
           <span class="tagline">Smart Tools • Bigger Possibilities</span>
         </span>
       </a>
-      <nav>
-        <a href="index.html">Tools</a>
-        <a href="deals.html">Deals</a>
-        <a href="best/best-ai-coding-tools.html">Best Coding AI</a>
-        <a href="categories/coding.html">Coding Hub</a>
-        <a href="categories/video.html">Video Hub</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <nav style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+        <a href="/index.html">Tools</a>
+        <a href="/deals.html">Deals</a>
+        <a href="/best/best-ai-coding-tools.html">Best Coding AI</a>
+        <a href="/categories/coding.html">Coding Hub</a>
+        <a href="/categories/video.html">Video Hub</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container" id="main" style="padding-top: 3rem; padding-bottom: 5rem;">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
+      <a href="/index.html">Home</a>
       <span class="separator">/</span>
       <span class="current">404 Error</span>
     </nav>
@@ -129,7 +131,7 @@
       </p>
 
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="index.html" class="empty-state-action" style="padding: 0.8rem 1.75rem; font-size: 1rem;">
+        <a href="/index.html" class="empty-state-action" style="padding: 0.8rem 1.75rem; font-size: 1rem;">
           Browse All 49 AI Tools
         </a>
         <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20hit%20a%20404%20error%20and%20need%20help%20finding%20a%20tool." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.8rem 1.5rem; font-size: 1rem; text-decoration: none;">
@@ -148,10 +150,10 @@
         <!-- Card 1: ChatGPT Plus -->
         <article class="tool-card">
           <div class="tool-card-header">
-            <img src="assets/product-logos/chatgpt-plus.svg" alt="ChatGPT Plus Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
+            <img src="/assets/product-logos/chatgpt-plus.svg" alt="ChatGPT Plus Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
             <span class="badge badge-emerald">Target 15-Min</span>
           </div>
-          <h3 class="tool-card-title"><a href="tools/chatgpt-plus.html">ChatGPT Plus</a></h3>
+          <h3 class="tool-card-title"><a href="/tools/chatgpt-plus.html">ChatGPT Plus</a></h3>
           <p class="tool-card-desc">GPT-5/GPT-6 models, advanced voice, Canvas, and visual synthesis.</p>
           <div class="tool-card-pricing">
             <div class="pkr-price">Rs. 2,300 <span class="duration">/ month</span></div>
@@ -159,17 +161,17 @@
           </div>
           <div class="tool-card-actions">
             <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%21%20I%20want%20to%20order%20ChatGPT%20Plus%20for%20Rs%202%2C300%20PKR%20%28~%248.00%20USD%29.%20Please%20confirm%20plan%20availability%20and%20share%20payment%20details." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Order ChatGPT Plus via WhatsApp">Order via WhatsApp</a>
-            <a href="tools/chatgpt-plus.html" class="btn btn-secondary">Details</a>
+            <a href="/tools/chatgpt-plus.html" class="btn btn-secondary" aria-label="View ChatGPT Plus subscription details and pricing">Details</a>
           </div>
         </article>
 
         <!-- Card 2: Claude Pro -->
         <article class="tool-card">
           <div class="tool-card-header">
-            <img src="assets/product-logos/claude-pro.svg" alt="Claude Pro Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
+            <img src="/assets/product-logos/claude-pro.svg" alt="Claude Pro Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
             <span class="badge badge-emerald">Target 15-Min</span>
           </div>
-          <h3 class="tool-card-title"><a href="tools/claude-pro.html">Claude Pro</a></h3>
+          <h3 class="tool-card-title"><a href="/tools/claude-pro.html">Claude Pro</a></h3>
           <p class="tool-card-desc">Claude Sonnet 5.5, 200K context window, Artifacts workspace, and coding power.</p>
           <div class="tool-card-pricing">
             <div class="pkr-price">Rs. 2,500 <span class="duration">/ month</span></div>
@@ -177,17 +179,17 @@
           </div>
           <div class="tool-card-actions">
             <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%21%20I%20want%20to%20order%20Claude%20Pro%20for%20Rs%202%2C500%20PKR%20%28~%249.00%20USD%29.%20Please%20confirm%20plan%20availability%20and%20share%20payment%20details." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Order Claude Pro via WhatsApp">Order via WhatsApp</a>
-            <a href="tools/claude-pro.html" class="btn btn-secondary">Details</a>
+            <a href="/tools/claude-pro.html" class="btn btn-secondary" aria-label="View Claude Pro subscription details and pricing">Details</a>
           </div>
         </article>
 
         <!-- Card 3: Cursor Pro -->
         <article class="tool-card">
           <div class="tool-card-header">
-            <img src="assets/product-logos/cursor-pro.svg" alt="Cursor Pro Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
+            <img src="/assets/product-logos/cursor-pro.svg" alt="Cursor Pro Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
             <span class="badge badge-emerald">Target 15-Min</span>
           </div>
-          <h3 class="tool-card-title"><a href="tools/cursor-pro.html">Cursor Pro</a></h3>
+          <h3 class="tool-card-title"><a href="/tools/cursor-pro.html">Cursor Pro</a></h3>
           <p class="tool-card-desc">AI-first code editor with Claude Sonnet 5.5 inline autocomplete and codebase indexing.</p>
           <div class="tool-card-pricing">
             <div class="pkr-price">Rs. 3,800 <span class="duration">/ month</span></div>
@@ -195,17 +197,17 @@
           </div>
           <div class="tool-card-actions">
             <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%21%20I%20want%20to%20order%20Cursor%20Pro%20for%20Rs%203%2C800%20PKR%20%28~%2414.00%20USD%29.%20Please%20confirm%20plan%20availability%20and%20share%20payment%20details." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Order Cursor Pro via WhatsApp">Order via WhatsApp</a>
-            <a href="tools/cursor-pro.html" class="btn btn-secondary">Details</a>
+            <a href="/tools/cursor-pro.html" class="btn btn-secondary" aria-label="View Cursor Pro subscription details and pricing">Details</a>
           </div>
         </article>
 
         <!-- Card 4: Canva Pro -->
         <article class="tool-card">
           <div class="tool-card-header">
-            <img src="assets/product-logos/canva-pro.svg" alt="Canva Pro Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
+            <img src="/assets/product-logos/canva-pro.svg" alt="Canva Pro Logo" class="tool-logo-img" width="48" height="48" loading="lazy" decoding="async">
             <span class="badge badge-emerald">Target 15-Min</span>
           </div>
-          <h3 class="tool-card-title"><a href="tools/canva-pro.html">Canva Pro</a></h3>
+          <h3 class="tool-card-title"><a href="/tools/canva-pro.html">Canva Pro</a></h3>
           <p class="tool-card-desc">100M+ premium assets, Magic Studio background remover, and team Brand Kits.</p>
           <div class="tool-card-pricing">
             <div class="pkr-price">Rs. 600 <span class="duration">/ month</span></div>
@@ -213,7 +215,7 @@
           </div>
           <div class="tool-card-actions">
             <a href="https://wa.me/923326861112?text=Hi%20AIDigiTools%21%20I%20want%20to%20order%20Canva%20Pro%20for%20Rs%20600%20PKR%20%28~%242.50%20USD%29.%20Please%20confirm%20plan%20availability%20and%20share%20payment%20details." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Order Canva Pro via WhatsApp">Order via WhatsApp</a>
-            <a href="tools/canva-pro.html" class="btn btn-secondary">Details</a>
+            <a href="/tools/canva-pro.html" class="btn btn-secondary" aria-label="View Canva Pro subscription details and pricing">Details</a>
           </div>
         </article>
       </div>
@@ -223,7 +225,7 @@
   <footer>
     <div class="container footer-content">
       <div class="footer-brand">
-        <a href="index.html" class="logo" aria-label="AIDigiTools Home">
+        <a href="/index.html" class="logo" aria-label="AIDigiTools Home">
           <span class="logo-text-wrap">
             <span class="logo-brand-name"><span class="ai-prefix">AI</span> DigiTools</span>
             <span class="tagline">Smart Tools • Bigger Possibilities</span>
@@ -235,29 +237,29 @@
 
       <div class="footer-links-group">
         <h4>Catalog & Hubs</h4>
-        <a href="index.html">All Software</a>
-        <a href="deals.html">Deals & Bundles</a>
-        <a href="categories/coding.html">Coding Hub</a>
-        <a href="categories/video.html">Video Hub</a>
+        <a href="/index.html">All Software</a>
+        <a href="/deals.html">Deals & Bundles</a>
+        <a href="/categories/coding.html">Coding Hub</a>
+        <a href="/categories/video.html">Video Hub</a>
         <a href="categories/image.html">Image Hub</a>
-        <a href="categories/vpn.html">VPN & Privacy</a>
+        <a href="/categories/vpn.html">VPN & Privacy</a>
       </div>
 
       <div class="footer-links-group">
         <h4>Comparisons</h4>
         <a href="compare/chatgpt-vs-claude.html">ChatGPT vs Claude</a>
         <a href="compare/runway-vs-pika.html">Runway vs Pika</a>
-        <a href="best/best-ai-coding-tools.html">Best Coding AI</a>
+        <a href="/best/best-ai-coding-tools.html">Best Coding AI</a>
         <a href="best/best-ai-video-generators.html">Best Video AI</a>
       </div>
 
       <div class="footer-links-group">
         <h4>Compliance & Trust</h4>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Support</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Support</a>
         <a href="policies.html">Payment & Warranty</a>
         <a href="shipping-policy.html">Delivery Policy</a>
-        <a href="affiliate-disclosure.html">Transparency</a>
+        <a href="/affiliate-disclosure.html">Transparency</a>
       </div>
     </div>
 
@@ -266,6 +268,6 @@
     </div>
   </footer>
 
-  <script src="assets/cart.js?v=2.6" defer></script>
+  <script src="/assets/cart.js?v=2.6" defer></script>
 </body>
 </html>
