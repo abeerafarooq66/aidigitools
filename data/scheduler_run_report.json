@@ -1,25 +1,63 @@
 {
-  "check_timestamp_pkt": "2026-11-06 20:02:02 PKT",
-  "business_timezone": "PKT (UTC+5)",
-  "cadence_status": {
-    "passed": true,
-    "elapsed_hours": 95.93,
-    "message": "Cadence gate cleared: 95.9 hours have elapsed since last publication ('cursor ai vs github copilot'), satisfying the 48.0h minimum requirement.",
-    "bypassed": true
+  "executed_at_pkt": "2026-11-08 09:42:04 PKT",
+  "stages_completed": [
+    "RESEARCH_CADENCE_CHECK",
+    "TOPIC_SELECTION_AND_DUPLICATE_GUARD",
+    "CONTENT_DRAFTING"
+  ],
+  "pipeline_status": "EVIDENCE_VERIFICATION_FAILED",
+  "article_generated": true,
+  "published": false,
+  "preview_created": false,
+  "research_check": {
+    "check_timestamp_pkt": "2026-11-08 09:42:04 PKT",
+    "business_timezone": "PKT (UTC+5)",
+    "cadence_status": {
+      "passed": true,
+      "elapsed_hours": 133.59,
+      "message": "Cadence gate cleared: 133.6 hours have elapsed since last publication ('cursor ai vs github copilot'), satisfying the 48.0h minimum requirement.",
+      "bypassed": false
+    },
+    "budget_status": {
+      "exceeded": false,
+      "message": "Within budget: $0.00 spent of $50.00 cap."
+    },
+    "evaluated_candidates_count": 4,
+    "decision": "TOPIC_SELECTED",
+    "reason_code": "TOPIC_QUALIFIED",
+    "explanation": "Candidate topic 'claude 3.5 sonnet artifacts guide' (ID: TOPIC-002) qualified with score 93/100. Selected for content generation pipeline. Cadence gate satisfied (133.6h elapsed).",
+    "selected_topic": {
+      "topic_id": "TOPIC-002",
+      "primary_keyword": "claude 3.5 sonnet artifacts guide",
+      "score": 93,
+      "target_canonical_path": "blog/claude-artifacts-practical-guide-freelancers.html",
+      "editorial_rationale": "Huge educational search intent with high organic backlink and engagement potential for frontend creators."
+    }
   },
-  "budget_status": {
-    "exceeded": false,
-    "message": "Within budget: $0.00 spent of $50.00 cap."
+  "generation_telemetry": {
+    "success": true,
+    "status": "ARTICLE_GENERATED",
+    "generation_method": "GEMINI_API",
+    "is_gemini_generated": true,
+    "model_used": "models/gemini-flash-lite-latest",
+    "error": null
   },
-  "evaluated_candidates_count": 4,
-  "decision": "TOPIC_SELECTED",
-  "reason_code": "TOPIC_QUALIFIED",
-  "explanation": "Candidate topic 'claude 3.5 sonnet artifacts guide' (ID: TOPIC-002) qualified with score 93/100. Selected for content generation pipeline. Cadence gate satisfied (95.9h elapsed).",
-  "selected_topic": {
-    "topic_id": "TOPIC-002",
-    "primary_keyword": "claude 3.5 sonnet artifacts guide",
-    "score": 93,
-    "target_canonical_path": "blog/claude-artifacts-practical-guide-freelancers.html",
-    "editorial_rationale": "Huge educational search intent with high organic backlink and engagement potential for frontend creators."
-  }
+  "evidence_verification": {
+    "verified": false,
+    "status": "EVIDENCE_UNAVAILABLE",
+    "evidence_file": null,
+    "verified_claims": [
+      "Product 'claude 3.5 sonnet artifacts guide' verified in registry as 'Claude Artifacts'."
+    ],
+    "rejected_claims": [
+      "Price claim for 'Claude Artifacts' missing expected Rs. 1,200 PKR.",
+      "General claims lack primary documentation citations."
+    ],
+    "errors": [
+      "Missing or contradicted price for 'Claude Artifacts': expected Rs. 1,200 PKR in article.",
+      "Missing traceable primary vendor documentation or official pricing source citations."
+    ],
+    "evidence_record": null
+  },
+  "explanation": "Evidence verification failed: Missing or contradicted price for 'Claude Artifacts': expected Rs. 1,200 PKR in article.; Missing traceable primary vendor documentation or official pricing source citations."
 }
