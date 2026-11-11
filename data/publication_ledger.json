@@ -2,7 +2,7 @@
   "ledger_version": "1.0.0",
   "business_timezone": "PKT (UTC+5)",
   "min_cadence_hours": 48.0,
-  "last_updated_pkt": "2026-11-02 20:06:28 PKT",
+  "last_updated_pkt": "2026-11-08 22:25:00 PKT",
   "publications": [
     {
       "article_id": "ART-001",
@@ -96,7 +96,23 @@
       "primary_keyword": "cursor ai vs github copilot",
       "published_at_pkt": "2026-11-02 20:06:28 PKT",
       "published_at_utc": "2026-11-02T15:06:28Z",
-      "git_commit_hash": "uncommitted_local",
+      "git_commit_hash": "6458597",
+      "quality_gate_passed": true,
+      "status": "PUBLISHED"
+    },
+    {
+      "article_id": "ART-007",
+      "slug": "deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison",
+      "title": "DeepSeek R1 vs ChatGPT Plus vs Claude Pro (2026)",
+      "canonical_url": "https://aidigitools.tech/blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+      "relative_url": "blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+      "cluster_slug": "ai-assistants-and-llms",
+      "article_type": "blog",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "deepseek r1 vs chatgpt plus vs claude pro",
+      "published_at_pkt": "2026-11-08 22:25:00 PKT",
+      "published_at_utc": "2026-11-08T17:25:00Z",
+      "git_commit_hash": "6d22cbe",
       "quality_gate_passed": true,
       "status": "PUBLISHED"
     }

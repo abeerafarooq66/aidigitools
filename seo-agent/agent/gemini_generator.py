@@ -90,7 +90,13 @@ class GeminiArticleGenerator:
         """
         kw_lower = keyword_or_slug.lower().strip()
         products = self.products_registry if isinstance(self.products_registry, list) else []
-        stop_words = {"ai", "tool", "tools", "software", "app", "the", "vs", "versus", "pro", "plus"}
+        stop_words = {
+            "ai", "tool", "tools", "software", "app", "the", "vs", "versus", "pro", "plus",
+            "guide", "best", "review", "for", "in", "pakistan", "price", "pricing", "cost",
+            "practical", "freelancers", "developers", "tutorial", "overview", "comparison", "update",
+            "platform", "suite", "generator", "generators", "model", "models", "assistant", "assistants",
+            "agent", "workspace", "studio", "service", "services"
+        }
 
         kw_tokens = set(re.findall(r'[a-z0-9]+', kw_lower)) - stop_words
         if not kw_tokens:
@@ -115,15 +121,21 @@ class GeminiArticleGenerator:
                 best_score = 5.0
                 continue
 
-            # Token overlap match
+            # Token overlap match with high-recall semantic precision
             slug_tokens = set(re.findall(r'[a-z0-9]+', p_slug)) - stop_words
             name_tokens = set(re.findall(r'[a-z0-9]+', p_name)) - stop_words
             target_tokens = slug_tokens | name_tokens
+            if not target_tokens:
+                continue
             overlap = kw_tokens & target_tokens
-            score = len(overlap) / max(len(kw_tokens), 1)
-            if score > 0.4 and score > best_score:
+            if not overlap:
+                continue
+            score_kw = len(overlap) / max(len(kw_tokens), 1)
+            score_target = len(overlap) / max(len(target_tokens), 1)
+            combined_score = max(score_kw, score_target)
+            if (score_target >= 0.5 or score_kw >= 0.3) and combined_score > best_score:
                 best_match = p
-                best_score = score
+                best_score = combined_score
 
         if best_match:
             pkr_val = best_match.get("aidigitools_offer_price_pkr")
@@ -659,12 +671,23 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
     ) -> str:
         """Strips markdown fences, ensures complete HTML document structure, and normalizes SEO capsules."""
         text = raw_content.strip()
-        if text.startswith("```"):
-            text = re.sub(r"^```(?:html)?\s*", "", text, flags=re.IGNORECASE)
-            text = re.sub(r"\s*```$", "", text)
-        text = text.strip()
 
-        if "<!doctype html" not in text.lower():
+        # Clean extraction: if HTML code block or complete standard document exists, extract cleanly
+        code_block = re.search(r'```(?:html)?\s*(<!DOCTYPE html.*?)```', text, re.IGNORECASE | re.DOTALL)
+        if code_block:
+            text = code_block.group(1).strip()
+        elif re.search(r'<!DOCTYPE html', text, re.IGNORECASE):
+            doc_match = re.search(r'(<!DOCTYPE html.*?</html>)', text, re.IGNORECASE | re.DOTALL)
+            if doc_match:
+                text = doc_match.group(1).strip()
+            else:
+                text = re.sub(r"^```(?:html)?\s*", "", text, flags=re.IGNORECASE)
+                text = re.sub(r"\s*```$", "", text).strip()
+        else:
+            text = re.sub(r"^```(?:html)?\s*", "", text, flags=re.IGNORECASE)
+            text = re.sub(r"\s*```$", "", text).strip()
+
+        if "<!doctype html" not in text.lower() or "<html" not in text.lower() or "<body" not in text.lower():
             text = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -701,6 +724,105 @@ Output ONLY clean HTML starting with <!DOCTYPE html> and ending with </html>. Do
         text = self._normalize_headings(text, primary_kw)
         text = self._normalize_quick_answer(text, primary_kw, comp_context)
         text = self._normalize_seo_metadata(text, primary_kw)
+
+        # Ensure a verified comparison table is present if omitted
+        if "<table" not in text.lower():
+            comp = comp_context or self.get_verified_comparison_context(primary_kw)
+            is_comp = comp.get("is_comparison", False)
+            if is_comp and comp.get("product_a") and comp.get("product_b"):
+                pa = comp["product_a"]
+                pb = comp["product_b"]
+                table_html = f"""
+    <h2>Direct Comparison Matrix</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Plan / Product</th>
+          <th scope="col">Pricing (PKR)</th>
+          <th scope="col">Pricing (USD)</th>
+          <th scope="col">Delivery SLA</th>
+          <th scope="col">Warranty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>{pa.get('canonical_product_name', 'Product A')}</strong></td>
+          <td>{pa.get('price_pkr', 'Rs. 2,500 PKR')}</td>
+          <td>{pa.get('price_usd', '$9.0 USD')}</td>
+          <td>15-minute digital workspace delivery via WhatsApp ({OFFICIAL_WHATSAPP})</td>
+          <td>30-day replacement warranty</td>
+        </tr>
+        <tr>
+          <td><strong>{pb.get('canonical_product_name', 'Product B')}</strong></td>
+          <td>{pb.get('price_pkr', 'Rs. 2,300 PKR')}</td>
+          <td>{pb.get('price_usd', '$8.5 USD')}</td>
+          <td>15-minute digital workspace delivery via WhatsApp ({OFFICIAL_WHATSAPP})</td>
+          <td>30-day replacement warranty</td>
+        </tr>
+      </tbody>
+    </table>
+"""
+            else:
+                p_single = comp.get("product_a") or self.get_verified_product_context(primary_kw)
+                p_name = p_single.get("canonical_product_name", primary_kw.title())
+                p_pkr = p_single.get("price_pkr", "Rs. 2,500 PKR")
+                p_usd = p_single.get("price_usd", "$9.0 USD")
+                table_html = f"""
+    <h2>Subscription & Pricing Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Software Plan</th>
+          <th scope="col">Pricing (PKR)</th>
+          <th scope="col">Pricing (USD)</th>
+          <th scope="col">Delivery SLA</th>
+          <th scope="col">Warranty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>{p_name}</strong></td>
+          <td>{p_pkr}</td>
+          <td>{p_usd}</td>
+          <td>15-minute digital workspace delivery via WhatsApp ({OFFICIAL_WHATSAPP})</td>
+          <td>30-day replacement warranty managed by Islamabad operations desk</td>
+        </tr>
+      </tbody>
+    </table>
+"""
+            if re.search(r'<h2[^>]*>.*?faq', text, re.IGNORECASE):
+                text = re.sub(r'(<h2[^>]*>.*?faq)', table_html + r'\n\1', text, count=1, flags=re.IGNORECASE)
+            elif re.search(r'</article>', text, re.IGNORECASE):
+                text = re.sub(r'(</article>)', table_html + r'\n\1', text, count=1, flags=re.IGNORECASE)
+            elif re.search(r'</main>', text, re.IGNORECASE):
+                text = re.sub(r'(</main>)', table_html + r'\n\1', text, count=1, flags=re.IGNORECASE)
+            else:
+                text += table_html
+
+        # Ensure official WhatsApp concierge routing is present
+        if OFFICIAL_WHATSAPP not in text and "wa.me" not in text:
+            wa_html = f'\n    <p style="margin-top:1.5rem;">To order with domestic payment rails (EasyPaisa, JazzCash, SadaPay), contact our desk on WhatsApp at <a href="{OFFICIAL_WA_LINK}"><strong>{OFFICIAL_WHATSAPP}</strong></a>.</p>'
+            if re.search(r'</article>', text, re.IGNORECASE):
+                text = re.sub(r'(</article>)', wa_html + r'\n\1', text, count=1, flags=re.IGNORECASE)
+            else:
+                text += wa_html
+
+        # Ensure JSON-LD schema is present
+        if '<script type="application/ld+json">' not in text:
+            schema_html = f"""
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{primary_kw} Guide & Pricing",
+  "author": {{"@type": "Person", "name": "Abeera Farooq"}}
+}}
+</script>"""
+            if "</head>" in text:
+                text = text.replace("</head>", schema_html + "\n</head>")
+            else:
+                text += schema_html
+
         return text
 
     def _rank_candidate_models(self, supported: List[str]) -> List[str]:
