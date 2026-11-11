@@ -1,21 +1,20 @@
 {
-  "executed_at_pkt": "2026-11-10 09:42:05 PKT",
+  "executed_at_pkt": "2026-11-11 09:47:05 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK",
-    "TOPIC_SELECTION_AND_DUPLICATE_GUARD",
-    "CONTENT_DRAFTING"
+    "TOPIC_SELECTION_AND_DUPLICATE_GUARD"
   ],
-  "pipeline_status": "EVIDENCE_VERIFICATION_FAILED",
-  "article_generated": true,
+  "pipeline_status": "GENERATION_FAILED",
+  "article_generated": false,
   "published": false,
   "preview_created": false,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-10 09:42:05 PKT",
+    "check_timestamp_pkt": "2026-11-11 09:47:05 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
       "passed": true,
-      "elapsed_hours": 181.59,
-      "message": "Cadence gate cleared: 181.6 hours have elapsed since last publication ('cursor ai vs github copilot'), satisfying the 48.0h minimum requirement.",
+      "elapsed_hours": 205.68,
+      "message": "Cadence gate cleared: 205.7 hours have elapsed since last publication ('cursor ai vs github copilot'), satisfying the 48.0h minimum requirement.",
       "bypassed": false
     },
     "budget_status": {
@@ -25,7 +24,7 @@
     "evaluated_candidates_count": 4,
     "decision": "TOPIC_SELECTED",
     "reason_code": "TOPIC_QUALIFIED",
-    "explanation": "Candidate topic 'claude 3.5 sonnet artifacts guide' (ID: TOPIC-002) qualified with score 93/100. Selected for content generation pipeline. Cadence gate satisfied (181.6h elapsed).",
+    "explanation": "Candidate topic 'claude 3.5 sonnet artifacts guide' (ID: TOPIC-002) qualified with score 93/100. Selected for content generation pipeline. Cadence gate satisfied (205.7h elapsed).",
     "selected_topic": {
       "topic_id": "TOPIC-002",
       "primary_keyword": "claude 3.5 sonnet artifacts guide",
@@ -35,29 +34,12 @@
     }
   },
   "generation_telemetry": {
-    "success": true,
-    "status": "ARTICLE_GENERATED",
+    "success": false,
+    "status": "GENERATION_FAILED",
     "generation_method": "GEMINI_API",
-    "is_gemini_generated": true,
-    "model_used": "models/gemini-flash-lite-latest",
-    "error": null
+    "is_gemini_generated": false,
+    "model_used": "models/gemini-flash-latest",
+    "error": "Gemini article generation failed: HTML validation failed: Missing standard HTML document root tags., Missing comparison table (<table>)., Missing localized PKR pricing."
   },
-  "evidence_verification": {
-    "verified": false,
-    "status": "EVIDENCE_UNAVAILABLE",
-    "evidence_file": null,
-    "verified_claims": [
-      "Product 'claude 3.5 sonnet artifacts guide' verified in registry as 'Claude Artifacts'."
-    ],
-    "rejected_claims": [
-      "Price claim for 'Claude Artifacts' missing expected Rs. 1,200 PKR.",
-      "General claims lack primary documentation citations."
-    ],
-    "errors": [
-      "Missing or contradicted price for 'Claude Artifacts': expected Rs. 1,200 PKR in article.",
-      "Missing traceable primary vendor documentation or official pricing source citations."
-    ],
-    "evidence_record": null
-  },
-  "explanation": "Evidence verification failed: Missing or contradicted price for 'Claude Artifacts': expected Rs. 1,200 PKR in article.; Missing traceable primary vendor documentation or official pricing source citations."
+  "explanation": "Article generation halted: Gemini article generation failed: HTML validation failed: Missing standard HTML document root tags., Missing comparison table (<table>)., Missing localized PKR pricing.. CRITICAL INVARIANT: Heuristic fallback content must never publish to production."
 }
