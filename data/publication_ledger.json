@@ -2,7 +2,7 @@
   "ledger_version": "1.0.0",
   "business_timezone": "PKT (UTC+5)",
   "min_cadence_hours": 48.0,
-  "last_updated_pkt": "2026-11-08 22:25:00 PKT",
+  "last_updated_pkt": "2026-11-11 11:45:00 PKT",
   "publications": [
     {
       "article_id": "ART-001",
@@ -113,6 +113,22 @@
       "published_at_pkt": "2026-11-08 22:25:00 PKT",
       "published_at_utc": "2026-11-08T17:25:00Z",
       "git_commit_hash": "6d22cbe",
+      "quality_gate_passed": true,
+      "status": "PUBLISHED"
+    },
+    {
+      "article_id": "ART-008",
+      "slug": "claude-artifacts-practical-guide-freelancers",
+      "title": "Claude 3.5 Sonnet Artifacts Guide (2026)",
+      "canonical_url": "https://aidigitools.tech/blog/claude-artifacts-practical-guide-freelancers.html",
+      "relative_url": "blog/claude-artifacts-practical-guide-freelancers.html",
+      "cluster_slug": "ai-coding-and-development",
+      "article_type": "guide",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "claude 3.5 sonnet artifacts guide",
+      "published_at_pkt": "2026-11-11 11:45:00 PKT",
+      "published_at_utc": "2026-11-11T06:45:00Z",
+      "git_commit_hash": "uncommitted_local",
       "quality_gate_passed": true,
       "status": "PUBLISHED"
     }

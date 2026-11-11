@@ -74,6 +74,7 @@
 - [ChatGPT vs Claude Guide](https://aidigitools.tech/guides/chatgpt-vs-claude.html): Detailed comparison of ChatGPT Plus (Rs. 2,300 PKR / $8 USD) vs Claude Pro (Rs. 2,500 PKR / $9 USD) in Pakistan &amp; globally with 15-min delivery.
 - [cursor ai vs github copilot (2026 Guide & Pricing) - AIDigiTools](https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html): Detailed technical comparison of cursor ai vs github copilot. Explore codebase indexing, features, and local PKR pricing via AIDigiTools.
 - [DeepSeek R1 vs ChatGPT Plus vs Claude Pro (2026)](https://aidigitools.tech/blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html): DeepSeek R1 vs ChatGPT Plus vs Claude Pro 2026 benchmark. Compare reasoning, coding limits, and verified PKR pricing with EasyPaisa & JazzCash via AIDigiTools.
+- [Claude 3.5 Sonnet Artifacts Guide (2026)](https://aidigitools.tech/blog/claude-artifacts-practical-guide-freelancers.html): Practical guide to Claude 3.5 Sonnet Artifacts for web design, React prototypes, and SVG rendering with verified PKR pricing via AIDigiTools.
 
 ## Operational Rails & Corporate Identity
 - [About Company](https://aidigitools.tech/about.html): Founding mission, digital concierge model, and customer support standards.
