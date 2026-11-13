@@ -1,5 +1,5 @@
 {
-  "executed_at_pkt": "2026-11-12 09:47:26 PKT",
+  "executed_at_pkt": "2026-11-13 09:47:32 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK"
   ],
@@ -8,20 +8,20 @@
   "published": false,
   "preview_created": false,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-12 09:47:26 PKT",
+    "check_timestamp_pkt": "2026-11-13 09:47:32 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
       "passed": false,
-      "elapsed_hours": 22.04,
-      "message": "Cadence lock active: Only 22.0 hours have elapsed since the last publication ('Claude 3.5 Sonnet Artifacts Guide (2026)' on 2026-11-11 11:45:00 PKT). Minimum 48.0 hours required to prevent publishing fatigue and maintain high quality.",
+      "elapsed_hours": 3.54,
+      "message": "Cadence lock active: Only 3.5 hours have elapsed since the last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)' on 2026-11-13 06:15:00 PKT). Minimum 20.0 hours required to prevent publishing fatigue and maintain high quality.",
       "bypassed": false
     },
     "budget_status": {},
     "evaluated_candidates_count": 0,
     "decision": "SKIP",
     "reason_code": "CADENCE_LOCK_ACTIVE",
-    "explanation": "Cadence lock active: Only 22.0 hours have elapsed since the last publication ('Claude 3.5 Sonnet Artifacts Guide (2026)' on 2026-11-11 11:45:00 PKT). Minimum 48.0 hours required to prevent publishing fatigue and maintain high quality.",
+    "explanation": "Cadence lock active: Only 3.5 hours have elapsed since the last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)' on 2026-11-13 06:15:00 PKT). Minimum 20.0 hours required to prevent publishing fatigue and maintain high quality.",
     "selected_topic": null
   },
-  "explanation": "Cadence lock active: Only 22.0 hours have elapsed since the last publication ('Claude 3.5 Sonnet Artifacts Guide (2026)' on 2026-11-11 11:45:00 PKT). Minimum 48.0 hours required to prevent publishing fatigue and maintain high quality."
+  "explanation": "Cadence lock active: Only 3.5 hours have elapsed since the last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)' on 2026-11-13 06:15:00 PKT). Minimum 20.0 hours required to prevent publishing fatigue and maintain high quality."
 }
