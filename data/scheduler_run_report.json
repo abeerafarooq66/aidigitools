@@ -1,5 +1,5 @@
 {
-  "executed_at_pkt": "2026-11-13 09:47:32 PKT",
+  "executed_at_pkt": "2026-11-14 09:42:08 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK"
   ],
@@ -8,20 +8,23 @@
   "published": false,
   "preview_created": false,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-13 09:47:32 PKT",
+    "check_timestamp_pkt": "2026-11-14 09:42:08 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
-      "passed": false,
-      "elapsed_hours": 3.54,
-      "message": "Cadence lock active: Only 3.5 hours have elapsed since the last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)' on 2026-11-13 06:15:00 PKT). Minimum 20.0 hours required to prevent publishing fatigue and maintain high quality.",
+      "passed": true,
+      "elapsed_hours": 27.45,
+      "message": "Cadence gate cleared: 27.5 hours have elapsed since last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)'), satisfying the 20.0h minimum requirement.",
       "bypassed": false
     },
-    "budget_status": {},
-    "evaluated_candidates_count": 0,
+    "budget_status": {
+      "exceeded": false,
+      "message": "Within budget: $0.00 spent of $50.00 cap."
+    },
+    "evaluated_candidates_count": 4,
     "decision": "SKIP",
-    "reason_code": "CADENCE_LOCK_ACTIVE",
-    "explanation": "Cadence lock active: Only 3.5 hours have elapsed since the last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)' on 2026-11-13 06:15:00 PKT). Minimum 20.0 hours required to prevent publishing fatigue and maintain high quality.",
+    "reason_code": "NO_QUALIFYING_TOPIC",
+    "explanation": "No un-published candidate topics met the opportunity score threshold (>= 85/100). Per Part 17 of the Master Architecture Charter: If no topic qualifies, do not publish filler content.",
     "selected_topic": null
   },
-  "explanation": "Cadence lock active: Only 3.5 hours have elapsed since the last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)' on 2026-11-13 06:15:00 PKT). Minimum 20.0 hours required to prevent publishing fatigue and maintain high quality."
+  "explanation": "No un-published candidate topics met the opportunity score threshold (>= 85/100). Per Part 17 of the Master Architecture Charter: If no topic qualifies, do not publish filler content."
 }
