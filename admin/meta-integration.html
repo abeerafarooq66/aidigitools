@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Commerce & WhatsApp Catalog Integration Dashboard | AIDigiTools</title>
+  <meta name="description" content="Central Meta Commerce Manager, Facebook Page Shop, and WhatsApp Business Catalog integration monitoring dashboard for AIDigiTools.">
+  <link rel="canonical" href="https://aidigitools.tech/admin/meta-integration.html">
+  <link rel="stylesheet" href="../assets/style.css?v=2.6">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <style>
+    .admin-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .status-badge-live {
+      background: #e6f4ea;
+      color: #137333;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .status-badge-live::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: #137333;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .status-badge-held {
+      background: #fef7e0;
+      color: #b06000;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+    .admin-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 22px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .admin-card h3 {
+      font-size: 0.95rem;
+      color: #5f6368;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .admin-card .stat-val {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #1a73e8;
+      margin-bottom: 4px;
+    }
+    .admin-card .stat-sub {
+      font-size: 0.85rem;
+      color: #70757a;
+    }
+    .channel-box {
+      background: #f8f9fa;
+      border-left: 4px solid #1a73e8;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+    }
+    .sync-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .sync-table th, .sync-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #f1f3f4;
+      font-size: 0.9rem;
+    }
+    .sync-table th {
+      background: #f8f9fa;
+      font-weight: 600;
+      color: #3c4043;
+    }
+    .sync-table tr:hover {
+      background: #f8fafd;
+    }
+    .code-pill {
+      background: #f1f3f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.85rem;
+    }
+    .search-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px 14px;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header style="background: #ffffff; border-bottom: 1px solid #e5e7eb; padding: 15px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="../index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111827; font-weight: 700; font-size: 1.2rem;">
+        <img src="../assets/images/logo.png" alt="AIDigiTools Logo" width="34" height="34" style="border-radius: 6px;">
+        <span>AIDigiTools</span>
+      </a>
+      <nav style="display: flex; gap: 20px; align-items: center;">
+        <a href="../index.html" style="text-decoration: none; color: #4b5563; font-weight: 500;">Catalog</a>
+        <a href="../contact.html" style="text-decoration: none; color: #4b5563; font-weight: 500;">Support</a>
+        <span class="status-badge-live">Meta Catalog Synced</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;">
+      <div>
+        <h1 style="font-size: 1.8rem; margin: 0 0 8px 0; color: #111827;">Meta Commerce &amp; WhatsApp Catalog Integration</h1>
+        <p style="margin: 0; color: #6b7280; font-size: 0.95rem;">Central product catalog synchronization monitoring across Meta Commerce Manager, Facebook Page Shop, and WhatsApp Business.</p>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <a href="../meta-product-feed.xml" target="_blank" class="btn" style="background: #1a73e8; color: #fff; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">View XML Feed</a>
+        <a href="https://business.facebook.com/commerce/catalogs/1506481487988317/overview/?business_id=1102487612616447" target="_blank" class="btn" style="background: #f3f4f6; color: #374151; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 1px solid #d1d5db;">Open Commerce Manager</a>
+      </div>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Total Registered Products</h3>
+        <div class="stat-val" id="total-count">49</div>
+        <div class="stat-sub">Central database: <code>products_master.json</code></div>
+      </div>
+      <div class="admin-card">
+        <h3>In-Stock &amp; Transactional</h3>
+        <div class="stat-val" style="color: #137333;" id="instock-count">42</div>
+        <div class="stat-sub">Active direct 15m WhatsApp delivery</div>
+      </div>
+      <div class="admin-card">
+        <h3>Policy-Held (Inquiry Only)</h3>
+        <div class="stat-val" style="color: #b06000;" id="held-count">7</div>
+        <div class="stat-sub">Marked <code>out_of_stock</code> for compliance</div>
+      </div>
+      <div class="admin-card">
+        <h3>Feed Last Generated</h3>
+        <div class="stat-val" style="font-size: 1.25rem; color: #202124;" id="last-sync-time">Live Parity</div>
+        <div class="stat-sub">Validated RSS 2.0 / Google Merchant spec</div>
+      </div>
+    </div>
+
+    <!-- Multi-Channel Connection Summary -->
+    <div class="channel-box">
+      <h2 style="font-size: 1.1rem; margin: 0 0 10px 0; color: #1a73e8;">Multi-Platform Synchronization Topology</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; font-size: 0.9rem;">
+        <div>
+          <strong>Meta Business Portfolio:</strong><br>
+          <span class="code-pill">Abeera Farooq (ID: 1102487612616447)</span>
+        </div>
+        <div>
+          <strong>Meta Commerce Catalog:</strong><br>
+          <span class="code-pill">AIDigiTools Products (ID: 1506481487988317)</span>
+        </div>
+        <div>
+          <strong>Facebook Business Page:</strong><br>
+          <span class="code-pill">AIDigiTools (ID: 61592819154317)</span>
+        </div>
+        <div>
+          <strong>WhatsApp Business Desk:</strong><br>
+          <span class="code-pill">+92 332 6861112 (Connected Portfolio)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feed URLs Box -->
+    <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 18px; margin: 25px 0;">
+      <h3 style="margin-top: 0; font-size: 1rem; color: #111827;">Dedicated Public Feed Endpoints</h3>
+      <div style="margin-bottom: 12px;">
+        <label style="display: block; font-weight: 600; font-size: 0.85rem; color: #4b5563; margin-bottom: 4px;">Primary Meta Commerce Manager Data Feed (Auto-Scheduled Fetch):</label>
+        <input type="text" readonly value="https://aidigitools.tech/meta-product-feed.xml" style="width: 100%; padding: 8px 12px; background: #f9fafb; border: 1px solid #d1d5db; border-radius: 6px; font-family: monospace; font-size: 0.9rem;">
+      </div>
+      <div>
+        <label style="display: block; font-weight: 600; font-size: 0.85rem; color: #4b5563; margin-bottom: 4px;">Google Merchant Center &amp; Fallback Catalog Feed:</label>
+        <input type="text" readonly value="https://aidigitools.tech/merchant_feed.xml" style="width: 100%; padding: 8px 12px; background: #f9fafb; border: 1px solid #d1d5db; border-radius: 6px; font-family: monospace; font-size: 0.9rem;">
+      </div>
+    </div>
+
+    <!-- Product Registry Table -->
+    <div style="margin-top: 35px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <h2 style="font-size: 1.25rem; margin: 0; color: #111827;">Synchronized Catalog Items (49 Products)</h2>
+        <input type="text" id="catalog-search" class="search-input" placeholder="Search by name, brand, or SKU..." oninput="filterCatalog()">
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="sync-table" id="product-table">
+          <thead>
+            <tr>
+              <th>Item ID</th>
+              <th>Product Name</th>
+              <th>Brand</th>
+              <th>Price (PKR)</th>
+              <th>Feed Status</th>
+              <th>Policy Classification</th>
+              <th>Product Landing Page</th>
+            </tr>
+          </thead>
+          <tbody id="catalog-rows">
+            <!-- Dynamic rows populated via inline script -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Compliance & Operational Invariants -->
+    <div style="margin-top: 40px; padding: 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.88rem; color: #475569;">
+      <strong>Meta Commerce &amp; WhatsApp Policy Compliance Notice:</strong>
+      <p style="margin: 8px 0 0 0;">
+        AIDigiTools strictly operates as an independent subscription concierge and digital marketplace. Zero prohibited account-sharing terminology ("shared slot", "cracked", "profile PIN") is permitted across any product listing. The 7 policy-held products (Turnitin, Netflix, Spotify, LinkedIn, Coursera, Claude Artifacts, DeepSeek Platform) are programmatically designated as <code>out_of_stock</code> within the Meta XML feed and routed solely via non-transactional informational inquiries.
+      </p>
+    </div>
+  </main>
+
+  <!-- Dynamic Catalog Loader -->
+  <script>
+    const catalogData = [
+      {"id":"PROD-001","slug":"adobe-creative-cloud","name":"Adobe Creative Cloud All Apps","brand":"Adobe","pkr":1400,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-002","slug":"canva-pro","name":"Canva Pro","brand":"Canva","pkr":600,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-003","slug":"capcut-pro","name":"CapCut Pro","brand":"ByteDance","pkr":950,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-004","slug":"chatgpt-codex","name":"ChatGPT Codex Coding Assistant","brand":"OpenAI","pkr":2100,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-005","slug":"chatgpt-plus","name":"ChatGPT Plus","brand":"OpenAI","pkr":2300,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-006","slug":"claude-artifacts","name":"Claude Artifacts Workspace","brand":"Anthropic","pkr":2500,"status":"out_of_stock","policy":"Inquiry Only (Feature Layer)"},
+      {"id":"PROD-007","slug":"claude-pro","name":"Claude Pro","brand":"Anthropic","pkr":2500,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-008","slug":"coursera-plus","name":"Coursera Plus","brand":"Coursera","pkr":2200,"status":"out_of_stock","policy":"Inquiry Only (Held Product)"},
+      {"id":"PROD-009","slug":"cursor-pro","name":"Cursor Pro AI Code Editor","brand":"Anysphere","pkr":3800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-010","slug":"deepseek-pro","name":"DeepSeek Platform Reasoning","brand":"DeepSeek","pkr":1500,"status":"out_of_stock","policy":"Inquiry Only (API Platform)"},
+      {"id":"PROD-011","slug":"elevenlabs-creator","name":"ElevenLabs Creator AI Voice","brand":"ElevenLabs","pkr":2200,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-012","slug":"envato-elements","name":"Envato Elements Unlimited","brand":"Envato","pkr":2600,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-013","slug":"figma-pro","name":"Figma Professional","brand":"Figma","pkr":2800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-014","slug":"freepik-premium","name":"Freepik Premium","brand":"Freepik","pkr":1400,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-015","slug":"gamma-app","name":"Gamma App Pro AI Presentations","brand":"Gamma","pkr":1600,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-016","slug":"gemini-advanced","name":"Gemini Advanced (Google One AI Premium)","brand":"Google","pkr":1800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-017","slug":"github-copilot","name":"GitHub Copilot Individual","brand":"GitHub","pkr":1700,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-018","slug":"google-ai-ultra","name":"Google AI Ultra Studio","brand":"Google DeepMind","pkr":2400,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-019","slug":"google-veo","name":"Google Veo 3.1 AI Video","brand":"Google DeepMind","pkr":1900,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-020","slug":"grammarly-pro","name":"Grammarly Premium","brand":"Grammarly","pkr":750,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-021","slug":"grok-ai","name":"Grok AI (X Premium+)","brand":"xAI","pkr":2400,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-022","slug":"heygen-ai","name":"HeyGen Creator AI Video","brand":"HeyGen","pkr":3200,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-023","slug":"jetbrains-all","name":"JetBrains All Products Pack","brand":"JetBrains","pkr":4200,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-024","slug":"kling-ai","name":"Kling AI Premier Video","brand":"Kuaishou","pkr":2100,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-025","slug":"leonardo-ai","name":"Leonardo AI Production Studio","brand":"Leonardo","pkr":1900,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-026","slug":"linkedin-premium","name":"LinkedIn Premium Career/Business","brand":"LinkedIn","pkr":2900,"status":"out_of_stock","policy":"Inquiry Only (Held Product)"},
+      {"id":"PROD-027","slug":"lovable-ai","name":"Lovable AI Builder","brand":"Lovable","pkr":3100,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-028","slug":"microsoft-office-365","name":"Microsoft 365 Family/Personal","brand":"Microsoft","pkr":1100,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-029","slug":"midjourney","name":"Midjourney Standard/Pro","brand":"Midjourney","pkr":2800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-030","slug":"minimax-ai","name":"MiniMax Hailuo AI Video","brand":"MiniMax","pkr":1900,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-031","slug":"n8n-automation","name":"n8n Automation Cloud/Self-Hosted","brand":"n8n","pkr":2400,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-032","slug":"netflix-premium","name":"Netflix Premium 4K UHD","brand":"Netflix","pkr":1200,"status":"out_of_stock","policy":"Inquiry Only (Held Product)"},
+      {"id":"PROD-033","slug":"nordvpn","name":"NordVPN Complete","brand":"Nord Security","pkr":1300,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-034","slug":"notion-business","name":"Notion Plus with AI","brand":"Notion Labs","pkr":1600,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-035","slug":"perplexity-pro","name":"Perplexity Pro","brand":"Perplexity AI","pkr":2200,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-036","slug":"prime-video","name":"Amazon Prime Video","brand":"Amazon","pkr":800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-037","slug":"quillbot-premium","name":"QuillBot Premium","brand":"Learneo","pkr":700,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-038","slug":"replit-core","name":"Replit Core & Agent","brand":"Replit","pkr":2600,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-039","slug":"runway-gen3","name":"Runway Gen-3 Alpha","brand":"Runway AI","pkr":2500,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-040","slug":"semrush-guru","name":"Semrush Guru SEO Suite","brand":"Semrush","pkr":3900,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-041","slug":"spotify-premium","name":"Spotify Premium Individual","brand":"Spotify","pkr":650,"status":"out_of_stock","policy":"Inquiry Only (Held Product)"},
+      {"id":"PROD-042","slug":"suno-ai","name":"Suno AI Music Creator","brand":"Suno","pkr":1800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-043","slug":"surfshark-vpn","name":"Surfshark VPN One","brand":"Surfshark","pkr":1100,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-044","slug":"tradingview-pro","name":"TradingView Essential","brand":"TradingView","pkr":3200,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-045","slug":"turnitin-student","name":"Turnitin Student Originality","brand":"Turnitin","pkr":1800,"status":"out_of_stock","policy":"Inquiry Only (Held Product)"},
+      {"id":"PROD-046","slug":"udio-ai","name":"Udio AI Music Producer","brand":"Udio","pkr":1800,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-047","slug":"vidiq-boost","name":"vidIQ Boost YouTube Suite","brand":"vidIQ","pkr":1500,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-048","slug":"windows-11-pro","name":"Windows 11 Pro Genuine OEM","brand":"Microsoft","pkr":1900,"status":"in_stock","policy":"Active Software Concierge"},
+      {"id":"PROD-049","slug":"youtube-premium","name":"YouTube Premium Individual","brand":"Google","pkr":750,"status":"in_stock","policy":"Active Software Concierge"}
+    ];
+
+    function renderTable(items) {
+      const tbody = document.getElementById('catalog-rows');
+      tbody.innerHTML = '';
+      items.forEach(item => {
+        const tr = document.createElement('tr');
+        const badgeClass = item.status === 'in_stock' ? 'status-badge-live' : 'status-badge-held';
+        const badgeText = item.status === 'in_stock' ? 'In Stock (Live)' : 'Out of Stock (Held)';
+        tr.innerHTML = `
+          <td><span class="code-pill">aidigitools-${item.slug}</span></td>
+          <td><strong>${item.name}</strong></td>
+          <td>${item.brand}</td>
+          <td>${item.pkr.toLocaleString()} PKR</td>
+          <td><span class="${badgeClass}">${badgeText}</span></td>
+          <td>${item.policy}</td>
+          <td><a href="../tools/${item.slug}.html" target="_blank" style="color: #1a73e8; text-decoration: none; font-weight: 500;">/tools/${item.slug}.html &nearr;</a></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function filterCatalog() {
+      const q = document.getElementById('catalog-search').value.toLowerCase().trim();
+      const filtered = catalogData.filter(item => 
+        item.name.toLowerCase().includes(q) ||
+        item.brand.toLowerCase().includes(q) ||
+        item.slug.toLowerCase().includes(q) ||
+        item.id.toLowerCase().includes(q)
+      );
+      renderTable(filtered);
+    }
+
+    // Initial render
+    renderTable(catalogData);
+  </script>
+</body>
+</html>

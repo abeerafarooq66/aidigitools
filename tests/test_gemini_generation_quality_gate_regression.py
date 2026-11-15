@@ -325,7 +325,16 @@ class TestGeminiGenerationQualityGateRegression(unittest.TestCase):
             "html_draft": None
         }
 
-        with patch("agent.gemini_generator.GeminiArticleGenerator", return_value=mock_generator_instance):
+        mock_research = {
+            "decision": "TOPIC_SELECTED",
+            "selected_topic": {
+                "topic_id": "test-mock-topic",
+                "primary_keyword": "Test Topic",
+                "target_canonical_path": "blog/test-mock-topic.html"
+            }
+        }
+        with patch("agent.gemini_generator.GeminiArticleGenerator", return_value=mock_generator_instance), \
+             patch.object(self.scheduler, "evaluate_daily_research_check", return_value=mock_research):
             result = self.scheduler.execute_full_content_pipeline(force_cadence=True)
             self.assertEqual(result["pipeline_status"], "GENERATION_FAILED")
             self.assertFalse(result["article_generated"])
