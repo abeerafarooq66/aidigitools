@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
-    <title>AIDigiTools — Meta Commerce &amp; WhatsApp Business Catalog</title>
+    <title>AIDigiTools — Verified AI Software &amp; Digital Subscriptions</title>
     <link>https://aidigitools.tech</link>
-    <description>Verified AI software and digital subscription concierge marketplace serving Pakistan and worldwide with 30-day warranty, 15-minute digital delivery, and verified payment rails.</description>
-    <lastBuildDate>Sun, 15 Nov 2026 19:22:30 GMT</lastBuildDate>
+    <description>Verified AI software and digital subscriptions marketplace serving Pakistan and worldwide with 30-day warranty, 15-minute digital delivery, and domestic &amp; international rails.</description>
 
     <item>
       <g:id>aidigitools-adobe-creative-cloud</g:id>
-      <g:title>Adobe Adobe Creative Cloud All Apps Subscription — 1 Month Access</g:title>
-      <g:description>Buy Adobe Creative Cloud All Apps in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Photoshop; Illustrator; Premiere Pro</g:description>
+      <g:title>Adobe Creative Cloud Plan in Pakistan</g:title>
+      <g:description>Adobe Creative Cloud official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/adobe-creative-cloud.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/adobe-creative-cloud.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/adobe-creative-cloud.png</g:image_link>
       <g:price>1400 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Adobe</g:brand>
@@ -48,10 +47,10 @@
 
     <item>
       <g:id>aidigitools-canva-pro</g:id>
-      <g:title>Canva Canva Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Canva Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited premium templates; 100M+ stock assets; One-click background remover</g:description>
+      <g:title>Canva Pro Plan in Pakistan</g:title>
+      <g:description>Canva Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/canva-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/canva-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/canva-pro.png</g:image_link>
       <g:price>600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Canva</g:brand>
@@ -88,10 +87,10 @@
 
     <item>
       <g:id>aidigitools-capcut-pro</g:id>
-      <g:title>ByteDance CapCut Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy CapCut Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Auto captions in 30+ languages; AI portrait cutout; 4K 60fps high-bitrate exports</g:description>
+      <g:title>CapCut Pro Plan in Pakistan</g:title>
+      <g:description>CapCut Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/capcut-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/capcut-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/capcut-pro.png</g:image_link>
       <g:price>950 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>ByteDance</g:brand>
@@ -128,10 +127,10 @@
 
     <item>
       <g:id>aidigitools-chatgpt-codex</g:id>
-      <g:title>OpenAI OpenAI Codex Subscription — 1 Month Access</g:title>
-      <g:description>Buy OpenAI Codex in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Full API key access; Custom GPT Assistants API; Function calling &amp; JSON mode</g:description>
+      <g:title>OpenAI Codex Plan in Pakistan</g:title>
+      <g:description>OpenAI Codex official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/chatgpt-codex.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/chatgpt-codex.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/chatgpt-codex.png</g:image_link>
       <g:price>600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>OpenAI</g:brand>
@@ -168,10 +167,10 @@
 
     <item>
       <g:id>aidigitools-chatgpt-plus</g:id>
-      <g:title>OpenAI ChatGPT Plus Subscription — 1 Month Access</g:title>
-      <g:description>Buy ChatGPT Plus in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Frontier GPT-5/GPT-6 access with high messaging caps; Advanced Voice Mode with real-time inflection; Custom GPTs creation &amp; browse</g:description>
+      <g:title>ChatGPT Plus Plan in Pakistan</g:title>
+      <g:description>ChatGPT Plus official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/chatgpt-plus.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/chatgpt-plus.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/chatgpt-plus.png</g:image_link>
       <g:price>2300 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>OpenAI</g:brand>
@@ -208,12 +207,12 @@
 
     <item>
       <g:id>aidigitools-claude-artifacts</g:id>
-      <g:title>Anthropic Claude Artifacts Subscription — 1 Month Access</g:title>
-      <g:description>Buy Claude Artifacts in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Interactive React and SVG live rendering; Standalone modular code export; Multi-file project workspaces</g:description>
+      <g:title>Claude Artifacts Plan in Pakistan</g:title>
+      <g:description>Claude Artifacts official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/claude-artifacts.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/claude-artifacts.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/claude-artifacts.png</g:image_link>
       <g:price>1200 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>Anthropic</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -248,10 +247,10 @@
 
     <item>
       <g:id>aidigitools-claude-pro</g:id>
-      <g:title>Anthropic Claude Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Claude Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 5x usage limits vs free tier; Claude Sonnet 5.5 priority access (with Claude 3.5 support); Artifacts live preview window</g:description>
+      <g:title>Claude Pro Plan in Pakistan</g:title>
+      <g:description>Claude Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/claude-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/claude-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/claude-pro.png</g:image_link>
       <g:price>2500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Anthropic</g:brand>
@@ -288,12 +287,12 @@
 
     <item>
       <g:id>aidigitools-coursera-plus</g:id>
-      <g:title>Coursera Coursera Plus Subscription — 1 Month Access</g:title>
-      <g:description>Buy Coursera Plus in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 7,000+ courses and specializations; Unlimited verified certificates; Professional certificates from Google, IBM, Meta</g:description>
+      <g:title>Coursera Plus Plan in Pakistan</g:title>
+      <g:description>Coursera Plus official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/coursera-plus.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/coursera-plus.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/coursera-plus.png</g:image_link>
       <g:price>2200 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>Coursera</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -328,10 +327,10 @@
 
     <item>
       <g:id>aidigitools-cursor-pro</g:id>
-      <g:title>Anysphere Cursor Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Cursor Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 500 fast frontier model requests per month; Unlimited slow requests; Cursor Tab multi-line copilot autocompletion</g:description>
+      <g:title>Cursor Pro Plan in Pakistan</g:title>
+      <g:description>Cursor Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/cursor-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/cursor-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/cursor-pro.png</g:image_link>
       <g:price>3800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Anysphere</g:brand>
@@ -368,12 +367,12 @@
 
     <item>
       <g:id>aidigitools-deepseek-pro</g:id>
-      <g:title>DeepSeek AI DeepSeek Platform Subscription — 1 Month Access</g:title>
-      <g:description>Buy DeepSeek Platform in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: DeepSeek-V3 671B MoE architecture; DeepSeek-R1 mathematical &amp; reasoning mode; 128K context window support</g:description>
+      <g:title>DeepSeek Platform Plan in Pakistan</g:title>
+      <g:description>DeepSeek Platform official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/deepseek-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/deepseek-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/deepseek-pro.png</g:image_link>
       <g:price>1100 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>DeepSeek AI</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -408,10 +407,10 @@
 
     <item>
       <g:id>aidigitools-elevenlabs-creator</g:id>
-      <g:title>ElevenLabs ElevenLabs Creator Subscription — 1 Month Access</g:title>
-      <g:description>Buy ElevenLabs Creator in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 100,000 characters per month (~2 hours audio); Professional voice cloning with 30-min sample training; Commercial rights on generated audio</g:description>
+      <g:title>ElevenLabs Creator Plan in Pakistan</g:title>
+      <g:description>ElevenLabs Creator official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/elevenlabs-creator.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/elevenlabs-creator.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/elevenlabs-creator.png</g:image_link>
       <g:price>2800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>ElevenLabs</g:brand>
@@ -448,10 +447,10 @@
 
     <item>
       <g:id>aidigitools-envato-elements</g:id>
-      <g:title>Envato Envato Elements Subscription — 1 Month Access</g:title>
-      <g:description>Buy Envato Elements in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited asset downloads; 15M+ graphic templates, stock footage &amp; audio; WordPress themes &amp; plugins</g:description>
+      <g:title>Envato Elements Plan in Pakistan</g:title>
+      <g:description>Envato Elements official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/envato-elements.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/envato-elements.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/envato-elements.png</g:image_link>
       <g:price>2600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Envato</g:brand>
@@ -488,10 +487,10 @@
 
     <item>
       <g:id>aidigitools-figma-pro</g:id>
-      <g:title>Figma Figma Professional Subscription — 1 Month Access</g:title>
-      <g:description>Buy Figma Professional in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited Figma files and version history; Shared team component libraries; Figma AI first-draft generator</g:description>
+      <g:title>Figma Professional Plan in Pakistan</g:title>
+      <g:description>Figma Professional official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/figma-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/figma-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/figma-pro.png</g:image_link>
       <g:price>1800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Figma</g:brand>
@@ -528,10 +527,10 @@
 
     <item>
       <g:id>aidigitools-freepik-premium</g:id>
-      <g:title>Freepik Freepik Premium Subscription — 1 Month Access</g:title>
-      <g:description>Buy Freepik Premium in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 100 downloads per day of premium vectors &amp; PSDs; Full commercial attribution-free license; Freepik Mystic high-detail AI generation</g:description>
+      <g:title>Freepik Premium Plan in Pakistan</g:title>
+      <g:description>Freepik Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/freepik-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/freepik-premium.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/freepik-premium.png</g:image_link>
       <g:price>1800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Freepik</g:brand>
@@ -568,10 +567,10 @@
 
     <item>
       <g:id>aidigitools-gamma-app</g:id>
-      <g:title>Gamma Gamma Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Gamma Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited AI deck and document generations; Custom fonts and company branding themes; Interactive web embed components</g:description>
+      <g:title>Gamma Pro Plan in Pakistan</g:title>
+      <g:description>Gamma Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/gamma-app.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/gamma-app.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/gamma-app.png</g:image_link>
       <g:price>1600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Gamma</g:brand>
@@ -608,10 +607,10 @@
 
     <item>
       <g:id>aidigitools-gemini-advanced</g:id>
-      <g:title>Google Google AI Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Google AI Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Gemini 1.5 Pro with 1M-2M token context window; Native multimodal video, audio and text upload; Google Workspace integration (Docs, Gmail, Sheets)</g:description>
+      <g:title>Google AI Pro Plan in Pakistan</g:title>
+      <g:description>Google AI Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/gemini-advanced.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/gemini-advanced.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/gemini-advanced.png</g:image_link>
       <g:price>1200 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Google</g:brand>
@@ -648,10 +647,10 @@
 
     <item>
       <g:id>aidigitools-github-copilot</g:id>
-      <g:title>GitHub GitHub Copilot Individual Subscription — 1 Month Access</g:title>
-      <g:description>Buy GitHub Copilot Individual in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Real-time in-line code autocompletion; Copilot Chat in VS Code and JetBrains; Multi-model switcher (Claude Sonnet 5.5, GPT-5/4o, Gemini)</g:description>
+      <g:title>GitHub Copilot Plan in Pakistan</g:title>
+      <g:description>GitHub Copilot official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/github-copilot.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/github-copilot.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/github-copilot.png</g:image_link>
       <g:price>1500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>GitHub</g:brand>
@@ -688,10 +687,10 @@
 
     <item>
       <g:id>aidigitools-google-ai-ultra</g:id>
-      <g:title>Google Google AI Ultra Subscription — 1 Month Access</g:title>
-      <g:description>Buy Google AI Ultra in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 20X rate limits over standard Gemini tiers; Massive 2M token context window processing; Dedicated compute reservation</g:description>
+      <g:title>Google AI Ultra Plan in Pakistan</g:title>
+      <g:description>Google AI Ultra official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/google-ai-ultra.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/google-ai-ultra.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/google-ai-ultra.png</g:image_link>
       <g:price>4500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Google</g:brand>
@@ -728,10 +727,10 @@
 
     <item>
       <g:id>aidigitools-google-veo</g:id>
-      <g:title>Google DeepMind Google Veo 3.1 Subscription — 1 Month Access</g:title>
-      <g:description>Buy Google Veo 3.1 in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 1080p photorealistic cinematic generation; Precise camera controls (pan, zoom, orbit); Physics-based object consistency</g:description>
+      <g:title>Google Veo 3.1 Plan in Pakistan</g:title>
+      <g:description>Google Veo 3.1 official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/google-veo.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/google-veo.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/google-veo.png</g:image_link>
       <g:price>1900 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Google DeepMind</g:brand>
@@ -768,10 +767,10 @@
 
     <item>
       <g:id>aidigitools-grammarly-pro</g:id>
-      <g:title>Grammarly Grammarly Premium Subscription — 1 Month Access</g:title>
-      <g:description>Buy Grammarly Premium in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Full sentence rewrites &amp; clarity suggestions; Academic plagiarism checker against billions of pages; Tone and formality adjustment</g:description>
+      <g:title>Grammarly Premium Plan in Pakistan</g:title>
+      <g:description>Grammarly Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/grammarly-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/grammarly-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/grammarly-pro.png</g:image_link>
       <g:price>750 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Grammarly</g:brand>
@@ -808,10 +807,10 @@
 
     <item>
       <g:id>aidigitools-grok-ai</g:id>
-      <g:title>xAI xAI Grok Subscription — 1 Month Access</g:title>
-      <g:description>Buy xAI Grok in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Real-time X platform live news search grounding; Flux.1 high-detail unfiltered image generation; Grok 3 frontier reasoning and coding capabilities</g:description>
+      <g:title>xAI Grok Plan in Pakistan</g:title>
+      <g:description>xAI Grok official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/grok-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/grok-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/grok-ai.png</g:image_link>
       <g:price>1100 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>xAI</g:brand>
@@ -848,10 +847,10 @@
 
     <item>
       <g:id>aidigitools-heygen-ai</g:id>
-      <g:title>HeyGen HeyGen Creator Subscription — 1 Month Access</g:title>
-      <g:description>Buy HeyGen Creator in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 15 video credits per month (~15 minutes of avatar video); 100+ realistic photorealistic studio avatars; Natural lip-sync in 175+ languages &amp; dialects</g:description>
+      <g:title>HeyGen Creator Plan in Pakistan</g:title>
+      <g:description>HeyGen Creator official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/heygen-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/heygen-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/heygen-ai.png</g:image_link>
       <g:price>4200 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>HeyGen</g:brand>
@@ -888,10 +887,10 @@
 
     <item>
       <g:id>aidigitools-jetbrains-all</g:id>
-      <g:title>JetBrains JetBrains All Products Pack Subscription — 1 Month Access</g:title>
-      <g:description>Buy JetBrains All Products Pack in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: IntelliJ IDEA Ultimate, PyCharm Pro, WebStorm, Rider, CLion; DataGrip, GoLand, PhpStorm, RubyMine included; JetBrains AI Assistant code suggestions</g:description>
+      <g:title>JetBrains All Products Plan in Pakistan</g:title>
+      <g:description>JetBrains All Products official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/jetbrains-all.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/jetbrains-all.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/jetbrains-all.png</g:image_link>
       <g:price>2500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>JetBrains</g:brand>
@@ -928,10 +927,10 @@
 
     <item>
       <g:id>aidigitools-kling-ai</g:id>
-      <g:title>Kuaishou Kling AI Kling AI Subscription — 1 Month Access</g:title>
-      <g:description>Buy Kling AI in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 660 credits per month with fast generation queue; Up to 10-second cinematic video generations; 1080p high definition output with accurate human anatomy</g:description>
+      <g:title>Kling AI Pro Plan in Pakistan</g:title>
+      <g:description>Kling AI Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/kling-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/kling-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/kling-ai.png</g:image_link>
       <g:price>700 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Kuaishou Kling AI</g:brand>
@@ -968,10 +967,10 @@
 
     <item>
       <g:id>aidigitools-leonardo-ai</g:id>
-      <g:title>Leonardo.Ai Leonardo.Ai Apprentice Subscription — 1 Month Access</g:title>
-      <g:description>Buy Leonardo.Ai Apprentice in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 8,500 fast tokens per month (~8,500 images); Commercial usage rights for game assets &amp; marketing; Realtime Canvas live generative sketching</g:description>
+      <g:title>Leonardo.Ai Apprentice Plan in Pakistan</g:title>
+      <g:description>Leonardo.Ai Apprentice official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/leonardo-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/leonardo-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/leonardo-ai.png</g:image_link>
       <g:price>1300 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Leonardo.Ai</g:brand>
@@ -1008,12 +1007,12 @@
 
     <item>
       <g:id>aidigitools-linkedin-premium</g:id>
-      <g:title>LinkedIn LinkedIn Premium Career Subscription — 1 Month Access</g:title>
-      <g:description>Buy LinkedIn Premium Career in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 5 InMail messages per month to reach hiring managers; See who viewed your profile in the past 90 days; Competitive applicant insights &amp; salary benchmarks</g:description>
+      <g:title>LinkedIn Premium Plan in Pakistan</g:title>
+      <g:description>LinkedIn Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/linkedin-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/linkedin-premium.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/linkedin-premium.png</g:image_link>
       <g:price>1500 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>LinkedIn</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -1048,10 +1047,10 @@
 
     <item>
       <g:id>aidigitools-lovable-ai</g:id>
-      <g:title>Lovable Lovable Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Lovable Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Text-to-full-stack React application generation; Automatic Supabase database integration &amp; authentication; GitHub bidirectional sync and pull request export</g:description>
+      <g:title>Lovable Pro Plan in Pakistan</g:title>
+      <g:description>Lovable Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/lovable-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/lovable-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/lovable-ai.png</g:image_link>
       <g:price>1500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Lovable</g:brand>
@@ -1088,10 +1087,10 @@
 
     <item>
       <g:id>aidigitools-microsoft-office-365</g:id>
-      <g:title>Microsoft Microsoft 365 Personal Subscription — 1 Month Access</g:title>
-      <g:description>Buy Microsoft 365 Personal in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Word, Excel, PowerPoint, Outlook, OneNote desktop apps; 1TB secure OneDrive cloud storage with ransomware protection; Copilot AI smart drafting and formula suggestions</g:description>
+      <g:title>Microsoft 365 Personal Plan in Pakistan</g:title>
+      <g:description>Microsoft 365 Personal official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/microsoft-office-365.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/microsoft-office-365.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/microsoft-office-365.png</g:image_link>
       <g:price>1950 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Microsoft</g:brand>
@@ -1128,10 +1127,10 @@
 
     <item>
       <g:id>aidigitools-midjourney</g:id>
-      <g:title>Midjourney Midjourney Subscription — 1 Month Access</g:title>
-      <g:description>Buy Midjourney in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 200 Fast GPU minutes (~200 high-res image generations); Commercial usage rights for marketing and merchandise; Access to member web gallery and showcase</g:description>
+      <g:title>Midjourney V8 Plan in Pakistan</g:title>
+      <g:description>Midjourney V8 official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/midjourney.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/midjourney.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/midjourney.png</g:image_link>
       <g:price>2800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Midjourney</g:brand>
@@ -1168,10 +1167,10 @@
 
     <item>
       <g:id>aidigitools-minimax-ai</g:id>
-      <g:title>MiniMax Hailuo AI Video Subscription — 1 Month Access</g:title>
-      <g:description>Buy Hailuo AI Video in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 720p/1080p high dynamic range motion video; Extreme physics accuracy (water, smoke, collisions); 6-second fast generation queue</g:description>
+      <g:title>Hailuo AI Video Plan in Pakistan</g:title>
+      <g:description>Hailuo AI Video official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/minimax-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/minimax-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/minimax-ai.png</g:image_link>
       <g:price>1600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>MiniMax</g:brand>
@@ -1208,10 +1207,10 @@
 
     <item>
       <g:id>aidigitools-n8n-automation</g:id>
-      <g:title>n8n n8n Cloud Starter Subscription — 1 Month Access</g:title>
-      <g:description>Buy n8n Cloud Starter in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 2,500 workflow executions per month; Unlimited active automation workflows; 400+ native app integrations &amp; HTTP node</g:description>
+      <g:title>n8n Cloud Starter Plan in Pakistan</g:title>
+      <g:description>n8n Cloud Starter official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/n8n-automation.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/n8n-automation.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/n8n-automation.png</g:image_link>
       <g:price>6500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>n8n</g:brand>
@@ -1248,12 +1247,12 @@
 
     <item>
       <g:id>aidigitools-netflix-premium</g:id>
-      <g:title>Netflix Netflix Premium Subscription — 1 Month Access</g:title>
-      <g:description>Buy Netflix Premium in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 4K Ultra HD and HDR video resolution; Dolby Atmos immersive spatial audio; Watch on 4 supported devices simultaneously</g:description>
+      <g:title>Netflix Premium Plan in Pakistan</g:title>
+      <g:description>Netflix Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/netflix-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/netflix-premium.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/netflix-premium.png</g:image_link>
       <g:price>1100 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>Netflix</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -1288,10 +1287,10 @@
 
     <item>
       <g:id>aidigitools-nordvpn</g:id>
-      <g:title>NordVPN NordVPN Standard Subscription — 1 Month Access</g:title>
-      <g:description>Buy NordVPN Standard in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 6,400+ ultra-fast servers across 111 countries; NordLynx wireguard proprietary high-speed protocol; Threat Protection ad, malware and tracker blocker</g:description>
+      <g:title>NordVPN Standard Plan in Pakistan</g:title>
+      <g:description>NordVPN Standard official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/nordvpn.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/nordvpn.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/nordvpn.png</g:image_link>
       <g:price>850 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>NordVPN</g:brand>
@@ -1328,10 +1327,10 @@
 
     <item>
       <g:id>aidigitools-notion-business</g:id>
-      <g:title>Notion Notion Plus with Notion AI Subscription — 1 Month Access</g:title>
-      <g:description>Buy Notion Plus with Notion AI in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited blocks and file uploads; Unlimited page version history up to 30 days; Notion AI Q&amp;A across entire workspace knowledge base</g:description>
+      <g:title>Notion Plus AI Plan in Pakistan</g:title>
+      <g:description>Notion Plus AI official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/notion-business.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/notion-business.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/notion-business.png</g:image_link>
       <g:price>1400 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Notion</g:brand>
@@ -1368,10 +1367,10 @@
 
     <item>
       <g:id>aidigitools-perplexity-pro</g:id>
-      <g:title>Perplexity AI Perplexity Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Perplexity Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 300+ Pro Searches per day with deep reasoning; Model switcher (Claude Sonnet 5.5, GPT-5/4o, Sonar); Unlimited file uploads (PDFs, CSVs, images)</g:description>
+      <g:title>Perplexity Pro Plan in Pakistan</g:title>
+      <g:description>Perplexity Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/perplexity-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/perplexity-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/perplexity-pro.png</g:image_link>
       <g:price>2200 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Perplexity AI</g:brand>
@@ -1408,10 +1407,10 @@
 
     <item>
       <g:id>aidigitools-prime-video</g:id>
-      <g:title>Amazon Amazon Prime Video Subscription — 1 Month Access</g:title>
-      <g:description>Buy Amazon Prime Video in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Access to exclusive Amazon Originals and live sports; 4K Ultra HD with HDR and X-Ray cast information; Download to mobile device for offline watching</g:description>
+      <g:title>Amazon Prime Video Plan in Pakistan</g:title>
+      <g:description>Amazon Prime Video official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/prime-video.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/prime-video.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/prime-video.png</g:image_link>
       <g:price>650 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Amazon</g:brand>
@@ -1448,10 +1447,10 @@
 
     <item>
       <g:id>aidigitools-quillbot-premium</g:id>
-      <g:title>QuillBot QuillBot Premium Subscription — 1 Month Access</g:title>
-      <g:description>Buy QuillBot Premium in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited words in paraphraser; Custom and pre-set paraphrase modes (Creative, Academic, Formal); Plagiarism checker scanning 20 pages per month</g:description>
+      <g:title>QuillBot Premium Plan in Pakistan</g:title>
+      <g:description>QuillBot Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/quillbot-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/quillbot-premium.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/quillbot-premium.png</g:image_link>
       <g:price>1600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>QuillBot</g:brand>
@@ -1488,10 +1487,10 @@
 
     <item>
       <g:id>aidigitools-replit-core</g:id>
-      <g:title>Replit Replit Core Subscription — 1 Month Access</g:title>
-      <g:description>Buy Replit Core in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Autonomous Replit Agent for building full-stack web applications; Unlimited private repls and persistent cloud workspaces; Enhanced compute resources (4 vCPUs and 8GB RAM)</g:description>
+      <g:title>Replit Core Plan in Pakistan</g:title>
+      <g:description>Replit Core official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/replit-core.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/replit-core.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/replit-core.png</g:image_link>
       <g:price>2800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Replit</g:brand>
@@ -1528,10 +1527,10 @@
 
     <item>
       <g:id>aidigitools-runway-gen3</g:id>
-      <g:title>Runway Runway AI Video Subscription — 1 Month Access</g:title>
-      <g:description>Buy Runway AI Video in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 625 credits per month (~125 seconds of Gen-3 Alpha Turbo video); Cinematic 4K upscale and Camera Control suite; Motion Brush for localized directional physics</g:description>
+      <g:title>Runway AI Video Plan in Pakistan</g:title>
+      <g:description>Runway AI Video official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/runway-gen3.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/runway-gen3.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/runway-gen3.png</g:image_link>
       <g:price>1800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Runway</g:brand>
@@ -1568,10 +1567,10 @@
 
     <item>
       <g:id>aidigitools-semrush-guru</g:id>
-      <g:title>Semrush Semrush Guru Subscription — 1 Month Access</g:title>
-      <g:description>Buy Semrush Guru in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Historical data access back to 2012; Track up to 1,500 keywords with daily rank updates; Crawl up to 300,000 pages for technical SEO audits</g:description>
+      <g:title>Semrush Guru Plan in Pakistan</g:title>
+      <g:description>Semrush Guru official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/semrush-guru.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/semrush-guru.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/semrush-guru.png</g:image_link>
       <g:price>2500 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Semrush</g:brand>
@@ -1608,12 +1607,12 @@
 
     <item>
       <g:id>aidigitools-spotify-premium</g:id>
-      <g:title>Spotify Spotify Premium Individual Subscription — 1 Month Access</g:title>
-      <g:description>Buy Spotify Premium Individual in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Ad-free music listening with unlimited skips; Offline music downloads on mobile and desktop; 320 kbps high-bitrate streaming audio quality</g:description>
+      <g:title>Spotify Premium Plan in Pakistan</g:title>
+      <g:description>Spotify Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/spotify-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/spotify-premium.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/spotify-premium.png</g:image_link>
       <g:price>850 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>Spotify</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -1648,10 +1647,10 @@
 
     <item>
       <g:id>aidigitools-suno-ai</g:id>
-      <g:title>Suno Suno Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Suno Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 2,500 credits per month (~500 songs / 250 prompts); Full commercial ownership of generated music; Up to 4-minute full song generations in any genre</g:description>
+      <g:title>Suno AI Music Plan in Pakistan</g:title>
+      <g:description>Suno AI Music official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/suno-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/suno-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/suno-ai.png</g:image_link>
       <g:price>2600 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Suno</g:brand>
@@ -1688,10 +1687,10 @@
 
     <item>
       <g:id>aidigitools-surfshark-vpn</g:id>
-      <g:title>Surfshark Surfshark Starter Subscription — 1 Month Access</g:title>
-      <g:description>Buy Surfshark Starter in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Unlimited simultaneous device connections per account; 3,200+ servers across 100 countries; CleanWeb ad, cookie and phishing blocker</g:description>
+      <g:title>Surfshark VPN Plan in Pakistan</g:title>
+      <g:description>Surfshark VPN official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/surfshark-vpn.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/surfshark-vpn.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/surfshark-vpn.png</g:image_link>
       <g:price>800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Surfshark</g:brand>
@@ -1728,10 +1727,10 @@
 
     <item>
       <g:id>aidigitools-tradingview-pro</g:id>
-      <g:title>TradingView TradingView Essential Subscription — 1 Month Access</g:title>
-      <g:description>Buy TradingView Essential in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 5 indicators per chart layout; 2 charts in one browser window; 20 active server-side price alerts</g:description>
+      <g:title>TradingView Essential Plan in Pakistan</g:title>
+      <g:description>TradingView Essential official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/tradingview-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/tradingview-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/tradingview-pro.png</g:image_link>
       <g:price>3200 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>TradingView</g:brand>
@@ -1768,12 +1767,12 @@
 
     <item>
       <g:id>aidigitools-turnitin-student</g:id>
-      <g:title>Turnitin Turnitin Originality Subscription — 1 Month Access</g:title>
-      <g:description>Buy Turnitin Originality in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: Comprehensive similarity checking against global student papers; AI writing detection (ChatGPT, Claude, Gemini recognition); Detailed interactive color-coded match breakdown</g:description>
+      <g:title>Turnitin Originality Plan in Pakistan</g:title>
+      <g:description>Turnitin Originality official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/turnitin-student.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/turnitin-student.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/turnitin-student.png</g:image_link>
       <g:price>2800 PKR</g:price>
-      <g:availability>out_of_stock</g:availability>
+      <g:availability>in_stock</g:availability>
       <g:brand>Turnitin</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>Software &gt; Computer Software</g:google_product_category>
@@ -1808,10 +1807,10 @@
 
     <item>
       <g:id>aidigitools-udio-ai</g:id>
-      <g:title>Udio Udio Standard Subscription — 1 Month Access</g:title>
-      <g:description>Buy Udio Standard in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 1,200 priority credits per month (~1,200 songs / extensions); Commercial usage rights for generated tracks; Advanced audio inpainting &amp; track continuation</g:description>
+      <g:title>Udio Standard Plan in Pakistan</g:title>
+      <g:description>Udio Standard official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/udio-ai.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/udio-ai.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/udio-ai.png</g:image_link>
       <g:price>2800 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Udio</g:brand>
@@ -1848,10 +1847,10 @@
 
     <item>
       <g:id>aidigitools-vidiq-boost</g:id>
-      <g:title>vidIQ vidIQ Boost Subscription — 1 Month Access</g:title>
-      <g:description>Buy vidIQ Boost in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: AI video title and thumbnail generator; Daily video ideas tailored to channel history; Competitor keyword tracking and alert triggers</g:description>
+      <g:title>vidIQ Boost Plan in Pakistan</g:title>
+      <g:description>vidIQ Boost official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/vidiq-boost.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/vidiq-boost.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/vidiq-boost.png</g:image_link>
       <g:price>2100 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>vidIQ</g:brand>
@@ -1888,10 +1887,10 @@
 
     <item>
       <g:id>aidigitools-windows-11-pro</g:id>
-      <g:title>Microsoft Windows 11 Pro Subscription — 1 Month Access</g:title>
-      <g:description>Buy Windows 11 Pro in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: BitLocker device encryption &amp; hardware TPM 2.0 security; Hyper-V and Windows Sandbox virtualization; Remote Desktop Host capabilities</g:description>
+      <g:title>Windows 11 Pro Plan in Pakistan</g:title>
+      <g:description>Windows 11 Pro official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/windows-11-pro.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/windows-11-pro.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/windows-11-pro.png</g:image_link>
       <g:price>1850 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Microsoft</g:brand>
@@ -1928,10 +1927,10 @@
 
     <item>
       <g:id>aidigitools-youtube-premium</g:id>
-      <g:title>Google YouTube Premium Individual Subscription — 1 Month Access</g:title>
-      <g:description>Buy YouTube Premium Individual in Pakistan and worldwide. 1-Month digital activation with 15-minute WhatsApp concierge delivery and 30-day warranty. Features: 100% ad-free video playback across all devices; Background playback while using other apps or screen off; High-bitrate 1080p and 4K offline video downloads</g:description>
+      <g:title>YouTube Premium Plan in Pakistan</g:title>
+      <g:description>YouTube Premium official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty.</g:description>
       <g:link>https://aidigitools.tech/tools/youtube-premium.html</g:link>
-      <g:image_link>https://aidigitools.tech/assets/images/youtube-premium.png</g:image_link>
+      <g:image_link>https://aidigitools.tech/assets/images/square/youtube-premium.png</g:image_link>
       <g:price>750 PKR</g:price>
       <g:availability>in_stock</g:availability>
       <g:brand>Google</g:brand>

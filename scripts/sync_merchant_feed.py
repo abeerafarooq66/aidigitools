@@ -1,38 +1,40 @@
 import os
 import re
+import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
-tools_dir = ROOT / "tools"
+tools_json_path = ROOT / "data" / "products_master.json"
+
+if tools_json_path.exists():
+    tools_data = json.load(open(tools_json_path, "r", encoding="utf-8"))
+else:
+    tools_data = []
 
 items_data = []
-for tool_file in sorted(tools_dir.glob("*.html")):
-    content = tool_file.read_text(encoding="utf-8")
-    slug = tool_file.stem
+for tool in tools_data:
+    slug = tool.get("slug")
+    name = tool.get("display_name") or tool.get("name") or tool.get("official_product_name")
+    brand = tool.get("brand", "AIDigiTools")
+    price = str(tool.get("aidigitools_price_pkr", "1200"))
     
-    # Extract name, brand, price, description from JSON-LD
-    price_match = re.search(r'"price":\s*"(\d+)"', content)
-    price = price_match.group(1) if price_match else "1200"
+    # Exact title format from user reference: {Tool Name} Plan in Pakistan
+    title = f"{name} Plan in Pakistan"
     
-    brand_match = re.search(r'"brand":\s*{\s*"@type":\s*"Brand",\s*"name":\s*"([^"]+)"', content)
-    brand = brand_match.group(1) if brand_match else "AIDigiTools"
+    # Clean concise description matching WhatsApp catalogue standards
+    desc = f"{name} official software plan in Pakistan with 15-minute WhatsApp activation and 30-day warranty."
     
-    name_match = re.search(r'"name":\s*"([^"]+)"', content)
-    name = name_match.group(1) if name_match else slug.replace("-", " ").title()
-    name = name.replace(" Subscription (Pakistan & Worldwide)", "")
-    
-    desc_match = re.search(r'<meta name="description" content="([^"]+)"', content)
-    desc = desc_match.group(1) if desc_match else f"Buy {name} in Pakistan and worldwide with instant 15-minute delivery and 30-day warranty."
-    
-    # Escape xml
+    # Escape xml entities
     name_clean = name.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    title_clean = title.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     brand_clean = brand.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     desc_clean = desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     
     items_data.append({
         "slug": slug,
         "name": name_clean,
+        "title": title_clean,
         "brand": brand_clean,
         "desc": desc_clean,
         "price": price
@@ -53,10 +55,10 @@ feed_lines = [
 for it in items_data:
     feed_lines.append("    <item>")
     feed_lines.append(f"      <g:id>aidigitools-{it['slug']}</g:id>")
-    feed_lines.append(f"      <g:title>{it['brand']} {it['name']} Subscription — 1 Month Access</g:title>")
+    feed_lines.append(f"      <g:title>{it['title']}</g:title>")
     feed_lines.append(f"      <g:description>{it['desc']}</g:description>")
     feed_lines.append(f"      <g:link>https://aidigitools.tech/tools/{it['slug']}.html</g:link>")
-    feed_lines.append(f"      <g:image_link>https://aidigitools.tech/assets/images/{it['slug']}.png</g:image_link>")
+    feed_lines.append(f"      <g:image_link>https://aidigitools.tech/assets/images/square/{it['slug']}.png</g:image_link>")
     feed_lines.append(f"      <g:price>{it['price']} PKR</g:price>")
     feed_lines.append(f"      <g:availability>in_stock</g:availability>")
     feed_lines.append(f"      <g:brand>{it['brand']}</g:brand>")
@@ -82,10 +84,17 @@ feed_lines.append("</rss>")
 feed_lines.append("")
 
 feed_content = "\n".join(feed_lines)
+
+# Write to merchant_feed.xml
 feed_path = ROOT / "merchant_feed.xml"
 with open(feed_path, "w", encoding="utf-8") as f:
     f.write(feed_content)
 
+# Write to meta-product-feed.xml
+meta_feed_path = ROOT / "meta-product-feed.xml"
+with open(meta_feed_path, "w", encoding="utf-8") as f:
+    f.write(feed_content)
+
 # Validate XML
 ET.fromstring(feed_content)
-print(f"[SUCCESS] merchant_feed.xml updated with {len(items_data)} products and validated syntax!")
+print(f"[SUCCESS] merchant_feed.xml and meta-product-feed.xml updated with {len(items_data)} products and validated syntax!")

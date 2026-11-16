@@ -93,10 +93,10 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
                 self.assertNotIn(clean, vague_terms, f"Vague H2 heading '{clean}' detected in {rel}")
 
     def test_05_explicit_freshness_and_verification_dates(self):
-        """All 53 pages must explicitly state October 2026 verification/catalog freshness."""
+        """All content pages must explicitly state 2026 verification/catalog freshness."""
         for rel in self.html_files:
             c = self._read_file(rel)
-            self.assertTrue("October 2026" in c or "2026-10" in c, f"Missing October 2026 freshness date in {rel}")
+            self.assertTrue("October 2026" in c or "November 2026" in c or "2026-10" in c or "2026-11" in c, f"Missing 2026 freshness date in {rel}")
 
     def test_06_pricing_transparency_and_limitations_on_tools(self):
         """All 36 tool pages must state PKR and USD pricing, 15m delivery SLA, and 30-day warranty."""
