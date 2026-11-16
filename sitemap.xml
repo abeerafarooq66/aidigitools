@@ -49,6 +49,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aidigitools.tech/admin/meta-integration.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aidigitools.tech/tools/adobe-creative-cloud.html</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>

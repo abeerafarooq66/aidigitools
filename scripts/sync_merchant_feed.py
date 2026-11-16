@@ -12,12 +12,24 @@ if tools_json_path.exists():
 else:
     tools_data = []
 
+# 7 Policy-Held products (Inquiry Only, out_of_stock for compliance)
+HELD_SLUGS = {
+    "turnitin-student",
+    "linkedin-premium",
+    "netflix-premium",
+    "spotify-premium",
+    "coursera-plus",
+    "claude-artifacts",
+    "deepseek-pro"
+}
+
 items_data = []
 for tool in tools_data:
     slug = tool.get("slug")
     name = tool.get("display_name") or tool.get("name") or tool.get("official_product_name")
     brand = tool.get("brand", "AIDigiTools")
     price = str(tool.get("aidigitools_price_pkr", "1200"))
+    avail = "out_of_stock" if slug in HELD_SLUGS else "in_stock"
     
     # Exact title format from user reference: {Tool Name} Plan in Pakistan
     title = f"{name} Plan in Pakistan"
@@ -37,7 +49,8 @@ for tool in tools_data:
         "title": title_clean,
         "brand": brand_clean,
         "desc": desc_clean,
-        "price": price
+        "price": price,
+        "availability": avail
     })
 
 print(f"Loaded {len(items_data)} tools for merchant feed.")
@@ -60,7 +73,7 @@ for it in items_data:
     feed_lines.append(f"      <g:link>https://aidigitools.tech/tools/{it['slug']}.html</g:link>")
     feed_lines.append(f"      <g:image_link>https://aidigitools.tech/assets/images/square/{it['slug']}.png</g:image_link>")
     feed_lines.append(f"      <g:price>{it['price']} PKR</g:price>")
-    feed_lines.append(f"      <g:availability>in_stock</g:availability>")
+    feed_lines.append(f"      <g:availability>{it['availability']}</g:availability>")
     feed_lines.append(f"      <g:brand>{it['brand']}</g:brand>")
     feed_lines.append(f"      <g:condition>new</g:condition>")
     feed_lines.append(f"      <g:google_product_category>Software &gt; Computer Software</g:google_product_category>")

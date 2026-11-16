@@ -82,7 +82,7 @@ class TestMetaCommerceFeed(unittest.TestCase):
 
             title = item.find("g:title", self.ns).text
             self.assertTrue(len(title) > 5)
-            self.assertIn("Subscription", title)
+            self.assertTrue("Plan in Pakistan" in title or "Subscription" in title)
 
             desc = item.find("g:description", self.ns).text
             self.assertTrue(len(desc) > 20)
