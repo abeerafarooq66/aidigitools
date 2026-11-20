@@ -1,5 +1,5 @@
 {
-  "executed_at_pkt": "2026-11-19 09:53:11 PKT",
+  "executed_at_pkt": "2026-11-20 09:51:06 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK"
   ],
@@ -8,12 +8,12 @@
   "published": false,
   "preview_created": false,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-19 09:53:11 PKT",
+    "check_timestamp_pkt": "2026-11-20 09:51:06 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
       "passed": true,
-      "elapsed_hours": 147.64,
-      "message": "Cadence gate cleared: 147.6 hours have elapsed since last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)'), satisfying the 20.0h minimum requirement.",
+      "elapsed_hours": 171.6,
+      "message": "Cadence gate cleared: 171.6 hours have elapsed since last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)'), satisfying the 20.0h minimum requirement.",
       "bypassed": false
     },
     "budget_status": {
