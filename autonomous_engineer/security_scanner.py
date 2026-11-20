@@ -57,17 +57,19 @@ class SecurityScanner:
         scan_dir = target_dir or self.root
         findings = []
 
-        # Directories and files to exclude from secret scan
-        exclude_dirs = {".git", "__pycache__", ".pytest_cache", "node_modules", ".venv", "venv", ".idea", "tests", ".gemini", ".agent", ".agents", ".gsd"}
+        # Directories and files to exclude from secret scan (safe gitignored locations)
+        exclude_dirs = {".git", "__pycache__", ".pytest_cache", "node_modules", ".venv", "venv", ".idea", "tests", ".gemini", ".agent", ".agents", ".gsd", "credentials", "scratch"}
         exclude_exts = {".png", ".jpg", ".jpeg", ".webp", ".ico", ".svg", ".woff", ".woff2", ".ttf", ".eot"}
 
         for root, dirs, files in os.walk(scan_dir):
             dirs[:] = [d for d in dirs if d not in exclude_dirs and not d.endswith("_tests") and not d == "tests"]
-            # Skip if current root is inside a test directory
+            # Skip if current root is inside a test directory or gitignored credentials directory
             path_parts = Path(root).parts
             if any(p in exclude_dirs for p in path_parts):
                 continue
             for file in files:
+                if file.startswith(".env"):
+                    continue
                 file_path = Path(root) / file
                 if file_path.suffix.lower() in exclude_exts:
                     continue

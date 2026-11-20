@@ -2,10 +2,23 @@ import os
 import sys
 import json
 import re
+import time
+import socket
 import urllib.request
 import urllib.error
 import urllib.parse
 from pathlib import Path
+
+# Ensure IPv4 is preferred for Bing to prevent ISP IPv6 routing resets
+try:
+    _orig_getaddrinfo = socket.getaddrinfo
+    def _ipv4_bing_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+        if host and "bing.com" in str(host):
+            family = socket.AF_INET
+        return _orig_getaddrinfo(host, port, family, type, proto, flags)
+    socket.getaddrinfo = _ipv4_bing_getaddrinfo
+except Exception:
+    pass
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -86,19 +99,30 @@ def check_bing(test_live=False):
         
     if test_live:
         url = f"https://ssl.bing.com/webmaster/api.svc/json/GetUrlSubmissionQuota?siteUrl=https://aidigitools.tech&apikey={urllib.parse.quote_plus(key)}"
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "AIDigiTools-Preflight/1.0"})
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                if resp.status == 200:
-                    data = json.loads(resp.read().decode("utf-8"))
-                    d = data.get("d", {})
-                    daily = d.get("DailyQuota", "N/A")
-                    return STATUS_VERIFIED, f"Authenticated HTTP 200 OK (Daily quota: {daily})"
-                return STATUS_FAILED, f"HTTP Status: {resp.status}"
-        except urllib.error.HTTPError as e:
-            return STATUS_FAILED, f"HTTP Error {e.code}: {e.reason}"
-        except Exception as e:
-            return STATUS_FAILED, f"Connection error: {e}"
+        last_error = None
+        for attempt in range(3):
+            try:
+                req = urllib.request.Request(
+                    url, 
+                    headers={
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AIDigiTools-Preflight/1.0",
+                        "Accept": "application/json",
+                        "Connection": "close"
+                    }
+                )
+                with urllib.request.urlopen(req, timeout=12) as resp:
+                    if resp.status == 200:
+                        data = json.loads(resp.read().decode("utf-8"))
+                        d = data.get("d", {})
+                        daily = d.get("DailyQuota", "N/A")
+                        return STATUS_VERIFIED, f"Authenticated HTTP 200 OK (Daily quota: {daily})"
+                    return STATUS_FAILED, f"HTTP Status: {resp.status}"
+            except urllib.error.HTTPError as e:
+                return STATUS_FAILED, f"HTTP Error {e.code}: {e.reason}"
+            except Exception as e:
+                last_error = e
+                time.sleep(1)
+        return STATUS_FAILED, f"Connection error: {last_error}"
             
     return STATUS_SET, "Key present and format valid"
 

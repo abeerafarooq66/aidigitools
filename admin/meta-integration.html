@@ -701,8 +701,17 @@
           <td>${item.pkr.toLocaleString()} PKR</td>
           <td><span class="${badgeClass}">${badgeText}</span></td>
           <td>${item.policy}</td>
-          <td><a href="../tools/${item.slug}.html" target="_blank" rel="noopener noreferrer" class="table-link" aria-label="Open product page for ${item.name}">Open ${item.name} &nearr;</a></td>
         `;
+        const linkTd = document.createElement('td');
+        const linkA = document.createElement('a');
+        linkA.href = '../tools/' + item.slug + '.html';
+        linkA.target = '_blank';
+        linkA.rel = 'noopener noreferrer';
+        linkA.className = 'table-link';
+        linkA.setAttribute('aria-label', 'Open product page for ' + item.name);
+        linkA.textContent = 'Open ' + item.name + ' \u2197';
+        linkTd.appendChild(linkA);
+        tr.appendChild(linkTd);
         tbody.appendChild(tr);
       });
     }

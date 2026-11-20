@@ -1,10 +1,23 @@
 import os
 import json
+import time
+import socket
 import urllib.request
 import urllib.parse
 import urllib.error
 from typing import Dict, Any, Optional, List
 from .config import BASE_URL
+
+# Ensure IPv4 is preferred for Bing to prevent ISP IPv6 routing resets
+try:
+    _orig_getaddrinfo = socket.getaddrinfo
+    def _ipv4_bing_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+        if host and "bing.com" in str(host):
+            family = socket.AF_INET
+        return _orig_getaddrinfo(host, port, family, type, proto, flags)
+    socket.getaddrinfo = _ipv4_bing_getaddrinfo
+except Exception:
+    pass
 
 class BingWebmasterClient:
     """Official Microsoft Bing Webmaster Tools JSON/HTTP API Client.
@@ -22,7 +35,7 @@ class BingWebmasterClient:
     API_BASE = "https://ssl.bing.com/webmaster/api.svc/json"
 
     def __init__(self, api_key: Optional[str] = None, site_url: str = BASE_URL):
-        self.api_key = api_key if api_key is not None else os.environ.get("BING_API_KEY", "").strip()
+        self.api_key = api_key if api_key is not None else (os.environ.get("BING_API_KEY") or os.environ.get("BING_WEBMASTER_API_KEY") or "").strip()
         self.site_url = site_url
 
     def is_configured(self) -> bool:
@@ -40,26 +53,32 @@ class BingWebmasterClient:
                 params += f"&{k}={urllib.parse.quote_plus(str(v))}"
 
         url = f"{self.API_BASE}/{endpoint}?{params}"
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": "AIDigiTools-Autonomous-Engineer/1.0",
-                "Content-Type": "application/json; charset=utf-8"
-            }
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-                return {"status_code": resp.status, "data": data.get("d", data), "error": None}
-        except urllib.error.HTTPError as e:
-            err_body = ""
+        last_error = None
+        for attempt in range(1, 5):
             try:
-                err_body = e.read().decode("utf-8", errors="ignore")
-            except Exception:
-                pass
-            return {"status_code": e.code, "data": None, "error": f"HTTP {e.code}: {e.reason} {err_body}".strip()}
-        except Exception as e:
-            return {"status_code": 0, "data": None, "error": f"Network exception: {str(e)}"}
+                req = urllib.request.Request(
+                    url,
+                    headers={
+                        "User-Agent": "AIDigiTools-Autonomous-Engineer/1.0",
+                        "Content-Type": "application/json; charset=utf-8",
+                        "Accept": "application/json",
+                        "Connection": "close"
+                    }
+                )
+                with urllib.request.urlopen(req, timeout=15) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    return {"status_code": resp.status, "data": data.get("d", data), "error": None}
+            except urllib.error.HTTPError as e:
+                err_body = ""
+                try:
+                    err_body = e.read().decode("utf-8", errors="ignore")
+                except Exception:
+                    pass
+                return {"status_code": e.code, "data": None, "error": f"HTTP {e.code}: {e.reason} {err_body}".strip()}
+            except Exception as e:
+                last_error = e
+                time.sleep(1.5 * attempt)
+        return {"status_code": 0, "data": None, "error": f"Network exception: {str(last_error)}"}
 
     def _api_post(self, endpoint: str, payload: Dict[str, Any]) -> Dict[str, Any]:
         """Executes an authenticated POST request against the Bing Webmaster JSON API."""

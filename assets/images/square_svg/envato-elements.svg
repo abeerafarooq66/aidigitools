@@ -1,0 +1,23 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-envato-elements" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow-envato-elements" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Modern Dark Squircle Canvas (App Icon Look) -->
+  <rect x="20" y="20" width="560" height="560" rx="130" fill="url(#bg-envato-elements)" stroke="#334155" stroke-width="3" />
+
+  <!-- Soft Ambient Glow matching Brand Color -->
+  <circle cx="300" cy="300" r="160" fill="#81B441" opacity="0.14" filter="url(#glow-envato-elements)" />
+
+  <!-- Centered Scaled Official Vector Emblem -->
+  <svg x="140" y="140" width="320" height="320" viewBox="0 0 24 24" style="overflow:visible">
+    <g fill="#81B441"><path d="M20.058 1.043C16.744-2.841 6.018 4.682 6.104 14.38a.459.459 0 0 1-.45.451.459.459 0 0 1-.388-.221 10.387 10.387 0 0 1-.412-7.634.42.42 0 0 0-.712-.412 10.284 10.284 0 0 0-2.784 7.033A10.284 10.284 0 0 0 11.76 23.999c14.635-.332 11.257-19.491 8.298-22.956z"/></g>
+  </svg>
+</svg>

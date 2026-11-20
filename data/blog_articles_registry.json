@@ -116,6 +116,90 @@
       ],
       "evidence_classification": "Tier B: Research-based independent analysis",
       "status": "published"
+    },
+    {
+      "id": "ART-006",
+      "slug": "how-to-pay-for-midjourney-in-pakistan-without-credit-card",
+      "relative_url": "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "canonical_url": "https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "title": "Pay for Midjourney in Pakistan Without Credit Card (2026)",
+      "cluster_slug": "ai-image-and-design-suites",
+      "article_type": "guide",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "how to pay for midjourney in pakistan without credit card",
+      "related_tools": ["midjourney", "canva-pro", "adobe-creative-cloud"],
+      "related_articles": ["blog/runway-gen3-vs-capcut-pro-video-comparison.html", "best/best-ai-video-generators.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Blog", "url": "https://aidigitools.tech/blog.html"},
+        {"name": "Pay for Midjourney in Pakistan", "url": "https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html"}
+      ],
+      "evidence_classification": "Tier A: Verified transaction testing across domestic payment rails",
+      "status": "published"
+    },
+    {
+      "id": "ART-007",
+      "slug": "claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark",
+      "relative_url": "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "canonical_url": "https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "title": "Claude 3.5 Sonnet vs ChatGPT Plus: Coding Shootout (2026)",
+      "cluster_slug": "ai-coding-and-development",
+      "article_type": "comparison",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "claude 3.5 sonnet vs chatgpt plus coding",
+      "related_tools": ["claude-pro", "chatgpt-plus", "cursor-pro"],
+      "related_articles": ["compare/chatgpt-vs-claude.html", "best/best-ai-coding-tools.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Blog", "url": "https://aidigitools.tech/blog.html"},
+        {"name": "Claude 3.5 Sonnet vs ChatGPT Plus", "url": "https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html"}
+      ],
+      "evidence_classification": "Tier A: Empirical SWE-bench verified coding tests",
+      "status": "published"
+    },
+    {
+      "id": "ART-008",
+      "slug": "best-ai-video-generators-youtube-shorts-pakistan",
+      "relative_url": "blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "canonical_url": "https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "title": "Best AI Video Generators for YouTube Shorts in Pakistan (2026)",
+      "cluster_slug": "ai-video-and-audio-tools",
+      "article_type": "curation",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "best ai video generators for youtube shorts in pakistan",
+      "related_tools": ["runway-gen3", "kling-ai", "capcut-pro"],
+      "related_articles": ["blog/runway-gen3-vs-capcut-pro-video-comparison.html", "best/best-ai-video-generators.html"],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Blog", "url": "https://aidigitools.tech/blog.html"},
+        {"name": "Best AI Video Generators for Shorts", "url": "https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html"}
+      ],
+      "evidence_classification": "Tier A: Real-world 9:16 vertical video production tests",
+      "status": "published"
+    },
+    {
+      "id": "ART-009",
+      "slug": "best-ai-tools-for-freelancers-in-pakistan",
+      "relative_url": "blog/best-ai-tools-for-freelancers-in-pakistan.html",
+      "canonical_url": "https://aidigitools.tech/blog/best-ai-tools-for-freelancers-in-pakistan.html",
+      "title": "Best AI Tools for Freelancers in Pakistan (2026) | AIDigiTools",
+      "cluster_slug": "cross-category-freelancer-suite",
+      "article_type": "guide",
+      "author_slug": "abeera-farooq",
+      "primary_keyword": "best ai tools for freelancers in pakistan",
+      "related_tools": ["chatgpt-plus", "claude-pro", "midjourney", "canva-pro", "cursor-pro"],
+      "related_articles": [
+        "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+        "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+        "blog/cursor-ai-vs-github-copilot-comparison.html"
+      ],
+      "breadcrumbs": [
+        {"name": "Home", "url": "https://aidigitools.tech/"},
+        {"name": "Blog", "url": "https://aidigitools.tech/blog.html"},
+        {"name": "Best AI Tools for Freelancers", "url": "https://aidigitools.tech/blog/best-ai-tools-for-freelancers-in-pakistan.html"}
+      ],
+      "evidence_classification": "Tier A: Verified hands-on workflow testing across Upwork and Fiverr",
+      "status": "published"
     }
   ]
 }

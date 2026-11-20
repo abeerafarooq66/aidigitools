@@ -1,0 +1,146 @@
+{
+  "status": "CONNECTED",
+  "date_range": "2026-10-19 to 2026-11-16",
+  "generated_at_utc": "2026-11-18T09:58:20.644837+00:00",
+  "overall_metrics": {
+    "total_clicks": 0,
+    "total_impressions": 118,
+    "average_ctr_percent": 0.0,
+    "average_position": 58.9,
+    "total_queries_ranked": 76
+  },
+  "striking_distance_keywords": [],
+  "low_ctr_opportunities": [],
+  "top_performing_pages": [
+    {
+      "url": "https://aidigitools.tech/deals.html",
+      "clicks": 0,
+      "impressions": 10,
+      "queries": 4
+    },
+    {
+      "url": "https://aidigitools.tech/policies.html",
+      "clicks": 0,
+      "impressions": 12,
+      "queries": 4
+    },
+    {
+      "url": "https://aidigitools.tech/tools/chatgpt-codex.html",
+      "clicks": 0,
+      "impressions": 2,
+      "queries": 2
+    },
+    {
+      "url": "https://aidigitools.tech/tools/claude-artifacts.html",
+      "clicks": 0,
+      "impressions": 2,
+      "queries": 2
+    },
+    {
+      "url": "https://aidigitools.tech/categories/coding.html",
+      "clicks": 0,
+      "impressions": 5,
+      "queries": 3
+    },
+    {
+      "url": "https://aidigitools.tech/categories/vpn.html",
+      "clicks": 0,
+      "impressions": 10,
+      "queries": 4
+    },
+    {
+      "url": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+      "clicks": 0,
+      "impressions": 2,
+      "queries": 2
+    },
+    {
+      "url": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+      "clicks": 0,
+      "impressions": 6,
+      "queries": 3
+    },
+    {
+      "url": "https://aidigitools.tech/tools/cursor-pro.html",
+      "clicks": 0,
+      "impressions": 5,
+      "queries": 5
+    },
+    {
+      "url": "https://aidigitools.tech/tools/google-veo.html",
+      "clicks": 0,
+      "impressions": 5,
+      "queries": 3
+    }
+  ],
+  "cannibalization_risks": [
+    {
+      "query": "\"easypaisa\"",
+      "competing_urls": [
+        "https://aidigitools.tech/tools/claude-artifacts.html",
+        "https://aidigitools.tech/tools/chatgpt-codex.html",
+        "https://aidigitools.tech/deals.html",
+        "https://aidigitools.tech/policies.html"
+      ],
+      "pages_count": 4
+    },
+    {
+      "query": "\"jazzcash\"",
+      "competing_urls": [
+        "https://aidigitools.tech/tools/midjourney.html",
+        "https://aidigitools.tech/policies.html",
+        "https://aidigitools.tech/tools/cursor-pro.html",
+        "https://aidigitools.tech/tools/google-veo.html",
+        "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "https://aidigitools.tech/categories/vpn.html",
+        "https://aidigitools.tech/tools/quillbot-premium.html",
+        "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+        "https://aidigitools.tech/categories/coding.html"
+      ],
+      "pages_count": 9
+    },
+    {
+      "query": "\"nayapay\"",
+      "competing_urls": [
+        "https://aidigitools.tech/about.html",
+        "https://aidigitools.tech/deals.html",
+        "https://aidigitools.tech/policies.html",
+        "https://aidigitools.tech/tools/midjourney.html",
+        "https://aidigitools.tech/tools/runway-gen3.html",
+        "https://aidigitools.tech/tools/cursor-pro.html",
+        "https://aidigitools.tech/tools/google-veo.html",
+        "https://aidigitools.tech/categories/vpn.html",
+        "https://aidigitools.tech/affiliate-disclosure.html",
+        "https://aidigitools.tech/tools/perplexity-pro.html",
+        "https://aidigitools.tech/tools/quillbot-premium.html",
+        "https://aidigitools.tech/contact.html",
+        "https://aidigitools.tech/tools/netflix-premium.html",
+        "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "https://aidigitools.tech/categories/coding.html"
+      ],
+      "pages_count": 15
+    },
+    {
+      "query": "\"sadapay\"",
+      "competing_urls": [
+        "https://aidigitools.tech/tools/netflix-premium.html",
+        "https://aidigitools.tech/blog.html",
+        "https://aidigitools.tech/tools/chatgpt-codex.html",
+        "https://aidigitools.tech/about.html",
+        "https://aidigitools.tech/deals.html",
+        "https://aidigitools.tech/policies.html",
+        "https://aidigitools.tech/tools/midjourney.html",
+        "https://aidigitools.tech/tools/cursor-pro.html",
+        "https://aidigitools.tech/tools/google-veo.html",
+        "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "https://aidigitools.tech/tools/claude-artifacts.html",
+        "https://aidigitools.tech/tools/leonardo-ai.html",
+        "https://aidigitools.tech/categories/vpn.html",
+        "https://aidigitools.tech/best/best-ai-video-generators.html",
+        "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "https://aidigitools.tech/categories/coding.html"
+      ],
+      "pages_count": 16
+    }
+  ]
+}

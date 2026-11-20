@@ -28,3 +28,11 @@ credentials.json
 client_secrets*.json
 token.json
 token_cache/
+
+# Agent IDE & Local Metadata
+.gemini/
+.agent/
+.agents/
+.gsd/
+.mcp.json
+

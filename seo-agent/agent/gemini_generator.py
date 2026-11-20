@@ -55,7 +55,7 @@ class GeminiArticleGenerator:
             workspace_root = api_key
             api_key = None
         self.workspace_root = Path(workspace_root or WORKSPACE_ROOT)
-        raw_key = api_key or os.environ.get("GEMINI_API_KEY", "")
+        raw_key = api_key if api_key is not None else os.environ.get("GEMINI_API_KEY", "")
         if isinstance(raw_key, str):
             self.api_key = raw_key.strip().strip('"').strip("'").strip()
         else:

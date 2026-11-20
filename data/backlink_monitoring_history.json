@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "domain": "https://aidigitools.tech",
+  "snapshots": [
+    {
+      "snapshot_id": "SNAP-2026-W45",
+      "recorded_at": "2026-11-04T12:00:00Z",
+      "referring_domains": 1,
+      "total_backlinks": 1,
+      "dofollow": 1,
+      "nofollow": 0,
+      "new_links_count": 1,
+      "lost_links_count": 0,
+      "competitors_tracking": {
+        "aitoolspak.com": {"domains": 40, "backlinks": 265},
+        "aitoolgems.com": {"domains": 33, "backlinks": 180}
+      }
+    },
+    {
+      "snapshot_id": "SNAP-2026-W46",
+      "recorded_at": "2026-11-11T12:00:00Z",
+      "referring_domains": 2,
+      "total_backlinks": 2,
+      "dofollow": 1,
+      "nofollow": 1,
+      "new_links_count": 1,
+      "lost_links_count": 0,
+      "competitors_tracking": {
+        "aitoolspak.com": {"domains": 41, "backlinks": 272},
+        "aitoolgems.com": {"domains": 34, "backlinks": 188}
+      }
+    },
+    {
+      "snapshot_id": "SNAP-2026-W47",
+      "recorded_at": "2026-11-18T19:30:00Z",
+      "referring_domains": 2,
+      "total_backlinks": 2,
+      "dofollow": 1,
+      "nofollow": 1,
+      "new_links_count": 0,
+      "lost_links_count": 0,
+      "competitors_tracking": {
+        "aitoolspak.com": {"domains": 42, "backlinks": 280},
+        "aitoolgems.com": {"domains": 35, "backlinks": 195}
+      }
+    }
+  ]
+}

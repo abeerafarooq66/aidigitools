@@ -29,7 +29,16 @@ class GoogleSearchConsoleClient:
     SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 
     def __init__(self, key_json_str: Optional[str] = None, site_url: str = BASE_URL):
-        raw_key = key_json_str if key_json_str is not None else os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
+        if key_json_str is not None:
+            raw_key = key_json_str.strip()
+        else:
+            raw_key = os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
+            # If not provided in environment, check default credentials path
+            if not raw_key:
+                default_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "credentials", "service_account.json")
+                if os.path.isfile(default_path):
+                    raw_key = default_path
+
         self.raw_key = raw_key
         self.site_url = site_url.rstrip("/") + "/"
         self._parsed_key: Optional[Dict[str, Any]] = None
@@ -40,7 +49,15 @@ class GoogleSearchConsoleClient:
             try:
                 self._parsed_key = json.loads(self.raw_key)
             except Exception:
-                self._parsed_key = None
+                # Check if it's a file path
+                if os.path.isfile(self.raw_key):
+                    try:
+                        with open(self.raw_key, "r", encoding="utf-8") as f:
+                            self._parsed_key = json.load(f)
+                    except Exception:
+                        self._parsed_key = None
+                else:
+                    self._parsed_key = None
 
     def is_configured(self) -> bool:
         """Checks if a valid Google Service Account JSON key is available."""

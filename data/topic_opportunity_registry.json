@@ -1,5 +1,5 @@
 {
-  "registry_version": "2.0.0",
+  "registry_version": "3.0.0",
   "scoring_model": {
     "search_opportunity": 15,
     "gsc_bing_opportunity": 20,
@@ -40,10 +40,11 @@
         "Composer IDE"
       ],
       "search_intent": "Commercial Investigation",
+      "keyword_strategy_type": "Commercial",
       "language": "English (with localized Pakistan Rupee context)",
       "country_market_relevance": "Pakistan, South Asia, and Global Remote Developers",
       "existing_ranking_opportunities": "Ranking on page 2 for 'cursor pro pakistan' and 'copilot pricing'",
-      "competitor_coverage": "AI Tools Pak and AI Tool Gems lack technical IDE benchmark tables; global blogs lack PKR breakdown",
+      "competitor_coverage": "Competitors lack technical IDE benchmark tables; global blogs lack PKR breakdown",
       "product_category_relevance": "AI Coding & Dev (Tools: cursor-pro, github-copilot)",
       "existing_target_urls": [
         "tools/cursor-pro.html",
@@ -95,6 +96,7 @@
         "Artifacts Canvas"
       ],
       "search_intent": "Informational",
+      "keyword_strategy_type": "Informational",
       "language": "English",
       "country_market_relevance": "Pakistani Freelancers, Frontend Engineers, Digital Agencies",
       "existing_ranking_opportunities": "Targeting high-impression 'claude artifacts' query in GSC",
@@ -148,6 +150,7 @@
         "TikTok Video AI"
       ],
       "search_intent": "Commercial Investigation",
+      "keyword_strategy_type": "Commercial",
       "language": "English",
       "country_market_relevance": "Pakistan & South Asian Content Creators, Video Editors, Agency Leads",
       "existing_ranking_opportunities": "Growing impressions for 'runway gen 3 pakistan' and 'capcut pro pkr'",
@@ -199,6 +202,7 @@
         "Forex Tax"
       ],
       "search_intent": "Transactional / Commercial",
+      "keyword_strategy_type": "Transactional",
       "language": "English",
       "country_market_relevance": "Pakistan Nationwide",
       "existing_ranking_opportunities": "Already ranking on Page 1 (#4) with /tools/chatgpt-plus.html",
@@ -222,6 +226,556 @@
       "recommended_action": "UPDATE_EXISTING_PAGE",
       "target_canonical_path": "tools/chatgpt-plus.html",
       "editorial_rationale": "Score (82/100) is below 85 threshold and cannibalization risk is High. The existing tool page should be updated rather than creating a competing URL."
+    },
+    {
+      "topic_id": "TOPIC-005",
+      "primary_keyword": "ai tools in pakistan",
+      "secondary_keywords": [
+        "best ai software pakistan",
+        "ai tools marketplace islamabad",
+        "buy ai tools in pkr",
+        "verified ai subscriptions pakistan"
+      ],
+      "long_tail_queries": [
+        "where to buy verified ai software subscriptions in pakistan",
+        "how to get ai tools in pakistan with local bank transfer",
+        "top ai tools for digital marketing agencies in lahore karachi islamabad"
+      ],
+      "question_based_queries": [
+        "Where can I buy authentic AI tools in Pakistan?",
+        "How do Pakistani creators pay for international AI subscriptions?",
+        "What is the most reliable AI tools platform in Pakistan?"
+      ],
+      "related_entities": [
+        "AIDigiTools",
+        "OpenAI",
+        "Anthropic",
+        "Midjourney",
+        "Canva",
+        "ElevenLabs",
+        "SadaPay",
+        "EasyPaisa"
+      ],
+      "search_intent": "Commercial / Pakistan-localized Hub",
+      "keyword_strategy_type": "Pakistan-localized",
+      "language": "English (with localized Pakistan Rupee context)",
+      "country_market_relevance": "Pakistan Nationwide (Islamabad, Lahore, Karachi, Rawalpindi, Faisalabad, Peshawar)",
+      "existing_ranking_opportunities": "Core brand and category entity targeting main homepage index.html",
+      "competitor_coverage": "Scattered Facebook groups with zero consumer protection or warranty",
+      "product_category_relevance": "Master Marketplace Catalog (All 36 Tools)",
+      "existing_target_urls": [
+        "index.html",
+        "about.html",
+        "contact.html"
+      ],
+      "cannibalization_risk": "Low. Hub intent mapped directly to root homepage and about pages.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 20,
+        "audience_relevance": 15,
+        "competitor_content_gap": 15,
+        "trend_freshness": 10,
+        "original_research_potential": 14,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 99,
+      "score_threshold_passed": true,
+      "recommended_action": "OPTIMIZE_HUB_PAGE",
+      "target_canonical_path": "index.html",
+      "editorial_rationale": "Primary pillar brand query. Must anchor the entire site's semantic authority and geographic relevance in Pakistan."
+    },
+    {
+      "topic_id": "TOPIC-006",
+      "primary_keyword": "buy ai tools online pakistan",
+      "secondary_keywords": [
+        "order ai software online pakistan",
+        "ai tools easypaisa jazzcash",
+        "pay for ai tools in rupees",
+        "online ai tool store pakistan"
+      ],
+      "long_tail_queries": [
+        "how to buy ai tools online in pakistan with easypaisa",
+        "best website to buy ai tools online pakistan with instant delivery",
+        "secure payment methods to buy ai tools online pakistan"
+      ],
+      "question_based_queries": [
+        "Can I buy AI tools online using EasyPaisa or JazzCash?",
+        "How long does digital delivery take after buying AI tools online in Pakistan?",
+        "Is it safe to buy AI tools online from Pakistani vendors?"
+      ],
+      "related_entities": [
+        "AIDigiTools Online Store",
+        "WhatsApp Concierge",
+        "EasyPaisa",
+        "JazzCash",
+        "Raast",
+        "NayaPay"
+      ],
+      "search_intent": "Transactional / Local",
+      "keyword_strategy_type": "Transactional",
+      "language": "English",
+      "country_market_relevance": "Pakistan Digital Buyers, Freelancers, University Students",
+      "existing_ranking_opportunities": "High-intent queries converting directly to WhatsApp checkout",
+      "competitor_coverage": "Competitors operate via unverified personal WhatsApp chats without formal pricing tables",
+      "product_category_relevance": "Transactional Checkout & Tool Catalog",
+      "existing_target_urls": [
+        "index.html#pricing",
+        "categories/coding.html",
+        "categories/creative.html"
+      ],
+      "cannibalization_risk": "Low. Mapped cleanly to pricing anchors and catalog categories.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 19,
+        "audience_relevance": 15,
+        "competitor_content_gap": 14,
+        "trend_freshness": 9,
+        "original_research_potential": 13,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 95,
+      "score_threshold_passed": true,
+      "recommended_action": "OPTIMIZE_HUB_PAGE",
+      "target_canonical_path": "index.html#pricing",
+      "editorial_rationale": "Direct transactional intent with maximum commercial conversion rate for local buyers."
+    },
+    {
+      "topic_id": "TOPIC-007",
+      "primary_keyword": "ai subscriptions pakistan",
+      "secondary_keywords": [
+        "ai software subscription pakistan",
+        "monthly ai subscriptions pkr",
+        "shared ai subscriptions vs private activation",
+        "ai subscription concierge pakistan"
+      ],
+      "long_tail_queries": [
+        "how to manage monthly ai subscriptions in pakistan without credit card",
+        "cheapest ai subscriptions in pakistan with warranty",
+        "all in one ai subscriptions bundle pakistan"
+      ],
+      "question_based_queries": [
+        "How do monthly AI subscriptions work in Pakistan?",
+        "What happens if an AI subscription stops working before 30 days?",
+        "Which AI subscriptions offer the highest ROI for Pakistani creators?"
+      ],
+      "related_entities": [
+        "Subscription Concierge",
+        "30-Day Warranty",
+        "Digital SLA",
+        "PKR Pricing",
+        "Payment Rails"
+      ],
+      "search_intent": "Commercial / Local",
+      "keyword_strategy_type": "Commercial",
+      "language": "English",
+      "country_market_relevance": "Pakistani Freelancers, IT Companies, Remote Workers",
+      "existing_ranking_opportunities": "Gaining 50+ impressions across GSC for 'ai subscriptions' and 'pkr tools'",
+      "competitor_coverage": "Zero warranty transparency from competitors; frequent account dropouts",
+      "product_category_relevance": "Subscription Concierge & Deals Hub",
+      "existing_target_urls": [
+        "deals.html",
+        "index.html",
+        "categories/business.html"
+      ],
+      "cannibalization_risk": "Low. Maps to deals bundle hub and transparent warranty policies.",
+      "scoring_breakdown": {
+        "search_opportunity": 14,
+        "gsc_bing_opportunity": 18,
+        "audience_relevance": 15,
+        "competitor_content_gap": 14,
+        "trend_freshness": 9,
+        "original_research_potential": 14,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 94,
+      "score_threshold_passed": true,
+      "recommended_action": "OPTIMIZE_HUB_PAGE",
+      "target_canonical_path": "deals.html",
+      "editorial_rationale": "Commercial evaluation intent directly leading to bundle and subscription purchases."
+    },
+    {
+      "topic_id": "TOPIC-008",
+      "primary_keyword": "best ai tools for freelancers",
+      "secondary_keywords": [
+        "top ai tools for pakistani freelancers",
+        "ai tools for upwork fiverr sellers",
+        "essential ai tools for remote workers",
+        "freelance productivity ai tools 2026"
+      ],
+      "long_tail_queries": [
+        "what are the best ai tools for graphic designers and content writers on fiverr in pakistan",
+        "how pakistani freelancers use ai tools to double hourly earnings",
+        "free vs paid ai tools for beginner freelancers in pakistan"
+      ],
+      "question_based_queries": [
+        "Which AI tools should every freelancer in Pakistan use in 2026?",
+        "Can AI tools help me get more orders on Upwork and Fiverr?",
+        "How much should a Pakistani freelancer invest in AI subscriptions monthly?"
+      ],
+      "related_entities": [
+        "ChatGPT Plus",
+        "Claude 3.5 Sonnet",
+        "Midjourney",
+        "Canva Pro",
+        "Cursor AI",
+        "Upwork",
+        "Fiverr"
+      ],
+      "search_intent": "Informational / Commercial Investigation",
+      "keyword_strategy_type": "Informational",
+      "language": "English (with localized freelancer economy insights)",
+      "country_market_relevance": "Pakistan Freelance Community (3M+ workers), South Asia, Global Digital Nomads",
+      "existing_ranking_opportunities": "Huge search volume across Pakistan tech blogs and GSC query clusters",
+      "competitor_coverage": "Generic 500-word listicles without Pakistani payment context or workflow ROI",
+      "product_category_relevance": "Cross-Category Suite (Coding, Writing, Creative, Video)",
+      "existing_target_urls": [
+        "blog.html",
+        "categories/coding.html",
+        "categories/writing.html"
+      ],
+      "cannibalization_risk": "Low. Comprehensive educational guide targeting remote freelancer workflow.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 19,
+        "audience_relevance": 15,
+        "competitor_content_gap": 15,
+        "trend_freshness": 10,
+        "original_research_potential": 14,
+        "business_relevance": 9
+      },
+      "total_opportunity_score": 97,
+      "score_threshold_passed": true,
+      "recommended_action": "PUBLISH_NEW_ARTICLE",
+      "target_canonical_path": "blog/best-ai-tools-for-freelancers-in-pakistan.html",
+      "editorial_rationale": "Massive viral and educational acquisition engine for Pakistani remote professionals seeking practical toolkit recommendations."
+    },
+    {
+      "topic_id": "TOPIC-009",
+      "primary_keyword": "ai video generators",
+      "secondary_keywords": [
+        "best ai video generators 2026",
+        "text to video ai tools",
+        "ai video generator for youtube shorts",
+        "faceless video ai tools pakistan"
+      ],
+      "long_tail_queries": [
+        "best ai video generator for youtube shorts and reels in pakistan",
+        "how to generate realistic ai video without watermark",
+        "runway vs kling vs luma ai video generator comparison"
+      ],
+      "question_based_queries": [
+        "What is the best AI video generator for beginners?",
+        "How do YouTube creators make faceless videos with AI?",
+        "Which AI video generator provides the highest resolution in PKR?"
+      ],
+      "related_entities": [
+        "Runway Gen-3",
+        "Luma Dream Machine",
+        "Kling AI",
+        "CapCut Pro",
+        "Hailuo Minimax",
+        "Pika Labs"
+      ],
+      "search_intent": "Commercial / Product-specific",
+      "keyword_strategy_type": "Product-specific",
+      "language": "English",
+      "country_market_relevance": "YouTubers, TikTokers, Video Editors, Digital Marketers in Pakistan & Globally",
+      "existing_ranking_opportunities": "Ranking on page 2 for 'ai video tools pakistan'",
+      "competitor_coverage": "Outdated articles referencing 2023 tools like Gen-2; lack Gen-3 Alpha and Kling benchmarks",
+      "product_category_relevance": "AI Video & Audio (Tools: runway-gen3, capcut-pro, luma-dream-machine)",
+      "existing_target_urls": [
+        "categories/video.html",
+        "tools/runway-gen3.html",
+        "tools/capcut-pro.html"
+      ],
+      "cannibalization_risk": "Low. Category hub and comparison articles target distinct search intents.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 18,
+        "audience_relevance": 15,
+        "competitor_content_gap": 14,
+        "trend_freshness": 10,
+        "original_research_potential": 14,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 96,
+      "score_threshold_passed": true,
+      "recommended_action": "OPTIMIZE_HUB_PAGE",
+      "target_canonical_path": "categories/video.html",
+      "editorial_rationale": "High-velocity category where generative video innovation drives constant search interest and subscription purchases."
+    },
+    {
+      "topic_id": "TOPIC-010",
+      "primary_keyword": "ai image generators",
+      "secondary_keywords": [
+        "best ai image generator 2026",
+        "text to image ai tools",
+        "midjourney alternatives pakistan",
+        "photorealistic ai art generator"
+      ],
+      "long_tail_queries": [
+        "how to pay for midjourney in pakistan without international credit card",
+        "midjourney v6 vs flux 1 pro comparison for graphic designers",
+        "best ai image generator for print on demand and fiverr gigs"
+      ],
+      "question_based_queries": [
+        "Which AI image generator is the most realistic in 2026?",
+        "How can I generate photorealistic AI images in Pakistan?",
+        "Is Flux 1 better than Midjourney v6?"
+      ],
+      "related_entities": [
+        "Midjourney",
+        "Flux 1.1 Pro",
+        "Leonardo AI",
+        "Ideogram",
+        "Canva Pro",
+        "Adobe Firefly"
+      ],
+      "search_intent": "Commercial / Product-specific",
+      "keyword_strategy_type": "Product-specific",
+      "language": "English",
+      "country_market_relevance": "Graphic Designers, UI/UX Artists, Marketers, eCommerce Brands",
+      "existing_ranking_opportunities": "Impressions surging for 'midjourney in pakistan' and 'ai image generator pkr'",
+      "competitor_coverage": "Superficial listicles with no prompt examples, photorealism tests, or PKR pricing",
+      "product_category_relevance": "AI Creative & Art (Tools: midjourney, canva-pro, leonardo-ai)",
+      "existing_target_urls": [
+        "categories/creative.html",
+        "tools/midjourney.html",
+        "blog/how-to-pay-for-midjourney-in-pakistan.html"
+      ],
+      "cannibalization_risk": "Low. Category hub provides broad catalog; dedicated guide handles local payment.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 18,
+        "audience_relevance": 15,
+        "competitor_content_gap": 14,
+        "trend_freshness": 10,
+        "original_research_potential": 14,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 96,
+      "score_threshold_passed": true,
+      "recommended_action": "OPTIMIZE_HUB_PAGE",
+      "target_canonical_path": "categories/creative.html",
+      "editorial_rationale": "High-converting visual tool category with massive organic demand among creative professionals."
+    },
+    {
+      "topic_id": "TOPIC-011",
+      "primary_keyword": "ai writing tools",
+      "secondary_keywords": [
+        "best ai writing software",
+        "ai copywriting tools for agencies",
+        "quillbot vs jasper ai",
+        "ai humanizer and paraphrasing tools pakistan"
+      ],
+      "long_tail_queries": [
+        "best ai writing tools for academic and content writing in pakistan",
+        "how to use quillbot premium with chatgpt for fiverr articles",
+        "ai writing tools that bypass ai detectors in pakistan"
+      ],
+      "question_based_queries": [
+        "Which AI writing tool produces the most natural English?",
+        "Is QuillBot Premium worth buying for Pakistani students and freelancers?",
+        "What are the best AI copywriting assistants for eCommerce in PKR?"
+      ],
+      "related_entities": [
+        "QuillBot Premium",
+        "Jasper AI",
+        "Copy.ai",
+        "Grammarly Pro",
+        "Notion AI",
+        "ChatGPT Plus"
+      ],
+      "search_intent": "Commercial / Product-specific",
+      "keyword_strategy_type": "Product-specific",
+      "language": "English",
+      "country_market_relevance": "Students, Content Writers, Academic Researchers, Marketers in Pakistan",
+      "existing_ranking_opportunities": "QuillBot query already detected in live GSC telemetry",
+      "competitor_coverage": "Competitors offer shared logins with frequent session timeouts and no private data privacy",
+      "product_category_relevance": "AI Writing & Text (Tools: quillbot-premium, jasper-ai, copy-ai)",
+      "existing_target_urls": [
+        "categories/writing.html",
+        "tools/quillbot-premium.html"
+      ],
+      "cannibalization_risk": "Low. Writing category hub organizes tools; tool pages handle activation.",
+      "scoring_breakdown": {
+        "search_opportunity": 14,
+        "gsc_bing_opportunity": 17,
+        "audience_relevance": 15,
+        "competitor_content_gap": 13,
+        "trend_freshness": 9,
+        "original_research_potential": 13,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 91,
+      "score_threshold_passed": true,
+      "recommended_action": "OPTIMIZE_HUB_PAGE",
+      "target_canonical_path": "categories/writing.html",
+      "editorial_rationale": "Consistent volume evergreen search queries with rapid checkout conversion among Pakistani writers."
+    },
+    {
+      "topic_id": "TOPIC-012",
+      "primary_keyword": "chatgpt subscriptions",
+      "secondary_keywords": [
+        "chatgpt plus subscription pakistan",
+        "openai chatgpt pro pricing pkr",
+        "buy chatgpt plus with easypaisa",
+        "chatgpt 4o subscription activation"
+      ],
+      "long_tail_queries": [
+        "how to get chatgpt plus subscription in pakistan with sadapay or nayapay",
+        "chatgpt team subscription for pakistani software companies",
+        "official vs reseller chatgpt subscription in pakistan"
+      ],
+      "question_based_queries": [
+        "How do I subscribe to ChatGPT Plus in Pakistan without a credit card?",
+        "Can I buy a monthly ChatGPT subscription in PKR?",
+        "What is the difference between ChatGPT Plus and ChatGPT Pro?"
+      ],
+      "related_entities": [
+        "OpenAI",
+        "ChatGPT Plus",
+        "ChatGPT Pro",
+        "GPT-4o",
+        "OpenAI o1",
+        "SadaPay",
+        "EasyPaisa"
+      ],
+      "search_intent": "Product-specific / Transactional",
+      "keyword_strategy_type": "Product-specific",
+      "language": "English",
+      "country_market_relevance": "Pakistan Nationwide, Software Engineers, Students, Business Owners",
+      "existing_ranking_opportunities": "High impressions across all OpenAI related terms in GSC and Bing",
+      "competitor_coverage": "Competitors sell risky shared accounts with session logouts; AIDigiTools provides verified concierge",
+      "product_category_relevance": "AI Coding & Dev (Tools: chatgpt-plus, chatgpt-team)",
+      "existing_target_urls": [
+        "tools/chatgpt-plus.html",
+        "categories/coding.html"
+      ],
+      "cannibalization_risk": "Low. Core product landing page is already established.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 20,
+        "audience_relevance": 15,
+        "competitor_content_gap": 15,
+        "trend_freshness": 10,
+        "original_research_potential": 14,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 99,
+      "score_threshold_passed": true,
+      "recommended_action": "UPDATE_EXISTING_PAGE",
+      "target_canonical_path": "tools/chatgpt-plus.html",
+      "editorial_rationale": "#1 most requested AI subscription in Pakistan. Direct commercial and transactional engine."
+    },
+    {
+      "topic_id": "TOPIC-013",
+      "primary_keyword": "gemini ai tools",
+      "secondary_keywords": [
+        "gemini advanced subscription pakistan",
+        "google one ai premium pkr",
+        "gemini 1.5 pro vs gemini 2.0 flash",
+        "google gemini tools for workspace"
+      ],
+      "long_tail_queries": [
+        "how to get gemini advanced subscription in pakistan with easypaisa",
+        "gemini advanced 2tb storage price in pakistan rupees",
+        "google gemini vs chatgpt plus for pakistani researchers"
+      ],
+      "question_based_queries": [
+        "How much does Gemini Advanced cost in Pakistan PKR?",
+        "Is Gemini Advanced better than ChatGPT Plus?",
+        "How can I pay for Google One AI Premium without an international card?"
+      ],
+      "related_entities": [
+        "Google DeepMind",
+        "Gemini Advanced",
+        "Gemini 2.0",
+        "Google One AI Premium",
+        "Google Workspace",
+        "NotebookLM"
+      ],
+      "search_intent": "Product-specific / Informational & Transactional",
+      "keyword_strategy_type": "Product-specific",
+      "language": "English",
+      "country_market_relevance": "Pakistani Academics, Enterprise Workers, Android Users, Developers",
+      "existing_ranking_opportunities": "Growing impressions for Google Gemini and Google One queries",
+      "competitor_coverage": "Almost zero coverage from Pakistani resellers regarding Google One AI tier activations",
+      "product_category_relevance": "AI Assistants & Productivity (Tool: gemini-advanced)",
+      "existing_target_urls": [
+        "tools/gemini-advanced.html",
+        "categories/business.html"
+      ],
+      "cannibalization_risk": "Low. Dedicated tool landing page captures direct transactional searches.",
+      "scoring_breakdown": {
+        "search_opportunity": 14,
+        "gsc_bing_opportunity": 18,
+        "audience_relevance": 15,
+        "competitor_content_gap": 15,
+        "trend_freshness": 10,
+        "original_research_potential": 13,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 95,
+      "score_threshold_passed": true,
+      "recommended_action": "UPDATE_EXISTING_PAGE",
+      "target_canonical_path": "tools/gemini-advanced.html",
+      "editorial_rationale": "Rapidly growing Google ecosystem query with massive multimodal appeal and high retention."
+    },
+    {
+      "topic_id": "TOPIC-014",
+      "primary_keyword": "claude ai tools",
+      "secondary_keywords": [
+        "claude pro subscription pakistan",
+        "anthropic claude 3.5 sonnet pkr",
+        "claude code vs cursor ai",
+        "claude pro easypaisa activation"
+      ],
+      "long_tail_queries": [
+        "how to buy claude pro subscription in pakistan with nayapay or sadapay",
+        "claude 3.5 sonnet coding limits and usage caps in pakistan",
+        "is claude pro worth it for full stack python developers in pakistan"
+      ],
+      "question_based_queries": [
+        "How do I subscribe to Claude Pro in Pakistan?",
+        "Why is Claude Pro better than ChatGPT for coding?",
+        "What is the price of Claude Pro in PKR with 30-day warranty?"
+      ],
+      "related_entities": [
+        "Anthropic",
+        "Claude Pro",
+        "Claude 3.5 Sonnet",
+        "Claude 3.5 Haiku",
+        "Claude Opus",
+        "Artifacts"
+      ],
+      "search_intent": "Product-specific / Informational & Transactional",
+      "keyword_strategy_type": "Product-specific",
+      "language": "English",
+      "country_market_relevance": "Software Developers, Data Scientists, Prompt Engineers in Pakistan",
+      "existing_ranking_opportunities": "Claude query impressions increasing 3x month-over-month",
+      "competitor_coverage": "Competitors offer blocked web proxies; AIDigiTools offers direct verified seats",
+      "product_category_relevance": "AI Coding & Dev (Tools: claude-pro, claude-artifacts)",
+      "existing_target_urls": [
+        "tools/claude-pro.html",
+        "blog/claude-artifacts-practical-guide-freelancers.html",
+        "blog/claude-3-5-sonnet-vs-chatgpt-plus-benchmark-pakistan.html"
+      ],
+      "cannibalization_risk": "Low. Dedicated tool page captures transactional intent; blogs capture technical intent.",
+      "scoring_breakdown": {
+        "search_opportunity": 15,
+        "gsc_bing_opportunity": 19,
+        "audience_relevance": 15,
+        "competitor_content_gap": 15,
+        "trend_freshness": 10,
+        "original_research_potential": 14,
+        "business_relevance": 10
+      },
+      "total_opportunity_score": 98,
+      "score_threshold_passed": true,
+      "recommended_action": "UPDATE_EXISTING_PAGE",
+      "target_canonical_path": "tools/claude-pro.html",
+      "editorial_rationale": "Highest-rated coding and reasoning LLM worldwide. Critical conversion magnet for technical Pakistani audience."
     }
   ]
 }

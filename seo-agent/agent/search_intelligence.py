@@ -7,11 +7,24 @@ MULTI-SOURCE SEARCH INTELLIGENCE
 import os
 import json
 import re
+import time
+import socket
 import urllib.request
 import urllib.parse
 import urllib.error
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+
+# Ensure IPv4 is preferred for Bing to prevent ISP IPv6 routing resets
+try:
+    _orig_getaddrinfo = socket.getaddrinfo
+    def _ipv4_bing_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+        if host and "bing.com" in str(host):
+            family = socket.AF_INET
+        return _orig_getaddrinfo(host, port, family, type, proto, flags)
+    socket.getaddrinfo = _ipv4_bing_getaddrinfo
+except Exception:
+    pass
 from typing import Dict, Any, Optional, List
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
@@ -21,7 +34,12 @@ OUTPUT_REPORT_PATH = ROOT_DIR / "data" / "search_intelligence_latest.json"
 class SearchIntelligenceAggregator:
     def __init__(self):
         self.site_url = BASE_URL
-        self.gsc_key = os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
+        gsc_key = os.environ.get("GSC_SERVICE_ACCOUNT_KEY", "").strip()
+        if not gsc_key:
+            default_sa = ROOT_DIR / "credentials" / "service_account.json"
+            if default_sa.is_file():
+                gsc_key = str(default_sa)
+        self.gsc_key = gsc_key
         self.ga4_prop_id = os.environ.get("GA4_PROPERTY_ID", "561800932").strip()
         self.bing_key = (os.environ.get("BING_WEBMASTER_API_KEY") or os.environ.get("BING_API_KEY") or "").strip()
         self.pagespeed_key = os.environ.get("PAGESPEED_API_KEY", "").strip()
@@ -244,27 +262,39 @@ class SearchIntelligenceAggregator:
                 "notes": "BING_WEBMASTER_API_KEY not configured."
             }
 
-        try:
-            quota_url = f"https://ssl.bing.com/webmaster/api.svc/json/GetUrlSubmissionQuota?siteUrl={urllib.parse.quote_plus(self.site_url)}&apikey={urllib.parse.quote_plus(self.bing_key)}"
-            req = urllib.request.Request(quota_url, headers={"User-Agent": "AIDigiTools-Search-Intel/1.0"})
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-                d = data.get("d", {})
-                daily = d.get("DailyQuota", 100)
+        quota_url = f"https://ssl.bing.com/webmaster/api.svc/json/GetUrlSubmissionQuota?siteUrl={urllib.parse.quote_plus(self.site_url)}&apikey={urllib.parse.quote_plus(self.bing_key)}"
+        last_err = None
+        for attempt in range(3):
+            try:
+                req = urllib.request.Request(
+                    quota_url,
+                    headers={
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AIDigiTools-Search-Intel/1.0",
+                        "Accept": "application/json",
+                        "Connection": "close"
+                    }
+                )
+                with urllib.request.urlopen(req, timeout=12) as resp:
+                    data = json.loads(resp.read().decode("utf-8"))
+                    d = data.get("d", {})
+                    daily = d.get("DailyQuota", 100)
 
-            provenance["status"] = "CONNECTED"
-            return {
-                "provenance": provenance,
-                "daily_submission_quota": daily,
-                "notes": f"Bing Webmaster API active. Daily submission quota: {daily} URLs."
-            }
-        except Exception as e:
-            provenance["status"] = f"ERROR: {str(e)}"
-            return {
-                "provenance": provenance,
-                "daily_submission_quota": "N/A",
-                "notes": f"Bing API notice: {e}"
-            }
+                provenance["status"] = "CONNECTED"
+                return {
+                    "provenance": provenance,
+                    "daily_submission_quota": daily,
+                    "notes": f"Bing Webmaster API active. Daily submission quota: {daily} URLs."
+                }
+            except Exception as e:
+                last_err = e
+                time.sleep(1)
+
+        provenance["status"] = f"ERROR: {str(last_err)}"
+        return {
+            "provenance": provenance,
+            "daily_submission_quota": "N/A",
+            "notes": f"Bing API notice: {last_err}"
+        }
 
     def fetch_trending_search_queries(self, seed_topics: Optional[List[str]] = None) -> Dict[str, Any]:
         """

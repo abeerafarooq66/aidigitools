@@ -1,5 +1,5 @@
 # AIDigiTools Autonomous Content Intelligence & Publishing Report
-- **Execution Timestamp**: 2026-11-11 09:47:05 PKT
+- **Execution Timestamp**: 2026-11-18 20:08:27 PKT
 - **Execution Status**: GENERATION_FAILED
 - **Operational Phase**: None
 - **Autonomous Active**: False
@@ -7,11 +7,11 @@
 
 ## 1. Candidate Research & Cadence
 - **Research Decision**: TOPIC_SELECTED
-- **Selected Topic**: TOPIC-002 (claude 3.5 sonnet artifacts guide)
+- **Selected Topic**: None (test failed generation)
 
 ## 2. Gemini Generation Telemetry
-- **Generation Method**: GEMINI_API
-- **Model Used**: models/gemini-flash-latest
+- **Generation Method**: None
+- **Model Used**: None
 - **Gemini Generated**: False
 
 ## 3. Quality Gate Evaluation
@@ -28,4 +28,4 @@
 - **Sitemap URL Count**: N/A
 
 ## 5. Summary Explanation
-> Article generation halted: Gemini article generation failed: HTML validation failed: Missing standard HTML document root tags., Missing comparison table (<table>)., Missing localized PKR pricing.. CRITICAL INVARIANT: Heuristic fallback content must never publish to production.
+> Article generation halted: HTTP 404: Model not found. CRITICAL INVARIANT: Heuristic fallback content must never publish to production.

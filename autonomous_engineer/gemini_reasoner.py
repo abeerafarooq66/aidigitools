@@ -9,7 +9,7 @@ class GeminiReasoner:
     """Leverages Gemini Flash to analyze site audit telemetry, diagnose root causes, and plan safe repairs."""
 
     def __init__(self, api_key: str = None, model: str = DEFAULT_GEMINI_MODEL):
-        self.api_key = api_key or os.environ.get("GEMINI_API_KEY", "").strip()
+        self.api_key = api_key if api_key is not None else os.environ.get("GEMINI_API_KEY", "").strip()
         self.model = model
 
     def get_available_models(self) -> List[str]:
@@ -41,20 +41,20 @@ class GeminiReasoner:
     def _call_gemini_rest_api(self, prompt: str) -> str:
         """Invokes the official Google Generative Language API directly over HTTPS without external dependencies."""
         discovered = self.get_available_models()
-        # Prioritize discovered flash models if available
-        flash_discovered = [m for m in discovered if "flash" in m]
+        # Prioritize discovered stable flash text models
+        flash_discovered = [
+            m for m in discovered 
+            if "flash" in m and "tts" not in m and "audio" not in m
+        ]
         
         models_to_try = []
-        if flash_discovered:
-            models_to_try.extend(flash_discovered)
-        if self.model not in models_to_try:
-            models_to_try.append(self.model)
-        if FALLBACK_GEMINI_MODEL not in models_to_try:
-            models_to_try.append(FALLBACK_GEMINI_MODEL)
-        if "gemini-2.0-flash" not in models_to_try:
-            models_to_try.append("gemini-2.0-flash")
-        if "gemini-1.5-flash" not in models_to_try:
-            models_to_try.append("gemini-1.5-flash")
+        # Prefer responsive flash-lite and 3.1 models first
+        for preferred in [self.model, FALLBACK_GEMINI_MODEL, "gemini-flash-lite-latest", "gemini-3.1-flash-lite-preview", "gemma-4-26b-a4b-it"]:
+            if preferred and preferred not in models_to_try:
+                models_to_try.append(preferred)
+        for m in flash_discovered:
+            if m not in models_to_try:
+                models_to_try.append(m)
 
         last_error = None
         for model in models_to_try:

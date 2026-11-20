@@ -1,0 +1,152 @@
+======================================================================
+   AIDIGITOOLS - WHATSAPP BUSINESS SETUP & CATALOGUE GUIDE
+======================================================================
+
+📌 STEP 1: WHATSAPP BUSINESS PROFILE SETTINGS
+--------------------------------------------------
+• Profile Picture (DP): Use file '01_WhatsApp_Profile_Picture.png'
+• Cover Photo: Use file '02_WhatsApp_Cover_Banner.png'
+• Business Name: AIDigiTools
+• Category: Computers & Technology (ya Shopping & Retail / Software)
+• Description:
+--------------------------------------------------
+Pakistan's #1 Trusted AI Software & Subscription Store 💎
+
+Instant activation for ChatGPT Plus, Claude Pro, Midjourney, Canva Pro, Cursor, Runway, Adobe All Apps & 49+ AI tools.
+
+⚡ 15-Minute Instant Digital Delivery
+🛡️ 100% 30-Day Replacement Warranty
+💳 Payments: EasyPaisa | JazzCash | SadaPay | NayaPay | Bank IBFT | Wise | Crypto USDT
+
+🌐 Official Website: https://aidigitools.tech/
+--------------------------------------------------
+• Business Address: Online Digital Desk, Islamabad, Pakistan, 44000
+• Business Hours: Open 24 hours
+• Email: abeerafarooq731@gmail.com (ya support@aidigitools.tech)
+• Website: https://aidigitools.tech/
+
+======================================================================
+🛍️ STEP 2: CATALOGUE PRODUCTS (Top 15 Tools to Add)
+Folder: 'Catalogue_Products' mein har tool ki image save hai.
+======================================================================
+
+[01] OpenAI ChatGPT Plus Subscription — 1 Month Access
+• Image File: Catalogue_Products/01_chatgpt_plus.png
+• Item Name: OpenAI ChatGPT Plus Subscription
+• Price: 2300 PKR
+• Description: Buy ChatGPT Plus in Pakistan with EasyPaisa, JazzCash, or SadaPay. Access GPT-5/GPT-6 models, Canvas, Advanced Voice, and 15m delivery via WhatsApp.
+• Link: https://aidigitools.tech/tools/chatgpt-plus.html
+--------------------------------------------------
+
+[02] Anthropic Claude Pro Subscription — 1 Month Access
+• Image File: Catalogue_Products/02_claude_pro.png
+• Item Name: Anthropic Claude Pro Subscription
+• Price: 2500 PKR
+• Description: Buy Claude Pro in Pakistan. Pay via EasyPaisa, JazzCash, or SadaPay. Unlocks Claude Sonnet 5.5, Projects, 200K context, and 15-minute WhatsApp delivery.
+• Link: https://aidigitools.tech/tools/claude-pro.html
+--------------------------------------------------
+
+[03] Canva Canva Pro Subscription — 1 Month Access
+• Image File: Catalogue_Products/03_canva_pro.png
+• Item Name: Canva Canva Pro Subscription
+• Price: 600 PKR
+• Description: Buy Canva Pro subscription in Pakistan. Pay via EasyPaisa, JazzCash, SadaPay, or Raast. Full access to Magic Studio, 100M+ assets, and 15m WhatsApp delivery.
+• Link: https://aidigitools.tech/tools/canva-pro.html
+--------------------------------------------------
+
+[04] Midjourney Midjourney Subscription — 1 Month Access
+• Image File: Catalogue_Products/04_midjourney.png
+• Item Name: Midjourney Midjourney Subscription
+• Price: 2800 PKR
+• Description: Buy Midjourney V8 in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unrestricted fast GPU hours, web editor access, and 15m delivery via WhatsApp.
+• Link: https://aidigitools.tech/tools/midjourney.html
+--------------------------------------------------
+
+[05] Anysphere Cursor Pro Subscription — 1 Month Access
+• Image File: Catalogue_Products/05_cursor_pro.png
+• Item Name: Anysphere Cursor Pro Subscription
+• Price: 3800 PKR
+• Description: Buy Cursor Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited fast completions, Composer multi-file editing, and 15m WhatsApp delivery.
+• Link: https://aidigitools.tech/tools/cursor-pro.html
+--------------------------------------------------
+
+[06] ByteDance CapCut Pro Subscription — 1 Month Access
+• Image File: Catalogue_Products/06_capcut_pro.png
+• Item Name: ByteDance CapCut Pro Subscription
+• Price: 950 PKR
+• Description: Get CapCut Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlocks 4K 60fps exports, AI auto-captions, cloud space, and 15m delivery via WhatsApp.
+• Link: https://aidigitools.tech/tools/capcut-pro.html
+--------------------------------------------------
+
+[07] Adobe Adobe Creative Cloud All Apps Subscription — 1 Month Access
+• Image File: Catalogue_Products/07_adobe_creative_cloud.png
+• Item Name: Adobe Adobe Creative Cloud All Apps Subscription
+• Price: 1400 PKR
+• Description: Get Adobe Creative Cloud All Apps in Pakistan with EasyPaisa, JazzCash, and SadaPay. 20+ professional creative apps, Firefly credits, and 15m WhatsApp delivery.
+• Link: https://aidigitools.tech/tools/adobe-creative-cloud.html
+--------------------------------------------------
+
+[08] Runway Runway AI Video Subscription — 1 Month Access
+• Image File: Catalogue_Products/08_runway_gen3.png
+• Item Name: Runway Runway AI Video Subscription
+• Price: 1800 PKR
+• Description: Buy Runway AI Video in Pakistan with EasyPaisa, JazzCash, or SadaPay. Gen-4/Gen-3 generation, motion brush, Act-Two, and 15m delivery via WhatsApp.
+• Link: https://aidigitools.tech/tools/runway-gen3.html
+--------------------------------------------------
+
+[09] ElevenLabs ElevenLabs Creator Subscription — 1 Month Access
+• Image File: Catalogue_Products/09_elevenlabs_creator.png
+• Item Name: ElevenLabs ElevenLabs Creator Subscription
+• Price: 2800 PKR
+• Description: Buy ElevenLabs Creator in Pakistan with EasyPaisa, JazzCash, or SadaPay. 100K characters, professional voice cloning, and 15m delivery via WhatsApp.
+• Link: https://aidigitools.tech/tools/elevenlabs-creator.html
+--------------------------------------------------
+
+[10] Perplexity AI Perplexity Pro Subscription — 1 Month Access
+• Image File: Catalogue_Products/10_perplexity_pro.png
+• Item Name: Perplexity AI Perplexity Pro Subscription
+• Price: 2200 PKR
+• Description: Buy Perplexity Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited Pro searches, Claude Sonnet 5.5 switching, and 15m WhatsApp setup.
+• Link: https://aidigitools.tech/tools/perplexity-pro.html
+--------------------------------------------------
+
+[11] GitHub GitHub Copilot Individual Subscription — 1 Month Access
+• Image File: Catalogue_Products/11_github_copilot.png
+• Item Name: GitHub GitHub Copilot Individual Subscription
+• Price: 1500 PKR
+• Description: Buy GitHub Copilot Individual in Pakistan with EasyPaisa, JazzCash, or SadaPay. In-editor autocomplete, multi-model chat, and 15m WhatsApp setup.
+• Link: https://aidigitools.tech/tools/github-copilot.html
+--------------------------------------------------
+
+[12] DeepSeek DeepSeek Platform Subscription — 1 Month Access
+• Image File: Catalogue_Products/12_deepseek_pro.png
+• Item Name: DeepSeek DeepSeek Platform Subscription
+• Price: 1100 PKR
+• Description: Inquire about DeepSeek Platform and API compute access in Pakistan. DeepSeek-R1 reasoning, high throughput, and domestic PKR payment support.
+• Link: https://aidigitools.tech/tools/deepseek-pro.html
+--------------------------------------------------
+
+[13] Notion Labs Notion Plus with Notion AI Subscription — 1 Month Access
+• Image File: Catalogue_Products/13_notion_business.png
+• Item Name: Notion Labs Notion Plus with Notion AI Subscription
+• Price: 1400 PKR
+• Description: Buy Notion Plus with Notion AI in Pakistan via EasyPaisa, JazzCash, or SadaPay. Unlimited blocks, AI search, team collaboration, and 15m delivery.
+• Link: https://aidigitools.tech/tools/notion-business.html
+--------------------------------------------------
+
+[14] Kuaishou Kling AI Subscription — 1 Month Access
+• Image File: Catalogue_Products/14_kling_ai.png
+• Item Name: Kuaishou Kling AI Subscription
+• Price: 700 PKR
+• Description: Buy Kling AI Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. 10s continuous generation, motion brush, 4K rendering, and 15m WhatsApp delivery.
+• Link: https://aidigitools.tech/tools/kling-ai.html
+--------------------------------------------------
+
+[15] Envato Envato Elements Subscription — 1 Month Access
+• Image File: Catalogue_Products/15_envato_elements.png
+• Item Name: Envato Envato Elements Subscription
+• Price: 2600 PKR
+• Description: Buy Envato Elements in Pakistan via EasyPaisa, JazzCash, or SadaPay. Unlimited downloads of stock footage, graphic templates, and 15m WhatsApp setup.
+• Link: https://aidigitools.tech/tools/envato-elements.html
+--------------------------------------------------
+

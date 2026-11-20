@@ -1,0 +1,2185 @@
+{
+  "timestamp_pkt": "2026-11-18 19:48:46 PKT",
+  "timestamp_utc": "2026-11-18 14:48:46 UTC",
+  "domain": "https://aidigitools.tech",
+  "status": "OPERATIONAL_8_STAGE_CYCLE_HEALTHY",
+  "metrics": {
+    "total_clicks": 0,
+    "total_impressions": 118,
+    "average_position": 58.9,
+    "average_ctr": 0.0,
+    "ranked_queries_count": 76
+  },
+  "search_telemetry": {
+    "total_clicks": 0,
+    "total_impressions": 118,
+    "average_position": 58.9,
+    "average_ctr": 0.0,
+    "ranked_queries": 76
+  },
+  "backlink_telemetry": {
+    "total_backlinks": 2,
+    "total_referring_domains": 2,
+    "dofollow_count": 1,
+    "nofollow_count": 1,
+    "active_count": 2,
+    "lost_count": 0,
+    "broken_target_count": 0,
+    "toxic_count": 0
+  },
+  "research": {
+    "status": "COMPLETED",
+    "executed_at": "2026-11-18 19:48:39 PKT",
+    "gsc_connected": true,
+    "total_queries_ranked": 76,
+    "queries": [
+      {
+        "query": "\"easypaisa\"",
+        "page": "https://aidigitools.tech/deals.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 60,
+        "ctr": 0
+      },
+      {
+        "query": "\"easypaisa\"",
+        "page": "https://aidigitools.tech/policies.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 61,
+        "ctr": 0
+      },
+      {
+        "query": "\"easypaisa\"",
+        "page": "https://aidigitools.tech/tools/chatgpt-codex.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 64,
+        "ctr": 0
+      },
+      {
+        "query": "\"easypaisa\"",
+        "page": "https://aidigitools.tech/tools/claude-artifacts.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 73,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/categories/coding.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 93,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/categories/vpn.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 63,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 93,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 68,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/policies.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 77,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/tools/cursor-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 72,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/tools/google-veo.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 68,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/tools/midjourney.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 77,
+        "ctr": 0
+      },
+      {
+        "query": "\"jazzcash\"",
+        "page": "https://aidigitools.tech/tools/quillbot-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 77,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/about.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 56,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/affiliate-disclosure.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 42,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/categories/coding.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 54.5,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/categories/vpn.html",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 57.8,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/contact.html",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 48.7,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/deals.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 18,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 46,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/policies.html",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 59.3,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/cursor-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 64,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/google-veo.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 83.5,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/midjourney.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 22,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/netflix-premium.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 61.5,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/perplexity-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 73,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/quillbot-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 85,
+        "ctr": 0
+      },
+      {
+        "query": "\"nayapay\"",
+        "page": "https://aidigitools.tech/tools/runway-gen3.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 84,
+        "ctr": 0
+      },
+      {
+        "query": "\"quillbot\"",
+        "page": "https://aidigitools.tech/tools/quillbot-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 66,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/about.html",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 71.8,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/best/best-ai-video-generators.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 81,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/blog.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 97,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/categories/coding.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 48.5,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/categories/vpn.html",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 40.5,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 90,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/deals.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 40.5,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 20,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/policies.html",
+        "clicks": 0,
+        "impressions": 6,
+        "position": 62.8,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/chatgpt-codex.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 15,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/claude-artifacts.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 26,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/cursor-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 39,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/google-veo.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 32,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/leonardo-ai.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 82,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/midjourney.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 13,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\"",
+        "page": "https://aidigitools.tech/tools/netflix-premium.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 49,
+        "ctr": 0
+      },
+      {
+        "query": "\"sadapay\" * * * * *",
+        "page": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 72,
+        "ctr": 0
+      },
+      {
+        "query": "adobe illustrator price in pakistan",
+        "page": "https://aidigitools.tech/tools/adobe-creative-cloud.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 61,
+        "ctr": 0
+      },
+      {
+        "query": "ai avatar pricing india",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 36,
+        "ctr": 0
+      },
+      {
+        "query": "ai code editor alipay cheap",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 99,
+        "ctr": 0
+      },
+      {
+        "query": "ai plugin pricing",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 38,
+        "ctr": 0
+      },
+      {
+        "query": "ai tool 0.00 90 0 0 0 0",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 50,
+        "ctr": 0
+      },
+      {
+        "query": "ai45813",
+        "page": "https://aidigitools.tech/deals.html",
+        "clicks": 0,
+        "impressions": 6,
+        "position": 9,
+        "ctr": 0
+      },
+      {
+        "query": "aimegapro pricing",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 86,
+        "ctr": 0
+      },
+      {
+        "query": "best vpn for pakistan",
+        "page": "https://aidigitools.tech/categories/vpn.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 7,
+        "ctr": 0
+      },
+      {
+        "query": "buy cursor",
+        "page": "https://aidigitools.tech/tools/cursor-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 10,
+        "ctr": 0
+      },
+      {
+        "query": "capcut pro",
+        "page": "https://aidigitools.tech/tools/capcut-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 131,
+        "ctr": 0
+      },
+      {
+        "query": "capcut pro price in pakistan",
+        "page": "https://aidigitools.tech/tools/capcut-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 88,
+        "ctr": 0
+      },
+      {
+        "query": "chatgpt plus price in pakistan",
+        "page": "https://aidigitools.tech/tools/chatgpt-plus.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 97,
+        "ctr": 0
+      },
+      {
+        "query": "cursor pro",
+        "page": "https://aidigitools.tech/tools/cursor-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 98,
+        "ctr": 0
+      },
+      {
+        "query": "diskon claude pro",
+        "page": "https://aidigitools.tech/tools/claude-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 62,
+        "ctr": 0
+      },
+      {
+        "query": "gitgut ai",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 96,
+        "ctr": 0
+      },
+      {
+        "query": "intitle:turnitin -turnitin.com \"premium\" \"warranty\"",
+        "page": "https://aidigitools.tech/tools/turnitin-student.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 24,
+        "ctr": 0
+      },
+      {
+        "query": "is hiclip free",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 77.5,
+        "ctr": 0
+      },
+      {
+        "query": "jibyte ai",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 81,
+        "ctr": 0
+      },
+      {
+        "query": "netflix 4k screen price in pakistan",
+        "page": "https://aidigitools.tech/tools/netflix-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 62,
+        "ctr": 0
+      },
+      {
+        "query": "runway pika",
+        "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 62.5,
+        "ctr": 0
+      },
+      {
+        "query": "runway vs pika",
+        "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 50,
+        "ctr": 0
+      },
+      {
+        "query": "runway или pika",
+        "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 71,
+        "ctr": 0
+      },
+      {
+        "query": "spotify premium",
+        "page": "https://aidigitools.tech/tools/spotify-premium.html",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 57.5,
+        "ctr": 0
+      },
+      {
+        "query": "spotify premium buy",
+        "page": "https://aidigitools.tech/tools/spotify-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 6,
+        "ctr": 0
+      },
+      {
+        "query": "spotify premium pakistan",
+        "page": "https://aidigitools.tech/tools/spotify-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 46,
+        "ctr": 0
+      },
+      {
+        "query": "spotify.com pk",
+        "page": "https://aidigitools.tech/tools/spotify-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 85,
+        "ctr": 0
+      },
+      {
+        "query": "timeweb vpn",
+        "page": "https://aidigitools.tech/tools/perplexity-pro.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 28,
+        "ctr": 0
+      },
+      {
+        "query": "top ai tools 0.00 44 42 0 0 0",
+        "page": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 43,
+        "ctr": 0
+      },
+      {
+        "query": "youtube premium family plan pakistan",
+        "page": "https://aidigitools.tech/tools/youtube-premium.html",
+        "clicks": 0,
+        "impressions": 1,
+        "position": 11,
+        "ctr": 0
+      },
+      {
+        "query": "пика ранвей",
+        "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 58,
+        "ctr": 0
+      }
+    ],
+    "intent_buckets": {
+      "informational": [],
+      "commercial": [
+        {
+          "query": "runway vs pika",
+          "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 50,
+          "ctr": 0
+        }
+      ],
+      "transactional": [
+        {
+          "query": "ai code editor alipay cheap",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 99,
+          "ctr": 0
+        },
+        {
+          "query": "buy cursor",
+          "page": "https://aidigitools.tech/tools/cursor-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 10,
+          "ctr": 0
+        },
+        {
+          "query": "spotify premium buy",
+          "page": "https://aidigitools.tech/tools/spotify-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 6,
+          "ctr": 0
+        }
+      ],
+      "product_specific": [
+        {
+          "query": "\"quillbot\"",
+          "page": "https://aidigitools.tech/tools/quillbot-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 66,
+          "ctr": 0
+        },
+        {
+          "query": "ai avatar pricing india",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 36,
+          "ctr": 0
+        },
+        {
+          "query": "ai plugin pricing",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 38,
+          "ctr": 0
+        },
+        {
+          "query": "ai tool 0.00 90 0 0 0 0",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 50,
+          "ctr": 0
+        },
+        {
+          "query": "ai45813",
+          "page": "https://aidigitools.tech/deals.html",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 9,
+          "ctr": 0
+        },
+        {
+          "query": "aimegapro pricing",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 86,
+          "ctr": 0
+        },
+        {
+          "query": "capcut pro",
+          "page": "https://aidigitools.tech/tools/capcut-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 131,
+          "ctr": 0
+        },
+        {
+          "query": "cursor pro",
+          "page": "https://aidigitools.tech/tools/cursor-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 98,
+          "ctr": 0
+        },
+        {
+          "query": "diskon claude pro",
+          "page": "https://aidigitools.tech/tools/claude-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 62,
+          "ctr": 0
+        },
+        {
+          "query": "gitgut ai",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 96,
+          "ctr": 0
+        },
+        {
+          "query": "intitle:turnitin -turnitin.com \"premium\" \"warranty\"",
+          "page": "https://aidigitools.tech/tools/turnitin-student.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 24,
+          "ctr": 0
+        },
+        {
+          "query": "is hiclip free",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 77.5,
+          "ctr": 0
+        },
+        {
+          "query": "jibyte ai",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 81,
+          "ctr": 0
+        },
+        {
+          "query": "runway pika",
+          "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 62.5,
+          "ctr": 0
+        },
+        {
+          "query": "runway или pika",
+          "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 71,
+          "ctr": 0
+        },
+        {
+          "query": "spotify premium",
+          "page": "https://aidigitools.tech/tools/spotify-premium.html",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 57.5,
+          "ctr": 0
+        },
+        {
+          "query": "spotify.com pk",
+          "page": "https://aidigitools.tech/tools/spotify-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 85,
+          "ctr": 0
+        },
+        {
+          "query": "timeweb vpn",
+          "page": "https://aidigitools.tech/tools/perplexity-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 28,
+          "ctr": 0
+        },
+        {
+          "query": "top ai tools 0.00 44 42 0 0 0",
+          "page": "https://aidigitools.tech/",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 43,
+          "ctr": 0
+        },
+        {
+          "query": "пика ранвей",
+          "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 58,
+          "ctr": 0
+        }
+      ],
+      "pakistan_localized": [
+        {
+          "query": "\"easypaisa\"",
+          "page": "https://aidigitools.tech/deals.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 60,
+          "ctr": 0
+        },
+        {
+          "query": "\"easypaisa\"",
+          "page": "https://aidigitools.tech/policies.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 61,
+          "ctr": 0
+        },
+        {
+          "query": "\"easypaisa\"",
+          "page": "https://aidigitools.tech/tools/chatgpt-codex.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64,
+          "ctr": 0
+        },
+        {
+          "query": "\"easypaisa\"",
+          "page": "https://aidigitools.tech/tools/claude-artifacts.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 73,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/categories/coding.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 93,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/categories/vpn.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 63,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 93,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 68,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/policies.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 77,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/tools/cursor-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 72,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/tools/google-veo.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 68,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/tools/midjourney.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 77,
+          "ctr": 0
+        },
+        {
+          "query": "\"jazzcash\"",
+          "page": "https://aidigitools.tech/tools/quillbot-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 77,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/about.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 56,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/affiliate-disclosure.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 42,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/categories/coding.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 54.5,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/categories/vpn.html",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 57.8,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/contact.html",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 48.7,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/deals.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 18,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 46,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/policies.html",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 59.3,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/cursor-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 64,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/google-veo.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 83.5,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/midjourney.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 22,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/netflix-premium.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 61.5,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/perplexity-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 73,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/quillbot-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 85,
+          "ctr": 0
+        },
+        {
+          "query": "\"nayapay\"",
+          "page": "https://aidigitools.tech/tools/runway-gen3.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 84,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/about.html",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 71.8,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/best/best-ai-video-generators.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 81,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/blog.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 97,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/categories/coding.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 48.5,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/categories/vpn.html",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 40.5,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/compare/runway-vs-pika.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 90,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/deals.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 40.5,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 20,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/policies.html",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 62.8,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/chatgpt-codex.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 15,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/claude-artifacts.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 26,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/cursor-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 39,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/google-veo.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 32,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/leonardo-ai.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 82,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/midjourney.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 13,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\"",
+          "page": "https://aidigitools.tech/tools/netflix-premium.html",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 49,
+          "ctr": 0
+        },
+        {
+          "query": "\"sadapay\" * * * * *",
+          "page": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 72,
+          "ctr": 0
+        },
+        {
+          "query": "adobe illustrator price in pakistan",
+          "page": "https://aidigitools.tech/tools/adobe-creative-cloud.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 61,
+          "ctr": 0
+        },
+        {
+          "query": "best vpn for pakistan",
+          "page": "https://aidigitools.tech/categories/vpn.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 7,
+          "ctr": 0
+        },
+        {
+          "query": "capcut pro price in pakistan",
+          "page": "https://aidigitools.tech/tools/capcut-pro.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 88,
+          "ctr": 0
+        },
+        {
+          "query": "chatgpt plus price in pakistan",
+          "page": "https://aidigitools.tech/tools/chatgpt-plus.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 97,
+          "ctr": 0
+        },
+        {
+          "query": "netflix 4k screen price in pakistan",
+          "page": "https://aidigitools.tech/tools/netflix-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 62,
+          "ctr": 0
+        },
+        {
+          "query": "spotify premium pakistan",
+          "page": "https://aidigitools.tech/tools/spotify-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 46,
+          "ctr": 0
+        },
+        {
+          "query": "youtube premium family plan pakistan",
+          "page": "https://aidigitools.tech/tools/youtube-premium.html",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11,
+          "ctr": 0
+        }
+      ]
+    },
+    "priority_keywords": [
+      {
+        "keyword": "ai tools in pakistan",
+        "strategy": "Pakistan-localized / Commercial Hub",
+        "target_url": "index.html",
+        "priority": "CRITICAL"
+      },
+      {
+        "keyword": "buy ai tools online pakistan",
+        "strategy": "Pakistan-localized / Transactional",
+        "target_url": "deals.html",
+        "priority": "HIGH"
+      },
+      {
+        "keyword": "ai subscriptions pakistan",
+        "strategy": "Pakistan-localized / Commercial",
+        "target_url": "index.html",
+        "priority": "HIGH"
+      },
+      {
+        "keyword": "best ai tools for freelancers",
+        "strategy": "Informational / Commercial Guide",
+        "target_url": "blog/best-ai-tools-for-freelancers-in-pakistan.html",
+        "priority": "HIGH"
+      },
+      {
+        "keyword": "ai video generators",
+        "strategy": "Commercial Hub / Product Category",
+        "target_url": "categories/video.html",
+        "priority": "HIGH"
+      },
+      {
+        "keyword": "ai image generators",
+        "strategy": "Commercial Hub / Product Category",
+        "target_url": "categories/image.html",
+        "priority": "MEDIUM"
+      },
+      {
+        "keyword": "ai writing tools",
+        "strategy": "Commercial Category",
+        "target_url": "tools/quillbot-premium.html",
+        "priority": "MEDIUM"
+      },
+      {
+        "keyword": "chatgpt subscriptions",
+        "strategy": "Product-Specific / Transactional",
+        "target_url": "tools/chatgpt-plus.html",
+        "priority": "HIGH"
+      },
+      {
+        "keyword": "gemini ai tools",
+        "strategy": "Product-Specific / Transactional",
+        "target_url": "tools/gemini-advanced.html",
+        "priority": "HIGH"
+      },
+      {
+        "keyword": "claude ai tools",
+        "strategy": "Product-Specific / Commercial",
+        "target_url": "tools/claude-pro.html",
+        "priority": "HIGH"
+      }
+    ]
+  },
+  "analysis": {
+    "status": "COMPLETED",
+    "executed_at": "2026-11-18 19:48:41 PKT",
+    "total_pages": 75,
+    "striking_distance_keywords": [
+      {
+        "query": "\"nayapay\"",
+        "current_position": 18,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/deals.html"
+      },
+      {
+        "query": "\"sadapay\"",
+        "current_position": 20,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/guides/chatgpt-vs-claude.html"
+      },
+      {
+        "query": "\"sadapay\"",
+        "current_position": 15,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/tools/chatgpt-codex.html"
+      },
+      {
+        "query": "\"sadapay\"",
+        "current_position": 13,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/tools/midjourney.html"
+      },
+      {
+        "query": "ai45813",
+        "current_position": 9,
+        "impressions": 6,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/deals.html"
+      },
+      {
+        "query": "best vpn for pakistan",
+        "current_position": 7,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/categories/vpn.html"
+      },
+      {
+        "query": "buy cursor",
+        "current_position": 10,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/tools/cursor-pro.html"
+      },
+      {
+        "query": "spotify premium buy",
+        "current_position": 6,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/tools/spotify-premium.html"
+      },
+      {
+        "query": "youtube premium family plan pakistan",
+        "current_position": 11,
+        "impressions": 1,
+        "clicks": 0,
+        "target_page": "https://aidigitools.tech/tools/youtube-premium.html"
+      }
+    ],
+    "cannibalization_risks": [
+      {
+        "query": "\"sadapay\"",
+        "competing_urls": [
+          "https://aidigitools.tech/about.html",
+          "https://aidigitools.tech/best/best-ai-video-generators.html",
+          "https://aidigitools.tech/blog.html",
+          "https://aidigitools.tech/categories/coding.html",
+          "https://aidigitools.tech/categories/vpn.html",
+          "https://aidigitools.tech/compare/runway-vs-pika.html",
+          "https://aidigitools.tech/deals.html",
+          "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+          "https://aidigitools.tech/policies.html",
+          "https://aidigitools.tech/tools/chatgpt-codex.html",
+          "https://aidigitools.tech/tools/claude-artifacts.html",
+          "https://aidigitools.tech/tools/cursor-pro.html",
+          "https://aidigitools.tech/tools/google-veo.html",
+          "https://aidigitools.tech/tools/leonardo-ai.html",
+          "https://aidigitools.tech/tools/midjourney.html",
+          "https://aidigitools.tech/tools/netflix-premium.html"
+        ],
+        "competing_count": 16
+      },
+      {
+        "query": "\"nayapay\"",
+        "competing_urls": [
+          "https://aidigitools.tech/about.html",
+          "https://aidigitools.tech/affiliate-disclosure.html",
+          "https://aidigitools.tech/categories/coding.html",
+          "https://aidigitools.tech/categories/vpn.html",
+          "https://aidigitools.tech/contact.html",
+          "https://aidigitools.tech/deals.html",
+          "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+          "https://aidigitools.tech/policies.html",
+          "https://aidigitools.tech/tools/cursor-pro.html",
+          "https://aidigitools.tech/tools/google-veo.html",
+          "https://aidigitools.tech/tools/midjourney.html",
+          "https://aidigitools.tech/tools/netflix-premium.html",
+          "https://aidigitools.tech/tools/perplexity-pro.html",
+          "https://aidigitools.tech/tools/quillbot-premium.html",
+          "https://aidigitools.tech/tools/runway-gen3.html"
+        ],
+        "competing_count": 15
+      },
+      {
+        "query": "\"jazzcash\"",
+        "competing_urls": [
+          "https://aidigitools.tech/categories/coding.html",
+          "https://aidigitools.tech/categories/vpn.html",
+          "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+          "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+          "https://aidigitools.tech/policies.html",
+          "https://aidigitools.tech/tools/cursor-pro.html",
+          "https://aidigitools.tech/tools/google-veo.html",
+          "https://aidigitools.tech/tools/midjourney.html",
+          "https://aidigitools.tech/tools/quillbot-premium.html"
+        ],
+        "competing_count": 9
+      },
+      {
+        "query": "\"easypaisa\"",
+        "competing_urls": [
+          "https://aidigitools.tech/deals.html",
+          "https://aidigitools.tech/policies.html",
+          "https://aidigitools.tech/tools/chatgpt-codex.html",
+          "https://aidigitools.tech/tools/claude-artifacts.html"
+        ],
+        "competing_count": 4
+      }
+    ],
+    "top_performing_pages": [
+      {
+        "url": "https://aidigitools.tech/policies.html",
+        "clicks": 0,
+        "impressions": 12,
+        "queries": 4
+      },
+      {
+        "url": "https://aidigitools.tech/",
+        "clicks": 0,
+        "impressions": 11,
+        "queries": 9
+      },
+      {
+        "url": "https://aidigitools.tech/deals.html",
+        "clicks": 0,
+        "impressions": 10,
+        "queries": 4
+      },
+      {
+        "url": "https://aidigitools.tech/categories/vpn.html",
+        "clicks": 0,
+        "impressions": 10,
+        "queries": 4
+      },
+      {
+        "url": "https://aidigitools.tech/compare/runway-vs-pika.html",
+        "clicks": 0,
+        "impressions": 7,
+        "queries": 5
+      },
+      {
+        "url": "https://aidigitools.tech/tools/spotify-premium.html",
+        "clicks": 0,
+        "impressions": 7,
+        "queries": 4
+      },
+      {
+        "url": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "clicks": 0,
+        "impressions": 6,
+        "queries": 3
+      },
+      {
+        "url": "https://aidigitools.tech/categories/coding.html",
+        "clicks": 0,
+        "impressions": 5,
+        "queries": 3
+      },
+      {
+        "url": "https://aidigitools.tech/tools/cursor-pro.html",
+        "clicks": 0,
+        "impressions": 5,
+        "queries": 5
+      },
+      {
+        "url": "https://aidigitools.tech/tools/google-veo.html",
+        "clicks": 0,
+        "impressions": 5,
+        "queries": 3
+      }
+    ],
+    "core_web_vitals": {
+      "status": "PASS",
+      "total_issues": 0,
+      "issues": []
+    }
+  },
+  "discovery": {
+    "status": "COMPLETED",
+    "executed_at": "2026-11-18 19:48:44 PKT",
+    "gaps_count": 8,
+    "gaps": [
+      {
+        "gap_id": "GAP-001",
+        "domain": "techjuice.pk",
+        "domain_authority": 68,
+        "category": "Technology Publication",
+        "links_to_competitors": [
+          "aitoolspak.com"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "GUEST_POST",
+        "target_editorial_angle": "How Pakistani Freelancers Are Accessing Global AI Subscriptions via Local PKR Rails (EasyPaisa/JazzCash)",
+        "estimated_traffic": 150000,
+        "spam_score": 1,
+        "difficulty": "Medium",
+        "priority": "HIGH"
+      },
+      {
+        "gap_id": "GAP-002",
+        "domain": "propakistani.pk",
+        "domain_authority": 78,
+        "category": "Technology Publication",
+        "links_to_competitors": [
+          "aitoolspak.com"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "GUEST_POST",
+        "target_editorial_angle": "Overcoming International Payment Declines: The Complete 2026 Guide to AI Software Subscriptions in Pakistan",
+        "estimated_traffic": 980000,
+        "spam_score": 1,
+        "difficulty": "Medium-High",
+        "priority": "HIGH"
+      },
+      {
+        "gap_id": "GAP-003",
+        "domain": "saashub.com",
+        "domain_authority": 71,
+        "category": "Software Directory",
+        "links_to_competitors": [
+          "aitoolgems.com",
+          "futurepedia.io"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "DIRECTORY_LISTING",
+        "target_editorial_angle": "Listing AIDigiTools under AI Marketplace and Digital Software Reseller Categories",
+        "estimated_traffic": 320000,
+        "spam_score": 2,
+        "difficulty": "Low (Direct Submission)",
+        "priority": "CRITICAL"
+      },
+      {
+        "gap_id": "GAP-004",
+        "domain": "alternativeto.net",
+        "domain_authority": 82,
+        "category": "Software Directory",
+        "links_to_competitors": [
+          "futurepedia.io",
+          "toolify.ai"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "DIRECTORY_LISTING",
+        "target_editorial_angle": "Submit AIDigiTools as an Alternative to International AI Tool Hubs with Localized Concierge & PKR Billing",
+        "estimated_traffic": 2800000,
+        "spam_score": 1,
+        "difficulty": "Low-Medium (Community Submission)",
+        "priority": "CRITICAL"
+      },
+      {
+        "gap_id": "GAP-005",
+        "domain": "producthunt.com",
+        "domain_authority": 92,
+        "category": "Startup Directory",
+        "links_to_competitors": [
+          "futurepedia.io",
+          "aitoolgems.com"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "DIRECTORY_LISTING",
+        "target_editorial_angle": "Launch AIDigiTools — Premier localized AI marketplace with instant WhatsApp activation & transparent pricing",
+        "estimated_traffic": 4500000,
+        "spam_score": 1,
+        "difficulty": "Medium (Launch Preparation)",
+        "priority": "HIGH"
+      },
+      {
+        "gap_id": "GAP-006",
+        "domain": "dev.to",
+        "domain_authority": 86,
+        "category": "Developer Community",
+        "links_to_competitors": [
+          "aitoolgems.com",
+          "futurepedia.io"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "RESOURCE_PAGE",
+        "target_editorial_angle": "Comprehensive Benchmark: Claude 3.5 Sonnet vs ChatGPT Plus vs Cursor AI for Full-Stack Engineering",
+        "estimated_traffic": 1800000,
+        "spam_score": 2,
+        "difficulty": "Low (Editorial Post with Canonical Link)",
+        "priority": "HIGH"
+      },
+      {
+        "gap_id": "GAP-007",
+        "domain": "betalist.com",
+        "domain_authority": 68,
+        "category": "Startup Directory",
+        "links_to_competitors": [
+          "topai.tools",
+          "futurepedia.io"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "DIRECTORY_LISTING",
+        "target_editorial_angle": "Startup Profile: AIDigiTools localized AI software marketplace",
+        "estimated_traffic": 140000,
+        "spam_score": 2,
+        "difficulty": "Low (Directory Submission)",
+        "priority": "MEDIUM"
+      },
+      {
+        "gap_id": "GAP-008",
+        "domain": "startuppakistan.com.pk",
+        "domain_authority": 52,
+        "category": "Startup Directory",
+        "links_to_competitors": [
+          "aitoolspak.com"
+        ],
+        "links_to_aidigitools": false,
+        "opportunity_type": "RESOURCE_PAGE",
+        "target_editorial_angle": "Directory profile & startup spotlight on AIDigiTools solving international payment barriers for Pakistani freelancers",
+        "estimated_traffic": 65000,
+        "spam_score": 3,
+        "difficulty": "Low-Medium",
+        "priority": "HIGH"
+      }
+    ],
+    "opportunities_count": 18,
+    "opportunities": [
+      {
+        "opportunity_id": "OPP-001",
+        "domain": "producthunt.com",
+        "target_url": "https://www.producthunt.com/",
+        "category": "Startup Directories",
+        "domain_authority": 92,
+        "estimated_monthly_traffic": 4500000,
+        "spam_score": 1,
+        "relevance_score": 95,
+        "quality_composite_score": 93.5,
+        "google_indexed": true,
+        "placement_type": "Product Launch & Curated Profile",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://www.producthunt.com/posts/new",
+        "editorial_contact": "support@producthunt.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools — Localized AI Tools Marketplace",
+        "suggested_pitch_summary": "Launch AIDigiTools as an independent localized AI marketplace and subscription concierge with verified PKR/USD pricing and WhatsApp activation."
+      },
+      {
+        "opportunity_id": "OPP-002",
+        "domain": "alternativeto.net",
+        "target_url": "https://alternativeto.net/",
+        "category": "Software Directories",
+        "domain_authority": 82,
+        "estimated_monthly_traffic": 2800000,
+        "spam_score": 1,
+        "relevance_score": 98,
+        "quality_composite_score": 91.2,
+        "google_indexed": true,
+        "placement_type": "Software Listing & Alternative Comparison",
+        "outbound_quality": "High (Curated DoFollow/NoFollow mix)",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://alternativeto.net/software/submit/",
+        "editorial_contact": "team@alternativeto.net",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools AI Marketplace",
+        "suggested_pitch_summary": "List AIDigiTools under AI Tool Aggregators and Marketplaces, highlighting local currency checkout and concierge delivery."
+      },
+      {
+        "opportunity_id": "OPP-005",
+        "domain": "propakistani.pk",
+        "target_url": "https://propakistani.pk/",
+        "category": "Technology Publications",
+        "domain_authority": 78,
+        "estimated_monthly_traffic": 980000,
+        "spam_score": 1,
+        "relevance_score": 96,
+        "quality_composite_score": 90.3,
+        "google_indexed": true,
+        "placement_type": "Editorial Tech Column",
+        "outbound_quality": "High",
+        "opportunity_type": "GUEST_POST",
+        "submission_url": "https://propakistani.pk/contact/",
+        "editorial_contact": "news@propakistani.pk",
+        "status": "OUTREACH_PREPARED",
+        "target_link_destination": "https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+        "target_anchor_text": "Pakistan AI software pricing and benchmark analysis",
+        "suggested_pitch_summary": "Contribute a comprehensive market analysis of AI video creation tools (Runway, Kling, CapCut Pro) and their economic impact on Pakistani content creators."
+      },
+      {
+        "opportunity_id": "OPP-007",
+        "domain": "sourceforge.net",
+        "target_url": "https://sourceforge.net/",
+        "category": "Software Directories",
+        "domain_authority": 93,
+        "estimated_monthly_traffic": 6200000,
+        "spam_score": 1,
+        "relevance_score": 85,
+        "quality_composite_score": 89.8,
+        "google_indexed": true,
+        "placement_type": "Software Category Directory Profile",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://sourceforge.net/create/",
+        "editorial_contact": "editorial@sourceforge.net",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Software Directory",
+        "suggested_pitch_summary": "Register AIDigiTools under AI Developer Tools & SaaS marketplace category."
+      },
+      {
+        "opportunity_id": "OPP-016",
+        "domain": "crunchbase.com",
+        "target_url": "https://www.crunchbase.com/",
+        "category": "Business Directories",
+        "domain_authority": 91,
+        "estimated_monthly_traffic": 5400000,
+        "spam_score": 1,
+        "relevance_score": 90,
+        "quality_composite_score": 89.6,
+        "google_indexed": true,
+        "placement_type": "Official Organization Profile",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://www.crunchbase.com/add-new",
+        "editorial_contact": "support@crunchbase.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Organization",
+        "suggested_pitch_summary": "Establish verified Crunchbase organization page with official business metadata, domains, and localized services."
+      },
+      {
+        "opportunity_id": "OPP-008",
+        "domain": "g2.com",
+        "target_url": "https://www.g2.com/",
+        "category": "SaaS Review Websites",
+        "domain_authority": 90,
+        "estimated_monthly_traffic": 3400000,
+        "spam_score": 1,
+        "relevance_score": 88,
+        "quality_composite_score": 89.1,
+        "google_indexed": true,
+        "placement_type": "Verified Service Provider Profile",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://sell.g2.com/claim-your-profile",
+        "editorial_contact": "listings@g2.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Profile on G2",
+        "suggested_pitch_summary": "Create a vendor profile for AIDigiTools under AI Services & Software Concierge with real customer service guarantees."
+      },
+      {
+        "opportunity_id": "OPP-009",
+        "domain": "capterra.com",
+        "target_url": "https://www.capterra.com/",
+        "category": "SaaS Review Websites",
+        "domain_authority": 91,
+        "estimated_monthly_traffic": 4100000,
+        "spam_score": 1,
+        "relevance_score": 87,
+        "quality_composite_score": 88.9,
+        "google_indexed": true,
+        "placement_type": "Software Marketplace Listing",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://www.capterra.com/vendors/get-listed/",
+        "editorial_contact": "vendors@capterra.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Listing",
+        "suggested_pitch_summary": "Submit AIDigiTools to Capterra's software directory under Subscription Services & AI Aggregators."
+      },
+      {
+        "opportunity_id": "OPP-006",
+        "domain": "dev.to",
+        "target_url": "https://dev.to/",
+        "category": "AI Communities",
+        "domain_authority": 86,
+        "estimated_monthly_traffic": 1800000,
+        "spam_score": 2,
+        "relevance_score": 92,
+        "quality_composite_score": 88.6,
+        "google_indexed": true,
+        "placement_type": "In-Depth Technical Article with Canonical Reference",
+        "outbound_quality": "High (Community Moderated)",
+        "opportunity_type": "RESOURCE_PAGE",
+        "submission_url": "https://dev.to/new",
+        "editorial_contact": "community@dev.to",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+        "target_anchor_text": "Claude 3.5 Sonnet vs ChatGPT Plus coding benchmark",
+        "suggested_pitch_summary": "Publish an empirical developer benchmark comparing Claude 3.5 Sonnet and ChatGPT Plus on real-world refactoring and debugging with canonical attribution."
+      },
+      {
+        "opportunity_id": "OPP-004",
+        "domain": "techjuice.pk",
+        "target_url": "https://www.techjuice.pk/",
+        "category": "Technology Publications",
+        "domain_authority": 68,
+        "estimated_monthly_traffic": 150000,
+        "spam_score": 1,
+        "relevance_score": 99,
+        "quality_composite_score": 88.5,
+        "google_indexed": true,
+        "placement_type": "Editorial In-Content Contextual Link",
+        "outbound_quality": "High",
+        "opportunity_type": "GUEST_POST",
+        "submission_url": "https://www.techjuice.pk/write-for-us/",
+        "editorial_contact": "editor@techjuice.pk",
+        "status": "OUTREACH_PREPARED",
+        "target_link_destination": "https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+        "target_anchor_text": "AIDigiTools localized payment research",
+        "suggested_pitch_summary": "Pitch an exclusive data-backed guest editorial on overcoming international credit card blocks for Pakistani freelancers using localized payment rails."
+      },
+      {
+        "opportunity_id": "OPP-012",
+        "domain": "towardsdatascience.com",
+        "target_url": "https://towardsdatascience.com/",
+        "category": "AI Technology Blogs",
+        "domain_authority": 89,
+        "estimated_monthly_traffic": 2100000,
+        "spam_score": 1,
+        "relevance_score": 90,
+        "quality_composite_score": 88.5,
+        "google_indexed": true,
+        "placement_type": "Technical Resource Reference",
+        "outbound_quality": "High (Strict Editorial Board)",
+        "opportunity_type": "GUEST_POST",
+        "submission_url": "https://towardsdatascience.com/write-for-us/",
+        "editorial_contact": "editors@towardsdatascience.com",
+        "status": "OUTREACH_PREPARED",
+        "target_link_destination": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+        "target_anchor_text": "quantitative LLM benchmark and cost analysis",
+        "suggested_pitch_summary": "Propose an in-depth article evaluating LLM coding efficiency and cost-per-token economics across top commercial models."
+      },
+      {
+        "opportunity_id": "OPP-013",
+        "domain": "searchenginejournal.com",
+        "target_url": "https://www.searchenginejournal.com/",
+        "category": "Digital Marketing Websites",
+        "domain_authority": 90,
+        "estimated_monthly_traffic": 1900000,
+        "spam_score": 1,
+        "relevance_score": 86,
+        "quality_composite_score": 87.2,
+        "google_indexed": true,
+        "placement_type": "Case Study & Citation",
+        "outbound_quality": "High",
+        "opportunity_type": "GUEST_POST",
+        "submission_url": "https://www.searchenginejournal.com/contribute/",
+        "editorial_contact": "editor@searchenginejournal.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AEO and generative engine optimization case study",
+        "suggested_pitch_summary": "Pitch an author contribution discussing Generative Engine Optimization (GEO) implementation for e-commerce and digital marketplaces."
+      },
+      {
+        "opportunity_id": "OPP-003",
+        "domain": "saashub.com",
+        "target_url": "https://www.saashub.com/",
+        "category": "Software Directories",
+        "domain_authority": 71,
+        "estimated_monthly_traffic": 320000,
+        "spam_score": 2,
+        "relevance_score": 94,
+        "quality_composite_score": 86.8,
+        "google_indexed": true,
+        "placement_type": "Curated SaaS Profile",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://www.saashub.com/submit-software",
+        "editorial_contact": "editorial@saashub.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Software Directory",
+        "suggested_pitch_summary": "Add AIDigiTools to the AI tools directory with full category mapping across AI Video, AI Coding, and Generative Image tools."
+      },
+      {
+        "opportunity_id": "OPP-011",
+        "domain": "indiehackers.com",
+        "target_url": "https://www.indiehackers.com/",
+        "category": "AI Communities",
+        "domain_authority": 78,
+        "estimated_monthly_traffic": 520000,
+        "spam_score": 2,
+        "relevance_score": 93,
+        "quality_composite_score": 86.4,
+        "google_indexed": true,
+        "placement_type": "Product Milestone & Founder Case Study",
+        "outbound_quality": "High",
+        "opportunity_type": "RESOURCE_PAGE",
+        "submission_url": "https://www.indiehackers.com/products/new",
+        "editorial_contact": "courtland@indiehackers.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Marketplace",
+        "suggested_pitch_summary": "Publish a milestone transparent case study: Building an AI subscription desk in Pakistan serving global and domestic users with 15-minute SLA."
+      },
+      {
+        "opportunity_id": "OPP-015",
+        "domain": "f6s.com",
+        "target_url": "https://www.f6s.com/",
+        "category": "Startup Directories",
+        "domain_authority": 84,
+        "estimated_monthly_traffic": 780000,
+        "spam_score": 1,
+        "relevance_score": 88,
+        "quality_composite_score": 85.9,
+        "google_indexed": true,
+        "placement_type": "Startup Profile & Service Card",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://www.f6s.com/companies/add",
+        "editorial_contact": "support@f6s.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools Company Profile",
+        "suggested_pitch_summary": "Register company profile on F6S global founder network representing online digital marketplace desk in Islamabad, Pakistan."
+      },
+      {
+        "opportunity_id": "OPP-018",
+        "domain": "hashnode.dev",
+        "target_url": "https://hashnode.com/",
+        "category": "AI Communities",
+        "domain_authority": 79,
+        "estimated_monthly_traffic": 680000,
+        "spam_score": 2,
+        "relevance_score": 93,
+        "quality_composite_score": 85.8,
+        "google_indexed": true,
+        "placement_type": "Technical Resource Article",
+        "outbound_quality": "High",
+        "opportunity_type": "BROKEN_LINK_REPLACEMENT",
+        "submission_url": "https://hashnode.com/",
+        "editorial_contact": "team@hashnode.com",
+        "status": "OUTREACH_PREPARED",
+        "target_link_destination": "https://aidigitools.tech/tools/cursor-pro.html",
+        "target_anchor_text": "Cursor AI review and pricing guide",
+        "suggested_pitch_summary": "Identify broken links in existing AI programming tool roundups on Hashnode and propose our up-to-date Cursor Pro review as a working replacement."
+      },
+      {
+        "opportunity_id": "OPP-017",
+        "domain": "digiskills.pk",
+        "target_url": "https://digiskills.pk/",
+        "category": "Educational Websites",
+        "domain_authority": 49,
+        "estimated_monthly_traffic": 480000,
+        "spam_score": 1,
+        "relevance_score": 99,
+        "quality_composite_score": 84.1,
+        "google_indexed": true,
+        "placement_type": "Alumni Resource Guide / Community Portal",
+        "outbound_quality": "High (.pk Government / Education Trust)",
+        "opportunity_type": "RESOURCE_PAGE",
+        "submission_url": "https://digiskills.pk/ContactUs.aspx",
+        "editorial_contact": "support@digiskills.pk",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/deals.html",
+        "target_anchor_text": "student and freelancer AI software subscriptions",
+        "suggested_pitch_summary": "Recommend AIDigiTools as an accessible digital tools resource for graduating freelancers who do not own credit cards for graphic design and video editing software."
+      },
+      {
+        "opportunity_id": "OPP-010",
+        "domain": "betalist.com",
+        "target_url": "https://betalist.com/",
+        "category": "Startup Directories",
+        "domain_authority": 68,
+        "estimated_monthly_traffic": 140000,
+        "spam_score": 2,
+        "relevance_score": 91,
+        "quality_composite_score": 82.3,
+        "google_indexed": true,
+        "placement_type": "Featured Startup Profile",
+        "outbound_quality": "High",
+        "opportunity_type": "DIRECTORY_LISTING",
+        "submission_url": "https://betalist.com/submit",
+        "editorial_contact": "submissions@betalist.com",
+        "status": "VETTED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools on BetaList",
+        "suggested_pitch_summary": "Submit AIDigiTools as an emerging AI tools marketplace with transparent pricing and instant delivery SLA."
+      },
+      {
+        "opportunity_id": "OPP-014",
+        "domain": "startuppakistan.com.pk",
+        "target_url": "https://startuppakistan.com.pk/",
+        "category": "Startup Directories",
+        "domain_authority": 52,
+        "estimated_monthly_traffic": 65000,
+        "spam_score": 2,
+        "relevance_score": 97,
+        "quality_composite_score": 81.5,
+        "google_indexed": true,
+        "placement_type": "Startup Directory & Feature Article",
+        "outbound_quality": "Medium-High",
+        "opportunity_type": "RESOURCE_PAGE",
+        "submission_url": "https://startuppakistan.com.pk/contact-us/",
+        "editorial_contact": "info@startuppakistan.com.pk",
+        "status": "OUTREACH_PREPARED",
+        "target_link_destination": "https://aidigitools.tech/",
+        "target_anchor_text": "AIDigiTools online marketplace Islamabad",
+        "suggested_pitch_summary": "Submit a startup spotlight on AIDigiTools solving payment friction and credit card declines for Pakistani digital creators and agencies."
+      }
+    ],
+    "categories": [
+      "Educational Websites",
+      "AI Communities",
+      "Startup Directories",
+      "AI Technology Blogs",
+      "SaaS Review Websites",
+      "Technology Publications",
+      "Digital Marketing Websites",
+      "Software Directories",
+      "Business Directories"
+    ]
+  },
+  "outreach": {
+    "status": "COMPLETED",
+    "executed_at": "2026-11-18 19:48:44 PKT",
+    "total_campaigns": 5,
+    "pending_user_approval": 5,
+    "campaigns": [
+      {
+        "campaign_id": "OUTREACH-001",
+        "opportunity_id": "OPP-004",
+        "target_domain": "techjuice.pk",
+        "recipient_name": "TechJuice Editorial Desk",
+        "recipient_email_or_form": "editor@techjuice.pk / https://www.techjuice.pk/write-for-us/",
+        "campaign_type": "Guest Editorial Pitch",
+        "status": "PENDING_USER_APPROVAL",
+        "requires_user_approval": true,
+        "email_subject": "Guest Contribution Pitch: How Pakistani Freelancers Are Overcoming AI Subscription Payment Declines",
+        "email_body": "Dear TechJuice Editorial Team,\n\nI hope this email finds you well. I have been following TechJuice's insightful coverage of Pakistan's growing freelance economy and IT exports.\n\nOver the past few months, thousands of Pakistani digital creators and developers have faced severe payment friction with international AI platforms (such as Midjourney, OpenAI, and Claude) due to foreign exchange restrictions and 3D Secure card declines on local bank cards.\n\nAt AIDigiTools (an independent digital subscription desk based in Islamabad), our engineering team conducted an in-depth empirical study analyzing domestic payment rails (EasyPaisa, JazzCash, SadaPay, Raast) and how local creators can legally and safely access essential AI tools with 15-minute activation.\n\nI would love to contribute an original, comprehensive 1,200-word editorial for TechJuice titled:\n\"Solving the AI Payment Bottleneck: A Practical 2026 Guide for Pakistani Freelancers and Agencies\"\n\nKey takeaways covered in the article:\n1. Why Pakistani debit cards fail on US Stripe checkouts and the exact banking reasons.\n2. Step-by-step compliant activation pathways using domestic payment rails.\n3. Transparent pricing comparison: Official USD rates vs. local PKR costs with withholding tax calculations.\n4. Real-world credit burn benchmarks for YouTube automation and full-stack coding.\n\nThis article is 100% original, educational, and tailored specifically for your audience. We will also reference our detailed localized troubleshooting research (https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html) as supporting documentation.\n\nPlease let me know if this topic aligns with TechJuice's editorial calendar, and I will be delighted to share the full draft for your review.\n\nWarm regards,\n\nAbeera Farooq\nLead Researcher & Founder, AIDigiTools\nIslamabad, Pakistan | https://aidigitools.tech",
+        "prepared_at": "2026-11-18T19:35:00Z",
+        "approval_granted": false,
+        "dispatched_at": null,
+        "response_received": null
+      },
+      {
+        "campaign_id": "OUTREACH-002",
+        "opportunity_id": "OPP-005",
+        "target_domain": "propakistani.pk",
+        "recipient_name": "ProPakistani Tech Desk",
+        "recipient_email_or_form": "news@propakistani.pk / https://propakistani.pk/contact/",
+        "campaign_type": "Guest Editorial Pitch",
+        "status": "PENDING_USER_APPROVAL",
+        "requires_user_approval": true,
+        "email_subject": "Op-Ed Pitch: The Rise of AI Video Generation in Pakistan — Real Costs, Credits & Production Economics",
+        "email_body": "Hi ProPakistani Editorial Team,\n\nI'm reaching out because ProPakistani has been at the forefront of tracking Pakistan's tech innovations and creator economy.\n\nWith generative video models like Runway Gen-3, Kling AI, and CapCut Pro exploding in popularity for YouTube Shorts and TikTok content, many Pakistani creators are confused about credit pricing, export rendering times, and commercial rights.\n\nOur team at AIDigiTools has compiled a comprehensive empirical benchmark testing 5 major video AI engines on local Pakistani ISP bandwidths, comparing generation cost per second and domestic PKR affordability.\n\nWe would love to provide an exclusive editorial article titled:\n\"Best AI Video Generators for Pakistani Content Creators in 2026: Hands-On Performance & Cost Analysis\"\n\nThe piece includes concrete quantitative comparison tables and practical tips for monetizing YouTube Shorts from Pakistan. Readers can explore our verified dataset here: https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html\n\nWould this be of interest to ProPakistani's readership? I'd be happy to send over the complete piece for your editorial team's consideration.\n\nBest regards,\n\nAbeera Farooq\nAIDigiTools | https://aidigitools.tech",
+        "prepared_at": "2026-11-18T19:35:00Z",
+        "approval_granted": false,
+        "dispatched_at": null,
+        "response_received": null
+      },
+      {
+        "campaign_id": "OUTREACH-003",
+        "opportunity_id": "OPP-014",
+        "target_domain": "startuppakistan.com.pk",
+        "recipient_name": "Startup Pakistan Editor",
+        "recipient_email_or_form": "info@startuppakistan.com.pk",
+        "campaign_type": "Startup Profile & Story Suggestion",
+        "status": "PENDING_USER_APPROVAL",
+        "requires_user_approval": true,
+        "email_subject": "Startup Spotlight: AIDigiTools — Democratizing Access to Global AI Subscriptions for Pakistani Freelancers",
+        "email_body": "Dear Startup Pakistan Team,\n\nI hope you are doing well. I love how Startup Pakistan showcases homegrown initiatives solving real challenges in our ecosystem.\n\nI wanted to share the story of AIDigiTools (https://aidigitools.tech), an online digital software concierge based out of Islamabad. Our platform was born out of a critical problem: over 70% of Pakistani freelance graphic designers, video editors, and junior software engineers struggle to purchase essential tools like Claude, ChatGPT Plus, Midjourney, and Cursor due to international banking roadblocks.\n\nAIDigiTools bridges this gap with transparent PKR & USD pricing, instant WhatsApp order routing (03326861112), 15-minute delivery, domestic payment options (EasyPaisa, JazzCash, SadaPay, Bank IBFT), and a verified 30-day replacement warranty.\n\nWe would be honored to be featured in Startup Pakistan's emerging startup directory or as a quick founder interview to inspire other local tech entrepreneurs.\n\nLooking forward to hearing from you!\n\nBest regards,\n\nAbeera Farooq\nFounder, AIDigiTools\nhttps://aidigitools.tech",
+        "prepared_at": "2026-11-18T19:35:00Z",
+        "approval_granted": false,
+        "dispatched_at": null,
+        "response_received": null
+      },
+      {
+        "campaign_id": "OUTREACH-004",
+        "opportunity_id": "OPP-018",
+        "target_domain": "hashnode.com",
+        "recipient_name": "Hashnode AI Developer Community Editor",
+        "recipient_email_or_form": "editorial@hashnode.com",
+        "campaign_type": "Broken Link Resource Pitch",
+        "status": "PENDING_USER_APPROVAL",
+        "requires_user_approval": true,
+        "email_subject": "Broken Link / Resource Update Suggestion for AI Coding Assistants Guide",
+        "email_body": "Hi Hashnode Editorial Team,\n\nI was reading your comprehensive community guides on AI code editors and developer tooling and noticed a couple of outdated links pointing to deprecated software versions.\n\nOur team recently published an exhaustive, hands-on comparison of Cursor Pro vs. GitHub Copilot vs. Claude 3.5 Sonnet, complete with real-world refactoring benchmarks, pricing tables in both PKR and USD, and architectural breakdown:\nhttps://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html\n\nIf you are updating your developer resource recommendations, I think this empirical comparison would provide significant value to your developer readers looking for up-to-date AI code editor evaluations.\n\nThanks for your dedication to the developer community!\n\nBest,\n\nAbeera Farooq\nEngineer at AIDigiTools\nhttps://aidigitools.tech",
+        "prepared_at": "2026-11-18T19:35:00Z",
+        "approval_granted": false,
+        "dispatched_at": null,
+        "response_received": null
+      },
+      {
+        "campaign_id": "OUTREACH-005",
+        "opportunity_id": "OPP-012",
+        "target_domain": "towardsdatascience.com",
+        "recipient_name": "Towards Data Science Editors",
+        "recipient_email_or_form": "editors@towardsdatascience.com",
+        "campaign_type": "Technical Resource Article Submission",
+        "status": "PENDING_USER_APPROVAL",
+        "requires_user_approval": true,
+        "email_subject": "Article Submission: An Empirical Benchmark of Claude 3.5 Sonnet vs GPT-4o for Enterprise Code Generation",
+        "email_body": "Dear TDS Editorial Team,\n\nI have drafted a technical benchmark article examining token processing speed, context retention over 100k token windows, and reasoning accuracy between Anthropic's Claude 3.5 Sonnet and OpenAI's GPT-4o.\n\nOur benchmarks test real enterprise repository refactoring scenarios and provide quantitative execution latency metrics, cost-per-task breakdowns, and failure mode analysis.\n\nOur preliminary testing findings and comparative matrix are published here for reference: https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html\n\nI would be honored to publish this in Towards Data Science following all your editorial guidelines. Please let me know if you would like me to submit the draft on Medium.\n\nSincerely,\n\nAbeera Farooq\nAIDigiTools Technical Research\nhttps://aidigitools.tech",
+        "prepared_at": "2026-11-18T19:35:00Z",
+        "approval_granted": false,
+        "dispatched_at": null,
+        "response_received": null
+      }
+    ]
+  },
+  "acquisition": {
+    "status": "COMPLETED",
+    "executed_at": "2026-11-18 19:48:44 PKT",
+    "acquired_count": 0,
+    "acquired_items": []
+  },
+  "monitoring": {
+    "status": "COMPLETED",
+    "executed_at": "2026-11-18 19:48:46 PKT",
+    "anchor_safety": {
+      "status": "HEALTHY",
+      "anchor_distribution": {
+        "branded": 50.0,
+        "naked_url": 50.0,
+        "exact_match": 0.0,
+        "partial_match": 0.0,
+        "generic": 0.0
+      },
+      "exact_match_percent": 0.0,
+      "safe_threshold_percent": 20.0,
+      "recommendation": "Maintain natural mix: 50%+ Branded/Naked URLs, 20-30% Partial Match, <20% Exact Match."
+    },
+    "toxic_count": 0,
+    "toxic_links": []
+  },
+  "content": {
+    "cadence_passed": true,
+    "hours_elapsed": 133.6,
+    "decision": "READY_FOR_PIPELINE",
+    "message": "Cadence gate cleared: 133.6 hours have elapsed since last publication ('Runway Gen-3 vs CapCut Pro (2026 Video AI)'), satisfying the 20.0h minimum requirement."
+  }
+}

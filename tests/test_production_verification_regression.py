@@ -203,7 +203,7 @@ class TestProductionVerificationRegression(unittest.TestCase):
     # 3. Static placeholder templates cannot be reported as Gemini-generated
     # --------------------------------------------------------------------------
     def test_03_static_placeholder_cannot_be_reported_as_gemini(self):
-        generator = GeminiArticleGenerator(api_key=None, workspace_root=self.workspace_root)
+        generator = GeminiArticleGenerator(api_key="", workspace_root=self.workspace_root)
         fallback_html = generator.generate_heuristic_fallback(
             topic_info={"primary_keyword": "Fallback Testing"},
             canonical_url="https://aidigitools.tech/blog/fallback.html"

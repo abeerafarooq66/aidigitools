@@ -1,0 +1,273 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-11-18T19:30:00Z",
+  "target_domain": "aidigitools.tech",
+  "competitors": [
+    {
+      "id": "comp-aitoolspak",
+      "name": "AI Tools Pak",
+      "domain": "aitoolspak.com",
+      "type": "Regional AI Reseller & Marketplace",
+      "market": "Pakistan (Domestic)",
+      "estimated_referring_domains": 42,
+      "estimated_total_backlinks": 280,
+      "domain_rating": 24,
+      "estimated_monthly_organic_traffic": 3200,
+      "anchor_text_distribution": {
+        "branded": 54.0,
+        "exact_match": 18.0,
+        "partial_match": 14.0,
+        "naked_url": 10.0,
+        "generic": 4.0
+      },
+      "top_linked_pages": [
+        {"url": "https://aitoolspak.com/", "inbound_domains": 28},
+        {"url": "https://aitoolspak.com/chatgpt-plus-pakistan", "inbound_domains": 12},
+        {"url": "https://aitoolspak.com/canva-pro-easypaisa", "inbound_domains": 8},
+        {"url": "https://aitoolspak.com/pricing", "inbound_domains": 6}
+      ],
+      "strongest_referring_domains": [
+        {"domain": "techjuice.pk", "category": "Technology Publication", "da": 68, "link_type": "Editorial Contextual", "dofollow": true},
+        {"domain": "propakistani.pk", "category": "Technology Publication", "da": 78, "link_type": "Editorial Review", "dofollow": true},
+        {"domain": "medium.com", "category": "AI Technology Blog", "da": 95, "link_type": "Community Article", "dofollow": false},
+        {"domain": "startuppakistan.com.pk", "category": "Startup Directory", "da": 52, "link_type": "Directory Listing", "dofollow": true},
+        {"domain": "reddit.com", "category": "AI Community", "da": 98, "link_type": "Forum Discussion", "dofollow": false},
+        {"domain": "pakistanit.com", "category": "Business Directory", "da": 41, "link_type": "Business Profile", "dofollow": true}
+      ]
+    },
+    {
+      "id": "comp-aitoolgems",
+      "name": "AI Tool Gems",
+      "domain": "aitoolgems.com",
+      "type": "Regional AI Tool Directory & Reseller",
+      "market": "Pakistan & South Asia",
+      "estimated_referring_domains": 35,
+      "estimated_total_backlinks": 195,
+      "domain_rating": 19,
+      "estimated_monthly_organic_traffic": 2100,
+      "anchor_text_distribution": {
+        "branded": 48.0,
+        "exact_match": 22.0,
+        "partial_match": 15.0,
+        "naked_url": 11.0,
+        "generic": 4.0
+      },
+      "top_linked_pages": [
+        {"url": "https://aitoolgems.com/", "inbound_domains": 22},
+        {"url": "https://aitoolgems.com/best-ai-tools-pakistan", "inbound_domains": 9},
+        {"url": "https://aitoolgems.com/midjourney-pricing-pkr", "inbound_domains": 7}
+      ],
+      "strongest_referring_domains": [
+        {"domain": "dev.to", "category": "Developer Community", "da": 86, "link_type": "User Article", "dofollow": false},
+        {"domain": "hashnode.dev", "category": "Developer Blog", "da": 79, "link_type": "Blog Post", "dofollow": true},
+        {"domain": "saashub.com", "category": "Software Directory", "da": 71, "link_type": "Directory Listing", "dofollow": true},
+        {"domain": "techloy.com", "category": "Technology Publication", "da": 59, "link_type": "Tech Roundup", "dofollow": true},
+        {"domain": "producthunt.com", "category": "Startup Directory", "da": 92, "link_type": "Discussion Mention", "dofollow": false}
+      ]
+    },
+    {
+      "id": "comp-futurepedia",
+      "name": "Futurepedia",
+      "domain": "futurepedia.io",
+      "type": "Global AI Tools Directory & Marketplace",
+      "market": "Global",
+      "estimated_referring_domains": 4850,
+      "estimated_total_backlinks": 182000,
+      "domain_rating": 74,
+      "estimated_monthly_organic_traffic": 640000,
+      "anchor_text_distribution": {
+        "branded": 68.0,
+        "exact_match": 12.0,
+        "partial_match": 11.0,
+        "naked_url": 6.0,
+        "generic": 3.0
+      },
+      "top_linked_pages": [
+        {"url": "https://futurepedia.io/", "inbound_domains": 3200},
+        {"url": "https://futurepedia.io/ai-tools/video", "inbound_domains": 840},
+        {"url": "https://futurepedia.io/ai-tools/coding", "inbound_domains": 620},
+        {"url": "https://futurepedia.io/ai-tools/image", "inbound_domains": 590}
+      ],
+      "strongest_referring_domains": [
+        {"domain": "techcrunch.com", "category": "Technology Publication", "da": 94, "link_type": "Editorial News", "dofollow": true},
+        {"domain": "forbes.com", "category": "Business Publication", "da": 95, "link_type": "Editorial Column", "dofollow": true},
+        {"domain": "github.com", "category": "Developer Community", "da": 96, "link_type": "Awesome List README", "dofollow": true},
+        {"domain": "producthunt.com", "category": "Startup Directory", "da": 92, "link_type": "Product Launch", "dofollow": true},
+        {"domain": "therundown.ai", "category": "AI Technology Blog", "da": 64, "link_type": "Newsletter Sponsor / Mention", "dofollow": true},
+        {"domain": "alternativeto.net", "category": "Software Directory", "da": 82, "link_type": "Alternative Listing", "dofollow": true}
+      ]
+    },
+    {
+      "id": "comp-toolify",
+      "name": "Toolify AI",
+      "domain": "toolify.ai",
+      "type": "Global AI Tools Aggregator & Ecosystem",
+      "market": "Global",
+      "estimated_referring_domains": 2940,
+      "estimated_total_backlinks": 94000,
+      "domain_rating": 69,
+      "estimated_monthly_organic_traffic": 410000,
+      "anchor_text_distribution": {
+        "branded": 62.0,
+        "exact_match": 15.0,
+        "partial_match": 12.0,
+        "naked_url": 8.0,
+        "generic": 3.0
+      },
+      "top_linked_pages": [
+        {"url": "https://toolify.ai/", "inbound_domains": 1850},
+        {"url": "https://toolify.ai/best-ai-tools", "inbound_domains": 480},
+        {"url": "https://toolify.ai/category/ai-video", "inbound_domains": 310}
+      ],
+      "strongest_referring_domains": [
+        {"domain": "indiehackers.com", "category": "AI Community", "da": 78, "link_type": "Founder Interview", "dofollow": true},
+        {"domain": "news.ycombinator.com", "category": "AI Community", "da": 91, "link_type": "HackerNews Show HN", "dofollow": false},
+        {"domain": "substack.com", "category": "AI Technology Blog", "da": 92, "link_type": "Tech Newsletter", "dofollow": true},
+        {"domain": "sourceforge.net", "category": "Software Directory", "da": 93, "link_type": "Software Category", "dofollow": true},
+        {"domain": "g2.com", "category": "SaaS Review Websites", "da": 90, "link_type": "Review Listing", "dofollow": true}
+      ]
+    },
+    {
+      "id": "comp-topaitools",
+      "name": "TopAI.tools",
+      "domain": "topai.tools",
+      "type": "Curated AI Directory & Review Hub",
+      "market": "Global",
+      "estimated_referring_domains": 1680,
+      "estimated_total_backlinks": 48000,
+      "domain_rating": 61,
+      "estimated_monthly_organic_traffic": 185000,
+      "anchor_text_distribution": {
+        "branded": 58.0,
+        "exact_match": 16.0,
+        "partial_match": 14.0,
+        "naked_url": 9.0,
+        "generic": 3.0
+      },
+      "top_linked_pages": [
+        {"url": "https://topai.tools/", "inbound_domains": 1120},
+        {"url": "https://topai.tools/browse", "inbound_domains": 320}
+      ],
+      "strongest_referring_domains": [
+        {"domain": "betalist.com", "category": "Startup Directory", "da": 68, "link_type": "Startup Profile", "dofollow": true},
+        {"domain": "slant.co", "category": "Software Directory", "da": 72, "link_type": "Tool Recommendation", "dofollow": true},
+        {"domain": "capterra.com", "category": "SaaS Review Websites", "da": 91, "link_type": "Category Profile", "dofollow": true},
+        {"domain": "feedspot.com", "category": "AI Technology Blog", "da": 76, "link_type": "Best Blogs List", "dofollow": true}
+      ]
+    }
+  ],
+  "backlink_gap_analysis": [
+    {
+      "gap_id": "GAP-001",
+      "domain": "techjuice.pk",
+      "domain_authority": 68,
+      "category": "Technology Publication",
+      "links_to_competitors": ["aitoolspak.com"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "GUEST_POST",
+      "target_editorial_angle": "How Pakistani Freelancers Are Accessing Global AI Subscriptions via Local PKR Rails (EasyPaisa/JazzCash)",
+      "estimated_traffic": 150000,
+      "spam_score": 1,
+      "difficulty": "Medium",
+      "priority": "HIGH"
+    },
+    {
+      "gap_id": "GAP-002",
+      "domain": "propakistani.pk",
+      "domain_authority": 78,
+      "category": "Technology Publication",
+      "links_to_competitors": ["aitoolspak.com"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "GUEST_POST",
+      "target_editorial_angle": "Overcoming International Payment Declines: The Complete 2026 Guide to AI Software Subscriptions in Pakistan",
+      "estimated_traffic": 980000,
+      "spam_score": 1,
+      "difficulty": "Medium-High",
+      "priority": "HIGH"
+    },
+    {
+      "gap_id": "GAP-003",
+      "domain": "saashub.com",
+      "domain_authority": 71,
+      "category": "Software Directory",
+      "links_to_competitors": ["aitoolgems.com", "futurepedia.io"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "DIRECTORY_LISTING",
+      "target_editorial_angle": "Listing AIDigiTools under AI Marketplace and Digital Software Reseller Categories",
+      "estimated_traffic": 320000,
+      "spam_score": 2,
+      "difficulty": "Low (Direct Submission)",
+      "priority": "CRITICAL"
+    },
+    {
+      "gap_id": "GAP-004",
+      "domain": "alternativeto.net",
+      "domain_authority": 82,
+      "category": "Software Directory",
+      "links_to_competitors": ["futurepedia.io", "toolify.ai"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "DIRECTORY_LISTING",
+      "target_editorial_angle": "Submit AIDigiTools as an Alternative to International AI Tool Hubs with Localized Concierge & PKR Billing",
+      "estimated_traffic": 2800000,
+      "spam_score": 1,
+      "difficulty": "Low-Medium (Community Submission)",
+      "priority": "CRITICAL"
+    },
+    {
+      "gap_id": "GAP-005",
+      "domain": "producthunt.com",
+      "domain_authority": 92,
+      "category": "Startup Directory",
+      "links_to_competitors": ["futurepedia.io", "aitoolgems.com"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "DIRECTORY_LISTING",
+      "target_editorial_angle": "Launch AIDigiTools — Premier localized AI marketplace with instant WhatsApp activation & transparent pricing",
+      "estimated_traffic": 4500000,
+      "spam_score": 1,
+      "difficulty": "Medium (Launch Preparation)",
+      "priority": "HIGH"
+    },
+    {
+      "gap_id": "GAP-006",
+      "domain": "dev.to",
+      "domain_authority": 86,
+      "category": "Developer Community",
+      "links_to_competitors": ["aitoolgems.com", "futurepedia.io"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "RESOURCE_PAGE",
+      "target_editorial_angle": "Comprehensive Benchmark: Claude 3.5 Sonnet vs ChatGPT Plus vs Cursor AI for Full-Stack Engineering",
+      "estimated_traffic": 1800000,
+      "spam_score": 2,
+      "difficulty": "Low (Editorial Post with Canonical Link)",
+      "priority": "HIGH"
+    },
+    {
+      "gap_id": "GAP-007",
+      "domain": "betalist.com",
+      "domain_authority": 68,
+      "category": "Startup Directory",
+      "links_to_competitors": ["topai.tools", "futurepedia.io"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "DIRECTORY_LISTING",
+      "target_editorial_angle": "Startup Profile: AIDigiTools localized AI software marketplace",
+      "estimated_traffic": 140000,
+      "spam_score": 2,
+      "difficulty": "Low (Directory Submission)",
+      "priority": "MEDIUM"
+    },
+    {
+      "gap_id": "GAP-008",
+      "domain": "startuppakistan.com.pk",
+      "domain_authority": 52,
+      "category": "Startup Directory",
+      "links_to_competitors": ["aitoolspak.com"],
+      "links_to_aidigitools": false,
+      "opportunity_type": "RESOURCE_PAGE",
+      "target_editorial_angle": "Directory profile & startup spotlight on AIDigiTools solving international payment barriers for Pakistani freelancers",
+      "estimated_traffic": 65000,
+      "spam_score": 3,
+      "difficulty": "Low-Medium",
+      "priority": "HIGH"
+    }
+  ]
+}

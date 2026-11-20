@@ -1,8 +1,8 @@
 {
   "status": "SUCCESS",
-  "total_local_html_pages": 68,
-  "total_sitemap_urls": 67,
-  "total_canonical_urls": 68,
+  "total_local_html_pages": 75,
+  "total_sitemap_urls": 75,
+  "total_canonical_urls": 75,
   "anomalies": {
     "orphan_pages": [],
     "orphan_pages_count": 0,
@@ -25,25 +25,25 @@
       "is_noindex": true,
       "h1_count": 1,
       "internal_links": [
-        "about.html",
-        "affiliate-disclosure.html",
-        "best/best-ai-coding-tools.html",
-        "best/best-ai-video-generators.html",
-        "categories/coding.html",
-        "categories/image.html",
-        "categories/video.html",
-        "categories/vpn.html",
-        "compare/chatgpt-vs-claude.html",
-        "compare/runway-vs-pika.html",
-        "contact.html",
-        "deals.html",
-        "index.html",
-        "policies.html",
-        "shipping-policy.html",
-        "tools/canva-pro.html",
-        "tools/chatgpt-plus.html",
-        "tools/claude-pro.html",
-        "tools/cursor-pro.html"
+        "/about.html",
+        "/affiliate-disclosure.html",
+        "/best/best-ai-coding-tools.html",
+        "/best/best-ai-video-generators.html",
+        "/categories/coding.html",
+        "/categories/image.html",
+        "/categories/video.html",
+        "/categories/vpn.html",
+        "/compare/chatgpt-vs-claude.html",
+        "/compare/runway-vs-pika.html",
+        "/contact.html",
+        "/deals.html",
+        "/index.html",
+        "/policies.html",
+        "/shipping-policy.html",
+        "/tools/canva-pro.html",
+        "/tools/chatgpt-plus.html",
+        "/tools/claude-pro.html",
+        "/tools/cursor-pro.html"
       ],
       "stable_id": "PAGE-644001EF",
       "inbound_internal_links_count": 0
@@ -59,6 +59,7 @@
       "h1_count": 1,
       "internal_links": [
         "about.html",
+        "admin/meta-integration.html",
         "affiliate-disclosure.html",
         "best/best-ai-coding-tools.html",
         "best/best-ai-video-generators.html",
@@ -75,7 +76,26 @@
         "shipping-policy.html"
       ],
       "stable_id": "PAGE-F7A962EE",
-      "inbound_internal_links_count": 54
+      "inbound_internal_links_count": 53
+    },
+    "admin/meta-integration.html": {
+      "file_path": "admin/meta-integration.html",
+      "title": "Meta Commerce &amp; WhatsApp Catalog Sync | AIDigiTools",
+      "title_length": 55,
+      "meta_description": "Central monitoring dashboard for Meta Commerce Manager, WhatsApp Business Catalog, and Facebook Shop integration for AIDigiTools marketplace.",
+      "meta_description_length": 141,
+      "canonical_url": "https://aidigitools.tech/admin/meta-integration.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../contact.html",
+        "../index.html",
+        "../meta-product-feed.xml",
+        "../policies.html",
+        "../shipping-policy.html"
+      ],
+      "stable_id": "PAGE-2B40F0E7",
+      "inbound_internal_links_count": 3
     },
     "affiliate-disclosure.html": {
       "file_path": "affiliate-disclosure.html",
@@ -104,7 +124,7 @@
         "shipping-policy.html"
       ],
       "stable_id": "PAGE-8907BB8D",
-      "inbound_internal_links_count": 68
+      "inbound_internal_links_count": 70
     },
     "best/best-ai-coding-tools.html": {
       "file_path": "best/best-ai-coding-tools.html",
@@ -141,7 +161,7 @@
         "../tools/n8n-automation.html"
       ],
       "stable_id": "PAGE-3497E5C7",
-      "inbound_internal_links_count": 54
+      "inbound_internal_links_count": 53
     },
     "best/best-ai-video-generators.html": {
       "file_path": "best/best-ai-video-generators.html",
@@ -177,7 +197,76 @@
         "../tools/runway-gen3.html"
       ],
       "stable_id": "PAGE-615281FC",
-      "inbound_internal_links_count": 54
+      "inbound_internal_links_count": 53
+    },
+    "blog/best-ai-video-generators-youtube-shorts-pakistan.html": {
+      "file_path": "blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "title": "Best AI Video Generators for YouTube Shorts in Pakistan (2026)",
+      "title_length": 62,
+      "meta_description": "Discover top AI video generators for YouTube Shorts and Reels in Pakistan. Compare Runway Gen-3, Kling AI, and CapCut Pro with verified PKR pricing.",
+      "meta_description_length": 148,
+      "canonical_url": "https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../blog.html",
+        "../categories/video.html",
+        "../index.html",
+        "../policies.html",
+        "../tools/capcut-pro.html",
+        "../tools/elevenlabs-creator.html",
+        "../tools/kling-ai.html",
+        "../tools/runway-gen3.html"
+      ],
+      "stable_id": "PAGE-9BF4515E",
+      "inbound_internal_links_count": 4
+    },
+    "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html": {
+      "file_path": "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "title": "Claude 3.5 Sonnet vs ChatGPT Plus: Coding Shootout (2026)",
+      "title_length": 57,
+      "meta_description": "Claude 3.5 Sonnet vs ChatGPT Plus coding comparison. Benchmark reasoning, debugging, Artifacts, and verified Pakistani PKR subscription pricing.",
+      "meta_description_length": 144,
+      "canonical_url": "https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../blog.html",
+        "../categories/coding.html",
+        "../index.html",
+        "../policies.html",
+        "../tools/chatgpt-plus.html",
+        "../tools/claude-pro.html",
+        "../tools/cursor-pro.html",
+        "../tools/github-copilot.html"
+      ],
+      "stable_id": "PAGE-820EEA51",
+      "inbound_internal_links_count": 3
+    },
+    "blog/claude-artifacts-practical-guide-freelancers.html": {
+      "file_path": "blog/claude-artifacts-practical-guide-freelancers.html",
+      "title": "Claude 3.5 Sonnet Artifacts Guide (2026) | AIDigiTools",
+      "title_length": 54,
+      "meta_description": "Master Claude 3.5 Sonnet Artifacts for web design, React prototypes, and SVG rendering. Verified Pakistani PKR pricing and WhatsApp setup via AIDigiTools.",
+      "meta_description_length": 154,
+      "canonical_url": "https://aidigitools.tech/blog/claude-artifacts-practical-guide-freelancers.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../affiliate-disclosure.html",
+        "../blog.html",
+        "../categories/coding.html",
+        "../index.html",
+        "../index.html#products",
+        "../policies.html",
+        "../tools/adobe-creative-cloud.html",
+        "../tools/chatgpt-plus.html",
+        "../tools/claude-artifacts.html",
+        "../tools/claude-pro.html",
+        "../tools/cursor-pro.html"
+      ],
+      "stable_id": "PAGE-8B75C9D9",
+      "inbound_internal_links_count": 1
     },
     "blog/cursor-ai-vs-github-copilot-comparison.html": {
       "file_path": "blog/cursor-ai-vs-github-copilot-comparison.html",
@@ -200,6 +289,75 @@
       "stable_id": "PAGE-00654D7C",
       "inbound_internal_links_count": 4
     },
+    "blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html": {
+      "file_path": "blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+      "title": "DeepSeek R1 vs ChatGPT Plus vs Claude Pro (2026) | AIDigiTools",
+      "title_length": 62,
+      "meta_description": "DeepSeek R1 vs ChatGPT Plus vs Claude Pro 2026 benchmark. Compare reasoning, coding limits, and verified PKR pricing with EasyPaisa & JazzCash via AIDigiTools.",
+      "meta_description_length": 159,
+      "canonical_url": "https://aidigitools.tech/blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../affiliate-disclosure.html",
+        "../blog.html",
+        "../categories/coding.html",
+        "../index.html",
+        "../index.html#products",
+        "../policies.html",
+        "../tools/chatgpt-plus.html",
+        "../tools/claude-pro.html",
+        "../tools/cursor-pro.html",
+        "../tools/deepseek-pro.html"
+      ],
+      "stable_id": "PAGE-24E4B72B",
+      "inbound_internal_links_count": 1
+    },
+    "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html": {
+      "file_path": "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "title": "Pay for Midjourney in Pakistan Without Credit Card (2026)",
+      "title_length": 57,
+      "meta_description": "Complete guide on how to pay for Midjourney in Pakistan without a credit card. Use EasyPaisa, JazzCash, or SadaPay with 15-minute WhatsApp setup.",
+      "meta_description_length": 145,
+      "canonical_url": "https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../blog.html",
+        "../categories/image.html",
+        "../index.html",
+        "../policies.html",
+        "../tools/adobe-creative-cloud.html",
+        "../tools/canva-pro.html",
+        "../tools/leonardo-ai.html",
+        "../tools/midjourney.html"
+      ],
+      "stable_id": "PAGE-DF525924",
+      "inbound_internal_links_count": 2
+    },
+    "blog/runway-gen3-vs-capcut-pro-video-comparison.html": {
+      "file_path": "blog/runway-gen3-vs-capcut-pro-video-comparison.html",
+      "title": "Runway Gen-3 vs CapCut Pro (2026 Video AI) | AIDigiTools",
+      "title_length": 56,
+      "meta_description": "Runway Gen-3 vs CapCut Pro 2026 comparison. Evaluate generative video vs timeline editing with verified Pakistani PKR pricing and 15-min delivery.",
+      "meta_description_length": 146,
+      "canonical_url": "https://aidigitools.tech/blog/runway-gen3-vs-capcut-pro-video-comparison.html",
+      "is_noindex": false,
+      "h1_count": 1,
+      "internal_links": [
+        "../affiliate-disclosure.html",
+        "../blog.html",
+        "../categories/video.html",
+        "../index.html",
+        "../index.html#products",
+        "../policies.html",
+        "../tools/capcut-pro.html",
+        "../tools/kling-ai.html",
+        "../tools/runway-gen3.html"
+      ],
+      "stable_id": "PAGE-7BA0FBBE",
+      "inbound_internal_links_count": 1
+    },
     "blog.html": {
       "file_path": "blog.html",
       "title": "AI Software Blog &amp; Benchmark Guides (2026) | AIDigiTools",
@@ -215,7 +373,13 @@
         "best/best-ai-coding-tools.html",
         "best/best-ai-video-generators.html",
         "blog.html",
+        "blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+        "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+        "blog/claude-artifacts-practical-guide-freelancers.html",
         "blog/cursor-ai-vs-github-copilot-comparison.html",
+        "blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+        "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+        "blog/runway-gen3-vs-capcut-pro-video-comparison.html",
         "categories/coding.html",
         "categories/image.html",
         "categories/video.html",
@@ -230,7 +394,7 @@
         "shipping-policy.html"
       ],
       "stable_id": "PAGE-6FA49C27",
-      "inbound_internal_links_count": 4
+      "inbound_internal_links_count": 10
     },
     "categories/coding.html": {
       "file_path": "categories/coding.html",
@@ -275,7 +439,7 @@
         "../tools/replit-core.html"
       ],
       "stable_id": "PAGE-EDFECBAC",
-      "inbound_internal_links_count": 68
+      "inbound_internal_links_count": 70
     },
     "categories/image.html": {
       "file_path": "categories/image.html",
@@ -356,7 +520,7 @@
         "../tools/vidiq-boost.html"
       ],
       "stable_id": "PAGE-9E00AB90",
-      "inbound_internal_links_count": 67
+      "inbound_internal_links_count": 68
     },
     "categories/vpn.html": {
       "file_path": "categories/vpn.html",
@@ -390,7 +554,7 @@
         "../tools/surfshark-vpn.html"
       ],
       "stable_id": "PAGE-B7554167",
-      "inbound_internal_links_count": 67
+      "inbound_internal_links_count": 66
     },
     "compare/chatgpt-vs-claude.html": {
       "file_path": "compare/chatgpt-vs-claude.html",
@@ -424,7 +588,7 @@
         "../tools/claude-pro.html"
       ],
       "stable_id": "PAGE-4F7EA24D",
-      "inbound_internal_links_count": 54
+      "inbound_internal_links_count": 53
     },
     "compare/runway-vs-pika.html": {
       "file_path": "compare/runway-vs-pika.html",
@@ -457,7 +621,7 @@
         "../tools/capcut-pro.html"
       ],
       "stable_id": "PAGE-83A1D442",
-      "inbound_internal_links_count": 54
+      "inbound_internal_links_count": 53
     },
     "contact.html": {
       "file_path": "contact.html",
@@ -470,6 +634,7 @@
       "h1_count": 1,
       "internal_links": [
         "about.html",
+        "admin/meta-integration.html",
         "affiliate-disclosure.html",
         "best/best-ai-coding-tools.html",
         "best/best-ai-video-generators.html",
@@ -524,7 +689,7 @@
         "tools/suno-ai.html"
       ],
       "stable_id": "PAGE-908285DB",
-      "inbound_internal_links_count": 67
+      "inbound_internal_links_count": 66
     },
     "guides/chatgpt-vs-claude.html": {
       "file_path": "guides/chatgpt-vs-claude.html",
@@ -571,6 +736,7 @@
       "h1_count": 1,
       "internal_links": [
         "about.html",
+        "admin/meta-integration.html",
         "affiliate-disclosure.html",
         "best/best-ai-coding-tools.html",
         "best/best-ai-video-generators.html",
@@ -638,7 +804,7 @@
         "tools/youtube-premium.html"
       ],
       "stable_id": "PAGE-35E2CE0B",
-      "inbound_internal_links_count": 68
+      "inbound_internal_links_count": 74
     },
     "policies.html": {
       "file_path": "policies.html",
@@ -667,7 +833,7 @@
         "shipping-policy.html"
       ],
       "stable_id": "PAGE-240B9786",
-      "inbound_internal_links_count": 17
+      "inbound_internal_links_count": 23
     },
     "shipping-policy.html": {
       "file_path": "shipping-policy.html",
@@ -731,7 +897,7 @@
         "midjourney.html"
       ],
       "stable_id": "PAGE-D125510F",
-      "inbound_internal_links_count": 8
+      "inbound_internal_links_count": 10
     },
     "tools/canva-pro.html": {
       "file_path": "tools/canva-pro.html",
@@ -783,6 +949,7 @@
         "../affiliate-disclosure.html",
         "../best/best-ai-coding-tools.html",
         "../best/best-ai-video-generators.html",
+        "../blog/best-ai-video-generators-youtube-shorts-pakistan.html",
         "../categories/coding.html",
         "../categories/image.html",
         "../categories/video.html",
@@ -802,7 +969,7 @@
         "youtube-premium.html"
       ],
       "stable_id": "PAGE-7B7AC157",
-      "inbound_internal_links_count": 17
+      "inbound_internal_links_count": 19
     },
     "tools/chatgpt-codex.html": {
       "file_path": "tools/chatgpt-codex.html",
@@ -853,6 +1020,7 @@
         "../affiliate-disclosure.html",
         "../best/best-ai-coding-tools.html",
         "../best/best-ai-video-generators.html",
+        "../blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
         "../categories/coding.html",
         "../categories/image.html",
         "../categories/video.html",
@@ -873,7 +1041,7 @@
         "perplexity-pro.html"
       ],
       "stable_id": "PAGE-E795F691",
-      "inbound_internal_links_count": 27
+      "inbound_internal_links_count": 29
     },
     "tools/claude-artifacts.html": {
       "file_path": "tools/claude-artifacts.html",
@@ -908,7 +1076,7 @@
         "cursor-pro.html"
       ],
       "stable_id": "PAGE-E2B97AE5",
-      "inbound_internal_links_count": 3
+      "inbound_internal_links_count": 4
     },
     "tools/claude-pro.html": {
       "file_path": "tools/claude-pro.html",
@@ -924,6 +1092,7 @@
         "../affiliate-disclosure.html",
         "../best/best-ai-coding-tools.html",
         "../best/best-ai-video-generators.html",
+        "../blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
         "../categories/coding.html",
         "../categories/image.html",
         "../categories/video.html",
@@ -944,7 +1113,7 @@
         "perplexity-pro.html"
       ],
       "stable_id": "PAGE-FCDEEB29",
-      "inbound_internal_links_count": 25
+      "inbound_internal_links_count": 27
     },
     "tools/coursera-plus.html": {
       "file_path": "tools/coursera-plus.html",
@@ -1012,7 +1181,7 @@
         "perplexity-pro.html"
       ],
       "stable_id": "PAGE-CB9E94DC",
-      "inbound_internal_links_count": 22
+      "inbound_internal_links_count": 24
     },
     "tools/deepseek-pro.html": {
       "file_path": "tools/deepseek-pro.html",
@@ -1047,7 +1216,7 @@
         "cursor-pro.html"
       ],
       "stable_id": "PAGE-E99627EC",
-      "inbound_internal_links_count": 2
+      "inbound_internal_links_count": 3
     },
     "tools/elevenlabs-creator.html": {
       "file_path": "tools/elevenlabs-creator.html",
@@ -1082,7 +1251,7 @@
         "youtube-premium.html"
       ],
       "stable_id": "PAGE-63A314BA",
-      "inbound_internal_links_count": 12
+      "inbound_internal_links_count": 13
     },
     "tools/envato-elements.html": {
       "file_path": "tools/envato-elements.html",
@@ -1290,7 +1459,7 @@
         "cursor-pro.html"
       ],
       "stable_id": "PAGE-E2CC7603",
-      "inbound_internal_links_count": 4
+      "inbound_internal_links_count": 5
     },
     "tools/google-ai-ultra.html": {
       "file_path": "tools/google-ai-ultra.html",
@@ -1512,6 +1681,7 @@
         "../affiliate-disclosure.html",
         "../best/best-ai-coding-tools.html",
         "../best/best-ai-video-generators.html",
+        "../blog/best-ai-video-generators-youtube-shorts-pakistan.html",
         "../categories/coding.html",
         "../categories/image.html",
         "../categories/video.html",
@@ -1531,7 +1701,7 @@
         "youtube-premium.html"
       ],
       "stable_id": "PAGE-EE77BB00",
-      "inbound_internal_links_count": 4
+      "inbound_internal_links_count": 6
     },
     "tools/leonardo-ai.html": {
       "file_path": "tools/leonardo-ai.html",
@@ -1566,7 +1736,7 @@
         "midjourney.html"
       ],
       "stable_id": "PAGE-3B2BBCAC",
-      "inbound_internal_links_count": 2
+      "inbound_internal_links_count": 3
     },
     "tools/linkedin-premium.html": {
       "file_path": "tools/linkedin-premium.html",
@@ -1680,6 +1850,7 @@
         "../affiliate-disclosure.html",
         "../best/best-ai-coding-tools.html",
         "../best/best-ai-video-generators.html",
+        "../blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
         "../categories/coding.html",
         "../categories/image.html",
         "../categories/video.html",
@@ -1699,7 +1870,7 @@
         "figma-pro.html"
       ],
       "stable_id": "PAGE-C5F972FD",
-      "inbound_internal_links_count": 8
+      "inbound_internal_links_count": 9
     },
     "tools/minimax-ai.html": {
       "file_path": "tools/minimax-ai.html",
@@ -2026,6 +2197,7 @@
         "../affiliate-disclosure.html",
         "../best/best-ai-coding-tools.html",
         "../best/best-ai-video-generators.html",
+        "../blog/best-ai-video-generators-youtube-shorts-pakistan.html",
         "../categories/coding.html",
         "../categories/image.html",
         "../categories/video.html",
@@ -2045,7 +2217,7 @@
         "youtube-premium.html"
       ],
       "stable_id": "PAGE-8F0CB5C6",
-      "inbound_internal_links_count": 5
+      "inbound_internal_links_count": 7
     },
     "tools/semrush-guru.html": {
       "file_path": "tools/semrush-guru.html",

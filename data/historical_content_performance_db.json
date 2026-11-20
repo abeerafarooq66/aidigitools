@@ -1,8 +1,8 @@
 {
   "database_version": "1.0.0",
   "business_timezone": "PKT (UTC+5)",
-  "last_updated_pkt": "2026-11-06 19:56:44 PKT",
-  "total_tracked_cycles": 24,
+  "last_updated_pkt": "2026-11-18 20:08:19 PKT",
+  "total_tracked_cycles": 39,
   "tracked_articles": [
     {
       "article_id": "ART-001",
@@ -366,6 +366,141 @@
     {
       "cycle_id": "CYCLE-UNIT-TEST",
       "timestamp_pkt": "2026-11-06 19:56:44 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 20:54:24 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 21:08:41 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 21:49:01 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 22:15:55 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 22:20:31 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 23:16:18 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 23:17:28 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-17 23:37:06 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 00:07:03 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 01:07:45 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 01:08:30 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 01:37:35 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 01:38:52 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 14:59:03 PKT",
+      "topic_id": "TOPIC-001",
+      "primary_keyword": "cursor ai vs github copilot",
+      "decision": "APPROVED",
+      "deployed_url": null,
+      "quality_score": 0.0
+    },
+    {
+      "cycle_id": "CYCLE-UNIT-TEST",
+      "timestamp_pkt": "2026-11-18 20:08:19 PKT",
       "topic_id": "TOPIC-001",
       "primary_keyword": "cursor ai vs github copilot",
       "decision": "APPROVED",

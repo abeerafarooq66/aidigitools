@@ -1,13 +1,13 @@
 {
-  "last_cycle_run": "2026-11-06T19:56:52.485889",
-  "outdated_articles_count": 5,
+  "last_cycle_run": "2026-11-18T20:08:22.913978",
+  "outdated_articles_count": 8,
   "outdated_articles": [
     {
       "article_id": "ART-001",
       "slug": "chatgpt-vs-claude",
       "relative_url": "compare/chatgpt-vs-claude.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 309,
+      "days_since_verification": 321,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -15,7 +15,7 @@
       "slug": "runway-vs-pika",
       "relative_url": "compare/runway-vs-pika.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 309,
+      "days_since_verification": 321,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -23,7 +23,7 @@
       "slug": "chatgpt-vs-claude-guide",
       "relative_url": "guides/chatgpt-vs-claude.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 309,
+      "days_since_verification": 321,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -31,7 +31,7 @@
       "slug": "best-ai-coding-tools",
       "relative_url": "best/best-ai-coding-tools.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 309,
+      "days_since_verification": 321,
       "status": "NEEDS_FRESHNESS_AUDIT"
     },
     {
@@ -39,7 +39,31 @@
       "slug": "best-ai-video-generators",
       "relative_url": "best/best-ai-video-generators.html",
       "last_verified_date": "2026-01-01",
-      "days_since_verification": 309,
+      "days_since_verification": 321,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-006",
+      "slug": "how-to-pay-for-midjourney-in-pakistan-without-credit-card",
+      "relative_url": "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 321,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-007",
+      "slug": "claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark",
+      "relative_url": "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 321,
+      "status": "NEEDS_FRESHNESS_AUDIT"
+    },
+    {
+      "article_id": "ART-008",
+      "slug": "best-ai-video-generators-youtube-shorts-pakistan",
+      "relative_url": "blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "last_verified_date": "2026-01-01",
+      "days_since_verification": 321,
       "status": "NEEDS_FRESHNESS_AUDIT"
     }
   ],

@@ -1,0 +1,23 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-tradingview-pro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow-tradingview-pro" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Modern Dark Squircle Canvas (App Icon Look) -->
+  <rect x="20" y="20" width="560" height="560" rx="130" fill="url(#bg-tradingview-pro)" stroke="#334155" stroke-width="3" />
+
+  <!-- Soft Ambient Glow matching Brand Color -->
+  <circle cx="300" cy="300" r="160" fill="#131722" opacity="0.14" filter="url(#glow-tradingview-pro)" />
+
+  <!-- Centered Scaled Official Vector Emblem -->
+  <svg x="140" y="140" width="320" height="320" viewBox="0 0 24 24" style="overflow:visible">
+    <g fill="#131722"><path d="M15.8654 8.2789c0 1.3541-1.0978 2.4519-2.452 2.4519-1.354 0-2.4519-1.0978-2.4519-2.452 0-1.354 1.0978-2.4518 2.452-2.4518 1.3541 0 2.4519 1.0977 2.4519 2.4519zM9.75 6H0v4.9038h4.8462v7.2692H9.75Zm8.5962 0H24l-5.1058 12.173h-5.6538z"/></g>
+  </svg>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-heygen-ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow-heygen-ai" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Modern Dark Squircle Canvas (App Icon Look) -->
+  <rect x="20" y="20" width="560" height="560" rx="130" fill="url(#bg-heygen-ai)" stroke="#334155" stroke-width="3" />
+
+  <!-- Soft Ambient Glow matching Brand Color -->
+  <circle cx="300" cy="300" r="160" fill="#7C3AED" opacity="0.14" filter="url(#glow-heygen-ai)" />
+
+  <!-- Centered Scaled Official Vector Emblem -->
+  <svg x="140" y="140" width="320" height="320" viewBox="0 0 20 19" style="overflow:visible">
+    <path d="M13.4806 11.9383H0.525635V7.84722H13.4806L6.79857 0.837891H11.2987L19.9445 9.89278L11.2987 18.9477H6.79857L13.4806 11.9383Z" fill="#7C3AED"/>
+  </svg>
+</svg>

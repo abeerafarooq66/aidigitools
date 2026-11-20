@@ -1,0 +1,23 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-windows-11-pro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <filter id="glow-windows-11-pro" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Modern Dark Squircle Canvas (App Icon Look) -->
+  <rect x="20" y="20" width="560" height="560" rx="130" fill="url(#bg-windows-11-pro)" stroke="#334155" stroke-width="3" />
+
+  <!-- Soft Ambient Glow matching Brand Color -->
+  <circle cx="300" cy="300" r="160" fill="#0078D4" opacity="0.14" filter="url(#glow-windows-11-pro)" />
+
+  <!-- Centered Scaled Official Vector Emblem -->
+  <svg x="140" y="140" width="320" height="320" viewBox="0 0 24 24" style="overflow:visible">
+    <g fill="#0078D4"><path d="M0,0H11.377V11.372H0ZM12.623,0H24V11.372H12.623ZM0,12.623H11.377V24H0Zm12.623,0H24V24H12.623"/></g>
+  </svg>
+</svg>

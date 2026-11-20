@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "target_domain": "https://aidigitools.tech",
+  "last_audit_timestamp": "2026-11-18T16:20:01.151765+00:00",
+  "verification_policy": "Strict White Hat Empirical Verification. A backlink is ONLY counted as Live Verified when real-time HTTP GET returns 200 OK and an actual clickable <a href='...aidigitools.tech...'> anchor tag is found in the DOM. Verification TXT files (e.g. Bing IndexNow key) and unlinked text references are strictly excluded.",
+  "summary": {
+    "total_backlinks": 1,
+    "total_referring_domains": 0,
+    "live_verified_count": 0,
+    "active_count": 0,
+    "dofollow_count": 0,
+    "nofollow_count": 0,
+    "lost_count": 1,
+    "broken_target_count": 0,
+    "toxic_count": 0
+  },
+  "anchor_distribution": {
+    "branded": 0.0,
+    "naked_url": 0.0,
+    "exact_match": 0.0,
+    "partial_match": 0.0,
+    "generic": 0.0
+  },
+  "links": [
+    {
+      "backlink_id": "BL-001",
+      "source_url": "https://github.com/abeerafarooq66/aidigitools",
+      "referring_domain": "github.com",
+      "target_url": "https://aidigitools.tech",
+      "anchor_text": "AIDigiTools Official Website",
+      "anchor_type": "branded",
+      "rel_attribute": "dofollow",
+      "is_dofollow": true,
+      "domain_authority": 96,
+      "category": "Developer Community",
+      "first_detected": "2026-10-15T00:00:00Z",
+      "last_verified": "2026-11-18T16:20:01.151765+00:00",
+      "status": "Lost",
+      "lifecycle_status": "Lost",
+      "http_status_code": 0,
+      "verification_method": "HTTP_DOM_INSPECTION",
+      "verification_note": "Connection failed or timed out: The read operation timed out"
+    }
+  ]
+}

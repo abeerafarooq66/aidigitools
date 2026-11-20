@@ -161,6 +161,79 @@
         "Address regional software ergonomics and internet speeds",
         "Provide direct WhatsApp concierge support that global publications can never offer"
       ]
+    },
+    {
+      "id": "comp-005",
+      "name": "Futurepedia",
+      "domain": "futurepedia.io",
+      "type": "Global AI Tools Directory & Marketplace",
+      "market": "Global",
+      "primary_topics": [
+        "AI tools directory",
+        "Best AI video tools",
+        "Top AI coding tools",
+        "AI software reviews"
+      ],
+      "typical_content_structure": [
+        "Standard tool card listings",
+        "Community upvotes and bookmark counts",
+        "High-level generic feature tags",
+        "Sponsor promotional banners"
+      ],
+      "strengths": [
+        "Huge global domain authority and early mover advantage",
+        "Thousands of indexed tools"
+      ],
+      "weaknesses_and_content_gaps": [
+        "Completely lacks localized pricing, currency options, and payment methods",
+        "Zero hands-on customer concierge service or direct WhatsApp ordering",
+        "No guidance on regional card declines or emerging market usage",
+        "No replacement warranty or verified seller protection"
+      ],
+      "unanswered_user_questions": [
+        "How can international users without credit cards buy subscriptions listed on Futurepedia?",
+        "What are the true monthly costs in local emerging currencies?",
+        "Who provides support if a listed tool subscription gets deactivated?"
+      ],
+      "aidigitools_original_research_opportunity": [
+        "Pair comprehensive tool directories with localized payment rails and transparent PKR/USD pricing",
+        "Provide 15-minute digital WhatsApp fulfillment and 30-day warranty backing",
+        "Publish quantitative benchmarks with local currency ROI metrics"
+      ]
+    },
+    {
+      "id": "comp-006",
+      "name": "Toolify AI",
+      "domain": "toolify.ai",
+      "type": "Global AI Tools Aggregator & Ecosystem",
+      "market": "Global",
+      "primary_topics": [
+        "AI tools aggregator",
+        "AI traffic rankings",
+        "New AI releases 2026"
+      ],
+      "typical_content_structure": [
+        "Scraped tool traffic estimates",
+        "Categorized directory listings",
+        "Automated AI summaries"
+      ],
+      "strengths": [
+        "High crawl frequency and automated tool ingestion",
+        "Traffic estimation dashboards"
+      ],
+      "weaknesses_and_content_gaps": [
+        "Synthetic, automated thin descriptions with zero editorial testing",
+        "No localized checkout, customer support, or post-purchase concierge",
+        "Does not offer subscription fulfillment"
+      ],
+      "unanswered_user_questions": [
+        "Are the tools listed on Toolify safe and verified for commercial use?",
+        "Where can I buy discounted agency seats with local payment options?"
+      ],
+      "aidigitools_original_research_opportunity": [
+        "Human-first, tested, original content with strict editorial standards",
+        "Direct verified subscription concierge service with WhatsApp routing"
+      ]
     }
   ]
 }

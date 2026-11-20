@@ -76,6 +76,9 @@
 - [cursor ai vs github copilot (2026 Guide & Pricing) - AIDigiTools](https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html): Detailed technical comparison of cursor ai vs github copilot. Explore codebase indexing, features, and local PKR pricing via AIDigiTools.
 - [DeepSeek R1 vs ChatGPT Plus vs Claude Pro (2026)](https://aidigitools.tech/blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html): DeepSeek R1 vs ChatGPT Plus vs Claude Pro 2026 benchmark. Compare reasoning, coding limits, and verified PKR pricing with EasyPaisa & JazzCash via AIDigiTools.
 - [Runway Gen-3 vs CapCut Pro (2026 Video AI)](https://aidigitools.tech/blog/runway-gen3-vs-capcut-pro-video-comparison.html): Runway Gen-3 vs CapCut Pro 2026 comparison. Evaluate generative video vs timeline editing with verified Pakistani PKR pricing and 15-min delivery.
+- [Pay for Midjourney in Pakistan Without Credit Card (2026)](https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html): Complete guide on how to pay for Midjourney in Pakistan without a credit card. Use EasyPaisa, JazzCash, or SadaPay with 15-minute WhatsApp setup.
+- [Claude 3.5 Sonnet vs ChatGPT Plus: Coding Shootout (2026)](https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html): Claude 3.5 Sonnet vs ChatGPT Plus coding comparison. Benchmark reasoning, debugging, Artifacts, and verified Pakistani PKR subscription pricing.
+- [Best AI Video Generators for YouTube Shorts in Pakistan (2026)](https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html): Discover top AI video generators for YouTube Shorts and Reels in Pakistan. Compare Runway Gen-3, Kling AI, and CapCut Pro with verified PKR pricing.
 
 ## Operational Rails & Corporate Identity
 - [About Company](https://aidigitools.tech/about.html): Founding mission, digital concierge model, and customer support standards.
