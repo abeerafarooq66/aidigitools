@@ -1,5 +1,5 @@
 {
-  "executed_at_pkt": "2026-11-22 09:49:23 PKT",
+  "executed_at_pkt": "2026-11-23 10:04:06 PKT",
   "stages_completed": [
     "RESEARCH_CADENCE_CHECK"
   ],
@@ -8,12 +8,12 @@
   "published": false,
   "preview_created": false,
   "research_check": {
-    "check_timestamp_pkt": "2026-11-22 09:49:23 PKT",
+    "check_timestamp_pkt": "2026-11-23 10:04:06 PKT",
     "business_timezone": "PKT (UTC+5)",
     "cadence_status": {
       "passed": true,
-      "elapsed_hours": 84.82,
-      "message": "Cadence gate cleared: 84.8 hours have elapsed since last publication ('Best AI Tools for Freelancers in Pakistan (2026)'), satisfying the 20.0h minimum requirement.",
+      "elapsed_hours": 109.07,
+      "message": "Cadence gate cleared: 109.1 hours have elapsed since last publication ('Best AI Tools for Freelancers in Pakistan (2026)'), satisfying the 20.0h minimum requirement.",
       "bypassed": false
     },
     "budget_status": {
