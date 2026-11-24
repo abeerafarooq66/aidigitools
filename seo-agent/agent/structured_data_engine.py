@@ -138,18 +138,40 @@ class StructuredDataEngine:
         # Examine all schemas
         clean_dom = re.sub(r"<[^>]+>", " ", html_content)
 
+        # Unpack unified @graph and map node @ids
+        id_map = {}
+        all_nodes = []
         for data in parsed_schemas:
-            items = [data] if isinstance(data, dict) else (data if isinstance(data, list) else [])
-            for item in items:
-                stype = item.get("@type")
-                if not stype:
-                    errors.append("Schema Error: Missing '@type' property.")
-                    continue
-
-                if isinstance(stype, list):
-                    types_found.extend(stype)
+            if isinstance(data, dict):
+                if "@graph" in data and isinstance(data["@graph"], list):
+                    for node in data["@graph"]:
+                        if isinstance(node, dict):
+                            all_nodes.append(node)
+                            if "@id" in node:
+                                id_map[node["@id"]] = node
                 else:
-                    types_found.append(stype)
+                    all_nodes.append(data)
+                    if "@id" in data:
+                        id_map[data["@id"]] = data
+            elif isinstance(data, list):
+                for node in data:
+                    if isinstance(node, dict):
+                        all_nodes.append(node)
+                        if "@id" in node:
+                            id_map[node["@id"]] = node
+
+        for item in all_nodes:
+            if not isinstance(item, dict):
+                continue
+            stype = item.get("@type")
+            if not stype:
+                errors.append("Schema Error: Missing '@type' property.")
+                continue
+
+            if isinstance(stype, list):
+                types_found.extend(stype)
+            else:
+                types_found.append(stype)
 
                 # RULE 1: Anti-Fabrication Ratings & Reviews
                 dumped = json.dumps(item).lower()
@@ -175,13 +197,23 @@ class StructuredDataEngine:
 
                 # RULE 3: Article / BlogPosting / TechArticle Completeness
                 if stype in ["Article", "BlogPosting", "TechArticle"]:
+                    # Dereference author and publisher if referencing @id
+                    author_obj = item.get("author")
+                    if isinstance(author_obj, dict) and "@id" in author_obj and "@type" not in author_obj and author_obj["@id"] in id_map:
+                        author_obj = id_map[author_obj["@id"]]
+                        item["author"] = author_obj
+
+                    publisher_obj = item.get("publisher")
+                    if isinstance(publisher_obj, dict) and "@id" in publisher_obj and "@type" not in publisher_obj and publisher_obj["@id"] in id_map:
+                        publisher_obj = id_map[publisher_obj["@id"]]
+                        item["publisher"] = publisher_obj
+
                     req_fields = ["headline", "author", "datePublished", "dateModified", "publisher"]
                     for rf in req_fields:
                         if rf not in item:
                             errors.append(f"Article Schema Incomplete: Missing required field '{rf}' in {stype}.")
 
                     # Validate author structure
-                    author_obj = item.get("author")
                     if isinstance(author_obj, dict):
                         if not author_obj.get("name"):
                             errors.append(f"Article Schema Error: author object missing 'name' in {stype}.")

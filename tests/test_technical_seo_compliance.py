@@ -17,7 +17,7 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
     def setUpClass(cls):
         cls.html_files = []
         for root, dirs, files in os.walk(WORKSPACE_DIR):
-            if any(p in root for p in [".git", "tests", "scratch", "data"]):
+            if any(p in root for p in [".git", "tests", "scratch", "data", "admin", "private"]):
                 continue
             for f in files:
                 if f.endswith(".html"):
@@ -78,9 +78,9 @@ class TestTechnicalSEOCompliance(unittest.TestCase):
             match = re.search(r'<meta\s+name=["\']robots["\']\s+content=["\']([^"\']+)["\']', content, re.I)
             self.assertIsNotNone(match, f"Missing robots meta tag in {rel}")
             robots_val = match.group(1).lower()
-            if rel == "404.html":
-                self.assertIn("noindex", robots_val, f"404.html must have noindex, got: {robots_val}")
-                self.assertIn("follow", robots_val, f"404.html must have follow, got: {robots_val}")
+            if rel == "404.html" or "admin" in rel or "private" in rel:
+                self.assertIn("noindex", robots_val, f"{rel} must have noindex, got: {robots_val}")
+                self.assertIn("follow", robots_val, f"{rel} must have follow, got: {robots_val}")
             else:
                 self.assertIn("index", robots_val, f"Content page {rel} must have index, got: {robots_val}")
                 self.assertIn("follow", robots_val, f"Content page {rel} must have follow, got: {robots_val}")

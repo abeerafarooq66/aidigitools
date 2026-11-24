@@ -43,103 +43,110 @@
   <meta name="twitter:image" content="https://aidigitools.tech/assets/images/aidigitools-orbit-emblem.png">
     <script type="application/ld+json">
 {
-    "@context":  "https://schema.org",
-    "@graph":  [
-                   {
-                       "@type":  "Organization",
-                       "@id":  "https://aidigitools.tech/#organization",
-                       "name":  "AIDigiTools",
-                       "url":  "https://aidigitools.tech/",
-                       "logo":  {
-                                    "@type":  "ImageObject",
-                                    "@id":  "https://aidigitools.tech/#logo",
-                                    "url":  "https://aidigitools.tech/assets/images/logo.png",
-                                    "caption":  "AIDigiTools"
-                                },
-                       "sameAs":  [
-                                      "https://github.com/abeerafarooq66",
-                                      "https://wa.me/923326861112"
-                                  ],
-                       "contactPoint":  {
-                                            "@type":  "ContactPoint",
-                                            "telephone":  "+92-332-6861112",
-                                            "contactType":  "customer service",
-                                            "areaServed":  "PK",
-                                            "availableLanguage":  [
-                                                                      "English",
-                                                                      "Urdu"
-                                                                  ]
-                                        }
-                   },
-                   {
-                       "@type":  "WebSite",
-                       "@id":  "https://aidigitools.tech/#website",
-                       "url":  "https://aidigitools.tech/",
-                       "name":  "AIDigiTools",
-                       "publisher":  {
-                                         "@id":  "https://aidigitools.tech/#organization"
-                                     }
-                   },
-                   {
-                       "@type":  "WebPage",
-                       "@id":  "https://aidigitools.tech/#webpage",
-                       "url":  "https://aidigitools.tech/",
-                       "name":  "AIDigiTools — AI Tools Directory, Comparisons \u0026 Guides",
-                       "isPartOf":  {
-                                        "@id":  "https://aidigitools.tech/#website"
-                                    },
-                       "about":  {
-                                     "@id":  "https://aidigitools.tech/#organization"
-                                 }
-                   },
-                   {
-                       "@context":  "https://schema.org",
-                       "@type":  "FAQPage",
-                       "mainEntity":  [
-                                          {
-                                              "@type":  "Question",
-                                              "name":  "Are direct subscription purchases currently available on AIDigiTools?",
-                                              "acceptedAnswer":  {
-                                                                     "@type":  "Answer",
-                                                                     "text":  "AIDigiTools accepts paid orders for 42 eligible AI software tools via WhatsApp with manual payment (SadaPay, NayaPay, EasyPaisa). 7 restricted products remain inquiry-only without direct checkout."
-                                                                 }
-                                          },
-                                          {
-                                              "@type":  "Question",
-                                              "name":  "How are reference prices determined and should I verify them?",
-                                              "acceptedAnswer":  {
-                                                                     "@type":  "Answer",
-                                                                     "text":  "Prices displayed in PKR and USD are informational benchmarks based on prevailing marketplace rates and domestic payment rails. Current retail prices should always be confirmed directly on the official tool provider\u0027s website."
-                                                                 }
-                                          },
-                                          {
-                                              "@type":  "Question",
-                                              "name":  "Is AIDigiTools affiliated with OpenAI, Anthropic, or other tool providers?",
-                                              "acceptedAnswer":  {
-                                                                     "@type":  "Answer",
-                                                                     "text":  "No. AIDigiTools is an independent directory and software concierge desk. All product names, logos, and trademarks belong exclusively to their respective owners."
-                                                                 }
-                                          },
-                                          {
-                                              "@type":  "Question",
-                                              "name":  "Where can I find in-depth tool comparisons and guides?",
-                                              "acceptedAnswer":  {
-                                                                     "@type":  "Answer",
-                                                                     "text":  "Visit our Guides and Comparisons section to read head-to-head shootouts such as ChatGPT vs Claude and Runway vs Pika, or browse our Best AI Coding Tools and Best AI Video Generators rankings."
-                                                                 }
-                                          },
-                                          {
-                                              "@type":  "Question",
-                                              "name":  "How do I report outdated pricing or request a new tool review?",
-                                              "acceptedAnswer":  {
-                                                                     "@type":  "Answer",
-                                                                     "text":  "You can reach our team via WhatsApp at 03326861112 or email support@aidigitools.tech to submit updates, report discrepancies, or request editorial coverage."
-                                                                 }
-                                          }
-                                      ],
-                       "@id":  "https://aidigitools.tech/#faq"
-                   }
-               ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aidigitools.tech/#organization",
+      "name": "AIDigiTools",
+      "url": "https://aidigitools.tech/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://aidigitools.tech/#logo",
+        "url": "https://aidigitools.tech/assets/images/logo.png",
+        "caption": "AIDigiTools"
+      },
+      "sameAs": [
+        "https://github.com/abeerafarooq66",
+        "https://wa.me/923326861112"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-332-6861112",
+        "contactType": "customer service",
+        "areaServed": "PK",
+        "availableLanguage": [
+          "English",
+          "Urdu"
+        ]
+      },
+      "telephone": "+92-332-6861112",
+      "email": "support@aidigitools.tech"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aidigitools.tech/#website",
+      "url": "https://aidigitools.tech/",
+      "name": "AIDigiTools",
+      "publisher": {
+        "@id": "https://aidigitools.tech/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://aidigitools.tech/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aidigitools.tech/#webpage",
+      "url": "https://aidigitools.tech/",
+      "name": "AIDigiTools — AI Tools Directory, Comparisons & Guides",
+      "isPartOf": {
+        "@id": "https://aidigitools.tech/#website"
+      },
+      "about": {
+        "@id": "https://aidigitools.tech/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are direct subscription purchases currently available on AIDigiTools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AIDigiTools accepts paid orders for 42 eligible AI software tools via WhatsApp with manual payment (SadaPay, NayaPay, EasyPaisa). 7 restricted products remain inquiry-only without direct checkout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are reference prices determined and should I verify them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prices displayed in PKR and USD are informational benchmarks based on prevailing marketplace rates and domestic payment rails. Current retail prices should always be confirmed directly on the official tool provider's website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AIDigiTools affiliated with OpenAI, Anthropic, or other tool providers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AIDigiTools is an independent directory and software concierge desk. All product names, logos, and trademarks belong exclusively to their respective owners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find in-depth tool comparisons and guides?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visit our Guides and Comparisons section to read head-to-head shootouts such as ChatGPT vs Claude and Runway vs Pika, or browse our Best AI Coding Tools and Best AI Video Generators rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I report outdated pricing or request a new tool review?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach our team via WhatsApp at 03326861112 or email support@aidigitools.tech to submit updates, report discrepancies, or request editorial coverage."
+          }
+        }
+      ],
+      "@id": "https://aidigitools.tech/#faq"
+    }
+  ]
 }
   </script>
   <script defer src="assets/analytics-events.js"></script>

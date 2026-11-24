@@ -56,7 +56,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User Account",
         "price_pkr": 7500,
-        "price_usd": 27.0,
+        "price_usd": 27,
         "features": [
           "Full 365 days uninterrupted ad-free playback",
           "Includes YouTube Music Premium for 1 year",
@@ -100,7 +100,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 2300,
-        "price_usd": 8.0,
+        "price_usd": 8,
         "features": [
           "Access to GPT-4o, GPT-4, and OpenAI o1 reasoning",
           "Advanced Voice Mode on iOS & Android",
@@ -118,7 +118,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "Team Shared Workspace",
         "price_pkr": 4800,
-        "price_usd": 17.0,
+        "price_usd": 17,
         "features": [
           "Higher message limits on GPT-4o and o1",
           "Dedicated collaborative workspace & admin console",
@@ -131,7 +131,7 @@
       }
     ],
     "starting_price_pkr": 2300,
-    "starting_price_usd": 8.0,
+    "starting_price_usd": 8,
     "starting_price_display": "From Rs. 2,300 PKR (~$8.00 USD)",
     "total_plans": 2,
     "popularity_score": 99,
@@ -162,7 +162,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 2500,
-        "price_usd": 9.0,
+        "price_usd": 9,
         "features": [
           "5x higher usage limits vs free Claude tier",
           "Claude 3.5 Sonnet & Claude 3.5 Haiku models",
@@ -193,7 +193,7 @@
       }
     ],
     "starting_price_pkr": 2500,
-    "starting_price_usd": 9.0,
+    "starting_price_usd": 9,
     "starting_price_display": "From Rs. 2,500 PKR (~$9.00 USD)",
     "total_plans": 2,
     "popularity_score": 98,
@@ -304,7 +304,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User (Multi-Device)",
         "price_pkr": 5900,
-        "price_usd": 21.0,
+        "price_usd": 21,
         "features": [
           "Full 12 months uninterrupted Pro access",
           "Unlimited 4K exports & premium transitions",
@@ -348,7 +348,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 2800,
-        "price_usd": 10.0,
+        "price_usd": 10,
         "features": [
           "200 Fast GPU minutes (~200 images)",
           "General commercial usage terms",
@@ -384,7 +384,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 5600,
-        "price_usd": 20.0,
+        "price_usd": 20,
         "features": [
           "30 Fast GPU hours (~2,000 images)",
           "Stealth mode (keep generations private)",
@@ -397,7 +397,7 @@
       }
     ],
     "starting_price_pkr": 2800,
-    "starting_price_usd": 10.0,
+    "starting_price_usd": 10,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
     "total_plans": 3,
     "popularity_score": 94,
@@ -446,7 +446,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User (2 Devices Active)",
         "price_pkr": 14000,
-        "price_usd": 50.0,
+        "price_usd": 50,
         "features": [
           "Full 12 months access to entire Creative Cloud suite",
           "Monthly Firefly AI credit renewals",
@@ -490,7 +490,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "Up to 10 Simultaneous Devices",
         "price_pkr": 850,
-        "price_usd": 3.0,
+        "price_usd": 3,
         "features": [
           "Ultra-fast NordLynx protocol with zero logs",
           "Access to 6,400+ servers in 111 countries",
@@ -521,7 +521,7 @@
       }
     ],
     "starting_price_pkr": 850,
-    "starting_price_usd": 3.0,
+    "starting_price_usd": 3,
     "starting_price_display": "From Rs. 850 PKR (~$3.00 USD)",
     "total_plans": 2,
     "popularity_score": 83,
@@ -552,7 +552,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "Unlimited Simultaneous Devices",
         "price_pkr": 800,
-        "price_usd": 3.0,
+        "price_usd": 3,
         "features": [
           "Connect unlimited devices on 1 subscription",
           "CleanWeb 2.0 pop-up and malware blocker",
@@ -583,7 +583,7 @@
       }
     ],
     "starting_price_pkr": 800,
-    "starting_price_usd": 3.0,
+    "starting_price_usd": 3,
     "starting_price_display": "From Rs. 800 PKR (~$3.00 USD)",
     "total_plans": 2,
     "popularity_score": 83,
@@ -658,7 +658,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 2200,
-        "price_usd": 8.0,
+        "price_usd": 8,
         "features": [
           "600+ Pro Searches / day with multi-step reasoning",
           "Model switcher: Claude 3.5 Sonnet, GPT-4o, Sonar Large",
@@ -676,7 +676,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User",
         "price_pkr": 16500,
-        "price_usd": 59.0,
+        "price_usd": 59,
         "features": [
           "Full 12 months uninterrupted Pro research",
           "All premium AI models unlocked",
@@ -689,7 +689,7 @@
       }
     ],
     "starting_price_pkr": 2200,
-    "starting_price_usd": 8.0,
+    "starting_price_usd": 8,
     "starting_price_display": "From Rs. 2,200 PKR (~$8.00 USD)",
     "total_plans": 2,
     "popularity_score": 90,
@@ -720,7 +720,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 2800,
-        "price_usd": 10.0,
+        "price_usd": 10,
         "features": [
           "100,000 characters per month (~2 hours of audio)",
           "Create up to 30 custom instant voice clones",
@@ -751,7 +751,7 @@
       }
     ],
     "starting_price_pkr": 2800,
-    "starting_price_usd": 10.0,
+    "starting_price_usd": 10,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
     "total_plans": 2,
     "popularity_score": 89,
@@ -782,7 +782,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User Account",
         "price_pkr": 1100,
-        "price_usd": 4.0,
+        "price_usd": 4,
         "features": [
           "Full access to DeepSeek-R1 reasoning model",
           "DeepSeek-V3 MoE 671B architecture",
@@ -795,7 +795,7 @@
       }
     ],
     "starting_price_pkr": 1100,
-    "starting_price_usd": 4.0,
+    "starting_price_usd": 4,
     "starting_price_display": "From Rs. 1,100 PKR (~$4.00 USD)",
     "total_plans": 1,
     "popularity_score": 89,
@@ -826,7 +826,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User Profile with PIN",
         "price_pkr": 1100,
-        "price_usd": 4.0,
+        "price_usd": 4,
         "features": [
           "4K Ultra HD + HDR video playback",
           "Personal PIN-locked profile & private watch history",
@@ -834,8 +834,8 @@
           "Works on Smart TV, Phone, Laptop, and Tablet"
         ],
         "limits": "1 screen active at any time on your dedicated profile",
-        "badge": "Most Popular",
-        "availability": "InStock"
+        "badge": "Inquiry Only",
+        "availability": "OutOfStock"
       },
       {
         "plan_id": "PLAN-NETFLIX-FULL-1M",
@@ -852,12 +852,12 @@
           "Spatial audio on all compatible systems"
         ],
         "limits": "Private household account activation",
-        "badge": "Full Household",
-        "availability": "InStock"
+        "badge": "Inquiry Only",
+        "availability": "OutOfStock"
       }
     ],
     "starting_price_pkr": 1100,
-    "starting_price_usd": 4.0,
+    "starting_price_usd": 4,
     "starting_price_display": "From Rs. 1,100 PKR (~$4.00 USD)",
     "total_plans": 2,
     "popularity_score": 85,
@@ -865,7 +865,10 @@
     "is_new_arrival": false,
     "ranking_source": "Domestic order conversion & verified multi-channel demand",
     "ranking_reason": "Established core product with proven checkout volume and high retention.",
-    "popularity_rank": 29
+    "popularity_rank": 29,
+    "available": false,
+    "in_stock": false,
+    "status": "inquiry_only"
   },
   "suno-ai": {
     "slug": "suno-ai",
@@ -994,7 +997,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User (Shared Dedicated Suite)",
         "price_pkr": 2500,
-        "price_usd": 9.0,
+        "price_usd": 9,
         "features": [
           "15 projects & 1,500 keywords tracked daily",
           "Historical keyword & backlink data since 2012",
@@ -1012,7 +1015,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 1900,
-        "price_usd": 7.0,
+        "price_usd": 7,
         "features": [
           "5 projects & 500 keywords tracked daily",
           "Domain & keyword analytics with competitor traffic estimates",
@@ -1025,7 +1028,7 @@
       }
     ],
     "starting_price_pkr": 2500,
-    "starting_price_usd": 9.0,
+    "starting_price_usd": 9,
     "starting_price_display": "From Rs. 2,500 PKR (~$9.00 USD)",
     "total_plans": 2,
     "popularity_score": 85,
@@ -1056,7 +1059,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User Workspace",
         "price_pkr": 1400,
-        "price_usd": 5.0,
+        "price_usd": 5,
         "features": [
           "Unlimited Notion AI prompts, autofill & summaries",
           "Unlimited page history & team collaborative spaces",
@@ -1069,7 +1072,7 @@
       }
     ],
     "starting_price_pkr": 1400,
-    "starting_price_usd": 5.0,
+    "starting_price_usd": 5,
     "starting_price_display": "From Rs. 1,400 PKR (~$5.00 USD)",
     "total_plans": 1,
     "popularity_score": 86,
@@ -1118,7 +1121,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User (Multi-Device)",
         "price_pkr": 4500,
-        "price_usd": 16.0,
+        "price_usd": 16,
         "features": [
           "Full 365 days of uninterrupted Grammarly Premium",
           "Unlimited AI text suggestions & rewrites",
@@ -1180,7 +1183,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User",
         "price_pkr": 4200,
-        "price_usd": 15.0,
+        "price_usd": 15,
         "features": [
           "Full 12 months uninterrupted paraphrasing & grammar",
           "Annual Plagiarism Checker scanning credits",
@@ -1400,7 +1403,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 Developer (Multi-Device)",
         "price_pkr": 2500,
-        "price_usd": 9.0,
+        "price_usd": 9,
         "features": [
           "All 16 JetBrains IDEs: IntelliJ, PyCharm, WebStorm, CLion, Rider, GoLand, etc.",
           "Full commercial development rights",
@@ -1418,7 +1421,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 Developer (Multi-Device)",
         "price_pkr": 18000,
-        "price_usd": 64.0,
+        "price_usd": 64,
         "features": [
           "Full 365 days access to entire JetBrains product family",
           "Includes all major version upgrades during term",
@@ -1431,7 +1434,7 @@
       }
     ],
     "starting_price_pkr": 2500,
-    "starting_price_usd": 9.0,
+    "starting_price_usd": 9,
     "starting_price_display": "From Rs. 2,500 PKR (~$9.00 USD)",
     "total_plans": 2,
     "popularity_score": 84,
@@ -1462,7 +1465,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 Developer Workspace",
         "price_pkr": 2800,
-        "price_usd": 10.0,
+        "price_usd": 10,
         "features": [
           "Unlimited basic Repls & collaborative coding",
           "Replit AI code completion and codebase chat",
@@ -1475,7 +1478,7 @@
       }
     ],
     "starting_price_pkr": 2800,
-    "starting_price_usd": 10.0,
+    "starting_price_usd": 10,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
     "total_plans": 1,
     "popularity_score": 84,
@@ -1514,8 +1517,8 @@
           "Full access to 21,000+ LinkedIn Learning courses"
         ],
         "limits": "Personal LinkedIn profile upgrade",
-        "badge": "Career Accelerator",
-        "availability": "InStock"
+        "badge": "Inquiry Only",
+        "availability": "OutOfStock"
       }
     ],
     "starting_price_pkr": 1500,
@@ -1527,7 +1530,10 @@
     "is_new_arrival": false,
     "ranking_source": "Domestic order conversion & verified multi-channel demand",
     "ranking_reason": "Established core product with proven checkout volume and high retention.",
-    "popularity_rank": 47
+    "popularity_rank": 47,
+    "available": false,
+    "in_stock": false,
+    "status": "inquiry_only"
   },
   "gemini-advanced": {
     "slug": "gemini-advanced",
@@ -1594,7 +1600,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 1100,
-        "price_usd": 4.0,
+        "price_usd": 4,
         "features": [
           "Real-time trending news synthesis from global posts",
           "Uncensored Flux.1 photorealistic image generation",
@@ -1607,7 +1613,7 @@
       }
     ],
     "starting_price_pkr": 1100,
-    "starting_price_usd": 4.0,
+    "starting_price_usd": 4,
     "starting_price_display": "From Rs. 1,100 PKR (~$4.00 USD)",
     "total_plans": 1,
     "popularity_score": 85,
@@ -1770,7 +1776,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User",
         "price_pkr": 2800,
-        "price_usd": 10.0,
+        "price_usd": 10,
         "features": [
           "1,200 monthly creation credits (~240 songs)",
           "Stereo audio stem downloads (vocals, drums, bass, synth)",
@@ -1783,7 +1789,7 @@
       }
     ],
     "starting_price_pkr": 2800,
-    "starting_price_usd": 10.0,
+    "starting_price_usd": 10,
     "starting_price_display": "From Rs. 2,800 PKR (~$10.00 USD)",
     "total_plans": 1,
     "popularity_score": 81,
@@ -1946,7 +1952,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 User Profile",
         "price_pkr": 4200,
-        "price_usd": 15.0,
+        "price_usd": 15,
         "features": [
           "Fast video generation with 15 monthly credits",
           "Over 100+ realistic public AI avatars",
@@ -1959,7 +1965,7 @@
       }
     ],
     "starting_price_pkr": 4200,
-    "starting_price_usd": 15.0,
+    "starting_price_usd": 15,
     "starting_price_display": "Rs. 4,200 PKR",
     "total_plans": 1,
     "popularity_score": 92,
@@ -2146,7 +2152,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 Student Profile",
         "price_pkr": 2200,
-        "price_usd": 8.0,
+        "price_usd": 8,
         "features": [
           "Unlimited access to 7,000+ courses and Specializations",
           "Professional Certificates from Google, IBM, Meta & AWS",
@@ -2154,12 +2160,12 @@
           "Hands-on guided projects with cloud dev environments"
         ],
         "limits": "Excludes select degree programs and premium masterclasses",
-        "badge": "Best Value",
-        "availability": "InStock"
+        "badge": "Inquiry Only",
+        "availability": "OutOfStock"
       }
     ],
     "starting_price_pkr": 2200,
-    "starting_price_usd": 8.0,
+    "starting_price_usd": 8,
     "starting_price_display": "Rs. 2,200 PKR",
     "total_plans": 1,
     "popularity_score": 90,
@@ -2173,7 +2179,10 @@
     "official_vendor_partnership": false,
     "account_sharing_restriction_disclosed": true,
     "pricing_verification_status": "verified_against_competitor_market_benchmarks",
-    "sales_evidence_status": "pre_order_unverified_sales"
+    "sales_evidence_status": "pre_order_unverified_sales",
+    "available": false,
+    "in_stock": false,
+    "status": "inquiry_only"
   },
   "google-ai-ultra": {
     "slug": "google-ai-ultra",
@@ -2304,8 +2313,8 @@
           "Cross-device Spotify Connect synchronization"
         ],
         "limits": "Personal account activation; non-commercial playback",
-        "badge": "Everyday Audio",
-        "availability": "InStock"
+        "badge": "Inquiry Only",
+        "availability": "OutOfStock"
       }
     ],
     "starting_price_pkr": 850,
@@ -2323,7 +2332,10 @@
     "official_vendor_partnership": false,
     "account_sharing_restriction_disclosed": true,
     "pricing_verification_status": "verified_against_competitor_market_benchmarks",
-    "sales_evidence_status": "pre_order_unverified_sales"
+    "sales_evidence_status": "pre_order_unverified_sales",
+    "available": false,
+    "in_stock": false,
+    "status": "inquiry_only"
   },
   "microsoft-office-365": {
     "slug": "microsoft-office-365",
@@ -2346,7 +2358,7 @@
         "duration": "12 Months (365 Days)",
         "seats": "1 User (Up to 5 Devices)",
         "price_pkr": 1950,
-        "price_usd": 7.0,
+        "price_usd": 7,
         "features": [
           "Full desktop Word, Excel, PowerPoint, Outlook & Access",
           "1,000 GB (1 TB) secure OneDrive cloud storage",
@@ -2359,7 +2371,7 @@
       }
     ],
     "starting_price_pkr": 1950,
-    "starting_price_usd": 7.0,
+    "starting_price_usd": 7,
     "starting_price_display": "Rs. 1,950 PKR",
     "total_plans": 1,
     "popularity_score": 91,
@@ -2546,7 +2558,7 @@
         "duration": "1 Month (30 Days)",
         "seats": "1 Student Portal",
         "price_pkr": 2800,
-        "price_usd": 10.0,
+        "price_usd": 10,
         "features": [
           "Direct similarity index generation with non-repository option",
           "AI writing and paraphrasing detection breakdown",
@@ -2554,12 +2566,12 @@
           "Safe submission settings that do not store student papers in repository"
         ],
         "limits": "Non-repository class enrollment; up to 30 submissions/month",
-        "badge": "Academic Guard",
-        "availability": "InStock"
+        "badge": "Inquiry Only",
+        "availability": "OutOfStock"
       }
     ],
     "starting_price_pkr": 2800,
-    "starting_price_usd": 10.0,
+    "starting_price_usd": 10,
     "starting_price_display": "Rs. 2,800 PKR",
     "total_plans": 1,
     "popularity_score": 91,
@@ -2573,6 +2585,9 @@
     "official_vendor_partnership": false,
     "account_sharing_restriction_disclosed": true,
     "pricing_verification_status": "verified_against_competitor_market_benchmarks",
-    "sales_evidence_status": "pre_order_unverified_sales"
+    "sales_evidence_status": "pre_order_unverified_sales",
+    "available": false,
+    "in_stock": false,
+    "status": "inquiry_only"
   }
 }
