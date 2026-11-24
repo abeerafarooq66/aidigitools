@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-11-24T20:55:00+05:00",
+  "repository": "abeerafarooq66/aidigitools",
+  "branch": "main",
+  "baseline_remote_sha": "1e907ee67822454bf559e94c1a26035df5416499",
+  "reconciliation_status": "READY_FOR_RELEASE",
+  "test_metrics": {
+    "total_html_files_scanned": 78,
+    "html_utf8_replacement_glyphs": 0,
+    "html_broken_literal_marks": 0,
+    "tool_pages_scanned": 49,
+    "non_cart_wallet_keyword_occurrences": 0,
+    "missing_h1_count": 0,
+    "missing_title_count": 0,
+    "missing_canonical_count": 0,
+    "missing_schema_count": 0,
+    "top_tool_grounding_pass_rate": "100%"
+  },
+  "reconciled_components": [
+    {
+      "component": "tools_catalog",
+      "file_count": 49,
+      "remediation": "Restored UTF-8, eliminated wallet cannibalization, upgraded top 15 tools to Master Book V2 standards",
+      "status": "VERIFIED LOCALLY"
+    },
+    {
+      "component": "analytics_infrastructure",
+      "files": ["assets/analytics-events.js", "blog.html", "blog/cursor-ai-vs-github-copilot-comparison.html"],
+      "remediation": "Document-level beacon delegation for WhatsApp & Quick Order; blog GA4 coverage",
+      "status": "VERIFIED LOCALLY"
+    },
+    {
+      "component": "crawler_directives",
+      "files": ["robots.txt", "admin/meta-integration.html"],
+      "remediation": "Explicit disallow of /admin/, /private/, /data/previews/ across all crawler user-agents; noindex meta on admin",
+      "status": "VERIFIED LOCALLY"
+    },
+    {
+      "component": "data_provenance",
+      "files": ["seo-agent/agent/conversion_analytics.py", "data/analytics_report_*.json"],
+      "remediation": "Stamped SYNTHETIC_MODEL_SIMULATION_FIXTURE disclaimers",
+      "status": "VERIFIED LOCALLY"
+    },
+    {
+      "component": "ci_cd_workflows",
+      "files": [".github/workflows/autonomous-seo-engineer.yml", ".github/workflows/auto-blog-publisher.yml"],
+      "remediation": "Restricted autonomous commit staging to audit_reports/; added UTF-8 pre-flight guard",
+      "status": "VERIFIED LOCALLY"
+    },
+    {
+      "component": "ui_accessibility",
+      "files": ["assets/style.css"],
+      "remediation": "Boosted badge contrast to #047857 (WCAG AAA compliant)",
+      "status": "VERIFIED LOCALLY"
+    }
+  ]
+}

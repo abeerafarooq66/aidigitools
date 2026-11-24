@@ -1,4 +1,4 @@
-﻿# scripts/site_wide_master_upgrade.ps1
+# scripts/site_wide_master_upgrade.ps1
 # Automates Master Book V2 upgrades across all non-tool pages:
 # 1. Unified @graph JSON-LD schema
 # 2. Cannibalization elimination in category/comparison meta tags

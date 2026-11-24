@@ -1,0 +1,974 @@
+File Path,Extension,Size (Bytes),Line Count,Role / Subsystem,Publicly Accessible,Audit Status
+".agents/rules/geo-aeo-invariants.md",.md,1949,29,"Repository Support / Config",NO,Audited
+".agents/rules/google-ai-optimization.md",.md,2721,27,"Repository Support / Config",NO,Audited
+".agents/rules/google-search-essentials.md",.md,2713,45,"Repository Support / Config",NO,Audited
+".agents/rules/keyword-and-content-system.md",.md,3628,47,"Repository Support / Config",NO,Audited
+".agents/rules/merchant-center-and-ads.md",.md,2471,33,"Repository Support / Config",NO,Audited
+".agents/skills/geo-aeo-optimizer/SKILL.md",.md,1066,20,"Repository Support / Config",NO,Audited
+".agents/workflows/master-agent-qa.md",.md,1846,39,"Repository Support / Config",NO,Audited
+".agents/workflows/seoranking.md",.md,928,40,"Repository Support / Config",NO,Audited
+".env.example",.example,2218,0,"Repository Support / Config",NO,Audited
+".gitattributes",,66,0,"Repository Support / Config",NO,Audited
+".github/dependabot.yml",.yml,339,11,"Repository Support / Config",NO,Audited
+".github/workflows/aio-agent-daily.yml",.yml,983,37,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/auto-blog-publisher.yml",.yml,1971,52,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/autonomous-seo-engineer.yml",.yml,2853,84,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/chatbot-validation.yml",.yml,676,34,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/cloud-foundation.yml",.yml,1928,63,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/codeql.yml",.yml,629,31,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/content_intelligence_scheduler.yml",.yml,4894,120,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/credentials-preflight.yml",.yml,2367,63,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/daily-seo-geo-monitor.yml",.yml,750,34,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/indexnow-dispatch.yml",.yml,1573,59,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/keyword-agent-daily.yml",.yml,652,30,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/seo-agent-daily.yml",.yml,675,31,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/seo-agent-validation.yml",.yml,1177,48,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/social-content-pack.yml",.yml,769,30,"CI/CD Automation Workflow",NO,Audited
+".github/workflows/telegram-commands.yml",.yml,1034,37,"CI/CD Automation Workflow",NO,Audited
+".gitignore",,489,0,"Repository Support / Config",NO,Audited
+".nojekyll",,44,0,"Repository Support / Config",NO,Audited
+"404.html",.html,17003,279,"Public HTML Storefront / Content Page",YES,Audited
+"89d63ab53a63527b12a199a3096e51ad.txt",.txt,32,1,"Repository Support / Config",NO,Audited
+"AGENTS.md",.md,16409,216,"Repository Support / Config",NO,Audited
+"BingSiteAuth.xml",.xml,270,7,"Repository Support / Config",NO,Audited
+"CNAME",,16,0,"Public Crawler / Search Engine Directive",YES,Audited
+"GSD-STYLE.md",.md,6981,275,"Repository Support / Config",NO,Audited
+"PROJECT_RULES.md",.md,9431,316,"Repository Support / Config",NO,Audited
+"README.md",.md,5457,76,"Repository Support / Config",NO,Audited
+"VERSION",,7,0,"Repository Support / Config",NO,Audited
+"about.html",.html,36970,631,"Public HTML Storefront / Content Page",YES,Audited
+"adapters/CLAUDE.md",.md,1965,78,"Repository Support / Config",NO,Audited
+"adapters/GEMINI.md",.md,2055,93,"Repository Support / Config",NO,Audited
+"adapters/GPT_OSS.md",.md,2902,131,"Repository Support / Config",NO,Audited
+"admin/meta-integration.html",.html,31477,734,"Public HTML Storefront / Content Page",YES,Audited
+"affiliate-disclosure.html",.html,31696,531,"Public HTML Storefront / Content Page",YES,Audited
+"aidigitools-indexnow-key-2026.txt",.txt,31,2,"Repository Support / Config",NO,Audited
+"aio_agent/__init__.py",.py,87,3,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/__main__.py",.py,92,6,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/cli.py",.py,3379,80,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/extractability.py",.py,2277,55,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/grounding_scorer.py",.py,2755,71,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/llms_sync.py",.py,7606,157,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/query_fanout.py",.py,2005,49,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/tests/__init__.py",.py,29,2,"AIO / GEO Extraction Agent",NO,Audited
+"aio_agent/tests/test_aio.py",.py,4224,101,"AIO / GEO Extraction Agent",NO,Audited
+"apple-touch-icon.png",.png,11875,0,"Repository Support / Config",NO,Audited
+"assets/analytics-events.js",.js,1433,37,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/cart.js",.js,82382,2546,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/01_WhatsApp_Profile_Picture.png",.png,294783,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/02_WhatsApp_Cover_Banner.png",.png,54117,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/adobe-creative-cloud-square.png",.png,235478,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/adobe-creative-cloud.png",.png,14109,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/adobe-creative-cloud.svg",.svg,3855,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/aidigitools-emblem.svg",.svg,3124,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/aidigitools-logo.png",.png,53554,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/aidigitools-logo.svg",.svg,6521,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/aidigitools-orbit-emblem.png",.png,1448314,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/canva-pro-square.png",.png,217195,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/canva-pro.png",.png,16659,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/canva-pro.svg",.svg,3820,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/capcut-pro-square.png",.png,232266,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/capcut-pro.png",.png,16659,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/capcut-pro.svg",.svg,3827,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/chatgpt-codex-square.png",.png,245320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/chatgpt-codex.png",.png,13115,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/chatgpt-codex.svg",.svg,3838,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/chatgpt-plus-square.png",.png,245320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/chatgpt-plus.png",.png,10941,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/chatgpt-plus.svg",.svg,3832,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/claude-artifacts-square.png",.png,231844,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/claude-artifacts.png",.png,14466,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/claude-artifacts.svg",.svg,3852,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/claude-pro-square.png",.png,243775,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/claude-pro.png",.png,15255,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/claude-pro.svg",.svg,3829,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/coursera-plus-square.png",.png,222612,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/coursera-plus.png",.png,17608,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/coursera-plus.svg",.svg,3846,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/cover_b64.txt",.txt,251006,2,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/cover_small_b64.txt",.txt,78164,1,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/cursor-pro-square.png",.png,239226,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/cursor-pro.png",.png,18446,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/cursor-pro.svg",.svg,3833,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/deepseek-pro-square.png",.png,240096,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/deepseek-pro.png",.png,18175,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/deepseek-pro.svg",.svg,3838,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/dp_b64.txt",.txt,393046,2,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/dp_small_b64.txt",.txt,36192,1,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/elevenlabs-creator-square.png",.png,235972,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/elevenlabs-creator.png",.png,14220,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/elevenlabs-creator.svg",.svg,3855,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/emblem_b64.txt",.txt,1931090,2,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/envato-elements-square.png",.png,220957,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/envato-elements.png",.png,14239,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/envato-elements.svg",.svg,3841,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/figma-pro-square.png",.png,244997,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/figma-pro.png",.png,18446,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/figma-pro.svg",.svg,3822,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/freepik-premium-square.png",.png,240730,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/freepik-premium.png",.png,17611,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/freepik-premium.svg",.svg,3842,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/gamma-app-square.png",.png,190037,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/gamma-app.png",.png,14220,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/gamma-app.svg",.svg,3839,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/gemini-advanced-square.png",.png,268798,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/gemini-advanced.png",.png,17611,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/gemini-advanced.svg",.svg,3857,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/github-copilot-square.png",.png,281345,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/github-copilot.png",.png,17782,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/github-copilot.svg",.svg,3838,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/google-ai-ultra-square.png",.png,268798,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/google-ai-ultra.png",.png,19098,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/google-ai-ultra.svg",.svg,3853,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/google-veo-square.png",.png,238620,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/google-veo.png",.png,17611,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/google-veo.svg",.svg,3840,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/grammarly-pro-square.png",.png,218760,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/grammarly-pro.png",.png,13115,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/grammarly-pro.svg",.svg,3836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/grok-ai-square.png",.png,256009,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/grok-ai.png",.png,14220,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/grok-ai.svg",.svg,3820,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/heygen-ai-square.png",.png,241599,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/heygen-ai.png",.png,18175,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/heygen-ai.svg",.svg,3837,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/adobe-creative-cloud.svg",.svg,2076,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/canva-pro.svg",.svg,2771,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/capcut-pro.svg",.svg,529,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/chatgpt-codex.svg",.svg,1687,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/chatgpt-plus.svg",.svg,1687,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/claude-artifacts.svg",.svg,424,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/claude-pro.svg",.svg,1696,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/coursera-plus.svg",.svg,691,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/cursor-pro.svg",.svg,547,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/deepseek-pro.svg",.svg,2164,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/elevenlabs-creator.svg",.svg,236,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/envato-elements.svg",.svg,380,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/figma-pro.svg",.svg,1108,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/freepik-premium.svg",.svg,1589,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/gamma-app.svg",.svg,7470,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/gemini-advanced.svg",.svg,2836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/github-copilot.svg",.svg,2322,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/google-ai-ultra.svg",.svg,2836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/google-veo.svg",.svg,472,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/grammarly-pro.svg",.svg,631,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/grok-ai.svg",.svg,756,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/heygen-ai.svg",.svg,249,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/jetbrains-all.svg",.svg,1604,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/kling-ai.svg",.svg,888,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/leonardo-ai.svg",.svg,65090,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/linkedin-premium.svg",.svg,625,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/lovable-ai.svg",.svg,355,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/microsoft-office-365.svg",.svg,407,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/midjourney.svg",.svg,4012,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/minimax-ai.svg",.svg,1570,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/n8n-automation.svg",.svg,1415,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/netflix-premium.svg",.svg,350,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/nordvpn.svg",.svg,371,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/notion-business.svg",.svg,993,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/perplexity-pro.svg",.svg,603,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/prime-video.svg",.svg,5746,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/quillbot-premium.svg",.svg,6691,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/replit-core.svg",.svg,531,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/runway-gen3.svg",.svg,752,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/semrush-guru.svg",.svg,944,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/spotify-premium.svg",.svg,712,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/suno-ai.svg",.svg,308,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/surfshark-vpn.svg",.svg,2412,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/tradingview-pro.svg",.svg,361,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/turnitin-student.svg",.svg,1320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/udio-ai.svg",.svg,1290,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/vidiq-boost.svg",.svg,1344,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/windows-11-pro.svg",.svg,221,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/icons/youtube-premium.svg",.svg,474,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/jetbrains-all-square.png",.png,200978,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/jetbrains-all.png",.png,17559,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/jetbrains-all.svg",.svg,3847,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/kling-ai-square.png",.png,226292,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/kling-ai.png",.png,15254,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/kling-ai.svg",.svg,3824,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/leonardo-ai-square.png",.png,289624,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/leonardo-ai.png",.png,17782,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/leonardo-ai.svg",.svg,3835,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/linkedin-premium-square.png",.png,199144,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/linkedin-premium.png",.png,16919,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/linkedin-premium.svg",.svg,3846,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/lovable-ai-square.png",.png,208196,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/lovable-ai.png",.png,17559,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/lovable-ai.svg",.svg,3846,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/microsoft-office-365-square.png",.png,215522,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/microsoft-office-365.png",.png,14975,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/microsoft-office-365.svg",.svg,3864,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/midjourney-square.png",.png,265962,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/midjourney.png",.png,18177,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/midjourney.svg",.svg,3834,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/minimax-ai-square.png",.png,276239,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/minimax-ai.png",.png,17559,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/minimax-ai.svg",.svg,3834,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/n8n-automation-square.png",.png,255567,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/n8n-automation.png",.png,14975,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/n8n-automation.svg",.svg,3845,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/netflix-premium-square.png",.png,229075,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/netflix-premium.png",.png,14217,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/netflix-premium.svg",.svg,3841,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/nordvpn-square.png",.png,235339,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/nordvpn.png",.png,17611,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/nordvpn.svg",.svg,3831,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/notion-business-square.png",.png,234631,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/notion-business.png",.png,14039,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/notion-business.svg",.svg,3849,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/perplexity-pro-square.png",.png,247548,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/perplexity-pro.png",.png,16658,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/perplexity-pro.svg",.svg,3845,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/prime-video-square.png",.png,248740,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/prime-video.png",.png,16918,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/prime-video.svg",.svg,3838,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/quillbot-premium-square.png",.png,189954,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/quillbot-premium.png",.png,12329,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/quillbot-premium.svg",.svg,3846,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/replit-core-square.png",.png,226195,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/replit-core.png",.png,14976,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/replit-core.svg",.svg,3830,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/runway-gen3-square.png",.png,231551,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/runway-gen3.png",.png,14220,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/runway-gen3.svg",.svg,3836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/semrush-guru-square.png",.png,243717,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/semrush-guru.png",.png,14976,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/semrush-guru.svg",.svg,3833,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/social_cover_aidigitools.png",.png,188253,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/social_cover_small.jpg",.jpg,58623,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/social_dp_aidigitools.png",.png,294783,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/social_dp_small.jpg",.jpg,27144,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/spotify-premium-square.png",.png,218706,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/spotify-premium.png",.png,12329,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/spotify-premium.svg",.svg,3848,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/adobe-creative-cloud.png",.png,235478,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/canva-pro.png",.png,217195,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/capcut-pro.png",.png,232266,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/chatgpt-codex.png",.png,245320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/chatgpt-plus.png",.png,245320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/claude-artifacts.png",.png,231844,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/claude-pro.png",.png,243775,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/coursera-plus.png",.png,222612,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/cursor-pro.png",.png,239226,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/deepseek-pro.png",.png,240096,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/elevenlabs-creator.png",.png,235972,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/envato-elements.png",.png,220957,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/figma-pro.png",.png,244997,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/freepik-premium.png",.png,240730,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/gamma-app.png",.png,190037,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/gemini-advanced.png",.png,268798,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/github-copilot.png",.png,281345,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/google-ai-ultra.png",.png,268798,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/google-veo.png",.png,238620,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/grammarly-pro.png",.png,218760,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/grok-ai.png",.png,256009,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/heygen-ai.png",.png,241599,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/jetbrains-all.png",.png,200978,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/kling-ai.png",.png,226292,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/leonardo-ai.png",.png,289624,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/linkedin-premium.png",.png,199144,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/lovable-ai.png",.png,208196,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/microsoft-office-365.png",.png,215522,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/midjourney.png",.png,265962,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/minimax-ai.png",.png,276239,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/n8n-automation.png",.png,255567,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/netflix-premium.png",.png,229075,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/nordvpn.png",.png,235339,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/notion-business.png",.png,234631,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/perplexity-pro.png",.png,247548,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/prime-video.png",.png,248740,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/quillbot-premium.png",.png,189954,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/replit-core.png",.png,226195,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/runway-gen3.png",.png,231551,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/semrush-guru.png",.png,243717,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/spotify-premium.png",.png,218706,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/suno-ai.png",.png,233036,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/surfshark-vpn.png",.png,224150,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/tradingview-pro.png",.png,228268,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/turnitin-student.png",.png,240734,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/udio-ai.png",.png,232929,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/vidiq-boost.png",.png,253235,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/windows-11-pro.png",.png,188720,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square/youtube-premium.png",.png,214287,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/adobe-creative-cloud.svg",.svg,3046,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/canva-pro.svg",.svg,3712,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/capcut-pro.svg",.svg,1402,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/chatgpt-codex.svg",.svg,2572,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/chatgpt-plus.svg",.svg,2568,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/claude-artifacts.svg",.svg,1334,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/claude-pro.svg",.svg,2587,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/coursera-plus.svg",.svg,1645,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/cursor-pro.svg",.svg,1420,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/deepseek-pro.svg",.svg,3061,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/elevenlabs-creator.svg",.svg,1137,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/envato-elements.svg",.svg,1344,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/figma-pro.svg",.svg,2049,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/freepik-premium.svg",.svg,2552,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/gamma-app.svg",.svg,8406,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/gemini-advanced.svg",.svg,3747,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/github-copilot.svg",.svg,3228,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/google-ai-ultra.svg",.svg,3747,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/google-veo.svg",.svg,1416,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/grammarly-pro.svg",.svg,1584,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/grok-ai.svg",.svg,1619,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/heygen-ai.svg",.svg,1181,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/jetbrains-all.svg",.svg,2557,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/kling-ai.svg",.svg,1754,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/leonardo-ai.svg",.svg,66018,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/linkedin-premium.svg",.svg,1591,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/lovable-ai.svg",.svg,1227,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/microsoft-office-365.svg",.svg,1331,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/midjourney.svg",.svg,4881,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/minimax-ai.svg",.svg,2460,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/n8n-automation.svg",.svg,2325,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/netflix-premium.svg",.svg,1313,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/nordvpn.svg",.svg,1302,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/notion-business.svg",.svg,1957,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/perplexity-pro.svg",.svg,1506,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/prime-video.svg",.svg,6689,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/quillbot-premium.svg",.svg,7642,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/replit-core.svg",.svg,1408,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/runway-gen3.svg",.svg,1629,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/semrush-guru.svg",.svg,1895,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/spotify-premium.svg",.svg,1675,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/suno-ai.svg",.svg,1171,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/surfshark-vpn.svg",.svg,3360,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/tradingview-pro.svg",.svg,1320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/turnitin-student.svg",.svg,2278,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/udio-ai.svg",.svg,2153,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/vidiq-boost.svg",.svg,2285,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/windows-11-pro.svg",.svg,1177,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/square_svg/youtube-premium.svg",.svg,1437,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/suno-ai-square.png",.png,233036,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/suno-ai.png",.png,14976,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/suno-ai.svg",.svg,3819,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/surfshark-vpn-square.png",.png,224150,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/surfshark-vpn.png",.png,16659,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/surfshark-vpn.svg",.svg,3836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/tradingview-pro-square.png",.png,228268,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/tradingview-pro.png",.png,13115,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/tradingview-pro.svg",.svg,3858,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/turnitin-student-square.png",.png,240734,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/turnitin-student.png",.png,15254,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/turnitin-student.svg",.svg,3859,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/udio-ai-square.png",.png,232929,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/udio-ai.png",.png,18446,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/udio-ai.svg",.svg,3820,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/vidiq-boost-square.png",.png,253235,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/vidiq-boost.png",.png,16919,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/vidiq-boost.svg",.svg,3840,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/whatsapp_cover_banner.png",.png,54117,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/whatsapp_profile_picture.png",.png,294783,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/windows-11-pro-square.png",.png,188720,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/windows-11-pro.png",.png,16919,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/windows-11-pro.svg",.svg,3856,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/youtube-premium-square.png",.png,214287,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/youtube-premium.png",.png,14109,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/images/youtube-premium.svg",.svg,3839,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/adobe-creative-cloud.svg",.svg,2076,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/brand_logos_manifest.json",.json,53391,1050,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/canva-pro.svg",.svg,2771,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/capcut-pro.svg",.svg,529,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/chatgpt-codex.svg",.svg,1687,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/chatgpt-plus.svg",.svg,1687,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/claude-artifacts.svg",.svg,424,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/claude-pro.svg",.svg,1696,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/coursera-plus.svg",.svg,691,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/cursor-pro.svg",.svg,547,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/deepseek-pro.svg",.svg,2164,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/discord.svg",.svg,1389,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/duolingo.svg",.svg,3009,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/elevenlabs-creator.svg",.svg,236,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/envato-elements.svg",.svg,380,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/figma-pro.svg",.svg,1108,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/freepik-premium.svg",.svg,1589,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/gamma-app.svg",.svg,7470,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/gemini-advanced.svg",.svg,2836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/github-copilot.svg",.svg,2322,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/google-ai-ultra.svg",.svg,2836,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/google-veo.svg",.svg,472,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/grammarly-pro.svg",.svg,631,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/grok-ai.svg",.svg,756,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/heygen-ai.svg",.svg,249,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/jetbrains-all.svg",.svg,1604,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/kling-ai.svg",.svg,888,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/leonardo-ai.svg",.svg,65090,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/linkedin-premium.svg",.svg,625,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/lovable-ai.svg",.svg,355,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/microsoft-365.svg",.svg,407,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/microsoft-office-365.svg",.svg,407,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/midjourney.svg",.svg,4012,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/minimax-ai.svg",.svg,1570,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/n8n-automation.svg",.svg,1415,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/netflix-premium.svg",.svg,350,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/nordvpn.svg",.svg,371,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/notion-business.svg",.svg,993,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/perplexity-pro.svg",.svg,603,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/prime-video.svg",.svg,5746,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/quillbot-premium.svg",.svg,6691,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/replit-core.svg",.svg,531,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/runway-gen3.svg",.svg,752,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/semrush-guru.svg",.svg,944,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/spotify-premium.svg",.svg,712,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/spotify.svg",.svg,712,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/suno-ai.svg",.svg,308,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/surfshark-vpn.svg",.svg,2412,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/tradingview-pro.svg",.svg,361,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/tradingview.svg",.svg,361,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/turnitin-student.svg",.svg,1320,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/udio-ai.svg",.svg,1290,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/vidiq-boost.svg",.svg,1344,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/windows-11-pro.svg",.svg,221,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/youtube-premium.svg",.svg,474,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/product-logos/zoom.svg",.svg,852,0,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"assets/style.css",.css,69254,1,"Frontend Static Asset (CSS/JS/Images)",YES,Audited
+"audit_reports/AUTONOMOUS_PUBLISHER_LATEST.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/BACKLINK_COMPETITOR_DASHBOARD_LATEST.md",.md,8617,92,"Historical Audit Artifact",NO,Audited
+"audit_reports/FINAL_AUTONOMOUS_PUBLISHING_STATUS.md",.md,11388,179,"Historical Audit Artifact",NO,Audited
+"audit_reports/FINAL_SEO_AGENT_OPERATIONAL_STATUS.md",.md,13520,196,"Historical Audit Artifact",NO,Audited
+"audit_reports/GSC_SEO_PERFORMANCE_LATEST.md",.md,3449,42,"Historical Audit Artifact",NO,Audited
+"audit_reports/README.md",.md,3202,39,"Historical Audit Artifact",NO,Audited
+"audit_reports/SEO_GROWTH_DASHBOARD_LATEST.md",.md,5293,102,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1533.md",.md,1888,47,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1536.md",.md,1667,45,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1546.md",.md,1667,45,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1606.md",.md,2511,54,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1616.md",.md,2696,56,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1726.md",.md,2811,59,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1730.md",.md,3273,62,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1814.md",.md,3545,64,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1920.md",.md,38019,832,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_1939.md",.md,3544,66,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-29_2048.md",.md,3546,66,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_0748.md",.md,3542,66,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_0752.md",.md,3862,68,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_0842.md",.md,3883,68,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_1244.md",.md,3982,73,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_1850.md",.md,5873,105,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_1853.md",.md,7844,125,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-30_2045.md",.md,7775,125,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-10-31_0840.md",.md,7831,125,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-01_0846.md",.md,7933,125,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-02_0851.md",.md,7866,125,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-03_0846.md",.md,12156,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-03_2045.md",.md,12364,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-04_0846.md",.md,12528,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-04_2051.md",.md,13065,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-05_0851.md",.md,12904,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-05_2054.md",.md,13462,175,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-06_0849.md",.md,13150,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-06_2045.md",.md,13209,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-07_0845.md",.md,12966,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-07_2032.md",.md,13180,174,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-08_0848.md",.md,14230,175,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_2026-11-08_2030.md",.md,14491,175,"Historical Audit Artifact",NO,Audited
+"audit_reports/audit_history.json",.json,11523,418,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-02_2006.md",.md,1324,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-03_0846.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-03_0942.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-03_2045.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-04_0846.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-04_2051.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-05_0139.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-05_0228.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-05_0851.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-05_2054.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-06_0849.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-06_0948.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-06_1852.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-06_1957.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-06_2045.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-07_0845.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-07_2032.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-08_0848.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-08_2030.md",.md,1015,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-11_0949.md",.md,1186,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-16_0021.md",.md,998,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-16_0822.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-16_1521.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-16_1552.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-17_2054.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-17_2108.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-17_2149.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-17_2216.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-18_0137.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-18_0138.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-18_1459.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/autonomous_publisher_2026-11-18_2008.md",.md,999,32,"Historical Audit Artifact",NO,Audited
+"audit_reports/deep_audit_2026-10-29_1846.json",.json,11846,306,"Historical Audit Artifact",NO,Audited
+"audit_reports/deep_audit_2026-10-29_1846.md",.md,5555,55,"Historical Audit Artifact",NO,Audited
+"audit_reports/deep_audit_2026-10-29_1919.json",.json,5460,166,"Historical Audit Artifact",NO,Audited
+"audit_reports/deep_audit_2026-10-29_1919.md",.md,1708,33,"Historical Audit Artifact",NO,Audited
+"audit_reports/master_audit_v2_system_results.json",.json,60478,1547,"Historical Audit Artifact",NO,Audited
+"audit_reports/weekly_trends.md",.md,1083,23,"Historical Audit Artifact",NO,Audited
+"autonomous_engineer/__init__.py",.py,237,8,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/alert_manager.py",.py,7432,167,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/bing_client.py",.py,10313,221,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/cli.py",.py,11078,222,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/config.py",.py,2336,64,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/gemini_reasoner.py",.py,11423,249,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/gsc_client.py",.py,14706,337,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/history_manager.py",.py,9090,184,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/live_auditor.py",.py,9721,198,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/pagespeed_client.py",.py,7029,154,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/repair_executor.py",.py,17633,374,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/report_engine.py",.py,27159,375,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/security_scanner.py",.py,14952,300,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/self_monitor.py",.py,5747,129,"Autonomous Engineer Agent",NO,Audited
+"autonomous_engineer/static_auditor.py",.py,23074,498,"Autonomous Engineer Agent",NO,Audited
+"best/best-ai-coding-tools.html",.html,36278,573,"Public HTML Storefront / Content Page",YES,Audited
+"best/best-ai-video-generators.html",.html,35609,564,"Public HTML Storefront / Content Page",YES,Audited
+"blog.html",.html,53420,716,"Public HTML Storefront / Content Page",YES,Audited
+"blog/best-ai-tools-for-freelancers-in-pakistan.html",.html,30626,411,"Public HTML Storefront / Content Page",YES,Audited
+"blog/best-ai-video-generators-youtube-shorts-pakistan.html",.html,24054,351,"Public HTML Storefront / Content Page",YES,Audited
+"blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",.html,24514,356,"Public HTML Storefront / Content Page",YES,Audited
+"blog/claude-artifacts-practical-guide-freelancers.html",.html,26816,376,"Public HTML Storefront / Content Page",YES,Audited
+"blog/cursor-ai-vs-github-copilot-comparison.html",.html,23701,345,"Public HTML Storefront / Content Page",YES,Audited
+"blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",.html,30868,564,"Public HTML Storefront / Content Page",YES,Audited
+"blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",.html,24105,352,"Public HTML Storefront / Content Page",YES,Audited
+"blog/runway-gen3-vs-capcut-pro-video-comparison.html",.html,27547,386,"Public HTML Storefront / Content Page",YES,Audited
+"categories/coding.html",.html,40891,645,"Public HTML Storefront / Content Page",YES,Audited
+"categories/image.html",.html,36464,602,"Public HTML Storefront / Content Page",YES,Audited
+"categories/video.html",.html,39230,638,"Public HTML Storefront / Content Page",YES,Audited
+"categories/vpn.html",.html,30906,534,"Public HTML Storefront / Content Page",YES,Audited
+"compare/chatgpt-vs-claude.html",.html,33498,594,"Public HTML Storefront / Content Page",YES,Audited
+"compare/runway-vs-pika.html",.html,34760,611,"Public HTML Storefront / Content Page",YES,Audited
+"contact.html",.html,38138,658,"Public HTML Storefront / Content Page",YES,Audited
+"data/ai_search_visibility_report.json",.json,1386,52,"Product Catalog / Data Registry",YES,Audited
+"data/analytics_report_14d.json",.json,2563,81,"Product Catalog / Data Registry",YES,Audited
+"data/analytics_report_28d.json",.json,2567,81,"Product Catalog / Data Registry",YES,Audited
+"data/analytics_report_56d.json",.json,2574,81,"Product Catalog / Data Registry",YES,Audited
+"data/analytics_report_7d.json",.json,2554,81,"Product Catalog / Data Registry",YES,Audited
+"data/api_integrations_status.json",.json,4046,93,"Product Catalog / Data Registry",YES,Audited
+"data/author_registry.json",.json,2463,63,"Product Catalog / Data Registry",YES,Audited
+"data/backlink_monitoring_history.json",.json,1376,49,"Product Catalog / Data Registry",YES,Audited
+"data/backlink_opportunities.json",.json,23955,523,"Product Catalog / Data Registry",YES,Audited
+"data/backlink_registry.json",.json,1689,45,"Product Catalog / Data Registry",YES,Audited
+"data/blog_articles_registry.json",.json,10757,207,"Product Catalog / Data Registry",YES,Audited
+"data/business_claims_inventory.json",.json,2474785,65872,"Product Catalog / Data Registry",YES,Audited
+"data/business_claims_register.json",.json,14451,189,"Product Catalog / Data Registry",YES,Audited
+"data/central_product_registry.json",.json,115987,1669,"Product Catalog / Data Registry",YES,Audited
+"data/competitor_backlink_matrix.json",.json,12576,274,"Product Catalog / Data Registry",YES,Audited
+"data/competitor_intelligence.json",.json,11390,239,"Product Catalog / Data Registry",YES,Audited
+"data/content_clusters.json",.json,9612,252,"Product Catalog / Data Registry",YES,Audited
+"data/decay_cannibalization_report.json",.json,2961,84,"Product Catalog / Data Registry",YES,Audited
+"data/discovered_urls_registry.json",.json,103410,2553,"Product Catalog / Data Registry",YES,Audited
+"data/gsc_performance_snapshot.json",.json,4917,146,"Product Catalog / Data Registry",YES,Audited
+"data/historical_content_performance_db.json",.json,15872,511,"Product Catalog / Data Registry",YES,Audited
+"data/human_review_queue.json",.json,13769,369,"Product Catalog / Data Registry",YES,Audited
+"data/indexing_status_ledger.json",.json,167390,4177,"Product Catalog / Data Registry",YES,Audited
+"data/monthly_usage_ledger.json",.json,584,25,"Product Catalog / Data Registry",YES,Audited
+"data/outreach_pipeline.json",.json,9860,90,"Product Catalog / Data Registry",YES,Audited
+"data/phase3_forensic_findings.json",.json,1407,43,"Product Catalog / Data Registry",YES,Audited
+"data/phase4_internal_linking_audit.json",.json,1966,63,"Product Catalog / Data Registry",YES,Audited
+"data/phase4_performance_audit.json",.json,272,12,"Product Catalog / Data Registry",YES,Audited
+"data/phase4_technical_seo_audit.json",.json,6111,283,"Product Catalog / Data Registry",YES,Audited
+"data/phase5_geo_aeo_audit.json",.json,306,14,"Product Catalog / Data Registry",YES,Audited
+"data/phase7_master_qa_report.json",.json,868,41,"Product Catalog / Data Registry",YES,Audited
+"data/previews/cursor-ai-vs-github-copilot-comparison.html",.html,15362,229,"Public HTML Storefront / Content Page",YES,Audited
+"data/products_master.csv",.csv,49696,51,"Product Catalog / Data Registry",YES,Audited
+"data/products_master.json",.json,95265,2310,"Product Catalog / Data Registry",YES,Audited
+"data/publication_ledger.json",.json,9843,216,"Product Catalog / Data Registry",YES,Audited
+"data/publishing_control_ledger.json",.json,3887,88,"Product Catalog / Data Registry",YES,Audited
+"data/reports/cycle_report_CYCLE-TEST.json",.json,1434,53,"Product Catalog / Data Registry",YES,Audited
+"data/reports/cycle_report_CYCLE-UNIT-TEST.json",.json,1444,53,"Product Catalog / Data Registry",YES,Audited
+"data/reports/latest_content_report.json",.json,1444,53,"Product Catalog / Data Registry",YES,Audited
+"data/reports/latest_content_report.md",.md,1424,35,"Product Catalog / Data Registry",NO,Audited
+"data/research_evidence/EVID-cursor-ai-vs-github-copilot-comparison.json",.json,1694,45,"Product Catalog / Data Registry",YES,Audited
+"data/research_evidence/TOPIC-001-cursor-vs-copilot.json",.json,4063,63,"Product Catalog / Data Registry",YES,Audited
+"data/scheduler_run_report.json",.json,1321,30,"Product Catalog / Data Registry",YES,Audited
+"data/search_intelligence_latest.json",.json,5955,159,"Product Catalog / Data Registry",YES,Audited
+"data/seo_growth_dashboard_snapshot.json",.json,78647,2185,"Product Catalog / Data Registry",YES,Audited
+"data/technical_diagnosis_latest.json",.json,4519,114,"Product Catalog / Data Registry",YES,Audited
+"data/topic_opportunity_registry.json",.json,34391,781,"Product Catalog / Data Registry",YES,Audited
+"deals.html",.html,38177,580,"Public HTML Storefront / Content Page",YES,Audited
+"deep_audit/__init__.py",.py,206,5,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/accessibility_checker.py",.py,7065,147,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/browser_checker.py",.py,13447,301,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/cli.py",.py,2567,62,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/crawler.py",.py,4425,111,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/engine.py",.py,13543,275,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/lighthouse_checker.py",.py,4954,105,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/link_checker.py",.py,5216,121,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/models.py",.py,1896,46,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/network_checker.py",.py,6442,132,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/schema_checker.py",.py,8684,170,"Deep Audit Engine / Reports",NO,Audited
+"deep_audit/seo_content_checker.py",.py,16788,340,"Deep Audit Engine / Reports",NO,Audited
+"docs/AGENT_COORDINATION.md",.md,6777,101,"Repository Support / Config",NO,Audited
+"docs/API_SETUP_AND_INTEGRATION_GUIDE.md",.md,9394,182,"Repository Support / Config",NO,Audited
+"docs/AUTONOMOUS_ENGINEER_GUIDE.md",.md,6608,105,"Repository Support / Config",NO,Audited
+"docs/CONTENT_STRATEGY.md",.md,28881,326,"Repository Support / Config",NO,Audited
+"docs/DEPLOYMENT_AND_ROLLBACK_PLAN.md",.md,5416,123,"Repository Support / Config",NO,Audited
+"docs/FINAL_ACCEPTANCE_REPORT.md",.md,17879,183,"Repository Support / Config",NO,Audited
+"docs/KEYWORD_TO_URL_MAPPING.md",.md,78945,712,"Repository Support / Config",NO,Audited
+"docs/LOGO_CONTACT_SHEET.md",.md,14329,77,"Repository Support / Config",NO,Audited
+"docs/MASTER_DELIVERABLES.md",.md,34981,384,"Repository Support / Config",NO,Audited
+"docs/seo-agent/api-inventory.md",.md,4233,45,"Repository Support / Config",NO,Audited
+"docs/seo-agent/credentials-setup.md",.md,5885,131,"Repository Support / Config",NO,Audited
+"docs/seo-agent/security-policy.md",.md,3550,60,"Repository Support / Config",NO,Audited
+"docs/seo-agent/technical-knowledge-base.md",.md,14102,165,"Repository Support / Config",NO,Audited
+"e3b0c44298fc1c149afbf4c8996fb924.txt",.txt,32,1,"Repository Support / Config",NO,Audited
+"favicon-144x144.png",.png,8919,0,"Repository Support / Config",NO,Audited
+"favicon-192x192.png",.png,13108,0,"Repository Support / Config",NO,Audited
+"favicon-48x48.png",.png,2157,0,"Repository Support / Config",NO,Audited
+"favicon-512x512.png",.png,53554,0,"Repository Support / Config",NO,Audited
+"favicon-96x96.png",.png,5376,0,"Repository Support / Config",NO,Audited
+"favicon.ico",.ico,4053,0,"Repository Support / Config",NO,Audited
+"favicon.svg",.svg,3124,0,"Repository Support / Config",NO,Audited
+"feed.xml",.xml,24690,354,"Public Crawler / Search Engine Directive",YES,Audited
+"guides/chatgpt-vs-claude.html",.html,30680,544,"Public HTML Storefront / Content Page",YES,Audited
+"guides/how-to-pay-for-ai-tools-in-pakistan.html",.html,17095,262,"Public HTML Storefront / Content Page",YES,Audited
+"index.html",.html,203185,2546,"Public HTML Storefront / Content Page",YES,Audited
+"keyword_agent/__init__.py",.py,81,3,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/__main__.py",.py,92,6,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/cli.py",.py,3760,77,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/competitor_gap.py",.py,2660,50,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/content_optimizer.py",.py,1527,30,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/gsc_filter_engine.py",.py,2709,60,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/page_mapper.py",.py,1813,41,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/tests/__init__.py",.py,33,2,"Keyword Intelligence Agent",NO,Audited
+"keyword_agent/tests/test_keyword_agent.py",.py,7595,150,"Keyword Intelligence Agent",NO,Audited
+"llms-full.txt",.txt,49168,584,"Public Crawler / Search Engine Directive",YES,Audited
+"llms.txt",.txt,19417,91,"Public Crawler / Search Engine Directive",YES,Audited
+"marketing_agent/__init__.py",.py,81,3,"Marketing Agent Engine",NO,Audited
+"marketing_agent/__main__.py",.py,92,6,"Marketing Agent Engine",NO,Audited
+"marketing_agent/buffer.py",.py,2035,59,"Marketing Agent Engine",NO,Audited
+"marketing_agent/cli.py",.py,2277,53,"Marketing Agent Engine",NO,Audited
+"marketing_agent/social.py",.py,1968,47,"Marketing Agent Engine",NO,Audited
+"marketing_agent/tests/__init__.py",.py,35,2,"Marketing Agent Engine",NO,Audited
+"marketing_agent/tests/test_marketing_agent.py",.py,2890,64,"Marketing Agent Engine",NO,Audited
+"merchant_feed.xml",.xml,88116,1970,"Public Crawler / Search Engine Directive",YES,Audited
+"meta-product-feed.xml",.xml,88116,1970,"Public Crawler / Search Engine Directive",YES,Audited
+"model_capabilities.yaml",.yaml,2943,109,"Repository Support / Config",NO,Audited
+"policies.html",.html,33215,548,"Public HTML Storefront / Content Page",YES,Audited
+"requirements.txt",.txt,93,6,"Repository Support / Config",NO,Audited
+"robots.txt",.txt,1313,67,"Public Crawler / Search Engine Directive",YES,Audited
+"screenshots/after/about.png",.png,129259,0,"Repository Support / Config",NO,Audited
+"screenshots/after/category_coding.png",.png,130314,0,"Repository Support / Config",NO,Audited
+"screenshots/after/compare.png",.png,125575,0,"Repository Support / Config",NO,Audited
+"screenshots/after/deals.png",.png,133524,0,"Repository Support / Config",NO,Audited
+"screenshots/after/homepage_desktop.png",.png,127627,0,"Repository Support / Config",NO,Audited
+"screenshots/after/homepage_mobile.png",.png,77343,0,"Repository Support / Config",NO,Audited
+"screenshots/after/tool_chatgpt.png",.png,148879,0,"Repository Support / Config",NO,Audited
+"screenshots/before/about.png",.png,129500,0,"Repository Support / Config",NO,Audited
+"screenshots/before/category_coding.png",.png,130273,0,"Repository Support / Config",NO,Audited
+"screenshots/before/compare.png",.png,125153,0,"Repository Support / Config",NO,Audited
+"screenshots/before/deals.png",.png,133960,0,"Repository Support / Config",NO,Audited
+"screenshots/before/homepage_desktop.png",.png,133341,0,"Repository Support / Config",NO,Audited
+"screenshots/before/homepage_mobile.png",.png,73479,0,"Repository Support / Config",NO,Audited
+"screenshots/before/tool_chatgpt.png",.png,149022,0,"Repository Support / Config",NO,Audited
+"scripts/add_component_styles.py",.py,2582,109,"Build / QA / Maintenance Script",NO,Audited
+"scripts/add_extra_logos.py",.py,1202,27,"Build / QA / Maintenance Script",NO,Audited
+"scripts/add_org_schema.py",.py,1553,48,"Build / QA / Maintenance Script",NO,Audited
+"scripts/analyze_reseller_catalog.py",.py,2255,53,"Build / QA / Maintenance Script",NO,Audited
+"scripts/apply_all_pages_redesign.py",.py,17519,314,"Build / QA / Maintenance Script",NO,Audited
+"scripts/apply_ceo_level_fixes.py",.py,8969,203,"Build / QA / Maintenance Script",NO,Audited
+"scripts/apply_compliance_governance.py",.py,11874,226,"Build / QA / Maintenance Script",NO,Audited
+"scripts/apply_homepage_redesign.py",.py,20469,713,"Build / QA / Maintenance Script",NO,Audited
+"scripts/apply_phase2_remediation.py",.py,10070,239,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_geo_aeo_phase5.py",.py,4610,108,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_internal_linking_phase4.py",.py,5745,131,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_master_dataset.py",.py,1483,50,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_parts_1_to_7.py",.py,6253,127,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_performance_assets.py",.py,4547,117,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_restricted_products.py",.py,4264,97,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_results.json",.json,39990,1158,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_site_seo.py",.py,6662,181,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_technical_seo_phase4.py",.py,10548,220,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_theme_contrast.py",.py,5783,141,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_tool_page.py",.py,4380,108,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_ui_elements.py",.py,2529,59,"Build / QA / Maintenance Script",NO,Audited
+"scripts/audit_whatsapp_links.py",.py,3839,95,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_all_40_tools_catalog.py",.py,80871,1654,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_canonical_catalog_full.py",.py,71547,1508,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_cart_js.py",.py,12814,327,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_central_product_registry.py",.py,13944,225,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_competitor_intelligence.py",.py,10224,192,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_content_clusters.py",.py,10485,238,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_official_sitemap.py",.py,3814,119,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_professional_ranked_catalog.py",.py,103075,2418,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_tools_catalog.py",.py,11600,226,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_topic_opportunity_registry.py",.py,10972,230,"Build / QA / Maintenance Script",NO,Audited
+"scripts/build_whatsapp_suite.py",.py,10173,242,"Build / QA / Maintenance Script",NO,Audited
+"scripts/capture_ranked_homepage.py",.py,1238,39,"Build / QA / Maintenance Script",NO,Audited
+"scripts/capture_screenshots.py",.py,4581,107,"Build / QA / Maintenance Script",NO,Audited
+"scripts/ceo_deep_audit_phase2.py",.py,14568,321,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_cross_surface_consistency.py",.py,2467,62,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_dns_live.py",.py,1159,24,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_grid_section.py",.py,861,20,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_live_production.py",.py,1786,49,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_meta_sync.py",.py,2264,54,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_order.py",.py,841,23,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_schema_availability.py",.py,1994,53,"Build / QA / Maintenance Script",NO,Audited
+"scripts/check_seo_metrics.py",.py,1577,34,"Build / QA / Maintenance Script",NO,Audited
+"scripts/clean_all_obsolete_references.py",.py,13411,247,"Build / QA / Maintenance Script",NO,Audited
+"scripts/clean_theme_overrides.py",.py,6922,245,"Build / QA / Maintenance Script",NO,Audited
+"scripts/cloud_foundation_health_check.py",.py,11270,267,"Build / QA / Maintenance Script",NO,Audited
+"scripts/credentials_preflight.py",.py,24606,507,"Build / QA / Maintenance Script",NO,Audited
+"scripts/deep_phase3_forensic_scanner.py",.py,6152,141,"Build / QA / Maintenance Script",NO,Audited
+"scripts/dump_49_for_verification.py",.py,1069,25,"Build / QA / Maintenance Script",NO,Audited
+"scripts/enable_https_loop.py",.py,829,19,"Build / QA / Maintenance Script",NO,Audited
+"scripts/extract_36_catalog.py",.py,4575,112,"Build / QA / Maintenance Script",NO,Audited
+"scripts/find_all_paid_order_links.py",.py,701,21,"Build / QA / Maintenance Script",NO,Audited
+"scripts/find_badge_css.py",.py,252,9,"Build / QA / Maintenance Script",NO,Audited
+"scripts/fix_canonical_navigation.py",.py,943,24,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_30_tools.py",.py,54239,749,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_business_claims_register.py",.py,16011,220,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_candidate_tool_pages.py",.py,14077,300,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_logo_contact_sheet.py",.py,11903,203,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_master_preview_html.py",.py,36800,1137,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_meta_product_feed.py",.py,6777,154,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_official_google_favicons.py",.py,4232,124,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_product_images.py",.py,12121,214,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_products_master.py",.py,71888,1421,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_sample_evidence.py",.py,5196,105,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_sitemap.py",.py,2217,66,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_square_icons.py",.py,2797,72,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_tool_icons.py",.py,11632,216,"Build / QA / Maintenance Script",NO,Audited
+"scripts/generate_vector_logo.py",.py,10731,234,"Build / QA / Maintenance Script",NO,Audited
+"scripts/gsc_analyzer.py",.py,11179,265,"Build / QA / Maintenance Script",NO,Audited
+"scripts/implement_advanced_seo_enhancements.py",.py,8273,211,"Build / QA / Maintenance Script",NO,Audited
+"scripts/install_google_tag.py",.py,2785,81,"Build / QA / Maintenance Script",NO,Audited
+"scripts/install_seo_extensions.py",.py,1843,45,"Build / QA / Maintenance Script",NO,Audited
+"scripts/link_graph_checker.py",.py,6806,179,"Build / QA / Maintenance Script",NO,Audited
+"scripts/make_upload_script.py",.py,1638,40,"Build / QA / Maintenance Script",NO,Audited
+"scripts/map_cards.py",.py,832,23,"Build / QA / Maintenance Script",NO,Audited
+"scripts/master_audit_v2_system.js",.js,7639,203,"Build / QA / Maintenance Script",NO,Audited
+"scripts/master_audit_v2_system.py",.py,7256,153,"Build / QA / Maintenance Script",NO,Audited
+"scripts/master_book_v2_auditor.ps1",.ps1,6822,139,"Build / QA / Maintenance Script",NO,Audited
+"scripts/master_book_v2_auditor.py",.py,10544,196,"Build / QA / Maintenance Script",NO,Audited
+"scripts/master_phase7_qa_scanner.py",.py,17225,377,"Build / QA / Maintenance Script",NO,Audited
+"scripts/master_product_dictionary.py",.py,65903,841,"Build / QA / Maintenance Script",NO,Audited
+"scripts/optimize_pagespeed.py",.py,4635,64,"Build / QA / Maintenance Script",NO,Audited
+"scripts/phase3_claims_inventory.py",.py,4669,99,"Build / QA / Maintenance Script",NO,Audited
+"scripts/print_card_sample.py",.py,476,16,"Build / QA / Maintenance Script",NO,Audited
+"scripts/remove_all_fictional_claims.py",.py,3777,88,"Build / QA / Maintenance Script",NO,Audited
+"scripts/remove_unverified_ratings.py",.py,943,26,"Build / QA / Maintenance Script",NO,Audited
+"scripts/render_icons_html.py",.py,2364,80,"Build / QA / Maintenance Script",NO,Audited
+"scripts/reorder_index_by_rank.py",.py,5616,102,"Build / QA / Maintenance Script",NO,Audited
+"scripts/reorganize_homepage.py",.py,35573,565,"Build / QA / Maintenance Script",NO,Audited
+"scripts/run_backlink_intelligence.py",.py,11122,223,"Build / QA / Maintenance Script",NO,Audited
+"scripts/run_seo_growth_cycle.py",.py,1367,39,"Build / QA / Maintenance Script",NO,Audited
+"scripts/scan_for_obsolete_names.py",.py,1853,53,"Build / QA / Maintenance Script",NO,Audited
+"scripts/scan_inline_styles.py",.py,641,15,"Build / QA / Maintenance Script",NO,Audited
+"scripts/search_repo.ps1",.ps1,2253,96,"Build / QA / Maintenance Script",NO,Audited
+"scripts/search_repo.sh",.sh,1521,59,"Build / QA / Maintenance Script",NO,Audited
+"scripts/setup_brand_logos.py",.py,11403,96,"Build / QA / Maintenance Script",NO,Audited
+"scripts/setup_search.ps1",.ps1,4683,98,"Build / QA / Maintenance Script",NO,Audited
+"scripts/setup_search.sh",.sh,4101,104,"Build / QA / Maintenance Script",NO,Audited
+"scripts/site_wide_master_upgrade.ps1",.ps1,14055,299,"Build / QA / Maintenance Script",NO,Audited
+"scripts/submit_indexnow.py",.py,10670,247,"Build / QA / Maintenance Script",NO,Audited
+"scripts/sync_all_surfaces_with_master_map.py",.py,8177,178,"Build / QA / Maintenance Script",NO,Audited
+"scripts/sync_merchant_feed.py",.py,4987,114,"Build / QA / Maintenance Script",NO,Audited
+"scripts/sync_sitemap.py",.py,2198,62,"Build / QA / Maintenance Script",NO,Audited
+"scripts/test_browser_interactions.py",.py,8226,194,"Build / QA / Maintenance Script",NO,Audited
+"scripts/test_gsc_connection.py",.py,9238,217,"Build / QA / Maintenance Script",NO,Audited
+"scripts/test_individual_integrations.py",.py,10690,224,"Build / QA / Maintenance Script",NO,Audited
+"scripts/tools_catalog.json",.json,103052,2578,"Build / QA / Maintenance Script",NO,Audited
+"scripts/unpack_square_icons.py",.py,1493,44,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_blog_hub.py",.py,2309,61,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_deals_bundles.py",.py,4126,56,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_favicons_and_logo_schema.py",.py,2318,59,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_index_catalog.py",.py,8423,217,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_master_product_database.py",.py,47113,883,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_official_product_logos.py",.py,37556,813,"Build / QA / Maintenance Script",NO,Audited
+"scripts/update_stylesheet.py",.py,19318,875,"Build / QA / Maintenance Script",NO,Audited
+"scripts/upgrade_all_pages_theme.py",.py,9343,178,"Build / QA / Maintenance Script",NO,Audited
+"scripts/upgrade_all_tool_pages.py",.py,8167,171,"Build / QA / Maintenance Script",NO,Audited
+"scripts/upgrade_canonical_storefront.py",.py,8018,166,"Build / QA / Maintenance Script",NO,Audited
+"scripts/upgrade_deals_page.py",.py,12301,152,"Build / QA / Maintenance Script",NO,Audited
+"scripts/upgrade_homepage.py",.py,21574,387,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-agents.ps1",.ps1,5070,125,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-agents.sh",.sh,4426,116,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-all.ps1",.ps1,2800,63,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-all.sh",.sh,2015,57,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-encoding.ps1",.ps1,2866,69,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-encoding.sh",.sh,2035,57,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-skills.ps1",.ps1,2439,69,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-skills.sh",.sh,1990,66,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-templates.ps1",.ps1,2307,59,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-templates.sh",.sh,1813,59,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-workflows.ps1",.ps1,2309,60,"Build / QA / Maintenance Script",NO,Audited
+"scripts/validate-workflows.sh",.sh,1813,59,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_all_15_issues.py",.py,6462,112,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_all_23_usability_fixes.py",.py,9973,184,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_all_49_cross_surfaces.py",.py,5818,154,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_all_charter_stages.py",.py,24855,471,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_live_homepage.py",.py,6301,144,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_master_operating_system.py",.py,10344,224,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_part5_part6.py",.py,6265,142,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_phase6_design_a11y.py",.py,6482,134,"Build / QA / Maintenance Script",NO,Audited
+"scripts/verify_products_business.py",.py,517,15,"Build / QA / Maintenance Script",NO,Audited
+"seo-agent/agent/__init__.py",.py,86,3,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/article_quality_engine.py",.py,13597,266,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/audit_engine.py",.py,6650,153,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/automation_scheduler.py",.py,53394,1153,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/autonomous_seo_growth_engine.py",.py,23194,477,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/backlink_intelligence_engine.py",.py,18367,383,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/blog_architecture.py",.py,9448,235,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/cluster_mapper.py",.py,5655,132,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/comparison_methodology.py",.py,10878,223,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/competitor_deep_analyzer.py",.py,7749,151,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/competitor_intelligence.py",.py,5254,127,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/content_reporter.py",.py,13152,292,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/conversion_analytics.py",.py,9997,217,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/conversion_rules.py",.py,7069,160,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/core_web_vitals_engine.py",.py,19393,427,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/decay_and_cannibalization.py",.py,17859,392,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/decision_engine.py",.py,2566,60,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/deployment_verifier.py",.py,1440,37,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/diagnosis_engine.py",.py,11084,218,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/editorial_governance.py",.py,11480,282,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/email_notifier.py",.py,10682,233,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/evidence_system.py",.py,15779,297,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/gemini_generator.py",.py,57557,1214,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/indexing_notifier.py",.py,87775,1848,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/keyword_intelligence.py",.py,7312,177,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/main.py",.py,6483,143,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/page_discovery_engine.py",.py,11694,265,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/product_intelligence.py",.py,5023,119,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/publishing_control.py",.py,32587,715,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/quality_gates.py",.py,40418,724,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/search_intelligence.py",.py,19688,440,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/search_readiness_engine.py",.py,15431,321,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/security_access_manager.py",.py,19999,447,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/agent/structured_data_engine.py",.py,12232,280,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/tests/__init__.py",.py,36,2,"Autonomous SEO Agent Engine",NO,Audited
+"seo-agent/tests/test_seo_agent.py",.py,10397,246,"Autonomous SEO Agent Engine",NO,Audited
+"shipping-policy.html",.html,28026,495,"Public HTML Storefront / Content Page",YES,Audited
+"sitemap.xml",.xml,14325,454,"Public Crawler / Search Engine Directive",YES,Audited
+"tests/__init__.py",.py,53,2,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_aeo_and_geo_readiness.py",.py,7602,131,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_agent_coordination.py",.py,3797,81,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_article_quality.py",.py,6371,105,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_automation_scheduler.py",.py,16468,358,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_autonomous_engineer.py",.py,12550,253,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_autonomous_seo_intelligence.py",.py,14023,278,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_backlink_intelligence.py",.py,6124,133,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_bing_and_indexnow_compliance.py",.py,7003,135,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_blog_architecture.py",.py,7603,165,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_canonical_catalog_system.py",.py,10168,185,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_charter_implementation.py",.py,14261,253,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_cluster_mapping.py",.py,3193,72,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_comparison_methodology.py",.py,5356,94,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_competitor_intelligence.py",.py,2568,59,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_content_reporter.py",.py,9293,189,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_content_strategy_compliance.py",.py,8066,167,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_conversion_analytics.py",.py,6288,124,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_conversion_rules.py",.py,5379,109,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_decay_and_cannibalization.py",.py,6787,137,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_deep_audit_engine.py",.py,8744,173,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_editorial_governance.py",.py,9169,187,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_evidence_system.py",.py,4662,103,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_final_acceptance_criteria.py",.py,6758,142,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_full_autonomous_publishing.py",.py,30862,617,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_gemini_generation_quality_gate_regression.py",.py,21935,414,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_google_search_visibility.py",.py,8409,161,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_indexing_notifier.py",.py,31468,600,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_internal_search_filter_conversion.py",.py,6967,136,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_keyword_intelligence.py",.py,3505,82,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_meta_commerce_feed.py",.py,5631,133,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_performance_accessibility_security.py",.py,8496,174,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_phase15_full_regression.py",.py,9139,154,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_phase17_deliverables_compliance.py",.py,5845,117,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_product_intelligence.py",.py,3259,74,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_production_verification_regression.py",.py,25304,479,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_publishing_control.py",.py,12563,256,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_quality_gates.py",.py,12330,248,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_search_intelligence.py",.py,2619,58,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_search_readiness.py",.py,7083,128,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_security_access_manager.py",.py,7147,154,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_security_remediation.py",.py,6399,114,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_seo_intelligence.py",.py,11925,236,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_site_integrity.py",.py,16139,336,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_stage_3_3_catalog_expansion.py",.py,10773,198,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_structured_data_compliance.py",.py,14730,251,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_structured_data_engine.py",.py,5666,120,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_technical_seo_compliance.py",.py,15527,266,"Test Suite / Verification Fixture",NO,Audited
+"tests/test_tier1_hold_compliance.py",.py,6102,122,"Test Suite / Verification Fixture",NO,Audited
+"tools/adobe-creative-cloud.html",.html,48115,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/canva-pro.html",.html,47480,712,"Public HTML Storefront / Content Page",YES,Audited
+"tools/capcut-pro.html",.html,47803,715,"Public HTML Storefront / Content Page",YES,Audited
+"tools/chatgpt-codex.html",.html,47768,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/chatgpt-plus.html",.html,47984,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/claude-artifacts.html",.html,48478,714,"Public HTML Storefront / Content Page",YES,Audited
+"tools/claude-pro.html",.html,48321,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/coursera-plus.html",.html,41930,616,"Public HTML Storefront / Content Page",YES,Audited
+"tools/cursor-pro.html",.html,47999,718,"Public HTML Storefront / Content Page",YES,Audited
+"tools/deepseek-pro.html",.html,47946,715,"Public HTML Storefront / Content Page",YES,Audited
+"tools/elevenlabs-creator.html",.html,48064,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/envato-elements.html",.html,48177,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/figma-pro.html",.html,47703,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/freepik-premium.html",.html,47973,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/gamma-app.html",.html,45201,655,"Public HTML Storefront / Content Page",YES,Audited
+"tools/gemini-advanced.html",.html,47844,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/github-copilot.html",.html,48154,718,"Public HTML Storefront / Content Page",YES,Audited
+"tools/google-ai-ultra.html",.html,42098,619,"Public HTML Storefront / Content Page",YES,Audited
+"tools/google-veo.html",.html,47895,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/grammarly-pro.html",.html,47984,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/grok-ai.html",.html,47865,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/heygen-ai.html",.html,45586,661,"Public HTML Storefront / Content Page",YES,Audited
+"tools/jetbrains-all.html",.html,48291,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/kling-ai.html",.html,48050,718,"Public HTML Storefront / Content Page",YES,Audited
+"tools/leonardo-ai.html",.html,47799,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/linkedin-premium.html",.html,48012,714,"Public HTML Storefront / Content Page",YES,Audited
+"tools/lovable-ai.html",.html,45319,657,"Public HTML Storefront / Content Page",YES,Audited
+"tools/microsoft-office-365.html",.html,42037,619,"Public HTML Storefront / Content Page",YES,Audited
+"tools/midjourney.html",.html,49851,744,"Public HTML Storefront / Content Page",YES,Audited
+"tools/minimax-ai.html",.html,47736,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/n8n-automation.html",.html,45224,657,"Public HTML Storefront / Content Page",YES,Audited
+"tools/netflix-premium.html",.html,48035,714,"Public HTML Storefront / Content Page",YES,Audited
+"tools/nordvpn.html",.html,47283,714,"Public HTML Storefront / Content Page",YES,Audited
+"tools/notion-business.html",.html,48360,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/perplexity-pro.html",.html,48004,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/prime-video.html",.html,41492,621,"Public HTML Storefront / Content Page",YES,Audited
+"tools/quillbot-premium.html",.html,47993,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/replit-core.html",.html,47775,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/runway-gen3.html",.html,48015,718,"Public HTML Storefront / Content Page",YES,Audited
+"tools/semrush-guru.html",.html,50149,747,"Public HTML Storefront / Content Page",YES,Audited
+"tools/spotify-premium.html",.html,41108,620,"Public HTML Storefront / Content Page",YES,Audited
+"tools/suno-ai.html",.html,47872,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/surfshark-vpn.html",.html,47724,717,"Public HTML Storefront / Content Page",YES,Audited
+"tools/tradingview-pro.html",.html,41696,621,"Public HTML Storefront / Content Page",YES,Audited
+"tools/turnitin-student.html",.html,41674,616,"Public HTML Storefront / Content Page",YES,Audited
+"tools/udio-ai.html",.html,47737,716,"Public HTML Storefront / Content Page",YES,Audited
+"tools/vidiq-boost.html",.html,41421,621,"Public HTML Storefront / Content Page",YES,Audited
+"tools/windows-11-pro.html",.html,41818,619,"Public HTML Storefront / Content Page",YES,Audited
+"tools/youtube-premium.html",.html,50182,745,"Public HTML Storefront / Content Page",YES,Audited
+"whatsapp_assets/01_WhatsApp_Profile_Picture.png",.png,294783,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/01_chatgpt_plus.png",.png,10941,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/02_WhatsApp_Cover_Banner.png",.png,54117,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/02_claude_pro.png",.png,15255,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/03_WhatsApp_Setup_Details.txt",.txt,8711,153,"Repository Support / Config",NO,Audited
+"whatsapp_assets/03_canva_pro.png",.png,16659,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/04_midjourney.png",.png,18177,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/05_cursor_pro.png",.png,18446,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/06_capcut_pro.png",.png,16659,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/07_adobe_creative_cloud.png",.png,14109,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/08_runway_gen3.png",.png,14220,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/09_elevenlabs_creator.png",.png,14220,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/10_perplexity_pro.png",.png,16658,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/11_github_copilot.png",.png,17782,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/12_deepseek_pro.png",.png,18175,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/13_notion_business.png",.png,14039,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/14_kling_ai.png",.png,15254,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/15_envato_elements.png",.png,14239,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/01_WhatsApp_Profile_Picture.png",.png,294783,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/02_WhatsApp_Cover_Banner.png",.png,54117,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/03_WhatsApp_Setup_Details.txt",.txt,8711,153,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/01_chatgpt_plus.png",.png,10941,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/02_claude_pro.png",.png,15255,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/03_canva_pro.png",.png,16659,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/04_midjourney.png",.png,18177,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/05_cursor_pro.png",.png,18446,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/06_capcut_pro.png",.png,16659,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/07_adobe_creative_cloud.png",.png,14109,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/08_runway_gen3.png",.png,14220,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/09_elevenlabs_creator.png",.png,14220,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/10_perplexity_pro.png",.png,16658,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/11_github_copilot.png",.png,17782,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/12_deepseek_pro.png",.png,18175,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/13_notion_business.png",.png,14039,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/14_kling_ai.png",.png,15254,0,"Repository Support / Config",NO,Audited
+"whatsapp_assets/WhatsApp_Business_AIDigiTools/Catalogue_Products/15_envato_elements.png",.png,14239,0,"Repository Support / Config",NO,Audited

@@ -1,0 +1,216 @@
+[
+  {
+    "file": "aio-agent-daily.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "30 23 * * *"
+    ],
+    "secretsReferenced": [],
+    "permissions": "contents: write",
+    "lineCount": 37
+  },
+  {
+    "file": "auto-blog-publisher.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "0 4 * * *"
+    ],
+    "secretsReferenced": [
+      "GEMINI_API_KEY",
+      "INDEXNOW_KEY",
+      "GSC_SERVICE_ACCOUNT_KEY",
+      "BING_API_KEY",
+      "GA4_PROPERTY_ID",
+      "NOTIFICATION_EMAIL",
+      "GMAIL_APP_PASSWORD",
+      "GMAIL_SENDER"
+    ],
+    "permissions": "contents: write",
+    "lineCount": 52
+  },
+  {
+    "file": "autonomous-seo-engineer.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "0 3,15 * * *"
+    ],
+    "secretsReferenced": [
+      "GEMINI_API_KEY",
+      "BING_API_KEY",
+      "GSC_SERVICE_ACCOUNT_KEY",
+      "PAGESPEED_API_KEY"
+    ],
+    "permissions": "contents: write, pull-requests: write, concurrency:, group: autonomous-engineer-${{ github.ref }}, cancel-in-progress: true",
+    "lineCount": 84
+  },
+  {
+    "file": "chatbot-validation.yml",
+    "hasPush": true,
+    "hasDispatch": true,
+    "hasSchedule": false,
+    "cronExpressions": [],
+    "secretsReferenced": [],
+    "permissions": "contents: read",
+    "lineCount": 34
+  },
+  {
+    "file": "cloud-foundation.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "0 3,15 * * *"
+    ],
+    "secretsReferenced": [
+      "PAGESPEED_API_KEY"
+    ],
+    "permissions": "contents: read, # Concurrency protection prevents duplicate overlapping runs, concurrency:, group: cloud-foundation-${{ github.ref }}, cancel-in-progress: true",
+    "lineCount": 63
+  },
+  {
+    "file": "codeql.yml",
+    "hasPush": true,
+    "hasDispatch": false,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "15 1 * * 0"
+    ],
+    "secretsReferenced": [],
+    "permissions": "actions: read, contents: read, security-events: write, steps:, - name: Checkout repository, uses: actions/checkout@v4, - name: Initialize CodeQL, uses: github/codeql-action/init@v3, with:, languages: python, actions, - name: Perform CodeQL Analysis, uses: github/codeql-action/analyze@v3",
+    "lineCount": 31
+  },
+  {
+    "file": "content_intelligence_scheduler.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "0 4 * * *",
+      "0 4 * * *"
+    ],
+    "secretsReferenced": [
+      "GEMINI_API_KEY",
+      "INDEXNOW_KEY",
+      "GA4_PROPERTY_ID",
+      "GSC_SERVICE_ACCOUNT_KEY",
+      "BING_API_KEY",
+      "BING_WEBMASTER_API_KEY",
+      "PAGESPEED_API_KEY",
+      "CRUX_API_KEY"
+    ],
+    "permissions": "contents: write, pull-requests: write, env:, BUSINESS_TIMEZONE: \"Asia/Karachi\", TZ: \"Asia/Karachi\", PYTHONUNBUFFERED: \"1\"",
+    "lineCount": 120
+  },
+  {
+    "file": "credentials-preflight.yml",
+    "hasPush": true,
+    "hasDispatch": true,
+    "hasSchedule": false,
+    "cronExpressions": [],
+    "secretsReferenced": [
+      "BING_API_KEY",
+      "PAGESPEED_API_KEY",
+      "GEMINI_API_KEY",
+      "GSC_SERVICE_ACCOUNT_KEY",
+      "GA4_PROPERTY_ID",
+      "GOOGLE_ADS_CUSTOMER_ID",
+      "GOOGLE_ADS_MANAGER_ID",
+      "GOOGLE_ADS_DEVELOPER_TOKEN"
+    ],
+    "permissions": "contents: write",
+    "lineCount": 63
+  },
+  {
+    "file": "daily-seo-geo-monitor.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "15 2 * * *"
+    ],
+    "secretsReferenced": [],
+    "permissions": "contents: read",
+    "lineCount": 34
+  },
+  {
+    "file": "indexnow-dispatch.yml",
+    "hasPush": true,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "0 8 * * 1"
+    ],
+    "secretsReferenced": [],
+    "permissions": "contents: read",
+    "lineCount": 59
+  },
+  {
+    "file": "keyword-agent-daily.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "45 23 * * *"
+    ],
+    "secretsReferenced": [],
+    "permissions": "contents: read",
+    "lineCount": 30
+  },
+  {
+    "file": "seo-agent-daily.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "17 22 * * *"
+    ],
+    "secretsReferenced": [],
+    "permissions": "contents: write, pull-requests: write",
+    "lineCount": 31
+  },
+  {
+    "file": "seo-agent-validation.yml",
+    "hasPush": true,
+    "hasDispatch": true,
+    "hasSchedule": false,
+    "cronExpressions": [],
+    "secretsReferenced": [],
+    "permissions": "contents: read",
+    "lineCount": 48
+  },
+  {
+    "file": "social-content-pack.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "45 23 * * *"
+    ],
+    "secretsReferenced": [
+      "BUFFER_API_KEY"
+    ],
+    "permissions": "contents: read",
+    "lineCount": 30
+  },
+  {
+    "file": "telegram-commands.yml",
+    "hasPush": false,
+    "hasDispatch": true,
+    "hasSchedule": true,
+    "cronExpressions": [
+      "*/30 * * * *"
+    ],
+    "secretsReferenced": [
+      "TELEGRAM_BOT_TOKEN",
+      "TELEGRAM_OWNER_CHAT_ID"
+    ],
+    "permissions": "contents: read",
+    "lineCount": 37
+  }
+]
