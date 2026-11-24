@@ -35,7 +35,7 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
             if rel == "404.html" or "admin" in rel or "private" in rel:
                 continue
             c = self._read_file(rel)
-            match = re.search(r'<([a-z0-9]+)\s+[^>]*class=["\'][^"\']*quick-answer[^"\']*["\'][^>]*>(.*?)</\1>', c, re.S | re.I)
+            match = re.search(r'<p[^>]*class=["\'][^"\']*quick-answer[^"\']*["\'][^>]*>(.*?)</p>', c, re.S | re.I)
             self.assertIsNotNone(match, f"Missing .quick-answer block in {rel}")
             text = re.sub(r'<[^>]+>', '', match.group(1)).strip()
             words = text.split()

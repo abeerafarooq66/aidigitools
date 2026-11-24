@@ -36,13 +36,28 @@ class TestStructuredDataCompliance(unittest.TestCase):
                         try:
                             parsed = json.loads(b.strip())
                             if isinstance(parsed, dict) and "@graph" in parsed and isinstance(parsed["@graph"], list):
-                                id_map = {n["@id"]: n for n in parsed["@graph"] if isinstance(n, dict) and "@id" in n}
+                                id_map = {n["@id"]: dict(n) for n in parsed["@graph"] if isinstance(n, dict) and "@id" in n}
+                                for cloned in id_map.values():
+                                    for k in list(cloned.keys()):
+                                        if isinstance(cloned[k], dict) and "@id" in cloned[k] and "@type" not in cloned[k]:
+                                            del cloned[k]
+
                                 for node in parsed["@graph"]:
                                     if isinstance(node, dict):
-                                        for k, v in list(node.items()):
-                                            if isinstance(v, dict) and "@id" in v and "@type" not in v and v["@id"] in id_map:
-                                                node[k] = id_map[v["@id"]]
-                                        cls.jsonld_by_file[rel].append(node)
+                                        n_copy = dict(node)
+                                        if "offers" in n_copy and isinstance(n_copy["offers"], dict):
+                                            off = dict(n_copy["offers"])
+                                            if "seller" in off and isinstance(off["seller"], dict):
+                                                sid = off["seller"].get("@id")
+                                                if sid and sid in id_map:
+                                                    off["seller"] = id_map[sid]
+                                            n_copy["offers"] = off
+                                        for field in ["publisher", "author"]:
+                                            if field in n_copy and isinstance(n_copy[field], dict):
+                                                fid = n_copy[field].get("@id")
+                                                if fid and fid in id_map:
+                                                    n_copy[field] = id_map[fid]
+                                        cls.jsonld_by_file[rel].append(n_copy)
                             else:
                                 cls.jsonld_by_file[rel].append(parsed)
                         except Exception:
