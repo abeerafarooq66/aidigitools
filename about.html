@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -39,46 +39,78 @@
   <meta name="twitter:image" content="https://aidigitools.tech/assets/images/aidigitools-orbit-emblem.png">
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About AIDigiTools",
-  "url": "https://aidigitools.tech/about.html",
-  "description": "Background, mission, and operational standards of AIDigiTools.",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "AIDigiTools",
-    "url": "https://aidigitools.tech/",
-    "logo": "https://aidigitools.tech/assets/images/aidigitools-logo.png",
-    "description": "Verified AI software subscription marketplace providing domestic payment rails for Pakistan and worldwide."
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://aidigitools.tech/about.html#page",
+        "name": "About AIDigiTools",
+        "url": "https://aidigitools.tech/about.html",
+        "description": "Background, mission, and operational standards of AIDigiTools.",
+        "isPartOf": { "@id": "https://aidigitools.tech/#website" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://aidigitools.tech/#organization",
+        "name": "AIDigiTools",
+        "url": "https://aidigitools.tech/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://aidigitools.tech/#logo",
+          "url": "https://aidigitools.tech/assets/images/aidigitools-logo.png",
+          "caption": "AIDigiTools"
+        },
+        "description": "Verified AI software subscription marketplace providing domestic payment rails for Pakistan and worldwide.",
+        "founder": { "@id": "https://aidigitools.tech/about.html#abeera-farooq" },
+        "sameAs": [
+          "https://github.com/abeerafarooq66",
+          "https://wa.me/923326861112"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+92-332-6861112",
+          "contactType": "customer service",
+          "areaServed": "PK",
+          "availableLanguage": ["English", "Urdu"]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://aidigitools.tech/about.html#abeera-farooq",
+        "name": "Abeera Farooq",
+        "jobTitle": "Founder & Principal Technical Editor",
+        "worksFor": { "@id": "https://aidigitools.tech/#organization" },
+        "url": "https://aidigitools.tech/about.html#editorial-team",
+        "sameAs": [
+          "https://github.com/abeerafarooq66"
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Software Engineering",
+          "DevOps & Automation",
+          "AI Search Optimization"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aidigitools.tech/about.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://aidigitools.tech/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://aidigitools.tech/about.html"
+          }
+        ]
+      }
+    ]
   }
-}
-  </script>
-  <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://aidigitools.tech/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "About Us",
-      "item": "https://aidigitools.tech/about.html"
-    }
-  ]
-}
   </script>
 </head>
 <body>

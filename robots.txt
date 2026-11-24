@@ -1,5 +1,7 @@
-# robots.txt for aidigitools.tech
-# Google Search Central & Bing Webmaster Compliant
+﻿# robots.txt for aidigitools.tech
+# Google Search Central, Bing Webmaster & Generative Engine Compliant
+# Reference: Universal Web Search & SEO Master Book V2
+
 User-agent: *
 Disallow: /admin/
 Disallow: /private/
@@ -13,7 +15,7 @@ Disallow: /*?*price=
 Allow: /assets/
 Allow: /
 
-# Major Search Engine Crawlers
+# Major Traditional Search Engine Crawlers
 User-agent: Googlebot
 Disallow: /admin/
 Disallow: /private/
@@ -24,7 +26,27 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-# AI Crawlers & Large Language Model Search Engines
+# Generative AI Search & Answer Engine Crawlers (Allow Search & Citations)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Interactive Live Search & User-Triggered Fetchers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Foundation Model Pre-Training & Content Scrapers
 User-agent: Google-Extended
 Allow: /
 
@@ -34,11 +56,11 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
 User-agent: CCBot
 Allow: /
 
-# Feeds & Sitemaps
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemaps & Feeds
 Sitemap: https://aidigitools.tech/sitemap.xml

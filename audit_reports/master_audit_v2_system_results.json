@@ -1,0 +1,1547 @@
+{
+  "totalPages": 78,
+  "criticalIssues": [],
+  "highIssues": [],
+  "mediumIssues": [],
+  "inStockCount": 42,
+  "outOfStockCount": 7,
+  "pagesWithQuickAnswer": 78,
+  "pagesWithoutQuickAnswer": 0,
+  "pagesWithMultipleH1": 0,
+  "pagesMissingH1": 0,
+  "imagesMissingAltTotal": 0,
+  "imagesMissingDimensionsTotal": 0,
+  "pages": {
+    "404.html": {
+      "file": "404.html",
+      "h1Count": 1,
+      "title": "Page Not Found (404) | AIDigiTools AI Software Marketplace",
+      "metaDesc": "The requested page could not be found on AIDigiTools. Browse our verified AI tools catalog or contact WhatsApp concierge for instant assistance.",
+      "canonical": "https://aidigitools.tech/404.html",
+      "quickAnswer": true,
+      "schemas": [
+        "WebPage"
+      ],
+      "productAvailability": null,
+      "imagesCount": 4,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 3,
+      "issues": []
+    },
+    "about.html": {
+      "file": "about.html",
+      "h1Count": 1,
+      "title": "About Us — AIDigiTools Pakistan &amp; Global AI Hub",
+      "metaDesc": "Discover AIDigiTools: Pakistan &amp; worldwide AI software marketplace bridging global access with EasyPaisa, JazzCash, Wise &amp; Crypto rails.",
+      "canonical": "https://aidigitools.tech/about.html",
+      "quickAnswer": true,
+      "schemas": [
+        "AboutPage",
+        "Organization",
+        "Person",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 26,
+      "issues": []
+    },
+    "admin/meta-integration.html": {
+      "file": "admin/meta-integration.html",
+      "h1Count": 1,
+      "title": "Meta Commerce &amp; WhatsApp Catalog Sync | AIDigiTools",
+      "metaDesc": "Central monitoring dashboard for Meta Commerce Manager, WhatsApp Business Catalog, and Facebook Shop integration for AIDigiTools marketplace.",
+      "canonical": "https://aidigitools.tech/admin/meta-integration.html",
+      "quickAnswer": true,
+      "schemas": [
+        "WebPage",
+        "BreadcrumbList",
+        "Organization",
+        "ItemList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 4,
+      "issues": []
+    },
+    "affiliate-disclosure.html": {
+      "file": "affiliate-disclosure.html",
+      "h1Count": 1,
+      "title": "Affiliate Disclosure &amp; Transparency | AIDigiTools",
+      "metaDesc": "Official affiliate disclosure for AIDigiTools: Complete transparency on referral commissions, testing standards, and PKR/USD pricing globally.",
+      "canonical": "https://aidigitools.tech/affiliate-disclosure.html",
+      "quickAnswer": true,
+      "schemas": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 19,
+      "issues": []
+    },
+    "best/best-ai-coding-tools.html": {
+      "file": "best/best-ai-coding-tools.html",
+      "h1Count": 1,
+      "title": "Best AI Coding Tools 2026 | Pakistan &amp; Global Devs",
+      "metaDesc": "Top AI coding tools for Pakistan &amp; worldwide developers: Claude Sonnet 5.5, GitHub Copilot &amp; ChatGPT Plus with PKR/USD pricing and 15-min delivery.",
+      "canonical": "https://aidigitools.tech/best/best-ai-coding-tools.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 19,
+      "issues": []
+    },
+    "best/best-ai-video-generators.html": {
+      "file": "best/best-ai-video-generators.html",
+      "h1Count": 1,
+      "title": "Best AI Video Generators 2026 | Pakistan &amp; Global",
+      "metaDesc": "Top AI video generators in Pakistan &amp; worldwide: Runway AI Video, Pika &amp; CapCut Pro compared by visual quality, PKR/USD pricing, and 15-min delivery.",
+      "canonical": "https://aidigitools.tech/best/best-ai-video-generators.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Article",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 19,
+      "issues": []
+    },
+    "blog.html": {
+      "file": "blog.html",
+      "h1Count": 1,
+      "title": "AI Software Blog &amp; Benchmark Guides (2026) | AIDigiTools",
+      "metaDesc": "Explore authentic AI software reviews, benchmark analyses, and pricing comparisons for Pakistani freelancers and global developers on AIDigiTools.",
+      "canonical": "https://aidigitools.tech/blog.html",
+      "quickAnswer": true,
+      "schemas": [
+        "CollectionPage",
+        "BreadcrumbList",
+        "Blog"
+      ],
+      "productAvailability": null,
+      "imagesCount": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 19,
+      "issues": []
+    },
+    "blog/best-ai-tools-for-freelancers-in-pakistan.html": {
+      "file": "blog/best-ai-tools-for-freelancers-in-pakistan.html",
+      "h1Count": 1,
+      "title": "Best AI Tools for Freelancers in Pakistan (2026) | AIDigiTools",
+      "metaDesc": "Top AI tools for Pakistani freelancers on Fiverr and Upwork. Compare ChatGPT Plus, Claude, Midjourney, and Canva with verified PKR pricing and WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/blog/best-ai-tools-for-freelancers-in-pakistan.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "FAQPage",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 20,
+      "issues": []
+    },
+    "blog/best-ai-video-generators-youtube-shorts-pakistan.html": {
+      "file": "blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "h1Count": 1,
+      "title": "Best AI Video Generators for YouTube Shorts in Pakistan (2026)",
+      "metaDesc": "Discover top AI video generators for YouTube Shorts and Reels in Pakistan. Compare Runway Gen-3, Kling AI, and CapCut Pro with verified PKR pricing.",
+      "canonical": "https://aidigitools.tech/blog/best-ai-video-generators-youtube-shorts-pakistan.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 8,
+      "issues": []
+    },
+    "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html": {
+      "file": "blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "h1Count": 1,
+      "title": "Claude 3.5 Sonnet vs ChatGPT Plus: Coding Shootout (2026)",
+      "metaDesc": "Claude 3.5 Sonnet vs ChatGPT Plus coding comparison. Benchmark reasoning, debugging, Artifacts, and verified Pakistani PKR subscription pricing.",
+      "canonical": "https://aidigitools.tech/blog/claude-3-5-sonnet-vs-chatgpt-plus-coding-benchmark.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 8,
+      "issues": []
+    },
+    "blog/claude-artifacts-practical-guide-freelancers.html": {
+      "file": "blog/claude-artifacts-practical-guide-freelancers.html",
+      "h1Count": 1,
+      "title": "Claude 3.5 Sonnet Artifacts Guide (2026) | AIDigiTools",
+      "metaDesc": "Master Claude 3.5 Sonnet Artifacts for web design, React prototypes, and SVG rendering. Verified Pakistani PKR pricing and WhatsApp setup via AIDigiTools.",
+      "canonical": "https://aidigitools.tech/blog/claude-artifacts-practical-guide-freelancers.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 15,
+      "issues": []
+    },
+    "blog/cursor-ai-vs-github-copilot-comparison.html": {
+      "file": "blog/cursor-ai-vs-github-copilot-comparison.html",
+      "h1Count": 1,
+      "title": "cursor ai vs github copilot (2026 Guide & Pricing) - AIDigiTools",
+      "metaDesc": "Detailed technical comparison of cursor ai vs github copilot. Explore codebase indexing, features, and local PKR pricing via AIDigiTools.",
+      "canonical": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 10,
+      "issues": []
+    },
+    "blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html": {
+      "file": "blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+      "h1Count": 1,
+      "title": "DeepSeek R1 vs ChatGPT Plus vs Claude Pro (2026) | AIDigiTools",
+      "metaDesc": "DeepSeek R1 vs ChatGPT Plus vs Claude Pro 2026 benchmark. Compare reasoning, coding limits, and verified PKR pricing with EasyPaisa & JazzCash via AIDigiTools.",
+      "canonical": "https://aidigitools.tech/blog/deepseek-r1-vs-chatgpt-plus-vs-claude-pro-comparison.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 28,
+      "issues": []
+    },
+    "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html": {
+      "file": "blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "h1Count": 1,
+      "title": "Pay for Midjourney in Pakistan Without Credit Card (2026)",
+      "metaDesc": "Complete guide on how to pay for Midjourney in Pakistan without a credit card. Use EasyPaisa, JazzCash, or SadaPay with 15-minute WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/blog/how-to-pay-for-midjourney-in-pakistan-without-credit-card.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 27,
+      "issues": []
+    },
+    "blog/runway-gen3-vs-capcut-pro-video-comparison.html": {
+      "file": "blog/runway-gen3-vs-capcut-pro-video-comparison.html",
+      "h1Count": 1,
+      "title": "Runway Gen-3 vs CapCut Pro (2026 Video AI) | AIDigiTools",
+      "metaDesc": "Runway Gen-3 vs CapCut Pro 2026 comparison. Evaluate generative video vs timeline editing with verified Pakistani PKR pricing and 15-min delivery.",
+      "canonical": "https://aidigitools.tech/blog/runway-gen3-vs-capcut-pro-video-comparison.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 17,
+      "issues": []
+    },
+    "categories/coding.html": {
+      "file": "categories/coding.html",
+      "h1Count": 1,
+      "title": "Best AI Coding Tools Pakistan &amp; Worldwide | AIDigiTools",
+      "metaDesc": "Compare AI coding tools in Pakistan &amp; worldwide: Claude Sonnet 5.5, GitHub Copilot &amp; ChatGPT Plus with EasyPaisa, Wise, PKR pricing &amp; 30-day warranty.",
+      "canonical": "https://aidigitools.tech/categories/coding.html",
+      "quickAnswer": true,
+      "schemas": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 21,
+      "issues": []
+    },
+    "categories/image.html": {
+      "file": "categories/image.html",
+      "h1Count": 1,
+      "title": "Best AI Image Tools Pakistan &amp; Worldwide | AIDigiTools",
+      "metaDesc": "Discover top AI image tools in Pakistan &amp; worldwide: Midjourney V8, Canva Pro &amp; DALL-E. EasyPaisa, Wise, PKR &amp; USD rates with 15-min delivery.",
+      "canonical": "https://aidigitools.tech/categories/image.html",
+      "quickAnswer": true,
+      "schemas": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 21,
+      "issues": []
+    },
+    "categories/video.html": {
+      "file": "categories/video.html",
+      "h1Count": 1,
+      "title": "Best AI Video &amp; Movie Tools Pakistan &amp; Worldwide",
+      "metaDesc": "Discover top AI video generators in Pakistan &amp; worldwide. Compare Runway, Pika &amp; CapCut with EasyPaisa, Wise, PKR &amp; USD pricing and 15-minute delivery.",
+      "canonical": "https://aidigitools.tech/categories/video.html",
+      "quickAnswer": true,
+      "schemas": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 21,
+      "issues": []
+    },
+    "categories/vpn.html": {
+      "file": "categories/vpn.html",
+      "h1Count": 1,
+      "title": "Best VPNs Pakistan &amp; Worldwide | AI Privacy Tools",
+      "metaDesc": "Discover top VPNs in Pakistan &amp; worldwide for secure browsing and AI access. Pay in PKR/USD with EasyPaisa, Wise &amp; Crypto with 15-minute setup.",
+      "canonical": "https://aidigitools.tech/categories/vpn.html",
+      "quickAnswer": true,
+      "schemas": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 21,
+      "issues": []
+    },
+    "compare/chatgpt-vs-claude.html": {
+      "file": "compare/chatgpt-vs-claude.html",
+      "h1Count": 1,
+      "title": "ChatGPT vs Claude Comparison | Pakistan &amp; Global",
+      "metaDesc": "Detailed shootout: ChatGPT Plus (Rs. 2,300 PKR / $8 USD) vs Claude Pro (Rs. 2,500 PKR / $9 USD). EasyPaisa, Wise, Crypto &amp; 30-day warranty.",
+      "canonical": "https://aidigitools.tech/compare/chatgpt-vs-claude.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 26,
+      "issues": []
+    },
+    "compare/runway-vs-pika.html": {
+      "file": "compare/runway-vs-pika.html",
+      "h1Count": 1,
+      "title": "Runway vs Pika Video AI Comparison | Global &amp; PK",
+      "metaDesc": "Runway AI Video vs Pika AI comparison in Pakistan &amp; worldwide. Pricing in PKR &amp; USD, EasyPaisa, Wise, 15-minute delivery &amp; 30-day warranty.",
+      "canonical": "https://aidigitools.tech/compare/runway-vs-pika.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 30,
+      "issues": []
+    },
+    "contact.html": {
+      "file": "contact.html",
+      "h1Count": 1,
+      "title": "Contact Us — AIDigiTools Pakistan &amp; Global Support",
+      "metaDesc": "Contact AIDigiTools support desk via WhatsApp or email for Pakistan and worldwide AI subscriptions with a 30-day replacement warranty.",
+      "canonical": "https://aidigitools.tech/contact.html",
+      "quickAnswer": true,
+      "schemas": [
+        "ContactPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 18,
+      "issues": []
+    },
+    "data/previews/cursor-ai-vs-github-copilot-comparison.html": {
+      "file": "data/previews/cursor-ai-vs-github-copilot-comparison.html",
+      "h1Count": 1,
+      "title": "cursor ai vs github copilot (2026 Guide & Pricing) - AIDigiTools",
+      "metaDesc": "Detailed technical comparison of cursor ai vs github copilot. Explore codebase indexing, features, and local PKR pricing via AIDigiTools.",
+      "canonical": "https://aidigitools.tech/blog/cursor-ai-vs-github-copilot-comparison.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList",
+        "SpeakableSpecification"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 10,
+      "issues": []
+    },
+    "deals.html": {
+      "file": "deals.html",
+      "h1Count": 1,
+      "title": "AI Software Bundles Pakistan &amp; Worldwide | AIDigiTools",
+      "metaDesc": "Curated AI software bundles in Pakistan &amp; worldwide: Creator Studio, Developer Suite, and Privacy Pack with EasyPaisa, Wise &amp; 30-day replacement warranty.",
+      "canonical": "https://aidigitools.tech/deals.html",
+      "quickAnswer": true,
+      "schemas": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 14,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 36,
+      "issues": []
+    },
+    "guides/chatgpt-vs-claude.html": {
+      "file": "guides/chatgpt-vs-claude.html",
+      "h1Count": 1,
+      "title": "ChatGPT vs Claude Guide | Pakistan &amp; Worldwide",
+      "metaDesc": "Detailed comparison of ChatGPT Plus (Rs. 2,300 PKR / $8 USD) vs Claude Pro (Rs. 2,500 PKR / $9 USD) in Pakistan &amp; globally with 15-min delivery.",
+      "canonical": "https://aidigitools.tech/guides/chatgpt-vs-claude.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 28,
+      "issues": []
+    },
+    "guides/how-to-pay-for-ai-tools-in-pakistan.html": {
+      "file": "guides/how-to-pay-for-ai-tools-in-pakistan.html",
+      "h1Count": 1,
+      "title": "How to Pay for AI Tools in Pakistan (EasyPaisa &amp; SadaPay) | AIDigiTools",
+      "metaDesc": "Pay for ChatGPT Plus, Claude Pro, Cursor &amp; Midjourney in Pakistan without credit cards. Domestic PKR payments via EasyPaisa, JazzCash, SadaPay &amp; Raast.",
+      "canonical": "https://aidigitools.tech/guides/how-to-pay-for-ai-tools-in-pakistan.html",
+      "quickAnswer": true,
+      "schemas": [
+        "TechArticle",
+        "HowTo",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 68,
+      "issues": []
+    },
+    "index.html": {
+      "file": "index.html",
+      "h1Count": 1,
+      "title": "AIDigiTools — AI Tools Directory, Comparisons &amp; Guides",
+      "metaDesc": "Buy 49+ verified AI tools in Pakistan with 15-min WhatsApp delivery &amp; 30-day warranty. Pay in PKR via EasyPaisa, JazzCash, SadaPay &amp; Raast from Rs. 600.",
+      "canonical": "https://aidigitools.tech/",
+      "quickAnswer": true,
+      "schemas": [
+        "WebSite",
+        "FAQPage",
+        "Organization"
+      ],
+      "productAvailability": null,
+      "imagesCount": 51,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 300,
+      "issues": []
+    },
+    "policies.html": {
+      "file": "policies.html",
+      "h1Count": 1,
+      "title": "Payment &amp; Warranty Policies | AIDigiTools Global",
+      "metaDesc": "Official operating policies for AIDigiTools: EasyPaisa, Wise &amp; Crypto payment rails, 30-day replacement warranty in Pakistan &amp; worldwide.",
+      "canonical": "https://aidigitools.tech/policies.html",
+      "quickAnswer": true,
+      "schemas": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 28,
+      "issues": []
+    },
+    "shipping-policy.html": {
+      "file": "shipping-policy.html",
+      "h1Count": 1,
+      "title": "Digital Delivery Policy &amp; Target | AIDigiTools Global",
+      "metaDesc": "Official delivery policy for AIDigiTools. Free electronic delivery (0 PKR / 0 USD) with a 15-minute delivery target worldwide via WhatsApp and email.",
+      "canonical": "https://aidigitools.tech/shipping-policy.html",
+      "quickAnswer": true,
+      "schemas": [
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "productAvailability": null,
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 20,
+      "issues": []
+    },
+    "tools/adobe-creative-cloud.html": {
+      "file": "tools/adobe-creative-cloud.html",
+      "h1Count": 1,
+      "title": "Adobe Creative Cloud Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Get Adobe Creative Cloud All Apps in Pakistan with EasyPaisa, JazzCash, and SadaPay. 20+ professional creative apps, Firefly credits, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/adobe-creative-cloud.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/canva-pro.html": {
+      "file": "tools/canva-pro.html",
+      "h1Count": 1,
+      "title": "Canva Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Canva Pro subscription in Pakistan. Pay via EasyPaisa, JazzCash, SadaPay, or Raast. Full access to Magic Studio, 100M+ assets, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/canva-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 54,
+      "issues": []
+    },
+    "tools/capcut-pro.html": {
+      "file": "tools/capcut-pro.html",
+      "h1Count": 1,
+      "title": "CapCut Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Get CapCut Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlocks 4K 60fps exports, AI auto-captions, cloud space, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/capcut-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/chatgpt-codex.html": {
+      "file": "tools/chatgpt-codex.html",
+      "h1Count": 1,
+      "title": "OpenAI Codex Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy OpenAI Codex agentic workspace in Pakistan with EasyPaisa, JazzCash, or SadaPay. Multi-file coding agents, CLI integration, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/chatgpt-codex.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/chatgpt-plus.html": {
+      "file": "tools/chatgpt-plus.html",
+      "h1Count": 1,
+      "title": "ChatGPT Plus Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy ChatGPT Plus in Pakistan with EasyPaisa, JazzCash, or SadaPay. Access GPT-5/GPT-6 models, Canvas, Advanced Voice, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/chatgpt-plus.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/claude-artifacts.html": {
+      "file": "tools/claude-artifacts.html",
+      "h1Count": 1,
+      "title": "Claude Artifacts Pakistan (PKR & USD) — Inquire | AIDigiTools",
+      "metaDesc": "Inquire about Claude Artifacts workspace environment in Pakistan. Interactive React rendering, SVG charts, Sonnet 5.5 reasoning, and domestic payment options.",
+      "canonical": "https://aidigitools.tech/tools/claude-artifacts.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 30,
+      "issues": []
+    },
+    "tools/claude-pro.html": {
+      "file": "tools/claude-pro.html",
+      "h1Count": 1,
+      "title": "Claude Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Claude Pro in Pakistan. Pay via EasyPaisa, JazzCash, or SadaPay. Unlocks Claude Sonnet 5.5, Projects, 200K context, and 15-minute WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/claude-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/coursera-plus.html": {
+      "file": "tools/coursera-plus.html",
+      "h1Count": 1,
+      "title": "Coursera Plus Pakistan (PKR & USD) — Inquire | AIDigiTools",
+      "metaDesc": "Inquire about Coursera Plus in Pakistan. 7,000+ courses and certificates from Google, IBM, and top universities with domestic PKR settlement guidance.",
+      "canonical": "https://aidigitools.tech/tools/coursera-plus.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 39,
+      "issues": []
+    },
+    "tools/cursor-pro.html": {
+      "file": "tools/cursor-pro.html",
+      "h1Count": 1,
+      "title": "Cursor Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Cursor Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited fast completions, Composer multi-file editing, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/cursor-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/deepseek-pro.html": {
+      "file": "tools/deepseek-pro.html",
+      "h1Count": 1,
+      "title": "DeepSeek Platform Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Inquire about DeepSeek Platform and API compute access in Pakistan. DeepSeek-R1 reasoning, high throughput, and domestic PKR payment support.",
+      "canonical": "https://aidigitools.tech/tools/deepseek-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 30,
+      "issues": []
+    },
+    "tools/elevenlabs-creator.html": {
+      "file": "tools/elevenlabs-creator.html",
+      "h1Count": 1,
+      "title": "ElevenLabs Creator Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy ElevenLabs Creator in Pakistan with EasyPaisa, JazzCash, or SadaPay. 100K characters, professional voice cloning, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/elevenlabs-creator.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 53,
+      "issues": []
+    },
+    "tools/envato-elements.html": {
+      "file": "tools/envato-elements.html",
+      "h1Count": 1,
+      "title": "Envato Elements Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Envato Elements in Pakistan via EasyPaisa, JazzCash, or SadaPay. Unlimited downloads of stock footage, graphic templates, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/envato-elements.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/figma-pro.html": {
+      "file": "tools/figma-pro.html",
+      "h1Count": 1,
+      "title": "Figma Professional Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Figma Professional in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited files, shared team libraries, Dev Mode, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/figma-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/freepik-premium.html": {
+      "file": "tools/freepik-premium.html",
+      "h1Count": 1,
+      "title": "Freepik Premium Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Freepik Premium in Pakistan via EasyPaisa, JazzCash, or SadaPay. Unrestricted vector downloads, PSD mockups, and 15-minute WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/freepik-premium.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 53,
+      "issues": []
+    },
+    "tools/gamma-app.html": {
+      "file": "tools/gamma-app.html",
+      "h1Count": 1,
+      "title": "Gamma Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Gamma Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited AI deck generation, custom domains, analytics, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/gamma-app.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 59,
+      "issues": []
+    },
+    "tools/gemini-advanced.html": {
+      "file": "tools/gemini-advanced.html",
+      "h1Count": 1,
+      "title": "Google AI Pro Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Google AI Pro (formerly Gemini Advanced) in Pakistan. Pay via EasyPaisa or JazzCash. Access Gemini 4 Argon, 2 TB storage, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/gemini-advanced.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 48,
+      "issues": []
+    },
+    "tools/github-copilot.html": {
+      "file": "tools/github-copilot.html",
+      "h1Count": 1,
+      "title": "GitHub Copilot Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy GitHub Copilot Individual in Pakistan with EasyPaisa, JazzCash, or SadaPay. In-editor autocomplete, multi-model chat, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/github-copilot.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/google-ai-ultra.html": {
+      "file": "tools/google-ai-ultra.html",
+      "h1Count": 1,
+      "title": "Google AI Ultra Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Google AI Ultra in Pakistan via EasyPaisa, JazzCash, or SadaPay. 20x compute limits, Deep Think reasoning, 30 TB storage, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/google-ai-ultra.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 47,
+      "issues": []
+    },
+    "tools/google-veo.html": {
+      "file": "tools/google-veo.html",
+      "h1Count": 1,
+      "title": "Google Veo 3.1 Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Google Veo 3.1 in Pakistan with EasyPaisa, JazzCash, or SadaPay. 4K cinematic AI video generation, synchronized audio, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/google-veo.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/grammarly-pro.html": {
+      "file": "tools/grammarly-pro.html",
+      "h1Count": 1,
+      "title": "Grammarly Premium Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Grammarly Premium in Pakistan with EasyPaisa, JazzCash, or SadaPay. Advanced tone detection, plagiarism checker, rewrites, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/grammarly-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/grok-ai.html": {
+      "file": "tools/grok-ai.html",
+      "h1Count": 1,
+      "title": "xAI Grok Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy xAI Grok (The X Subscription / SuperGrok) in Pakistan with EasyPaisa, JazzCash, or SadaPay. Real-time news analysis, Grok 3, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/grok-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/heygen-ai.html": {
+      "file": "tools/heygen-ai.html",
+      "h1Count": 1,
+      "title": "HeyGen Creator Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy HeyGen Creator in Pakistan via EasyPaisa, JazzCash, or SadaPay. Hyper-realistic AI avatars, voice cloning, lip-syncing, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/heygen-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 55,
+      "issues": []
+    },
+    "tools/jetbrains-all.html": {
+      "file": "tools/jetbrains-all.html",
+      "h1Count": 1,
+      "title": "JetBrains All Products Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy JetBrains All Products Pack in Pakistan with EasyPaisa, JazzCash, or SadaPay. Full access to IntelliJ IDEA, PyCharm, WebStorm, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/jetbrains-all.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 53,
+      "issues": []
+    },
+    "tools/kling-ai.html": {
+      "file": "tools/kling-ai.html",
+      "h1Count": 1,
+      "title": "Kling AI Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Kling AI Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. 10s continuous generation, motion brush, 4K rendering, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/kling-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/leonardo-ai.html": {
+      "file": "tools/leonardo-ai.html",
+      "h1Count": 1,
+      "title": "Leonardo AI Apprentice Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Leonardo.Ai Apprentice in Pakistan via EasyPaisa, JazzCash, or SadaPay. 8,500 monthly tokens, custom model training, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/leonardo-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/linkedin-premium.html": {
+      "file": "tools/linkedin-premium.html",
+      "h1Count": 1,
+      "title": "LinkedIn Premium Pakistan (PKR & USD) — Inquire | AIDigiTools",
+      "metaDesc": "Inquire about LinkedIn Premium Career in Pakistan. Unlocks InMail credits, applicant insights, and LinkedIn Learning with domestic payment options.",
+      "canonical": "https://aidigitools.tech/tools/linkedin-premium.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 30,
+      "issues": []
+    },
+    "tools/lovable-ai.html": {
+      "file": "tools/lovable-ai.html",
+      "h1Count": 1,
+      "title": "Lovable Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Lovable Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Full-stack autonomous web app generation, Supabase backends, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/lovable-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 43,
+      "issues": []
+    },
+    "tools/microsoft-office-365.html": {
+      "file": "tools/microsoft-office-365.html",
+      "h1Count": 1,
+      "title": "Microsoft 365 Personal Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Microsoft 365 Personal in Pakistan via EasyPaisa, JazzCash, or SadaPay. Premium Word, Excel, PowerPoint, 1 TB OneDrive, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/microsoft-office-365.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 47,
+      "issues": []
+    },
+    "tools/midjourney.html": {
+      "file": "tools/midjourney.html",
+      "h1Count": 1,
+      "title": "Midjourney V8 Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Midjourney V8 in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unrestricted fast GPU hours, web editor access, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/midjourney.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 54,
+      "issues": []
+    },
+    "tools/minimax-ai.html": {
+      "file": "tools/minimax-ai.html",
+      "h1Count": 1,
+      "title": "Hailuo AI Video Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Hailuo AI Video (MiniMax) in Pakistan with EasyPaisa, JazzCash, or SadaPay. 1080p cinematic generation, fast rendering, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/minimax-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/n8n-automation.html": {
+      "file": "tools/n8n-automation.html",
+      "h1Count": 1,
+      "title": "n8n Cloud Starter Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy n8n Cloud Starter in Pakistan via EasyPaisa, JazzCash, or SadaPay. 2,500 workflow executions, AI agent nodes, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/n8n-automation.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/netflix-premium.html": {
+      "file": "tools/netflix-premium.html",
+      "h1Count": 1,
+      "title": "Netflix Premium Pakistan (PKR & USD) — Inquire | AIDigiTools",
+      "metaDesc": "Inquire about Netflix Premium 4K UHD in Pakistan. 4K HDR streaming, Spatial Audio, 4 concurrent screens, and domestic payment compliance advice.",
+      "canonical": "https://aidigitools.tech/tools/netflix-premium.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 30,
+      "issues": []
+    },
+    "tools/nordvpn.html": {
+      "file": "tools/nordvpn.html",
+      "h1Count": 1,
+      "title": "NordVPN Standard Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy NordVPN Standard in Pakistan with EasyPaisa, JazzCash, or SadaPay. 6,000+ fast servers, 10 devices, Threat Protection, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/nordvpn.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/notion-business.html": {
+      "file": "tools/notion-business.html",
+      "h1Count": 1,
+      "title": "Notion Plus AI Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Notion Plus with Notion AI in Pakistan via EasyPaisa, JazzCash, or SadaPay. Unlimited blocks, AI search, team collaboration, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/notion-business.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/perplexity-pro.html": {
+      "file": "tools/perplexity-pro.html",
+      "h1Count": 1,
+      "title": "Perplexity Pro Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Perplexity Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited Pro searches, Claude Sonnet 5.5 switching, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/perplexity-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/prime-video.html": {
+      "file": "tools/prime-video.html",
+      "h1Count": 1,
+      "title": "Amazon Prime Video Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Amazon Prime Video in Pakistan with EasyPaisa, JazzCash, or SadaPay. 4K UHD streaming, 3 concurrent screens, X-Ray, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/prime-video.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 43,
+      "issues": []
+    },
+    "tools/quillbot-premium.html": {
+      "file": "tools/quillbot-premium.html",
+      "h1Count": 1,
+      "title": "QuillBot Premium Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy QuillBot Premium in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited word paraphrasing, tone adjustments, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/quillbot-premium.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 53,
+      "issues": []
+    },
+    "tools/replit-core.html": {
+      "file": "tools/replit-core.html",
+      "h1Count": 1,
+      "title": "Replit Core Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Replit Core in Pakistan via EasyPaisa, JazzCash, or SadaPay. Autonomous Replit Agent, cloud hosting, PostgreSQL, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/replit-core.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/runway-gen3.html": {
+      "file": "tools/runway-gen3.html",
+      "h1Count": 1,
+      "title": "Runway AI Video Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy Runway AI Video in Pakistan with EasyPaisa, JazzCash, or SadaPay. Gen-4/Gen-3 generation, motion brush, Act-Two, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/runway-gen3.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/semrush-guru.html": {
+      "file": "tools/semrush-guru.html",
+      "h1Count": 1,
+      "title": "Semrush Guru Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Semrush Guru in Pakistan with EasyPaisa, JazzCash, or SadaPay. Historical SEO data, topic research, Content Toolkit, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/semrush-guru.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 54,
+      "issues": []
+    },
+    "tools/spotify-premium.html": {
+      "file": "tools/spotify-premium.html",
+      "h1Count": 1,
+      "title": "Spotify Premium Pakistan (PKR & USD) — Inquire | AIDigiTools",
+      "metaDesc": "Inquire about Spotify Premium Individual in Pakistan. Ad-free audio, offline downloads, 320kbps fidelity, and domestic payment options.",
+      "canonical": "https://aidigitools.tech/tools/spotify-premium.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 37,
+      "issues": []
+    },
+    "tools/suno-ai.html": {
+      "file": "tools/suno-ai.html",
+      "h1Count": 1,
+      "title": "Suno AI Music Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Suno AI Music Pro in Pakistan via EasyPaisa, JazzCash, or SadaPay. 2,500 monthly credits, commercial rights, and 15m delivery via WhatsApp.",
+      "canonical": "https://aidigitools.tech/tools/suno-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/surfshark-vpn.html": {
+      "file": "tools/surfshark-vpn.html",
+      "h1Count": 1,
+      "title": "Surfshark VPN Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Surfshark VPN in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited devices, CleanWeb ad blocker, 3,200 servers, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/surfshark-vpn.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/tradingview-pro.html": {
+      "file": "tools/tradingview-pro.html",
+      "h1Count": 1,
+      "title": "TradingView Essential Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy TradingView Essential in Pakistan with EasyPaisa, JazzCash, or SadaPay. 5 indicators per chart, 20 price alerts, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/tradingview-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/turnitin-student.html": {
+      "file": "tools/turnitin-student.html",
+      "h1Count": 1,
+      "title": "Turnitin Originality Pakistan (PKR & USD) — Inquire | AIDigiTools",
+      "metaDesc": "Inquire about Turnitin Originality non-repository checking in Pakistan. Plagiarism detection, AI writing analysis, and academic compliance guidance.",
+      "canonical": "https://aidigitools.tech/tools/turnitin-student.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/OutOfStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 29,
+      "issues": []
+    },
+    "tools/udio-ai.html": {
+      "file": "tools/udio-ai.html",
+      "h1Count": 1,
+      "title": "Udio Standard Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy Udio Standard in Pakistan with EasyPaisa, JazzCash, or SadaPay. 1,200 monthly credits, stem downloads, commercial rights, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/udio-ai.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/vidiq-boost.html": {
+      "file": "tools/vidiq-boost.html",
+      "h1Count": 1,
+      "title": "vidIQ Boost Pakistan (PKR & USD) — Buy Online | AIDigiTools",
+      "metaDesc": "Buy vidIQ Boost in Pakistan with EasyPaisa, JazzCash, or SadaPay. 50 daily AI video ideas, keyword research, channel audit, and 15m WhatsApp setup.",
+      "canonical": "https://aidigitools.tech/tools/vidiq-boost.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 51,
+      "issues": []
+    },
+    "tools/windows-11-pro.html": {
+      "file": "tools/windows-11-pro.html",
+      "h1Count": 1,
+      "title": "Windows 11 Pro Key Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy genuine Windows 11 Pro retail digital license in Pakistan. Pay via EasyPaisa or JazzCash. Lifetime activation, BitLocker, and 15m WhatsApp delivery.",
+      "canonical": "https://aidigitools.tech/tools/windows-11-pro.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 1,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 40,
+      "issues": []
+    },
+    "tools/youtube-premium.html": {
+      "file": "tools/youtube-premium.html",
+      "h1Count": 1,
+      "title": "YouTube Premium Pakistan (PKR & USD) — Buy | AIDigiTools",
+      "metaDesc": "Buy YouTube Premium in Pakistan with EasyPaisa, JazzCash, or SadaPay. 100% ad-free playback, background play, YouTube Music, and 15m delivery.",
+      "canonical": "https://aidigitools.tech/tools/youtube-premium.html",
+      "quickAnswer": true,
+      "schemas": [
+        "Product",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "productAvailability": "https://schema.org/InStock",
+      "imagesCount": 2,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "paymentMentions": 54,
+      "issues": []
+    }
+  }
+}
