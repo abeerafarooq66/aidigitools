@@ -124,7 +124,7 @@ class TestBacklinkIntelligence(unittest.TestCase):
         # Active count must strictly equal sum of genuinely verified links
         with open(self.bie.registry_path, "r", encoding="utf-8") as f:
             reg = json.load(f)
-        genuine_active = sum(1 for l in reg["links"] if l.get("status") == "ACTIVE")
+        genuine_active = sum(1 for l in reg["links"] if l.get("status") in ("ACTIVE", "Live Verified"))
         self.assertEqual(summary["active_count"], genuine_active)
 
 

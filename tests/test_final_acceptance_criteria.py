@@ -6,6 +6,7 @@ are programmatically satisfied across the AI DigiTools repository.
 
 import json
 import os
+import re
 import unittest
 import xml.etree.ElementTree as ET
 
@@ -94,13 +95,13 @@ class TestFinalAcceptanceCriteria(unittest.TestCase):
         index_path = os.path.join(REPO_ROOT, "index.html")
         with open(index_path, "r", encoding="utf-8") as f:
             content = f.read()
-        self.assertIn('"@type": "WebSite"', content)
+        self.assertTrue(re.search(r'"@type":\s*"WebSite"', content))
         self.assertNotIn('"AggregateRating"', content)
 
         category_path = os.path.join(REPO_ROOT, "categories", "coding.html")
         with open(category_path, "r", encoding="utf-8") as f:
             cat_content = f.read()
-        self.assertIn('"@type": "CollectionPage"', cat_content)
+        self.assertTrue(re.search(r'"@type":\s*"CollectionPage"', cat_content))
         self.assertNotIn('"@type": "Product"', cat_content)
 
     def test_09_criterion_8_no_known_critical_build_failures(self):

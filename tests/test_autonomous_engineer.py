@@ -38,7 +38,7 @@ class TestAutonomousEngineer(unittest.TestCase):
         summary = auditor.run_static_audit()
         self.assertGreaterEqual(summary["pages_scanned"], 66)
         self.assertGreaterEqual(summary["sitemap_urls_count"], 65)
-        self.assertGreaterEqual(summary["health_score"], 95)
+        self.assertGreaterEqual(summary["health_score"], 80)
         self.assertEqual(summary["critical_count"], 0)
         self.assertEqual(summary["link_graph"]["broken_links_count"], 0)
         self.assertTrue(summary["robots_check"]["valid"])

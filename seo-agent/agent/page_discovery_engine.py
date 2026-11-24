@@ -44,7 +44,7 @@ class PageDiscoveryEngine:
 
     EXCLUDE_DIRS = {
         ".git", ".github", ".venv", ".agent", ".agents", ".gemini", ".gsd",
-        "tests", "scratch", "__pycache__", "node_modules", "data"
+        "tests", "scratch", "__pycache__", "node_modules", "data", "admin", "private"
     }
 
     def __init__(self, workspace_root: Optional[Path] = None):

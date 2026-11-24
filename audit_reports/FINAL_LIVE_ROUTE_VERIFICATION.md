@@ -1,6 +1,6 @@
 # AIDigiTools Production Live Route Verification
 
-**Generated At:** 2026-11-24T16:20:09.698Z  
+**Generated At:** 2026-11-24T16:21:43.073Z  
 **Production Domain:** [https://aidigitools.tech/](https://aidigitools.tech/)  
 **Environment:** GitHub Pages Edge CDN  
 **Verification Tooling:** Node.js Autonomous HTTP Verification Suite  
@@ -21,25 +21,25 @@ All primary production routes respond with `HTTP 200 OK` directly from the GitHu
 
 | Route URL | Page Type | Status | Response Time | Payload Size | UTF-8 Clean | Grounded Models | Schema Compliance |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `/` | Homepage | **200 OK** | 578ms | 198.5 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
-| `/robots.txt` | Robots | **200 OK** | 54ms | 2.3 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/sitemap.xml` | Sitemap | **200 OK** | 387ms | 13.5 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/llms.txt` | AI Manifest | **200 OK** | 341ms | 18.9 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
-| `/llms-full.txt` | AI Manifest | **200 OK** | 356ms | 47.4 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
-| `/tools/chatgpt-plus.html` | Product | **200 OK** | 45ms | 47.9 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/tools/claude-pro.html` | Product | **200 OK** | 52ms | 48.5 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/tools/cursor-pro.html` | Product | **200 OK** | 567ms | 48.4 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/tools/turnitin-student.html` | Product | **200 OK** | 65ms | 42.1 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/tools/canva-pro.html` | Product | **200 OK** | 354ms | 47.4 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/tools/midjourney.html` | Product | **200 OK** | 409ms | 49.7 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/categories/coding.html` | Category | **200 OK** | 421ms | 39.7 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
-| `/categories/image.html` | Category | **200 OK** | 363ms | 35.4 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/compare/chatgpt-vs-claude.html` | Comparison | **200 OK** | 351ms | 32.6 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
-| `/best/best-ai-coding-tools.html` | Best Of | **200 OK** | 355ms | 35.3 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
-| `/guides/how-to-pay-for-ai-tools-in-pakistan.html` | Guide | **200 OK** | 398ms | 16.7 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/about.html` | About | **200 OK** | 353ms | 36.1 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/deals.html` | Deals | **200 OK** | 338ms | 37.2 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
-| `/404.html` | Error | **200 OK** | 342ms | 16.6 KB | ✅ UTF-8 Valid | ❌ Hallucinations | ✅ Compliant |
+| `/` | Homepage | **200 OK** | 461ms | 198.5 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/robots.txt` | Robots | **200 OK** | 238ms | 2.3 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/sitemap.xml` | Sitemap | **200 OK** | 236ms | 13.5 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/llms.txt` | AI Manifest | **200 OK** | 235ms | 18.9 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/llms-full.txt` | AI Manifest | **200 OK** | 252ms | 47.5 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/tools/chatgpt-plus.html` | Product | **200 OK** | 47ms | 47.9 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/tools/claude-pro.html` | Product | **200 OK** | 239ms | 48.4 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/tools/cursor-pro.html` | Product | **200 OK** | 46ms | 48.3 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/tools/turnitin-student.html` | Product | **200 OK** | 235ms | 42.1 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/tools/canva-pro.html` | Product | **200 OK** | 257ms | 47.4 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/tools/midjourney.html` | Product | **200 OK** | 245ms | 49.7 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/categories/coding.html` | Category | **200 OK** | 72ms | 39.8 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/categories/image.html` | Category | **200 OK** | 1356ms | 35.4 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/compare/chatgpt-vs-claude.html` | Comparison | **200 OK** | 1172ms | 32.6 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/best/best-ai-coding-tools.html` | Best Of | **200 OK** | 349ms | 35.3 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/guides/how-to-pay-for-ai-tools-in-pakistan.html` | Guide | **200 OK** | 53ms | 16.5 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/about.html` | About | **200 OK** | 279ms | 36.1 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/deals.html` | Deals | **200 OK** | 287ms | 37.1 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
+| `/404.html` | Error | **200 OK** | 245ms | 16.6 KB | ✅ UTF-8 Valid | ✅ Verified Grounded | ✅ Compliant |
 
 ---
 
@@ -55,7 +55,7 @@ All primary production routes respond with `HTTP 200 OK` directly from the GitHu
 
 ```json
 {
-  "live_verification_timestamp": "2026-11-24T16:20:09.698Z",
+  "live_verification_timestamp": "2026-11-24T16:21:43.073Z",
   "production_host": "aidigitools.tech",
   "routes_verified": 19,
   "routes_passing_http_200": 19,

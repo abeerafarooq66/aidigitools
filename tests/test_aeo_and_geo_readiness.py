@@ -15,7 +15,7 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
     def setUpClass(cls):
         cls.html_files = []
         for root, dirs, files in os.walk(WORKSPACE_DIR):
-            if any(p in root for p in [".git", "tests", "scratch", "data"]):
+            if any(p in root for p in [".git", "tests", "scratch", "data", "admin", "private"]):
                 continue
             for f in files:
                 if f.endswith(".html"):
@@ -32,7 +32,7 @@ class TestAEOAndGEOReadiness(unittest.TestCase):
     def test_01_all_content_pages_have_quick_answer_capsule(self):
         """All 52 content pages (excluding 404.html) must feature a .quick-answer block between 30 and 85 words."""
         for rel in self.html_files:
-            if rel == "404.html":
+            if rel == "404.html" or "admin" in rel or "private" in rel:
                 continue
             c = self._read_file(rel)
             match = re.search(r'<[a-z0-9]+\s+[^>]*class=["\'][^"\']*quick-answer[^"\']*["\'][^>]*>(.*?)</[a-z0-9]+>', c, re.S | re.I)
