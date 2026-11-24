@@ -110,6 +110,8 @@ class ConversionAnalyticsEngine:
         report = {
             "report_period_days": period_days,
             "generated_at": datetime.now().isoformat(),
+            "data_provenance": "SYNTHETIC_MODEL_SIMULATION_FIXTURE",
+            "provenance_disclaimer": "Metrics are algorithmic baseline simulations for testing conversion engines. For verified production reporting, query authenticated GSC/GA4/CRM APIs directly.",
             "business_reality_principle": "Traffic growth does not automatically equate to business success. Focus on qualified intent and conversion efficiency.",
             "search_console_metrics": {
                 "organic_impressions": impressions,
