@@ -13,14 +13,18 @@
     var parsedPrice = parseFloat(toolPrice.toString().replace(/[^0-9.]/g, '')) || 0;
 
     if (typeof gtag === 'function') {
-      gtag('event', 'wa_concierge_checkout', {
+      var waParams = {
         'tool_name': toolName,
         'value': parsedPrice,
         'currency': 'PKR',
         'link_url': linkEl.href,
         'page_location': window.location.href,
         'transport_type': 'beacon'
-      });
+      };
+      // Primary custom concierge event
+      gtag('event', 'wa_concierge_checkout', waParams);
+      // Normalized tracking event
+      gtag('event', 'whatsapp_click', waParams);
     }
   }
 
@@ -31,11 +35,15 @@
     var toolSlug = match ? match[1] : (btnEl.getAttribute('data-tool') || 'general');
 
     if (typeof gtag === 'function') {
-      gtag('event', 'initiate_quick_order', {
+      var qoParams = {
         'tool_slug': toolSlug,
         'page_location': window.location.href,
         'transport_type': 'beacon'
-      });
+      };
+      // Primary custom modal event
+      gtag('event', 'initiate_quick_order', qoParams);
+      // Normalized tracking event
+      gtag('event', 'quick_order_click', qoParams);
     }
   }
 

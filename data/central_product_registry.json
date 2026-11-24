@@ -146,14 +146,14 @@
     "official_plan_names": "ChatGPT Plus (Individual)",
     "official_provider_price": "$20.0 USD/month",
     "verified_features": [
-      "Frontier GPT-5/GPT-6 access with high messaging caps",
+      "Frontier OpenAI o1 & GPT-4o access with high messaging caps",
       "Advanced Voice Mode with real-time inflection",
       "Custom GPTs creation & browse",
       "DALL-E image generation & Canvas visual synthesis",
       "Deep code interpreter and canvas"
     ],
     "verified_limitations": "Standard message caps during peak hours on frontier reasoning models",
-    "credits_quotas_usage_limits": "Standard GPT-5/GPT-6 80 msgs / 3h (dynamic); Canvas; Advanced Voice; 1 individual seat",
+    "credits_quotas_usage_limits": "Standard OpenAI o1 & GPT-4o 80 msgs / 3h (dynamic); Canvas; Advanced Voice; 1 individual seat",
     "geographic_availability_and_restrictions": "Supported in Pakistan; PKR domestic settlement via AIDigiTools",
     "access_delivery_model": "Verified Workspace Seat / Activation Service (Concierge)",
     "aidigitools_offer_price_pkr": 2300,
@@ -215,7 +215,7 @@
     "official_provider_price": "$20.0 USD/month",
     "verified_features": [
       "5x usage limits vs free tier",
-      "Claude Sonnet 5.5 priority access (with Claude 3.5 support)",
+      "Claude 3.5 Sonnet priority access (with Claude 3.5 support)",
       "Artifacts live preview window",
       "Project knowledge upload (documents, code bases)",
       "Priority access during high traffic"
@@ -556,7 +556,7 @@
     "verified_features": [
       "Real-time in-line code autocompletion",
       "Copilot Chat in VS Code and JetBrains",
-      "Multi-model switcher (Claude Sonnet 5.5, GPT-5/4o, Gemini)",
+      "Multi-model switcher (Claude 3.5 Sonnet, GPT-4o, Gemini)",
       "Pull request summary generator on GitHub.com",
       "CLI command assistant"
     ],
@@ -1167,7 +1167,7 @@
     "official_provider_price": "$20.0 USD/month",
     "verified_features": [
       "300+ Pro Searches per day with deep reasoning",
-      "Model switcher (Claude Sonnet 5.5, GPT-5/4o, Sonar)",
+      "Model switcher (Claude 3.5 Sonnet, GPT-4o, Sonar)",
       "Unlimited file uploads (PDFs, CSVs, images)",
       "Perplexity Collections with collaborative search spaces",
       "API credits and playground access"

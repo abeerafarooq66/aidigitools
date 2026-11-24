@@ -2121,6 +2121,18 @@ opt.classList.remove('active');
 }
 });
 updateCartSummary();
+if (typeof gtag === 'function') {
+  var railParams = {
+    'payment_rail': railName,
+    'tool_slug': currentTool ? (currentTool.slug || '') : '',
+    'tool_name': currentTool ? (currentTool.name || '') : '',
+    'currency': 'PKR',
+    'value': currentPlan ? (currentPlan.price_pkr || 0) : (currentTool ? (currentTool.starting_price_pkr || 0) : 0),
+    'transport_type': 'beacon'
+  };
+  gtag('event', 'payment_rail_selected', railParams);
+  gtag('event', 'select_payment_rail', railParams);
+}
 };
 function updateCartSummary() {
 if (!currentTool) return;

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-11-24T16:19:19.200Z",
+  "test_suite": "AIDigiTools Quality Gate & Regression CI",
+  "total_tests": 9,
+  "passed_tests": 9,
+  "failed_tests": 0,
+  "failures": [],
+  "test_details": {
+    "test_01_all_jsonld_syntax_valid": {
+      "status": "PASSED"
+    },
+    "test_02_no_product_on_non_product_pages": {
+      "status": "PASSED"
+    },
+    "test_03_zero_fabricated_ratings_or_reviews": {
+      "status": "PASSED"
+    },
+    "test_04_product_and_offer_rich_results": {
+      "status": "PASSED"
+    },
+    "test_05_quick_order_routing_integrity": {
+      "status": "PASSED"
+    },
+    "test_06_metadata_lengths_compliance": {
+      "status": "PASSED"
+    },
+    "test_07_clean_utf8_encoding": {
+      "status": "PASSED"
+    },
+    "test_08_zero_model_hallucinations": {
+      "status": "PASSED"
+    },
+    "test_09_robots_and_sitemap_compliance": {
+      "status": "PASSED"
+    }
+  }
+}

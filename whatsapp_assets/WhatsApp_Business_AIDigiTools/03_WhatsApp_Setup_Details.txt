@@ -34,7 +34,7 @@ Folder: 'Catalogue_Products' mein har tool ki image save hai.
 • Image File: Catalogue_Products/01_chatgpt_plus.png
 • Item Name: OpenAI ChatGPT Plus Subscription
 • Price: 2300 PKR
-• Description: Buy ChatGPT Plus in Pakistan with EasyPaisa, JazzCash, or SadaPay. Access GPT-5/GPT-6 models, Canvas, Advanced Voice, and 15m delivery via WhatsApp.
+• Description: Buy ChatGPT Plus in Pakistan with EasyPaisa, JazzCash, or SadaPay. Access OpenAI o1 & GPT-4o models, Canvas, Advanced Voice, and 15m delivery via WhatsApp.
 • Link: https://aidigitools.tech/tools/chatgpt-plus.html
 --------------------------------------------------
 
@@ -42,7 +42,7 @@ Folder: 'Catalogue_Products' mein har tool ki image save hai.
 • Image File: Catalogue_Products/02_claude_pro.png
 • Item Name: Anthropic Claude Pro Subscription
 • Price: 2500 PKR
-• Description: Buy Claude Pro in Pakistan. Pay via EasyPaisa, JazzCash, or SadaPay. Unlocks Claude Sonnet 5.5, Projects, 200K context, and 15-minute WhatsApp delivery.
+• Description: Buy Claude Pro in Pakistan. Pay via EasyPaisa, JazzCash, or SadaPay. Unlocks Claude 3.5 Sonnet, Projects, 200K context, and 15-minute WhatsApp delivery.
 • Link: https://aidigitools.tech/tools/claude-pro.html
 --------------------------------------------------
 
@@ -58,7 +58,7 @@ Folder: 'Catalogue_Products' mein har tool ki image save hai.
 • Image File: Catalogue_Products/04_midjourney.png
 • Item Name: Midjourney Midjourney Subscription
 • Price: 2800 PKR
-• Description: Buy Midjourney V8 in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unrestricted fast GPU hours, web editor access, and 15m delivery via WhatsApp.
+• Description: Buy Midjourney v6.1 in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unrestricted fast GPU hours, web editor access, and 15m delivery via WhatsApp.
 • Link: https://aidigitools.tech/tools/midjourney.html
 --------------------------------------------------
 
@@ -106,7 +106,7 @@ Folder: 'Catalogue_Products' mein har tool ki image save hai.
 • Image File: Catalogue_Products/10_perplexity_pro.png
 • Item Name: Perplexity AI Perplexity Pro Subscription
 • Price: 2200 PKR
-• Description: Buy Perplexity Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited Pro searches, Claude Sonnet 5.5 switching, and 15m WhatsApp setup.
+• Description: Buy Perplexity Pro in Pakistan with EasyPaisa, JazzCash, or SadaPay. Unlimited Pro searches, Claude 3.5 Sonnet switching, and 15m WhatsApp setup.
 • Link: https://aidigitools.tech/tools/perplexity-pro.html
 --------------------------------------------------
 

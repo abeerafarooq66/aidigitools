@@ -137,19 +137,19 @@ class TestGoogleSearchVisibility(unittest.TestCase):
             c = self._read_file(rel)
             if rel.startswith("tools/"):
                 # Product & Offer
-                self.assertIn('"@type": "Product"', c, f"Missing Product schema in {rel}")
-                self.assertIn('"@type": "Offer"', c, f"Missing Offer schema in {rel}")
-                self.assertIn('"@type": "BreadcrumbList"', c, f"Missing BreadcrumbList in {rel}")
-                self.assertIn('"@type": "FAQPage"', c, f"Missing FAQPage in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"Product"', c), f"Missing Product schema in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"Offer"', c), f"Missing Offer schema in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"BreadcrumbList"', c), f"Missing BreadcrumbList in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"FAQPage"', c), f"Missing FAQPage in {rel}")
             elif rel.startswith("categories/"):
                 # CollectionPage & ItemList
-                self.assertIn('"@type": "CollectionPage"', c, f"Missing CollectionPage in {rel}")
-                self.assertIn('"@type": "ItemList"', c, f"Missing ItemList in {rel}")
-                self.assertIn('"@type": "BreadcrumbList"', c, f"Missing BreadcrumbList in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"CollectionPage"', c), f"Missing CollectionPage in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"ItemList"', c), f"Missing ItemList in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"BreadcrumbList"', c), f"Missing BreadcrumbList in {rel}")
             elif rel.startswith("guides/") or rel.startswith("compare/") or rel.startswith("best/"):
                 # Article / TechArticle
-                self.assertTrue('"@type": "Article"' in c or '"@type": "TechArticle"' in c, f"Missing Article in {rel}")
-                self.assertIn('"@type": "BreadcrumbList"', c, f"Missing BreadcrumbList in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"(?:Article|TechArticle)"', c), f"Missing Article in {rel}")
+                self.assertTrue(re.search(r'"@type":\s*"BreadcrumbList"', c), f"Missing BreadcrumbList in {rel}")
 
     def test_08_gsc_verification_slot_present(self):
         """index.html must provide the pre-configured slot for Google Search Console site verification."""

@@ -1,4 +1,4 @@
-﻿# robots.txt for aidigitools.tech
+# robots.txt for aidigitools.tech
 # Google Search Central, Bing Webmaster & Generative Engine Compliant
 # Reference: Universal Web Search & SEO Master Book V2
 

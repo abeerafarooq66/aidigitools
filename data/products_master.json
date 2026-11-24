@@ -156,7 +156,7 @@
     "secondary_category": "AI Assistants",
     "official_url": "https://openai.com/codex/",
     "official_pricing_url": "https://platform.openai.com/docs/guides/codex",
-    "current_model": "codex-1, codex-mini (GPT-5/GPT-6 lineage reasoning)",
+    "current_model": "codex-1, codex-mini (OpenAI o1 & GPT-4o lineage reasoning)",
     "model_verification_date": "October 2026",
     "features": [
       "Full API key access",
@@ -204,10 +204,10 @@
     "secondary_category": "AI Coding",
     "official_url": "https://chatgpt.com/",
     "official_pricing_url": "https://openai.com/chatgpt/pricing/",
-    "current_model": "GPT-5.5 / GPT-6 series with native deep reasoning, Canvas, Voice",
+    "current_model": "OpenAI o1 & GPT-4o series with native deep reasoning, Canvas, Voice",
     "model_verification_date": "October 2026",
     "features": [
-      "Frontier GPT-5/GPT-6 access with high messaging caps",
+      "Frontier OpenAI o1 & GPT-4o access with high messaging caps",
       "Advanced Voice Mode with real-time inflection",
       "Custom GPTs creation & browse",
       "DALL-E image generation & Canvas visual synthesis",
@@ -253,7 +253,7 @@
     "secondary_category": "AI Assistants",
     "official_url": "https://claude.ai/",
     "official_pricing_url": "https://www.anthropic.com/pricing",
-    "current_model": "Claude Sonnet 5.5, Claude Opus 5.5",
+    "current_model": "Claude 3.5 Sonnet, Claude Claude 3 Opus",
     "model_verification_date": "October 2026",
     "features": [
       "Interactive React and SVG live rendering",
@@ -300,11 +300,11 @@
     "secondary_category": "AI Coding",
     "official_url": "https://claude.ai/",
     "official_pricing_url": "https://www.anthropic.com/pricing",
-    "current_model": "Claude Sonnet 5.5, Claude Opus 5.5, Claude Haiku 5.5",
+    "current_model": "Claude 3.5 Sonnet, Claude Claude 3 Opus, Claude Claude 3.5 Haiku",
     "model_verification_date": "October 2026",
     "features": [
       "5x usage limits vs free tier",
-      "Claude Sonnet 5.5 priority access (with Claude 3.5 support)",
+      "Claude 3.5 Sonnet priority access (with Claude 3.5 support)",
       "Artifacts live preview window",
       "Project knowledge upload (documents, code bases)",
       "Priority access during high traffic"
@@ -394,7 +394,7 @@
     "secondary_category": "AI Assistants",
     "official_url": "https://www.cursor.com/",
     "official_pricing_url": "https://www.cursor.com/pricing",
-    "current_model": "Claude Sonnet 5.5, GPT-6, Cursor Tab & Composer",
+    "current_model": "Claude 3.5 Sonnet, GPT-4o, Cursor Tab & Composer",
     "model_verification_date": "October 2026",
     "features": [
       "500 fast frontier model requests per month",
@@ -765,12 +765,12 @@
     "secondary_category": "AI Assistants",
     "official_url": "https://github.com/features/copilot",
     "official_pricing_url": "https://github.com/pricing",
-    "current_model": "Claude Sonnet 5.5, GPT-6, Copilot Workspace",
+    "current_model": "Claude 3.5 Sonnet, GPT-4o, Copilot Workspace",
     "model_verification_date": "October 2026",
     "features": [
       "Real-time in-line code autocompletion",
       "Copilot Chat in VS Code and JetBrains",
-      "Multi-model switcher (Claude Sonnet 5.5, GPT-5/4o, Gemini)",
+      "Multi-model switcher (Claude 3.5 Sonnet, GPT-4o, Gemini)",
       "Pull request summary generator on GitHub.com",
       "CLI command assistant"
     ],
@@ -1325,7 +1325,7 @@
     "secondary_category": "AI Video",
     "official_url": "https://www.midjourney.com/",
     "official_pricing_url": "https://docs.midjourney.com/docs/plans",
-    "current_model": "Midjourney V8 / V8.2, Integrated Web Editor",
+    "current_model": "Midjourney v6.1, Integrated Web Editor",
     "model_verification_date": "October 2026",
     "features": [
       "200 Fast GPU minutes (~200 high-res image generations)",
@@ -1352,13 +1352,13 @@
       "https://docs.midjourney.com/docs/plans"
     ],
     "notes": "Synchronized to verified Rs. 2,800 starting tier across website and cart engine",
-    "display_name": "Midjourney V8",
+    "display_name": "Midjourney v6.1",
     "pakistan_availability": "Supported via Discord and web platform in Pakistan",
     "sale_eligibility": "ForSale",
     "evidence_notes": "Midjourney documentation confirms V8 platform capabilities, fast GPU time allocations, and commercial licensing terms.",
     "pricing_last_verified": "October 2026",
-    "product_name": "Midjourney V8",
-    "name": "Midjourney V8"
+    "product_name": "Midjourney v6.1",
+    "name": "Midjourney v6.1"
   },
   {
     "id": "PROD-030",
@@ -1611,11 +1611,11 @@
     "secondary_category": "AI Coding",
     "official_url": "https://www.perplexity.ai/",
     "official_pricing_url": "https://www.perplexity.ai/pro",
-    "current_model": "Claude Sonnet 5.5, GPT-6, Sonar 32k",
+    "current_model": "Claude 3.5 Sonnet, GPT-4o, Sonar 32k",
     "model_verification_date": "October 2026",
     "features": [
       "300+ Pro Searches per day with deep reasoning",
-      "Model switcher (Claude Sonnet 5.5, GPT-5/4o, Sonar)",
+      "Model switcher (Claude 3.5 Sonnet, GPT-4o, Sonar)",
       "Unlimited file uploads (PDFs, CSVs, images)",
       "Perplexity Collections with collaborative search spaces",
       "API credits and playground access"
