@@ -1,4 +1,4 @@
-# AIDigiTools (aidigitools.tech)
+﻿# AIDigiTools (aidigitools.tech)
 
 > Pakistan's Premier AI Software Marketplace & Intelligence Hub.
 > Flat PKR Pricing, Domestic Payment Rails (EasyPaisa, JazzCash, SadaPay, Raast), and WhatsApp 15-minute delivery.
