@@ -5,6 +5,7 @@
 User-agent: *
 Disallow: /admin/
 Disallow: /private/
+Disallow: /data/previews/
 # Prevent query-parameter combinations from creating duplicate indexable URLs
 Disallow: /*?*q=
 Disallow: /*?*search=
@@ -19,47 +20,100 @@ Allow: /
 User-agent: Googlebot
 Disallow: /admin/
 Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: Bingbot
 Disallow: /admin/
 Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
-# Generative AI Search & Answer Engine Crawlers (Allow Search & Citations)
+# Generative AI Search & Answer Engine Crawlers (Allow Search & Citations, Disallow Admin)
 User-agent: OAI-SearchBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: Claude-SearchBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: PerplexityBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: Applebot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 # Interactive Live Search & User-Triggered Fetchers
 User-agent: ChatGPT-User
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: Claude-User
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 # Foundation Model Pre-Training & Content Scrapers
 User-agent: Google-Extended
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: GPTBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: CCBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 User-agent: Applebot-Extended
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: Amazonbot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: cohere-ai
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
 Allow: /
 
 # Sitemaps & Feeds

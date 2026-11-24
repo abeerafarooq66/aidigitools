@@ -70,8 +70,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add audit_reports/
           
-          # Stage any low-risk auto-repairs (sitemap.xml or html canonicals)
-          git add sitemap.xml *.html tools/ categories/ compare/ best/ guides/ 2>/dev/null || true
+          # Restrict automated persistence strictly to audit reports to prevent accidental code corruption
+          git add audit_reports/
           
           if git diff --staged --quiet; then
             echo "No report or code changes to commit."

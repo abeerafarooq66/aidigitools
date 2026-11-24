@@ -37,6 +37,25 @@ jobs:
           python -m aio_agent sync-llms
           python scripts/link_graph_checker.py --strict
 
+      - name: Verify Clean UTF-8 Encoding
+        run: |
+          node -e "
+          const fs = require('fs');
+          const checkDirs = ['blog', 'compare', 'guides', 'best'];
+          checkDirs.forEach(dir => {
+            if (fs.existsSync(dir)) {
+              fs.readdirSync(dir).filter(f => f.endsWith('.html')).forEach(f => {
+                const buf = fs.readFileSync(dir + '/' + f);
+                if (buf.includes(Buffer.from([0xef, 0xbf, 0xbd]))) {
+                  console.error('UTF-8 corruption detected in ' + dir + '/' + f);
+                  process.exit(1);
+                }
+              });
+            }
+          });
+          console.log('UTF-8 encoding validation passed.');
+          "
+
       - name: Safely Persist Published Articles, Sitemaps & Run Reports
         run: |
           git config --global user.name "aidigitools-cloud-agent[bot]"
