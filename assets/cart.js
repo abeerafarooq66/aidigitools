@@ -1912,7 +1912,7 @@ var TOOLS_DATA = {
 ]
 }
 };
-var HELD_PRODUCTS = ["turnitin-student", "linkedin-premium", "netflix-premium", "spotify-premium", "coursera-plus", "claude-artifacts", "deepseek-pro"];
+var HELD_PRODUCTS = ["claude-artifacts", "deepseek-pro"];
 var currentTool = TOOLS_DATA["chatgpt-plus"];
 var currentPlan = currentTool && currentTool.plans && currentTool.plans.length > 0 ? currentTool.plans[0] : null;
 var currentPaymentRail = "SadaPay";

@@ -834,8 +834,8 @@
           "Works on Smart TV, Phone, Laptop, and Tablet"
         ],
         "limits": "1 screen active at any time on your dedicated profile",
-        "badge": "Inquiry Only",
-        "availability": "OutOfStock"
+        "badge": "4K UHD Profile",
+        "availability": "InStock"
       },
       {
         "plan_id": "PLAN-NETFLIX-FULL-1M",
@@ -852,8 +852,8 @@
           "Spatial audio on all compatible systems"
         ],
         "limits": "Private household account activation",
-        "badge": "Inquiry Only",
-        "availability": "OutOfStock"
+        "badge": "Full Account",
+        "availability": "InStock"
       }
     ],
     "starting_price_pkr": 1100,
@@ -866,9 +866,9 @@
     "ranking_source": "Domestic order conversion & verified multi-channel demand",
     "ranking_reason": "Established core product with proven checkout volume and high retention.",
     "popularity_rank": 29,
-    "available": false,
-    "in_stock": false,
-    "status": "inquiry_only"
+    "available": true,
+    "in_stock": true,
+    "status": "active"
   },
   "suno-ai": {
     "slug": "suno-ai",
@@ -1517,8 +1517,8 @@
           "Full access to 21,000+ LinkedIn Learning courses"
         ],
         "limits": "Personal LinkedIn profile upgrade",
-        "badge": "Inquiry Only",
-        "availability": "OutOfStock"
+        "badge": "Career Plan",
+        "availability": "InStock"
       }
     ],
     "starting_price_pkr": 1500,
@@ -1531,9 +1531,9 @@
     "ranking_source": "Domestic order conversion & verified multi-channel demand",
     "ranking_reason": "Established core product with proven checkout volume and high retention.",
     "popularity_rank": 47,
-    "available": false,
-    "in_stock": false,
-    "status": "inquiry_only"
+    "available": true,
+    "in_stock": true,
+    "status": "active"
   },
   "gemini-advanced": {
     "slug": "gemini-advanced",
@@ -2160,8 +2160,8 @@
           "Hands-on guided projects with cloud dev environments"
         ],
         "limits": "Excludes select degree programs and premium masterclasses",
-        "badge": "Inquiry Only",
-        "availability": "OutOfStock"
+        "badge": "Unlimited Certificates",
+        "availability": "InStock"
       }
     ],
     "starting_price_pkr": 2200,
@@ -2180,9 +2180,9 @@
     "account_sharing_restriction_disclosed": true,
     "pricing_verification_status": "verified_against_competitor_market_benchmarks",
     "sales_evidence_status": "pre_order_unverified_sales",
-    "available": false,
-    "in_stock": false,
-    "status": "inquiry_only"
+    "available": true,
+    "in_stock": true,
+    "status": "active"
   },
   "google-ai-ultra": {
     "slug": "google-ai-ultra",
@@ -2313,8 +2313,8 @@
           "Cross-device Spotify Connect synchronization"
         ],
         "limits": "Personal account activation; non-commercial playback",
-        "badge": "Inquiry Only",
-        "availability": "OutOfStock"
+        "badge": "Ad-Free Premium",
+        "availability": "InStock"
       }
     ],
     "starting_price_pkr": 850,
@@ -2333,9 +2333,9 @@
     "account_sharing_restriction_disclosed": true,
     "pricing_verification_status": "verified_against_competitor_market_benchmarks",
     "sales_evidence_status": "pre_order_unverified_sales",
-    "available": false,
-    "in_stock": false,
-    "status": "inquiry_only"
+    "available": true,
+    "in_stock": true,
+    "status": "active"
   },
   "microsoft-office-365": {
     "slug": "microsoft-office-365",
@@ -2566,8 +2566,8 @@
           "Safe submission settings that do not store student papers in repository"
         ],
         "limits": "Non-repository class enrollment; up to 30 submissions/month",
-        "badge": "Inquiry Only",
-        "availability": "OutOfStock"
+        "badge": "Instant Delivery",
+        "availability": "InStock"
       }
     ],
     "starting_price_pkr": 2800,
@@ -2586,8 +2586,8 @@
     "account_sharing_restriction_disclosed": true,
     "pricing_verification_status": "verified_against_competitor_market_benchmarks",
     "sales_evidence_status": "pre_order_unverified_sales",
-    "available": false,
-    "in_stock": false,
-    "status": "inquiry_only"
+    "available": true,
+    "in_stock": true,
+    "status": "active"
   }
 }

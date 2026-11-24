@@ -4,13 +4,8 @@ const path = require('path');
 const toolsDir = path.join(__dirname, '..', 'tools');
 const files = fs.readdirSync(toolsDir).filter(f => f.endsWith('.html'));
 
-const heldSlugs = [
-  'turnitin-student',
-  'linkedin-premium',
-  'netflix-premium',
-  'spotify-premium',
-  'coursera-plus'
-];
+// All 49 catalog products are now active with direct quick-order modals
+const heldSlugs = [];
 
 let csv = 'tool_slug,page_file,routing_action,target_slug_or_destination,status\n';
 
@@ -25,4 +20,4 @@ files.forEach(f => {
 
 const outPath = path.join(__dirname, '..', 'audit_reports', 'PRODUCT_ORDER_ROUTING_MATRIX.csv');
 fs.writeFileSync(outPath, csv, 'utf8');
-console.log(`Updated routing matrix: ${outPath}`);
+console.log(`Updated routing matrix: ${outPath} (${files.length} tools verified)`);

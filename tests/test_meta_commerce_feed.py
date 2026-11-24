@@ -16,11 +16,6 @@ TOOLS_DIR = ROOT / "tools"
 IMAGES_DIR = ROOT / "assets" / "images"
 
 HELD_SLUGS = {
-    "turnitin-student",
-    "linkedin-premium",
-    "netflix-premium",
-    "spotify-premium",
-    "coursera-plus",
     "claude-artifacts",
     "deepseek-pro"
 }
@@ -70,8 +65,8 @@ class TestMetaCommerceFeed(unittest.TestCase):
                 self.assertEqual(avail, "in_stock", f"Active product '{slug}' must be 'in_stock'")
                 in_stock_count += 1
 
-        self.assertEqual(in_stock_count, 42)
-        self.assertEqual(out_of_stock_count, 7)
+        self.assertEqual(in_stock_count, 47)
+        self.assertEqual(out_of_stock_count, 2)
 
     def test_04_mandatory_attributes_presence_and_format(self):
         """Verify all mandatory Meta Commerce attributes exist and are non-empty."""

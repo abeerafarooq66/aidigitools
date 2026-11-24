@@ -21,19 +21,19 @@ class TestProductIntelligence(unittest.TestCase):
         slugs = self.pi.list_all_slugs()
         self.assertEqual(len(slugs), 49, f"Expected 49 canonical products, found {len(slugs)}")
 
-    def test_02_hold_products_strictly_block_purchase_ctas(self):
-        hold_slugs = [
+    def test_02_activated_products_permit_purchase_ctas(self):
+        activated_slugs = [
             "coursera-plus", "linkedin-premium", "netflix-premium",
             "spotify-premium", "turnitin-student"
         ]
-        for slug in hold_slugs:
-            self.assertFalse(
+        for slug in activated_slugs:
+            self.assertTrue(
                 self.pi.is_cta_permitted(slug),
-                f"Hold product {slug} must NOT permit purchase CTA"
+                f"Activated product {slug} must permit purchase CTA"
             )
             p = self.pi.get_product(slug)
-            self.assertEqual(p["restricted_status"], "Hold / Inquiry Only")
-            self.assertEqual(p["current_availability"], "InquiryOnly")
+            self.assertEqual(p["restricted_status"], "Normal / Active")
+            self.assertEqual(p["current_availability"], "InStock")
 
     def test_03_active_products_permit_purchase_ctas(self):
         active_slugs = ["adobe-creative-cloud", "claude-pro", "chatgpt-plus", "cursor-pro"]
