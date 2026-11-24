@@ -12,13 +12,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 PRODUCTS_MASTER_PATH = ROOT_DIR / "data" / "products_master.json"
 OUTPUT_REGISTRY_PATH = ROOT_DIR / "data" / "central_product_registry.json"
 
-HOLD_PRODUCTS = {
-    "coursera-plus",
-    "linkedin-premium",
-    "netflix-premium",
-    "spotify-premium",
-    "turnitin-student"
-}
+HOLD_PRODUCTS = set()
 
 # Documentation URLs mapping
 DOCS_MAPPING = {
@@ -82,7 +76,8 @@ QUOTAS_MAPPING = {
     "chatgpt-plus": "Standard GPT-5/GPT-6 80 msgs / 3h (dynamic); Canvas; Advanced Voice; 1 individual seat",
     "claude-artifacts": "Interactive code canvas; React/SVG rendering; tied to Claude Sonnet/Opus compute quota",
     "claude-pro": "5x usage limits vs Free tier; 200,000 token context window; Projects workspace; 1 seat",
-    "coursera-plus": "Unlimited access to 7,000+ courses; professional certificates; (INQUIRY ONLY)",
+    "coursera-plus": "Unlimited access to 7,000+ courses; professional certificates; 1 student profile",
+
     "cursor-pro": "500 fast Claude 3.5 Sonnet / GPT-4o requests/month; unlimited slow requests; Cursor Composer",
     "deepseek-pro": "DeepSeek R1 & V3 reasoning compute; high-throughput API/Web seat",
     "elevenlabs-creator": "100,000 characters/month; commercial license; instant voice cloning; 1 seat",
@@ -100,13 +95,15 @@ QUOTAS_MAPPING = {
     "jetbrains-all": "15+ IDEs (IntelliJ, PyCharm, WebStorm, CLion); perpetual fallback license; 1 seat",
     "kling-ai": "660 monthly credits; 1080p 30fps AI video generation; camera motion controls",
     "leonardo-ai": "8,500 monthly fast tokens; Alchemy pipeline; photoreal engine; 1 seat",
-    "linkedin-premium": "Business/Career tier; InMail credits; who viewed your profile; (INQUIRY ONLY)",
+    "linkedin-premium": "Business/Career tier; InMail credits; who viewed your profile; 1 user account",
+
     "lovable-ai": "Full-stack code generation; unlimited public projects; Supabase integration; 1 seat",
     "microsoft-office-365": "Word, Excel, PowerPoint, Outlook desktop apps; 1TB OneDrive cloud storage; 1 seat",
     "midjourney": "Fast GPU hours allocation; Relax mode unlimited (Standard); stealth generation (Pro)",
     "minimax-ai": "Hailuo video credits; high-fidelity physics simulation; 720p/1080p video generation",
     "n8n-automation": "Self-hosted / Cloud workflow executions; 500+ integrations; community/enterprise nodes",
-    "netflix-premium": "4K Ultra HD streaming; HDR; spatial audio; 4 concurrent devices; (INQUIRY ONLY)",
+    "netflix-premium": "4K Ultra HD streaming; HDR; spatial audio; 1 profile with PIN or full account",
+
     "nordvpn": "10 simultaneous devices; 6,000+ high-speed servers; Threat Protection Pro; 1 seat",
     "notion-business": "Unlimited team members; private teamspaces; 90-day page history; SAML SSO",
     "perplexity-pro": "300+ Pro queries/day; Claude 3.5 Sonnet, GPT-4o, Sonar Large selection; file uploads",
@@ -115,11 +112,13 @@ QUOTAS_MAPPING = {
     "replit-core": "Replit Agent compute credits; unlimited private Repls; high-speed cloud compute VMs",
     "runway-gen3": "625 monthly credits; Gen-3 Alpha text-to-video / image-to-video; custom motion brush",
     "semrush-guru": "1,500 keywords to track; 30,000 results per report; historical data; Content Marketing",
-    "spotify-premium": "Individual ad-free audio streaming; offline downloads; 320kbps audio; (INQUIRY ONLY)",
+    "spotify-premium": "Individual ad-free audio streaming; offline downloads; 320kbps audio; 1 user seat",
+
     "suno-ai": "2,500 monthly credits (500 songs); commercial rights; priority generation queue",
     "surfshark-vpn": "Unlimited simultaneous devices; CleanWeb ad blocker; multi-hop VPN servers; 1 seat",
     "tradingview-pro": "5 indicators per chart; 2 charts in one window; 10K historical bars; ad-free",
-    "turnitin-student": "Originality check; AI detection report; (INQUIRY ONLY)",
+    "turnitin-student": "Originality check; AI detection report; non-repository class enrollment; up to 30 submissions/month",
+
     "udio-ai": "1,200 monthly credits; 2-minute audio tracks; stem separation; commercial terms",
     "vidiq-boost": "50 daily AI video ideas; keyword search volume tool; competitor tracker; 1 channel",
     "windows-11-pro": "1 PC permanent digital retail license; BitLocker; Hyper-V; Remote Desktop",
