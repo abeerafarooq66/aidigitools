@@ -1,7 +1,7 @@
 # AI DigiTools — Weekly SEO & Infrastructure Trend Summary
 
-**Generated:** 2026-11-25 04:49:22 PKT (Asia/Karachi)  
-**Window Analyzed:** 14 maintenance runs (2026-11-01 08:46:07 PKT to 2026-11-08 20:30:04 PKT)  
+**Generated:** 2026-11-25 17:24:39 PKT (Asia/Karachi)  
+**Window Analyzed:** 14 maintenance runs (2026-11-02 08:51:15 PKT to 2026-11-25 04:49:22 PKT)  
 **Overall Stability Posture:** **EXCELLENT_STABILITY**  
 
 ---
