@@ -1,6 +1,6 @@
 {
   "report_period_days": 28,
-  "generated_at": "2026-11-18T20:08:19.578460",
+  "generated_at": "2026-11-25T18:48:55.577908",
   "data_provenance": "SYNTHETIC_MODEL_SIMULATION_FIXTURE",
   "provenance_disclaimer": "Metrics are algorithmic baseline simulations for testing conversion engines. For verified production reporting, query authenticated GSC/GA4/CRM APIs directly.",
   "business_reality_principle": "Traffic growth does not automatically equate to business success. Focus on qualified intent and conversion efficiency.",
@@ -50,14 +50,14 @@
     "whatsapp_order_starts": 142,
     "confirmed_orders_verified": 98,
     "article_to_product_ctr_percent": 26.2,
-    "whatsapp_to_confirmed_conversion_percent": 69
+    "whatsapp_to_confirmed_conversion_percent": 69.0
   },
   "performance_by_topic_cluster": {
     "ai-coding-and-development": {
       "sessions": 880,
       "article_to_product_clicks": 195,
       "whatsapp_order_starts": 62,
-      "conversion_rate_percent": 7
+      "conversion_rate_percent": 7.0
     },
     "ai-assistants-and-llms": {
       "sessions": 750,
