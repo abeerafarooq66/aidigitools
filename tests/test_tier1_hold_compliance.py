@@ -44,7 +44,8 @@ class TestTier1HoldCompliance(unittest.TestCase):
             self.assertNotIn("Direct Orders Currently On Hold", content, f"Hold banner still present in {slug}.html")
 
             # Active orders accepted badge must be present
-            self.assertIn("🟢 Orders Accepted", content, f"Orders accepted badge missing in {slug}.html")
+            has_accepted_badge = ("🟢 Orders Accepted" in content) or ('<span class="status-dot"></span> Orders Accepted' in content)
+            self.assertTrue(has_accepted_badge, f"Orders accepted badge missing in {slug}.html")
 
             # Inquiry-only button must NOT be present
             self.assertNotIn("Inquire on WhatsApp for Current Availability", content, f"Inquiry button still present in {slug}.html")

@@ -90,7 +90,7 @@ var TOOLS_DATA = {
 "price_pkr": 2300,
 "price_usd": 8.0,
 "features": [
-"Access to GPT-5/GPT-6, o1/o3 reasoning, and GPT-4o fallback",
+"Access to OpenAI o1 & GPT-4o, o1/o3 reasoning, and GPT-4o fallback",
 "Advanced Voice Mode on iOS & Android",
 "DALL-E image generation & Canvas visual synthesis",
 "File analysis, web browsing & custom GPTs"
@@ -108,7 +108,7 @@ var TOOLS_DATA = {
 "price_pkr": 4800,
 "price_usd": 17.0,
 "features": [
-"Higher message limits on GPT-5/GPT-6 and o1/o3",
+"Higher message limits on OpenAI o1 & GPT-4o and o1/o3",
 "Dedicated collaborative workspace & admin console",
 "Shared custom GPTs within organization",
 "Zero model training on proprietary business data"
@@ -141,7 +141,7 @@ var TOOLS_DATA = {
 "price_usd": 9.0,
 "features": [
 "5x higher usage limits vs free Claude tier",
-"Claude Sonnet 5.5 & Claude 3.5 Haiku models",
+"Claude 3.5 Sonnet & Claude 3.5 Haiku models",
 "Interactive split-screen Artifacts live runner",
 "Early access to new Anthropic features"
 ],
@@ -271,7 +271,7 @@ var TOOLS_DATA = {
 },
 "midjourney": {
 "slug": "midjourney",
-"name": "Midjourney V8",
+"name": "Midjourney v6.1",
 "brand": "Midjourney",
 "vendor": "Midjourney Research Lab",
 "cat": "Design & Creative",
@@ -508,7 +508,7 @@ var TOOLS_DATA = {
 "price_pkr": 3800,
 "price_usd": 13.5,
 "features": [
-"500 Fast Premium requests / month (Claude Sonnet 5.5 & GPT-5/4o)",
+"500 Fast Premium requests / month (Claude 3.5 Sonnet & GPT-5/4o)",
 "Unlimited Slow requests after fast quota",
 "Multi-file Composer codebase refactoring",
 "Smart line and multi-line code auto-complete"
@@ -541,7 +541,7 @@ var TOOLS_DATA = {
 "price_usd": 8.0,
 "features": [
 "600+ Pro Searches / day with multi-step reasoning",
-"Model switcher: Claude Sonnet 5.5, GPT-5/4o, Sonar Large",
+"Model switcher: Claude 3.5 Sonnet, GPT-5/4o, Sonar Large",
 "Unlimited file and PDF research uploads",
 "Includes $5/month API credits"
 ],
@@ -1487,7 +1487,7 @@ var TOOLS_DATA = {
 "Interactive split-screen code and UI renderer",
 "Instant React components, HTML5 games, and SVG graphics",
 "Download and fork generated Artifact code snippets",
-"Claude Sonnet 5.5 reasoning backing every generation"
+"Claude 3.5 Sonnet reasoning backing every generation"
 ],
 "limits": "Anthropic platform limits apply",
 "badge": "Live Prototyping",
@@ -1916,6 +1916,8 @@ var HELD_PRODUCTS = ["claude-artifacts", "deepseek-pro"];
 var currentTool = TOOLS_DATA["chatgpt-plus"];
 var currentPlan = currentTool && currentTool.plans && currentTool.plans.length > 0 ? currentTool.plans[0] : null;
 var currentPaymentRail = "SadaPay";
+var currentDurationMonths = 1;
+var currentDiscountPercent = 0;
 function getPathPrefix() {
 var p = window.location.pathname;
 if (p.indexOf('/tools/') !== -1 || p.indexOf('/categories/') !== -1 || p.indexOf('/guides/') !== -1 || p.indexOf('/compare/') !== -1 || p.indexOf('/best/') !== -1) {
@@ -1960,13 +1962,13 @@ waMsg = "Hi AIDigiTools, I am inquiring about current availability and complianc
 waMsg = "Hi AIDigiTools, I want to order " + tool.name + " for Rs " + pricePkr + " PKR / $" + priceUsd + " USD via " + currentPaymentRail + ". Please confirm availability and share payment details.";
 }
 if (waLinkEl) {
-waLinkEl.style.setProperty('background', '#10B981', 'important');
+waLinkEl.style.setProperty('background', '#047857', 'important');
 waLinkEl.style.setProperty('color', '#FFFFFF', 'important');
-waLinkEl.style.setProperty('border', 'none', 'important');
+waLinkEl.style.setProperty('border', '1px solid #047857', 'important');
 if (isHeld) {
-waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 Inquire on WhatsApp &rarr;</span>';
+waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:500;">Inquire on WhatsApp &rarr;</span>';
 } else {
-waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">💬 Order via WhatsApp &rarr;</span>';
+waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:500;">Order via WhatsApp &rarr;</span>';
 }
 }
 if (waLinkEl) {
@@ -2024,9 +2026,31 @@ if (!currentTool || !currentTool.plans) return;
 var found = currentTool.plans.find(function (p) { return p.plan_id === planId; });
 if (found) {
 currentPlan = found;
+currentDurationMonths = 1;
+currentDiscountPercent = 0;
+syncDurationPillsUI();
 renderDrawerPlans();
 updateCartSummary();
 }
+};
+function syncDurationPillsUI() {
+var pills = document.querySelectorAll('.duration-pill');
+var durationBlock = pills.length ? pills[0].closest('.duration-pills-grid').parentNode : null;
+var planDur = currentPlan && currentPlan.duration ? currentPlan.duration.toLowerCase() : '';
+var isFixedLongPlan = (planDur.indexOf('12 month') !== -1 || planDur.indexOf('lifetime') !== -1 || planDur.indexOf('year') !== -1);
+if (durationBlock) {
+durationBlock.style.display = isFixedLongPlan ? 'none' : '';
+}
+pills.forEach(function (pill) {
+var m = parseInt(pill.getAttribute('data-months') || '1', 10);
+pill.classList.toggle('active', m === currentDurationMonths);
+});
+}
+window.selectCartDuration = function (months, discountPct) {
+currentDurationMonths = parseInt(months, 10) || 1;
+currentDiscountPercent = parseFloat(discountPct) || 0;
+syncDurationPillsUI();
+updateCartSummary();
 };
 function renderDrawerPlans() {
 var container = document.getElementById('drawerPlanSelectorContainer');
@@ -2036,21 +2060,21 @@ container.style.display = 'none';
 return;
 }
 container.style.display = 'block';
-var html = '<label style="display:block; font-size:0.82rem; font-weight:700; color:var(--text-secondary); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.04em;">Select Verified Plan</label>';
-html += '<div style="display:flex; flex-direction:column; gap:0.5rem;">';
+var html = '<label style="display:block; font-size:0.8125rem; font-weight:500; color:var(--text-secondary); margin-bottom:8px;">Select verified plan</label>';
+html += '<div style="display:flex; flex-direction:column; gap:8px;">';
 currentTool.plans.forEach(function (plan) {
 var isSelected = currentPlan && currentPlan.plan_id === plan.plan_id;
 var activeStyle = isSelected
-? 'border:1.5px solid #0284C7; background:#F0F9FF; box-shadow:0 2px 8px rgba(2,132,199,0.15);'
-: 'border:1px solid var(--border-color); background:var(--bg-card);';
-html += '<div onclick="selectPlanInDrawer(\'' + plan.plan_id + '\')" style="padding:0.65rem 0.85rem; border-radius:10px; cursor:pointer; transition:all 0.15s ease; display:flex; justify-content:space-between; align-items:center; ' + activeStyle + '">';
+? 'border:1px solid #0369A1; background:#F0F9FF;'
+: 'border:1px solid var(--color-border-subtle); background:var(--bg-surface);';
+html += '<div onclick="selectPlanInDrawer(\'' + plan.plan_id + '\')" style="padding:10px 12px; border-radius:8px; cursor:pointer; transition:border-color 150ms cubic-bezier(0.22,1,0.36,1), background-color 150ms cubic-bezier(0.22,1,0.36,1); display:flex; justify-content:space-between; align-items:center; ' + activeStyle + '">';
 html += '<div>';
-html += '<div style="font-size:0.9rem; font-weight:700; color:var(--text-primary);">' + plan.name + '</div>';
-html += '<div style="font-size:0.75rem; color:var(--text-muted);">' + plan.duration + ' • ' + plan.seats + '</div>';
+html += '<div style="font-size:0.875rem; font-weight:600; color:var(--text-primary);">' + plan.name + '</div>';
+html += '<div style="font-size:0.75rem; color:var(--text-muted);">' + plan.duration + ' · ' + plan.seats + '</div>';
 html += '</div>';
-html += '<div style="text-align:right;">';
-html += '<div style="font-size:0.92rem; font-weight:800; color:#0284C7;">Rs. ' + plan.price_pkr.toLocaleString() + '</div>';
-html += '<div style="font-size:0.72rem; color:var(--text-secondary);">(~$' + plan.price_usd.toFixed(2) + ' USD)</div>';
+html += '<div style="text-align:right; font-variant-numeric:tabular-nums;">';
+html += '<div style="font-size:0.9375rem; font-weight:600; color:#0369A1;">Rs. ' + plan.price_pkr.toLocaleString() + '</div>';
+html += '<div style="font-size:0.75rem; color:var(--text-secondary);">(~$' + plan.price_usd.toFixed(2) + ' USD)</div>';
 html += '</div>';
 html += '</div>';
 });
@@ -2086,8 +2110,8 @@ if (isHeld) {
 if (!holdNotice) {
 holdNotice = document.createElement('div');
 holdNotice.id = 'drawerHoldNotice';
-holdNotice.style.cssText = 'background:rgba(245,158,11,0.12); border:1px solid #f59e0b; border-radius:8px; padding:0.6rem 0.8rem; margin-bottom:0.75rem; font-size:0.82rem; color:var(--text-secondary);';
-holdNotice.innerHTML = '<strong>⏸️ Direct Orders Paused:</strong> Direct checkout for this service is on hold pending secondary licensing verification. Inquiries are for stock &amp; compliance verification only and an inquiry is not an order confirmation.';
+holdNotice.style.cssText = 'background:#FFFBEB; border:1px solid #FDE68A; border-radius:8px; padding:10px 12px; margin-bottom:12px; font-size:0.8125rem; color:var(--text-secondary);';
+holdNotice.innerHTML = '<strong>Direct orders paused:</strong> Direct checkout for this service is on hold pending secondary licensing verification. Inquiries are for stock and compliance verification only and an inquiry is not an order confirmation.';
 var planWrap = document.getElementById('drawerPlanSelectorContainer');
 if (planWrap && planWrap.parentNode) {
 planWrap.parentNode.insertBefore(holdNotice, planWrap);
@@ -2099,6 +2123,9 @@ holdNotice.style.display = 'block';
 holdNotice.style.display = 'none';
 }
 renderDrawerPlans();
+currentDurationMonths = 1;
+currentDiscountPercent = 0;
+syncDurationPillsUI();
 window.selectCartRail('SadaPay');
 var drawer = document.getElementById('cartDrawer');
 var backdrop = document.getElementById('cartBackdrop');
@@ -2143,28 +2170,40 @@ if (typeof gtag === 'function') {
 };
 function updateCartSummary() {
 if (!currentTool) return;
-var pricePkr = currentPlan ? currentPlan.price_pkr : currentTool.starting_price_pkr;
-var priceUsd = currentPlan ? currentPlan.price_usd : currentTool.starting_price_usd;
+var unitPkr = currentPlan ? currentPlan.price_pkr : currentTool.starting_price_pkr;
+var unitUsd = currentPlan ? currentPlan.price_usd : currentTool.starting_price_usd;
 var planTitle = currentPlan ? currentPlan.name : (currentTool.name + " Standard Plan");
-var duration = currentPlan ? currentPlan.duration : "1 Month";
+var planDur = currentPlan && currentPlan.duration ? currentPlan.duration : "1 Month";
+var isFixedLongPlan = (planDur.toLowerCase().indexOf('12 month') !== -1 || planDur.toLowerCase().indexOf('lifetime') !== -1 || planDur.toLowerCase().indexOf('year') !== -1);
+var mult = isFixedLongPlan ? 1 : (currentDurationMonths || 1);
+var discPct = isFixedLongPlan ? 0 : (currentDiscountPercent || 0);
+var subtotalPkr = unitPkr * mult;
+var discountPkr = Math.round(subtotalPkr * (discPct / 100));
+var pricePkr = subtotalPkr - discountPkr;
+var priceUsd = (unitUsd * mult) * (1 - discPct / 100);
+var duration = isFixedLongPlan ? planDur : (mult === 1 ? planDur : (mult + " Months"));
 var subtotalEl = document.getElementById('drawerSubtotal');
+var discountRowEl = document.getElementById('drawerDiscountRow');
+var discountEl = document.getElementById('drawerDiscount');
 var totalPkrEl = document.getElementById('drawerTotalPkr');
 var totalUsdEl = document.getElementById('drawerTotalUsd');
 var checkoutBtn = document.getElementById('drawerCheckoutBtn');
-if (subtotalEl) subtotalEl.textContent = "Rs. " + pricePkr.toLocaleString() + " PKR";
+if (subtotalEl) subtotalEl.textContent = "Rs. " + subtotalPkr.toLocaleString() + " PKR";
+if (discountRowEl) discountRowEl.style.display = (discountPkr > 0) ? 'flex' : 'none';
+if (discountEl) discountEl.textContent = "- Rs. " + discountPkr.toLocaleString() + " PKR (" + discPct + "%)";
 if (totalPkrEl) totalPkrEl.textContent = "Rs. " + pricePkr.toLocaleString() + " PKR";
 if (totalUsdEl) totalUsdEl.textContent = "(~$" + priceUsd.toFixed(2) + " USD)";
 var isHeld = HELD_PRODUCTS.indexOf(currentTool.slug || '') !== -1;
 var waMsg;
 if (isHeld) {
-waMsg = "Hi AIDigiTools! I am inquiring about current availability and compliance terms for " + currentTool.name + " (" + planTitle + " - " + duration + "). (Inquiry only; not an order confirmation).";
+waMsg = "Hi AIDigiTools, I am inquiring about current availability and compliance terms for " + currentTool.name + " (" + planTitle + " - " + duration + "). (Inquiry only; not an order confirmation).";
 if (checkoutBtn) {
-checkoutBtn.textContent = "💬 Inquire on WhatsApp for Current Availability";
+checkoutBtn.textContent = "Inquire on WhatsApp";
 }
 } else {
-waMsg = "Hi AIDigiTools! I want to order " + currentTool.name + " (" + planTitle + " - " + duration + ") for Rs. " + pricePkr.toLocaleString() + " PKR (~$" + priceUsd.toFixed(2) + " USD). I prefer paying via " + currentPaymentRail + ". Please confirm availability and share payment details.";
+waMsg = "Hi AIDigiTools, I want to order " + currentTool.name + " (" + planTitle + " - " + duration + ") for Rs. " + pricePkr.toLocaleString() + " PKR (~$" + priceUsd.toFixed(2) + " USD). I prefer paying via " + currentPaymentRail + ". Please confirm availability and share payment details.";
 if (checkoutBtn) {
-checkoutBtn.textContent = "⚡ Continue to WhatsApp to Order";
+checkoutBtn.textContent = "Continue to WhatsApp Order →";
 }
 }
 if (checkoutBtn) {
@@ -2296,18 +2335,18 @@ if (!emptyEl && grid) {
 emptyEl = document.createElement('div');
 emptyEl.id = 'searchEmptyState';
 emptyEl.className = 'empty-state';
-emptyEl.innerHTML = '<span class="empty-state-icon" aria-hidden="true">🔍</span>' +
-'<h3 class="empty-state-title">No Matching AI Tools Found</h3>' +
-'<p class="empty-state-desc">We could not find any software matching your selected filters (<strong id="emptyQueryText"></strong>). Try a broader keyword or browse all 36 tools below.</p>' +
+emptyEl.innerHTML = '<span class="empty-state-icon" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>' +
+'<h3 class="empty-state-title">No matching AI tools found</h3>' +
+'<p class="empty-state-desc">We could not find any software matching your selected filters (<strong id="emptyQueryText"></strong>). Try a broader keyword or browse all 49 tools below.</p>' +
 '<div class="empty-state-suggestions">' +
-'<span>Try Popular:</span> ' +
-'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'coding\')">💻 Coding</button>' +
-'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'video\')">🎬 Video</button>' +
-'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'claude\')">🤖 Claude</button>' +
-'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'midjourney\')">🎨 Midjourney</button>' +
-'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'vpn\')">🛡️ VPN</button>' +
+'<span>Try:</span> ' +
+'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'coding\')">Coding</button>' +
+'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'video\')">Video</button>' +
+'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'claude\')">Claude</button>' +
+'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'midjourney\')">Midjourney</button>' +
+'<button type="button" class="empty-state-chip" onclick="window.applyQuickSearch(\'vpn\')">VPN</button>' +
 '</div>' +
-'<button type="button" class="empty-state-action" onclick="window.resetAllFilters()">Clear All Filters & View All Tools</button>';
+'<button type="button" class="empty-state-action" onclick="window.resetAllFilters()">Clear filters</button>';
 grid.appendChild(emptyEl);
 }
 if (emptyEl) {
@@ -2393,7 +2432,7 @@ buttons.forEach(function (btn) {
 var slug = btn.getAttribute('data-slug');
 var isSelected = (window.compareList.indexOf(slug) !== -1);
 btn.classList.toggle('active', isSelected);
-btn.textContent = isSelected ? '✓ Added' : '⚖️ Compare';
+btn.textContent = isSelected ? 'Added' : 'Compare';
 btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
 var tool = (typeof TOOLS_DATA !== 'undefined') ? TOOLS_DATA[slug] : null;
 var toolName = tool ? tool.name : slug;
@@ -2452,13 +2491,13 @@ return '<th style="text-align:center;">' +
 '<tr>' +
 '<th>Starting Price (PKR)</th>' +
 tools.map(function (t) {
-return '<td style="text-align:center; font-weight:700; color:#059669; font-size:1.05rem;">Rs. ' + t.starting_price_pkr.toLocaleString() + ' PKR</td>';
+return '<td style="text-align:center; font-weight:600; color:#0F172A; font-size:1rem; font-variant-numeric:tabular-nums;">Rs. ' + t.starting_price_pkr.toLocaleString() + ' PKR</td>';
 }).join('') +
 '</tr>' +
 '<tr>' +
 '<th>USD Equivalent</th>' +
 tools.map(function (t) {
-return '<td style="text-align:center; color:#64748B;">~$' + t.starting_price_usd.toFixed(2) + ' USD / month</td>';
+return '<td style="text-align:center; color:#475569; font-variant-numeric:tabular-nums;">~$' + t.starting_price_usd.toFixed(2) + ' USD / month</td>';
 }).join('') +
 '</tr>' +
 '<tr>' +
@@ -2471,10 +2510,10 @@ return '<td style="text-align:center;">' + t.cat + '</td>';
 '<th>Access Model</th>' +
 tools.map(function (t) {
 var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
-var text = isHeld ? 'Direct Orders Paused' : 'Shared Team Workspace';
-var bg = isHeld ? 'rgba(245,158,11,0.15)' : '#F1F5F9';
-var color = isHeld ? '#d97706' : 'inherit';
-return '<td style="text-align:center;"><span style="background:' + bg + '; color:' + color + '; padding:0.2rem 0.6rem; border-radius:9999px; font-size:0.78rem; font-weight:600;">' + text + '</span></td>';
+var text = isHeld ? 'Direct orders paused' : 'Shared team workspace';
+var bg = isHeld ? '#FFFBEB' : '#F1F5F9';
+var color = isHeld ? '#B45309' : '#334155';
+return '<td style="text-align:center;"><span style="background:' + bg + '; color:' + color + '; padding:4px 8px; border-radius:6px; font-size:0.75rem; font-weight:500;">' + text + '</span></td>';
 }).join('') +
 '</tr>' +
 '<tr>' +
@@ -2482,20 +2521,20 @@ return '<td style="text-align:center;"><span style="background:' + bg + '; color
 tools.map(function (t) {
 var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
 return isHeld
-? '<td style="text-align:center; color:#d97706; font-weight:600;">⏸️ Paused (Inquire)</td>'
-: '<td style="text-align:center; color:#0284C7; font-weight:600;">⚡ 15-Minute Target</td>';
+? '<td style="text-align:center; color:#B45309; font-weight:500;">Paused (Inquire)</td>'
+: '<td style="text-align:center; color:#0369A1; font-weight:500;">15-minute target</td>';
 }).join('') +
 '</tr>' +
 '<tr>' +
 '<th>Replacement Warranty</th>' +
 tools.map(function () {
-return '<td style="text-align:center; color:#059669; font-weight:600;">🛡️ 30-Day Replacement</td>';
+return '<td style="text-align:center; color:#047857; font-weight:500;">30-day replacement</td>';
 }).join('') +
 '</tr>' +
 '<tr>' +
 '<th>Supported Platforms</th>' +
 tools.map(function () {
-return '<td style="text-align:center; font-size:0.8rem;">Web, Windows, macOS, iOS, Android</td>';
+return '<td style="text-align:center; font-size:0.8125rem;">Web, Windows, macOS, iOS, Android</td>';
 }).join('') +
 '</tr>' +
 '<tr>' +
@@ -2503,11 +2542,11 @@ return '<td style="text-align:center; font-size:0.8rem;">Web, Windows, macOS, iO
 tools.map(function (t) {
 var isHeld = HELD_PRODUCTS.indexOf(t.slug) !== -1;
 var actionBtn = isHeld
-? '<a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20' + encodeURIComponent(t.name) + '.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; font-size:0.8rem;">⚡ Quick Order</a>'
-: '<button type="button" class="btn-quick-order" style="width:100%; margin-bottom:0.4rem;" onclick="closeCompareModal(); openQuickOrderModal(\'' + t.slug + '\')">⚡ Quick Order</button>';
+? '<a href="https://wa.me/923326861112?text=Hi%20AIDigiTools,%20I%20am%20inquiring%20about%20availability%20for%20' + encodeURIComponent(t.name) + '.%20(Inquiry%20only;%20not%20an%20order%20confirmation)." target="_blank" rel="noopener noreferrer" class="btn-quick-order" style="width:100%; margin-bottom:6px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; font-size:0.8125rem;">Inquire</a>'
+: '<button type="button" class="btn-quick-order" style="width:100%; margin-bottom:6px;" onclick="closeCompareModal(); openQuickOrderModal(\'' + t.slug + '\')">Quick order</button>';
 return '<td style="text-align:center;">' +
 actionBtn +
-'<a href="' + prefix + t.url + '" style="font-size:0.75rem; color:#4361EE; text-decoration:none; display:block;">Full Specs &rarr;</a>' +
+'<a href="' + prefix + t.url + '" style="font-size:0.75rem; color:#0369A1; text-decoration:none; display:block;">Full specs &rarr;</a>' +
 '</td>';
 }).join('') +
 '</tr>' +
