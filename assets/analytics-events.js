@@ -4,12 +4,44 @@
 (function () {
   'use strict';
 
+  function extractDetailsFromWaUrl(urlStr) {
+    if (!urlStr) return { name: '', price: 0 };
+    try {
+      var decoded = decodeURIComponent(urlStr);
+      var matchOrder = decoded.match(/(?:order|availability for|terms for)\s+([^()]+?)(?:\s*\([^\)]*\))?\s+for\s+Rs\.?\s*([0-9,]+)/i);
+      if (matchOrder) {
+        return {
+          name: matchOrder[1].replace(/^(Hi AIDigiTools!?\s*I want to\s*)/i, '').trim(),
+          price: parseFloat(matchOrder[2].replace(/,/g, '')) || 0
+        };
+      }
+      var nameMatch = decoded.match(/(?:order|availability for|terms for)\s+([a-zA-Z0-9\s+]+?)(?:\s*\([^\)]*\)|\s+for|\.|$)/i);
+      var priceMatch = decoded.match(/Rs\.?\s*([0-9,]+)/i);
+      return {
+        name: nameMatch ? nameMatch[1].trim() : '',
+        price: priceMatch ? (parseFloat(priceMatch[1].replace(/,/g, '')) || 0) : 0
+      };
+    } catch (e) {
+      return { name: '', price: 0 };
+    }
+  }
+
   function trackWaCheckout(linkEl) {
     if (!linkEl) return;
+    var parsedFromUrl = extractDetailsFromWaUrl(linkEl.href);
+
     var toolName = linkEl.getAttribute('data-tool-name') ||
                    linkEl.getAttribute('data-product') ||
-                   document.title.split('|')[0].replace('AIDigiTools', '').trim();
-    var toolPrice = linkEl.getAttribute('data-tool-price') || linkEl.getAttribute('data-price') || '0';
+                   (window.currentTool ? window.currentTool.name : '') ||
+                   parsedFromUrl.name ||
+                   document.title.split('|')[0].replace('AIDigiTools', '').replace(/^[—\-\s]+|[—\-\s]+$/g, '').trim();
+
+    var toolPrice = linkEl.getAttribute('data-tool-price') ||
+                    linkEl.getAttribute('data-price') ||
+                    (window.currentPlan ? window.currentPlan.price_pkr : '') ||
+                    parsedFromUrl.price ||
+                    '0';
+
     var parsedPrice = parseFloat(toolPrice.toString().replace(/[^0-9.]/g, '')) || 0;
 
     if (typeof gtag === 'function') {

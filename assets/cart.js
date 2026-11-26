@@ -1971,6 +1971,11 @@ waLinkEl.innerHTML = '<span style="color:#FFFFFF !important; font-weight:700;">ð
 }
 if (waLinkEl) {
 waLinkEl.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waMsg);
+waLinkEl.setAttribute('data-tool-name', tool.name);
+waLinkEl.setAttribute('data-tool-price', pricePkr);
+waLinkEl.setAttribute('data-price', pricePkr);
+waLinkEl.setAttribute('data-currency', 'PKR');
+waLinkEl.setAttribute('data-payment-rail', currentPaymentRail);
 }
 if (selectEl && selectEl.value !== slug) {
 selectEl.value = slug;
@@ -2063,6 +2068,8 @@ currentPlan = tool.plans[0];
 } else {
 currentPlan = null;
 }
+window.currentTool = currentTool;
+window.currentPlan = currentPlan;
 var prefix = getPathPrefix();
 var nameEl = document.getElementById('drawerItemName');
 var vendorEl = document.getElementById('drawerItemVendor');
@@ -2162,7 +2169,14 @@ checkoutBtn.textContent = "âš¡ Continue to WhatsApp to Order";
 }
 if (checkoutBtn) {
 checkoutBtn.href = "https://wa.me/923326861112?text=" + encodeURIComponent(waMsg);
+checkoutBtn.setAttribute('data-tool-name', currentTool.name);
+checkoutBtn.setAttribute('data-tool-price', pricePkr);
+checkoutBtn.setAttribute('data-price', pricePkr);
+checkoutBtn.setAttribute('data-currency', 'PKR');
+checkoutBtn.setAttribute('data-payment-rail', currentPaymentRail);
 }
+window.currentTool = currentTool;
+window.currentPlan = currentPlan;
 }
 document.addEventListener('keydown', function (e) {
 if (e.key === 'Escape') {
