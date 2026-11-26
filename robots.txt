@@ -116,5 +116,47 @@ Disallow: /private/
 Disallow: /data/previews/
 Allow: /
 
+User-agent: DuckDuckBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: YandexBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: Bytespider
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: Diffbot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: Twitterbot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
+User-agent: LinkedInBot
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/previews/
+Allow: /
+
 # Sitemaps & Feeds
 Sitemap: https://aidigitools.tech/sitemap.xml
