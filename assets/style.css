@@ -397,20 +397,21 @@ nav a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--text-primary);
+  background: var(--accent-emerald);
   color: var(--text-inverse) !important;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
   padding: 8px 16px !important;
   min-height: 36px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--accent-emerald);
   cursor: pointer;
-  transition: background-color 150ms var(--ease-out), transform 120ms var(--ease-out);
+  transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), transform 120ms var(--ease-out);
 }
 
 .nav-cta:hover {
-  background: #1E293B;
+  background: var(--accent-emerald-hover);
+  border-color: var(--accent-emerald-hover);
 }
 
 .nav-cta:active {
@@ -452,12 +453,13 @@ div[id] {
 
   nav a {
     font-size: 0.8125rem;
-    padding: 6px 7px;
+    padding: 6px 6px;
   }
 
   .nav-cta {
     font-size: 0.8125rem;
-    padding: 6px 12px !important;
+    padding: 6px 10px !important;
+    gap: 6px;
     margin-left: auto;
   }
 }
@@ -1564,9 +1566,9 @@ a#mWaLink:hover,
   align-items: center;
   justify-content: center;
   gap: 6px;
-  background: var(--bg-surface);
-  color: var(--accent-emerald) !important;
-  border: 1px solid var(--accent-emerald-border);
+  background: var(--accent-emerald);
+  color: var(--text-inverse) !important;
+  border: 1px solid var(--accent-emerald);
   font-weight: 500;
   font-size: 0.8125rem;
   padding: 8px 12px;
@@ -1577,9 +1579,9 @@ a#mWaLink:hover,
 }
 
 .btn-wa-subtle:hover {
-  background: var(--accent-emerald-light);
-  border-color: var(--accent-emerald);
-  color: var(--accent-emerald-hover) !important;
+  background: var(--accent-emerald-hover);
+  border-color: var(--accent-emerald-hover);
+  color: var(--text-inverse) !important;
 }
 
 .tool-specs-link {
