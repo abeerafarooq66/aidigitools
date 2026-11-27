@@ -2413,6 +2413,17 @@ if (input) input.value = term;
 window.currentSearchQuery = term;
 window.applyFilters();
 };
+window.toggleToolsGridView = function () {
+var grid = document.getElementById('toolsGrid');
+var btn = document.getElementById('gridViewToggleBtn');
+if (!grid) return;
+var isList = grid.classList.toggle('mobile-list-view');
+if (btn) {
+btn.setAttribute('aria-pressed', isList ? 'true' : 'false');
+var label = btn.querySelector('span');
+if (label) label.textContent = isList ? '2-Col Grid' : 'List View';
+}
+};
 window.toggleCompare = function (slug) {
 var idx = window.compareList.indexOf(slug);
 if (idx !== -1) {
