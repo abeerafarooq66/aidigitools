@@ -423,6 +423,7 @@ div[id] {
 }
 
 @media (max-width: 1080px) {
+
   section[id],
   div[id] {
     scroll-margin-top: 120px;
