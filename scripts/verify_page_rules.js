@@ -21,7 +21,7 @@ const title = titleMatch ? titleMatch[1].trim() : '';
 const descMatch = html.match(/<meta\s+name=["']description["']\s+content=["'](.*?)["']/i);
 const desc = descMatch ? descMatch[1].trim() : '';
 
-const qaMatch = html.match(/<p class=["']quick-answer["']>([\s\S]*?)<\/p>/i);
+const qaMatch = html.match(/<p[^>]*class=["'][^"']*quick-answer[^"']*["'][^>]*>([\s\S]*?)<\/p>/i);
 const qa = qaMatch ? qaMatch[1].replace(/<[^>]+>/g, ' ').trim() : '';
 const qaWords = qa ? qa.split(/\s+/).filter(Boolean).length : 0;
 
